@@ -1,0 +1,14 @@
+mixin color-sample(options)
+  -
+    var topClass = [
+      'color-sample',
+    ];
+    var colorRectClass = [
+      'color-sample-rect',
+      'color-sample-rect_background-' + options.options.bgColor
+    ];
+
+  div(class=topClass class=options.topClass)
+    div(class=colorRectClass)
+    div(class='color-sample-title')= options.title
+    div(class='color-sample-hex')= options.subtitle

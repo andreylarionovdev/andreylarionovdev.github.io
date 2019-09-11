@@ -1,0 +1,48 @@
+.font-sample {
+    font-family: Quicksand, sans-serif;
+    position: relative;
+    padding-left: 34%;
+    padding-right: 6%;
+    margin-bottom: 50px;
+}
+.font-sample_text-header {
+    font-size: 24px;
+    line-height: 1.25em;
+    font-weight: bold;
+    min-height: 60px;
+}
+.font-sample_text-header-inside {
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 1.26315789474em;
+    min-height: 50px;
+}
+.font-sample_text-label {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.1em;
+    text-transform: uppercase;
+    min-height: 10px;
+}
+.font-sample_text-body {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.71428571429em;
+    padding-right: 10.548523206%;
+}
+@media (max-width: 1024px) {
+    .font-sample {
+        padding-left: 25%;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .font-sample {
+        padding-left: 25%;
+    }
+}

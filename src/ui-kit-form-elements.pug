@@ -1,0 +1,15 @@
+extends base
+
+include components/logo/logo
+include components/form/input-group
+
+block vars
+  - title = 'UI Kit: Form elements'
+block content
+  .container.clearfix
+    +logo
+    .col-4
+      +input-group({'llabel': 'text field', 'rlabel': 'default'})
+      +input-group({'llabel': 'text field', 'rlabel': 'default'})
+    .col-4
+    .col-4

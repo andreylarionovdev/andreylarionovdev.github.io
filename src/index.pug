@@ -1,0 +1,31 @@
+extends base
+
+include components/logo/logo
+
+block vars
+  - var title = 'Index'
+block content
+  .container.clearfix
+    +logo
+    .item-list.col-6
+      ul.main-menu.purple
+        li
+          h1
+            a(href='ui-kit-colors-n-type.html') Colors & Type
+        li
+          h1
+            a(href='ui-kit-form-elements.html') Form elements
+        li
+          h1
+            a(href='ui-kit-cards.html') Cards
+        li
+          h1
+            a(href='ui-kit-headers-n-footers.html') Headers & Footers
+    .item-list.col-6
+      ul.main-menu.green
+        li
+          h1
+            a(href='landing-page.html') Landing page
+        li
+          h1
+            a(href='search-room.html') Search room

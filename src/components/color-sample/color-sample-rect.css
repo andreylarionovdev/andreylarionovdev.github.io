@@ -1,0 +1,29 @@
+.color-sample-rect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 70px;
+    border-radius: 6px;
+}
+.color-sample-rect_background-d-100 {
+    background-color: #1F2041;
+}
+.color-sample-rect_background-d-75 {
+    background: rgba(31, 32, 65, 0.75);
+}
+.color-sample-rect_background-d-50 {
+    background: rgba(31, 32, 65, 0.50);
+}
+.color-sample-rect_background-d-25 {
+    background: rgba(31, 32, 65, 0.25);
+}
+.color-sample-rect_background-d-5 {
+    background: rgba(31, 32, 65, 0.05);
+}
+.color-sample-rect_background-purple {
+    background: #BC9CFF;
+}
+.color-sample-rect_background-green {
+    background: #6FCF97;
+}

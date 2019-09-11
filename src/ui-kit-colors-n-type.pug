@@ -1,0 +1,85 @@
+extends base
+
+include components/logo/logo
+include components/color-sample/color-sample
+include components/font-sample/font-sample
+
+block vars
+  - var title = 'UI KIT: Colors & Type'
+block content
+  .container.clearfix
+    +logo
+    .item-list.col-6
+      +color-sample({
+        title: 'Dark Shade 100%',
+        subtitle: '#1F2041',
+        options: {
+          bgColor: 'd-100'
+        }
+      })
+      +color-sample({
+        title: 'Dark Shade 75%',
+        subtitle: '#1F2041',
+        options: {
+          bgColor: 'd-75'
+        }
+      })
+      +color-sample({
+        title: 'Dark Shade 50%',
+        subtitle: '#1F2041',
+        options: {
+          bgColor: 'd-50'
+        }
+      })
+      +color-sample({
+        title: 'Dark Shade 25%',
+        subtitle: '#1F2041',
+        options: {
+          bgColor: 'd-25'
+        }
+      })
+      +color-sample({
+        title: 'Dark Shade 5%',
+        subtitle: '#1F2041',
+        options: {
+          bgColor: 'd-5'
+        }
+      })
+      +color-sample({
+        title: "Purple",
+        subtitle: "#BC9CFF",
+        options: {
+          bgColor: 'purple'
+        }
+      })
+      +color-sample({
+        title: "Green",
+        subtitle: "#6FCF97",
+        options: {
+          bgColor: 'green'
+        }
+      })
+    .item-list.col-6
+      +font-sample({
+        topClass: ['font-sample_text-header'],
+        name: 'H1',
+        description: 'This one is the sub-section or widget title',
+      })
+      +font-sample({
+        topClass: ['font-sample_text-header-inside'],
+        name: 'H2',
+        description: 'Next one is the item title inside widgets',
+      })
+      +font-sample({
+        topClass: ['font-sample_text-label'],
+        name: 'H3',
+        description: 'This is a label or CTA text',
+      })
+      +font-sample({
+        topClass: ['font-sample_text-body'],
+        name: 'Body',
+        description: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.',
+        options: {
+          descriptionAreaColor: 'd-75'
+        }
+      })

@@ -1,0 +1,10 @@
+.input-group-llabel,
+.input-group-rlabel {
+    display: inline-block;
+}
+.input-group-llabel {
+    float: left;
+}
+.input-group-rlabel {
+    float: right;
+}

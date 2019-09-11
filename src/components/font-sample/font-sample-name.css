@@ -1,0 +1,17 @@
+.font-sample-name {
+    float: left;
+    position: absolute;
+    font-family: Montserrat, sans-serif;
+    text-align: right;
+    top: 0;
+    left: 0;
+    width: 163px;
+    font-weight: normal;
+    color: rgba(31, 32, 65, 0.25);
+}
+
+@media (max-width: 1024px) {
+    .font-sample-name {
+        /*width: 10%;*/
+    }
+}
