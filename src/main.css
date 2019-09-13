@@ -1,4 +1,5 @@
 @import "fonts/fonts.css";
+@import "components/container/container.css";
 @import "components/color-sample/color-sample.css";
 @import "components/color-sample/color-sample-hex.css";
 @import "components/color-sample/color-sample-rect.css";
@@ -6,14 +7,12 @@
 @import "components/font-sample/font-sample.css";
 @import "components/font-sample/font-sample-desc.css";
 @import "components/font-sample/font-sample-name.css";
-@import "components/form/input-group.css";
+@import "components/form/input-text-group.css";
+@import "components/form/input-text.css";
 
 body {
     font-family: Quicksand, sans-serif;
     margin: 0;
-}
-.container {
-    margin: 145px 150px 0;
 }
 .logo {
     position: absolute;

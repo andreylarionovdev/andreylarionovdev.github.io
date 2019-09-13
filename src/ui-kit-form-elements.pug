@@ -1,15 +1,26 @@
 extends base
 
 include components/logo/logo
-include components/form/input-group
+include components/form/input-text-group
 
 block vars
   - title = 'UI Kit: Form elements'
 block content
-  .container.clearfix
+  .container.container_page-form-elements.clearfix
     +logo
     .col-4
-      +input-group({'llabel': 'text field', 'rlabel': 'default'})
-      +input-group({'llabel': 'text field', 'rlabel': 'default'})
+      +input-text-group({
+          'llabel': 'text field',
+          'rlabel': 'default',
+          'placehoder': 'Email',
+          'id': 'input-email'
+      })
+      +input-text-group({
+          'llabel': 'text field',
+          'rlabel': 'hover / focus',
+          'value': 'This is pretty awesome',
+          'id': 'input-focused-hovered',
+          'inpClasses': ['input-text_state-focus']
+      })
     .col-4
     .col-4

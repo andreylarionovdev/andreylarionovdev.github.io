@@ -1,0 +1,30 @@
+.input-text-group {
+    position: relative;
+    width: 320px;
+    height: 64px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 21px;
+}
+.input-text-group input {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.input-text-group-llabel,
+.input-text-group-rlabel {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+}
+.input-text-group-llabel {
+    left: 0;
+    font-weight: bold;
+    color: #1F2041;
+}
+.input-text-group-rlabel {
+    right: 0;
+    /*top: -3px;*/
+    color: rgba(31, 32, 65, 0.5);
+}

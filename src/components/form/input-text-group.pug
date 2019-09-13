@@ -1,0 +1,7 @@
+mixin input-text-group(options)
+  div(class='input-text-group')
+    label(for=options.id)
+      span(class=['input-text-group-llabel'])= options.llabel
+      span(class=['input-text-group-rlabel'])= options.rlabel
+      div.clearfix
+    input(class='input-text' class=options.inpClasses id=options.id placeholder=options.placehoder value=options.value)
