@@ -2,6 +2,7 @@ extends base
 
 include components/logo/logo
 include components/form/input-text-group
+include components/form/input-select-group
 
 block vars
   - title = 'UI Kit: Form elements'
@@ -12,15 +13,55 @@ block content
       +input-text-group({
           'llabel': 'text field',
           'rlabel': 'default',
-          'placehoder': 'Email',
-          'id': 'input-email'
+          'placeholder': 'Email',
+          'id': 'input-email',
+          'modifiers': {
+              'this': ['input-text-group_margin-standard']
+          }
       })
       +input-text-group({
           'llabel': 'text field',
           'rlabel': 'hover / focus',
           'value': 'This is pretty awesome',
           'id': 'input-focused-hovered',
-          'inpClasses': ['input-text_state-focus']
+          'modifiers': {
+              'this': 'input-text-group_margin-standard',
+              'input': ['input-text_state-focus']
+          }
+      })
+      +input-select-group({
+          'llabel': 'dropdown',
+          'rlabel': 'default',
+          'id': 'default-dropdown',
+          'modifiers': {
+              'this': ['input-text-group_margin-standard']
+          },
+          'options': ['Сколько гостей']
+      })
+      +input-text-group({
+          'llabel': 'masked text field',
+          'rlabel': 'default',
+          'id': 'input-text-with-mask',
+          'placeholder': 'ДД.ММ.ГГГГ',
+          'modifiers': {
+              'this': ['input-text-group_margin-large']
+          }
+      })
+      +input-select-group({
+          'llabel': 'date dropdown',
+          'options': ['ДД.ММ.ГГГГ'],
+          'modifiers': {
+              'this': ['input-select-group_width-small']
+          }
+      })
+      +input-select-group({
+          'llabel': 'date dropdown',
+          'options': [
+              '19.08.2019'
+          ],
+          'modifiers': {
+              'this': ['input-select-group_width-small']
+          }
       })
     .col-4
     .col-4

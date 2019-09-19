@@ -9,6 +9,8 @@
 @import "components/font-sample/font-sample-name.css";
 @import "components/form/input-text-group.css";
 @import "components/form/input-text.css";
+@import "components/form/input-select-group.css";
+@import "components/form/input-select.css";
 
 body {
     font-family: Quicksand, sans-serif;

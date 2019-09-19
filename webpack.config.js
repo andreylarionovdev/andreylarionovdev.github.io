@@ -46,20 +46,21 @@ const config = {
         ],
     },
     plugins: [
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+        }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: 'src/index.pug',
-            inject: false
+            template: 'src/index.pug'
         }),
         new HtmlWebpackPlugin({
             filename: 'ui-kit-colors-n-type.html',
-            template: 'src/ui-kit-colors-n-type.pug',
-            inject: false
+            template: 'src/ui-kit-colors-n-type.pug'
         }),
         new HtmlWebpackPlugin({
             filename: 'ui-kit-form-elements.html',
-            template: 'src/ui-kit-form-elements.pug',
-            inject: false
+            template: 'src/ui-kit-form-elements.pug'
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css',

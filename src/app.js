@@ -1,2 +1,2 @@
-import './fonts/fonts.css'
 import './main.css'
+import './components/form/input-select.js'

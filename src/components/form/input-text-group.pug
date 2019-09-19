@@ -1,7 +1,12 @@
 mixin input-text-group(options)
-  div(class='input-text-group')
+  - var thisModifiers = []
+  - var inputModifiers = []
+  if options.modifiers
+    - thisModifiers = options.modifiers.this
+    - inputModifiers = options.modifiers.input
+  div(class='input-text-group' class=thisModifiers)
     label(for=options.id)
       span(class=['input-text-group-llabel'])= options.llabel
       span(class=['input-text-group-rlabel'])= options.rlabel
       div.clearfix
-    input(class='input-text' class=options.inpClasses id=options.id placeholder=options.placehoder value=options.value)
+    input(class='input-text' class=inputModifiers id=options.id placeholder=options.placeholder value=options.value)
