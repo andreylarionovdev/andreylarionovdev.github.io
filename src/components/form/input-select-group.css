@@ -5,13 +5,21 @@
     text-transform: uppercase;
     font-size: 12px;
     font-family: Montserrat, sans-serif;
-    margin-bottom: 21px;
 }
 .input-select-group_width-small {
     position: relative;
     width: 149px;
     margin-right: 20px;
     float: left;
+}
+.input-select-group_width-medium {
+    width: 265px;
+}
+.input-select-group_margin-standard {
+    margin-bottom: 25px;
+}
+.input-select-group_margin-large {
+    margin-bottom: 40px;
 }
 .input-select-group select {
     position: absolute;

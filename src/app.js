@@ -1,2 +1,2 @@
 import './main.css'
-import './components/form/input-select.js'
+import './components/form/input-text-group.js'

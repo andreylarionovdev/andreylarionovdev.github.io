@@ -16,7 +16,9 @@ block content
           'placeholder': 'Email',
           'id': 'input-email',
           'modifiers': {
-              'this': ['input-text-group_margin-standard']
+              'this': [
+                  'input-text-group_margin-standard'
+              ]
           }
       })
       +input-text-group({
@@ -25,8 +27,12 @@ block content
           'value': 'This is pretty awesome',
           'id': 'input-focused-hovered',
           'modifiers': {
-              'this': 'input-text-group_margin-standard',
-              'input': ['input-text_state-focus']
+              'this': [
+                  'input-text-group_margin-standard'
+              ],
+              'inputText': [
+                  'input-text-group__input_state-focus'
+              ]
           }
       })
       +input-select-group({
@@ -34,7 +40,9 @@ block content
           'rlabel': 'default',
           'id': 'default-dropdown',
           'modifiers': {
-              'this': ['input-text-group_margin-standard']
+              'this': [
+                  'input-select-group_margin-standard'
+              ]
           },
           'options': ['Сколько гостей']
       })
@@ -44,14 +52,18 @@ block content
           'id': 'input-text-with-mask',
           'placeholder': 'ДД.ММ.ГГГГ',
           'modifiers': {
-              'this': ['input-text-group_margin-large']
+              'this': [
+                  'input-select-group_margin-large'
+              ]
           }
       })
       +input-select-group({
           'llabel': 'date dropdown',
           'options': ['ДД.ММ.ГГГГ'],
           'modifiers': {
-              'this': ['input-select-group_width-small']
+              'this': [
+                  'input-select-group_width-small'
+              ]
           }
       })
       +input-select-group({
@@ -60,7 +72,33 @@ block content
               '19.08.2019'
           ],
           'modifiers': {
-              'this': ['input-select-group_width-small']
+              'this': [
+                  'input-select-group_width-small'
+              ]
+          }
+      })
+      div.clearfix.input-text-group_margin-large
+      +input-select-group({
+          'llabel': 'filter date dropdown',
+          'options': ['19 авг - 23 авг'],
+          'modifiers': {
+              'this': [
+                  'input-select-group_width-medium',
+                  'input-select-group_margin-large'
+              ]
+          }
+      })
+      +input-text-group({
+          'llabel': 'subscription text field',
+          'id': 'input-text-submit',
+          'placeholder': 'Email',
+          'modifiers': {
+              'this': [
+                  'input-text-group_width-medium'
+              ],
+              'button': [
+                  'input-text-group__input-submit_visible'
+              ]
           }
       })
     .col-4
