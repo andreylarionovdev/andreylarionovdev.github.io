@@ -10,7 +10,13 @@
 @import "components/form/input-text-group.css";
 @import "components/form/input-select-group.css";
 @import "components/form/input-select.css";
+@import "components/form/checkbox-group.css";
 
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 body {
     font-family: Quicksand, sans-serif;
     margin: 0;
@@ -20,13 +26,15 @@ body {
     top: 30px;
     left: 30px;
 }
-.col-6 {
-    width: 50%;
+[class*='col-'] {
     float: left;
 }
+.col-6 {
+    width: 50%;
+}
 .col-4 {
-    width: 33.333333333%;
-    float: left;
+    padding-left: 90px;
+    width: 33.33%;
 }
 .clearfix::after {
     content: "";

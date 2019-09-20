@@ -5,8 +5,8 @@ mixin input-text-group(options)
     - var buttonModifiers = options.modifiers.button || []
   div(class='input-text-group' class=thisModifiers)
     label(for=options.id)
-      span(class='input-text-group-llabel')= options.llabel
-      span(class='input-text-group-rlabel')= options.rlabel
+      span(class='input-text-group__llabel')= options.llabel
+      span(class='input-text-group__rlabel')= options.rlabel
       div.clearfix
     input(type='text' class='input-text-group__input-text' class=inputModifiers id=options.id placeholder=options.placeholder value=options.value)
     if buttonModifiers

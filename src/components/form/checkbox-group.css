@@ -1,0 +1,14 @@
+.checkbox-group {
+    position: relative;
+    width: 160px;
+    font-size: 12px;
+    font-family: Montserrat, sans-serif;
+}
+.checkbox-group__label {
+    text-transform: uppercase;
+    display: block;
+    font-weight: bold;
+}
+.checkbox-group__checkbox-label {
+    display: block;
+}

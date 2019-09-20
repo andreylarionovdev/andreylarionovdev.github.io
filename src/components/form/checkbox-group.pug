@@ -1,0 +1,9 @@
+mixin checkbox-group(options)
+  if options.modifiers
+    - var thisModifiers = options.modifiers.this || []
+    - var checkboxes = options.options || {}
+  div(class='checkbox-group' class=thisModifiers)
+    label(class='checkbox-group__label' for=options.id)= options.label
+      each key, value in checkboxes
+        label(class='checkbox-group__checkbox-label')= key
+          input(type='checkbox' name=value)

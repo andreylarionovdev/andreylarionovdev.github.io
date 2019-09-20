@@ -3,6 +3,7 @@ extends base
 include components/logo/logo
 include components/form/input-text-group
 include components/form/input-select-group
+include components/form/checkbox-group
 
 block vars
   - title = 'UI Kit: Form elements'
@@ -102,4 +103,15 @@ block content
           }
       })
     .col-4
+      +checkbox-group({
+          'label': 'checkbox buttons',
+          'modifiers': {
+              'this': []
+          },
+          'options': {
+              'smoke': 'Можно курить',
+              'pets': 'Можно с питомцами',
+              'guests': 'Можно пригласить гостей (до 10 человек)'
+          }
+      })
     .col-4
