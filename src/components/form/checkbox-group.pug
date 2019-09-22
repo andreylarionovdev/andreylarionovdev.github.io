@@ -1,9 +1,12 @@
 mixin checkbox-group(options)
+  - var thisModifiers = []
+  - var checkboxes = {}
   if options.modifiers
-    - var thisModifiers = options.modifiers.this || []
-    - var checkboxes = options.options || {}
+    - thisModifiers = options.modifiers.this || []
+    - checkboxes = options.options || {}
   div(class='checkbox-group' class=thisModifiers)
     label(class='checkbox-group__label' for=options.id)= options.label
-      each key, value in checkboxes
-        label(class='checkbox-group__checkbox-label')= key
-          input(type='checkbox' name=value)
+    each item, key in checkboxes
+      div(class='checkbox-group__checkbox')
+        input(class='checkbox-group__input-checkbox' type='checkbox' id=key checked=item.checked)
+        label(class='checkbox-group__input-checkbox-label' for=key)= item.label

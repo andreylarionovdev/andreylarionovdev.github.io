@@ -1,12 +1,7 @@
 @import "fonts/fonts.css";
 @import "components/container/container.css";
 @import "components/color-sample/color-sample.css";
-@import "components/color-sample/color-sample-hex.css";
-@import "components/color-sample/color-sample-rect.css";
-@import "components/color-sample/color-sample-title.css";
 @import "components/font-sample/font-sample.css";
-@import "components/font-sample/font-sample-desc.css";
-@import "components/font-sample/font-sample-name.css";
 @import "components/form/input-text-group.css";
 @import "components/form/input-select-group.css";
 @import "components/form/input-select.css";
@@ -16,6 +11,15 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+::-webkit-input-placeholder { /* Edge */
+    color: rgba(31, 32, 65, 0.5);
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(31, 32, 65, 0.5);
+}
+::placeholder {
+    color: rgba(31, 32, 65, 0.5);
 }
 body {
     font-family: Quicksand, sans-serif;

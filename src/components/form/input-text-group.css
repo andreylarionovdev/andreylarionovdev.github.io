@@ -5,13 +5,13 @@
     font-size: 12px;
     font-family: Montserrat, sans-serif;
 }
-.input-text-group_margin-standard {
+.input-text-group--margin-standard {
     margin-bottom: 20px;
 }
-.input-text-group_margin-large {
+.input-text-group--margin-large {
     margin-bottom: 40px;
 }
-.input-text-group_width-medium {
+.input-text-group--width-medium {
     width: 265px;
 }
 .input-text-group__llabel,
@@ -49,21 +49,9 @@
     color: rgba(31, 32, 65, 0.75);
 }
 .input-text-group__input-text:focus,
-.input-text-group__input-text_focused {
+.input-text-group__input-text--focused {
     outline: none;
     border: 1px solid rgba(31, 32, 65, 0.5);
-}
-.input-text-group__input-text_submit {
-    width: auto;
-}
-::-webkit-input-placeholder { /* Edge */
-    color: rgba(31, 32, 65, 0.5);
-}
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: rgba(31, 32, 65, 0.5);
-}
-::placeholder {
-    color: rgba(31, 32, 65, 0.5);
 }
 /** End input text */
 
@@ -86,11 +74,12 @@
     background-position: right 13px center;
     background-repeat: no-repeat;
 }
-.input-text-group__input-submit_focused {
+.input-text-group__input-submit--focused {
     border: 1px solid rgba(31, 32, 65, 0.5);
     border-left: none;
 }
-.input-text-group__input-submit_visible {
+.input-text-group__input-submit--visible {
     display: inline;
+    cursor: pointer;
 }
 /** End input submit button */

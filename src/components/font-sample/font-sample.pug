@@ -1,9 +1,10 @@
 mixin font-sample(options)
-  -
-    var topClass = [
-      'font-sample',
-    ];
+  - var thisModifiers = []
+  - var descModifiers = []
+  if options.modifiers
+    - thisModifiers = options.modifiers.this || []
+    - descModifiers = options.modifiers.desc || []
 
-  div(class=topClass class=options.topClass)
-    div(class='font-sample-name')= options.name
-    div(class='font-sample-desc')= options.description
+  div(class='font-sample' class=thisModifiers)
+    div(class='font-sample__name')= options.name
+    div(class='font-sample__desc' class=descModifiers)= options.description

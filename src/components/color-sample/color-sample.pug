@@ -1,14 +1,10 @@
 mixin color-sample(options)
-  -
-    var topClass = [
-      'color-sample',
-    ];
-    var colorRectClass = [
-      'color-sample-rect',
-      'color-sample-rect_background-' + options.options.bgColor
-    ];
-
-  div(class=topClass class=options.topClass)
-    div(class=colorRectClass)
-    div(class='color-sample-title')= options.title
-    div(class='color-sample-hex')= options.subtitle
+  - var thisModifiers = []
+  - var rectModifiers = []
+  if options.modifiers
+    - thisModifiers = options.modifiers.this || []
+    - rectModifiers = options.modifiers.rc || []
+  div(class='color-sample' class=thisModifiers)
+    div(class='color-sample__rect' class=rectModifiers)
+    div(class='color-sample__title')= options.title
+    div(class='color-sample__hex')= options.subtitle
