@@ -7,6 +7,9 @@ mixin checkbox-group(options)
   div(class='checkbox-group' class=thisModifiers)
     label(class='checkbox-group__label' for=options.id)= options.label
     each item, key in checkboxes
-      div(class='checkbox-group__checkbox')
-        input(class='checkbox-group__input-checkbox' type='checkbox' id=key checked=item.checked)
-        label(class='checkbox-group__input-checkbox-label' for=key)= item.label
+      - checkboxModifiers = []
+      if item.disabled
+        - checkboxModifiers.push('checkbox-group__checkbox--disabled')
+      div(class='checkbox-group__checkbox' class=checkboxModifiers)
+        input(class='checkbox-group__input' type='checkbox' id=key checked=item.checked disabled=item.disabled)
+        label(class='checkbox-group__input-label' for=key)= item.label
