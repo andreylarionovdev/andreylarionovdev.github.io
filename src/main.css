@@ -6,6 +6,7 @@
 @import "components/form/input-select-group.css";
 @import "components/form/input-select.css";
 @import "components/form/checkbox-group.css";
+@import "components/form/radio-group.css";
 
 *, *:after, *:before {
     -webkit-box-sizing: border-box;

@@ -4,6 +4,7 @@ include components/logo/logo
 include components/form/input-text-group
 include components/form/input-select-group
 include components/form/checkbox-group
+include components/form/radio-group
 
 block vars
   - title = 'UI Kit: Form elements'
@@ -18,7 +19,7 @@ block content
           'id': 'input-email',
           'modifiers': {
               'this': [
-                  'input-text-group--margin-standard'
+                  'input-text-group--mrgn-bttm-standard'
               ]
           }
       })
@@ -29,7 +30,7 @@ block content
           'id': 'input-focused-hovered',
           'modifiers': {
               'this': [
-                  'input-text-group--margin-standard'
+                  'input-text-group--mrgn-bttm-standard'
               ],
               'input': [
                   'input-text-group__input-text--focused'
@@ -42,7 +43,7 @@ block content
           'id': 'default-dropdown',
           'modifiers': {
               'this': [
-                  'input-select-group--margin-standard'
+                  'input-select-group--mrgn-bttm-standard'
               ]
           },
           'options': ['Сколько гостей']
@@ -54,7 +55,7 @@ block content
           'placeholder': 'ДД.ММ.ГГГГ',
           'modifiers': {
               'this': [
-                  'input-select-group--margin-large'
+                  'input-select-group--mrgn-bttm-large'
               ]
           }
       })
@@ -63,7 +64,7 @@ block content
           'options': ['ДД.ММ.ГГГГ'],
           'modifiers': {
               'this': [
-                  'input-select-group--width-small'
+                  'input-select-group--wdth-small'
               ]
           }
       })
@@ -74,18 +75,18 @@ block content
           ],
           'modifiers': {
               'this': [
-                  'input-select-group--width-small'
+                  'input-select-group--wdth-small'
               ]
           }
       })
-      div.clearfix.input-text-group--margin-large
+      div.clearfix.input-text-group--mrgn-bttm-large
       +input-select-group({
           'llabel': 'filter date dropdown',
           'options': ['19 авг - 23 авг'],
           'modifiers': {
               'this': [
-                  'input-select-group--width-medium',
-                  'input-select-group--margin-large'
+                  'input-select-group--wdth-medium',
+                  'input-select-group--mrgn-bttm-large'
               ]
           }
       })
@@ -95,7 +96,7 @@ block content
           'placeholder': 'Email',
           'modifiers': {
               'this': [
-                  'input-text-group--width-medium'
+                  'input-text-group--wdth-medium'
               ],
               'button': [
                   'input-text-group__input-submit--visible'
@@ -106,7 +107,7 @@ block content
       +checkbox-group({
           'label': 'checkbox buttons',
           'modifiers': {
-              'this': []
+              'this': ['checkbox-group--mrgn-bttm-large']
           },
           'options': {
               'smoke': {
@@ -120,6 +121,22 @@ block content
               'guests': {
                   'label':'Можно пригласить гостей (до 10 человек)',
                   'checked': true
+              }
+          }
+      })
+      +radio-group({
+          'label': 'radio buttons',
+          'modifiers': {
+              'this': []
+          },
+          'name': 'gender',
+          'options': {
+              'male': {
+                  'label': 'Мужчина',
+                  'checked': true
+              },
+              'female': {
+                  'label': 'Женщина'
               }
           }
       })

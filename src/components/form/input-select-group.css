@@ -5,19 +5,18 @@
     font-size: 12px;
     font-family: Montserrat, sans-serif;
 }
-.input-select-group--width-small {
-    position: relative;
+.input-select-group--wdth-small {
     width: 149px;
     margin-right: 20px;
     float: left;
 }
-.input-select-group--width-medium {
+.input-select-group--wdth-medium {
     width: 265px;
 }
-.input-select-group--margin-standard {
+.input-select-group--mrgn-bttm-standard {
     margin-bottom: 25px;
 }
-.input-select-group--margin-large {
+.input-select-group--mrgn-bttm-large {
     margin-bottom: 40px;
 }
 .input-select-group__llabel,

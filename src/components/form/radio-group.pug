@@ -1,0 +1,10 @@
+mixin radio-group(options)
+  - var thisModifiers = []
+  if options.modifiers
+    - thisModifiers = options.modifiers.this || []
+  div(class='radio-group' class=thisModifiers)
+    label(class='radio-group__label' for=options.id)= options.label
+    each option, key in options.options
+      div(class='radio-group__radio' class=checkboxModifiers)
+        input(class='radio-group__input' type='radio' id=key name=options.name value=key checked=option.checked)
+        label(class='radio-group__input-label' for=key)= option.label

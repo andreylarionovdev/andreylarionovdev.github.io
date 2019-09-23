@@ -5,13 +5,13 @@
     font-size: 12px;
     font-family: Montserrat, sans-serif;
 }
-.input-text-group--margin-standard {
+.input-text-group--mrgn-bttm-standard {
     margin-bottom: 20px;
 }
-.input-text-group--margin-large {
+.input-text-group--mrgn-bttm-large {
     margin-bottom: 40px;
 }
-.input-text-group--width-medium {
+.input-text-group--wdth-medium {
     width: 265px;
 }
 .input-text-group__llabel,
