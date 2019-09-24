@@ -1,0 +1,13 @@
+mixin toggle-group(options)
+  - var thisModifiers = []
+  - var checkboxes = {}
+  if options.modifiers
+    - thisModifiers = options.modifiers.this || []
+    - checkboxes = options.options || {}
+  div(class='toggle-group' class=thisModifiers)
+    label(class='toggle-group__label' for=options.id)= options.label
+    each item, key in checkboxes
+      - checkboxModifiers = []
+      div(class='toggle-group__toggle' class=checkboxModifiers)
+        input(class='toggle-group__input' type='checkbox' id=key checked=item.checked)
+        label(class='toggle-group__input-label' for=key)= item.label

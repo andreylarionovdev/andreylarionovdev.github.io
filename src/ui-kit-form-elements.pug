@@ -5,6 +5,7 @@ include components/form/input-text-group
 include components/form/input-select-group
 include components/form/checkbox-group
 include components/form/radio-group
+include components/form/toggle-group
 
 block vars
   - title = 'UI Kit: Form elements'
@@ -126,7 +127,7 @@ block content
       +radio-group({
           'label': 'radio buttons',
           'modifiers': {
-              'this': []
+              'this': ['radio-group--mrgn-bttm-large']
           },
           'name': 'gender',
           'options': {
@@ -137,6 +138,21 @@ block content
               },
               'female': {
                   'label': 'Женщина'
+              }
+          }
+      })
+      +toggle-group({
+          'label': 'toggle',
+          'modifiers': {
+              'this': []
+          },
+          'options': {
+              'active': {
+                  'label': 'Получать спецпредложения',
+                  'checked': true,
+              },
+              'default': {
+                  'label': 'Получать спецпредложения'
               }
           }
       })
