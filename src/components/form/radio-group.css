@@ -14,12 +14,6 @@
 .radio-group__radio--mrgn-rght-small {
     margin-right: 15px;
 }
-.radio-group__label {
-    text-transform: uppercase;
-    display: block;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
 .radio-group__input {
     position: absolute;
     opacity: 0;

@@ -6,6 +6,8 @@ include components/form/input-select-group
 include components/form/checkbox-group
 include components/form/radio-group
 include components/form/toggle-group
+include components/form/label
+include components/form/like-button
 
 block vars
   - title = 'UI Kit: Form elements'
@@ -108,7 +110,8 @@ block content
       +checkbox-group({
           'label': 'checkbox buttons',
           'modifiers': {
-              'this': ['checkbox-group--mrgn-bttm-large']
+              'this': ['checkbox-group--mrgn-bttm-large'],
+              'label': ['label--mrgn-btm-medium']
           },
           'options': {
               'smoke': {
@@ -127,7 +130,8 @@ block content
       +radio-group({
           'label': 'radio buttons',
           'modifiers': {
-              'this': ['radio-group--mrgn-bttm-large']
+              'this': ['radio-group--mrgn-bttm-large'],
+              'label': ['label--mrgn-btm-medium']
           },
           'name': 'gender',
           'options': {
@@ -144,7 +148,8 @@ block content
       +toggle-group({
           'label': 'toggle',
           'modifiers': {
-              'this': []
+              'this': ['toggle-group--mrgn-bttm-small'],
+              'label': ['label--mrgn-btm-medium']
           },
           'options': {
               'active': {
@@ -155,5 +160,21 @@ block content
                   'label': 'Получать спецпредложения'
               }
           }
+      })
+      +label({
+          'llabel': 'like button',
+          'modifiers': {
+              'this': ['label--mrgn-btm-small']
+          }
+      })
+      +like-button({
+          'count': 2,
+          'modifiers': {
+              'this': ['like-button--sample']
+          }
+      })
+      +like-button({
+          'count': 12,
+          'favorite': true
       })
     .col-4

@@ -1,13 +1,16 @@
+include label
+
 mixin input-text-group(options)
   if options.modifiers
     - var thisModifiers = options.modifiers.this || []
     - var inputModifiers = options.modifiers.input || []
     - var buttonModifiers = options.modifiers.button || []
   div(class='input-text-group' class=thisModifiers)
-    label(for=options.id)
-      span(class='input-text-group__llabel')= options.llabel
-      span(class='input-text-group__rlabel')= options.rlabel
-      div.clearfix
+    +label({
+        '_for': options.id,
+        'llabel': options.llabel,
+        'rlabel': options.rlabel
+    })
     input(type='text' class='input-text-group__input-text' class=inputModifiers id=options.id placeholder=options.placeholder value=options.value)
     if buttonModifiers
       input(type='submit' class='input-text-group__input-submit' class=buttonModifiers)

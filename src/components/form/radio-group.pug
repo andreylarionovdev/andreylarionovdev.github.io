@@ -1,9 +1,18 @@
+include label
+
 mixin radio-group(options)
   - var thisModifiers = []
+  - var labelModifiers = []
   if options.modifiers
     - thisModifiers = options.modifiers.this || []
+    - labelModifiers = options.modifiers.label || []
   div(class='radio-group' class=thisModifiers)
-    label(class='radio-group__label' for=options.id)= options.label
+    +label({
+        'llabel': options.label,
+        'modifiers': {
+            'this': labelModifiers
+        }
+    })
     each option, key in options.options
       div(class='radio-group__radio' class=option.modifiers)
         input(class='radio-group__input' type='radio' id=key name=options.name value=key checked=option.checked)

@@ -1,0 +1,28 @@
+.label {
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: Montserrat, sans-serif;
+}
+.label--mrgn-btm-medium {
+    margin-bottom: 16px;
+}
+.label--mrgn-btm-small {
+    margin-bottom: 11px;
+}
+.label__left,
+.label__right {
+    position: relative;
+    display: inline-block;
+    top: 0;
+}
+.label__left {
+    float: left;
+    font-weight: bold;
+    color: #1F2041;
+}
+.label__right {
+    float: right;
+    color: rgba(31, 32, 65, 0.5);
+}

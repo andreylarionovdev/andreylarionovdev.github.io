@@ -19,20 +19,3 @@
 .input-select-group--mrgn-bttm-large {
     margin-bottom: 40px;
 }
-.input-select-group__llabel,
-.input-select-group__rlabel {
-    text-transform: uppercase;
-    display: inline-block;
-    position: absolute;
-    top: 0;
-}
-.input-select-group__llabel {
-    left: 0;
-    font-weight: bold;
-    color: #1F2041;
-}
-.input-select-group__rlabel {
-    right: 0;
-    /*top: -3px;*/
-    color: rgba(31, 32, 65, 0.5);
-}

@@ -1,0 +1,23 @@
+.like-button {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    font-size: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    color: rgba(31, 32, 65, 0.25);
+}
+.like-button--sample {
+    margin-right: 5px;
+}
+.like-button--favorite {
+    border: 1px solid #BC9CFF;
+}
+.like-button--favorite .like-button__counter {
+    color: #BC9CFF;
+}
+.like-button__favorite,
+.like-button__counter {
+    display: inline-block;
+}

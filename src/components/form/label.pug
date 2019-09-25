@@ -1,0 +1,7 @@
+mixin label(options)
+  - var thisModifiers = []
+  if options.modifiers
+    - thisModifiers = options.modifiers.this || []
+  label(class=['label', 'clearfix'] class=thisModifiers for=options._for)
+    span(class='label__left')= options.llabel
+    span(class='label__right')= options.rlabel

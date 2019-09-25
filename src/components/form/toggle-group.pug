@@ -1,11 +1,20 @@
+include label
+
 mixin toggle-group(options)
   - var thisModifiers = []
+  - var labelModifiers = []
   - var checkboxes = {}
   if options.modifiers
     - thisModifiers = options.modifiers.this || []
+    - labelModifiers = options.modifiers.label || []
     - checkboxes = options.options || {}
   div(class='toggle-group' class=thisModifiers)
-    label(class='toggle-group__label' for=options.id)= options.label
+    +label({
+        'llabel': options.label,
+        'modifiers': {
+            'this': labelModifiers
+        }
+    })
     each item, key in checkboxes
       - checkboxModifiers = []
       div(class='toggle-group__toggle' class=checkboxModifiers)

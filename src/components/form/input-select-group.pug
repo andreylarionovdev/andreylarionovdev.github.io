@@ -1,3 +1,5 @@
+include label
+
 mixin input-select-group(options)
   - var thisModifiers = []
   - var selectOptions = []
@@ -6,10 +8,11 @@ mixin input-select-group(options)
   if options.options
     - selectOptions = options.options
   div(class='input-select-group' class=thisModifiers)
-    label(for=options.id)
-      span(class=['input-select-group__llabel'])= options.llabel
-      span(class=['input-select-group__rlabel'])= options.rlabel
-      div.clearfix
+    +label({
+        '_for': options.id,
+        'llabel': options.llabel,
+        'rlabel': options.rlabel
+    })
     select(class='input-select' id=options.id)
       each val in selectOptions
         option= val
