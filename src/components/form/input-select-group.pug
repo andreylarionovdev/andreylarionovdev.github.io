@@ -13,6 +13,6 @@ mixin input-select-group(options)
         'llabel': options.llabel,
         'rlabel': options.rlabel
     })
-    select(class='input-select' id=options.id)
+    select(class='input-select-group__select' id=options.id)
       each val in selectOptions
         option= val

@@ -1,15 +1,8 @@
 .input-text-group {
     position: relative;
-    width: 320px;
     height: 64px;
     font-size: 12px;
     font-family: Montserrat, sans-serif;
-}
-.input-text-group--mrgn-bttm-standard {
-    margin-bottom: 20px;
-}
-.input-text-group--mrgn-bttm-large {
-    margin-bottom: 40px;
 }
 .input-text-group--wdth-medium {
     width: 265px;

@@ -2,14 +2,15 @@
 @import "components/container/container.css";
 @import "components/color-sample/color-sample.css";
 @import "components/font-sample/font-sample.css";
+@import "components/form-group/form-group.css";
 @import "components/form/label.css";
 @import "components/form/input-text-group.css";
 @import "components/form/input-select-group.css";
-@import "components/form/input-select.css";
 @import "components/form/checkbox-group.css";
 @import "components/form/radio-group.css";
 @import "components/form/toggle-group.css";
 @import "components/form/like-button.css";
+@import "components/form/rate-group.css";
 
 *, *:after, *:before {
     -webkit-box-sizing: border-box;

@@ -8,9 +8,6 @@
     min-height: 20px;
     display: inline-block;
 }
-.radio-group--mrgn-bttm-large {
-    margin-bottom: 40px;
-}
 .radio-group__radio--mrgn-rght-small {
     margin-right: 15px;
 }

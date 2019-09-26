@@ -4,9 +4,6 @@
     font-size: 12px;
     font-family: Montserrat, sans-serif;
 }
-.toggle-group--mrgn-bttm-small {
-    margin-bottom: 43px;
-}
 .toggle-group__toggle {
     min-height: 20px;
     margin-bottom: 15px;
@@ -56,4 +53,7 @@
 }
 .toggle-group__input:checked + .toggle-group__input-label::before {
     border: 1px solid #BC9CFF;
+}
+.toggle-group__form-group {
+    margin-bottom: 43px;
 }

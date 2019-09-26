@@ -1,0 +1,13 @@
+mixin rate-group(options)
+  - var thisModifiers = []
+  - var base = options.base || 5
+  - var rate = options.rate || 0
+  if options.modifiers
+    - thisModifiers = options.modifiers.this || []
+  div(class='rate-group' class=thisModifiers)
+    - var n = base
+    while n > 0
+      - var inputId = options.name + n
+      input(class='rate-group__radio' type='radio' name=options.name id=inputId value=n checked=n===rate)
+      label(class='rate-group__label' for=inputId)= n
+      - n--

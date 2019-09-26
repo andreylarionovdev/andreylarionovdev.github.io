@@ -1,21 +1,36 @@
 .input-select-group {
     position: relative;
-    width: 320px;
     height: 64px;
     font-size: 12px;
     font-family: Montserrat, sans-serif;
 }
-.input-select-group--wdth-small {
+.input-select-group--small {
     width: 149px;
-    margin-right: 20px;
     float: left;
 }
-.input-select-group--wdth-medium {
-    width: 265px;
+.input-select-group--small-first {
+    margin-right: 21px;
 }
-.input-select-group--mrgn-bttm-standard {
-    margin-bottom: 25px;
+.input-select-group__select {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 44px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEzIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMS4zMzAxIDAuNTc4MTI1TDEyLjczNjMgMS45ODQzOEw2LjczNjMzIDcuOTg0MzhMMC43MzYzMjggMS45ODQzOEwyLjE0MjU4IDAuNTc4MTI1TDYuNzM2MzMgNS4xNzE4OEwxMS4zMzAxIDAuNTc4MTI1WiIgZmlsbD0iIzFGMjA0MSIgZmlsbC1vcGFjaXR5PSIwLjUiLz4KPC9zdmc+Cg==');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: Montserrat, sans-serif;
+    padding: 0 14px;
+    color: rgba(31, 32, 65, 0.75);
 }
-.input-select-group--mrgn-bttm-large {
-    margin-bottom: 40px;
+.input-select-group__select:focus {
+    outline: none;
 }

@@ -8,6 +8,7 @@ include components/form/radio-group
 include components/form/toggle-group
 include components/form/label
 include components/form/like-button
+include components/form/rate-group
 
 block vars
   - title = 'UI Kit: Form elements'
@@ -15,166 +16,167 @@ block content
   .container.container--page-form-elements.clearfix
     +logo
     .col-4
-      +input-text-group({
+      div.form-group
+        +input-text-group({
           'llabel': 'text field',
           'rlabel': 'default',
           'placeholder': 'Email',
-          'id': 'input-email',
-          'modifiers': {
-              'this': [
-                  'input-text-group--mrgn-bttm-standard'
-              ]
-          }
-      })
-      +input-text-group({
+          'id': 'input-email'
+        })
+      div.form-group
+        +input-text-group({
           'llabel': 'text field',
           'rlabel': 'hover / focus',
           'value': 'This is pretty awesome',
           'id': 'input-focused-hovered',
           'modifiers': {
-              'this': [
-                  'input-text-group--mrgn-bttm-standard'
-              ],
-              'input': [
-                  'input-text-group__input-text--focused'
-              ]
+            'input': [
+              'input-text-group__input-text--focused'
+            ]
           }
-      })
-      +input-select-group({
+        })
+      div.form-group.form-group--v-0-25
+        +input-select-group({
           'llabel': 'dropdown',
           'rlabel': 'default',
           'id': 'default-dropdown',
-          'modifiers': {
-              'this': [
-                  'input-select-group--mrgn-bttm-standard'
-              ]
-          },
           'options': ['Сколько гостей']
-      })
-      +input-text-group({
+        })
+      div.form-group.form-group--v-0-40
+        +input-text-group({
           'llabel': 'masked text field',
           'rlabel': 'default',
           'id': 'input-text-with-mask',
-          'placeholder': 'ДД.ММ.ГГГГ',
-          'modifiers': {
-              'this': [
-                  'input-select-group--mrgn-bttm-large'
-              ]
-          }
-      })
-      +input-select-group({
+          'placeholder': 'ДД.ММ.ГГГГ'
+        })
+      div.form-group.form-group--v-0-40.clearfix
+        +input-select-group({
           'llabel': 'date dropdown',
           'options': ['ДД.ММ.ГГГГ'],
           'modifiers': {
-              'this': [
-                  'input-select-group--wdth-small'
-              ]
+            'this': [
+              'input-select-group--small',
+              'input-select-group--small-first',
+            ]
           }
-      })
-      +input-select-group({
+        })
+        +input-select-group({
           'llabel': 'date dropdown',
           'options': [
-              '19.08.2019'
+            '19.08.2019'
           ],
           'modifiers': {
-              'this': [
-                  'input-select-group--wdth-small'
-              ]
+            'this': [
+              'input-select-group--small'
+            ]
           }
-      })
-      div.clearfix.input-text-group--mrgn-bttm-large
-      +input-select-group({
+        })
+      div.form-group.form-group--v-0-40.form-group--w-265
+        +input-select-group({
           'llabel': 'filter date dropdown',
           'options': ['19 авг - 23 авг'],
-          'modifiers': {
-              'this': [
-                  'input-select-group--wdth-medium',
-                  'input-select-group--mrgn-bttm-large'
-              ]
-          }
-      })
-      +input-text-group({
+        })
+      div.form-group.form-group--w-265
+        +input-text-group({
           'llabel': 'subscription text field',
           'id': 'input-text-submit',
           'placeholder': 'Email',
           'modifiers': {
-              'this': [
-                  'input-text-group--wdth-medium'
-              ],
-              'button': [
-                  'input-text-group__input-submit--visible'
-              ]
+            'button': [
+              'input-text-group__input-submit--visible'
+            ]
           }
-      })
+        })
     .col-4
-      +checkbox-group({
+      div.form-group.form-group--v-0-60
+        +checkbox-group({
           'label': 'checkbox buttons',
           'modifiers': {
-              'this': ['checkbox-group--mrgn-bttm-large'],
-              'label': ['label--mrgn-btm-medium']
+            'label': ['label--mrgn-bttm-medium']
           },
           'options': {
-              'smoke': {
-                  'label': 'Можно курить'
-              },
-              'pets': {
-                  'label': 'Можно с питомцами',
-                  'checked': true
-              },
-              'guests': {
-                  'label':'Можно пригласить гостей (до 10 человек)',
-                  'checked': true
-              }
+            'smoke': {
+              'label': 'Можно курить'
+            },
+            'pets': {
+              'label': 'Можно с питомцами',
+              'checked': true
+            },
+            'guests': {
+              'label':'Можно пригласить гостей (до 10 человек)',
+              'checked': true
+            }
           }
-      })
-      +radio-group({
+        })
+      div.form-group.form-group--v-0-40
+        +radio-group({
           'label': 'radio buttons',
           'modifiers': {
-              'this': ['radio-group--mrgn-bttm-large'],
-              'label': ['label--mrgn-btm-medium']
+            'label': ['label--mrgn-bttm-medium']
           },
           'name': 'gender',
           'options': {
-              'male': {
-                  'label': 'Мужчина',
-                  'checked': true,
-                  'modifiers': ['radio-group__radio--mrgn-rght-small']
-              },
-              'female': {
-                  'label': 'Женщина'
-              }
+            'male': {
+              'label': 'Мужчина',
+              'checked': true,
+              'modifiers': ['radio-group__radio--mrgn-rght-small']
+            },
+            'female': {
+              'label': 'Женщина'
+            }
           }
-      })
-      +toggle-group({
+        })
+      div.form-group.toggle-group__form-group
+        +toggle-group({
           'label': 'toggle',
           'modifiers': {
-              'this': ['toggle-group--mrgn-bttm-small'],
-              'label': ['label--mrgn-btm-medium']
+            'label': ['label--mrgn-bttm-medium']
           },
           'options': {
-              'active': {
-                  'label': 'Получать спецпредложения',
-                  'checked': true,
-              },
-              'default': {
-                  'label': 'Получать спецпредложения'
-              }
+            'active': {
+              'label': 'Получать спецпредложения',
+              'checked': true,
+            },
+            'default': {
+              'label': 'Получать спецпредложения'
+            }
           }
-      })
-      +label({
+        })
+      div.form-group.like-button__form-group
+        +label({
           'llabel': 'like button',
           'modifiers': {
-              'this': ['label--mrgn-btm-small']
+            'this': ['label--mrgn-bttm-medium']
           }
-      })
-      +like-button({
-          'count': 2,
+        })
+        +like-button({
+          'count': 2
+        })
+        +like-button({
+          'count': 12,
+          'favorite': true,
           'modifiers': {
               'this': ['like-button--sample']
           }
-      })
-      +like-button({
-          'count': 12,
-          'favorite': true
-      })
+        })
+      div.form-group.form-group--v-0-40
+        +label({
+          'llabel': 'rate button',
+          'modifiers': {
+              'this': ['label--mrgn-bttm-medium']
+          }
+        })
+        +rate-group({
+          'base': 5,
+          'rate': 4,
+          'name': 'rate-first',
+          'modifiers': {
+              'this': ['rate-group--first']
+          }
+        })
+        +rate-group({
+          'base': 5,
+          'rate': 5,
+          'name': 'rate-second'
+        })
     .col-4

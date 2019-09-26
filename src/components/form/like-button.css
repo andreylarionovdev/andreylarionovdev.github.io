@@ -9,7 +9,7 @@
     color: rgba(31, 32, 65, 0.25);
 }
 .like-button--sample {
-    margin-right: 5px;
+    margin-left: 10px;
 }
 .like-button--favorite {
     border: 1px solid #BC9CFF;
@@ -19,5 +19,18 @@
 }
 .like-button__favorite,
 .like-button__counter {
-    display: inline-block;
+    display: block;
+    float: left;
+    position: relative;
+}
+.like-button__favorite {
+    top: 3px;
+    left: 4px;
+}
+.like-button__counter {
+    top: 2px;
+    left: 10px;
+}
+.like-button__form-group {
+    margin-bottom: 36px;
 }
