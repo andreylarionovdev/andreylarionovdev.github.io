@@ -1,5 +1,6 @@
 @import "fonts/fonts.css";
 @import "components/container/container.css";
+@import "components/column/column.css";
 @import "components/color-sample/color-sample.css";
 @import "components/font-sample/font-sample.css";
 @import "components/form-group/form-group.css";
@@ -35,22 +36,11 @@ body {
     top: 30px;
     left: 30px;
 }
-[class*='col-'] {
-    float: left;
-}
-.col-6 {
-    width: 50%;
-}
-.col-4 {
-    padding-left: 90px;
-    width: 33.33%;
-}
 .clearfix::after {
     content: "";
     display: table;
     clear: both;
 }
-
 ul.main-menu {
     list-style: none;
 }
@@ -79,8 +69,5 @@ ul.main-menu li a:hover {
 @media (max-width: 767px) {
     .container {
         /*width: 91%;*/
-    }
-    .col-6 {
-        width: 100%;
     }
 }
