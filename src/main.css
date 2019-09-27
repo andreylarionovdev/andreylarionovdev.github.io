@@ -12,6 +12,7 @@
 @import "components/form/toggle-group.css";
 @import "components/form/like-button.css";
 @import "components/form/rate-group.css";
+@import "../node_modules/ion-rangeslider/css/ion.rangeSlider.min.css";
 
 *, *:after, *:before {
     -webkit-box-sizing: border-box;
