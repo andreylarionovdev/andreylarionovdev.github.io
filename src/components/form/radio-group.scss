@@ -23,7 +23,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
-    color: rgba(31, 32, 65, 0.5);
+    color: $color-dark-50;
 }
 .radio-group__input-label:after,
 .radio-group__input-label:before {
@@ -35,7 +35,7 @@
     left: 5px;
 }
 .radio-group__input:checked + .radio-group__input-label {
-    color: rgba(31, 32, 65, 0.75);
+    color: $color-dark-75;
 }
 .radio-group__input:checked + .radio-group__input-label:after {
     content: "";
@@ -45,7 +45,7 @@
     height: 12px;
     border-radius: 6px;
     display: block;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: linear-gradient(180deg, $color-purple 0%, #8BA4F9 100%);
 }
 .radio-group__input-label::before {
     content: "";
@@ -54,10 +54,10 @@
     width: 20px;
     height: 20px;
     display: inline-block;
-    border: 1px solid rgba(31, 32, 65, 0.25);
+    border: 1px solid $color-dark-25;
     border-radius: 10px;
     box-sizing: border-box;
 }
 .radio-group__input:checked + .radio-group__input-label:before {
-    border: 1px solid #BC9CFF;
+    border: 1px solid $color-purple;
 }

@@ -29,23 +29,23 @@
     border-radius: 6px;
 }
 .color-sample__rect--background-d-100 {
-    background-color: #1F2041;
+    background-color: $color-dark-100;
 }
 .color-sample__rect--background-d-75 {
-    background: rgba(31, 32, 65, 0.75);
+    background: $color-dark-75;
 }
 .color-sample__rect--background-d-50 {
-    background: rgba(31, 32, 65, 0.50);
+    background: $color-dark-50;
 }
 .color-sample__rect--background-d-25 {
-    background: rgba(31, 32, 65, 0.25);
+    background: $color-dark-25;
 }
 .color-sample__rect--background-d-5 {
-    background: rgba(31, 32, 65, 0.05);
+    background: $color-dark-5;
 }
 .color-sample__rect--background-purple {
-    background: #BC9CFF;
+    background: $color-purple;
 }
 .color-sample__rect--background-green {
-    background: #6FCF97;
+    background: $color-green;
 }

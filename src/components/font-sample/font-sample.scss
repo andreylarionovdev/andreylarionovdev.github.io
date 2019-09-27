@@ -38,7 +38,7 @@
     float: left;
 }
 .font-sample__desc--color-d-75 {
-    color: rgba(31, 32, 65, 0.75);
+    color: $color-dark-75;
 }
 .font-sample__name {
     float: left;
@@ -49,7 +49,7 @@
     left: 0;
     width: 163px;
     font-weight: normal;
-    color: rgba(31, 32, 65, 0.25);
+    color: $color-dark-25;
 }
 
 @media (max-width: 1024px) {

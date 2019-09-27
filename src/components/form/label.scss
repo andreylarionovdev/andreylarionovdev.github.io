@@ -20,9 +20,9 @@
 .label__left {
     float: left;
     font-weight: bold;
-    color: #1F2041;
+    color: $color-dark-100;
 }
 .label__right {
     float: right;
-    color: rgba(31, 32, 65, 0.5);
+    color: $color-dark-50;
 }

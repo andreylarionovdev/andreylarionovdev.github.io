@@ -1,0 +1,76 @@
+$color-purple: #BC9CFF;
+$color-green: #6FCF97;
+$color-dark-5: rgba(31, 32, 65, 0.05);
+$color-dark-25: rgba(31, 32, 65, 0.25);
+$color-dark-50: rgba(31, 32, 65, 0.5);
+$color-dark-75: rgba(31, 32, 65, 0.75);
+$color-dark-100: #1F2041;
+
+@import 'fonts/fonts.css';
+@import 'components/container/container.scss';
+@import "components/column/column.scss";
+@import "components/color-sample/color-sample.scss";
+@import "components/font-sample/font-sample.scss";
+@import "components/form-group/form-group.scss";
+@import "components/form/label.scss";
+@import "components/form/input-text-group.scss";
+@import "components/form/input-select-group.scss";
+@import "components/form/checkbox-group.scss";
+@import "components/form/radio-group.scss";
+@import "components/form/toggle-group.scss";
+@import "components/form/like-button.scss";
+@import "components/form/rate-group.scss";
+@import "components/form/range-slider.scss";
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+::placeholder {
+    color: $color-dark-50;
+}
+body {
+    font-family: Quicksand, sans-serif;
+    margin: 0;
+}
+.logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+ul.main-menu {
+    list-style: none;
+}
+ul.main-menu.purple li a {
+    color: $color-purple;
+}
+ul.main-menu.green li a {
+    color: $color-green;
+}
+ul.main-menu li a:hover {
+    color: $color-dark-100;
+}
+
+@media (max-width: 1280px) {
+    .container {
+        /*width: 88%;*/
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        /*width: 91%;*/
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        /*width: 91%;*/
+    }
+}
