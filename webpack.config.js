@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const config = {
-    entry: __dirname + "/src/app.js",
+    entry: [__dirname + "/src/app.js", __dirname + "/src/main.css"],
     output: {
         filename: "[name].bundle.js",
     },
