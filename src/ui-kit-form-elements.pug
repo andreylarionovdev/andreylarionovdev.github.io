@@ -10,6 +10,7 @@ include components/form/label
 include components/form/like-button
 include components/form/rate-button
 include components/form/range-slider
+include components/form/button
 
 block vars
   - title = 'UI Kit: Form elements'
@@ -177,3 +178,40 @@ block content
         +range-slider({
           'name': 'range-slider'
         })
+      div.ui__button-group--default
+        div.button-group
+          div.button-group__label
+            +label({
+              'llabel': 'buttons'
+            })
+          div.button-group__button
+            +button({
+              theme: 'default',
+              caption: 'click me'
+            })
+          div.button-group__button
+            +button({
+                theme: 'default',
+                caption: 'click me',
+                hover: true
+            })
+          div.button-group__button
+            +button({
+                theme: 'transparent',
+                caption: 'click me'
+            })
+          div.button-group__button
+            +button({
+                theme: 'transparent',
+                caption: 'click me',
+                hover: true
+            })
+          +button({
+              theme: 'textual',
+              caption: 'click me'
+          })
+          +button({
+              theme: 'textual',
+              caption: 'click me',
+              hover: true
+          })

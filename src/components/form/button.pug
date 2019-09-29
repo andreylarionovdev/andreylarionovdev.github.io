@@ -1,0 +1,11 @@
+mixin button(options)
+  - var name = 'button'
+  - var href = options.href || 'javascript:void(0);'
+  - var modifiers = [];
+
+  if options.theme
+    - modifiers.push(name + '--' + options.theme)
+  if options.hover
+    - modifiers.push(name + '--hovered')
+
+  a(class='button' class=modifiers href=href)= options.caption

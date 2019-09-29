@@ -1,0 +1,39 @@
+$height: 44px;
+.button {
+  $button: &;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  border-radius: $height / 2;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: $height;
+  text-transform: uppercase;
+  &--default {
+    color: white;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  }
+  &--transparent {
+    color: $color-purple;
+    background: transparent;
+    border: 2px solid $color-purple;
+    line-height: $height - 2px;
+  }
+  &--textual {
+    display: inline;
+    border: none;
+    color: $color-purple;
+    line-height: $height / 2;
+    margin-right: 20px;
+    &:hover,
+    &#{$button}--hovered {
+      color: $color-dark-50;
+    }
+  }
+  &--hovered,
+  &:hover {
+    opacity: 0.5;
+  }
+}

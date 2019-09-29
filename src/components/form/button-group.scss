@@ -1,0 +1,15 @@
+.button-group {
+  &__label {
+    margin-bottom: 16px;
+  }
+  &__button {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 29px;
+    min-width: 99px;
+    height: 44px;
+    &--textual {
+      display: inline;
+    }
+  }
+}
