@@ -1,7 +1,6 @@
 .like-button {
-    position: relative;
     display: inline-block;
-    width: 40px;
+    min-width: 40px;
     height: 20px;
     font-size: 10px;
     border-radius: 10px;
@@ -30,7 +29,4 @@
 .like-button__counter {
     top: 2px;
     left: 10px;
-}
-.like-button__form-group {
-    margin-bottom: 36px;
 }
