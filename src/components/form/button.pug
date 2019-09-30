@@ -8,4 +8,10 @@ mixin button(options)
   if options.hover
     - modifiers.push(name + '--hovered')
 
-  a(class='button' class=modifiers href=href)= options.caption
+  a(class='button' class=modifiers href=href)
+    if options.arrow
+      span.button__arrow
+        = options.caption
+        i.material-icons.arrow= 'arrow_forward'
+    else
+      = options.caption

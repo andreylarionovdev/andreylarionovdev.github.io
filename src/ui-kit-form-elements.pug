@@ -206,12 +206,20 @@ block content
                 caption: 'click me',
                 hover: true
             })
-          +button({
-              theme: 'textual',
-              caption: 'click me'
-          })
-          +button({
-              theme: 'textual',
-              caption: 'click me',
-              hover: true
-          })
+          div.button-group__button--textual
+            +button({
+                theme: 'textual',
+                caption: 'click me'
+            })
+          div.button-group__button--textual
+            +button({
+                theme: 'textual',
+                caption: 'click me',
+                hover: true
+            })
+          div.button-group__button--large
+            +button({
+                theme: 'default',
+                arrow: true,
+                caption: 'перейти к оплате'
+            })

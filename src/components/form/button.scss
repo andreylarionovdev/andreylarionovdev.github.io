@@ -1,6 +1,5 @@
 $height: 44px;
 .button {
-  $button: &;
   text-align: center;
   text-decoration: none;
   display: block;
@@ -11,6 +10,16 @@ $height: 44px;
   font-size: 12px;
   line-height: $height;
   text-transform: uppercase;
+  $buttonHovered: #{&}--hovered;
+  &__arrow {
+    display: block;
+    position: relative;
+    > .arrow {
+      position: absolute;
+      right: 0;
+      padding: 10px;
+    }
+  }
   &--default {
     color: white;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
@@ -26,13 +35,12 @@ $height: 44px;
     border: none;
     color: $color-purple;
     line-height: $height / 2;
-    margin-right: 20px;
     &:hover,
-    &#{$button}--hovered {
+    &#{$buttonHovered} {
       color: $color-dark-50;
     }
   }
-  &--hovered,
+  #{$buttonHovered},
   &:hover {
     opacity: 0.5;
   }
