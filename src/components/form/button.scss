@@ -11,6 +11,11 @@ $height: 44px;
   line-height: $height;
   text-transform: uppercase;
   $buttonHovered: #{&}--hovered;
+
+  #{$buttonHovered},
+  &:hover {
+    opacity: 0.5;
+  }
   &__arrow {
     display: block;
     position: relative;
@@ -22,7 +27,7 @@ $height: 44px;
   }
   &--default {
     color: white;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background: $grad-purple;
   }
   &--transparent {
     color: $color-purple;
@@ -38,10 +43,7 @@ $height: 44px;
     &:hover,
     &#{$buttonHovered} {
       color: $color-dark-50;
+      opacity: 1;
     }
-  }
-  #{$buttonHovered},
-  &:hover {
-    opacity: 0.5;
   }
 }

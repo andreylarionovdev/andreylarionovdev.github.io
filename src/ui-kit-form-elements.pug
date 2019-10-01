@@ -11,6 +11,7 @@ include components/form/like-button
 include components/form/rate-button
 include components/form/range-slider
 include components/form/button
+include components/form/paginator
 
 block vars
   - title = 'UI Kit: Form elements'
@@ -191,35 +192,43 @@ block content
             })
           div.button-group__button
             +button({
-                theme: 'default',
-                caption: 'click me',
-                hover: true
+              theme: 'default',
+              caption: 'click me',
+              hover: true
             })
           div.button-group__button
             +button({
-                theme: 'transparent',
-                caption: 'click me'
+              theme: 'transparent',
+              caption: 'click me'
             })
           div.button-group__button
             +button({
-                theme: 'transparent',
-                caption: 'click me',
-                hover: true
+              theme: 'transparent',
+              caption: 'click me',
+              hover: true
             })
           div.button-group__button--textual
             +button({
-                theme: 'textual',
-                caption: 'click me'
+              theme: 'textual',
+              caption: 'click me'
             })
           div.button-group__button--textual
             +button({
-                theme: 'textual',
-                caption: 'click me',
-                hover: true
+              theme: 'textual',
+              caption: 'click me',
+              hover: true
             })
           div.button-group__button--large
             +button({
-                theme: 'default',
-                arrow: true,
-                caption: 'перейти к оплате'
+              theme: 'default',
+              arrow: true,
+              caption: 'перейти к оплате'
             })
+      div.ui__paginator-group
+        div.paginator-group
+          div.paginator-group__label
+            +label({
+              'llabel': 'pagination'
+            })
+          div.paginator-group__paginator
+            +paginator()

@@ -1,0 +1,56 @@
+.paginator {
+  &__arrow-next,
+  &__arrow-prev {
+    position: relative;
+    top: 7px;
+    color: white;
+  }
+  &__ul {
+    margin: 0;
+    padding: 0;
+  }
+  .paginator-page,
+  .paginator-ellipsis,
+  .paginator-next,
+  .paginator-prev {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 40px;
+    text-align: center;
+    a {
+      text-decoration: none;
+      color: $color-dark-50;
+    }
+  }
+  .paginator-page {
+    &--active {
+      border-radius: 20px;
+      font-weight: bold;
+      background: $grad-purple;
+      a {
+        color: white;
+      }
+    }
+  }
+  .paginator-next,
+  .paginator-prev {
+    border-radius: 20px;
+    background: $grad-green;
+    a {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+  .paginator-nav {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    padding-top: 7px;
+    padding-left: 6px;
+    color: $color-dark-75;
+  }
+}
