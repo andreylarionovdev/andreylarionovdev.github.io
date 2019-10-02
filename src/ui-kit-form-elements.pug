@@ -5,7 +5,7 @@ include components/form/input-text-group
 include components/form/input-select-group
 include components/form/checkbox-group
 include components/form/radio-group
-include components/form/toggle-group
+include components/form/toggle-button
 include components/form/label
 include components/form/like-button
 include components/form/rate-button
@@ -121,59 +121,55 @@ block content
           }
         })
       div.ui__toggle-group--default
-        +toggle-group({
-          'label': 'toggle',
-          'modifiers': {
-            'label': ['label--mrgn-bttm-medium']
-          },
-          'options': {
-            'active': {
-              'label': 'Получать спецпредложения',
-              'checked': true,
-            },
-            'default': {
-              'label': 'Получать спецпредложения'
-            }
-          }
-        })
-      div.ui__like-button-group--default
+        div.toggle-group
+          div.toggle-group__label
+            +label({
+              llabel: 'toggle'
+            })
+          div.toggle-group__toggle-button
+            +toggle-button({
+              id: 'first',
+              label: 'Получать спецпредложения',
+              checked: true
+            })
+          div.toggle-group__toggle-button
+            +toggle-button({
+              id: 'second',
+              label: 'Получать спецпредложения'
+            })
+      div.ui__like-button-group--default.clearfix
         div.like-button-group
-          +label({
-            'llabel': 'like button',
-            'modifiers': {
-              'this': ['label--mrgn-bttm-medium']
-            }
-          })
-          +like-button({
-            'count': 2
-          })
-          +like-button({
-            'count': 12,
-            'favorite': true,
-            'modifiers': {
-                'this': ['like-button--sample']
-            }
-          })
-      div.ui__rate-group--default
-        +label({
-          'llabel': 'rate button',
-          'modifiers': {
-              'this': ['label--mrgn-bttm-medium']
-          }
-        })
-        +rate-button({
-          'base': 5,
-          'rate': 4,
-          'name': 'rate-first',
-          'modifiers': {
-              'this': ['rate-button--first']
-          }
-        })
-        +rate-button({
-          'base': 5,
-          'rate': 5,
-          'name': 'rate-second'
-        })
+          div.like-button-group__label
+            +label({
+              llabel: 'like button'
+            })
+          div.like-button-group__like-button
+            +like-button({
+              count: 2
+            })
+          div.like-button-group__like-button
+            +like-button({
+              count: 12,
+              favorite: true
+            })
+      div.ui__rate-group--default.clearfix
+        div.rate-group
+          div.rate-group__label
+            +label({
+              llabel: 'rate button'
+            })
+          div.rate-group__rate-button
+            +rate-button({
+              base: 5,
+              rate: 4,
+              name: 'rate-first'
+            })
+          div.rate-group__rate-button
+            +rate-button({
+              base: 5,
+              rate: 5,
+              name: 'rate-second'
+            })
     div.column.column--4.column--small-hpadding
       div.ui__range-slider--default
         +range-slider({
@@ -232,3 +228,5 @@ block content
             })
           div.paginator-group__paginator
             +paginator()
+    div.clearfix
+      div.column.column--4

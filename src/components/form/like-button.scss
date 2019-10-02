@@ -6,27 +6,24 @@
     border-radius: 10px;
     border: 1px solid $color-dark-25;
     color: $color-dark-25;
-}
-.like-button--sample {
-    margin-left: 10px;
-}
-.like-button--favorite {
-    border: 1px solid $color-purple;
-}
-.like-button--favorite .like-button__counter {
-    color: $color-purple;
-}
-.like-button__favorite,
-.like-button__counter {
-    display: block;
-    float: left;
-    position: relative;
-}
-.like-button__favorite {
-    top: 3px;
-    left: 4px;
-}
-.like-button__counter {
-    top: 2px;
-    left: 10px;
+    &--favorite {
+        border: 1px solid $color-purple;
+        .like-button__counter {
+            color: $color-purple;
+        }
+    }
+    &__favorite,
+    &__counter {
+        display: block;
+        float: left;
+        position: relative;
+    }
+    &__favorite {
+        top: 3px;
+        left: 4px;
+    }
+    &__counter {
+        top: 2px;
+        left: 10px;
+    }
 }

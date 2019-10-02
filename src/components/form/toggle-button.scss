@@ -1,0 +1,53 @@
+.toggle-button {
+    font-size: 12px;
+    font-family: Montserrat, sans-serif;
+    &__toggle {
+        min-height: 20px;
+    }
+    &__input {
+        position: absolute;
+        opacity: 0;
+        &:checked + .toggle-button__input-label:after {
+            background: $grad-purple;
+            left: 23px;
+        }
+        &:checked + .toggle-button__input-label:before {
+            border: 1px solid $color-purple;
+        }
+    }
+    &__input-label {
+        display: block;
+        position: absolute;
+        padding-left: 50px;
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        color: $color-dark-75;
+        &:after,
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &:after {
+            content: "";
+            top: 4px;
+            left: 4px;
+            width: 12px;
+            height: 12px;
+            border-radius: 6px;
+            display: block;
+            background: $color-dark-25;
+        }
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+            border: 1px solid $color-dark-25;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+    }
+}

@@ -2,9 +2,6 @@
     display: inline-block;
     padding-top: 2px;
 }
-.rate-button--first {
-    margin-right: 18px;
-}
 .rate-button:not(:checked) > .rate-button__radio {
     position: absolute;
     opacity: 0;

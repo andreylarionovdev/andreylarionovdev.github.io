@@ -1,0 +1,5 @@
+mixin toggle-button(options)
+  div(class='toggle-button')
+    div(class='toggle-button__toggle')
+      input(class='toggle-button__input' type='checkbox' id=options.id checked=options.checked)
+      label(class='toggle-button__input-label' for=options.id)= options.label
