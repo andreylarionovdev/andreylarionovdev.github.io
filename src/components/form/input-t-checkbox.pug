@@ -1,5 +1,13 @@
 mixin input-t-checkbox(options)
-  - var modifiers = []
-  div(class='input-t-checkbox' class=modifiers)
-    input(class='input-t-checkbox__input' type='checkbox' id=options.id checked=options.checked)
-    label(class='input-t-checkbox__label' for=options.id)= options.label
+  - var name = 'input-t-checkbox'
+  div(class='input-t-checkbox')
+    input(
+      id=options.id
+      type='checkbox'
+      class=name + '__input'
+      checked=options.checked
+    )
+    label(
+      class=name + '__label'
+      for=options.id
+    )= options.label
