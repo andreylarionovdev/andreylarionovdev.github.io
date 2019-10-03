@@ -1,13 +1,19 @@
-mixin rate-button(options)
-  - var thisModifiers = []
-  - var base = options.base || 5
-  - var rate = options.rate || 0
-  if options.modifiers
-    - thisModifiers = options.modifiers.this || []
-  div(class='rate-button' class=thisModifiers)
+mixin rate-button(id, base, rate, options)
+  - var blockName = 'rate-button'
+  div(class='rate-button' id=id)
     - var n = base
     while n > 0
-      - var inputId = options.name + n
-      input(class='rate-button__radio' type='radio' name=options.name id=inputId value=n checked=n===rate)
-      label(class='rate-button__label' for=inputId)= n
+      - var inputId = id + n
+      input(
+        id=inputId
+        type='radio'
+        class=blockName+'__radio'
+        name=(options && options.name) ? options.name : id
+        value=n
+        checked=n===rate
+      )
+      label(
+        for=inputId
+        class=blockName+'__label'
+      )= n
       - n--

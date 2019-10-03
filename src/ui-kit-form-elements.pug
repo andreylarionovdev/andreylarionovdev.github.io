@@ -180,17 +180,17 @@ block content
           div.rate-group__label
             +label('rate button')
           div.rate-group__rate-button
-            +rate-button({
-              base: 5,
-              rate: 4,
-              name: 'rate-first'
-            })
+            +rate-button(
+              'rate-first',
+              5,
+              4
+            )
           div.rate-group__rate-button
-            +rate-button({
-              base: 5,
-              rate: 5,
-              name: 'rate-second'
-            })
+            +rate-button(
+              'rate-second',
+              5,
+              5
+            )
     div.column.column--4.column--small-hpadding
       div.ui__range-slider--default
         +range-slider({
