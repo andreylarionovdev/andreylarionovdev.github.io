@@ -4,7 +4,7 @@ include components/logo/logo
 include components/form/input-t-text/input-t-text
 include components/form/input-select-group
 include components/form/input-t-checkbox/input-t-checkbox
-include components/form/radio-group
+include components/form/radio-button/radio-button
 include components/form/toggle-button/toggle-button
 include components/form/label/label
 include components/form/like-button/like-button
@@ -106,32 +106,31 @@ block content
             })
           div.input-t-checkbox-group__input-t-checkbox
             +input-t-checkbox({
-                label: 'Можно с питомцами',
-                checked: true
+              label: 'Можно с питомцами',
+              checked: true
             })
           div.input-t-checkbox-group__input-t-checkbox
             +input-t-checkbox({
-                label: 'Можно пригласить гостей (до 10 человек)',
-                checked: true
+              label: 'Можно пригласить гостей (до 10 человек)',
+              checked: true
             })
       div.ui__radio-group--default
-        +radio-group({
-          'label': 'radio buttons',
-          'modifiers': {
-            'label': ['label--mrgn-bttm-medium']
-          },
-          'name': 'gender',
-          'options': {
-            'male': {
-              'label': 'Мужчина',
-              'checked': true,
-              'modifiers': ['radio-group__radio--mrgn-rght-small']
-            },
-            'female': {
-              'label': 'Женщина'
-            }
-          }
-        })
+        div.radio-button-group.clearfix
+          div.radio-button-group__label
+            +label({
+              llabel: 'radio buttons'
+            })
+          div.radio-button-group__radio-button
+            +radio-button({
+                name: 'gender',
+                label: 'Мужчина',
+                checked: true
+            })
+          div.radio-button-group__radio-button
+            +radio-button({
+                name: 'gender',
+                label: 'Женщина'
+            })
       div.ui__toggle-group--default
         div.toggle-group
           div.toggle-group__label

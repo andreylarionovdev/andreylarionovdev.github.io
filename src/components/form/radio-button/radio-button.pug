@@ -1,0 +1,17 @@
+include ../label/label
+
+mixin radio-button(options)
+  - var name = 'radio-button'
+  div(class='radio-button')
+    input(
+      class=name + '__input'
+      type='radio'
+      id=options.id
+      name=options.name
+      value=options.value
+      checked=options.checked
+    )
+    label(
+      class=name + '__label'
+      for=options.id
+    )= options.label
