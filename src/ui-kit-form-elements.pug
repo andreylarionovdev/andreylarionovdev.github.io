@@ -22,10 +22,10 @@ block content
       div.ui__input-t-text-group--default
         div.input-t-text-group
           div.input-t-text-group__label
-            +label({
-              llabel: 'text field',
-              rlabel: 'default',
-            })
+            +label(
+              'text field',
+              'default'
+            )
           div.input-t-text-group__input-t-text
             +input-t-text({
               id: 'input-email',
@@ -34,10 +34,10 @@ block content
       div.ui__input-t-text-group--hovered
         div.input-t-text-group
           div.input-t-text-group__label
-            +label({
-              llabel: 'text field',
-              rlabel: 'hover / focus',
-            })
+            +label(
+              'text field',
+              'hover / focus'
+            )
           div.input-t-text-group__input-t-text
             +input-t-text({
               value: 'This is pretty awesome',
@@ -54,10 +54,10 @@ block content
       div.ui__input-t-text-group--masked
         div.input-t-text-group
           div.input-t-text-group__label
-            +label({
-              llabel: 'masked text field',
-              rlabel: 'default',
-            })
+            +label(
+              'masked text field',
+              'default'
+            )
           div.input-t-text-group__input-t-text
             +input-t-text({
               id: 'input-text-with-mask',
@@ -84,9 +84,7 @@ block content
       div.ui__input-t-text-group--with-submit
         div.input-t-text-group
           div.input-t-text-group__label
-            +label({
-              llabel: 'subscription text field',
-            })
+            +label('subscription text field')
           div.input-t-text-group__input-t-text
             +input-t-text({
               id: 'input-text-submit',
@@ -97,46 +95,47 @@ block content
       div.ui__input-t-checkbox-group--default
         div.input-t-checkbox-group
           div.input-t-checkbox-group__label
-            +label({
-              llabel: 'checkbox buttons',
-            })
+            +label('checkbox buttons')
           div.input-t-checkbox-group__input-t-checkbox
-            +input-t-checkbox({
-              label: 'Можно курить'
-            })
+            +input-t-checkbox(
+              'smoke-allowed',
+              'Можно курить'
+            )
           div.input-t-checkbox-group__input-t-checkbox
-            +input-t-checkbox({
-              label: 'Можно с питомцами',
-              checked: true
-            })
+            +input-t-checkbox(
+              'pets-allowed',
+              'Можно с питомцами',
+              true
+            )
           div.input-t-checkbox-group__input-t-checkbox
-            +input-t-checkbox({
-              label: 'Можно пригласить гостей (до 10 человек)',
-              checked: true
-            })
+            +input-t-checkbox(
+              'guests-allowed',
+              'Можно пригласить гостей (до 10 человек)',
+              true
+            )
       div.ui__radio-group--default
         div.radio-button-group.clearfix
           div.radio-button-group__label
-            +label({
-              llabel: 'radio buttons'
-            })
+            +label('radio buttons')
           div.radio-button-group__radio-button
-            +radio-button({
-                name: 'gender',
-                label: 'Мужчина',
-                checked: true
-            })
+            +radio-button(
+              'radio-male',
+              'gender',
+              'male',
+              'Мужчина',
+              true
+            )
           div.radio-button-group__radio-button
-            +radio-button({
-                name: 'gender',
-                label: 'Женщина'
-            })
+            +radio-button(
+              'radio-female',
+              'gender',
+              'female',
+              'Женщина'
+            )
       div.ui__toggle-group--default
         div.toggle-group
           div.toggle-group__label
-            +label({
-              llabel: 'toggle'
-            })
+            +label('toggle')
           div.toggle-group__toggle-button
             +toggle-button({
               id: 'first',
@@ -151,9 +150,7 @@ block content
       div.ui__like-button-group--default.clearfix
         div.like-button-group
           div.like-button-group__label
-            +label({
-              llabel: 'like button'
-            })
+            +label('like button')
           div.like-button-group__like-button
             +like-button({
               count: 2
@@ -166,9 +163,7 @@ block content
       div.ui__rate-group--default.clearfix
         div.rate-group
           div.rate-group__label
-            +label({
-              llabel: 'rate button'
-            })
+            +label('rate button')
           div.rate-group__rate-button
             +rate-button({
               base: 5,
@@ -189,9 +184,7 @@ block content
       div.ui__button-group--default
         div.button-group
           div.button-group__label
-            +label({
-              'llabel': 'buttons'
-            })
+            +label('buttons')
           div.button-group__button
             +button({
               theme: 'default',
@@ -234,9 +227,7 @@ block content
       div.ui__paginator-group
         div.paginator-group
           div.paginator-group__label
-            +label({
-              'llabel': 'pagination'
-            })
+            +label('pagination')
           div.paginator-group__paginator
             +paginator()
     div.clearfix

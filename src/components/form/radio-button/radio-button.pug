@@ -1,17 +1,17 @@
 include ../label/label
 
-mixin radio-button(options)
-  - var name = 'radio-button'
+mixin radio-button(id, name, value, label, checked)
+  - var blockName = 'radio-button'
   div(class='radio-button')
     input(
-      class=name + '__input'
+      id=id
       type='radio'
-      id=options.id
-      name=options.name
-      value=options.value
-      checked=options.checked
+      class=blockName + '__input'
+      name=name
+      value=value
+      checked=checked
     )
     label(
-      class=name + '__label'
-      for=options.id
-    )= options.label
+      for=id
+      class=blockName + '__label'
+    )= label

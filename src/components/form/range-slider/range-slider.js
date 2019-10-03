@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var render = function (data) {
-        var $label  = $('.label--for-range-slider').find('.label__right');
+        var $label  = $('.range-slider').find('.label__right');
         var from    = data.from;
         var to      = data.to;
         var range   = from.toLocaleString('ru-RU') + '₽ - ' + to.toLocaleString('ru-RU') + '₽';

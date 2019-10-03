@@ -44,14 +44,16 @@
 .ui__input-select-group--default {
     margin-bottom: 22px;
 }
-.ui__input-t-text-group--masked,
-.ui__rate-group--default,
-.ui__radio-group--default {
+.ui__input-t-text-group--masked {
     margin-bottom: 40px;
 }
 .ui__input-select-group--inline,
 .ui__input-select-group--date-filter {
     margin-bottom: 41px;
+}
+.ui__rate-group--default,
+.ui__radio-group--default {
+    margin-bottom: 43px;
 }
 .ui__input-t-checkbox-group--default {
     margin-bottom: 59px;

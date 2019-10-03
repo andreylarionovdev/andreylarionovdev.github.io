@@ -5,11 +5,5 @@ mixin range-slider(options)
   if options.modifiers
     - thisModifiers = options.modifiers.this || []
   div(class='range-slider' class=thisModifiers)
-    +label({
-        'llabel': 'range slider',
-        'rlabel': '',
-        'modifiers': {
-            'this': ['label--for-range-slider']
-        }
-    })
+    +label('range slider')
     input(class='range-slider__input' type='text' name=options.name value='')

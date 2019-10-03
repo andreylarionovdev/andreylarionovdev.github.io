@@ -8,11 +8,7 @@ mixin input-select-group(options)
   if options.options
     - selectOptions = options.options
   div(class='input-select-group' class=thisModifiers)
-    +label({
-        '_for': options.id,
-        'llabel': options.llabel,
-        'rlabel': options.rlabel
-    })
+    +label(options.llabel, options.rlabel, options.id)
     select(class='input-select-group__select' id=options.id)
       each val in selectOptions
         option= val

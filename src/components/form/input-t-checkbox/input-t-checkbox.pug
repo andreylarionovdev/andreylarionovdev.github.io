@@ -1,13 +1,13 @@
-mixin input-t-checkbox(options)
-  - var name = 'input-t-checkbox'
+mixin input-t-checkbox(id, label, checked)
+  - var blockName = 'input-t-checkbox'
   div(class='input-t-checkbox')
     input(
-      id=options.id
+      id=id
       type='checkbox'
-      class=name + '__input'
-      checked=options.checked
+      class=blockName + '__input'
+      checked=checked
     )
     label(
-      class=name + '__label'
-      for=options.id
-    )= options.label
+      class=blockName + '__label'
+      for=id
+    )= label

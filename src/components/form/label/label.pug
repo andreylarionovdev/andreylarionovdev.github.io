@@ -1,4 +1,4 @@
-mixin label(options)
-  label(class=['label', 'clearfix'] for=options._for)
-    span(class='label__left')= options.llabel
-    span(class='label__right')= options.rlabel
+mixin label(_label, hint, _for)
+  label(class=['label', 'clearfix'] for=_for)
+    span(class='label__left')= _label
+    span(class='label__right')= hint
