@@ -9,24 +9,24 @@
     margin: 0 auto;
     margin-top: 143px;
 }
-.ui__input-text-group--default,
+.ui__input-t-text-group--default,
 .ui__input-select-group--default,
-.ui__input-text-group--masked,
+.ui__input-t-text-group--masked,
 .ui__input-select-group--inline,
 .ui__radio-group--default,
 .ui__toggle-group--default,
 .ui__like-button-group--default,
 .ui__rate-group--default,
-.ui__input-text-group--hovered {
+.ui__input-t-text-group--hovered {
     position: relative;
     width: 90%;
 }
 .ui__input-select-group--date-filter,
-.ui__input-text-group--with-submit {
+.ui__input-t-text-group--with-submit {
     position: relative;
     width: 75%;
 }
-.ui__checkbox-group--default,
+.ui__input-t-checkbox-group--default,
 .ui__button-group--default,
 .ui__range-slider--default {
     position: relative;
@@ -35,16 +35,16 @@
 .ui__range-slider--default {
     margin-bottom: 18px;
 }
-.ui__input-text-group--default {
+.ui__input-t-text-group--default {
     margin-bottom: 21px;
 }
-.ui__input-text-group--hovered {
+.ui__input-t-text-group--hovered {
     margin-bottom: 20px;
 }
 .ui__input-select-group--default {
     margin-bottom: 22px;
 }
-.ui__input-text-group--masked,
+.ui__input-t-text-group--masked,
 .ui__rate-group--default,
 .ui__radio-group--default {
     margin-bottom: 40px;
@@ -53,7 +53,7 @@
 .ui__input-select-group--date-filter {
     margin-bottom: 41px;
 }
-.ui__checkbox-group--default {
+.ui__input-t-checkbox-group--default {
     margin-bottom: 60px;
 }
 .ui__input-select-group--small {

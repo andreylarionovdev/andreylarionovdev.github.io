@@ -1,9 +1,9 @@
 extends base
 
 include components/logo/logo
-include components/form/input-text-group
+include components/form/input-t-text
 include components/form/input-select-group
-include components/form/checkbox-group
+include components/form/input-t-checkbox
 include components/form/radio-group
 include components/form/toggle-button
 include components/form/label
@@ -19,25 +19,31 @@ block content
   div.ui.ui--form-components.clearfix
     +logo
     div.column.column--4.column--large-hpadding
-      div.ui__input-text-group--default
-        +input-text-group({
-          'llabel': 'text field',
-          'rlabel': 'default',
-          'placeholder': 'Email',
-          'id': 'input-email'
-        })
-      div.ui__input-text-group--hovered
-        +input-text-group({
-          'llabel': 'text field',
-          'rlabel': 'hover / focus',
-          'value': 'This is pretty awesome',
-          'id': 'input-focused-hovered',
-          'modifiers': {
-            'input': [
-              'input-text-group__input-text--focused'
-            ]
-          }
-        })
+      div.ui__input-t-text-group--default
+        div.input-t-text-group
+          div.input-t-text-group__label
+            +label({
+              llabel: 'text field',
+              rlabel: 'default',
+            })
+          div.input-t-text-group__input-t-text
+            +input-t-text({
+              id: 'input-email',
+              placeholder: 'Email'
+            })
+      div.ui__input-t-text-group--hovered
+        div.input-t-text-group
+          div.input-t-text-group__label
+            +label({
+              llabel: 'text field',
+              rlabel: 'hover / focus',
+            })
+          div.input-t-text-group__input-t-text
+            +input-t-text({
+              value: 'This is pretty awesome',
+              id: 'input-focused-hovered',
+              hovered: true
+            })
       div.ui__input-select-group--default
         +input-select-group({
           'llabel': 'dropdown',
@@ -45,13 +51,18 @@ block content
           'id': 'default-dropdown',
           'options': ['Сколько гостей']
         })
-      div.ui__input-text-group--masked
-        +input-text-group({
-          'llabel': 'masked text field',
-          'rlabel': 'default',
-          'id': 'input-text-with-mask',
-          'placeholder': 'ДД.ММ.ГГГГ'
-        })
+      div.ui__input-t-text-group--masked
+        div.input-t-text-group
+          div.input-t-text-group__label
+            +label({
+              llabel: 'masked text field',
+              rlabel: 'default',
+            })
+          div.input-t-text-group__input-t-text
+            +input-t-text({
+              id: 'input-text-with-mask',
+              placeholder: 'ДД.ММ.ГГГГ'
+            })
       div.ui__input-select-group--inline.clearfix
         div.ui__input-select-group--small
           +input-select-group({
@@ -70,38 +81,39 @@ block content
           'llabel': 'filter date dropdown',
           'options': ['19 авг - 23 авг'],
         })
-      div.ui__input-text-group--with-submit
-        +input-text-group({
-          'llabel': 'subscription text field',
-          'id': 'input-text-submit',
-          'placeholder': 'Email',
-          'modifiers': {
-            'button': [
-              'input-text-group__input-submit--visible'
-            ]
-          }
-        })
+      div.ui__input-t-text-group--with-submit
+        div.input-t-text-group
+          div.input-t-text-group__label
+            +label({
+              llabel: 'subscription text field',
+            })
+          div.input-t-text-group__input-t-text
+            +input-t-text({
+              id: 'input-text-submit',
+              placeholder: 'Email',
+              withButton: true
+            })
     div.column.column--4.column--large-hpadding
-      div.ui__checkbox-group--default
-        +checkbox-group({
-          'label': 'checkbox buttons',
-          'modifiers': {
-            'label': ['label--mrgn-bttm-medium']
-          },
-          'options': {
-            'smoke': {
-              'label': 'Можно курить'
-            },
-            'pets': {
-              'label': 'Можно с питомцами',
-              'checked': true
-            },
-            'guests': {
-              'label':'Можно пригласить гостей (до 10 человек)',
-              'checked': true
-            }
-          }
-        })
+      div.ui__input-t-checkbox-group--default
+        div.input-t-checkbox-group
+          div.input-t-checkbox-group__label
+            +label({
+              llabel: 'checkbox buttons',
+            })
+          div.input-t-checkbox-group__input-t-checkbox
+            +input-t-checkbox({
+              label: 'Можно курить'
+            })
+          div.input-t-checkbox-group__input-t-checkbox
+            +input-t-checkbox({
+                label: 'Можно с питомцами',
+                checked: true
+            })
+          div.input-t-checkbox-group__input-t-checkbox
+            +input-t-checkbox({
+                label: 'Можно пригласить гостей (до 10 человек)',
+                checked: true
+            })
       div.ui__radio-group--default
         +radio-group({
           'label': 'radio buttons',

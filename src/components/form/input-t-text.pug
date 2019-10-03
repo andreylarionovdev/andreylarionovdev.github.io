@@ -1,0 +1,19 @@
+mixin input-t-text(options)
+  - var name = 'input-t-text'
+  - var modifiers = []
+  if options.withButton
+    - modifiers.push(name + '--visible')
+  if options.hovered
+    - modifiers.push(name + '--hovered')
+  div(class=name class=modifiers)
+    input(
+      id=options.id
+      type='text'
+      class=name + '__input-t-text'
+      placeholder=options.placeholder
+      value=options.value
+    )
+    input(
+      type='submit'
+      class=name + '__input-t-submit'
+    )
