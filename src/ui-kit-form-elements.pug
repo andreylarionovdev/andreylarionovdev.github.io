@@ -167,14 +167,9 @@ block content
           div.like-button-group__label
             +label('like button')
           div.like-button-group__like-button
-            +like-button({
-              count: 2
-            })
+            +like-button(2)
           div.like-button-group__like-button
-            +like-button({
-              count: 12,
-              favorite: true
-            })
+            +like-button(12, true)
       div.ui__rate-group--default.clearfix
         div.rate-group
           div.rate-group__label
