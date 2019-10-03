@@ -1,5 +1,14 @@
-mixin toggle-button(options)
-  div(class='toggle-button')
-    div(class='toggle-button__toggle')
-      input(class='toggle-button__input' type='checkbox' id=options.id checked=options.checked)
-      label(class='toggle-button__input-label' for=options.id)= options.label
+mixin toggle-button(id, _label, checked)
+  - var blockName = 'toggle-button'
+  div(class=blockName)
+    div(class=blockName+'__toggle')
+      input(
+        id=id
+        class=blockName+'__input'
+        type='checkbox'
+        checked=checked
+      )
+      label(
+        for=id
+        class=blockName+'__label'
+      )= _label

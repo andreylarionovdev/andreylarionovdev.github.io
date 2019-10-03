@@ -2,7 +2,7 @@ extends base
 
 include components/logo/logo
 include components/form/input-t-text/input-t-text
-include components/form/input-t-select
+include components/form/input-t-select/input-t-select
 include components/form/input-t-checkbox/input-t-checkbox
 include components/form/radio-button/radio-button
 include components/form/toggle-button/toggle-button
@@ -152,16 +152,16 @@ block content
           div.toggle-group__label
             +label('toggle')
           div.toggle-group__toggle-button
-            +toggle-button({
-              id: 'first',
-              label: 'Получать спецпредложения',
-              checked: true
-            })
+            +toggle-button(
+              'first-toggle',
+              'Получать спецпредложения',
+              true
+            )
           div.toggle-group__toggle-button
-            +toggle-button({
-              id: 'second',
-              label: 'Получать спецпредложения'
-            })
+            +toggle-button(
+              'second-toggle',
+              'Получать спецпредложения'
+            )
       div.ui__like-button-group--default.clearfix
         div.like-button-group
           div.like-button-group__label
