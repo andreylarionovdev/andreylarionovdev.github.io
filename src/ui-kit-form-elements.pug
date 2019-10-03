@@ -27,10 +27,10 @@ block content
               'default'
             )
           div.input-t-text-group__input-t-text
-            +input-t-text({
-              id: 'input-email',
-              placeholder: 'Email'
-            })
+            +input-t-text(
+              'input-email',
+              'Email'
+            )
       div.ui__input-t-text-group--hovered
         div.input-t-text-group
           div.input-t-text-group__label
@@ -39,11 +39,12 @@ block content
               'hover / focus'
             )
           div.input-t-text-group__input-t-text
-            +input-t-text({
-              value: 'This is pretty awesome',
-              id: 'input-focused-hovered',
-              hovered: true
-            })
+            +input-t-text(
+              'input-focused-hovered',
+              'Some text',
+              'This is pretty awesome',
+              {hovered: true}
+            )
       div.ui__input-select-group--default
         +input-select-group({
           'llabel': 'dropdown',
@@ -59,10 +60,10 @@ block content
               'default'
             )
           div.input-t-text-group__input-t-text
-            +input-t-text({
-              id: 'input-text-with-mask',
-              placeholder: 'ДД.ММ.ГГГГ'
-            })
+            +input-t-text(
+              'input-text-with-mask',
+              'ДД.ММ.ГГГГ'
+            )
       div.ui__input-select-group--inline.clearfix
         div.ui__input-select-group--small
           +input-select-group({
@@ -86,11 +87,12 @@ block content
           div.input-t-text-group__label
             +label('subscription text field')
           div.input-t-text-group__input-t-text
-            +input-t-text({
-              id: 'input-text-submit',
-              placeholder: 'Email',
-              withButton: true
-            })
+            +input-t-text(
+              'input-text-submit',
+              'Email',
+              '',
+              {withButton: true}
+            )
     div.column.column--4.column--large-hpadding
       div.ui__input-t-checkbox-group--default
         div.input-t-checkbox-group

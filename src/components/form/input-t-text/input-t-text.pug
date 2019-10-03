@@ -1,19 +1,19 @@
-mixin input-t-text(options)
-  - var name = 'input-t-text'
+mixin input-t-text(id, placeholder, value, options)
+  - var blockName = 'input-t-text'
   - var modifiers = []
-  if options.withButton
-    - modifiers.push(name + '--visible')
-  if options.hovered
-    - modifiers.push(name + '--hovered')
-  div(class=name class=modifiers)
+  if options && options.withButton
+    - modifiers.push(blockName + '--visible')
+  if options && options.hovered
+    - modifiers.push(blockName + '--hovered')
+  div(class=blockName class=modifiers)
     input(
-      id=options.id
+      id=id
       type='text'
-      class=name + '__input-t-text'
-      placeholder=options.placeholder
-      value=options.value
+      class=blockName + '__input-t-text'
+      placeholder=placeholder
+      value=value
     )
     input(
       type='submit'
-      class=name + '__input-t-submit'
+      class=blockName + '__input-t-submit'
     )
