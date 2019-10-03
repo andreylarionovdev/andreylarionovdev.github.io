@@ -1,75 +1,77 @@
-.ui--index,
-.ui--color-type {
-    max-width: 1140px;
-    margin: 0 auto;
-    margin-top: 145px;
-}
-.ui--form-components {
-    max-width: 1340px;
-    margin: 0 auto;
-    margin-top: 143px;
-}
-.ui__input-t-text-group--default,
-.ui__input-t-select-group--default,
-.ui__input-t-text-group--masked,
-.ui__input-t-select-group--inline,
-.ui__radio-group--default,
-.ui__toggle-group--default,
-.ui__like-button-group--default,
-.ui__rate-group--default,
-.ui__input-t-text-group--hovered {
-    position: relative;
-    width: 90%;
-}
-.ui__input-t-select-group--date-filter,
-.ui__input-t-text-group--with-submit {
-    position: relative;
-    width: 75%;
-}
-.ui__input-t-checkbox-group--default,
-.ui__button-group--default,
-.ui__range-slider--default {
-    position: relative;
-    width: 65%;
-}
-.ui__range-slider--default {
-    margin-bottom: 18px;
-}
-.ui__input-t-text-group--default {
-    margin-bottom: 21px;
-}
-.ui__input-t-text-group--hovered {
-    margin-bottom: 20px;
-}
-.ui__input-t-select-group--default {
-    margin-bottom: 22px;
-}
-.ui__input-t-text-group--masked {
-    margin-bottom: 40px;
-}
-.ui__input-t-select-group--inline,
-.ui__input-t-select-group--date-filter {
-    margin-bottom: 41px;
-}
-.ui__rate-group--default,
-.ui__radio-group--default {
-    margin-bottom: 43px;
-}
-.ui__input-t-checkbox-group--default {
-    margin-bottom: 59px;
-}
-.ui__input-t-select-group--inline {
-    .input-t-select-group {
-        float: left;
-        width: 47%;
-        &:first-child {
-            margin-right: 6%;
+.ui {
+    &--index,
+    &--color-type {
+        max-width: 1140px;
+        margin: 0 auto;
+        margin-top: 145px;
+    }
+    &--form-components {
+        max-width: 1340px;
+        margin: 0 auto;
+        margin-top: 143px;
+    }
+    &__input-t-text-group--default,
+    &__input-t-select-group--default,
+    &__input-t-text-group--masked,
+    &__input-t-select-group--inline,
+    &__radio-group--default,
+    &__toggle-group--default,
+    &__like-button-group--default,
+    &__rate-group--default,
+    &__input-t-text-group--hovered {
+        position: relative;
+        width: 90%;
+    }
+    &__input-t-select-group--date-filter,
+    &__input-t-text-group--with-submit {
+        position: relative;
+        width: 75%;
+    }
+    &__input-t-checkbox-group--default,
+    &__button-group--default,
+    &__range-slider--default {
+        position: relative;
+        width: 65%;
+    }
+    &__range-slider--default {
+        margin-bottom: 18px;
+    }
+    &__input-t-text-group--default {
+        margin-bottom: 21px;
+    }
+    &__input-t-text-group--hovered {
+        margin-bottom: 20px;
+    }
+    &__input-t-select-group--default {
+        margin-bottom: 22px;
+    }
+    &__input-t-text-group--masked {
+        margin-bottom: 40px;
+    }
+    &__input-t-select-group--inline,
+    &__input-t-select-group--date-filter {
+        margin-bottom: 41px;
+    }
+    &__rate-group--default,
+    &__radio-group--default {
+        margin-bottom: 43px;
+    }
+    &__input-t-checkbox-group--default {
+        margin-bottom: 59px;
+    }
+    &__input-t-select-group--inline {
+        .input-t-select-group {
+            float: left;
+            width: 47%;
+            &:first-child {
+                margin-right: 6%;
+            }
         }
     }
-}
-.ui__toggle-group--default {
-    margin-bottom: 44px;
-}
-.ui__like-button-group--default {
-    margin-bottom: 36px;
+    &__toggle-group--default {
+        margin-bottom: 44px;
+    }
+    &__like-button-group--default {
+        margin-bottom: 36px;
+    }
 }
