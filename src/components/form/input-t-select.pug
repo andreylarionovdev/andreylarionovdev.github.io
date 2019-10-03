@@ -1,0 +1,9 @@
+include label/label
+
+mixin input-t-select(id, options)
+  - var blockName = 'input-t-select'
+  - var selectOptions = options || []
+  div(class=blockName)
+    select(class=blockName+'__select' id=id)
+      each opt in selectOptions
+        option= opt

@@ -10,9 +10,9 @@
     margin-top: 143px;
 }
 .ui__input-t-text-group--default,
-.ui__input-select-group--default,
+.ui__input-t-select-group--default,
 .ui__input-t-text-group--masked,
-.ui__input-select-group--inline,
+.ui__input-t-select-group--inline,
 .ui__radio-group--default,
 .ui__toggle-group--default,
 .ui__like-button-group--default,
@@ -21,7 +21,7 @@
     position: relative;
     width: 90%;
 }
-.ui__input-select-group--date-filter,
+.ui__input-t-select-group--date-filter,
 .ui__input-t-text-group--with-submit {
     position: relative;
     width: 75%;
@@ -41,14 +41,14 @@
 .ui__input-t-text-group--hovered {
     margin-bottom: 20px;
 }
-.ui__input-select-group--default {
+.ui__input-t-select-group--default {
     margin-bottom: 22px;
 }
 .ui__input-t-text-group--masked {
     margin-bottom: 40px;
 }
-.ui__input-select-group--inline,
-.ui__input-select-group--date-filter {
+.ui__input-t-select-group--inline,
+.ui__input-t-select-group--date-filter {
     margin-bottom: 41px;
 }
 .ui__rate-group--default,
@@ -58,12 +58,14 @@
 .ui__input-t-checkbox-group--default {
     margin-bottom: 59px;
 }
-.ui__input-select-group--small {
-    float: left;
-    width: 47%;
-}
-.ui__input-select-group--small:first-child {
-    margin-right: 6%;
+.ui__input-t-select-group--inline {
+    .input-t-select-group {
+        float: left;
+        width: 47%;
+        &:first-child {
+            margin-right: 6%;
+        }
+    }
 }
 .ui__toggle-group--default {
     margin-bottom: 44px;

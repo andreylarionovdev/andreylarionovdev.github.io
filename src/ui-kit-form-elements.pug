@@ -2,7 +2,7 @@ extends base
 
 include components/logo/logo
 include components/form/input-t-text/input-t-text
-include components/form/input-select-group
+include components/form/input-t-select
 include components/form/input-t-checkbox/input-t-checkbox
 include components/form/radio-button/radio-button
 include components/form/toggle-button/toggle-button
@@ -45,13 +45,18 @@ block content
               'This is pretty awesome',
               {hovered: true}
             )
-      div.ui__input-select-group--default
-        +input-select-group({
-          'llabel': 'dropdown',
-          'rlabel': 'default',
-          'id': 'default-dropdown',
-          'options': ['Сколько гостей']
-        })
+      div.ui__input-t-select-group--default
+        div.input-t-select-group
+          div.input-t-select-group__label
+            +label(
+              'dropdown',
+              'default'
+            )
+          div.input-t-select-group__input-t-select
+            +input-t-select(
+              'default-dropdown',
+              ['Сколько гостей']
+            )
       div.ui__input-t-text-group--masked
         div.input-t-text-group
           div.input-t-text-group__label
@@ -64,24 +69,32 @@ block content
               'input-text-with-mask',
               'ДД.ММ.ГГГГ'
             )
-      div.ui__input-select-group--inline.clearfix
-        div.ui__input-select-group--small
-          +input-select-group({
-            'llabel': 'date dropdown',
-            'options': ['ДД.ММ.ГГГГ']
-          })
-        div.ui__input-select-group--small
-          +input-select-group({
-            'llabel': 'date dropdown',
-            'options': [
-              '19.08.2019'
-            ]
-          })
-      div.ui__input-select-group--date-filter
-        +input-select-group({
-          'llabel': 'filter date dropdown',
-          'options': ['19 авг - 23 авг'],
-        })
+      div.ui__input-t-select-group--inline.clearfix
+        div.input-t-select-group
+          div.input-t-select-group__label
+            +label('date dropdown')
+          div.input-t-select-group__input-t-select
+            +input-t-select(
+              'date-from',
+              ['ДД.ММ.ГГГГ']
+            )
+        div.input-t-select-group
+          div.input-t-select-group__label
+            +label('date dropdown')
+          div.input-t-select-group__input-t-select
+            +input-t-select(
+              'date-to',
+              ['19.08.2019']
+            )
+      div.ui__input-t-select-group--date-filter
+        div.input-t-select-group
+          div.input-t-select-group__label
+            +label('filter date dropdown')
+          div.input-t-select-group__input-t-select
+            +input-t-select(
+              'date-filter',
+              ['19 авг - 23 авг']
+            )
       div.ui__input-t-text-group--with-submit
         div.input-t-text-group
           div.input-t-text-group__label
