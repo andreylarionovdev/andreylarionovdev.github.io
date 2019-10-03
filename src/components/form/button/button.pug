@@ -1,17 +1,25 @@
-mixin button(options)
-  - var name = 'button'
-  - var href = options.href || 'javascript:void(0);'
-  - var modifiers = [];
+mixin button(theme, caption, options)
+  - var blockName = 'button'
+  - var modifiers = [blockName + '--' + theme]
+  - var href = 'javascript:void(0);'
+  - var withArrow = false
 
-  if options.theme
-    - modifiers.push(name + '--' + options.theme)
-  if options.hover
-    - modifiers.push(name + '--hovered')
+  if options
+    if options.hover
+      - modifiers.push(blockName + '--hovered')
+    if options.href
+      - href = options.href
+    if options.withArrow
+      - withArrow = options.withArrow
 
-  a(class='button' class=modifiers href=href)
-    if options.arrow
+  a(
+    class=blockName
+    class=modifiers
+    href=href
+  )
+    if withArrow
       span.button__arrow
-        = options.caption
+        = caption
         i.material-icons.arrow= 'arrow_forward'
     else
-      = options.caption
+      = caption
