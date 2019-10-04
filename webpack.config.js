@@ -68,7 +68,7 @@ const config = {
             'window.jQuery': 'jquery'
         }),
         new HtmlWebpackPlugin({
-            filename: 'index.html',
+            filename: __dirname + '/index.html',
             template: 'src/index.pug'
         }),
         new HtmlWebpackPlugin({
