@@ -1,0 +1,9 @@
+include ../label/label
+
+mixin dropdown(id, value)
+  - var blockName = 'dropdown'
+  div(class=blockName id=id)
+    div(class=blockName+'__inner')
+      input(type='hidden' class=blockName+'__input')
+      span(class=blockName+'__value')= value
+      i(class=[blockName+'__arrow', 'material-icons'])= 'keyboard_arrow_down'

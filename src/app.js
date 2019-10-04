@@ -5,3 +5,4 @@ import '../node_modules/paginationjs/dist/pagination.min.js'
 // App
 import './components/form/range-slider/range-slider.js'
 import './components/form/paginator/paginator.js'
+import './components/form/dropdown/dropdown.js'

@@ -10,10 +10,38 @@
         margin: 0 auto;
         margin-top: 143px;
     }
+    &__top {
+        margin-bottom: 100px;
+        > .column {
+            &:first-child {
+                padding-left: 6.8%;
+            }
+            &:nth-child(2) {
+                padding-left: 6.7%;
+            }
+            &:nth-child(3) {
+                padding-left: 2.7%;
+            }
+        }
+    }
+    &__middle {
+        margin-bottom: 50px;
+        > .column {
+            &:first-child {
+                padding-left: 6.7%;
+            }
+            &:nth-child(2) {
+                padding-left: 6.7%;
+            }
+            &:nth-child(3) {
+                padding-left: 2.7%;
+            }
+        }
+    }
     &__input-t-text-group--default,
-    &__input-t-select-group--default,
+    &__dropdown-group--default,
     &__input-t-text-group--masked,
-    &__input-t-select-group--inline,
+    &__dropdown-group--inline,
     &__radio-group--default,
     &__toggle-group--default,
     &__like-button-group--default,
@@ -22,7 +50,9 @@
         position: relative;
         width: 90%;
     }
-    &__input-t-select-group--date-filter,
+    &__dropdown-group--date-filter,
+    &__dropdown-group--collapsed,
+    &__dropdown-group--expanded,
     &__input-t-text-group--with-submit {
         position: relative;
         width: 75%;
@@ -39,17 +69,18 @@
     &__input-t-text-group--default {
         margin-bottom: 21px;
     }
-    &__input-t-text-group--hovered {
+    &__input-t-text-group--hovered,
+    &__dropdown-group--collapsed {
         margin-bottom: 20px;
     }
-    &__input-t-select-group--default {
+    &__dropdown-group--default {
         margin-bottom: 22px;
     }
     &__input-t-text-group--masked {
         margin-bottom: 40px;
     }
-    &__input-t-select-group--inline,
-    &__input-t-select-group--date-filter {
+    &__dropdown-group--inline,
+    &__dropdown-group--date-filter {
         margin-bottom: 41px;
     }
     &__rate-group--default,
@@ -59,8 +90,8 @@
     &__input-t-checkbox-group--default {
         margin-bottom: 59px;
     }
-    &__input-t-select-group--inline {
-        .input-t-select-group {
+    &__dropdown-group--inline {
+        .dropdown-group {
             float: left;
             width: 47%;
             &:first-child {
