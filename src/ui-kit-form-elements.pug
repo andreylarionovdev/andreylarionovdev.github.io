@@ -253,8 +253,7 @@ block content
             div.dropdown-group__dropdown
               +dropdown(
                 'dropdown-collapsed',
-                '2 спальни, 2 кровати...',
-                'room'
+                '2 спальни, 2 кровати...'
               )
         div.ui__dropdown-group--expanded
           div.dropdown-group
@@ -267,7 +266,24 @@ block content
               +dropdown(
                 'dropdown-expanded',
                 '2 спальни, 2 кровати...',
-                'room'
+                {
+                    type: 'config',
+                    expanded: true,
+                    items: {
+                        bedroom: {
+                            count: 2,
+                            name: 'Спальни'
+                        },
+                        bed: {
+                            count: 2,
+                            name: 'Кровати'
+                        },
+                        bathroom: {
+                            count: 0,
+                            name: 'Ванные комнаты'
+                        }
+                    }
+                }
               )
     div.column.column--4
     div.column.column--4

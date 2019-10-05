@@ -1,9 +1,29 @@
 include ../label/label
 
-mixin dropdown(id, value)
+mixin dropdown(id, value, options)
   - var blockName = 'dropdown'
-  div(class=blockName id=id)
-    div(class=blockName+'__inner')
-      input(type='hidden' class=blockName+'__input')
-      span(class=blockName+'__value')= value
-      i(class=[blockName+'__arrow', 'material-icons'])= 'keyboard_arrow_down'
+  - var modifiers = []
+  - var items = []
+  - var type = 'empty'
+
+  if options
+    if options.type
+      - type = options.type
+    if options.items
+      - items = options.items
+    if options.expanded
+      - modifiers.push(blockName+'--expanded')
+
+  div(class=blockName class=modifiers id=id)
+    div(class=blockName+'__select')
+      span(class=blockName+'__text')= value
+      i(class=[blockName+'__icon', 'material-icons'])= 'keyboard_arrow_down'
+    input(type='hidden')
+    if type === 'config'
+      ul(class=blockName+'__menu')
+        each item, i in items
+          li(class=blockName+'__li')
+            span(class=blockName+'__li-name')= item.name
+            span(class=blockName+'__li-dec')= '-'
+            span(class=blockName+'__li-count')= item.count
+            span(class=blockName+'__li-inc')= '+'
