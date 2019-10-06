@@ -218,7 +218,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nod
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {\n    $('.dropdown').on('click', function (e) {\n        e.preventDefault();\n    });\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/components/form/dropdown/dropdown.js?");
+eval("/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {\n    var $select = $('.dropdown__select')\n        , expandedClass = 'dropdown--expanded'\n    ;\n    // Dropdown outside click\n    $(document).on('click', function (e) {\n        return;\n        var $dropdown = $(e.target).closest('.dropdown')\n            , dropdownIsParentOfThis = $dropdown.length === 1\n        ;\n        if (dropdownIsParentOfThis) {\n            return;\n        }\n        $('.dropdown').removeClass(expandedClass);\n    });\n    //// By click on select ...\n    $select.on('click', function () {\n        var $dropdown = $(this).closest('.dropdown');\n        if ($dropdown.find('.dropdown__menu').length !== 1) {\n            return;\n        }\n        //// ... toggle modifying class on parent dropdown\n        if ($dropdown.hasClass(expandedClass)) {\n            $dropdown.removeClass(expandedClass);\n        } else {\n            $dropdown.addClass(expandedClass);\n        }\n    });\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/components/form/dropdown/dropdown.js?");
 
 /***/ }),
 

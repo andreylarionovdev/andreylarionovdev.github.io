@@ -300,7 +300,11 @@
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
   text-align: left;
-  color: rgba(31, 32, 65, 0.75); }
+  color: rgba(31, 32, 65, 0.75);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
   .dropdown__select {
     cursor: pointer;
     display: block;
@@ -334,8 +338,36 @@
     -webkit-box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
             box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05); }
   .dropdown__li {
-    padding: 10px;
-    cursor: pointer; }
+    display: block;
+    padding: 4px 7px;
+    height: 38px; }
+    .dropdown__li-name, .dropdown__li-count {
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: bold; }
+    .dropdown__li-name {
+      float: left;
+      padding: 6px 7px; }
+    .dropdown__li-count {
+      float: right;
+      padding-top: 6px;
+      width: 32px;
+      text-align: center; }
+    .dropdown__li-dec, .dropdown__li-inc {
+      cursor: pointer;
+      display: inline-block;
+      float: right;
+      width: 30px;
+      height: 30px;
+      border-radius: 15px;
+      font-size: 18px;
+      text-align: center;
+      vertical-align: middle;
+      padding: 3px; }
+    .dropdown__li-dec {
+      border: 1px solid rgba(31, 32, 65, 0.25); }
+    .dropdown__li-inc {
+      border: 1px solid rgba(31, 32, 65, 0.5); }
 
 .input-t-checkbox-group__label {
   margin-bottom: 17px; }

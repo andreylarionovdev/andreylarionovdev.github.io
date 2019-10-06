@@ -19,11 +19,11 @@ mixin dropdown(id, value, options)
       span(class=blockName+'__text')= value
       i(class=[blockName+'__icon', 'material-icons'])= 'keyboard_arrow_down'
     input(type='hidden')
-    if type === 'config'
+    if type === 'json'
       ul(class=blockName+'__menu')
         each item, i in items
-          li(class=blockName+'__li')
+          li(class=blockName+'__li' class='clearfix')
             span(class=blockName+'__li-name')= item.name
-            span(class=blockName+'__li-dec')= '-'
-            span(class=blockName+'__li-count')= item.count
             span(class=blockName+'__li-inc')= '+'
+            span(class=blockName+'__li-count')= item.count
+            span(class=blockName+'__li-dec')= '-'
