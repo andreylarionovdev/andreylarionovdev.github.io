@@ -43,7 +43,9 @@ $(document).ready(function () {
             return;
         }
         $count.text(n);
-        $dropdown.addClass('dropdown--edited');
+        $dropdown
+            .addClass('dropdown--edited')
+            .removeClass('dropdown--empty');
     };
     $inc.on('click', numberChangerOnClick);
     $dec.on('click', numberChangerOnClick);
