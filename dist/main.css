@@ -314,12 +314,6 @@
     display: block;
     padding: 10px;
     padding-top: 11px; }
-  .dropdown--expanded {
-    border: 1px solid rgba(31, 32, 65, 0.5);
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0; }
-    .dropdown--expanded .dropdown__menu {
-      display: block; }
   .dropdown__text {
     padding-left: 5px; }
   .dropdown__icon {
@@ -379,8 +373,16 @@
       border: 1px solid rgba(31, 32, 65, 0.25); }
     .dropdown__li-inc {
       border: 1px solid rgba(31, 32, 65, 0.5); }
+  .dropdown--expanded {
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0; }
+    .dropdown--expanded .dropdown__menu {
+      display: block; }
   .dropdown--edited [data-actions] {
     display: block; }
+  .dropdown--empty .dropdown__li-clear {
+    display: none; }
 
 .input-t-checkbox-group__label {
   margin-bottom: 17px; }

@@ -7,6 +7,7 @@ mixin dropdown(id, value, options)
   - var data = []
   - var type = 'empty'
   - var emptyValue = 'Выберите'
+  - var isEmpty = false
 
   if options
     if options.type
@@ -17,9 +18,11 @@ mixin dropdown(id, value, options)
       - modifiers.push(blockName+'--expanded')
     if options.edited
       - modifiers.push(blockName+'--edited')
+    if options.isEmpty
+      - modifiers.push(blockName+'--empty')
     if options.emptyValue
       - emptyValue = options.emptyValue
-    
+
   if type === 'json'
     - value = JSON.stringify(data)
 

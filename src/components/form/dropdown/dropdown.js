@@ -1,6 +1,5 @@
 $(document).ready(function () {
     var $select         = $('.dropdown__select')
-        // , $jsonDropdown = $('.dropdown[data-type="json"]')
         , expandedClass = 'dropdown--expanded'
         , $inc          = $('.dropdown__li-inc')
         , $dec          = $('.dropdown__li-dec')
@@ -48,4 +47,15 @@ $(document).ready(function () {
     };
     $inc.on('click', numberChangerOnClick);
     $dec.on('click', numberChangerOnClick);
+
+    $('.dropdown__li-clear').on('click', function () {
+        $(this).closest('.dropdown').find('.dropdown__li-count').each(function (i, o) {
+            $(o).text(0);
+        })
+    });
+    $('.dropdown__li-apply').on('click', function () {
+        $(this).closest('.dropdown')
+            .removeClass('dropdown--edited')
+            .removeClass('dropdown--expanded');
+    });
 });
