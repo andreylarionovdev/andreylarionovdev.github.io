@@ -3,6 +3,7 @@ mixin button(theme, caption, options)
   - var modifiers = [blockName + '--' + theme]
   - var href = 'javascript:void(0);'
   - var withArrow = false
+  - var attributes = {}
 
   if options
     if options.hover
@@ -11,12 +12,14 @@ mixin button(theme, caption, options)
       - href = options.href
     if options.withArrow
       - withArrow = options.withArrow
+    if options.attributes
+      - attributes = options.attributes
 
   a(
     class=blockName
     class=modifiers
     href=href
-  )
+  )&attributes(attributes)
     if withArrow
       span.button__arrow
         = caption

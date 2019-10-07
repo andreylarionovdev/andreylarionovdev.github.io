@@ -38,17 +38,22 @@
             }
         }
     }
-    &__input-t-text-group--default,
+    &__dropdown-group--with-apply-btn,
     &__dropdown-group--default,
-    &__input-t-text-group--masked,
     &__dropdown-group--inline,
     &__radio-group--default,
-    &__toggle-group--default,
-    &__like-button-group--default,
     &__rate-group--default,
+    &__like-button-group--default,
+    &__toggle-group--default,
+    &__input-t-text-group--default,
+    &__input-t-text-group--masked,
     &__input-t-text-group--hovered {
         position: relative;
         width: 90%;
+    }
+    &__dropdown-group--with-clear-btn {
+        position: relative;
+        width: 78%;
     }
     &__dropdown-group--date-filter,
     &__dropdown-group--collapsed,

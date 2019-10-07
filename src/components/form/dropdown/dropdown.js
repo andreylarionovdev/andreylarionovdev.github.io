@@ -1,18 +1,10 @@
 $(document).ready(function () {
-    var $select = $('.dropdown__select')
+    var $select         = $('.dropdown__select')
+        // , $jsonDropdown = $('.dropdown[data-type="json"]')
         , expandedClass = 'dropdown--expanded'
+        , $inc          = $('.dropdown__li-inc')
+        , $dec          = $('.dropdown__li-dec')
     ;
-    // Dropdown outside click
-    $(document).on('click', function (e) {
-        return;
-        var $dropdown = $(e.target).closest('.dropdown')
-            , dropdownIsParentOfThis = $dropdown.length === 1
-        ;
-        if (dropdownIsParentOfThis) {
-            return;
-        }
-        $('.dropdown').removeClass(expandedClass);
-    });
     //// By click on select ...
     $select.on('click', function () {
         var $dropdown = $(this).closest('.dropdown');
@@ -26,4 +18,34 @@ $(document).ready(function () {
             $dropdown.addClass(expandedClass);
         }
     });
+
+    // +/- click handler
+    const numberChangerOnClick = function () {
+        var $li         = $(this).closest('.dropdown__li')
+            , $dropdown = $(this).closest('.dropdown')
+            , $count    = $li.find('.dropdown__li-count')
+            , n         = parseInt($count.text())
+            , operator  = '+'
+        ;
+        if ($(this).closest('.dropdown__li-dec').length === 1) {
+            operator = '-';
+        }
+        switch (operator) {
+            case '+':
+                n++;
+                break;
+            case '-':
+                n--;
+                break;
+            default:
+                n;
+        }
+        if (n < 0 || n > 5) {
+            return;
+        }
+        $count.text(n);
+        $dropdown.addClass('dropdown--edited');
+    };
+    $inc.on('click', numberChangerOnClick);
+    $dec.on('click', numberChangerOnClick);
 });

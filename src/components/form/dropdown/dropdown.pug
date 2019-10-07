@@ -1,29 +1,60 @@
 include ../label/label
+include ../button/button
 
 mixin dropdown(id, value, options)
   - var blockName = 'dropdown'
   - var modifiers = []
-  - var items = []
+  - var data = []
   - var type = 'empty'
+  - var emptyValue = 'Выберите'
 
   if options
     if options.type
       - type = options.type
-    if options.items
-      - items = options.items
+    if options.data
+      - data = options.data
     if options.expanded
       - modifiers.push(blockName+'--expanded')
+    if options.edited
+      - modifiers.push(blockName+'--edited')
+    if options.emptyValue
+      - emptyValue = options.emptyValue
+    
+  if type === 'json'
+    - value = JSON.stringify(data)
 
-  div(class=blockName class=modifiers id=id)
+  div(class=blockName class=modifiers data-type=type id=id)
     div(class=blockName+'__select')
-      span(class=blockName+'__text')= value
+      span(class=blockName+'__text')= emptyValue
       i(class=[blockName+'__icon', 'material-icons'])= 'keyboard_arrow_down'
-    input(type='hidden')
+    input(class=blockName+'__input' type='hidden' value=value)
     if type === 'json'
       ul(class=blockName+'__menu')
-        each item, i in items
-          li(class=blockName+'__li' class='clearfix')
+        each item, name in data
+          li(class=blockName+'__li' class='clearfix' data-name=name)
             span(class=blockName+'__li-name')= item.name
             span(class=blockName+'__li-inc')= '+'
             span(class=blockName+'__li-count')= item.count
             span(class=blockName+'__li-dec')= '-'
+        li(class=[blockName+'__li'] class='clearfix' data-actions)
+          span(class=blockName+'__li-clear')
+            +button(
+              'textual',
+              'очистить',
+              {
+                  hover: true,
+                  attributes: {
+                      'data-action': 'clear'
+                  }
+              }
+            )
+          span(class=blockName+'__li-apply')
+            +button(
+                'textual',
+                'применить',
+                {
+                    attributes: {
+                        'data-action': 'apply'
+                    }
+                }
+            )

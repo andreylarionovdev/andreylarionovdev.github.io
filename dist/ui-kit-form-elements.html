@@ -46,9 +46,9 @@
                 <label class="label clearfix"><span class="label__left">dropdown</span><span class="label__right">default</span></label>
               </div>
               <div class="dropdown-group__dropdown">
-                <div class="dropdown" id="default-dropdown">
+                <div class="dropdown" data-type="empty" id="default-dropdown">
                   <div class="dropdown__select"><span class="dropdown__text">Сколько гостей</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i></div>
-                  <input type="hidden">
+                  <input class="dropdown__input" type="hidden">
                 </div>
               </div>
             </div>
@@ -72,9 +72,9 @@
                 <label class="label clearfix"><span class="label__left">date dropdown</span><span class="label__right"></span></label>
               </div>
               <div class="dropdown-group__dropdown">
-                <div class="dropdown" id="date-from">
+                <div class="dropdown" data-type="empty" id="date-from">
                   <div class="dropdown__select"><span class="dropdown__text">ДД.ММ.ГГГГ</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i></div>
-                  <input type="hidden">
+                  <input class="dropdown__input" type="hidden">
                 </div>
               </div>
             </div>
@@ -83,9 +83,9 @@
                 <label class="label clearfix"><span class="label__left">date dropdown</span><span class="label__right"></span></label>
               </div>
               <div class="dropdown-group__dropdown">
-                <div class="dropdown" id="date-to">
+                <div class="dropdown" data-type="empty" id="date-to">
                   <div class="dropdown__select"><span class="dropdown__text">19.08.2019</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i></div>
-                  <input type="hidden">
+                  <input class="dropdown__input" type="hidden">
                 </div>
               </div>
             </div>
@@ -96,9 +96,9 @@
                 <label class="label clearfix"><span class="label__left">filter date dropdown</span><span class="label__right"></span></label>
               </div>
               <div class="dropdown-group__dropdown">
-                <div class="dropdown" id="date-filter">
+                <div class="dropdown" data-type="empty" id="date-filter">
                   <div class="dropdown__select"><span class="dropdown__text">19 авг - 23 авг</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i></div>
-                  <input type="hidden">
+                  <input class="dropdown__input" type="hidden">
                 </div>
               </div>
             </div>
@@ -292,9 +292,9 @@
                 <label class="label clearfix"><span class="label__left">dropdown</span><span class="label__right">default</span></label>
               </div>
               <div class="dropdown-group__dropdown">
-                <div class="dropdown" id="dropdown-collapsed">
+                <div class="dropdown" data-type="empty" id="dropdown-collapsed">
                   <div class="dropdown__select"><span class="dropdown__text">2 спальни, 2 кровати...</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i></div>
-                  <input type="hidden">
+                  <input class="dropdown__input" type="hidden">
                 </div>
               </div>
             </div>
@@ -305,13 +305,56 @@
                 <label class="label clearfix"><span class="label__left">dropdown</span><span class="label__right">expanded</span></label>
               </div>
               <div class="dropdown-group__dropdown">
-                <div class="dropdown dropdown--expanded" id="dropdown-expanded">
+                <div class="dropdown dropdown--expanded" data-type="json" id="dropdown-expanded">
                   <div class="dropdown__select"><span class="dropdown__text">2 спальни, 2 кровати...</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i></div>
-                  <input type="hidden">
+                  <input class="dropdown__input" type="hidden" value="{&quot;bedroom&quot;:{&quot;count&quot;:2,&quot;name&quot;:&quot;спальни&quot;},&quot;bed&quot;:{&quot;count&quot;:2,&quot;name&quot;:&quot;кровати&quot;},&quot;bathroom&quot;:{&quot;count&quot;:0,&quot;name&quot;:&quot;ванные комнаты&quot;}}">
                   <ul class="dropdown__menu">
-                    <li class="dropdown__li clearfix"><span class="dropdown__li-name">Спальни</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">2</span><span class="dropdown__li-dec">-</span></li>
-                    <li class="dropdown__li clearfix"><span class="dropdown__li-name">Кровати</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">2</span><span class="dropdown__li-dec">-</span></li>
-                    <li class="dropdown__li clearfix"><span class="dropdown__li-name">Ванные комнаты</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
+                    <li class="dropdown__li clearfix" data-name="bedroom"><span class="dropdown__li-name">спальни</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">2</span><span class="dropdown__li-dec">-</span></li>
+                    <li class="dropdown__li clearfix" data-name="bed"><span class="dropdown__li-name">кровати</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">2</span><span class="dropdown__li-dec">-</span></li>
+                    <li class="dropdown__li clearfix" data-name="bathroom"><span class="dropdown__li-name">ванные комнаты</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
+                    <li class="dropdown__li clearfix" data-actions><span class="dropdown__li-clear"><a class="button button--textual button--hovered" href="javascript:void(0);" data-action="clear">очистить</a></span><span class="dropdown__li-apply"><a class="button button--textual" href="javascript:void(0);" data-action="apply">применить</a></span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column column--4">
+          <div class="ui__dropdown-group--with-apply-btn">
+            <div class="dropdown-group">
+              <div class="dropdown-group__label">
+                <label class="label clearfix"><span class="label__left">dropdown</span><span class="label__right"></span></label>
+              </div>
+              <div class="dropdown-group__dropdown">
+                <div class="dropdown dropdown--expanded dropdown--edited" data-type="json" id="dropdown-expanded">
+                  <div class="dropdown__select"><span class="dropdown__text">Сколько гостей</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i></div>
+                  <input class="dropdown__input" type="hidden" value="{&quot;adult&quot;:{&quot;count&quot;:0,&quot;name&quot;:&quot;взрослые&quot;},&quot;kids&quot;:{&quot;count&quot;:0,&quot;name&quot;:&quot;дети&quot;},&quot;baby&quot;:{&quot;count&quot;:0,&quot;name&quot;:&quot;младенцы&quot;}}">
+                  <ul class="dropdown__menu">
+                    <li class="dropdown__li clearfix" data-name="adult"><span class="dropdown__li-name">взрослые</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
+                    <li class="dropdown__li clearfix" data-name="kids"><span class="dropdown__li-name">дети</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
+                    <li class="dropdown__li clearfix" data-name="baby"><span class="dropdown__li-name">младенцы</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
+                    <li class="dropdown__li clearfix" data-actions><span class="dropdown__li-clear"><a class="button button--textual button--hovered" href="javascript:void(0);" data-action="clear">очистить</a></span><span class="dropdown__li-apply"><a class="button button--textual" href="javascript:void(0);" data-action="apply">применить</a></span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column column--4">
+          <div class="ui__dropdown-group--with-clear-btn">
+            <div class="dropdown-group">
+              <div class="dropdown-group__label">
+                <label class="label clearfix"><span class="label__left">dropdown</span><span class="label__right"></span></label>
+              </div>
+              <div class="dropdown-group__dropdown">
+                <div class="dropdown dropdown--expanded dropdown--edited" data-type="json" id="dropdown-expanded">
+                  <div class="dropdown__select"><span class="dropdown__text">3 гостя</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i></div>
+                  <input class="dropdown__input" type="hidden" value="{&quot;adult&quot;:{&quot;count&quot;:2,&quot;name&quot;:&quot;взрослые&quot;},&quot;kids&quot;:{&quot;count&quot;:1,&quot;name&quot;:&quot;дети&quot;},&quot;baby&quot;:{&quot;count&quot;:0,&quot;name&quot;:&quot;младенцы&quot;}}">
+                  <ul class="dropdown__menu">
+                    <li class="dropdown__li clearfix" data-name="adult"><span class="dropdown__li-name">взрослые</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">2</span><span class="dropdown__li-dec">-</span></li>
+                    <li class="dropdown__li clearfix" data-name="kids"><span class="dropdown__li-name">дети</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">1</span><span class="dropdown__li-dec">-</span></li>
+                    <li class="dropdown__li clearfix" data-name="baby"><span class="dropdown__li-name">младенцы</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
+                    <li class="dropdown__li clearfix" data-actions><span class="dropdown__li-clear"><a class="button button--textual button--hovered" href="javascript:void(0);" data-action="clear">очистить</a></span><span class="dropdown__li-apply"><a class="button button--textual" href="javascript:void(0);" data-action="apply">применить</a></span></li>
                   </ul>
                 </div>
               </div>
@@ -319,8 +362,6 @@
           </div>
         </div>
       </div>
-      <div class="column column--4"></div>
-      <div class="column column--4"></div>
     </div>
   <script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
 </html>

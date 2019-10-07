@@ -26,9 +26,13 @@
   .ui__middle > .column:nth-child(3) {
     padding-left: 2.7%; }
 
-.ui__input-t-text-group--default, .ui__dropdown-group--default, .ui__input-t-text-group--masked, .ui__dropdown-group--inline, .ui__radio-group--default, .ui__toggle-group--default, .ui__like-button-group--default, .ui__rate-group--default, .ui__input-t-text-group--hovered {
+.ui__dropdown-group--with-apply-btn, .ui__dropdown-group--default, .ui__dropdown-group--inline, .ui__radio-group--default, .ui__rate-group--default, .ui__like-button-group--default, .ui__toggle-group--default, .ui__input-t-text-group--default, .ui__input-t-text-group--masked, .ui__input-t-text-group--hovered {
   position: relative;
   width: 90%; }
+
+.ui__dropdown-group--with-clear-btn {
+  position: relative;
+  width: 78%; }
 
 .ui__dropdown-group--date-filter, .ui__dropdown-group--collapsed, .ui__dropdown-group--expanded, .ui__input-t-text-group--with-submit {
   position: relative;
@@ -308,7 +312,8 @@
   .dropdown__select {
     cursor: pointer;
     display: block;
-    padding: 10px; }
+    padding: 10px;
+    padding-top: 11px; }
   .dropdown--expanded {
     border: 1px solid rgba(31, 32, 65, 0.5);
     border-bottom-right-radius: 0;
@@ -327,27 +332,33 @@
     overflow: hidden;
     display: none;
     overflow-y: auto;
-    z-index: 9;
     padding: 0;
+    padding-bottom: 3px;
     list-style: none;
     border: 1px solid rgba(31, 32, 65, 0.5);
     border-bottom-right-radius: 4px;
     border-bottom-left-radius: 4px;
     margin: 0;
-    margin-top: 5px;
+    margin-top: 3px;
     -webkit-box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
             box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05); }
   .dropdown__li {
     display: block;
-    padding: 4px 7px;
+    padding: 5px 7px;
     height: 38px; }
-    .dropdown__li-name, .dropdown__li-count {
+    .dropdown__li[data-actions] {
+      display: none; }
+    .dropdown__li-clear, .dropdown__li-apply, .dropdown__li-name, .dropdown__li-count {
       text-transform: uppercase;
       font-size: 12px;
       font-weight: bold; }
-    .dropdown__li-name {
+    .dropdown__li-clear, .dropdown__li-name {
       float: left;
       padding: 6px 7px; }
+    .dropdown__li-clear, .dropdown__li-apply {
+      padding-top: 8px; }
+    .dropdown__li-apply {
+      float: right; }
     .dropdown__li-count {
       float: right;
       padding-top: 6px;
@@ -368,6 +379,8 @@
       border: 1px solid rgba(31, 32, 65, 0.25); }
     .dropdown__li-inc {
       border: 1px solid rgba(31, 32, 65, 0.5); }
+  .dropdown--edited [data-actions] {
+    display: block; }
 
 .input-t-checkbox-group__label {
   margin-bottom: 17px; }
