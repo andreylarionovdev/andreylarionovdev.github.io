@@ -1,7 +1,7 @@
 extends base
 
 include components/logo/logo
-include components/form/input-t-text/input-t-text
+include components/form/input-text/input-text
 include components/form/dropdown/dropdown
 include components/form/checkbox/checkbox
 include components/form/radio-button/radio-button
@@ -20,27 +20,27 @@ block content
     +logo
     div.ui__top.clearfix
       div.column.column--4.column--large-hpadding
-        div.ui__input-t-text-group--default
-          div.input-t-text-group
-            div.input-t-text-group__label
+        div.ui__input-text-group--default
+          div.input-text-group
+            div.input-text-group__label
               +label(
                 'text field',
                 'default'
               )
-            div.input-t-text-group__input-t-text
-              +input-t-text(
+            div.input-text-group__input-text
+              +input-text(
                 'input-email',
                 'Email'
               )
-        div.ui__input-t-text-group--hovered
-          div.input-t-text-group
-            div.input-t-text-group__label
+        div.ui__input-text-group--hovered
+          div.input-text-group
+            div.input-text-group__label
               +label(
                 'text field',
                 'hover / focus'
               )
-            div.input-t-text-group__input-t-text
-              +input-t-text(
+            div.input-text-group__input-text
+              +input-text(
                 'input-focused-hovered',
                 'Some text',
                 'This is pretty awesome',
@@ -59,15 +59,15 @@ block content
                 null,
                 {emptyValue: 'Сколько гостей'}
               )
-        div.ui__input-t-text-group--masked
-          div.input-t-text-group
-            div.input-t-text-group__label
+        div.ui__input-text-group--masked
+          div.input-text-group
+            div.input-text-group__label
               +label(
                 'masked text field',
                 'default'
               )
-            div.input-t-text-group__input-t-text
-              +input-t-text(
+            div.input-text-group__input-text
+              +input-text(
                 'input-text-with-mask',
                 'ДД.ММ.ГГГГ'
               )
@@ -100,12 +100,12 @@ block content
                 null,
                 {emptyValue: '19 авг - 23 авг'}
               )
-        div.ui__input-t-text-group--with-submit
-          div.input-t-text-group
-            div.input-t-text-group__label
+        div.ui__input-text-group--with-submit
+          div.input-text-group
+            div.input-text-group__label
               +label('subscription text field')
-            div.input-t-text-group__input-t-text
-              +input-t-text(
+            div.input-text-group__input-text
+              +input-text(
                 'input-text-submit',
                 'Email',
                 '',

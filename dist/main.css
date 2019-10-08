@@ -26,7 +26,7 @@
   .ui__middle > .column:nth-child(3) {
     padding-left: 2.7%; }
 
-.ui__dropdown-group--with-apply-btn, .ui__dropdown-group--default, .ui__dropdown-group--inline, .ui__radio-group--default, .ui__rate-group--default, .ui__like-button-group--default, .ui__toggle-group--default, .ui__input-t-text-group--default, .ui__input-t-text-group--masked, .ui__input-t-text-group--hovered {
+.ui__dropdown-group--with-apply-btn, .ui__dropdown-group--default, .ui__dropdown-group--inline, .ui__radio-group--default, .ui__rate-group--default, .ui__like-button-group--default, .ui__toggle-group--default, .ui__input-text-group--default, .ui__input-text-group--masked, .ui__input-text-group--hovered {
   position: relative;
   width: 90%; }
 
@@ -34,7 +34,7 @@
   position: relative;
   width: 78%; }
 
-.ui__dropdown-group--date-filter, .ui__dropdown-group--collapsed, .ui__dropdown-group--expanded, .ui__input-t-text-group--with-submit {
+.ui__dropdown-group--date-filter, .ui__dropdown-group--collapsed, .ui__dropdown-group--expanded, .ui__input-text-group--with-submit {
   position: relative;
   width: 75%; }
 
@@ -45,16 +45,16 @@
 .ui__range-slider--default {
   margin-bottom: 18px; }
 
-.ui__input-t-text-group--default {
+.ui__input-text-group--default {
   margin-bottom: 21px; }
 
-.ui__input-t-text-group--hovered, .ui__dropdown-group--collapsed {
+.ui__input-text-group--hovered, .ui__dropdown-group--collapsed {
   margin-bottom: 20px; }
 
 .ui__dropdown-group--default {
   margin-bottom: 22px; }
 
-.ui__input-t-text-group--masked {
+.ui__input-text-group--masked {
   margin-bottom: 40px; }
 
 .ui__dropdown-group--inline, .ui__dropdown-group--date-filter {
@@ -230,22 +230,22 @@
   float: right;
   color: rgba(31, 32, 65, 0.5); }
 
-.input-t-text {
+.input-text {
   height: 44px;
   font-size: 12px;
   font-family: Montserrat, sans-serif; }
-  .input-t-text--hovered .input-t-text__input-t-text {
+  .input-text--hovered .input-text__input-text {
     outline: none;
     border: 1px solid rgba(31, 32, 65, 0.5); }
-  .input-t-text--hovered .input-t-text__input-t-submit {
+  .input-text--hovered .input-text__input-t-submit {
     border: 1px solid rgba(31, 32, 65, 0.5);
     border-left: none; }
-  .input-t-text--visible .input-t-text__input-t-text {
+  .input-text--visible .input-text__input-text {
     display: inline; }
-  .input-t-text--visible .input-t-text__input-t-submit {
+  .input-text--visible .input-text__input-t-submit {
     display: inline;
     cursor: pointer; }
-  .input-t-text__input-t-text {
+  .input-text__input-text {
     bottom: 0;
     left: 0;
     position: absolute;
@@ -260,14 +260,14 @@
     font-family: Montserrat, sans-serif;
     color: rgba(31, 32, 65, 0.75);
     padding: 0 14px; }
-    .input-t-text__input-t-text:focus, .input-t-text__input-t-text:hover {
+    .input-text__input-text:focus, .input-text__input-text:hover {
       outline: none;
       border: 1px solid rgba(31, 32, 65, 0.5); }
-    .input-t-text__input-t-text:focus + .input-t-text__input-t-submit,
-    .input-t-text__input-t-text:hover + .input-t-text__input-t-submit {
+    .input-text__input-text:focus + .input-text__input-t-submit,
+    .input-text__input-text:hover + .input-text__input-t-submit {
       border: 1px solid rgba(31, 32, 65, 0.5);
       border-left: none; }
-  .input-t-text__input-t-submit {
+  .input-text__input-t-submit {
     display: none;
     position: absolute;
     right: 0;
@@ -286,7 +286,7 @@
     background-position: right 13px center;
     background-repeat: no-repeat; }
 
-.input-t-text-group__label {
+.input-text-group__label {
   margin-bottom: 5px; }
 
 .dropdown-group__label {

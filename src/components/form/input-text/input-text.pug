@@ -1,5 +1,5 @@
-mixin input-t-text(id, placeholder, value, options)
-  - var blockName = 'input-t-text'
+mixin input-text(id, placeholder, value, options)
+  - var blockName = 'input-text'
   - var modifiers = []
   if options && options.withButton
     - modifiers.push(blockName + '--visible')
@@ -9,7 +9,7 @@ mixin input-t-text(id, placeholder, value, options)
     input(
       id=id
       type='text'
-      class=blockName + '__input-t-text'
+      class=blockName + '__input-text'
       placeholder=placeholder
       value=value
     )

@@ -1,10 +1,10 @@
-.input-t-text {
+.input-text {
     $parent: &;
     height: 44px;
     font-size: 12px;
     font-family: Montserrat, sans-serif;
     &--hovered {
-        #{$parent}__input-t-text {
+        #{$parent}__input-text {
             outline: none;
             border: 1px solid $color-dark-50;
         }
@@ -14,7 +14,7 @@
         }
     }
     &--visible {
-        #{$parent}__input-t-text {
+        #{$parent}__input-text {
             display: inline;
         }
         #{$parent}__input-t-submit {
@@ -22,7 +22,7 @@
             cursor: pointer;
         }
     }
-    &__input-t-text {
+    &__input-text {
         bottom: 0;
         left: 0;
         position: absolute;

@@ -45,9 +45,9 @@
     &__rate-group--default,
     &__like-button-group--default,
     &__toggle-group--default,
-    &__input-t-text-group--default,
-    &__input-t-text-group--masked,
-    &__input-t-text-group--hovered {
+    &__input-text-group--default,
+    &__input-text-group--masked,
+    &__input-text-group--hovered {
         position: relative;
         width: 90%;
     }
@@ -58,7 +58,7 @@
     &__dropdown-group--date-filter,
     &__dropdown-group--collapsed,
     &__dropdown-group--expanded,
-    &__input-t-text-group--with-submit {
+    &__input-text-group--with-submit {
         position: relative;
         width: 75%;
     }
@@ -71,17 +71,17 @@
     &__range-slider--default {
         margin-bottom: 18px;
     }
-    &__input-t-text-group--default {
+    &__input-text-group--default {
         margin-bottom: 21px;
     }
-    &__input-t-text-group--hovered,
+    &__input-text-group--hovered,
     &__dropdown-group--collapsed {
         margin-bottom: 20px;
     }
     &__dropdown-group--default {
         margin-bottom: 22px;
     }
-    &__input-t-text-group--masked {
+    &__input-text-group--masked {
         margin-bottom: 40px;
     }
     &__dropdown-group--inline,
