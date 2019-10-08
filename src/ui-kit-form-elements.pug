@@ -3,7 +3,7 @@ extends base
 include components/logo/logo
 include components/form/input-t-text/input-t-text
 include components/form/dropdown/dropdown
-include components/form/input-t-checkbox/input-t-checkbox
+include components/form/checkbox/checkbox
 include components/form/radio-button/radio-button
 include components/form/toggle-button/toggle-button
 include components/form/label/label
@@ -112,23 +112,23 @@ block content
                 {withButton: true}
               )
       div.column.column--4.column--large-hpadding
-        div.ui__input-t-checkbox-group--default
-          div.input-t-checkbox-group
-            div.input-t-checkbox-group__label
+        div.ui__checkbox-group--default
+          div.checkbox-group
+            div.checkbox-group__label
               +label('checkbox buttons')
-            div.input-t-checkbox-group__input-t-checkbox
-              +input-t-checkbox(
+            div.checkbox-group__checkbox
+              +checkbox(
                 'smoke-allowed',
                 'Можно курить'
               )
-            div.input-t-checkbox-group__input-t-checkbox
-              +input-t-checkbox(
+            div.checkbox-group__checkbox
+              +checkbox(
                 'pets-allowed',
                 'Можно с питомцами',
                 true
               )
-            div.input-t-checkbox-group__input-t-checkbox
-              +input-t-checkbox(
+            div.checkbox-group__checkbox
+              +checkbox(
                 'guests-allowed',
                 'Можно пригласить гостей (до 10 человек)',
                 true
