@@ -6,6 +6,7 @@
         margin-top: 145px;
     }
     &--form-components {
+        font-family: Montserrat, sans-serif;
         max-width: 1340px;
         margin: 0 auto;
         margin-top: 143px;
@@ -84,7 +85,12 @@
         position: relative;
         width: 65%;
     }
-    &__rich-checkbox-group--default {
+    &__bullet-list-group--default {
+        position: relative;
+        width: 63%;
+    }
+    &__rich-checkbox-group--default,
+    &__bullet-list-group--default {
         margin-top: 12px;
     }
     &__range-slider--default {

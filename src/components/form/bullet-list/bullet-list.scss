@@ -1,0 +1,22 @@
+.bullet-list {
+  color: $color-dark-75;
+  font-size: 14px;
+  padding-left: 20px;
+  margin: 0;
+  list-style-type: none;
+  &__li {
+    position: relative;
+    margin-bottom: 10px;
+    line-height: 24px;
+  }
+  &__marker {
+    position: absolute;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: $color-dark-25;
+    left: -20px;
+    top: 7px;
+  }
+}

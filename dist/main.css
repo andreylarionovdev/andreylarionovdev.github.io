@@ -4,6 +4,7 @@
   margin-top: 145px; }
 
 .ui--form-components {
+  font-family: Montserrat, sans-serif;
   max-width: 1340px;
   margin: 0 auto;
   margin-top: 143px; }
@@ -51,7 +52,11 @@
   position: relative;
   width: 65%; }
 
-.ui__rich-checkbox-group--default {
+.ui__bullet-list-group--default {
+  position: relative;
+  width: 63%; }
+
+.ui__rich-checkbox-group--default, .ui__bullet-list-group--default {
   margin-top: 12px; }
 
 .ui__range-slider--default {
@@ -888,7 +893,8 @@
   .exp-check-list__label {
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 12px; }
+    font-size: 12px;
+    color: #1F2041; }
   .exp-check-list__list {
     position: absolute;
     width: 100%;
@@ -970,6 +976,29 @@
     display: inline-block;
     padding: 5px 5px 0 0;
     color: rgba(31, 32, 65, 0.5); }
+
+.bullet-list-group__label {
+  margin-bottom: 13px; }
+
+.bullet-list {
+  color: rgba(31, 32, 65, 0.75);
+  font-size: 14px;
+  padding-left: 20px;
+  margin: 0;
+  list-style-type: none; }
+  .bullet-list__li {
+    position: relative;
+    margin-bottom: 10px;
+    line-height: 24px; }
+  .bullet-list__marker {
+    position: absolute;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgba(31, 32, 65, 0.25);
+    left: -20px;
+    top: 7px; }
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
