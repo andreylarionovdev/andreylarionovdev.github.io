@@ -33,6 +33,8 @@ $grad-green: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 @import "components/form/button/button";
 @import "components/form/paginator-group/paginator-group";
 @import "components/form/paginator/paginator";
+@import "components/form/exp-check-list/exp-check-list";
+@import "components/form/exp-check-list-group/exp-check-list-group";
 
 *, *:after, *:before {
     -webkit-box-sizing: border-box;

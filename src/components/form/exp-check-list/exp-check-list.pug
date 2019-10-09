@@ -1,0 +1,26 @@
+include ../checkbox/checkbox
+
+mixin exp-check-list(id, label, options)
+  - var blockName = 'exp-check-list'
+  - var modifiers = []
+  - var data = []
+
+  if options
+    if options.expanded
+      - modifiers.push(blockName+'--expanded')
+    if options.data
+      - data = options.data
+
+  div(class=blockName class=modifiers id=id)
+    div(class=blockName + '__select')
+      span(class=blockName + '__label')= label
+      i(class=[blockName + '__icon-down', 'material-icons'])= 'keyboard_arrow_down'
+      i(class=[blockName + '__icon-up', 'material-icons'])= 'keyboard_arrow_up'
+    ul(class=blockName + '__list')
+      each item, index in data
+        li(class=blockName + '__li' class='clearfix')
+          +checkbox(
+            id+'_'+item.name,
+            item.label,
+            item.checked
+          )

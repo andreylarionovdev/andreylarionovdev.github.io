@@ -24,8 +24,22 @@
             }
         }
     }
-    &__middle {
-        margin-bottom: 550px; // TODO: remove later
+    &__dropdown-states {
+        margin-bottom: 160px;
+        > .column {
+            &:first-child {
+                padding-left: 6.7%;
+            }
+            &:nth-child(2) {
+                padding-left: 6.7%;
+            }
+            &:nth-child(3) {
+                padding-left: 2.7%;
+            }
+        }
+    }
+    &__rich-lists {
+        margin-bottom: 550px;
         > .column {
             &:first-child {
                 padding-left: 6.7%;
@@ -58,6 +72,7 @@
     &__dropdown-group--date-filter,
     &__dropdown-group--collapsed,
     &__dropdown-group--expanded,
+    &__exp-check-list-group--collapsed,
     &__input-text-group--with-submit {
         position: relative;
         width: 75%;
@@ -75,6 +90,7 @@
         margin-bottom: 21px;
     }
     &__input-text-group--hovered,
+    &__exp-check-list-group--collapsed,
     &__dropdown-group--collapsed {
         margin-bottom: 20px;
     }

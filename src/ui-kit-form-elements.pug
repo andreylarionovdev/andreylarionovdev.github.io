@@ -12,132 +12,133 @@ include components/form/rate-button/rate-button
 include components/form/range-slider/range-slider
 include components/form/button/button
 include components/form/paginator/paginator
+include components/form/exp-check-list/exp-check-list
 
 block vars
   - title = 'UI Kit: Form elements'
 block content
-  div.ui.ui--form-components.clearfix
+  .ui.ui--form-components.clearfix
     +logo
-    div.ui__top.clearfix
-      div.column.column--4.column--large-hpadding
-        div.ui__input-text-group--default
-          div.input-text-group
-            div.input-text-group__label
+    .ui__top.clearfix
+      .column.column--4.column--large-hpadding
+        .ui__input-text-group--default
+          .input-text-group
+            .input-text-group__label
               +label(
                 'text field',
                 'default'
               )
-            div.input-text-group__input-text
+            .input-text-group__input-text
               +input-text(
                 'input-email',
                 'Email'
               )
-        div.ui__input-text-group--hovered
-          div.input-text-group
-            div.input-text-group__label
+        .ui__input-text-group--hovered
+          .input-text-group
+            .input-text-group__label
               +label(
                 'text field',
                 'hover / focus'
               )
-            div.input-text-group__input-text
+            .input-text-group__input-text
               +input-text(
                 'input-focused-hovered',
                 'Some text',
                 'This is pretty awesome',
                 {hovered: true}
               )
-        div.ui__dropdown-group--default
-          div.dropdown-group
-            div.dropdown-group__label
+        .ui__dropdown-group--default
+          .dropdown-group
+            .dropdown-group__label
               +label(
                 'dropdown',
                 'default'
               )
-            div.dropdown-group__dropdown
+            .dropdown-group__dropdown
               +dropdown(
                 'default-dropdown',
                 null,
                 {emptyValue: 'Сколько гостей'}
               )
-        div.ui__input-text-group--masked
-          div.input-text-group
-            div.input-text-group__label
+        .ui__input-text-group--masked
+          .input-text-group
+            .input-text-group__label
               +label(
                 'masked text field',
                 'default'
               )
-            div.input-text-group__input-text
+            .input-text-group__input-text
               +input-text(
                 'input-text-with-mask',
                 'ДД.ММ.ГГГГ'
               )
-        div.ui__dropdown-group--inline.clearfix
-          div.dropdown-group
-            div.dropdown-group__label
+        .ui__dropdown-group--inline.clearfix
+          .dropdown-group
+            .dropdown-group__label
               +label('date dropdown')
-            div.dropdown-group__dropdown
+            .dropdown-group__dropdown
               +dropdown(
                 'date-from',
                 null,
                 {emptyValue: 'ДД.ММ.ГГГГ'}
               )
-          div.dropdown-group
-            div.dropdown-group__label
+          .dropdown-group
+            .dropdown-group__label
               +label('date dropdown')
-            div.dropdown-group__dropdown
+            .dropdown-group__dropdown
               +dropdown(
                 'date-to',
                 null,
                 {emptyValue: '19.08.2019'}
               )
-        div.ui__dropdown-group--date-filter
-          div.dropdown-group
-            div.dropdown-group__label
+        .ui__dropdown-group--date-filter
+          .dropdown-group
+            .dropdown-group__label
               +label('filter date dropdown')
-            div.dropdown-group__dropdown
+            .dropdown-group__dropdown
               +dropdown(
                 'date-filter',
                 null,
                 {emptyValue: '19 авг - 23 авг'}
               )
-        div.ui__input-text-group--with-submit
-          div.input-text-group
-            div.input-text-group__label
+        .ui__input-text-group--with-submit
+          .input-text-group
+            .input-text-group__label
               +label('subscription text field')
-            div.input-text-group__input-text
+            .input-text-group__input-text
               +input-text(
                 'input-text-submit',
                 'Email',
                 '',
                 {withButton: true}
               )
-      div.column.column--4.column--large-hpadding
-        div.ui__checkbox-group--default
-          div.checkbox-group
-            div.checkbox-group__label
+      .column.column--4.column--large-hpadding
+        .ui__checkbox-group--default
+          .checkbox-group
+            .checkbox-group__label
               +label('checkbox buttons')
-            div.checkbox-group__checkbox
+            .checkbox-group__checkbox
               +checkbox(
                 'smoke-allowed',
                 'Можно курить'
               )
-            div.checkbox-group__checkbox
+            .checkbox-group__checkbox
               +checkbox(
                 'pets-allowed',
                 'Можно с питомцами',
                 true
               )
-            div.checkbox-group__checkbox
+            .checkbox-group__checkbox
               +checkbox(
                 'guests-allowed',
                 'Можно пригласить гостей (до 10 человек)',
                 true
               )
-        div.ui__radio-group--default
-          div.radio-button-group.clearfix
-            div.radio-button-group__label
+        .ui__radio-group--default
+          .radio-button-group.clearfix
+            .radio-button-group__label
               +label('radio buttons')
-            div.radio-button-group__radio-button
+            .radio-button-group__radio-button
               +radio-button(
                 'radio-male',
                 'gender',
@@ -145,129 +146,129 @@ block content
                 'Мужчина',
                 true
               )
-            div.radio-button-group__radio-button
+            .radio-button-group__radio-button
               +radio-button(
                 'radio-female',
                 'gender',
                 'female',
                 'Женщина'
               )
-        div.ui__toggle-group--default
-          div.toggle-group
-            div.toggle-group__label
+        .ui__toggle-group--default
+          .toggle-group
+            .toggle-group__label
               +label('toggle')
-            div.toggle-group__toggle-button
+            .toggle-group__toggle-button
               +toggle-button(
                 'first-toggle',
                 'Получать спецпредложения',
                 true
               )
-            div.toggle-group__toggle-button
+            .toggle-group__toggle-button
               +toggle-button(
                 'second-toggle',
                 'Получать спецпредложения'
               )
-        div.ui__like-button-group--default.clearfix
-          div.like-button-group
-            div.like-button-group__label
+        .ui__like-button-group--default.clearfix
+          .like-button-group
+            .like-button-group__label
               +label('like button')
-            div.like-button-group__like-button
+            .like-button-group__like-button
               +like-button(2)
-            div.like-button-group__like-button
+            .like-button-group__like-button
               +like-button(12, true)
-        div.ui__rate-button-group--default.clearfix
-          div.rate-button-group
-            div.rate-button-group__label
+        .ui__rate-button-group--default.clearfix
+          .rate-button-group
+            .rate-button-group__label
               +label('rate button')
-            div.rate-button-group__rate-button
+            .rate-button-group__rate-button
               +rate-button(
                 'rate-first',
                 5,
                 4
               )
-            div.rate-button-group__rate-button
+            .rate-button-group__rate-button
               +rate-button(
                 'rate-second',
                 5,
                 5
               )
-      div.column.column--4.column--small-hpadding
-        div.ui__range-slider--default
+      .column.column--4.column--small-hpadding
+        .ui__range-slider--default
           +range-slider({
             'name': 'range-slider'
           })
-        div.ui__button-group--default
-          div.button-group
-            div.button-group__label
+        .ui__button-group--default
+          .button-group
+            .button-group__label
               +label('buttons')
-            div.button-group__button
+            .button-group__button
               +button(
                 'default',
                 'click me'
               )
-            div.button-group__button
+            .button-group__button
               +button(
                 'default',
                 'click me',
                 {hover: true}
               )
-            div.button-group__button
+            .button-group__button
               +button(
                 'transparent',
                 'click me'
               )
-            div.button-group__button
+            .button-group__button
               +button(
                 'transparent',
                 'click me',
                 {hover: true}
               )
-            div.button-group__button--textual
+            .button-group__button--textual
               +button(
                 'textual',
                 'click me'
               )
-            div.button-group__button--textual
+            .button-group__button--textual
               +button(
                 'textual',
                 'click me',
                 {hover: true}
               )
-            div.button-group__button--large
+            .button-group__button--large
               +button(
                 'default',
                 'перейти к оплате',
                 {withArrow: true}
               )
-        div.ui__paginator-group
-          div.paginator-group
-            div.paginator-group__label
+        .ui__paginator-group
+          .paginator-group
+            .paginator-group__label
               +label('pagination')
-            div.paginator-group__paginator
+            .paginator-group__paginator
               +paginator()
-    div.ui__middle.clearfix
-      div.column.column--4
-        div.ui__dropdown-group--collapsed
-          div.dropdown-group
-            div.dropdown-group__label
+    .ui__dropdown-states.clearfix
+      .column.column--4
+        .ui__dropdown-group--collapsed
+          .dropdown-group
+            .dropdown-group__label
               +label(
                 'dropdown',
                 'default'
               )
-            div.dropdown-group__dropdown
+            .dropdown-group__dropdown
               +dropdown(
                 'dropdown-collapsed',
                 null,
                 {emptyValue: '2 спальни, 2 кровати...'}
               )
-        div.ui__dropdown-group--expanded
-          div.dropdown-group
-            div.dropdown-group__label
+        .ui__dropdown-group--expanded
+          .dropdown-group
+            .dropdown-group__label
               +label(
                 'dropdown',
                 'expanded'
               )
-            div.dropdown-group__dropdown
+            .dropdown-group__dropdown
               +dropdown(
                 'dropdown-expanded',
                 null,
@@ -291,12 +292,12 @@ block content
                     }
                 }
               )
-      div.column.column--4
-        div.ui__dropdown-group--with-apply-btn
-          div.dropdown-group
-            div.dropdown-group__label
+      .column.column--4
+        .ui__dropdown-group--with-apply-btn
+          .dropdown-group
+            .dropdown-group__label
               +label('dropdown')
-            div.dropdown-group__dropdown
+            .dropdown-group__dropdown
               +dropdown(
                   'dropdown-expanded',
                   null,
@@ -322,12 +323,12 @@ block content
                       }
                   }
               )
-      div.column.column--4
-        div.ui__dropdown-group--with-clear-btn
-          div.dropdown-group
-            div.dropdown-group__label
+      .column.column--4
+        .ui__dropdown-group--with-clear-btn
+          .dropdown-group
+            .dropdown-group__label
               +label('dropdown')
-            div.dropdown-group__dropdown
+            .dropdown-group__dropdown
               +dropdown(
                   'dropdown-expanded',
                   null,
@@ -350,5 +351,61 @@ block content
                               name: 'младенцы'
                           }
                       }
+                  }
+              )
+    .ui__rich-lists.clearfix
+      .column.column--4
+        .ui__exp-check-list-group--collapsed
+          .exp-check-list-group
+            .exp-check-list-group__exp-check-list
+              +exp-check-list(
+                'exp_check_list_collapsed',
+                'Expandable checkbox list'
+              )
+        .ui__exp-check-list-group--collapsed
+          .exp-check-list-group
+            .exp-check-list-group__exp-check-list
+              +exp-check-list(
+                  'exp_check_list_collapsed',
+                  'Expandable checkbox list',
+                  {
+                      expanded: true,
+                      data: [
+                          {
+                              name: 'breakfast',
+                              label: 'Завтрак'
+                          },
+                          {
+                              name: 'table',
+                              label: 'Письменный стол',
+                              checked: true
+                          },
+                          {
+                              name: 'baby-chair-for-eat',
+                              label: 'Стул для кормления',
+                              checked: true
+                          },
+                          {
+                              name: 'baby-bed',
+                              label: 'Кроватка',
+                              checked: true
+                          },
+                          {
+                              name: 'tv_1',
+                              label: 'Телевизор'
+                          },
+                          {
+                              name: 'shampoo_1',
+                              label: 'Шампунь'
+                          },
+                          {
+                              name: 'tv_2',
+                              label: 'Телевизор'
+                          },
+                          {
+                              name: 'shampoo_2',
+                              label: 'Шампунь'
+                          }
+                      ]
                   }
               )
