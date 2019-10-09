@@ -45,7 +45,7 @@
                 padding-left: 6.7%;
             }
             &:nth-child(2) {
-                padding-left: 6.7%;
+                padding-left: 6.75%;
             }
             &:nth-child(3) {
                 padding-left: 2.7%;
@@ -73,6 +73,7 @@
     &__dropdown-group--collapsed,
     &__dropdown-group--expanded,
     &__exp-check-list-group--collapsed,
+    &__rich-checkbox-group--default,
     &__input-text-group--with-submit {
         position: relative;
         width: 75%;
@@ -82,6 +83,9 @@
     &__range-slider--default {
         position: relative;
         width: 65%;
+    }
+    &__rich-checkbox-group--default {
+        margin-top: 12px;
     }
     &__range-slider--default {
         margin-bottom: 18px;

@@ -13,6 +13,7 @@ include components/form/range-slider/range-slider
 include components/form/button/button
 include components/form/paginator/paginator
 include components/form/exp-check-list/exp-check-list
+include components/form/rich-checkbox/rich-checkbox
 
 block vars
   - title = 'UI Kit: Form elements'
@@ -408,4 +409,21 @@ block content
                           }
                       ]
                   }
+              )
+      .column.column--4
+        .ui__rich-checkbox-group--default
+          .rich-checkbox-group
+            .rich-checkbox-group__label
+              +label('rich checkbox buttons')
+            .rich-checkbox-group__rich-checkbox.clearfix
+              +rich-checkbox(
+                'wide-hall-checkbox',
+                'Широкий коридор',
+                'Ширина коридоров в номере не&nbsp;менее 91 см.'
+              )
+            .rich-checkbox-group__rich-checkbox.clearfix
+              +rich-checkbox(
+                  'disable-assistant-checkbox',
+                  'Помощник для инвалидов',
+                  'На 1 этаже вас встретит специалист и проводит до номера.'
               )

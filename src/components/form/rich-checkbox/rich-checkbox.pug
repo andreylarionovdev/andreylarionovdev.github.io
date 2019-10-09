@@ -1,0 +1,15 @@
+mixin rich-checkbox(id, label, hint, checked)
+  - var blockName = 'rich-checkbox'
+  div(class=blockName)
+    input(
+      id=id
+      type='checkbox'
+      class=blockName+'__input'
+      checked=checked
+    )
+    label(
+      class=blockName+'__label'
+      for=id
+    )
+      span(class=[blockName+'__title', 'clearfix'])= label
+      span(class=blockName+'__hint')!= hint
