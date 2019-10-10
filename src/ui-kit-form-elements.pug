@@ -15,6 +15,7 @@ include components/form/paginator/paginator
 include components/form/exp-check-list/exp-check-list
 include components/form/rich-checkbox/rich-checkbox
 include components/form/bullet-list/bullet-list
+include components/form/feature/feature
 
 block vars
   - title = 'UI Kit: Form elements'
@@ -373,41 +374,14 @@ block content
                 {
                   expanded: true,
                   data: [
-                    {
-                      name: 'breakfast',
-                      label: 'Завтрак'
-                    },
-                    {
-                      name: 'table',
-                      label: 'Письменный стол',
-                      checked: true
-                    },
-                    {
-                      name: 'baby-chair-for-eat',
-                      label: 'Стул для кормления',
-                      checked: true
-                    },
-                    {
-                      name: 'baby-bed',
-                      label: 'Кроватка',
-                      checked: true
-                    },
-                    {
-                      name: 'tv_1',
-                      label: 'Телевизор'
-                    },
-                    {
-                      name: 'shampoo_1',
-                      label: 'Шампунь'
-                    },
-                    {
-                      name: 'tv_2',
-                      label: 'Телевизор'
-                    },
-                    {
-                      name: 'shampoo_2',
-                      label: 'Шампунь'
-                    }
+                    {name: 'breakfast', label: 'Завтрак'},
+                    {name: 'table', label: 'Письменный стол', checked: true},
+                    {name: 'baby-chair-for-eat', label: 'Стул для кормления', checked: true},
+                    {name: 'baby-bed',label: 'Кроватка',checked: true},
+                    {name: 'tv_1',label: 'Телевизор'},
+                    {name: 'shampoo_1', label: 'Шампунь'},
+                    {name: 'tv_2', label: 'Телевизор'},
+                    {name: 'shampoo_2', label: 'Шампунь'}
                   ]
                 }
               )
@@ -444,3 +418,21 @@ block content
                   ]
                 }
               )
+    .ui__bottom.clearfix
+      .column.column--4
+        .ui__feature-group--default
+          .feature-group
+            .feature-group__feature
+              +feature(
+                'mood',
+                'Комфорт',
+                'Шумопоглощающие стены'
+              )
+            .feature-group__feature
+              +feature(
+                'location_city',
+                'Удобство',
+                'Окно в каждой из спален',
+                {lastChild: true}
+              )
+      .column.column--8

@@ -1,0 +1,12 @@
+mixin feature(icon, title, hint, options)
+  - var blockName = 'feature'
+  - var modifiers = []
+
+  if options
+    if options.lastChild
+    - modifiers.push(blockName+'--last')
+
+  div(class=[blockName, 'clearfix'] class=modifiers)
+    i(class=[blockName+'__icon', 'material-icons'])= icon
+    h3(class=blockName+'__title')= title
+    p(class=blockName+'__hint')= hint

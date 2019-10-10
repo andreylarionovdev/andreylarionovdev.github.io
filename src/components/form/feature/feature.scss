@@ -1,0 +1,24 @@
+.feature {
+  padding: 20px 0;
+  border-bottom: 1px solid $color-dark-10;
+  &--last {
+    border-bottom: none;
+  }
+  &__icon {
+    display: inline-block;
+    float: left;
+    font-size: 48px;
+    background: $grad-purple;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__title,
+  &__hint {
+    color: $color-dark-75;
+    margin: 0;
+    font-size: 14px;
+    padding-left: 58px;
+    display: block;
+    line-height: 24px;
+  }
+}
