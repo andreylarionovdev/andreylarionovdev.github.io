@@ -10,40 +10,41 @@ $grad-purple: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 $grad-green: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 
 @import 'fonts/fonts.css';
-@import 'components/container/container.scss';
-@import "components/column/column.scss";
+@import 'components/container/container';
+@import 'components/column/column';
 @import 'components/site-menu/site-menu';
-@import "components/color-sample/color-sample.scss";
-@import "components/font-sample/font-sample.scss";
-@import "components/form/label/label";
-@import "components/form/input-text/input-text";
-@import "components/form/groups/input-text-group";
-@import "components/form/groups/dropdown-group";
-@import "components/form/dropdown/dropdown";
-@import "components/form/groups/checkbox-group";
-@import "components/form/checkbox/checkbox";
-@import "components/form/groups/radio-button-group";
-@import "components/form/radio-button/radio-button";
-@import "components/form/groups/toggle-group";
-@import "components/form/toggle-button/toggle-button";
-@import "components/form/groups/like-button-group";
-@import "components/form/like-button/like-button";
-@import "components/form/groups/rate-button-group";
-@import "components/form/rate-button/rate-button";
-@import "components/form/range-slider/range-slider";
-@import "components/form/groups/button-group";
-@import "components/form/button/button";
-@import "components/form/groups/paginator-group";
-@import "components/form/paginator/paginator";
-@import "components/form/exp-check-list/exp-check-list";
-@import "components/form/groups/exp-check-list-group";
-@import "components/form/groups/rich-checkbox-group";
-@import "components/form/rich-checkbox/rich-checkbox";
-@import "components/form/groups/bullet-list-group";
-@import "components/form/bullet-list/bullet-list";
-@import "components/form/groups/feature-group";
-@import "components/form/feature/feature";
-@import "components/form/feedback/feedback";
+@import 'components/logo/logo';
+@import 'components/color-sample/color-sample';
+@import 'components/font-sample/font-sample';
+@import 'components/form/label/label';
+@import 'components/form/input-text/input-text';
+@import 'components/form/groups/input-text-group';
+@import 'components/form/groups/dropdown-group';
+@import 'components/form/dropdown/dropdown';
+@import 'components/form/groups/checkbox-group';
+@import 'components/form/checkbox/checkbox';
+@import 'components/form/groups/radio-button-group';
+@import 'components/form/radio-button/radio-button';
+@import 'components/form/groups/toggle-group';
+@import 'components/form/toggle-button/toggle-button';
+@import 'components/form/groups/like-button-group';
+@import 'components/form/like-button/like-button';
+@import 'components/form/groups/rate-button-group';
+@import 'components/form/rate-button/rate-button';
+@import 'components/form/range-slider/range-slider';
+@import 'components/form/groups/button-group';
+@import 'components/form/button/button';
+@import 'components/form/groups/paginator-group';
+@import 'components/form/paginator/paginator';
+@import 'components/form/exp-check-list/exp-check-list';
+@import 'components/form/groups/exp-check-list-group';
+@import 'components/form/groups/rich-checkbox-group';
+@import 'components/form/rich-checkbox/rich-checkbox';
+@import 'components/form/groups/bullet-list-group';
+@import 'components/form/bullet-list/bullet-list';
+@import 'components/form/groups/feature-group';
+@import 'components/form/feature/feature';
+@import 'components/form/feedback/feedback';
 
 *, *:after, *:before {
     -webkit-box-sizing: border-box;
@@ -56,11 +57,6 @@ $grad-green: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 body {
     font-family: Quicksand, sans-serif;
     margin: 0;
-}
-.logo {
-    position: absolute;
-    top: 30px;
-    left: 30px;
 }
 .clearfix {
     &:after {

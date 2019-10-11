@@ -122,6 +122,11 @@
   .site-menu a:hover {
     color: #1F2041; }
 
+.logo {
+  position: absolute;
+  top: 30px;
+  left: 30px; }
+
 .color-sample {
   font-family: Quicksand, sans-serif;
   position: relative;
@@ -1052,11 +1057,6 @@
 body {
   font-family: Quicksand, sans-serif;
   margin: 0; }
-
-.logo {
-  position: absolute;
-  top: 30px;
-  left: 30px; }
 
 .clearfix:after {
   content: "";
