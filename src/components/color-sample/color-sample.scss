@@ -1,4 +1,5 @@
 .color-sample {
+    $rect: #{&}__rect;
     font-family: Quicksand, sans-serif;
     position: relative;
     padding-left: 110px;
@@ -12,34 +13,47 @@
     &__hex {
         padding-top: 5px;
     }
-    &__rect {
+    #{$rect} {
         position: absolute;
         top: 0;
         left: 0;
         height: 70px;
         width: 70px;
         border-radius: 6px;
-        &--dark-100 {
+    }
+    &--dark-100 {
+        #{$rect} {
             background-color: $color-dark-100;
         }
-        &--dark-75 {
+    }
+    &--dark-75 {
+        #{$rect} {
             background-color: $color-dark-75;
         }
-        &--dark-50 {
+    }
+    &--dark-50 {
+        #{$rect} {
             background-color: $color-dark-50;
         }
-        &--dark-25 {
+    }
+    &--dark-25 {
+        #{$rect} {
             background-color: $color-dark-25;
         }
-        &--dark-5 {
+    }
+    &--dark-5 {
+        #{$rect} {
             background-color: $color-dark-5;
         }
-        &--purple {
+    }
+    &--purple {
+        #{$rect} {
             background-color: $color-purple;
         }
-        &--green {
+    }
+    &--green {
+        #{$rect} {
             background-color: $color-green;
         }
-
     }
 }

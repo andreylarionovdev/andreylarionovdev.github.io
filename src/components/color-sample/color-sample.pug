@@ -1,10 +1,7 @@
-mixin color-sample(options)
-  - var thisModifiers = []
-  - var rectModifiers = []
-  if options.modifiers
-    - thisModifiers = options.modifiers.this || []
-    - rectModifiers = options.modifiers.rc || []
-  div(class='color-sample' class=thisModifiers)
-    div(class='color-sample__rect' class=rectModifiers)
-    div(class='color-sample__title')= options.title
-    div(class='color-sample__hex')= options.subtitle
+mixin color-sample(title, hex, color)
+  - var blockName = 'color-sample'
+
+  div(class=blockName class=blockName+'--'+color)
+    div(class='color-sample__rect')
+    div(class='color-sample__title')= title
+    div(class='color-sample__hex')= hex

@@ -134,27 +134,27 @@
     padding-top: 9px; }
   .color-sample__hex {
     padding-top: 5px; }
-  .color-sample__rect {
+  .color-sample .color-sample__rect {
     position: absolute;
     top: 0;
     left: 0;
     height: 70px;
     width: 70px;
     border-radius: 6px; }
-    .color-sample__rect--dark-100 {
-      background-color: #1F2041; }
-    .color-sample__rect--dark-75 {
-      background-color: rgba(31, 32, 65, 0.75); }
-    .color-sample__rect--dark-50 {
-      background-color: rgba(31, 32, 65, 0.5); }
-    .color-sample__rect--dark-25 {
-      background-color: rgba(31, 32, 65, 0.25); }
-    .color-sample__rect--dark-5 {
-      background-color: rgba(31, 32, 65, 0.05); }
-    .color-sample__rect--purple {
-      background-color: #BC9CFF; }
-    .color-sample__rect--green {
-      background-color: #6FCF97; }
+  .color-sample--dark-100 .color-sample__rect {
+    background-color: #1F2041; }
+  .color-sample--dark-75 .color-sample__rect {
+    background-color: rgba(31, 32, 65, 0.75); }
+  .color-sample--dark-50 .color-sample__rect {
+    background-color: rgba(31, 32, 65, 0.5); }
+  .color-sample--dark-25 .color-sample__rect {
+    background-color: rgba(31, 32, 65, 0.25); }
+  .color-sample--dark-5 .color-sample__rect {
+    background-color: rgba(31, 32, 65, 0.05); }
+  .color-sample--purple .color-sample__rect {
+    background-color: #BC9CFF; }
+  .color-sample--green .color-sample__rect {
+    background-color: #6FCF97; }
 
 .font-sample {
   font-family: Quicksand, sans-serif;
