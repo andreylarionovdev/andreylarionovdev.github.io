@@ -1,10 +1,6 @@
-mixin font-sample(options)
-  - var thisModifiers = []
-  - var descModifiers = []
-  if options.modifiers
-    - thisModifiers = options.modifiers.this || []
-    - descModifiers = options.modifiers.desc || []
+mixin font-sample(theme, name, description)
+  - var blockName = 'font-sample'
 
-  div(class='font-sample' class=thisModifiers)
-    div(class='font-sample__name')= options.name
-    div(class='font-sample__desc' class=descModifiers)= options.description
+  div(class=blockName class=blockName+'--'+theme)
+    div(class=blockName+'__name')= name
+    div(class=blockName+'__desc')= description

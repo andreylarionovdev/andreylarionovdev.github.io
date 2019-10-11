@@ -162,65 +162,45 @@
   padding-left: 34%;
   padding-right: 6%;
   margin-bottom: 50px; }
-
-.font-sample--text-header {
-  font-size: 24px;
-  line-height: 1.25em;
-  font-weight: bold;
-  min-height: 60px; }
-
-.font-sample--text-header-inside {
-  font-weight: bold;
-  font-size: 19px;
-  line-height: 1.26315789474em;
-  min-height: 50px; }
-
-.font-sample--text-label {
-  font-family: Montserrat, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 1.1em;
-  text-transform: uppercase;
-  min-height: 10px; }
-
-.font-sample--text-body {
-  font-family: Montserrat, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71428571429em;
-  padding-right: 10.548523206%; }
-
-.font-sample__desc {
-  float: left; }
-
-.font-sample__desc--color-d-75 {
-  color: rgba(31, 32, 65, 0.75); }
-
-.font-sample__name {
-  float: left;
-  position: absolute;
-  font-family: Montserrat, sans-serif;
-  text-align: right;
-  top: 0;
-  left: 0;
-  width: 163px;
-  font-weight: normal;
-  color: rgba(31, 32, 65, 0.25); }
-
-@media (max-width: 1024px) {
+  .font-sample--text-header {
+    font-size: 24px;
+    line-height: 1.25em;
+    font-weight: bold;
+    min-height: 60px; }
+  .font-sample--text-header-inside {
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 1.26315789474em;
+    min-height: 50px; }
+  .font-sample--text-label {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.1em;
+    text-transform: uppercase;
+    min-height: 10px; }
+  .font-sample--text-body {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.71428571429em;
+    padding-right: 10.548523206%; }
+    .font-sample--text-body .font-sample__desc {
+      color: rgba(31, 32, 65, 0.75); }
+  .font-sample .font-sample__desc {
+    float: left; }
   .font-sample__name {
-    /*width: 10%;*/ } }
-
-@media (max-width: 1024px) {
-  .font-sample {
-    padding-left: 25%;
-    padding-right: 0; } }
-
-@media (max-width: 767px) {
-  .font-sample {
-    padding-left: 25%; } }
+    float: left;
+    position: absolute;
+    font-family: Montserrat, sans-serif;
+    text-align: right;
+    top: 0;
+    left: 0;
+    width: 163px;
+    font-weight: normal;
+    color: rgba(31, 32, 65, 0.25); }
 
 .label {
   display: block;

@@ -1,7 +1,7 @@
-mixin color-sample(title, hex, color)
+mixin color-sample(color, title, hex)
   - var blockName = 'color-sample'
 
   div(class=blockName class=blockName+'--'+color)
-    div(class='color-sample__rect')
-    div(class='color-sample__title')= title
-    div(class='color-sample__hex')= hex
+    div(class=blockName+'__rect')
+    div(class=blockName+'__title')= title
+    div(class=blockName+'__hex')= hex
