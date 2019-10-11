@@ -12,6 +12,7 @@ $grad-green: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 @import 'fonts/fonts.css';
 @import 'components/container/container.scss';
 @import "components/column/column.scss";
+@import 'components/site-menu/site-menu';
 @import "components/color-sample/color-sample.scss";
 @import "components/font-sample/font-sample.scss";
 @import "components/form/label/label";
@@ -65,18 +66,6 @@ body {
     content: "";
     display: table;
     clear: both;
-}
-ul.main-menu {
-    list-style: none;
-}
-ul.main-menu.purple li a {
-    color: $color-purple;
-}
-ul.main-menu.green li a {
-    color: $color-green;
-}
-ul.main-menu li a:hover {
-    color: $color-dark-100;
 }
 
 @media (max-width: 1280px) {

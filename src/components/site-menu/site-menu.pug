@@ -1,0 +1,8 @@
+mixin site-menu(theme, links)
+  - var blockName = 'site-menu'
+
+  ul(class=blockName class=blockName+'--'+theme)
+    each link in links
+      li
+        h1
+          a(class=blockName+'_a' href=link.href)= link.text

@@ -113,6 +113,15 @@
   .column--8 {
     width: 66.66%; }
 
+.site-menu {
+  list-style: none; }
+  .site-menu--purple a {
+    color: #BC9CFF; }
+  .site-menu--green a {
+    color: #6FCF97; }
+  .site-menu a:hover {
+    color: #1F2041; }
+
 .color-sample {
   font-family: Quicksand, sans-serif;
   position: relative;
@@ -1089,18 +1098,6 @@ body {
   content: "";
   display: table;
   clear: both; }
-
-ul.main-menu {
-  list-style: none; }
-
-ul.main-menu.purple li a {
-  color: #BC9CFF; }
-
-ul.main-menu.green li a {
-  color: #6FCF97; }
-
-ul.main-menu li a:hover {
-  color: #1F2041; }
 
 @media (max-width: 1280px) {
   .container {

@@ -1,31 +1,28 @@
 extends base
 
 include components/logo/logo
+include components/site-menu/site-menu
 
 block vars
   - var title = 'Index'
+  - var bodyClasses = ['ui', 'ui--index']
 block content
-  div.ui.ui--index.clearfix
-    +logo('.')
-    div.item-list.column.column--6
-      ul.main-menu.purple
-        li
-          h1
-            a(href='dist/ui-kit-colors-n-type.html') Colors & Type
-        li
-          h1
-            a(href='dist/ui-kit-form-elements.html') Form elements
-        li
-          h1
-            a(href='dist/ui-kit-cards.html') Cards
-        li
-          h1
-            a(href='dist/ui-kit-headers-n-footers.html') Headers & Footers
-    div.item-list.column.column--6
-      ul.main-menu.green
-        li
-          h1
-            a(href='dist/landing-page.html') Landing page
-        li
-          h1
-            a(href='dist/search-room.html') Search room
+  +logo('.')
+  .column.column--6
+    +site-menu(
+      'purple',
+      [
+        {text: 'Colors & Type', href: 'dist/ui-kit-colors-n-type.html'},
+        {text: 'Form elements', href: 'dist/ui-kit-form-elements.html'},
+        {text: 'Cards', href: 'dist/ui-kit-cards.html'},
+        {text: 'Headers & Footers', href: 'dist/ui-kit-headers-n-footers.html'}
+      ]
+    )
+  .column.column--6
+    +site-menu(
+      'green',
+      [
+        {text: 'Landing page', href: 'dist/landing-page.html'},
+        {text: 'Search room', href: 'dist/search-room.html'},
+      ]
+    )

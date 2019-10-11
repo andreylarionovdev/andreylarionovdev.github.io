@@ -1,0 +1,17 @@
+.site-menu {
+  list-style: none;
+  $a: #{&}__a;
+  &--purple {
+    #{a} {
+      color: $color-purple;
+    }
+  }
+  &--green {
+    #{a} {
+      color: $color-green;
+    }
+  }
+  #{a}:hover {
+    color: $color-dark-100;
+  }
+}
