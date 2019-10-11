@@ -280,20 +280,11 @@ block content
                 type: 'json',
                 expanded: true,
                 emptyValue: '2 спальни, 2 кровати...',
-                data: {
-                  bedroom: {
-                    count: 2,
-                    name: 'спальни'
-                  },
-                  bed: {
-                    count: 2,
-                    name: 'кровати'
-                  },
-                  bathroom: {
-                    count: 0,
-                    name: 'ванные комнаты'
-                  }
-                }
+                data: [
+                  {count: 2, text: 'спальни', name: 'bedroom'},
+                  {count: 2, text: 'кровати', name: 'bed'},
+                  {count: 0, text: 'ванные комнаты', name: 'bathroom'}
+                ]
               }
             )
     .column.column--4
@@ -311,20 +302,11 @@ block content
                 edited: true,
                 isEmpty: true,
                 emptyValue: 'Сколько гостей',
-                data: {
-                  adult: {
-                    count: 0,
-                    name: 'взрослые'
-                  },
-                  kids: {
-                    count: 0,
-                    name: 'дети'
-                  },
-                  baby: {
-                    count: 0,
-                    name: 'младенцы'
-                  }
-                }
+                data: [
+                  {count: 0, text: 'взрослые', name: 'adult'},
+                  {count: 0, text: 'дети', name: 'kids'},
+                  {count: 0, text: 'младенцы', name: 'baby'}
+                ]
               }
             )
     .column.column--4
@@ -341,20 +323,11 @@ block content
                 expanded: true,
                 edited: true,
                 emptyValue: '3 гостя',
-                data: {
-                  adult: {
-                    count: 2,
-                    name: 'взрослые'
-                  },
-                  kids: {
-                    count: 1,
-                    name: 'дети'
-                  },
-                  baby: {
-                    count: 0,
-                    name: 'младенцы'
-                  }
-                }
+                data: [
+                  {count: 2, text: 'взрослые', name: 'adult'},
+                  {count: 1, text: 'дети', name: 'kids'},
+                  {count: 0, text: 'младенцы', name: 'baby'}
+                ]
               }
             )
   .ui__rich-lists.clearfix

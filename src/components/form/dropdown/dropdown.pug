@@ -32,10 +32,9 @@ mixin dropdown(id, value, options)
     input(class=blockName+'__input' type='hidden' value=value)
     if type === 'json'
       ul(class=blockName+'__menu')
-        // TODO: move name from key to object to simplify data structure
-        each item, name in data
-          li(class=blockName+'__li' class='clearfix' data-name=name)
-            span(class=blockName+'__li-name')= item.name
+        each item in data
+          li(class=blockName+'__li' class='clearfix' data-name=item.name)
+            span(class=blockName+'__li-name')= item.text
             span(class=blockName+'__li-inc')= '+'
             span(class=blockName+'__li-count')= item.count
             span(class=blockName+'__li-dec')= '-'
