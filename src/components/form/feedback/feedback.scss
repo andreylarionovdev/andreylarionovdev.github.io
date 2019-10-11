@@ -1,0 +1,33 @@
+.feedback {
+  position: relative;
+  &__image {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(31, 32, 65, 0.1);
+    border: 2px solid white;
+
+  }
+  &__like-button {
+    position: absolute;
+    left: 4px;
+    top: 60px;
+  }
+  &__author,
+  &__date,
+  &__text {
+    margin: 0;
+    font-size: 14px;
+    display: block;
+    padding-left: 58px;
+    line-height: 24px;
+    color: $color-dark-75;
+  }
+  &__text {
+    margin-top: 10px;
+  }
+}

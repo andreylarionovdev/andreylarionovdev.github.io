@@ -1,0 +1,18 @@
+include ../like-button/like-button
+
+mixin feedback(author, date, text, options)
+  - var blockName = 'feedback'
+  - var image = null
+
+  if options
+    if options.image
+      - image = options.image
+
+  div(class=blockName)
+    if image
+      img(class=blockName+'__image' src=require('./img/' + image))
+    div(class=blockName+'__like-button')
+      +like-button(12, true)
+    h3(class=blockName+'__author')= author
+    p(class=blockName+'__date')= date
+    p(class=blockName+'__text')!= text

@@ -42,6 +42,7 @@ $grad-green: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 @import "components/form/bullet-list/bullet-list";
 @import "components/form/feature-group/feature-group";
 @import "components/form/feature/feature";
+@import "components/form/feedback/feedback";
 
 *, *:after, *:before {
     -webkit-box-sizing: border-box;

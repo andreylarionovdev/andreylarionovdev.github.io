@@ -16,6 +16,7 @@ include components/form/exp-check-list/exp-check-list
 include components/form/rich-checkbox/rich-checkbox
 include components/form/bullet-list/bullet-list
 include components/form/feature/feature
+include components/form/feedback/feedback
 
 block vars
   - title = 'UI Kit: Form elements'
@@ -432,7 +433,15 @@ block content
               +feature(
                 'location_city',
                 'Удобство',
-                'Окно в каждой из спален',
-                {lastChild: true}
+                'Окно в каждой из спален'
               )
       .column.column--8
+        .ui__feedback-group--default
+          .feedback-group
+            .feedback-group__feedback
+              +feedback(
+                'Мурад Сарафанов',
+                '5 дней назад',
+                'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И&nbsp;стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+                {favCount: 12, fav: true, image: 'murad.png'}
+              )

@@ -70,6 +70,7 @@
     &__rate-group--default,
     &__like-button-group--default,
     &__toggle-group--default,
+    &__feedback-group--default,
     &__input-text-group--default,
     &__input-text-group--masked,
     &__input-text-group--hovered {
@@ -103,6 +104,9 @@
     &__rich-checkbox-group--default,
     &__bullet-list-group--default {
         margin-top: 12px;
+    }
+    &__feedback-group--default {
+      margin-top: 30px;
     }
     &__range-slider--default {
         margin-bottom: 18px;

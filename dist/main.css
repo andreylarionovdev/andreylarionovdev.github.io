@@ -42,7 +42,7 @@
 .ui__bottom > .column:nth-child(2) {
   padding-left: 6.75%; }
 
-.ui__dropdown-group--with-apply-btn, .ui__dropdown-group--default, .ui__dropdown-group--inline, .ui__radio-group--default, .ui__rate-group--default, .ui__like-button-group--default, .ui__toggle-group--default, .ui__input-text-group--default, .ui__input-text-group--masked, .ui__input-text-group--hovered {
+.ui__dropdown-group--with-apply-btn, .ui__dropdown-group--default, .ui__dropdown-group--inline, .ui__radio-group--default, .ui__rate-group--default, .ui__like-button-group--default, .ui__toggle-group--default, .ui__feedback-group--default, .ui__input-text-group--default, .ui__input-text-group--masked, .ui__input-text-group--hovered {
   position: relative;
   width: 90%; }
 
@@ -64,6 +64,9 @@
 
 .ui__rich-checkbox-group--default, .ui__bullet-list-group--default {
   margin-top: 12px; }
+
+.ui__feedback-group--default {
+  margin-top: 30px; }
 
 .ui__range-slider--default {
   margin-bottom: 18px; }
@@ -103,12 +106,12 @@
 
 .column {
   float: left; }
-
-.column--6 {
-  width: 50%; }
-
-.column--4 {
-  width: 33.33%; }
+  .column--6 {
+    width: 50%; }
+  .column--4 {
+    width: 33.33%; }
+  .column--8 {
+    width: 66.66%; }
 
 .color-sample {
   font-family: Quicksand, sans-serif;
@@ -1026,6 +1029,33 @@
     padding-left: 58px;
     display: block;
     line-height: 24px; }
+
+.feedback {
+  position: relative; }
+  .feedback__image {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 10px 20px rgba(31, 32, 65, 0.1);
+            box-shadow: 0 10px 20px rgba(31, 32, 65, 0.1);
+    border: 2px solid white; }
+  .feedback__like-button {
+    position: absolute;
+    left: 4px;
+    top: 60px; }
+  .feedback__author, .feedback__date, .feedback__text {
+    margin: 0;
+    font-size: 14px;
+    display: block;
+    padding-left: 58px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75); }
+  .feedback__text {
+    margin-top: 10px; }
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
