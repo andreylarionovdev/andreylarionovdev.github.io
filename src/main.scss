@@ -62,26 +62,10 @@ body {
     top: 30px;
     left: 30px;
 }
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-@media (max-width: 1280px) {
-    .container {
-        /*width: 88%;*/
-    }
-}
-
-@media (max-width: 1024px) {
-    .container {
-        /*width: 91%;*/
-    }
-}
-
-@media (max-width: 767px) {
-    .container {
-        /*width: 91%;*/
+.clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
     }
 }
