@@ -4,474 +4,432 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
   <link href="styles.css" rel="stylesheet"><link href="main.css" rel="stylesheet"></head>
-  <body>
-    <div class="ui ui--form-components clearfix">
-      <div class="logo"><a href="../index.html">
-          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M23.9989 32.4712C23.2224 32.4712 22.5871 31.8359 22.5871 31.0594C22.5871 25.6241 18.14 21.177 12.7047 21.177C11.9283 21.177 11.293 20.5418 11.293 19.7653C11.293 18.9888 11.9283 18.3535 12.7047 18.3535C19.7283 18.3535 25.4106 24.0359 25.4106 31.0594C25.4106 31.8359 24.7753 32.4712 23.9989 32.4712Z" fill="#1F2041" fill-opacity="0.25"></path>
-            <path d="M36.7068 19.7653C36.7068 20.5418 36.0715 21.177 35.295 21.177C31.9421 21.177 28.9421 22.8712 27.1774 25.4476C26.7892 24.4594 26.3303 23.5418 25.7656 22.6947C28.095 20.0123 31.5186 18.3535 35.295 18.3535C36.0715 18.3535 36.7068 18.9888 36.7068 19.7653Z" fill="#1F2041" fill-opacity="0.25"></path>
-            <path d="M24 48C10.7647 48 0 37.2353 0 24C0 10.7647 10.7647 0 24 0C37.2353 0 48 10.7647 48 24C48 37.2353 37.2353 48 24 48ZM24 2.82353C12.3176 2.82353 2.82353 12.3176 2.82353 24C2.82353 35.6824 12.3176 45.1765 24 45.1765C35.6824 45.1765 45.1765 35.6824 45.1765 24C45.1765 12.3176 35.6824 2.82353 24 2.82353Z" fill="#1F2041" fill-opacity="0.25"></path>
-          </svg></a></div>
-      <div class="ui__top clearfix">
-        <div class="column column--4 column--large-hpadding">
-          <div class="ui__input-text-group--default">
-            <div class="input-text-group">
-              <div class="input-text-group__label">
-                <label class="label clearfix"><span class="label__left">text field</span><span class="label__right">default</span></label>
-              </div>
-              <div class="input-text-group__input-text">
-                <div class="input-text">
-                  <input class="input-text__input-text" id="input-email" type="text" placeholder="Email">
-                  <input class="input-text__input-t-submit" type="submit">
-                </div>
-              </div>
+  <body class="ui ui--form-components">
+    <div class="logo"><a href="../index.html">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.9989 32.4712C23.2224 32.4712 22.5871 31.8359 22.5871 31.0594C22.5871 25.6241 18.14 21.177 12.7047 21.177C11.9283 21.177 11.293 20.5418 11.293 19.7653C11.293 18.9888 11.9283 18.3535 12.7047 18.3535C19.7283 18.3535 25.4106 24.0359 25.4106 31.0594C25.4106 31.8359 24.7753 32.4712 23.9989 32.4712Z" fill="#1F2041" fill-opacity="0.25"></path>
+          <path d="M36.7068 19.7653C36.7068 20.5418 36.0715 21.177 35.295 21.177C31.9421 21.177 28.9421 22.8712 27.1774 25.4476C26.7892 24.4594 26.3303 23.5418 25.7656 22.6947C28.095 20.0123 31.5186 18.3535 35.295 18.3535C36.0715 18.3535 36.7068 18.9888 36.7068 19.7653Z" fill="#1F2041" fill-opacity="0.25"></path>
+          <path d="M24 48C10.7647 48 0 37.2353 0 24C0 10.7647 10.7647 0 24 0C37.2353 0 48 10.7647 48 24C48 37.2353 37.2353 48 24 48ZM24 2.82353C12.3176 2.82353 2.82353 12.3176 2.82353 24C2.82353 35.6824 12.3176 45.1765 24 45.1765C35.6824 45.1765 45.1765 35.6824 45.1765 24C45.1765 12.3176 35.6824 2.82353 24 2.82353Z" fill="#1F2041" fill-opacity="0.25"></path>
+        </svg></a></div>
+    <div class="ui__top clearfix">
+      <div class="column column--4">
+        <div class="ui__input-text-group--default">
+          <div class="input-text-group">
+            <div class="input-text-group__label">
+              <label class="label clearfix"><span class="label__left">text field</span><span class="label__right">default</span></label>
             </div>
-          </div>
-          <div class="ui__input-text-group--hovered">
-            <div class="input-text-group">
-              <div class="input-text-group__label">
-                <label class="label clearfix"><span class="label__left">text field</span><span class="label__right">hover / focus</span></label>
-              </div>
-              <div class="input-text-group__input-text">
-                <div class="input-text input-text--hovered">
-                  <input class="input-text__input-text" id="input-focused-hovered" type="text" placeholder="Some text" value="This is pretty awesome">
-                  <input class="input-text__input-t-submit" type="submit">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="ui__dropdown-group--default">
-            <div class="dropdown-group">
-              <div class="dropdown-group__label">
-                <label class="label clearfix"><span class="label__left">dropdown</span><span class="label__right">default</span></label>
-              </div>
-              <div class="dropdown-group__dropdown">
-                <div class="dropdown" data-type="empty" id="default-dropdown">
-                  <div class="dropdown__select"><span class="dropdown__text">Сколько гостей</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i></div>
-                  <input class="dropdown__input" type="hidden">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="ui__input-text-group--masked">
-            <div class="input-text-group">
-              <div class="input-text-group__label">
-                <label class="label clearfix"><span class="label__left">masked text field</span><span class="label__right">default</span></label>
-              </div>
-              <div class="input-text-group__input-text">
-                <div class="input-text">
-                  <input class="input-text__input-text" id="input-text-with-mask" type="text" placeholder="ДД.ММ.ГГГГ">
-                  <input class="input-text__input-t-submit" type="submit">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="ui__dropdown-group--inline clearfix">
-            <div class="dropdown-group">
-              <div class="dropdown-group__label">
-                <label class="label clearfix"><span class="label__left">date dropdown</span><span class="label__right"></span></label>
-              </div>
-              <div class="dropdown-group__dropdown">
-                <div class="dropdown" data-type="empty" id="date-from">
-                  <div class="dropdown__select"><span class="dropdown__text">ДД.ММ.ГГГГ</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i></div>
-                  <input class="dropdown__input" type="hidden">
-                </div>
-              </div>
-            </div>
-            <div class="dropdown-group">
-              <div class="dropdown-group__label">
-                <label class="label clearfix"><span class="label__left">date dropdown</span><span class="label__right"></span></label>
-              </div>
-              <div class="dropdown-group__dropdown">
-                <div class="dropdown" data-type="empty" id="date-to">
-                  <div class="dropdown__select"><span class="dropdown__text">19.08.2019</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i></div>
-                  <input class="dropdown__input" type="hidden">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="ui__dropdown-group--date-filter">
-            <div class="dropdown-group">
-              <div class="dropdown-group__label">
-                <label class="label clearfix"><span class="label__left">filter date dropdown</span><span class="label__right"></span></label>
-              </div>
-              <div class="dropdown-group__dropdown">
-                <div class="dropdown" data-type="empty" id="date-filter">
-                  <div class="dropdown__select"><span class="dropdown__text">19 авг - 23 авг</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i></div>
-                  <input class="dropdown__input" type="hidden">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="ui__input-text-group--with-submit">
-            <div class="input-text-group">
-              <div class="input-text-group__label">
-                <label class="label clearfix"><span class="label__left">subscription text field</span><span class="label__right"></span></label>
-              </div>
-              <div class="input-text-group__input-text">
-                <div class="input-text input-text--visible">
-                  <input class="input-text__input-text" id="input-text-submit" type="text" placeholder="Email" value="">
-                  <input class="input-text__input-t-submit" type="submit">
-                </div>
+            <div class="input-text-group__input-text">
+              <div class="input-text">
+                <input class="input-text__input-text" id="input-email" type="text" placeholder="Email">
+                <input class="input-text__input-t-submit" type="submit">
               </div>
             </div>
           </div>
         </div>
-        <div class="column column--4 column--large-hpadding">
-          <div class="ui__checkbox-group--default">
-            <div class="checkbox-group">
-              <div class="checkbox-group__label">
-                <label class="label clearfix"><span class="label__left">checkbox buttons</span><span class="label__right"></span></label>
-              </div>
-              <div class="checkbox-group__checkbox">
-                <div class="checkbox">
-                  <input class="checkbox__input" id="smoke-allowed" type="checkbox">
-                  <label class="checkbox__label" for="smoke-allowed">Можно курить</label>
-                </div>
-              </div>
-              <div class="checkbox-group__checkbox">
-                <div class="checkbox">
-                  <input class="checkbox__input" id="pets-allowed" type="checkbox" checked>
-                  <label class="checkbox__label" for="pets-allowed">Можно с питомцами</label>
-                </div>
-              </div>
-              <div class="checkbox-group__checkbox">
-                <div class="checkbox">
-                  <input class="checkbox__input" id="guests-allowed" type="checkbox" checked>
-                  <label class="checkbox__label" for="guests-allowed">Можно пригласить гостей (до 10 человек)</label>
-                </div>
-              </div>
+        <div class="ui__input-text-group--hovered">
+          <div class="input-text-group">
+            <div class="input-text-group__label">
+              <label class="label clearfix"><span class="label__left">text field</span><span class="label__right">hover / focus</span></label>
             </div>
-          </div>
-          <div class="ui__radio-group--default">
-            <div class="radio-button-group clearfix">
-              <div class="radio-button-group__label">
-                <label class="label clearfix"><span class="label__left">radio buttons</span><span class="label__right"></span></label>
-              </div>
-              <div class="radio-button-group__radio-button">
-                <div class="radio-button">
-                  <input class="radio-button__input" id="radio-male" type="radio" name="gender" value="male" checked>
-                  <label class="radio-button__label" for="radio-male">Мужчина</label>
-                </div>
-              </div>
-              <div class="radio-button-group__radio-button">
-                <div class="radio-button">
-                  <input class="radio-button__input" id="radio-female" type="radio" name="gender" value="female">
-                  <label class="radio-button__label" for="radio-female">Женщина</label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="ui__toggle-group--default">
-            <div class="toggle-group">
-              <div class="toggle-group__label">
-                <label class="label clearfix"><span class="label__left">toggle</span><span class="label__right"></span></label>
-              </div>
-              <div class="toggle-group__toggle-button">
-                <div class="toggle-button">
-                  <div class="toggle-button__toggle">
-                    <input class="toggle-button__input" id="first-toggle" type="checkbox" checked>
-                    <label class="toggle-button__label" for="first-toggle">Получать спецпредложения</label>
-                  </div>
-                </div>
-              </div>
-              <div class="toggle-group__toggle-button">
-                <div class="toggle-button">
-                  <div class="toggle-button__toggle">
-                    <input class="toggle-button__input" id="second-toggle" type="checkbox">
-                    <label class="toggle-button__label" for="second-toggle">Получать спецпредложения</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="ui__like-button-group--default clearfix">
-            <div class="like-button-group">
-              <div class="like-button-group__label">
-                <label class="label clearfix"><span class="label__left">like button</span><span class="label__right"></span></label>
-              </div>
-              <div class="like-button-group__like-button"><a class="like-button" href="javascript:void(0);">
-                  <div class="like-button__favorite">
-                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5.03906 6.73438C5.66406 6.17448 6.1263 5.7513 6.42578 5.46484C6.72526 5.17839 7.05078 4.83984 7.40234 4.44922C7.75391 4.05859 7.99479 3.71354 8.125 3.41406C8.26823 3.11458 8.33984 2.82161 8.33984 2.53516C8.33984 2.11849 8.19661 1.77344 7.91016 1.5C7.63672 1.22656 7.29167 1.08984 6.875 1.08984C6.54948 1.08984 6.24349 1.18099 5.95703 1.36328C5.68359 1.54557 5.49479 1.77995 5.39062 2.06641H4.60938C4.50521 1.77995 4.3099 1.54557 4.02344 1.36328C3.75 1.18099 3.45052 1.08984 3.125 1.08984C2.70833 1.08984 2.35677 1.22656 2.07031 1.5C1.79688 1.77344 1.66016 2.11849 1.66016 2.53516C1.66016 2.82161 1.72526 3.11458 1.85547 3.41406C1.9987 3.71354 2.24609 4.05859 2.59766 4.44922C2.94922 4.83984 3.27474 5.17839 3.57422 5.46484C3.8737 5.7513 4.33594 6.17448 4.96094 6.73438L5 6.77344L5.03906 6.73438ZM6.875 0.25C7.52604 0.25 8.06641 0.471354 8.49609 0.914062C8.9388 1.35677 9.16016 1.89714 9.16016 2.53516C9.16016 2.91276 9.08854 3.28385 8.94531 3.64844C8.80208 4 8.53516 4.39714 8.14453 4.83984C7.76693 5.28255 7.42188 5.65365 7.10938 5.95312C6.79688 6.2526 6.29557 6.71484 5.60547 7.33984L5 7.88672L4.39453 7.35938C3.49609 6.55208 2.84505 5.94661 2.44141 5.54297C2.05078 5.13932 1.6862 4.66406 1.34766 4.11719C1.00911 3.57031 0.839844 3.04297 0.839844 2.53516C0.839844 1.89714 1.05469 1.35677 1.48438 0.914062C1.92708 0.471354 2.47396 0.25 3.125 0.25C3.88021 0.25 4.50521 0.542969 5 1.12891C5.49479 0.542969 6.11979 0.25 6.875 0.25Z" fill="#1F2041" fill-opacity="0.25"></path>
-                    </svg>
-                  </div>
-                  <div class="like-button__counter">2</div></a>
-              </div>
-              <div class="like-button-group__like-button"><a class="like-button like-button--favorite" href="javascript:void(0);">
-                  <div class="like-button__favorite">
-                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M4.93026 7.88672L4.3248 7.33984C3.63469 6.71484 3.13339 6.2526 2.82089 5.95312C2.50839 5.65365 2.15683 5.28255 1.7662 4.83984C1.3886 4.39714 1.12818 4 0.984952 3.64844C0.841723 3.28385 0.770108 2.91276 0.770108 2.53516C0.770108 1.89714 0.984952 1.35677 1.41464 0.914062C1.85735 0.471354 2.40422 0.25 3.05526 0.25C3.81047 0.25 4.43547 0.542969 4.93026 1.12891C5.42506 0.542969 6.05006 0.25 6.80526 0.25C7.45631 0.25 7.99667 0.471354 8.42636 0.914062C8.86907 1.35677 9.09042 1.89714 9.09042 2.53516C9.09042 3.04297 8.92115 3.57031 8.58261 4.11719C8.24407 4.66406 7.87297 5.13932 7.46933 5.54297C7.0787 5.94661 6.43417 6.55208 5.53573 7.35938L4.93026 7.88672Z" fill="#BC9CFF"></path>
-                    </svg>
-                  </div>
-                  <div class="like-button__counter">12</div></a>
-              </div>
-            </div>
-          </div>
-          <div class="ui__rate-button-group--default clearfix">
-            <div class="rate-button-group">
-              <div class="rate-button-group__label">
-                <label class="label clearfix"><span class="label__left">rate button</span><span class="label__right"></span></label>
-              </div>
-              <div class="rate-button-group__rate-button">
-                <div class="rate-button" id="rate-first">
-                  <input class="rate-button__radio" id="rate-first5" type="radio" name="rate-first" value="5">
-                  <label class="rate-button__label" for="rate-first5">5</label>
-                  <input class="rate-button__radio" id="rate-first4" type="radio" name="rate-first" value="4" checked>
-                  <label class="rate-button__label" for="rate-first4">4</label>
-                  <input class="rate-button__radio" id="rate-first3" type="radio" name="rate-first" value="3">
-                  <label class="rate-button__label" for="rate-first3">3</label>
-                  <input class="rate-button__radio" id="rate-first2" type="radio" name="rate-first" value="2">
-                  <label class="rate-button__label" for="rate-first2">2</label>
-                  <input class="rate-button__radio" id="rate-first1" type="radio" name="rate-first" value="1">
-                  <label class="rate-button__label" for="rate-first1">1</label>
-                </div>
-              </div>
-              <div class="rate-button-group__rate-button">
-                <div class="rate-button" id="rate-second">
-                  <input class="rate-button__radio" id="rate-second5" type="radio" name="rate-second" value="5" checked>
-                  <label class="rate-button__label" for="rate-second5">5</label>
-                  <input class="rate-button__radio" id="rate-second4" type="radio" name="rate-second" value="4">
-                  <label class="rate-button__label" for="rate-second4">4</label>
-                  <input class="rate-button__radio" id="rate-second3" type="radio" name="rate-second" value="3">
-                  <label class="rate-button__label" for="rate-second3">3</label>
-                  <input class="rate-button__radio" id="rate-second2" type="radio" name="rate-second" value="2">
-                  <label class="rate-button__label" for="rate-second2">2</label>
-                  <input class="rate-button__radio" id="rate-second1" type="radio" name="rate-second" value="1">
-                  <label class="rate-button__label" for="rate-second1">1</label>
-                </div>
+            <div class="input-text-group__input-text">
+              <div class="input-text input-text--hovered">
+                <input class="input-text__input-text" id="input-focused-hovered" type="text" placeholder="Some text" value="This is pretty awesome">
+                <input class="input-text__input-t-submit" type="submit">
               </div>
             </div>
           </div>
         </div>
-        <div class="column column--4 column--small-hpadding">
-          <div class="ui__range-slider--default">
-            <div class="range-slider">
-              <label class="label clearfix"><span class="label__left">range slider</span><span class="label__right"></span></label>
-              <input class="range-slider__input" type="text" name="range-slider" value="">
+        <div class="ui__dropdown-group--default">
+          <div class="dropdown-group">
+            <div class="dropdown-group__label">
+              <label class="label clearfix"><span class="label__left">dropdown</span><span class="label__right">default</span></label>
             </div>
-          </div>
-          <div class="ui__button-group--default">
-            <div class="button-group">
-              <div class="button-group__label">
-                <label class="label clearfix"><span class="label__left">buttons</span><span class="label__right"></span></label>
-              </div>
-              <div class="button-group__button"><a class="button button--default" href="javascript:void(0);">click me</a>
-              </div>
-              <div class="button-group__button"><a class="button button--default button--hovered" href="javascript:void(0);">click me</a>
-              </div>
-              <div class="button-group__button"><a class="button button--transparent" href="javascript:void(0);">click me</a>
-              </div>
-              <div class="button-group__button"><a class="button button--transparent button--hovered" href="javascript:void(0);">click me</a>
-              </div>
-              <div class="button-group__button--textual"><a class="button button--textual" href="javascript:void(0);">click me</a>
-              </div>
-              <div class="button-group__button--textual"><a class="button button--textual button--hovered" href="javascript:void(0);">click me</a>
-              </div>
-              <div class="button-group__button--large"><a class="button button--default" href="javascript:void(0);"><span class="button__arrow">перейти к оплате<i class="material-icons arrow">arrow_forward</i></span></a>
+            <div class="dropdown-group__dropdown">
+              <div class="dropdown" data-type="empty" id="default-dropdown">
+                <div class="dropdown__select"><span class="dropdown__text">Сколько гостей</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i></div>
+                <input class="dropdown__input" type="hidden">
               </div>
             </div>
           </div>
-          <div class="ui__paginator-group">
-            <div class="paginator-group">
-              <div class="paginator-group__label">
-                <label class="label clearfix"><span class="label__left">pagination</span><span class="label__right"></span></label>
+        </div>
+        <div class="ui__input-text-group--masked">
+          <div class="input-text-group">
+            <div class="input-text-group__label">
+              <label class="label clearfix"><span class="label__left">masked text field</span><span class="label__right">default</span></label>
+            </div>
+            <div class="input-text-group__input-text">
+              <div class="input-text">
+                <input class="input-text__input-text" id="input-text-with-mask" type="text" placeholder="ДД.ММ.ГГГГ">
+                <input class="input-text__input-t-submit" type="submit">
               </div>
-              <div class="paginator-group__paginator">
-                <div class="paginator"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ui__dropdown-group--inline clearfix">
+          <div class="dropdown-group">
+            <div class="dropdown-group__label">
+              <label class="label clearfix"><span class="label__left">date dropdown</span><span class="label__right"></span></label>
+            </div>
+            <div class="dropdown-group__dropdown">
+              <div class="dropdown" data-type="empty" id="date-from">
+                <div class="dropdown__select"><span class="dropdown__text">ДД.ММ.ГГГГ</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i></div>
+                <input class="dropdown__input" type="hidden">
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-group">
+            <div class="dropdown-group__label">
+              <label class="label clearfix"><span class="label__left">date dropdown</span><span class="label__right"></span></label>
+            </div>
+            <div class="dropdown-group__dropdown">
+              <div class="dropdown" data-type="empty" id="date-to">
+                <div class="dropdown__select"><span class="dropdown__text">19.08.2019</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i></div>
+                <input class="dropdown__input" type="hidden">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ui__dropdown-group--date-filter">
+          <div class="dropdown-group">
+            <div class="dropdown-group__label">
+              <label class="label clearfix"><span class="label__left">filter date dropdown</span><span class="label__right"></span></label>
+            </div>
+            <div class="dropdown-group__dropdown">
+              <div class="dropdown" data-type="empty" id="date-filter">
+                <div class="dropdown__select"><span class="dropdown__text">19 авг - 23 авг</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i></div>
+                <input class="dropdown__input" type="hidden">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ui__input-text-group--with-submit">
+          <div class="input-text-group">
+            <div class="input-text-group__label">
+              <label class="label clearfix"><span class="label__left">subscription text field</span><span class="label__right"></span></label>
+            </div>
+            <div class="input-text-group__input-text">
+              <div class="input-text input-text--visible">
+                <input class="input-text__input-text" id="input-text-submit" type="text" placeholder="Email" value="">
+                <input class="input-text__input-t-submit" type="submit">
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="ui__dropdown-states clearfix">
-        <div class="column column--4">
-          <div class="ui__dropdown-group--collapsed">
-            <div class="dropdown-group">
-              <div class="dropdown-group__label">
-                <label class="label clearfix"><span class="label__left">dropdown</span><span class="label__right">default</span></label>
+      <div class="column column--4 column--large-hpadding">
+        <div class="ui__checkbox-group--default">
+          <div class="checkbox-group">
+            <div class="checkbox-group__label">
+              <label class="label clearfix"><span class="label__left">checkbox buttons</span><span class="label__right"></span></label>
+            </div>
+            <div class="checkbox-group__checkbox">
+              <div class="checkbox">
+                <input class="checkbox__input" id="smoke-allowed" type="checkbox">
+                <label class="checkbox__label" for="smoke-allowed">Можно курить</label>
               </div>
-              <div class="dropdown-group__dropdown">
-                <div class="dropdown" data-type="empty" id="dropdown-collapsed">
-                  <div class="dropdown__select"><span class="dropdown__text">2 спальни, 2 кровати...</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i></div>
-                  <input class="dropdown__input" type="hidden">
-                </div>
+            </div>
+            <div class="checkbox-group__checkbox">
+              <div class="checkbox">
+                <input class="checkbox__input" id="pets-allowed" type="checkbox" checked>
+                <label class="checkbox__label" for="pets-allowed">Можно с питомцами</label>
+              </div>
+            </div>
+            <div class="checkbox-group__checkbox">
+              <div class="checkbox">
+                <input class="checkbox__input" id="guests-allowed" type="checkbox" checked>
+                <label class="checkbox__label" for="guests-allowed">Можно пригласить гостей (до 10 человек)</label>
               </div>
             </div>
           </div>
-          <div class="ui__dropdown-group--expanded">
-            <div class="dropdown-group">
-              <div class="dropdown-group__label">
-                <label class="label clearfix"><span class="label__left">dropdown</span><span class="label__right">expanded</span></label>
+        </div>
+        <div class="ui__radio-group--default">
+          <div class="radio-button-group clearfix">
+            <div class="radio-button-group__label">
+              <label class="label clearfix"><span class="label__left">radio buttons</span><span class="label__right"></span></label>
+            </div>
+            <div class="radio-button-group__radio-button">
+              <div class="radio-button">
+                <input class="radio-button__input" id="radio-male" type="radio" name="gender" value="male" checked>
+                <label class="radio-button__label" for="radio-male">Мужчина</label>
               </div>
-              <div class="dropdown-group__dropdown">
-                <div class="dropdown dropdown--expanded" data-type="json" id="dropdown-expanded">
-                  <div class="dropdown__select"><span class="dropdown__text">2 спальни, 2 кровати...</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i></div>
-                  <input class="dropdown__input" type="hidden" value="{&quot;bedroom&quot;:{&quot;count&quot;:2,&quot;name&quot;:&quot;спальни&quot;},&quot;bed&quot;:{&quot;count&quot;:2,&quot;name&quot;:&quot;кровати&quot;},&quot;bathroom&quot;:{&quot;count&quot;:0,&quot;name&quot;:&quot;ванные комнаты&quot;}}">
-                  <ul class="dropdown__menu">
-                    <!-- TODO: move name from key to object to simplify data structure-->
-                    <li class="dropdown__li clearfix" data-name="bedroom"><span class="dropdown__li-name">спальни</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">2</span><span class="dropdown__li-dec">-</span></li>
-                    <li class="dropdown__li clearfix" data-name="bed"><span class="dropdown__li-name">кровати</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">2</span><span class="dropdown__li-dec">-</span></li>
-                    <li class="dropdown__li clearfix" data-name="bathroom"><span class="dropdown__li-name">ванные комнаты</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
-                    <li class="dropdown__li clearfix" data-actions><span class="dropdown__li-clear"><a class="button button--textual button--hovered" href="javascript:void(0);" data-action="clear">очистить</a></span><span class="dropdown__li-apply"><a class="button button--textual" href="javascript:void(0);" data-action="apply">применить</a></span></li>
-                  </ul>
+            </div>
+            <div class="radio-button-group__radio-button">
+              <div class="radio-button">
+                <input class="radio-button__input" id="radio-female" type="radio" name="gender" value="female">
+                <label class="radio-button__label" for="radio-female">Женщина</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ui__toggle-group--default">
+          <div class="toggle-group">
+            <div class="toggle-group__label">
+              <label class="label clearfix"><span class="label__left">toggle</span><span class="label__right"></span></label>
+            </div>
+            <div class="toggle-group__toggle-button">
+              <div class="toggle-button">
+                <div class="toggle-button__toggle">
+                  <input class="toggle-button__input" id="first-toggle" type="checkbox" checked>
+                  <label class="toggle-button__label" for="first-toggle">Получать спецпредложения</label>
+                </div>
+              </div>
+            </div>
+            <div class="toggle-group__toggle-button">
+              <div class="toggle-button">
+                <div class="toggle-button__toggle">
+                  <input class="toggle-button__input" id="second-toggle" type="checkbox">
+                  <label class="toggle-button__label" for="second-toggle">Получать спецпредложения</label>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="column column--4">
-          <div class="ui__dropdown-group--with-apply-btn">
-            <div class="dropdown-group">
-              <div class="dropdown-group__label">
-                <label class="label clearfix"><span class="label__left">dropdown</span><span class="label__right"></span></label>
-              </div>
-              <div class="dropdown-group__dropdown">
-                <div class="dropdown dropdown--expanded dropdown--edited dropdown--empty" data-type="json" id="dropdown-expanded">
-                  <div class="dropdown__select"><span class="dropdown__text">Сколько гостей</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i></div>
-                  <input class="dropdown__input" type="hidden" value="{&quot;adult&quot;:{&quot;count&quot;:0,&quot;name&quot;:&quot;взрослые&quot;},&quot;kids&quot;:{&quot;count&quot;:0,&quot;name&quot;:&quot;дети&quot;},&quot;baby&quot;:{&quot;count&quot;:0,&quot;name&quot;:&quot;младенцы&quot;}}">
-                  <ul class="dropdown__menu">
-                    <!-- TODO: move name from key to object to simplify data structure-->
-                    <li class="dropdown__li clearfix" data-name="adult"><span class="dropdown__li-name">взрослые</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
-                    <li class="dropdown__li clearfix" data-name="kids"><span class="dropdown__li-name">дети</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
-                    <li class="dropdown__li clearfix" data-name="baby"><span class="dropdown__li-name">младенцы</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
-                    <li class="dropdown__li clearfix" data-actions><span class="dropdown__li-clear"><a class="button button--textual button--hovered" href="javascript:void(0);" data-action="clear">очистить</a></span><span class="dropdown__li-apply"><a class="button button--textual" href="javascript:void(0);" data-action="apply">применить</a></span></li>
-                  </ul>
+        <div class="ui__like-button-group--default clearfix">
+          <div class="like-button-group">
+            <div class="like-button-group__label">
+              <label class="label clearfix"><span class="label__left">like button</span><span class="label__right"></span></label>
+            </div>
+            <div class="like-button-group__like-button"><a class="like-button" href="javascript:void(0);">
+                <div class="like-button__favorite">
+                  <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.03906 6.73438C5.66406 6.17448 6.1263 5.7513 6.42578 5.46484C6.72526 5.17839 7.05078 4.83984 7.40234 4.44922C7.75391 4.05859 7.99479 3.71354 8.125 3.41406C8.26823 3.11458 8.33984 2.82161 8.33984 2.53516C8.33984 2.11849 8.19661 1.77344 7.91016 1.5C7.63672 1.22656 7.29167 1.08984 6.875 1.08984C6.54948 1.08984 6.24349 1.18099 5.95703 1.36328C5.68359 1.54557 5.49479 1.77995 5.39062 2.06641H4.60938C4.50521 1.77995 4.3099 1.54557 4.02344 1.36328C3.75 1.18099 3.45052 1.08984 3.125 1.08984C2.70833 1.08984 2.35677 1.22656 2.07031 1.5C1.79688 1.77344 1.66016 2.11849 1.66016 2.53516C1.66016 2.82161 1.72526 3.11458 1.85547 3.41406C1.9987 3.71354 2.24609 4.05859 2.59766 4.44922C2.94922 4.83984 3.27474 5.17839 3.57422 5.46484C3.8737 5.7513 4.33594 6.17448 4.96094 6.73438L5 6.77344L5.03906 6.73438ZM6.875 0.25C7.52604 0.25 8.06641 0.471354 8.49609 0.914062C8.9388 1.35677 9.16016 1.89714 9.16016 2.53516C9.16016 2.91276 9.08854 3.28385 8.94531 3.64844C8.80208 4 8.53516 4.39714 8.14453 4.83984C7.76693 5.28255 7.42188 5.65365 7.10938 5.95312C6.79688 6.2526 6.29557 6.71484 5.60547 7.33984L5 7.88672L4.39453 7.35938C3.49609 6.55208 2.84505 5.94661 2.44141 5.54297C2.05078 5.13932 1.6862 4.66406 1.34766 4.11719C1.00911 3.57031 0.839844 3.04297 0.839844 2.53516C0.839844 1.89714 1.05469 1.35677 1.48438 0.914062C1.92708 0.471354 2.47396 0.25 3.125 0.25C3.88021 0.25 4.50521 0.542969 5 1.12891C5.49479 0.542969 6.11979 0.25 6.875 0.25Z" fill="#1F2041" fill-opacity="0.25"></path>
+                  </svg>
                 </div>
-              </div>
+                <div class="like-button__counter">2</div></a>
+            </div>
+            <div class="like-button-group__like-button"><a class="like-button like-button--favorite" href="javascript:void(0);">
+                <div class="like-button__favorite">
+                  <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.93026 7.88672L4.3248 7.33984C3.63469 6.71484 3.13339 6.2526 2.82089 5.95312C2.50839 5.65365 2.15683 5.28255 1.7662 4.83984C1.3886 4.39714 1.12818 4 0.984952 3.64844C0.841723 3.28385 0.770108 2.91276 0.770108 2.53516C0.770108 1.89714 0.984952 1.35677 1.41464 0.914062C1.85735 0.471354 2.40422 0.25 3.05526 0.25C3.81047 0.25 4.43547 0.542969 4.93026 1.12891C5.42506 0.542969 6.05006 0.25 6.80526 0.25C7.45631 0.25 7.99667 0.471354 8.42636 0.914062C8.86907 1.35677 9.09042 1.89714 9.09042 2.53516C9.09042 3.04297 8.92115 3.57031 8.58261 4.11719C8.24407 4.66406 7.87297 5.13932 7.46933 5.54297C7.0787 5.94661 6.43417 6.55208 5.53573 7.35938L4.93026 7.88672Z" fill="#BC9CFF"></path>
+                  </svg>
+                </div>
+                <div class="like-button__counter">12</div></a>
             </div>
           </div>
         </div>
-        <div class="column column--4">
-          <div class="ui__dropdown-group--with-clear-btn">
-            <div class="dropdown-group">
-              <div class="dropdown-group__label">
-                <label class="label clearfix"><span class="label__left">dropdown</span><span class="label__right"></span></label>
+        <div class="ui__rate-button-group--default clearfix">
+          <div class="rate-button-group">
+            <div class="rate-button-group__label">
+              <label class="label clearfix"><span class="label__left">rate button</span><span class="label__right"></span></label>
+            </div>
+            <div class="rate-button-group__rate-button">
+              <div class="rate-button" id="rate-first">
+                <input class="rate-button__radio" id="rate-first5" type="radio" name="rate-first" value="5">
+                <label class="rate-button__label" for="rate-first5">5</label>
+                <input class="rate-button__radio" id="rate-first4" type="radio" name="rate-first" value="4" checked>
+                <label class="rate-button__label" for="rate-first4">4</label>
+                <input class="rate-button__radio" id="rate-first3" type="radio" name="rate-first" value="3">
+                <label class="rate-button__label" for="rate-first3">3</label>
+                <input class="rate-button__radio" id="rate-first2" type="radio" name="rate-first" value="2">
+                <label class="rate-button__label" for="rate-first2">2</label>
+                <input class="rate-button__radio" id="rate-first1" type="radio" name="rate-first" value="1">
+                <label class="rate-button__label" for="rate-first1">1</label>
               </div>
-              <div class="dropdown-group__dropdown">
-                <div class="dropdown dropdown--expanded dropdown--edited" data-type="json" id="dropdown-expanded">
-                  <div class="dropdown__select"><span class="dropdown__text">3 гостя</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i></div>
-                  <input class="dropdown__input" type="hidden" value="{&quot;adult&quot;:{&quot;count&quot;:2,&quot;name&quot;:&quot;взрослые&quot;},&quot;kids&quot;:{&quot;count&quot;:1,&quot;name&quot;:&quot;дети&quot;},&quot;baby&quot;:{&quot;count&quot;:0,&quot;name&quot;:&quot;младенцы&quot;}}">
-                  <ul class="dropdown__menu">
-                    <!-- TODO: move name from key to object to simplify data structure-->
-                    <li class="dropdown__li clearfix" data-name="adult"><span class="dropdown__li-name">взрослые</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">2</span><span class="dropdown__li-dec">-</span></li>
-                    <li class="dropdown__li clearfix" data-name="kids"><span class="dropdown__li-name">дети</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">1</span><span class="dropdown__li-dec">-</span></li>
-                    <li class="dropdown__li clearfix" data-name="baby"><span class="dropdown__li-name">младенцы</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
-                    <li class="dropdown__li clearfix" data-actions><span class="dropdown__li-clear"><a class="button button--textual button--hovered" href="javascript:void(0);" data-action="clear">очистить</a></span><span class="dropdown__li-apply"><a class="button button--textual" href="javascript:void(0);" data-action="apply">применить</a></span></li>
-                  </ul>
-                </div>
+            </div>
+            <div class="rate-button-group__rate-button">
+              <div class="rate-button" id="rate-second">
+                <input class="rate-button__radio" id="rate-second5" type="radio" name="rate-second" value="5" checked>
+                <label class="rate-button__label" for="rate-second5">5</label>
+                <input class="rate-button__radio" id="rate-second4" type="radio" name="rate-second" value="4">
+                <label class="rate-button__label" for="rate-second4">4</label>
+                <input class="rate-button__radio" id="rate-second3" type="radio" name="rate-second" value="3">
+                <label class="rate-button__label" for="rate-second3">3</label>
+                <input class="rate-button__radio" id="rate-second2" type="radio" name="rate-second" value="2">
+                <label class="rate-button__label" for="rate-second2">2</label>
+                <input class="rate-button__radio" id="rate-second1" type="radio" name="rate-second" value="1">
+                <label class="rate-button__label" for="rate-second1">1</label>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="ui__rich-lists clearfix">
-        <div class="column column--4">
-          <div class="ui__exp-check-list-group--collapsed">
-            <div class="exp-check-list-group">
-              <div class="exp-check-list-group__exp-check-list">
-                <div class="exp-check-list" id="exp_check_list_collapsed">
-                  <div class="exp-check-list__select"><span class="exp-check-list__label">Expandable checkbox list</span><i class="exp-check-list__icon-down material-icons">keyboard_arrow_down</i><i class="exp-check-list__icon-up material-icons">keyboard_arrow_up</i></div>
-                  <ul class="exp-check-list__list">
-                  </ul>
-                </div>
-              </div>
+      <div class="column column--4 column--small-hpadding">
+        <div class="ui__range-slider--default">
+          <div class="range-slider">
+            <label class="label clearfix"><span class="label__left">range slider</span><span class="label__right"></span></label>
+            <input class="range-slider__input" type="text" name="range-slider" value="">
+          </div>
+        </div>
+        <div class="ui__button-group--default">
+          <div class="button-group">
+            <div class="button-group__label">
+              <label class="label clearfix"><span class="label__left">buttons</span><span class="label__right"></span></label>
+            </div>
+            <div class="button-group__button"><a class="button button--default" href="javascript:void(0);">click me</a>
+            </div>
+            <div class="button-group__button"><a class="button button--default button--hovered" href="javascript:void(0);">click me</a>
+            </div>
+            <div class="button-group__button"><a class="button button--transparent" href="javascript:void(0);">click me</a>
+            </div>
+            <div class="button-group__button"><a class="button button--transparent button--hovered" href="javascript:void(0);">click me</a>
+            </div>
+            <div class="button-group__button--textual"><a class="button button--textual" href="javascript:void(0);">click me</a>
+            </div>
+            <div class="button-group__button--textual"><a class="button button--textual button--hovered" href="javascript:void(0);">click me</a>
+            </div>
+            <div class="button-group__button--large"><a class="button button--default" href="javascript:void(0);"><span class="button__arrow">перейти к оплате<i class="material-icons arrow">arrow_forward</i></span></a>
             </div>
           </div>
-          <div class="ui__exp-check-list-group--collapsed">
-            <div class="exp-check-list-group">
-              <div class="exp-check-list-group__exp-check-list">
-                <div class="exp-check-list exp-check-list--expanded" id="exp_check_list_collapsed">
-                  <div class="exp-check-list__select"><span class="exp-check-list__label">Expandable checkbox list</span><i class="exp-check-list__icon-down material-icons">keyboard_arrow_down</i><i class="exp-check-list__icon-up material-icons">keyboard_arrow_up</i></div>
-                  <ul class="exp-check-list__list">
-                    <li class="exp-check-list__li clearfix">
-                      <div class="checkbox">
-                        <input class="checkbox__input" id="exp_check_list_collapsed_breakfast" type="checkbox">
-                        <label class="checkbox__label" for="exp_check_list_collapsed_breakfast">Завтрак</label>
-                      </div>
-                    </li>
-                    <li class="exp-check-list__li clearfix">
-                      <div class="checkbox">
-                        <input class="checkbox__input" id="exp_check_list_collapsed_table" type="checkbox" checked>
-                        <label class="checkbox__label" for="exp_check_list_collapsed_table">Письменный стол</label>
-                      </div>
-                    </li>
-                    <li class="exp-check-list__li clearfix">
-                      <div class="checkbox">
-                        <input class="checkbox__input" id="exp_check_list_collapsed_baby-chair-for-eat" type="checkbox" checked>
-                        <label class="checkbox__label" for="exp_check_list_collapsed_baby-chair-for-eat">Стул для кормления</label>
-                      </div>
-                    </li>
-                    <li class="exp-check-list__li clearfix">
-                      <div class="checkbox">
-                        <input class="checkbox__input" id="exp_check_list_collapsed_baby-bed" type="checkbox" checked>
-                        <label class="checkbox__label" for="exp_check_list_collapsed_baby-bed">Кроватка</label>
-                      </div>
-                    </li>
-                    <li class="exp-check-list__li clearfix">
-                      <div class="checkbox">
-                        <input class="checkbox__input" id="exp_check_list_collapsed_tv_1" type="checkbox">
-                        <label class="checkbox__label" for="exp_check_list_collapsed_tv_1">Телевизор</label>
-                      </div>
-                    </li>
-                    <li class="exp-check-list__li clearfix">
-                      <div class="checkbox">
-                        <input class="checkbox__input" id="exp_check_list_collapsed_shampoo_1" type="checkbox">
-                        <label class="checkbox__label" for="exp_check_list_collapsed_shampoo_1">Шампунь</label>
-                      </div>
-                    </li>
-                    <li class="exp-check-list__li clearfix">
-                      <div class="checkbox">
-                        <input class="checkbox__input" id="exp_check_list_collapsed_tv_2" type="checkbox">
-                        <label class="checkbox__label" for="exp_check_list_collapsed_tv_2">Телевизор</label>
-                      </div>
-                    </li>
-                    <li class="exp-check-list__li clearfix">
-                      <div class="checkbox">
-                        <input class="checkbox__input" id="exp_check_list_collapsed_shampoo_2" type="checkbox">
-                        <label class="checkbox__label" for="exp_check_list_collapsed_shampoo_2">Шампунь</label>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
+        </div>
+        <div class="ui__paginator-group">
+          <div class="paginator-group">
+            <div class="paginator-group__label">
+              <label class="label clearfix"><span class="label__left">pagination</span><span class="label__right"></span></label>
+            </div>
+            <div class="paginator-group__paginator">
+              <div class="paginator"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ui__dropdown-states clearfix">
+      <div class="column column--4">
+        <div class="ui__dropdown-group--collapsed">
+          <div class="dropdown-group">
+            <div class="dropdown-group__label">
+              <label class="label clearfix"><span class="label__left">dropdown</span><span class="label__right">default</span></label>
+            </div>
+            <div class="dropdown-group__dropdown">
+              <div class="dropdown" data-type="empty" id="dropdown-collapsed">
+                <div class="dropdown__select"><span class="dropdown__text">2 спальни, 2 кровати...</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i></div>
+                <input class="dropdown__input" type="hidden">
               </div>
             </div>
           </div>
         </div>
-        <div class="column column--4">
-          <div class="ui__rich-checkbox-group--default">
-            <div class="rich-checkbox-group">
-              <div class="rich-checkbox-group__label">
-                <label class="label clearfix"><span class="label__left">rich checkbox buttons</span><span class="label__right"></span></label>
-              </div>
-              <div class="rich-checkbox-group__rich-checkbox clearfix">
-                <div class="rich-checkbox">
-                  <input class="rich-checkbox__input" id="wide-hall-checkbox" type="checkbox">
-                  <label class="rich-checkbox__label" for="wide-hall-checkbox"><span class="rich-checkbox__title clearfix">Широкий коридор</span><span class="rich-checkbox__hint">Ширина коридоров в номере не&nbsp;менее 91 см.</span></label>
-                </div>
-              </div>
-              <div class="rich-checkbox-group__rich-checkbox clearfix">
-                <div class="rich-checkbox">
-                  <input class="rich-checkbox__input" id="disable-assistant-checkbox" type="checkbox">
-                  <label class="rich-checkbox__label" for="disable-assistant-checkbox"><span class="rich-checkbox__title clearfix">Помощник для инвалидов</span><span class="rich-checkbox__hint">На 1 этаже вас встретит специалист и проводит до номера.</span></label>
-                </div>
+        <div class="ui__dropdown-group--expanded">
+          <div class="dropdown-group">
+            <div class="dropdown-group__label">
+              <label class="label clearfix"><span class="label__left">dropdown</span><span class="label__right">expanded</span></label>
+            </div>
+            <div class="dropdown-group__dropdown">
+              <div class="dropdown dropdown--expanded" data-type="json" id="dropdown-expanded">
+                <div class="dropdown__select"><span class="dropdown__text">2 спальни, 2 кровати...</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i></div>
+                <input class="dropdown__input" type="hidden" value="{&quot;bedroom&quot;:{&quot;count&quot;:2,&quot;name&quot;:&quot;спальни&quot;},&quot;bed&quot;:{&quot;count&quot;:2,&quot;name&quot;:&quot;кровати&quot;},&quot;bathroom&quot;:{&quot;count&quot;:0,&quot;name&quot;:&quot;ванные комнаты&quot;}}">
+                <ul class="dropdown__menu">
+                  <!-- TODO: move name from key to object to simplify data structure-->
+                  <li class="dropdown__li clearfix" data-name="bedroom"><span class="dropdown__li-name">спальни</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">2</span><span class="dropdown__li-dec">-</span></li>
+                  <li class="dropdown__li clearfix" data-name="bed"><span class="dropdown__li-name">кровати</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">2</span><span class="dropdown__li-dec">-</span></li>
+                  <li class="dropdown__li clearfix" data-name="bathroom"><span class="dropdown__li-name">ванные комнаты</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
+                  <li class="dropdown__li clearfix" data-actions><span class="dropdown__li-clear"><a class="button button--textual button--hovered" href="javascript:void(0);" data-action="clear">очистить</a></span><span class="dropdown__li-apply"><a class="button button--textual" href="javascript:void(0);" data-action="apply">применить</a></span></li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-        <div class="column column--4">
-          <div class="ui__bullet-list-group--default">
-            <div class="bullet-list-group">
-              <div class="bullet-list-group__label">
-                <label class="label clearfix"><span class="label__left">Bullet list</span><span class="label__right"></span></label>
+      </div>
+      <div class="column column--4">
+        <div class="ui__dropdown-group--with-apply-btn">
+          <div class="dropdown-group">
+            <div class="dropdown-group__label">
+              <label class="label clearfix"><span class="label__left">dropdown</span><span class="label__right"></span></label>
+            </div>
+            <div class="dropdown-group__dropdown">
+              <div class="dropdown dropdown--expanded dropdown--edited dropdown--empty" data-type="json" id="dropdown-expanded">
+                <div class="dropdown__select"><span class="dropdown__text">Сколько гостей</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i></div>
+                <input class="dropdown__input" type="hidden" value="{&quot;adult&quot;:{&quot;count&quot;:0,&quot;name&quot;:&quot;взрослые&quot;},&quot;kids&quot;:{&quot;count&quot;:0,&quot;name&quot;:&quot;дети&quot;},&quot;baby&quot;:{&quot;count&quot;:0,&quot;name&quot;:&quot;младенцы&quot;}}">
+                <ul class="dropdown__menu">
+                  <!-- TODO: move name from key to object to simplify data structure-->
+                  <li class="dropdown__li clearfix" data-name="adult"><span class="dropdown__li-name">взрослые</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
+                  <li class="dropdown__li clearfix" data-name="kids"><span class="dropdown__li-name">дети</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
+                  <li class="dropdown__li clearfix" data-name="baby"><span class="dropdown__li-name">младенцы</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
+                  <li class="dropdown__li clearfix" data-actions><span class="dropdown__li-clear"><a class="button button--textual button--hovered" href="javascript:void(0);" data-action="clear">очистить</a></span><span class="dropdown__li-apply"><a class="button button--textual" href="javascript:void(0);" data-action="apply">применить</a></span></li>
+                </ul>
               </div>
-              <div class="bullet-list-group__bullet-list">
-                <ul class="bullet-list" id="bullet-list">
-                  <li class="bullet-list__li">Нельзя с питомцами<span class="bullet-list__marker"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column column--4">
+        <div class="ui__dropdown-group--with-clear-btn">
+          <div class="dropdown-group">
+            <div class="dropdown-group__label">
+              <label class="label clearfix"><span class="label__left">dropdown</span><span class="label__right"></span></label>
+            </div>
+            <div class="dropdown-group__dropdown">
+              <div class="dropdown dropdown--expanded dropdown--edited" data-type="json" id="dropdown-expanded">
+                <div class="dropdown__select"><span class="dropdown__text">3 гостя</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i></div>
+                <input class="dropdown__input" type="hidden" value="{&quot;adult&quot;:{&quot;count&quot;:2,&quot;name&quot;:&quot;взрослые&quot;},&quot;kids&quot;:{&quot;count&quot;:1,&quot;name&quot;:&quot;дети&quot;},&quot;baby&quot;:{&quot;count&quot;:0,&quot;name&quot;:&quot;младенцы&quot;}}">
+                <ul class="dropdown__menu">
+                  <!-- TODO: move name from key to object to simplify data structure-->
+                  <li class="dropdown__li clearfix" data-name="adult"><span class="dropdown__li-name">взрослые</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">2</span><span class="dropdown__li-dec">-</span></li>
+                  <li class="dropdown__li clearfix" data-name="kids"><span class="dropdown__li-name">дети</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">1</span><span class="dropdown__li-dec">-</span></li>
+                  <li class="dropdown__li clearfix" data-name="baby"><span class="dropdown__li-name">младенцы</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
+                  <li class="dropdown__li clearfix" data-actions><span class="dropdown__li-clear"><a class="button button--textual button--hovered" href="javascript:void(0);" data-action="clear">очистить</a></span><span class="dropdown__li-apply"><a class="button button--textual" href="javascript:void(0);" data-action="apply">применить</a></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ui__rich-lists clearfix">
+      <div class="column column--4">
+        <div class="ui__exp-check-list-group--collapsed">
+          <div class="exp-check-list-group">
+            <div class="exp-check-list-group__exp-check-list">
+              <div class="exp-check-list" id="exp_check_list_collapsed">
+                <div class="exp-check-list__select"><span class="exp-check-list__label">Expandable checkbox list</span><i class="exp-check-list__icon-down material-icons">keyboard_arrow_down</i><i class="exp-check-list__icon-up material-icons">keyboard_arrow_up</i></div>
+                <ul class="exp-check-list__list">
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ui__exp-check-list-group--collapsed">
+          <div class="exp-check-list-group">
+            <div class="exp-check-list-group__exp-check-list">
+              <div class="exp-check-list exp-check-list--expanded" id="exp_check_list_collapsed">
+                <div class="exp-check-list__select"><span class="exp-check-list__label">Expandable checkbox list</span><i class="exp-check-list__icon-down material-icons">keyboard_arrow_down</i><i class="exp-check-list__icon-up material-icons">keyboard_arrow_up</i></div>
+                <ul class="exp-check-list__list">
+                  <li class="exp-check-list__li clearfix">
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="exp_check_list_collapsed_breakfast" type="checkbox">
+                      <label class="checkbox__label" for="exp_check_list_collapsed_breakfast">Завтрак</label>
+                    </div>
                   </li>
-                  <li class="bullet-list__li">Без вечеринок и мероприятий<span class="bullet-list__marker"></span>
+                  <li class="exp-check-list__li clearfix">
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="exp_check_list_collapsed_table" type="checkbox" checked>
+                      <label class="checkbox__label" for="exp_check_list_collapsed_table">Письменный стол</label>
+                    </div>
                   </li>
-                  <li class="bullet-list__li">Время прибытия &mdash; после 13:00, а выезд до 12:00<span class="bullet-list__marker"></span>
+                  <li class="exp-check-list__li clearfix">
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="exp_check_list_collapsed_baby-chair-for-eat" type="checkbox" checked>
+                      <label class="checkbox__label" for="exp_check_list_collapsed_baby-chair-for-eat">Стул для кормления</label>
+                    </div>
+                  </li>
+                  <li class="exp-check-list__li clearfix">
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="exp_check_list_collapsed_baby-bed" type="checkbox" checked>
+                      <label class="checkbox__label" for="exp_check_list_collapsed_baby-bed">Кроватка</label>
+                    </div>
+                  </li>
+                  <li class="exp-check-list__li clearfix">
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="exp_check_list_collapsed_tv_1" type="checkbox">
+                      <label class="checkbox__label" for="exp_check_list_collapsed_tv_1">Телевизор</label>
+                    </div>
+                  </li>
+                  <li class="exp-check-list__li clearfix">
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="exp_check_list_collapsed_shampoo_1" type="checkbox">
+                      <label class="checkbox__label" for="exp_check_list_collapsed_shampoo_1">Шампунь</label>
+                    </div>
+                  </li>
+                  <li class="exp-check-list__li clearfix">
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="exp_check_list_collapsed_tv_2" type="checkbox">
+                      <label class="checkbox__label" for="exp_check_list_collapsed_tv_2">Телевизор</label>
+                    </div>
+                  </li>
+                  <li class="exp-check-list__li clearfix">
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="exp_check_list_collapsed_shampoo_2" type="checkbox">
+                      <label class="checkbox__label" for="exp_check_list_collapsed_shampoo_2">Шампунь</label>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -479,42 +437,82 @@
           </div>
         </div>
       </div>
-      <div class="ui__bottom clearfix">
-        <div class="column column--4">
-          <div class="ui__feature-group--default">
-            <div class="feature-group">
-              <div class="feature-group__feature">
-                <div class="feature"><i class="feature__icon material-icons">mood</i>
-                  <h3 class="feature__title">Комфорт</h3>
-                  <p class="feature__hint">Шумопоглощающие стены</p>
-                </div>
+      <div class="column column--4">
+        <div class="ui__rich-checkbox-group--default">
+          <div class="rich-checkbox-group">
+            <div class="rich-checkbox-group__label">
+              <label class="label clearfix"><span class="label__left">rich checkbox buttons</span><span class="label__right"></span></label>
+            </div>
+            <div class="rich-checkbox-group__rich-checkbox clearfix">
+              <div class="rich-checkbox">
+                <input class="rich-checkbox__input" id="wide-hall-checkbox" type="checkbox">
+                <label class="rich-checkbox__label" for="wide-hall-checkbox"><span class="rich-checkbox__title clearfix">Широкий коридор</span><span class="rich-checkbox__hint">Ширина коридоров в номере не&nbsp;менее 91 см.</span></label>
               </div>
-              <div class="feature-group__feature">
-                <div class="feature"><i class="feature__icon material-icons">location_city</i>
-                  <h3 class="feature__title">Удобство</h3>
-                  <p class="feature__hint">Окно в каждой из спален</p>
-                </div>
+            </div>
+            <div class="rich-checkbox-group__rich-checkbox clearfix">
+              <div class="rich-checkbox">
+                <input class="rich-checkbox__input" id="disable-assistant-checkbox" type="checkbox">
+                <label class="rich-checkbox__label" for="disable-assistant-checkbox"><span class="rich-checkbox__title clearfix">Помощник для инвалидов</span><span class="rich-checkbox__hint">На 1 этаже вас встретит специалист и проводит до номера.</span></label>
               </div>
             </div>
           </div>
         </div>
-        <div class="column column--8">
-          <div class="ui__feedback-group--default">
-            <div class="feedback-group">
-              <div class="feedback-group__feedback">
-                <div class="feedback"><img class="feedback__image" src="img/murad.png">
-                  <div class="feedback__like-button"><a class="like-button like-button--favorite" href="javascript:void(0);">
-                      <div class="like-button__favorite">
-                        <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M4.93026 7.88672L4.3248 7.33984C3.63469 6.71484 3.13339 6.2526 2.82089 5.95312C2.50839 5.65365 2.15683 5.28255 1.7662 4.83984C1.3886 4.39714 1.12818 4 0.984952 3.64844C0.841723 3.28385 0.770108 2.91276 0.770108 2.53516C0.770108 1.89714 0.984952 1.35677 1.41464 0.914062C1.85735 0.471354 2.40422 0.25 3.05526 0.25C3.81047 0.25 4.43547 0.542969 4.93026 1.12891C5.42506 0.542969 6.05006 0.25 6.80526 0.25C7.45631 0.25 7.99667 0.471354 8.42636 0.914062C8.86907 1.35677 9.09042 1.89714 9.09042 2.53516C9.09042 3.04297 8.92115 3.57031 8.58261 4.11719C8.24407 4.66406 7.87297 5.13932 7.46933 5.54297C7.0787 5.94661 6.43417 6.55208 5.53573 7.35938L4.93026 7.88672Z" fill="#BC9CFF"></path>
-                        </svg>
-                      </div>
-                      <div class="like-button__counter">12</div></a>
-                  </div>
-                  <h3 class="feedback__author">Мурад Сарафанов</h3>
-                  <p class="feedback__date">5 дней назад</p>
-                  <p class="feedback__text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И&nbsp;стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
+      </div>
+      <div class="column column--4">
+        <div class="ui__bullet-list-group--default">
+          <div class="bullet-list-group">
+            <div class="bullet-list-group__label">
+              <label class="label clearfix"><span class="label__left">Bullet list</span><span class="label__right"></span></label>
+            </div>
+            <div class="bullet-list-group__bullet-list">
+              <ul class="bullet-list" id="bullet-list">
+                <li class="bullet-list__li">Нельзя с питомцами<span class="bullet-list__marker"></span>
+                </li>
+                <li class="bullet-list__li">Без вечеринок и мероприятий<span class="bullet-list__marker"></span>
+                </li>
+                <li class="bullet-list__li">Время прибытия &mdash; после 13:00, а выезд до 12:00<span class="bullet-list__marker"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ui__bottom clearfix">
+      <div class="column column--4">
+        <div class="ui__feature-group--default">
+          <div class="feature-group">
+            <div class="feature-group__feature">
+              <div class="feature"><i class="feature__icon material-icons">mood</i>
+                <h3 class="feature__title">Комфорт</h3>
+                <p class="feature__hint">Шумопоглощающие стены</p>
+              </div>
+            </div>
+            <div class="feature-group__feature">
+              <div class="feature"><i class="feature__icon material-icons">location_city</i>
+                <h3 class="feature__title">Удобство</h3>
+                <p class="feature__hint">Окно в каждой из спален</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column column--8">
+        <div class="ui__feedback-group--default">
+          <div class="feedback-group">
+            <div class="feedback-group__feedback">
+              <div class="feedback"><img class="feedback__image" src="img/murad.png">
+                <div class="feedback__like-button"><a class="like-button like-button--favorite" href="javascript:void(0);">
+                    <div class="like-button__favorite">
+                      <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.93026 7.88672L4.3248 7.33984C3.63469 6.71484 3.13339 6.2526 2.82089 5.95312C2.50839 5.65365 2.15683 5.28255 1.7662 4.83984C1.3886 4.39714 1.12818 4 0.984952 3.64844C0.841723 3.28385 0.770108 2.91276 0.770108 2.53516C0.770108 1.89714 0.984952 1.35677 1.41464 0.914062C1.85735 0.471354 2.40422 0.25 3.05526 0.25C3.81047 0.25 4.43547 0.542969 4.93026 1.12891C5.42506 0.542969 6.05006 0.25 6.80526 0.25C7.45631 0.25 7.99667 0.471354 8.42636 0.914062C8.86907 1.35677 9.09042 1.89714 9.09042 2.53516C9.09042 3.04297 8.92115 3.57031 8.58261 4.11719C8.24407 4.66406 7.87297 5.13932 7.46933 5.54297C7.0787 5.94661 6.43417 6.55208 5.53573 7.35938L4.93026 7.88672Z" fill="#BC9CFF"></path>
+                      </svg>
+                    </div>
+                    <div class="like-button__counter">12</div></a>
                 </div>
+                <h3 class="feedback__author">Мурад Сарафанов</h3>
+                <p class="feedback__date">5 дней назад</p>
+                <p class="feedback__text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И&nbsp;стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
               </div>
             </div>
           </div>

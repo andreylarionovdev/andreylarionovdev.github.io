@@ -20,428 +20,428 @@ include components/form/feedback/feedback
 
 block vars
   - title = 'UI Kit: Form elements'
+  - bodyClasses = ['ui', 'ui--form-components']
 block content
-  .ui.ui--form-components.clearfix
-    +logo
-    .ui__top.clearfix
-      .column.column--4.column--large-hpadding
-        .ui__input-text-group--default
-          .input-text-group
-            .input-text-group__label
-              +label(
-                'text field',
-                'default'
-              )
-            .input-text-group__input-text
-              +input-text(
-                'input-email',
-                'Email'
-              )
-        .ui__input-text-group--hovered
-          .input-text-group
-            .input-text-group__label
-              +label(
-                'text field',
-                'hover / focus'
-              )
-            .input-text-group__input-text
-              +input-text(
-                'input-focused-hovered',
-                'Some text',
-                'This is pretty awesome',
-                {hovered: true}
-              )
-        .ui__dropdown-group--default
-          .dropdown-group
-            .dropdown-group__label
-              +label(
-                'dropdown',
-                'default'
-              )
-            .dropdown-group__dropdown
-              +dropdown(
-                'default-dropdown',
-                null,
-                {emptyValue: 'Сколько гостей'}
-              )
-        .ui__input-text-group--masked
-          .input-text-group
-            .input-text-group__label
-              +label(
-                'masked text field',
-                'default'
-              )
-            .input-text-group__input-text
-              +input-text(
-                'input-text-with-mask',
-                'ДД.ММ.ГГГГ'
-              )
-        .ui__dropdown-group--inline.clearfix
-          .dropdown-group
-            .dropdown-group__label
-              +label('date dropdown')
-            .dropdown-group__dropdown
-              +dropdown(
-                'date-from',
-                null,
-                {emptyValue: 'ДД.ММ.ГГГГ'}
-              )
-          .dropdown-group
-            .dropdown-group__label
-              +label('date dropdown')
-            .dropdown-group__dropdown
-              +dropdown(
-                'date-to',
-                null,
-                {emptyValue: '19.08.2019'}
-              )
-        .ui__dropdown-group--date-filter
-          .dropdown-group
-            .dropdown-group__label
-              +label('filter date dropdown')
-            .dropdown-group__dropdown
-              +dropdown(
-                'date-filter',
-                null,
-                {emptyValue: '19 авг - 23 авг'}
-              )
-        .ui__input-text-group--with-submit
-          .input-text-group
-            .input-text-group__label
-              +label('subscription text field')
-            .input-text-group__input-text
-              +input-text(
-                'input-text-submit',
-                'Email',
-                '',
-                {withButton: true}
-              )
-      .column.column--4.column--large-hpadding
-        .ui__checkbox-group--default
-          .checkbox-group
-            .checkbox-group__label
-              +label('checkbox buttons')
-            .checkbox-group__checkbox
-              +checkbox(
-                'smoke-allowed',
-                'Можно курить'
-              )
-            .checkbox-group__checkbox
-              +checkbox(
-                'pets-allowed',
-                'Можно с питомцами',
-                true
-              )
-            .checkbox-group__checkbox
-              +checkbox(
-                'guests-allowed',
-                'Можно пригласить гостей (до 10 человек)',
-                true
-              )
-        .ui__radio-group--default
-          .radio-button-group.clearfix
-            .radio-button-group__label
-              +label('radio buttons')
-            .radio-button-group__radio-button
-              +radio-button(
-                'radio-male',
-                'gender',
-                'male',
-                'Мужчина',
-                true
-              )
-            .radio-button-group__radio-button
-              +radio-button(
-                'radio-female',
-                'gender',
-                'female',
-                'Женщина'
-              )
-        .ui__toggle-group--default
-          .toggle-group
-            .toggle-group__label
-              +label('toggle')
-            .toggle-group__toggle-button
-              +toggle-button(
-                'first-toggle',
-                'Получать спецпредложения',
-                true
-              )
-            .toggle-group__toggle-button
-              +toggle-button(
-                'second-toggle',
-                'Получать спецпредложения'
-              )
-        .ui__like-button-group--default.clearfix
-          .like-button-group
-            .like-button-group__label
-              +label('like button')
-            .like-button-group__like-button
-              +like-button(2)
-            .like-button-group__like-button
-              +like-button(12, true)
-        .ui__rate-button-group--default.clearfix
-          .rate-button-group
-            .rate-button-group__label
-              +label('rate button')
-            .rate-button-group__rate-button
-              +rate-button(
-                'rate-first',
-                5,
-                4
-              )
-            .rate-button-group__rate-button
-              +rate-button(
-                'rate-second',
-                5,
-                5
-              )
-      .column.column--4.column--small-hpadding
-        .ui__range-slider--default
-          +range-slider({
-            'name': 'range-slider'
-          })
-        .ui__button-group--default
-          .button-group
-            .button-group__label
-              +label('buttons')
-            .button-group__button
-              +button(
-                'default',
-                'click me'
-              )
-            .button-group__button
-              +button(
-                'default',
-                'click me',
-                {hover: true}
-              )
-            .button-group__button
-              +button(
-                'transparent',
-                'click me'
-              )
-            .button-group__button
-              +button(
-                'transparent',
-                'click me',
-                {hover: true}
-              )
-            .button-group__button--textual
-              +button(
-                'textual',
-                'click me'
-              )
-            .button-group__button--textual
-              +button(
-                'textual',
-                'click me',
-                {hover: true}
-              )
-            .button-group__button--large
-              +button(
-                'default',
-                'перейти к оплате',
-                {withArrow: true}
-              )
-        .ui__paginator-group
-          .paginator-group
-            .paginator-group__label
-              +label('pagination')
-            .paginator-group__paginator
-              +paginator()
-    .ui__dropdown-states.clearfix
-      .column.column--4
-        .ui__dropdown-group--collapsed
-          .dropdown-group
-            .dropdown-group__label
-              +label(
-                'dropdown',
-                'default'
-              )
-            .dropdown-group__dropdown
-              +dropdown(
-                'dropdown-collapsed',
-                null,
-                {emptyValue: '2 спальни, 2 кровати...'}
-              )
-        .ui__dropdown-group--expanded
-          .dropdown-group
-            .dropdown-group__label
-              +label(
-                'dropdown',
-                'expanded'
-              )
-            .dropdown-group__dropdown
-              +dropdown(
-                'dropdown-expanded',
-                null,
-                {
-                  type: 'json',
-                  expanded: true,
-                  emptyValue: '2 спальни, 2 кровати...',
-                  data: {
-                    bedroom: {
-                      count: 2,
-                      name: 'спальни'
-                    },
-                    bed: {
-                      count: 2,
-                      name: 'кровати'
-                    },
-                    bathroom: {
-                      count: 0,
-                      name: 'ванные комнаты'
-                    }
+  +logo
+  .ui__top.clearfix
+    .column.column--4
+      .ui__input-text-group--default
+        .input-text-group
+          .input-text-group__label
+            +label(
+              'text field',
+              'default'
+            )
+          .input-text-group__input-text
+            +input-text(
+              'input-email',
+              'Email'
+            )
+      .ui__input-text-group--hovered
+        .input-text-group
+          .input-text-group__label
+            +label(
+              'text field',
+              'hover / focus'
+            )
+          .input-text-group__input-text
+            +input-text(
+              'input-focused-hovered',
+              'Some text',
+              'This is pretty awesome',
+              {hovered: true}
+            )
+      .ui__dropdown-group--default
+        .dropdown-group
+          .dropdown-group__label
+            +label(
+              'dropdown',
+              'default'
+            )
+          .dropdown-group__dropdown
+            +dropdown(
+              'default-dropdown',
+              null,
+              {emptyValue: 'Сколько гостей'}
+            )
+      .ui__input-text-group--masked
+        .input-text-group
+          .input-text-group__label
+            +label(
+              'masked text field',
+              'default'
+            )
+          .input-text-group__input-text
+            +input-text(
+              'input-text-with-mask',
+              'ДД.ММ.ГГГГ'
+            )
+      .ui__dropdown-group--inline.clearfix
+        .dropdown-group
+          .dropdown-group__label
+            +label('date dropdown')
+          .dropdown-group__dropdown
+            +dropdown(
+              'date-from',
+              null,
+              {emptyValue: 'ДД.ММ.ГГГГ'}
+            )
+        .dropdown-group
+          .dropdown-group__label
+            +label('date dropdown')
+          .dropdown-group__dropdown
+            +dropdown(
+              'date-to',
+              null,
+              {emptyValue: '19.08.2019'}
+            )
+      .ui__dropdown-group--date-filter
+        .dropdown-group
+          .dropdown-group__label
+            +label('filter date dropdown')
+          .dropdown-group__dropdown
+            +dropdown(
+              'date-filter',
+              null,
+              {emptyValue: '19 авг - 23 авг'}
+            )
+      .ui__input-text-group--with-submit
+        .input-text-group
+          .input-text-group__label
+            +label('subscription text field')
+          .input-text-group__input-text
+            +input-text(
+              'input-text-submit',
+              'Email',
+              '',
+              {withButton: true}
+            )
+    .column.column--4.column--large-hpadding
+      .ui__checkbox-group--default
+        .checkbox-group
+          .checkbox-group__label
+            +label('checkbox buttons')
+          .checkbox-group__checkbox
+            +checkbox(
+              'smoke-allowed',
+              'Можно курить'
+            )
+          .checkbox-group__checkbox
+            +checkbox(
+              'pets-allowed',
+              'Можно с питомцами',
+              true
+            )
+          .checkbox-group__checkbox
+            +checkbox(
+              'guests-allowed',
+              'Можно пригласить гостей (до 10 человек)',
+              true
+            )
+      .ui__radio-group--default
+        .radio-button-group.clearfix
+          .radio-button-group__label
+            +label('radio buttons')
+          .radio-button-group__radio-button
+            +radio-button(
+              'radio-male',
+              'gender',
+              'male',
+              'Мужчина',
+              true
+            )
+          .radio-button-group__radio-button
+            +radio-button(
+              'radio-female',
+              'gender',
+              'female',
+              'Женщина'
+            )
+      .ui__toggle-group--default
+        .toggle-group
+          .toggle-group__label
+            +label('toggle')
+          .toggle-group__toggle-button
+            +toggle-button(
+              'first-toggle',
+              'Получать спецпредложения',
+              true
+            )
+          .toggle-group__toggle-button
+            +toggle-button(
+              'second-toggle',
+              'Получать спецпредложения'
+            )
+      .ui__like-button-group--default.clearfix
+        .like-button-group
+          .like-button-group__label
+            +label('like button')
+          .like-button-group__like-button
+            +like-button(2)
+          .like-button-group__like-button
+            +like-button(12, true)
+      .ui__rate-button-group--default.clearfix
+        .rate-button-group
+          .rate-button-group__label
+            +label('rate button')
+          .rate-button-group__rate-button
+            +rate-button(
+              'rate-first',
+              5,
+              4
+            )
+          .rate-button-group__rate-button
+            +rate-button(
+              'rate-second',
+              5,
+              5
+            )
+    .column.column--4.column--small-hpadding
+      .ui__range-slider--default
+        +range-slider({
+          'name': 'range-slider'
+        })
+      .ui__button-group--default
+        .button-group
+          .button-group__label
+            +label('buttons')
+          .button-group__button
+            +button(
+              'default',
+              'click me'
+            )
+          .button-group__button
+            +button(
+              'default',
+              'click me',
+              {hover: true}
+            )
+          .button-group__button
+            +button(
+              'transparent',
+              'click me'
+            )
+          .button-group__button
+            +button(
+              'transparent',
+              'click me',
+              {hover: true}
+            )
+          .button-group__button--textual
+            +button(
+              'textual',
+              'click me'
+            )
+          .button-group__button--textual
+            +button(
+              'textual',
+              'click me',
+              {hover: true}
+            )
+          .button-group__button--large
+            +button(
+              'default',
+              'перейти к оплате',
+              {withArrow: true}
+            )
+      .ui__paginator-group
+        .paginator-group
+          .paginator-group__label
+            +label('pagination')
+          .paginator-group__paginator
+            +paginator()
+  .ui__dropdown-states.clearfix
+    .column.column--4
+      .ui__dropdown-group--collapsed
+        .dropdown-group
+          .dropdown-group__label
+            +label(
+              'dropdown',
+              'default'
+            )
+          .dropdown-group__dropdown
+            +dropdown(
+              'dropdown-collapsed',
+              null,
+              {emptyValue: '2 спальни, 2 кровати...'}
+            )
+      .ui__dropdown-group--expanded
+        .dropdown-group
+          .dropdown-group__label
+            +label(
+              'dropdown',
+              'expanded'
+            )
+          .dropdown-group__dropdown
+            +dropdown(
+              'dropdown-expanded',
+              null,
+              {
+                type: 'json',
+                expanded: true,
+                emptyValue: '2 спальни, 2 кровати...',
+                data: {
+                  bedroom: {
+                    count: 2,
+                    name: 'спальни'
+                  },
+                  bed: {
+                    count: 2,
+                    name: 'кровати'
+                  },
+                  bathroom: {
+                    count: 0,
+                    name: 'ванные комнаты'
                   }
                 }
-              )
-      .column.column--4
-        .ui__dropdown-group--with-apply-btn
-          .dropdown-group
-            .dropdown-group__label
-              +label('dropdown')
-            .dropdown-group__dropdown
-              +dropdown(
-                'dropdown-expanded',
-                null,
-                {
-                  type: 'json',
-                  expanded: true,
-                  edited: true,
-                  isEmpty: true,
-                  emptyValue: 'Сколько гостей',
-                  data: {
-                    adult: {
-                      count: 0,
-                      name: 'взрослые'
-                    },
-                    kids: {
-                      count: 0,
-                      name: 'дети'
-                    },
-                    baby: {
-                      count: 0,
-                      name: 'младенцы'
-                    }
+              }
+            )
+    .column.column--4
+      .ui__dropdown-group--with-apply-btn
+        .dropdown-group
+          .dropdown-group__label
+            +label('dropdown')
+          .dropdown-group__dropdown
+            +dropdown(
+              'dropdown-expanded',
+              null,
+              {
+                type: 'json',
+                expanded: true,
+                edited: true,
+                isEmpty: true,
+                emptyValue: 'Сколько гостей',
+                data: {
+                  adult: {
+                    count: 0,
+                    name: 'взрослые'
+                  },
+                  kids: {
+                    count: 0,
+                    name: 'дети'
+                  },
+                  baby: {
+                    count: 0,
+                    name: 'младенцы'
                   }
                 }
-              )
-      .column.column--4
-        .ui__dropdown-group--with-clear-btn
-          .dropdown-group
-            .dropdown-group__label
-              +label('dropdown')
-            .dropdown-group__dropdown
-              +dropdown(
-                'dropdown-expanded',
-                null,
-                {
-                  type: 'json',
-                  expanded: true,
-                  edited: true,
-                  emptyValue: '3 гостя',
-                  data: {
-                    adult: {
-                      count: 2,
-                      name: 'взрослые'
-                    },
-                    kids: {
-                      count: 1,
-                      name: 'дети'
-                    },
-                    baby: {
-                      count: 0,
-                      name: 'младенцы'
-                    }
+              }
+            )
+    .column.column--4
+      .ui__dropdown-group--with-clear-btn
+        .dropdown-group
+          .dropdown-group__label
+            +label('dropdown')
+          .dropdown-group__dropdown
+            +dropdown(
+              'dropdown-expanded',
+              null,
+              {
+                type: 'json',
+                expanded: true,
+                edited: true,
+                emptyValue: '3 гостя',
+                data: {
+                  adult: {
+                    count: 2,
+                    name: 'взрослые'
+                  },
+                  kids: {
+                    count: 1,
+                    name: 'дети'
+                  },
+                  baby: {
+                    count: 0,
+                    name: 'младенцы'
                   }
                 }
-              )
-    .ui__rich-lists.clearfix
-      .column.column--4
-        .ui__exp-check-list-group--collapsed
-          .exp-check-list-group
-            .exp-check-list-group__exp-check-list
-              +exp-check-list(
-                'exp_check_list_collapsed',
-                'Expandable checkbox list'
-              )
-        .ui__exp-check-list-group--collapsed
-          .exp-check-list-group
-            .exp-check-list-group__exp-check-list
-              +exp-check-list(
-                'exp_check_list_collapsed',
-                'Expandable checkbox list',
-                {
-                  expanded: true,
-                  data: [
-                    {name: 'breakfast', label: 'Завтрак'},
-                    {name: 'table', label: 'Письменный стол', checked: true},
-                    {name: 'baby-chair-for-eat', label: 'Стул для кормления', checked: true},
-                    {name: 'baby-bed',label: 'Кроватка',checked: true},
-                    {name: 'tv_1',label: 'Телевизор'},
-                    {name: 'shampoo_1', label: 'Шампунь'},
-                    {name: 'tv_2', label: 'Телевизор'},
-                    {name: 'shampoo_2', label: 'Шампунь'}
-                  ]
-                }
-              )
-      .column.column--4
-        .ui__rich-checkbox-group--default
-          .rich-checkbox-group
-            .rich-checkbox-group__label
-              +label('rich checkbox buttons')
-            .rich-checkbox-group__rich-checkbox.clearfix
-              +rich-checkbox(
-                'wide-hall-checkbox',
-                'Широкий коридор',
-                'Ширина коридоров в номере не&nbsp;менее 91 см.'
-              )
-            .rich-checkbox-group__rich-checkbox.clearfix
-              +rich-checkbox(
-                  'disable-assistant-checkbox',
-                  'Помощник для инвалидов',
-                  'На 1 этаже вас встретит специалист и проводит до номера.'
-              )
-      .column.column--4
-        .ui__bullet-list-group--default
-          .bullet-list-group
-            .bullet-list-group__label
-              +label('Bullet list')
-            .bullet-list-group__bullet-list
-              +bullet-list(
-                'bullet-list',
-                {
-                  data: [
-                    {text: 'Нельзя с питомцами'},
-                    {text: 'Без вечеринок и мероприятий'},
-                    {text: 'Время прибытия &mdash; после 13:00, а выезд до 12:00'}
-                  ]
-                }
-              )
-    .ui__bottom.clearfix
-      .column.column--4
-        .ui__feature-group--default
-          .feature-group
-            .feature-group__feature
-              +feature(
-                'mood',
-                'Комфорт',
-                'Шумопоглощающие стены'
-              )
-            .feature-group__feature
-              +feature(
-                'location_city',
-                'Удобство',
-                'Окно в каждой из спален'
-              )
-      .column.column--8
-        .ui__feedback-group--default
-          .feedback-group
-            .feedback-group__feedback
-              +feedback(
-                'Мурад Сарафанов',
-                '5 дней назад',
-                'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И&nbsp;стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
-                {favCount: 12, fav: true, image: 'murad.png'}
-              )
+              }
+            )
+  .ui__rich-lists.clearfix
+    .column.column--4
+      .ui__exp-check-list-group--collapsed
+        .exp-check-list-group
+          .exp-check-list-group__exp-check-list
+            +exp-check-list(
+              'exp_check_list_collapsed',
+              'Expandable checkbox list'
+            )
+      .ui__exp-check-list-group--collapsed
+        .exp-check-list-group
+          .exp-check-list-group__exp-check-list
+            +exp-check-list(
+              'exp_check_list_collapsed',
+              'Expandable checkbox list',
+              {
+                expanded: true,
+                data: [
+                  {name: 'breakfast', label: 'Завтрак'},
+                  {name: 'table', label: 'Письменный стол', checked: true},
+                  {name: 'baby-chair-for-eat', label: 'Стул для кормления', checked: true},
+                  {name: 'baby-bed',label: 'Кроватка',checked: true},
+                  {name: 'tv_1',label: 'Телевизор'},
+                  {name: 'shampoo_1', label: 'Шампунь'},
+                  {name: 'tv_2', label: 'Телевизор'},
+                  {name: 'shampoo_2', label: 'Шампунь'}
+                ]
+              }
+            )
+    .column.column--4
+      .ui__rich-checkbox-group--default
+        .rich-checkbox-group
+          .rich-checkbox-group__label
+            +label('rich checkbox buttons')
+          .rich-checkbox-group__rich-checkbox.clearfix
+            +rich-checkbox(
+              'wide-hall-checkbox',
+              'Широкий коридор',
+              'Ширина коридоров в номере не&nbsp;менее 91 см.'
+            )
+          .rich-checkbox-group__rich-checkbox.clearfix
+            +rich-checkbox(
+                'disable-assistant-checkbox',
+                'Помощник для инвалидов',
+                'На 1 этаже вас встретит специалист и проводит до номера.'
+            )
+    .column.column--4
+      .ui__bullet-list-group--default
+        .bullet-list-group
+          .bullet-list-group__label
+            +label('Bullet list')
+          .bullet-list-group__bullet-list
+            +bullet-list(
+              'bullet-list',
+              {
+                data: [
+                  {text: 'Нельзя с питомцами'},
+                  {text: 'Без вечеринок и мероприятий'},
+                  {text: 'Время прибытия &mdash; после 13:00, а выезд до 12:00'}
+                ]
+              }
+            )
+  .ui__bottom.clearfix
+    .column.column--4
+      .ui__feature-group--default
+        .feature-group
+          .feature-group__feature
+            +feature(
+              'mood',
+              'Комфорт',
+              'Шумопоглощающие стены'
+            )
+          .feature-group__feature
+            +feature(
+              'location_city',
+              'Удобство',
+              'Окно в каждой из спален'
+            )
+    .column.column--8
+      .ui__feedback-group--default
+        .feedback-group
+          .feedback-group__feedback
+            +feedback(
+              'Мурад Сарафанов',
+              '5 дней назад',
+              'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И&nbsp;стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+              {favCount: 12, fav: true, image: 'murad.png'}
+            )
