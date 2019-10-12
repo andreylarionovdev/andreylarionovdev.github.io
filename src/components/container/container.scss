@@ -52,7 +52,7 @@
         }
     }
     &__rich-lists {
-        margin-bottom: 192px;
+        margin-bottom: 0;
         > .column {
             @media (max-width: $screen-md-max) {
                 padding: 0 2%;
@@ -118,6 +118,7 @@
     &__dropdown-group--collapsed,
     &__dropdown-group--expanded,
     &__exp-check-list-group--collapsed,
+    &__exp-check-list-group--expanded,
     &__rich-checkbox-group--default,
     &__input-text-group--with-submit {
         position: relative;
@@ -147,6 +148,9 @@
     &__feedback-group--default {
       margin-top: 30px;
     }
+    &__exp-check-list-group--expanded {
+        margin-bottom: 14px;
+    }
     &__range-slider--default {
         margin-bottom: 18px;
     }
@@ -154,9 +158,11 @@
         margin-bottom: 21px;
     }
     &__input-text-group--hovered,
-    &__exp-check-list-group--collapsed,
     &__dropdown-group--collapsed {
         margin-bottom: 20px;
+    }
+    &__exp-check-list-group--collapsed {
+        margin-bottom: 26px;
     }
     &__dropdown-group--default {
         margin-bottom: 22px;
@@ -202,11 +208,22 @@
             margin-bottom: 40px;
         }
     }
-    &__dropdown-group--with-apply-btn,
+    &__dropdown-group--with-apply-btn {
+        // ... 767px
+        @media (max-width: $screen-xs-max) {
+            margin-bottom: 170px;
+        }
+    }
     &__dropdown-group--expanded {
         // ... 767px
         @media (max-width: $screen-xs-max) {
-            margin-bottom: 20px;
+            margin-bottom: 130px;
+        }
+    }
+    &__dropdown-states {
+        // ... 767px
+        @media (max-width: $screen-xs-max) {
+            margin-bottom: 200px;
         }
     }
     //// ... 767px

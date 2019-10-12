@@ -337,31 +337,29 @@ block content
     .column.column--4
       .ui__exp-check-list-group--collapsed
         .exp-check-list-group
-          .exp-check-list-group__exp-check-list
-            +exp-check-list(
-              'exp_check_list_collapsed',
-              'Expandable checkbox list'
-            )
-      .ui__exp-check-list-group--collapsed
+          +exp-check-list(
+            'exp_check_list_collapsed',
+            'Expandable checkbox list'
+          )
+      .ui__exp-check-list-group--expanded
         .exp-check-list-group
-          .exp-check-list-group__exp-check-list
-            +exp-check-list(
-              'exp_check_list_collapsed',
-              'Expandable checkbox list',
-              {
-                expanded: true,
-                data: [
-                  {name: 'breakfast', label: 'Завтрак'},
-                  {name: 'table', label: 'Письменный стол', checked: true},
-                  {name: 'baby-chair-for-eat', label: 'Стул для кормления', checked: true},
-                  {name: 'baby-bed',label: 'Кроватка',checked: true},
-                  {name: 'tv_1',label: 'Телевизор'},
-                  {name: 'shampoo_1', label: 'Шампунь'},
-                  {name: 'tv_2', label: 'Телевизор'},
-                  {name: 'shampoo_2', label: 'Шампунь'}
-                ]
-              }
-            )
+          +exp-check-list(
+            'exp_check_list_collapsed',
+            'Expandable checkbox list',
+            {
+              expanded: true,
+              data: [
+                {name: 'breakfast', label: 'Завтрак'},
+                {name: 'table', label: 'Письменный стол', checked: true},
+                {name: 'baby-chair-for-eat', label: 'Стул для кормления', checked: true},
+                {name: 'baby-bed',label: 'Кроватка',checked: true},
+                {name: 'tv_1',label: 'Телевизор'},
+                {name: 'shampoo_1', label: 'Шампунь'},
+                {name: 'tv_2', label: 'Телевизор'},
+                {name: 'shampoo_2', label: 'Шампунь'}
+              ]
+            }
+          )
     .column.column--4
       .ui__rich-checkbox-group--default
         .rich-checkbox-group

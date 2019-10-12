@@ -36,7 +36,7 @@
       padding-left: 2.7%; } }
 
 .ui__rich-lists {
-  margin-bottom: 192px; }
+  margin-bottom: 0; }
   @media (max-width: 1199px) {
     .ui__rich-lists > .column {
       padding: 0 2%; } }
@@ -72,11 +72,11 @@
     .ui__feature-group--default, .ui__button-group--default, .ui__dropdown-group--with-clear-btn {
       width: 100%; } }
 
-.ui__dropdown-group--date-filter, .ui__dropdown-group--collapsed, .ui__dropdown-group--expanded, .ui__exp-check-list-group--collapsed, .ui__rich-checkbox-group--default, .ui__input-text-group--with-submit {
+.ui__dropdown-group--date-filter, .ui__dropdown-group--collapsed, .ui__dropdown-group--expanded, .ui__exp-check-list-group--collapsed, .ui__exp-check-list-group--expanded, .ui__rich-checkbox-group--default, .ui__input-text-group--with-submit {
   position: relative;
   width: 75%; }
   @media (max-width: 1199px) {
-    .ui__dropdown-group--date-filter, .ui__dropdown-group--collapsed, .ui__dropdown-group--expanded, .ui__exp-check-list-group--collapsed, .ui__rich-checkbox-group--default, .ui__input-text-group--with-submit {
+    .ui__dropdown-group--date-filter, .ui__dropdown-group--collapsed, .ui__dropdown-group--expanded, .ui__exp-check-list-group--collapsed, .ui__exp-check-list-group--expanded, .ui__rich-checkbox-group--default, .ui__input-text-group--with-submit {
       width: 100%; } }
 
 .ui__checkbox-group--default, .ui__range-slider--default {
@@ -96,14 +96,20 @@
 .ui__feedback-group--default {
   margin-top: 30px; }
 
+.ui__exp-check-list-group--expanded {
+  margin-bottom: 14px; }
+
 .ui__range-slider--default {
   margin-bottom: 18px; }
 
 .ui__input-text-group--default {
   margin-bottom: 21px; }
 
-.ui__input-text-group--hovered, .ui__exp-check-list-group--collapsed, .ui__dropdown-group--collapsed {
+.ui__input-text-group--hovered, .ui__dropdown-group--collapsed {
   margin-bottom: 20px; }
+
+.ui__exp-check-list-group--collapsed {
+  margin-bottom: 26px; }
 
 .ui__dropdown-group--default {
   margin-bottom: 22px; }
@@ -142,8 +148,16 @@
     margin-bottom: 40px; } }
 
 @media (max-width: 767px) {
-  .ui__dropdown-group--with-apply-btn, .ui__dropdown-group--expanded {
-    margin-bottom: 20px; } }
+  .ui__dropdown-group--with-apply-btn {
+    margin-bottom: 170px; } }
+
+@media (max-width: 767px) {
+  .ui__dropdown-group--expanded {
+    margin-bottom: 130px; } }
+
+@media (max-width: 767px) {
+  .ui__dropdown-states {
+    margin-bottom: 200px; } }
 
 .column {
   float: left; }
