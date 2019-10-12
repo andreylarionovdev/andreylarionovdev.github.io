@@ -116,7 +116,7 @@ block content
               '',
               {withButton: true}
             )
-    .column.column--4.column--large-hpadding
+    .column.column--4
       .ui__checkbox-group--default
         .checkbox-group
           .checkbox-group__label
@@ -196,7 +196,7 @@ block content
               5,
               5
             )
-    .column.column--4.column--small-hpadding
+    .column.column--4
       .ui__range-slider--default
         +range-slider({
           'name': 'range-slider'
@@ -227,6 +227,7 @@ block content
               'click me',
               {hover: true}
             )
+          .clearfix
           .button-group__button--textual
             +button(
               'textual',
@@ -280,6 +281,7 @@ block content
                 type: 'json',
                 expanded: true,
                 emptyValue: '2 спальни, 2 кровати...',
+                zIndex: 999,
                 data: [
                   {count: 2, text: 'спальни', name: 'bedroom'},
                   {count: 2, text: 'кровати', name: 'bed'},
@@ -301,6 +303,7 @@ block content
                 expanded: true,
                 edited: true,
                 isEmpty: true,
+                zIndex: 99,
                 emptyValue: 'Сколько гостей',
                 data: [
                   {count: 0, text: 'взрослые', name: 'adult'},

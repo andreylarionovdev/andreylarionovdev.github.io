@@ -5,8 +5,18 @@
     }
     &--4 {
         width: 33.33%;
+        // ... 767px
+        @media (max-width: $screen-xs-max) {
+            width: 98%;
+            padding: 0 1%;
+        }
     }
     &--8 {
         width: 66.66%;
+        // ... 767px
+        @media (max-width: $screen-xs-max) {
+            width: 98%;
+            padding: 0 1%;
+        }
     }
 }

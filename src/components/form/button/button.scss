@@ -12,7 +12,7 @@ $height: 44px;
   text-transform: uppercase;
   $buttonHovered: #{&}--hovered;
 
-  #{$buttonHovered},
+  &--hovered,
   &:hover {
     opacity: 0.5;
   }

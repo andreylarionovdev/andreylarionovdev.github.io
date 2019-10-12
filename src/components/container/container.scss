@@ -14,52 +14,74 @@
     &__top {
         margin-bottom: 100px;
         > .column {
-            &:first-child {
-                padding-left: 6.8%;
+            // ... 1199px
+            @media (max-width: $screen-md-max) {
+                padding: 0 2%;
             }
-            &:nth-child(2) {
-                padding-left: 6.7%;
-            }
-            &:nth-child(3) {
-                padding-left: 2.7%;
+            // 1200px ...
+            @media (min-width: $screen-lg-min) {
+                &:first-child {
+                    padding-left: 6.8%;
+                }
+                &:nth-child(2) {
+                    padding-left: 6.7%;
+                }
+                &:nth-child(3) {
+                    padding-left: 2.7%;
+                }
             }
         }
     }
     &__dropdown-states {
         margin-bottom: 160px;
         > .column {
-            &:first-child {
-                padding-left: 6.7%;
+            @media (max-width: $screen-md-max) {
+                padding: 0 2%;
             }
-            &:nth-child(2) {
-                padding-left: 6.7%;
-            }
-            &:nth-child(3) {
-                padding-left: 2.7%;
+            @media (min-width: $screen-lg-min) {
+                &:first-child {
+                    padding-left: 6.7%;
+                }
+                &:nth-child(2) {
+                    padding-left: 6.7%;
+                }
+                &:nth-child(3) {
+                    padding-left: 2.7%;
+                }
             }
         }
     }
     &__rich-lists {
         margin-bottom: 192px;
         > .column {
-            &:first-child {
-                padding-left: 6.7%;
+            @media (max-width: $screen-md-max) {
+                padding: 0 2%;
             }
-            &:nth-child(2) {
-                padding-left: 6.75%;
-            }
-            &:nth-child(3) {
-                padding-left: 2.7%;
+            @media (min-width: $screen-lg-min) {
+                &:first-child {
+                    padding-left: 6.7%;
+                }
+                &:nth-child(2) {
+                    padding-left: 6.75%;
+                }
+                &:nth-child(3) {
+                    padding-left: 2.7%;
+                }
             }
         }
     }
     &__bottom {
         > .column {
-            &:first-child {
-                padding-left: 6.7%;
+            @media (max-width: $screen-md-max) {
+                padding: 0 2%;
             }
-            &:nth-child(2) {
-                padding-left: 6.75%;
+            @media (min-width: $screen-lg-min) {
+                &:first-child {
+                    padding-left: 6.7%;
+                }
+                &:nth-child(2) {
+                    padding-left: 6.75%;
+                }
             }
         }
     }
@@ -73,14 +95,24 @@
     &__feedback-group--default,
     &__input-text-group--default,
     &__input-text-group--masked,
+    &__paginator-group,
     &__input-text-group--hovered {
         position: relative;
         width: 90%;
+        // ... 767px
+        @media (max-width: $screen-md-max) {
+            width: 100%;
+        }
     }
     &__feature-group--default,
+    &__button-group--default,
     &__dropdown-group--with-clear-btn {
         position: relative;
         width: 78%;
+        // ... 1199px
+        @media (max-width: $screen-md-max) {
+            width: 100%;
+        }
     }
     &__dropdown-group--date-filter,
     &__dropdown-group--collapsed,
@@ -90,12 +122,19 @@
     &__input-text-group--with-submit {
         position: relative;
         width: 75%;
+        // ... 1199px
+        @media (max-width: $screen-md-max) {
+            width: 100%;
+        }
     }
     &__checkbox-group--default,
-    &__button-group--default,
     &__range-slider--default {
         position: relative;
         width: 65%;
+        // ... 1199px
+        @media (max-width: $screen-md-max) {
+            width: 100%;
+        }
     }
     &__bullet-list-group--default {
         position: relative;
@@ -134,7 +173,7 @@
         margin-bottom: 43px;
     }
     &__checkbox-group--default {
-        margin-bottom: 59px;
+        margin-bottom: 42px;
     }
     &__dropdown-group--inline {
         .dropdown-group {
@@ -142,6 +181,12 @@
             width: 47%;
             &:first-child {
                 margin-right: 6%;
+            }
+            // ... 991px
+            @media (max-width: $screen-sm-max) {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 15px;
             }
         }
     }
@@ -151,4 +196,29 @@
     &__like-button-group--default {
         margin-bottom: 36px;
     }
+    &__input-text-group--with-submit {
+        // ... 767px
+        @media (max-width: $screen-xs-max) {
+            margin-bottom: 40px;
+        }
+    }
+    &__dropdown-group--with-apply-btn,
+    &__dropdown-group--expanded {
+        // ... 767px
+        @media (max-width: $screen-xs-max) {
+            margin-bottom: 20px;
+        }
+    }
+    //// ... 767px
+    //@media (max-width: $screen-xs-max) {
+    //}
+    //// 768px ... 991px
+    //@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    //}
+    //// 992px ... 1199px
+    //@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    //}
+    //// 1200px ...
+    //@media (min-width: $screen-lg-min) {
+    //}
 }
