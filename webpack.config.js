@@ -1,14 +1,14 @@
-const path                  = require("path");
-const webpack               = require("webpack");
-const MiniCssExtractPlugin  = require("mini-css-extract-plugin");
-const HtmlWebpackPlugin     = require("html-webpack-plugin");
+const path                  = require('path');
+const webpack               = require('webpack');
+const MiniCssExtractPlugin  = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin     = require('html-webpack-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
 
 const config = {
-    entry: [__dirname + "/src/app.js", __dirname + "/src/main.scss"],
+    entry: [__dirname + '/src/app.js', __dirname + '/src/main.scss'],
     output: {
-        filename: "[name].bundle.js",
+        filename: '[name].bundle.js',
     },
     optimization: {
         splitChunks: {

@@ -1,6 +1,14 @@
-mixin font-sample(theme, name, description)
-  - var blockName = 'font-sample'
+mixin font-sample(theme, name, description, options)
+  - const blockName = 'font-sample'
+
+  - element = name.toLowerCase()
+  - let nameModifiers = [element]
+  - let descModifiers = [element]
+
+  if options
+    if options.bold
+      - descModifiers.push(element + '--bold')
 
   div(class=blockName class=blockName+'--'+theme)
-    div(class=blockName+'__name')= name
-    div(class=blockName+'__desc')= description
+    div(class=blockName+'__name' class=nameModifiers)= name
+    div(class=blockName+'__desc' class=descModifiers)= description

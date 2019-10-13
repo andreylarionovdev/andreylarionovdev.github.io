@@ -185,6 +185,36 @@
   margin: 143px auto;
   background-color: #E5E5E5; }
 
+.h1 {
+  font-family: Quicksand, sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #1F2041; }
+
+.h2 {
+  font-family: Quicksand, sans-serif;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  color: #1F2041; }
+
+.h3 {
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041; }
+
+.body {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75); }
+
 .column {
   float: left; }
   .column--6 {
@@ -251,44 +281,24 @@
     background-color: #6FCF97; }
 
 .font-sample {
-  font-family: Quicksand, sans-serif;
   position: relative;
   padding-left: 34%;
   padding-right: 6%;
   margin-bottom: 50px; }
   .font-sample--text-header {
-    font-size: 24px;
-    line-height: 1.25em;
-    font-weight: bold;
     min-height: 60px; }
   .font-sample--text-header-inside {
-    font-weight: bold;
-    font-size: 19px;
-    line-height: 1.26315789474em;
     min-height: 50px; }
   .font-sample--text-label {
-    font-family: Montserrat, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 1.1em;
-    text-transform: uppercase;
     min-height: 10px; }
   .font-sample--text-body {
-    font-family: Montserrat, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 1.71428571429em;
-    padding-right: 10.548523206%; }
-    .font-sample--text-body .font-sample__desc {
-      color: rgba(31, 32, 65, 0.75); }
-  .font-sample .font-sample__desc {
+    padding-right: 60px; }
+  .font-sample__desc {
     float: left; }
   .font-sample__name {
     float: left;
-    position: absolute;
     font-family: Montserrat, sans-serif;
+    position: absolute;
     text-align: right;
     top: 0;
     left: 0;
