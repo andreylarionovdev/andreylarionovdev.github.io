@@ -1,18 +1,25 @@
 .ui {
+    $parent: #{&};
     &--index,
     &--color-type {
         max-width: 1140px;
         margin: 0 auto;
         margin-top: 145px;
     }
-    &--form-components {
-        font-family: Montserrat, sans-serif;
-        max-width: 1340px;
-        margin: 0 auto;
-        margin-top: 143px;
+    @mixin large-screen($pad1: 6.8%, $pad2: 6.7%, $pad3: 2.7%) {
+        // 1200px ...
+        &:first-child {
+            padding-left: $pad1;
+        }
+        &:nth-child(2) {
+            padding-left: $pad2;
+        }
+        &:nth-child(3) {
+            padding-left: $pad3;
+        }
     }
-    &__top {
-        margin-bottom: 100px;
+    @mixin responsive-columns($margin-bottom, $pad1, $pad2, $pad3) {
+        margin-bottom: $margin-bottom;
         > .column {
             // ... 1199px
             @media (max-width: $screen-md-max) {
@@ -20,69 +27,27 @@
             }
             // 1200px ...
             @media (min-width: $screen-lg-min) {
-                &:first-child {
-                    padding-left: 6.8%;
-                }
-                &:nth-child(2) {
-                    padding-left: 6.7%;
-                }
-                &:nth-child(3) {
-                    padding-left: 2.7%;
-                }
+                @include large-screen($pad1, $pad2, $pad3)
             }
         }
     }
-    &__dropdown-states {
-        margin-bottom: 160px;
-        > .column {
-            @media (max-width: $screen-md-max) {
-                padding: 0 2%;
-            }
-            @media (min-width: $screen-lg-min) {
-                &:first-child {
-                    padding-left: 6.7%;
-                }
-                &:nth-child(2) {
-                    padding-left: 6.7%;
-                }
-                &:nth-child(3) {
-                    padding-left: 2.7%;
-                }
-            }
+    &--form-components {
+        font-family: Montserrat, sans-serif;
+        max-width: 1340px;
+        margin: 0 auto;
+        margin-top: 143px;
+
+        #{$parent}__top {
+            @include responsive-columns(100px, 6.8%, 6.7%, 2.7%)
         }
-    }
-    &__rich-lists {
-        margin-bottom: 0;
-        > .column {
-            @media (max-width: $screen-md-max) {
-                padding: 0 2%;
-            }
-            @media (min-width: $screen-lg-min) {
-                &:first-child {
-                    padding-left: 6.7%;
-                }
-                &:nth-child(2) {
-                    padding-left: 6.75%;
-                }
-                &:nth-child(3) {
-                    padding-left: 2.7%;
-                }
-            }
+        #{$parent}__dropdown-states {
+            @include responsive-columns(160px, 6.7%, 6.7%, 2.7%)
         }
-    }
-    &__bottom {
-        > .column {
-            @media (max-width: $screen-md-max) {
-                padding: 0 2%;
-            }
-            @media (min-width: $screen-lg-min) {
-                &:first-child {
-                    padding-left: 6.7%;
-                }
-                &:nth-child(2) {
-                    padding-left: 6.75%;
-                }
-            }
+        #{$parent}__rich-lists {
+            @include responsive-columns(0, 6.7%, 6.75%, 2.7%)
+        }
+        #{$parent}__bottom {
+            @include responsive-columns(0, 6.7%, 6.75%, 0)
         }
     }
     &__dropdown-group--with-apply-btn,
