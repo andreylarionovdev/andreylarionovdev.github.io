@@ -1,5 +1,9 @@
 $(document).ready(function () {
-    $('.paginator').pagination({
+    var $pager = $('.paginator');
+    if ($pager.length < 1) {
+        return;
+    }
+    $pager.pagination({
         dataSource: [...Array(180).keys()],
         pageSize: 12,
         pageRange: 1,
