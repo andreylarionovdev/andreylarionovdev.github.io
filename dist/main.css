@@ -13,48 +13,60 @@
       .ui--form-components .ui__top > .column {
         padding: 0 2%; } }
     @media (min-width: 1200px) {
-      .ui--form-components .ui__top > .column:first-child {
-        padding-left: 6.8%; }
-      .ui--form-components .ui__top > .column:nth-child(2) {
-        padding-left: 6.7%; }
-      .ui--form-components .ui__top > .column:nth-child(3) {
-        padding-left: 2.7%; } }
+      .ui--form-components .ui__top > .column.first {
+        padding-left: 6.8%;
+        width: 33.33%; }
+      .ui--form-components .ui__top > .column.second {
+        padding-left: 6.7%;
+        width: 33.33%; }
+      .ui--form-components .ui__top > .column.third {
+        padding-left: 2.7%;
+        width: 33.33%; } }
   .ui--form-components .ui__dropdown-states {
     margin-bottom: 160px; }
     @media (max-width: 1199px) {
       .ui--form-components .ui__dropdown-states > .column {
         padding: 0 2%; } }
     @media (min-width: 1200px) {
-      .ui--form-components .ui__dropdown-states > .column:first-child {
-        padding-left: 6.7%; }
-      .ui--form-components .ui__dropdown-states > .column:nth-child(2) {
-        padding-left: 6.7%; }
-      .ui--form-components .ui__dropdown-states > .column:nth-child(3) {
-        padding-left: 2.7%; } }
+      .ui--form-components .ui__dropdown-states > .column.first {
+        padding-left: 6.7%;
+        width: 33.33%; }
+      .ui--form-components .ui__dropdown-states > .column.second {
+        padding-left: 6.7%;
+        width: 33.33%; }
+      .ui--form-components .ui__dropdown-states > .column.third {
+        padding-left: 2.7%;
+        width: 33.33%; } }
   .ui--form-components .ui__rich-lists {
     margin-bottom: 0; }
     @media (max-width: 1199px) {
       .ui--form-components .ui__rich-lists > .column {
         padding: 0 2%; } }
     @media (min-width: 1200px) {
-      .ui--form-components .ui__rich-lists > .column:first-child {
-        padding-left: 6.7%; }
-      .ui--form-components .ui__rich-lists > .column:nth-child(2) {
-        padding-left: 6.75%; }
-      .ui--form-components .ui__rich-lists > .column:nth-child(3) {
-        padding-left: 2.7%; } }
+      .ui--form-components .ui__rich-lists > .column.first {
+        padding-left: 6.7%;
+        width: 33.33%; }
+      .ui--form-components .ui__rich-lists > .column.second {
+        padding-left: 6.75%;
+        width: 33.33%; }
+      .ui--form-components .ui__rich-lists > .column.third {
+        padding-left: 2.7%;
+        width: 33.33%; } }
   .ui--form-components .ui__bottom {
     margin-bottom: 0; }
     @media (max-width: 1199px) {
       .ui--form-components .ui__bottom > .column {
         padding: 0 2%; } }
     @media (min-width: 1200px) {
-      .ui--form-components .ui__bottom > .column:first-child {
-        padding-left: 6.7%; }
-      .ui--form-components .ui__bottom > .column:nth-child(2) {
-        padding-left: 6.75%; }
-      .ui--form-components .ui__bottom > .column:nth-child(3) {
-        padding-left: 0; } }
+      .ui--form-components .ui__bottom > .column.first {
+        padding-left: 6.7%;
+        width: 33.33%; }
+      .ui--form-components .ui__bottom > .column.second {
+        padding-left: 6.75%;
+        width: 66.66%; }
+      .ui--form-components .ui__bottom > .column.third {
+        padding-left: 0;
+        width: 33.33%; } }
   .ui--form-components .ui__dropdown-group,
   .ui--form-components .ui__dropdown-group--inline,
   .ui--form-components .ui__dropdown-group--with-apply-btn,
@@ -181,12 +193,26 @@
       margin-bottom: 200px; } }
 
 .ui--cards {
-  max-width: 1340px;
-  margin: 143px auto;
-  background-color: #E5E5E5; }
+  max-width: 1200px;
+  margin: 150px auto;
+  background-color: #E5E5E5;
+  margin-bottom: 1px; }
+  @media (max-width: 1199px) {
+    .ui--cards > .column {
+      padding: 0 2%; } }
+  @media (min-width: 1200px) {
+    .ui--cards > .column.first {
+      padding-left: 1.7%;
+      width: 33.33%; }
+    .ui--cards > .column.second {
+      padding-left: 3.5%;
+      width: 35%; }
+    .ui--cards > .column.third {
+      padding-left: 3.5%;
+      width: 30%; } }
 
 .h1 {
-  font-family: Quicksand, sans-serif;
+  font-family: Open Sans, sans-serif;
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
@@ -287,6 +313,8 @@
   margin-bottom: 50px; }
   .font-sample--text-header {
     min-height: 60px; }
+    .font-sample--text-header .font-sample__desc {
+      font-family: Quicksand, sans-serif; }
   .font-sample--text-header-inside {
     min-height: 50px; }
   .font-sample--text-label {
@@ -1122,6 +1150,10 @@
     color: rgba(31, 32, 65, 0.75); }
   .feedback__text {
     margin-top: 10px; }
+
+.room-search {
+  background-color: white;
+  padding: 40px 30px; }
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;

@@ -1,10 +1,14 @@
 .font-sample {
+    $desc: #{&}__desc;
     position: relative;
     padding-left: 34%;
     padding-right: 6%;
     margin-bottom: 50px;
     &--text-header {
         min-height: 60px;
+        #{$desc} {
+            font-family: Quicksand, sans-serif;
+        }
     }
     &--text-header-inside {
         min-height: 50px;

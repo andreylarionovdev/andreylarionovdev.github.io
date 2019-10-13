@@ -24,7 +24,7 @@ block vars
 block content
   +logo
   .ui__top.clearfix
-    .column.column--4
+    .column.column--4.first
       .ui__input-text-group
         .input-text-group
           .input-text-group__label
@@ -116,7 +116,7 @@ block content
               '',
               {withButton: true}
             )
-    .column.column--4
+    .column.column--4.second
       .ui__checkbox-group
         .checkbox-group
           .checkbox-group__label
@@ -196,7 +196,7 @@ block content
               5,
               5
             )
-    .column.column--4
+    .column.column--4.third
       .ui__range-slider
         +range-slider({
           'name': 'range-slider'
@@ -252,7 +252,7 @@ block content
           .paginator-group__paginator
             +paginator()
   .ui__dropdown-states.clearfix
-    .column.column--4
+    .column.column--4.first
       .ui__dropdown-group--collapsed
         .dropdown-group
           .dropdown-group__label
@@ -289,7 +289,7 @@ block content
                 ]
               }
             )
-    .column.column--4
+    .column.column--4.second
       .ui__dropdown-group--with-apply-btn
         .dropdown-group
           .dropdown-group__label
@@ -312,7 +312,7 @@ block content
                 ]
               }
             )
-    .column.column--4
+    .column.column--4.third
       .ui__dropdown-group--with-clear-btn
         .dropdown-group
           .dropdown-group__label
@@ -334,7 +334,7 @@ block content
               }
             )
   .ui__rich-lists.clearfix
-    .column.column--4
+    .column.column--4.first
       .ui__checkbox-list-xp-group--collapsed
         .checkbox-list-xp-group
           +checkbox-list-xp(
@@ -360,7 +360,7 @@ block content
               ]
             }
           )
-    .column.column--4
+    .column.column--4.second
       .ui__rich-checkbox-group
         .rich-checkbox-group
           .rich-checkbox-group__label
@@ -377,7 +377,7 @@ block content
                 'Помощник для инвалидов',
                 'На 1 этаже вас встретит специалист и проводит до номера.'
             )
-    .column.column--4
+    .column.column--4.third
       .ui__bullet-list-group
         .bullet-list-group
           .bullet-list-group__label
@@ -394,7 +394,7 @@ block content
               }
             )
   .ui__bottom.clearfix
-    .column.column--4
+    .column.column--4.first
       .ui__feature-group
         .feature-group
           .feature-group__feature
@@ -409,7 +409,7 @@ block content
               'Удобство',
               'Окно в каждой из спален'
             )
-    .column.column--8
+    .column.column--8.second
       .ui__feedback-group
         .feedback-group
           .feedback-group__feedback

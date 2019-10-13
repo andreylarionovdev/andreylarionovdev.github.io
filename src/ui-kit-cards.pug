@@ -14,18 +14,20 @@ block vars
 
 block content
   +logo
-  .column.column--4
+  .column.column--4.first
     .ui__room-search
       +room-search()
     .ui__sign-up
       +sign-up()
-  .column.column--4
+  .column.column--4.second
     .ui__booking
+      +room-search()
       +booking()
     .ui__sign-in
       +sign-in()
-  .column.column--4
+  .column.column--4.third
     .ui__calendar
+      +room-search()
       +calendar()
     .ui__room-thumb--vip
       +room-thumb()
