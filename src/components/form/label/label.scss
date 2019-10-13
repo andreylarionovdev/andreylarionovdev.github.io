@@ -2,26 +2,19 @@
     display: block;
     text-transform: uppercase;
     font-size: 12px;
-    font-family: Montserrat, sans-serif;
-}
-.label--mrgn-bttm-medium {
-    margin-bottom: 16px;
-}
-.label--mrgn-bttm-small {
-    margin-bottom: 11px;
-}
-.label__left,
-.label__right {
-    position: relative;
-    display: inline-block;
-    top: 0;
-}
-.label__left {
-    float: left;
-    font-weight: bold;
-    color: $color-dark-100;
-}
-.label__right {
-    float: right;
-    color: $color-dark-50;
+    &__left,
+    &__right {
+        position: relative;
+        display: inline-block;
+        top: 0;
+    }
+    &__left {
+        float: left;
+        font-weight: bold;
+        color: $color-dark-100;
+    }
+    &__right {
+        float: right;
+        color: $color-dark-50;
+    }
 }

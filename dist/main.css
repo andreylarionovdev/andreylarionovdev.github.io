@@ -295,34 +295,22 @@
 .label {
   display: block;
   text-transform: uppercase;
-  font-size: 12px;
-  font-family: Montserrat, sans-serif; }
-
-.label--mrgn-bttm-medium {
-  margin-bottom: 16px; }
-
-.label--mrgn-bttm-small {
-  margin-bottom: 11px; }
-
-.label__left,
-.label__right {
-  position: relative;
-  display: inline-block;
-  top: 0; }
-
-.label__left {
-  float: left;
-  font-weight: bold;
-  color: #1F2041; }
-
-.label__right {
-  float: right;
-  color: rgba(31, 32, 65, 0.5); }
+  font-size: 12px; }
+  .label__left, .label__right {
+    position: relative;
+    display: inline-block;
+    top: 0; }
+  .label__left {
+    float: left;
+    font-weight: bold;
+    color: #1F2041; }
+  .label__right {
+    float: right;
+    color: rgba(31, 32, 65, 0.5); }
 
 .input-text {
   height: 44px;
-  font-size: 12px;
-  font-family: Montserrat, sans-serif; }
+  font-size: 12px; }
   .input-text--hovered .input-text__input-text {
     outline: none;
     border: 1px solid rgba(31, 32, 65, 0.5); }
@@ -346,7 +334,6 @@
             box-sizing: border-box;
     border-radius: 4px;
     font-size: 14px;
-    font-family: Montserrat, sans-serif;
     color: rgba(31, 32, 65, 0.75);
     padding: 0 14px; }
     .input-text__input-text:focus, .input-text__input-text:hover {
@@ -388,7 +375,6 @@
   display: inline-block;
   width: 100%;
   height: 100%;
-  font-family: Montserrat, sans-serif;
   font-size: 14px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
@@ -864,7 +850,6 @@
   text-decoration: none;
   display: block;
   border-radius: 22px;
-  font-family: Montserrat, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
@@ -916,7 +901,6 @@
   width: 40px;
   height: 40px;
   display: inline-block;
-  font-family: Montserrat, sans-serif;
   font-style: normal;
   font-size: 12px;
   line-height: 40px;
@@ -947,7 +931,6 @@
     width: 100%; }
 
 .paginator .paginator-nav {
-  font-family: Montserrat, sans-serif;
   font-size: 14px;
   line-height: 24px;
   padding-top: 7px;
@@ -958,7 +941,6 @@
   display: inline-block;
   width: 100%;
   height: 100%;
-  font-family: Montserrat, sans-serif;
   font-size: 14px;
   text-align: left;
   color: rgba(31, 32, 65, 0.75);
@@ -1017,8 +999,7 @@
   margin-bottom: 7px; }
 
 .rich-checkbox {
-  font-size: 12px;
-  font-family: Montserrat, sans-serif; }
+  font-size: 12px; }
   .rich-checkbox__input {
     position: absolute;
     opacity: 0; }

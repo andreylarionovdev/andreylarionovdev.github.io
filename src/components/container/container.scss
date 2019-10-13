@@ -6,36 +6,46 @@
         margin: 0 auto;
         margin-top: 145px;
     }
-    @mixin large-screen($pad1: 6.8%, $pad2: 6.7%, $pad3: 2.7%) {
-        // 1200px ...
-        &:first-child {
-            padding-left: $pad1;
-        }
-        &:nth-child(2) {
-            padding-left: $pad2;
-        }
-        &:nth-child(3) {
-            padding-left: $pad3;
-        }
-    }
-    @mixin responsive-columns($margin-bottom, $pad1, $pad2, $pad3) {
-        margin-bottom: $margin-bottom;
-        > .column {
-            // ... 1199px
-            @media (max-width: $screen-md-max) {
-                padding: 0 2%;
-            }
-            // 1200px ...
-            @media (min-width: $screen-lg-min) {
-                @include large-screen($pad1, $pad2, $pad3)
-            }
-        }
-    }
+
     &--form-components {
         font-family: Montserrat, sans-serif;
         max-width: 1340px;
         margin: 0 auto;
         margin-top: 143px;
+
+        @mixin large-screen($pad1: 6.8%, $pad2: 6.7%, $pad3: 2.7%) {
+            // 1200px ...
+            &:first-child {
+                padding-left: $pad1;
+            }
+            &:nth-child(2) {
+                padding-left: $pad2;
+            }
+            &:nth-child(3) {
+                padding-left: $pad3;
+            }
+        }
+        @mixin responsive-columns($margin-bottom, $pad1, $pad2, $pad3) {
+            margin-bottom: $margin-bottom;
+            > .column {
+                // ... 1199px
+                @media (max-width: $screen-md-max) {
+                    padding: 0 2%;
+                }
+                // 1200px ...
+                @media (min-width: $screen-lg-min) {
+                    @include large-screen($pad1, $pad2, $pad3)
+                }
+            }
+        }
+        @mixin responsive-wrapper($lgWidth) {
+            position: relative;
+            width: $lgWidth;
+            // ... 1199px
+            @media (max-width: $screen-md-max) {
+                width: 100%;
+            }
+        }
 
         #{$parent}__top {
             @include responsive-columns(100px, 6.8%, 6.7%, 2.7%)
@@ -50,14 +60,6 @@
             @include responsive-columns(0, 6.7%, 6.75%, 0)
         }
 
-        @mixin responsive-wrapper($largeWidth) {
-            position: relative;
-            width: $largeWidth;
-            // ... 1199px
-            @media (max-width: $screen-md-max) {
-                width: 100%;
-            }
-        }
         // 90% width
         #{$parent}__dropdown-group,
         #{$parent}__dropdown-group--inline,
@@ -161,7 +163,6 @@
                 }
             }
         }
-
 
         #{$parent}__input-text-group--with-submit {
             // ... 767px

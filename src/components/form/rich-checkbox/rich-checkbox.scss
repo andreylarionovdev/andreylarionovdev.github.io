@@ -1,7 +1,6 @@
 .rich-checkbox {
     $parent: &;
     font-size: 12px;
-    font-family: Montserrat, sans-serif;
     &__input {
         position: absolute;
         opacity: 0;

@@ -2,7 +2,7 @@
     $parent: &;
     height: 44px;
     font-size: 12px;
-    font-family: Montserrat, sans-serif;
+
     &--hovered {
         #{$parent}__input-text {
             outline: none;
@@ -33,7 +33,6 @@
         box-sizing: border-box;
         border-radius: 4px;
         font-size: 14px;
-        font-family: Montserrat, sans-serif;
         color: $color-dark-75;
         padding: 0 14px;
         &:focus,
