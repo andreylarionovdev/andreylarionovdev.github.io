@@ -56,107 +56,130 @@
         padding-left: 6.75%; }
       .ui--form-components .ui__bottom > .column:nth-child(3) {
         padding-left: 0; } }
-
-.ui__dropdown-group--with-apply-btn, .ui__dropdown-group--default, .ui__dropdown-group--inline, .ui__radio-group--default, .ui__rate-group--default, .ui__like-button-group--default, .ui__toggle-group--default, .ui__feedback-group--default, .ui__input-text-group--default, .ui__input-text-group--masked, .ui__paginator-group, .ui__input-text-group--hovered {
-  position: relative;
-  width: 90%; }
-  @media (max-width: 1199px) {
-    .ui__dropdown-group--with-apply-btn, .ui__dropdown-group--default, .ui__dropdown-group--inline, .ui__radio-group--default, .ui__rate-group--default, .ui__like-button-group--default, .ui__toggle-group--default, .ui__feedback-group--default, .ui__input-text-group--default, .ui__input-text-group--masked, .ui__paginator-group, .ui__input-text-group--hovered {
-      width: 100%; } }
-
-.ui__feature-group--default, .ui__button-group--default, .ui__dropdown-group--with-clear-btn {
-  position: relative;
-  width: 78%; }
-  @media (max-width: 1199px) {
-    .ui__feature-group--default, .ui__button-group--default, .ui__dropdown-group--with-clear-btn {
-      width: 100%; } }
-
-.ui__dropdown-group--date-filter, .ui__dropdown-group--collapsed, .ui__dropdown-group--expanded, .ui__exp-check-list-group--collapsed, .ui__exp-check-list-group--expanded, .ui__rich-checkbox-group--default, .ui__input-text-group--with-submit {
-  position: relative;
-  width: 75%; }
-  @media (max-width: 1199px) {
-    .ui__dropdown-group--date-filter, .ui__dropdown-group--collapsed, .ui__dropdown-group--expanded, .ui__exp-check-list-group--collapsed, .ui__exp-check-list-group--expanded, .ui__rich-checkbox-group--default, .ui__input-text-group--with-submit {
-      width: 100%; } }
-
-.ui__checkbox-group--default, .ui__range-slider--default {
-  position: relative;
-  width: 65%; }
-  @media (max-width: 1199px) {
-    .ui__checkbox-group--default, .ui__range-slider--default {
-      width: 100%; } }
-
-.ui__bullet-list-group--default {
-  position: relative;
-  width: 63%; }
-
-.ui__rich-checkbox-group--default, .ui__bullet-list-group--default {
-  margin-top: 12px; }
-
-.ui__feedback-group--default {
-  margin-top: 30px; }
-
-.ui__exp-check-list-group--expanded {
-  margin-bottom: 14px; }
-
-.ui__range-slider--default {
-  margin-bottom: 18px; }
-
-.ui__input-text-group--default {
-  margin-bottom: 21px; }
-
-.ui__input-text-group--hovered, .ui__dropdown-group--collapsed {
-  margin-bottom: 20px; }
-
-.ui__exp-check-list-group--collapsed {
-  margin-bottom: 26px; }
-
-.ui__dropdown-group--default {
-  margin-bottom: 22px; }
-
-.ui__input-text-group--masked {
-  margin-bottom: 40px; }
-
-.ui__dropdown-group--inline, .ui__dropdown-group--date-filter {
-  margin-bottom: 41px; }
-
-.ui__rate-group--default, .ui__radio-group--default {
-  margin-bottom: 43px; }
-
-.ui__checkbox-group--default {
-  margin-bottom: 42px; }
-
-.ui__dropdown-group--inline .dropdown-group {
-  float: left;
-  width: 47%; }
-  .ui__dropdown-group--inline .dropdown-group:first-child {
-    margin-right: 6%; }
-  @media (max-width: 991px) {
-    .ui__dropdown-group--inline .dropdown-group {
-      width: 100%;
-      margin-right: 0;
-      margin-bottom: 15px; } }
-
-.ui__toggle-group--default {
-  margin-bottom: 44px; }
-
-.ui__like-button-group--default {
-  margin-bottom: 36px; }
-
-@media (max-width: 767px) {
-  .ui__input-text-group--with-submit {
-    margin-bottom: 40px; } }
-
-@media (max-width: 767px) {
-  .ui__dropdown-group--with-apply-btn {
-    margin-bottom: 170px; } }
-
-@media (max-width: 767px) {
-  .ui__dropdown-group--expanded {
-    margin-bottom: 130px; } }
-
-@media (max-width: 767px) {
-  .ui__dropdown-states {
-    margin-bottom: 200px; } }
+  .ui--form-components .ui__dropdown-group,
+  .ui--form-components .ui__dropdown-group--inline,
+  .ui--form-components .ui__dropdown-group--with-apply-btn,
+  .ui--form-components .ui__feedback-group,
+  .ui--form-components .ui__input-text-group,
+  .ui--form-components .ui__input-text-group--masked,
+  .ui--form-components .ui__input-text-group--hovered,
+  .ui--form-components .ui__like-button-group,
+  .ui--form-components .ui__paginator-group,
+  .ui--form-components .ui__radio-group,
+  .ui--form-components .ui__rate-group,
+  .ui--form-components .ui__toggle-group {
+    position: relative;
+    width: 90%; }
+    @media (max-width: 1199px) {
+      .ui--form-components .ui__dropdown-group,
+      .ui--form-components .ui__dropdown-group--inline,
+      .ui--form-components .ui__dropdown-group--with-apply-btn,
+      .ui--form-components .ui__feedback-group,
+      .ui--form-components .ui__input-text-group,
+      .ui--form-components .ui__input-text-group--masked,
+      .ui--form-components .ui__input-text-group--hovered,
+      .ui--form-components .ui__like-button-group,
+      .ui--form-components .ui__paginator-group,
+      .ui--form-components .ui__radio-group,
+      .ui--form-components .ui__rate-group,
+      .ui--form-components .ui__toggle-group {
+        width: 100%; } }
+  .ui--form-components .ui__button-group,
+  .ui--form-components .ui__dropdown-group--with-clear-btn,
+  .ui--form-components .ui__feature-group {
+    position: relative;
+    width: 78%; }
+    @media (max-width: 1199px) {
+      .ui--form-components .ui__button-group,
+      .ui--form-components .ui__dropdown-group--with-clear-btn,
+      .ui--form-components .ui__feature-group {
+        width: 100%; } }
+  .ui--form-components .ui__checkbox-list-xp-group--collapsed,
+  .ui--form-components .ui__checkbox-list-xp-group--expanded,
+  .ui--form-components .ui__dropdown-group--date-filter,
+  .ui--form-components .ui__dropdown-group--collapsed,
+  .ui--form-components .ui__dropdown-group--expanded,
+  .ui--form-components .ui__input-text-group--with-submit,
+  .ui--form-components .ui__rich-checkbox-group {
+    position: relative;
+    width: 75%; }
+    @media (max-width: 1199px) {
+      .ui--form-components .ui__checkbox-list-xp-group--collapsed,
+      .ui--form-components .ui__checkbox-list-xp-group--expanded,
+      .ui--form-components .ui__dropdown-group--date-filter,
+      .ui--form-components .ui__dropdown-group--collapsed,
+      .ui--form-components .ui__dropdown-group--expanded,
+      .ui--form-components .ui__input-text-group--with-submit,
+      .ui--form-components .ui__rich-checkbox-group {
+        width: 100%; } }
+  .ui--form-components .ui__checkbox-group,
+  .ui--form-components .ui__range-slider {
+    position: relative;
+    width: 65%; }
+    @media (max-width: 1199px) {
+      .ui--form-components .ui__checkbox-group,
+      .ui--form-components .ui__range-slider {
+        width: 100%; } }
+  .ui--form-components .ui__bullet-list-group {
+    position: relative;
+    width: 63%; }
+    @media (max-width: 1199px) {
+      .ui--form-components .ui__bullet-list-group {
+        width: 100%; } }
+  .ui--form-components .ui__toggle-group {
+    margin-bottom: 44px; }
+  .ui--form-components .ui__rate-group,
+  .ui--form-components .ui__radio-group {
+    margin-bottom: 43px; }
+  .ui--form-components .ui__checkbox-group {
+    margin-bottom: 42px; }
+  .ui--form-components .ui__dropdown-group--inline,
+  .ui--form-components .ui__dropdown-group--date-filter {
+    margin-bottom: 41px; }
+  .ui--form-components .ui__input-text-group--masked {
+    margin-bottom: 40px; }
+  .ui--form-components .ui__like-button-group {
+    margin-bottom: 36px; }
+  .ui--form-components .ui__feedback-group {
+    margin-top: 30px; }
+  .ui--form-components .ui__checkbox-list-xp-group--collapsed {
+    margin-bottom: 26px; }
+  .ui--form-components .ui__dropdown-group {
+    margin-bottom: 22px; }
+  .ui--form-components .ui__input-text-group {
+    margin-bottom: 21px; }
+  .ui--form-components .ui__input-text-group--hovered,
+  .ui--form-components .ui__dropdown-group--collapsed {
+    margin-bottom: 20px; }
+  .ui--form-components .ui__range-slider {
+    margin-bottom: 18px; }
+  .ui--form-components .ui__checkbox-list-xp-group--expanded {
+    margin-bottom: 14px; }
+  .ui--form-components .ui__bullet-list-group,
+  .ui--form-components .ui__rich-checkbox-group {
+    margin-top: 12px; }
+  .ui--form-components .ui__dropdown-group--inline .dropdown-group {
+    float: left;
+    width: 47%; }
+    .ui--form-components .ui__dropdown-group--inline .dropdown-group:first-child {
+      margin-right: 6%; }
+    @media (max-width: 991px) {
+      .ui--form-components .ui__dropdown-group--inline .dropdown-group {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px; } }
+  @media (max-width: 767px) {
+    .ui--form-components .ui__input-text-group--with-submit {
+      margin-bottom: 40px; } }
+  @media (max-width: 767px) {
+    .ui--form-components .ui__dropdown-group--with-apply-btn {
+      margin-bottom: 170px; } }
+  @media (max-width: 767px) {
+    .ui--form-components .ui__dropdown-group--expanded {
+      margin-bottom: 130px; } }
+  @media (max-width: 767px) {
+    .ui--form-components .ui__dropdown-states {
+      margin-bottom: 200px; } }
 
 .column {
   float: left; }
@@ -931,7 +954,7 @@
   padding-left: 6px;
   color: rgba(31, 32, 65, 0.75); }
 
-.exp-check-list {
+.checkbox-list-xp {
   display: inline-block;
   width: 100%;
   height: 100%;
@@ -943,16 +966,16 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
-  .exp-check-list__select {
+  .checkbox-list-xp__select {
     cursor: pointer;
     display: block;
     padding: 10px 10px 10px 0; }
-  .exp-check-list__label {
+  .checkbox-list-xp__label {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 12px;
     color: #1F2041; }
-  .exp-check-list__list {
+  .checkbox-list-xp__list {
     position: absolute;
     width: 100%;
     left: 0;
@@ -964,26 +987,26 @@
     list-style: none;
     margin: 0;
     margin-top: 7px; }
-  .exp-check-list__li {
+  .checkbox-list-xp__li {
     display: block;
     height: 20px;
     margin-bottom: 10px; }
-  .exp-check-list .exp-check-list__icon-down,
-  .exp-check-list .exp-check-list__icon-up {
+  .checkbox-list-xp .checkbox-list-xp__icon-down,
+  .checkbox-list-xp .checkbox-list-xp__icon-up {
     display: none;
     cursor: pointer;
     float: right;
     margin-top: -1px; }
-  .exp-check-list .exp-check-list__icon-down {
+  .checkbox-list-xp .checkbox-list-xp__icon-down {
     display: inline-block; }
-  .exp-check-list--expanded .exp-check-list__list {
+  .checkbox-list-xp--expanded .checkbox-list-xp__list {
     display: block; }
-  .exp-check-list--expanded .exp-check-list__icon-down {
+  .checkbox-list-xp--expanded .checkbox-list-xp__icon-down {
     display: none; }
-  .exp-check-list--expanded .exp-check-list__icon-up {
+  .checkbox-list-xp--expanded .checkbox-list-xp__icon-up {
     display: inline-block; }
 
-.exp-check-list-group__exp-check-list {
+.checkbox-list-xp-group__checkbox-list-xp {
   height: 44px; }
 
 .rich-checkbox-group__label {

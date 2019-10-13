@@ -49,158 +49,143 @@
         #{$parent}__bottom {
             @include responsive-columns(0, 6.7%, 6.75%, 0)
         }
-    }
-    &__dropdown-group--with-apply-btn,
-    &__dropdown-group--default,
-    &__dropdown-group--inline,
-    &__radio-group--default,
-    &__rate-group--default,
-    &__like-button-group--default,
-    &__toggle-group--default,
-    &__feedback-group--default,
-    &__input-text-group--default,
-    &__input-text-group--masked,
-    &__paginator-group,
-    &__input-text-group--hovered {
-        position: relative;
-        width: 90%;
-        // ... 767px
-        @media (max-width: $screen-md-max) {
-            width: 100%;
-        }
-    }
-    &__feature-group--default,
-    &__button-group--default,
-    &__dropdown-group--with-clear-btn {
-        position: relative;
-        width: 78%;
-        // ... 1199px
-        @media (max-width: $screen-md-max) {
-            width: 100%;
-        }
-    }
-    &__dropdown-group--date-filter,
-    &__dropdown-group--collapsed,
-    &__dropdown-group--expanded,
-    &__exp-check-list-group--collapsed,
-    &__exp-check-list-group--expanded,
-    &__rich-checkbox-group--default,
-    &__input-text-group--with-submit {
-        position: relative;
-        width: 75%;
-        // ... 1199px
-        @media (max-width: $screen-md-max) {
-            width: 100%;
-        }
-    }
-    &__checkbox-group--default,
-    &__range-slider--default {
-        position: relative;
-        width: 65%;
-        // ... 1199px
-        @media (max-width: $screen-md-max) {
-            width: 100%;
-        }
-    }
-    &__bullet-list-group--default {
-        position: relative;
-        width: 63%;
-    }
-    &__rich-checkbox-group--default,
-    &__bullet-list-group--default {
-        margin-top: 12px;
-    }
-    &__feedback-group--default {
-      margin-top: 30px;
-    }
-    &__exp-check-list-group--expanded {
-        margin-bottom: 14px;
-    }
-    &__range-slider--default {
-        margin-bottom: 18px;
-    }
-    &__input-text-group--default {
-        margin-bottom: 21px;
-    }
-    &__input-text-group--hovered,
-    &__dropdown-group--collapsed {
-        margin-bottom: 20px;
-    }
-    &__exp-check-list-group--collapsed {
-        margin-bottom: 26px;
-    }
-    &__dropdown-group--default {
-        margin-bottom: 22px;
-    }
-    &__input-text-group--masked {
-        margin-bottom: 40px;
-    }
-    &__dropdown-group--inline,
-    &__dropdown-group--date-filter {
-        margin-bottom: 41px;
-    }
-    &__rate-group--default,
-    &__radio-group--default {
-        margin-bottom: 43px;
-    }
-    &__checkbox-group--default {
-        margin-bottom: 42px;
-    }
-    &__dropdown-group--inline {
-        .dropdown-group {
-            float: left;
-            width: 47%;
-            &:first-child {
-                margin-right: 6%;
-            }
-            // ... 991px
-            @media (max-width: $screen-sm-max) {
+
+        @mixin responsive-wrapper($largeWidth) {
+            position: relative;
+            width: $largeWidth;
+            // ... 1199px
+            @media (max-width: $screen-md-max) {
                 width: 100%;
-                margin-right: 0;
-                margin-bottom: 15px;
             }
         }
-    }
-    &__toggle-group--default {
-        margin-bottom: 44px;
-    }
-    &__like-button-group--default {
-        margin-bottom: 36px;
-    }
-    &__input-text-group--with-submit {
-        // ... 767px
-        @media (max-width: $screen-xs-max) {
+        // 90% width
+        #{$parent}__dropdown-group,
+        #{$parent}__dropdown-group--inline,
+        #{$parent}__dropdown-group--with-apply-btn,
+        #{$parent}__feedback-group,
+        #{$parent}__input-text-group,
+        #{$parent}__input-text-group--masked,
+        #{$parent}__input-text-group--hovered,
+        #{$parent}__like-button-group,
+        #{$parent}__paginator-group,
+        #{$parent}__radio-group,
+        #{$parent}__rate-group,
+        #{$parent}__toggle-group {
+            @include responsive-wrapper(90%)
+        }
+        // 78% width
+        #{$parent}__button-group,
+        #{$parent}__dropdown-group--with-clear-btn,
+        #{$parent}__feature-group {
+            @include responsive-wrapper(78%)
+        }
+        // 75% width
+        #{$parent}__checkbox-list-xp-group--collapsed,
+        #{$parent}__checkbox-list-xp-group--expanded,
+        #{$parent}__dropdown-group--date-filter,
+        #{$parent}__dropdown-group--collapsed,
+        #{$parent}__dropdown-group--expanded,
+        #{$parent}__input-text-group--with-submit,
+        #{$parent}__rich-checkbox-group {
+            @include responsive-wrapper(75%)
+        }
+        // 65% width
+        #{$parent}__checkbox-group,
+        #{$parent}__range-slider {
+            @include responsive-wrapper(65%)
+        }
+        // 63% width
+        #{$parent}__bullet-list-group {
+            @include responsive-wrapper(63%)
+        }
+
+        #{$parent}__toggle-group {
+            margin-bottom: 44px;
+        }
+        #{$parent}__rate-group,
+        #{$parent}__radio-group {
+            margin-bottom: 43px;
+        }
+        #{$parent}__checkbox-group {
+            margin-bottom: 42px;
+        }
+        #{$parent}__dropdown-group--inline,
+        #{$parent}__dropdown-group--date-filter {
+            margin-bottom: 41px;
+        }
+        #{$parent}__input-text-group--masked {
             margin-bottom: 40px;
         }
-    }
-    &__dropdown-group--with-apply-btn {
-        // ... 767px
-        @media (max-width: $screen-xs-max) {
-            margin-bottom: 170px;
+        #{$parent}__like-button-group {
+            margin-bottom: 36px;
+        }
+        #{$parent}__feedback-group {
+            margin-top: 30px;
+        }
+        #{$parent}__checkbox-list-xp-group--collapsed {
+            margin-bottom: 26px;
+        }
+        #{$parent}__dropdown-group {
+            margin-bottom: 22px;
+        }
+        #{$parent}__input-text-group {
+            margin-bottom: 21px;
+        }
+        #{$parent}__input-text-group--hovered,
+        #{$parent}__dropdown-group--collapsed {
+            margin-bottom: 20px;
+        }
+        #{$parent}__range-slider {
+            margin-bottom: 18px;
+        }
+        #{$parent}__checkbox-list-xp-group--expanded {
+            margin-bottom: 14px;
+        }
+        #{$parent}__bullet-list-group,
+        #{$parent}__rich-checkbox-group {
+            margin-top: 12px;
+        }
+
+        #{$parent}__dropdown-group--inline {
+            .dropdown-group {
+                float: left;
+                width: 47%;
+                &:first-child {
+                    margin-right: 6%;
+                }
+                // ... 991px
+                @media (max-width: $screen-sm-max) {
+                    width: 100%;
+                    margin-right: 0;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+
+        #{$parent}__input-text-group--with-submit {
+            // ... 767px
+            @media (max-width: $screen-xs-max) {
+                margin-bottom: 40px;
+            }
+        }
+        #{$parent}__dropdown-group--with-apply-btn {
+            // ... 767px
+            @media (max-width: $screen-xs-max) {
+                margin-bottom: 170px;
+            }
+        }
+        #{$parent}__dropdown-group--expanded {
+            // ... 767px
+            @media (max-width: $screen-xs-max) {
+                margin-bottom: 130px;
+            }
+        }
+        #{$parent}__dropdown-states {
+            // ... 767px
+            @media (max-width: $screen-xs-max) {
+                margin-bottom: 200px;
+            }
         }
     }
-    &__dropdown-group--expanded {
-        // ... 767px
-        @media (max-width: $screen-xs-max) {
-            margin-bottom: 130px;
-        }
-    }
-    &__dropdown-states {
-        // ... 767px
-        @media (max-width: $screen-xs-max) {
-            margin-bottom: 200px;
-        }
-    }
-    //// ... 767px
-    //@media (max-width: $screen-xs-max) {
-    //}
-    //// 768px ... 991px
-    //@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-    //}
-    //// 992px ... 1199px
-    //@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-    //}
-    //// 1200px ...
-    //@media (min-width: $screen-lg-min) {
-    //}
 }

@@ -12,7 +12,7 @@ include components/form/rate-button/rate-button
 include components/form/range-slider/range-slider
 include components/form/button/button
 include components/form/paginator/paginator
-include components/form/exp-check-list/exp-check-list
+include components/form/checkbox-list-xp/checkbox-list-xp
 include components/form/rich-checkbox/rich-checkbox
 include components/form/bullet-list/bullet-list
 include components/form/feature/feature
@@ -25,7 +25,7 @@ block content
   +logo
   .ui__top.clearfix
     .column.column--4
-      .ui__input-text-group--default
+      .ui__input-text-group
         .input-text-group
           .input-text-group__label
             +label(
@@ -51,7 +51,7 @@ block content
               'This is pretty awesome',
               {hovered: true}
             )
-      .ui__dropdown-group--default
+      .ui__dropdown-group
         .dropdown-group
           .dropdown-group__label
             +label(
@@ -117,7 +117,7 @@ block content
               {withButton: true}
             )
     .column.column--4
-      .ui__checkbox-group--default
+      .ui__checkbox-group
         .checkbox-group
           .checkbox-group__label
             +label('checkbox buttons')
@@ -138,7 +138,7 @@ block content
               'Можно пригласить гостей (до 10 человек)',
               true
             )
-      .ui__radio-group--default
+      .ui__radio-group
         .radio-button-group.clearfix
           .radio-button-group__label
             +label('radio buttons')
@@ -157,7 +157,7 @@ block content
               'female',
               'Женщина'
             )
-      .ui__toggle-group--default
+      .ui__toggle-group
         .toggle-group
           .toggle-group__label
             +label('toggle')
@@ -172,7 +172,7 @@ block content
               'second-toggle',
               'Получать спецпредложения'
             )
-      .ui__like-button-group--default.clearfix
+      .ui__like-button-group.clearfix
         .like-button-group
           .like-button-group__label
             +label('like button')
@@ -197,11 +197,11 @@ block content
               5
             )
     .column.column--4
-      .ui__range-slider--default
+      .ui__range-slider
         +range-slider({
           'name': 'range-slider'
         })
-      .ui__button-group--default
+      .ui__button-group
         .button-group
           .button-group__label
             +label('buttons')
@@ -335,15 +335,15 @@ block content
             )
   .ui__rich-lists.clearfix
     .column.column--4
-      .ui__exp-check-list-group--collapsed
-        .exp-check-list-group
-          +exp-check-list(
+      .ui__checkbox-list-xp-group--collapsed
+        .checkbox-list-xp-group
+          +checkbox-list-xp(
             'exp_check_list_collapsed',
             'Expandable checkbox list'
           )
-      .ui__exp-check-list-group--expanded
-        .exp-check-list-group
-          +exp-check-list(
+      .ui__checkbox-list-xp-group--expanded
+        .checkbox-list-xp-group
+          +checkbox-list-xp(
             'exp_check_list_collapsed',
             'Expandable checkbox list',
             {
@@ -361,7 +361,7 @@ block content
             }
           )
     .column.column--4
-      .ui__rich-checkbox-group--default
+      .ui__rich-checkbox-group
         .rich-checkbox-group
           .rich-checkbox-group__label
             +label('rich checkbox buttons')
@@ -378,7 +378,7 @@ block content
                 'На 1 этаже вас встретит специалист и проводит до номера.'
             )
     .column.column--4
-      .ui__bullet-list-group--default
+      .ui__bullet-list-group
         .bullet-list-group
           .bullet-list-group__label
             +label('Bullet list')
@@ -395,7 +395,7 @@ block content
             )
   .ui__bottom.clearfix
     .column.column--4
-      .ui__feature-group--default
+      .ui__feature-group
         .feature-group
           .feature-group__feature
             +feature(
@@ -410,7 +410,7 @@ block content
               'Окно в каждой из спален'
             )
     .column.column--8
-      .ui__feedback-group--default
+      .ui__feedback-group
         .feedback-group
           .feedback-group__feedback
             +feedback(
