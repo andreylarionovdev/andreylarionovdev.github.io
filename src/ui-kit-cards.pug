@@ -1,6 +1,33 @@
 extends base
 
 include components/logo/logo
+include components/cards/booking/booking
+include components/cards/calendar/calendar
+include components/cards/room-search/room-search
+include components/cards/room-thumb/room-thumb
+include components/cards/sign-in/sign-in
+include components/cards/sign-up/sign-up
 
 block vars
-  - var
+  - var title = 'UI Kit - Cards'
+  - var bodyClasses = ['ui', 'ui--cards']
+
+block content
+  +logo
+  .column.column--4
+    .ui__room-search
+      +room-search()
+    .ui__sign-up
+      +sign-up()
+  .column.column--4
+    .ui__booking
+      +booking()
+    .ui__sign-in
+      +sign-in()
+  .column.column--4
+    .ui__calendar
+      +calendar()
+    .ui__room-thumb--vip
+      +room-thumb()
+    .ui__room-thumb
+      +room-thumb()

@@ -89,6 +89,10 @@ const config = {
             filename: 'ui-kit-form-elements.html',
             template: 'src/ui-kit-form-elements.pug'
         }),
+        new HtmlWebpackPlugin({
+            filename: 'ui-kit-cards.html',
+            template: 'src/ui-kit-cards.pug'
+        }),
         new MiniCssExtractPlugin({
             filename: '[name].css',
             publicPath: "../"
