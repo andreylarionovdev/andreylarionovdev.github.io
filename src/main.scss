@@ -59,6 +59,9 @@ $grad-green: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+input[type=text] {
+    appearance: none;
+}
 ::placeholder {
     color: $color-dark-50;
 }

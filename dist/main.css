@@ -1110,6 +1110,11 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+input[type=text] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+
 ::-webkit-input-placeholder {
   color: rgba(31, 32, 65, 0.5); }
 
