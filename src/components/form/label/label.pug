@@ -1,4 +1,5 @@
 mixin label(_label, hint, _for)
-  label(class=['label', 'clearfix'] for=_for)
-    span(class='label__left')= _label
-    span(class='label__right')= hint
+  - const blockName = 'label'
+  label(class=[blockName, 'clearfix'] for=_for)
+    h3(class=[blockName+'__left', 'h3'])= _label
+    span(class=blockName+'__right')= hint
