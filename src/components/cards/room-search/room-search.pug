@@ -1,4 +1,50 @@
+include ../../form/label/label
+include ../../form/dropdown/dropdown
+include ../../form/button/button
+
 mixin room-search()
   - const blockName = 'room-search'
-  div(class=blockName)
-    h1.h1= 'Найдём номера под ваши пожелания'
+  div(class=[blockName, 'clearfix'])
+    h1(class=[blockName+'__title', 'h1'])= 'Найдём номера под ваши пожелания'
+    .clearfix
+      div(class=blockName+'__arrival')
+        div(class=blockName+'__label')
+          +label('Прибытие')
+        div(class=blockName+'__date-dropdown')
+          +dropdown(
+            'arrival-date',
+            null,
+            {emptyValue: 'ДД.ММ.ГГГГ'}
+          )
+      div(class=blockName+'__departure')
+        div(class=blockName+'__label')
+          +label('Выезд')
+        div(class=blockName+'__date-dropdown')
+          +dropdown(
+            'departure-date',
+            null,
+            {emptyValue: 'ДД.ММ.ГГГГ'}
+          )
+    div(class=blockName+'__guests')
+      div(class=blockName+'__label')
+        +label('Гости')
+      div(class=blockName+'__guests-dropdown')
+        +dropdown(
+          'guests',
+          null,
+          {
+            type: 'json',
+            emptyValue: 'Сколько гостей',
+            data: [
+              {count: 0, text: 'взрослые', name: 'adult'},
+              {count: 0, text: 'дети', name: 'kids'},
+              {count: 0, text: 'младенцы', name: 'baby'}
+            ]
+          }
+        )
+    div(class=blockName+'__button')
+      +button(
+        'default',
+        'Подобрать номер',
+        {withArrow: true}
+      )

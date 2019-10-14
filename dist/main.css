@@ -428,7 +428,8 @@
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
-          user-select: none; }
+          user-select: none;
+  font-family: Montserrat, sans-serif; }
   .dropdown__select {
     position: relative;
     cursor: pointer;
@@ -891,6 +892,7 @@
       width: 100%; } }
 
 .button {
+  font-family: Montserrat, sans-serif;
   text-align: center;
   text-decoration: none;
   display: block;
@@ -1155,8 +1157,28 @@
     margin-top: 10px; }
 
 .room-search {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   background-color: white;
-  padding: 40px 30px; }
+  padding: 39px 28px 29px 29px; }
+  .room-search__title {
+    margin-bottom: 20px; }
+  .room-search__label {
+    margin-bottom: 5px; }
+  .room-search__guests {
+    margin-top: 21px; }
+  .room-search__guests-dropdown, .room-search__date-dropdown {
+    position: relative;
+    height: 44px; }
+  .room-search__arrival, .room-search__departure {
+    float: left;
+    width: 47%; }
+  .room-search__arrival {
+    margin-right: 6%; }
+  .room-search__button {
+    margin-top: 31px; }
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
