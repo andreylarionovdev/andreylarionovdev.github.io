@@ -1,3 +1,74 @@
+include ../../form/input-text/input-text
+include ../../form/radio-button/radio-button
+include ../../form/toggle-button/toggle-button
+
 mixin sign-up()
   - const blockName = 'sign-up'
   div(class=blockName)
+    h1(class=[blockName+'__title', 'h1'])= 'Регистрация аккаунта'
+    div(class=blockName+'__input')
+      +input-text(
+        'first-name',
+        'Имя'
+      )
+    div(class=blockName + '__input')
+      +input-text(
+        'first-name',
+        'Фамилия'
+      )
+    div(class=[blockName+'__gender', 'clearfix'])
+      div(class=blockName+'__radio-button')
+        +radio-button(
+          'g-male',
+          'gender',
+          'm',
+          'Мужчина',
+          true
+        )
+      div(class=blockName+'__radio-button')
+        +radio-button(
+          'g-female',
+          'gender',
+          'f',
+          'Женщина'
+        )
+    div(class=blockName+'__birthday')
+      div(class=blockName+'__label')
+        +label('Дата рождения')
+      div(class=blockName+'__input')
+        +input-text(
+          'sign-up__input-birthday',
+          'ДД.ММ.ГГГГ'
+        )
+    div(class=blockName+'__email')
+      div(class=blockName+'__label')
+        +label('Данные для входа в сервис')
+      div(class=blockName+'__input')
+        +input-text(
+          'sign-up__input-email',
+          'Email'
+        )
+    div(class=blockName+'__input')
+      +input-text(
+        'sign-up__input-password',
+        'Пароль'
+      )
+    div(class=blockName+'__toggle')
+      +toggle-button(
+        'sign-up__toggle-promote',
+        'Получать спецпредложения'
+      )
+    div(class=blockName+'__pay-button')
+      +button(
+        'default',
+        'Перейти к оплате',
+        {withArrow: true}
+      )
+    div(class=[blockName+'__auth', 'clearfix'])
+      div(class=blockName+'__auth-hint')
+        span.body.body--black= 'Уже есть аккаунт на Toxin'
+      div(class=blockName+'__auth-button')
+        +button(
+          'transparent',
+          'Войти'
+        )

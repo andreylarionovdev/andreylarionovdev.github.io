@@ -1,1 +1,44 @@
-.sign-up {}
+.sign-up {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  padding: 39px 28px 29px 29px;
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__input {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  &__gender {
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+  &__radio-button {
+    display: inline-block;
+    float: left;
+    margin-right: 20px;
+  }
+  &__label {
+    margin-bottom: 5px;
+  }
+  &__birthday {
+    margin-bottom: 20px;
+  }
+  &__pay-button {
+    margin-top: 23px;
+  }
+  &__auth {
+    margin-top: 29px;
+  }
+  &__auth-hint {
+    line-height: 44px;
+    float: left;
+  }
+  &__auth-button {
+    width: 99px;
+    height: 44px;
+    float: right;
+  }
+}

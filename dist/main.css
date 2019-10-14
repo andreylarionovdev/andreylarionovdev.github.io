@@ -196,7 +196,7 @@
   max-width: 1200px;
   margin: 150px auto;
   background-color: #E5E5E5;
-  margin-bottom: 1px; }
+  margin-bottom: 0; }
   @media (max-width: 1199px) {
     .ui--cards > .column {
       padding: 0 2%; } }
@@ -210,6 +210,8 @@
     .ui--cards > .column.third {
       padding-left: 3.5%;
       width: 30%; } }
+  .ui--cards .ui__room-search {
+    margin-bottom: 40px; }
 
 .h1 {
   font-family: Open Sans, sans-serif;
@@ -243,6 +245,8 @@
   font-size: 14px;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75); }
+  .body--black {
+    color: black; }
 
 .column {
   float: left; }
@@ -406,6 +410,16 @@
     background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkgMC45ODQzNzVMMTcuMDE1NiA5TDkgMTcuMDE1Nkw3LjU5Mzc1IDE1LjYwOTRMMTMuMTcxOSA5Ljk4NDM4SDAuOTg0Mzc1VjguMDE1NjJIMTMuMTcxOUw3LjU5Mzc1IDIuMzkwNjJMOSAwLjk4NDM3NVoiIGZpbGw9InVybCgjcGFpbnQwX2xpbmVhcikiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhciIgeDE9IjkiIHkxPSItMTMiIHgyPSI5IiB5Mj0iMzEiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iI0JDOUNGRiIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM4QkE0RjkiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K);
     background-position: right 13px center;
     background-repeat: no-repeat; }
+  .input-text ::-webkit-input-placeholder {
+    font-family: Montserrat, sans-serif; }
+  .input-text ::-moz-placeholder {
+    font-family: Montserrat, sans-serif; }
+  .input-text :-ms-input-placeholder {
+    font-family: Montserrat, sans-serif; }
+  .input-text ::-ms-input-placeholder {
+    font-family: Montserrat, sans-serif; }
+  .input-text ::placeholder {
+    font-family: Montserrat, sans-serif; }
 
 .input-text-group__label {
   margin-bottom: 5px; }
@@ -1179,6 +1193,41 @@
     margin-right: 6%; }
   .room-search__button {
     margin-top: 31px; }
+
+.sign-up {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  padding: 39px 28px 29px 29px; }
+  .sign-up__title {
+    margin-bottom: 20px; }
+  .sign-up__input {
+    position: relative;
+    margin-bottom: 10px; }
+  .sign-up__gender {
+    margin-top: 10px;
+    margin-bottom: 25px; }
+  .sign-up__radio-button {
+    display: inline-block;
+    float: left;
+    margin-right: 20px; }
+  .sign-up__label {
+    margin-bottom: 5px; }
+  .sign-up__birthday {
+    margin-bottom: 20px; }
+  .sign-up__pay-button {
+    margin-top: 23px; }
+  .sign-up__auth {
+    margin-top: 29px; }
+  .sign-up__auth-hint {
+    line-height: 44px;
+    float: left; }
+  .sign-up__auth-button {
+    width: 99px;
+    height: 44px;
+    float: right; }
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;

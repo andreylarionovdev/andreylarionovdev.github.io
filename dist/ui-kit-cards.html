@@ -68,7 +68,82 @@
         </div>
       </div>
       <div class="ui__sign-up">
-        <div class="sign-up"></div>
+        <div class="sign-up">
+          <h1 class="sign-up__title h1">Регистрация аккаунта</h1>
+          <div class="sign-up__input">
+            <div class="input-text">
+              <input class="input-text__input-text" id="first-name" type="text" placeholder="Имя">
+              <input class="input-text__input-t-submit" type="submit">
+            </div>
+          </div>
+          <div class="sign-up__input">
+            <div class="input-text">
+              <input class="input-text__input-text" id="first-name" type="text" placeholder="Фамилия">
+              <input class="input-text__input-t-submit" type="submit">
+            </div>
+          </div>
+          <div class="sign-up__gender clearfix">
+            <div class="sign-up__radio-button">
+              <div class="radio-button">
+                <input class="radio-button__input" id="g-male" type="radio" name="gender" value="m" checked>
+                <label class="radio-button__label" for="g-male">Мужчина</label>
+              </div>
+            </div>
+            <div class="sign-up__radio-button">
+              <div class="radio-button">
+                <input class="radio-button__input" id="g-female" type="radio" name="gender" value="f">
+                <label class="radio-button__label" for="g-female">Женщина</label>
+              </div>
+            </div>
+          </div>
+          <div class="sign-up__birthday">
+            <div class="sign-up__label">
+              <label class="label clearfix">
+                <h3 class="label__left h3">Дата рождения</h3><span class="label__right"></span>
+              </label>
+            </div>
+            <div class="sign-up__input">
+              <div class="input-text">
+                <input class="input-text__input-text" id="sign-up__input-birthday" type="text" placeholder="ДД.ММ.ГГГГ">
+                <input class="input-text__input-t-submit" type="submit">
+              </div>
+            </div>
+          </div>
+          <div class="sign-up__email">
+            <div class="sign-up__label">
+              <label class="label clearfix">
+                <h3 class="label__left h3">Данные для входа в сервис</h3><span class="label__right"></span>
+              </label>
+            </div>
+            <div class="sign-up__input">
+              <div class="input-text">
+                <input class="input-text__input-text" id="sign-up__input-email" type="text" placeholder="Email">
+                <input class="input-text__input-t-submit" type="submit">
+              </div>
+            </div>
+          </div>
+          <div class="sign-up__input">
+            <div class="input-text">
+              <input class="input-text__input-text" id="sign-up__input-password" type="text" placeholder="Пароль">
+              <input class="input-text__input-t-submit" type="submit">
+            </div>
+          </div>
+          <div class="sign-up__toggle">
+            <div class="toggle-button">
+              <div class="toggle-button__toggle">
+                <input class="toggle-button__input" id="sign-up__toggle-promote" type="checkbox">
+                <label class="toggle-button__label" for="sign-up__toggle-promote">Получать спецпредложения</label>
+              </div>
+            </div>
+          </div>
+          <div class="sign-up__pay-button"><a class="button button--default" href="javascript:void(0);"><span class="button__arrow">Перейти к оплате<i class="material-icons arrow">arrow_forward</i></span></a>
+          </div>
+          <div class="sign-up__auth clearfix">
+            <div class="sign-up__auth-hint"><span class="body body--black">Уже есть аккаунт на Toxin</span></div>
+            <div class="sign-up__auth-button"><a class="button button--transparent" href="javascript:void(0);">Войти</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="column column--4 second">
