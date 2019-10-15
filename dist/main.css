@@ -457,7 +457,8 @@
   .dropdown__icon {
     position: absolute;
     cursor: pointer;
-    right: 10px; }
+    right: 10px;
+    top: 10px; }
   .dropdown .dropdown__menu {
     position: absolute;
     width: 100%;
