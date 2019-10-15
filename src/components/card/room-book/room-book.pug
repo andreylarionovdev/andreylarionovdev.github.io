@@ -1,7 +1,7 @@
 include ../../form/label/label
 include ../../form/dropdown/dropdown
 
-mixin room-book(roomNumber, pricePerDay, options)
+mixin room-book(roomNumber, pricePerDay, discount, fee, options)
   - const blockName = 'room-book'
   - var feature = ''
 
@@ -40,23 +40,30 @@ mixin room-book(roomNumber, pricePerDay, options)
           'room-book__arrival-date',
           {emptyValue: '3 гостя'}
         )
-    table(class=blockName+'__result')
+    table(class=blockName+'__result' cellspacing='0' cellpadding='0')
       tbody
         tr.body
-          th= '9990'.toLocaleString('ru-RU')+'₽ x 4 суток'
-          td
-            i.material-icons= 'info_outline'
-          td= '39960'.toLocaleString('ru-RU')+'₽'
-        tr
-          th= 'Сбор за услуги: скидка 2179'.toLocaleString('ru-RU')+'₽'
-          td
-            i.material-icons= 'info_outline'
-          td
-        tr
-          th
-          td
+          th(class=blockName+'__th')= pricePerDay.toLocaleString('ru-RU')+'₽ x 4 суток'
+          td(class=blockName+'__td-icon')
+          td(class=blockName+'__td')= (pricePerDay*4).toLocaleString('ru-RU')+'₽'
+        tr.body
+          th(class=blockName+'__th')= 'Сбор за услуги: скидка '+ discount.toLocaleString('ru-RU')+'₽'
+          td(class=blockName+'__td-icon')
+            i(class=blockName+'__info')= 'i'
+          td(class=blockName+'__td')= '0₽'
+        tr.body
+          th(class=blockName+'__th')= 'Сбор за дополнительные услуги'
+          td(class=blockName+'__td-icon')
+            i(class=blockName+'__info')= 'i'
+          td(class=blockName+'__td')= fee.toLocaleString('ru-RU')+'₽'
       tfoot
-        tr
-          th
-          td
-
+        tr(class=blockName+'__total')
+          th(class=blockName+'__total-label')= 'Итого'
+          td(class=blockName+'__total-underscore')
+          td(class=blockName+'__total-value')= (pricePerDay*4-discount+fee).toLocaleString('ru-RU')+'₽'
+    div(class=blockName+'__button')
+      +button(
+        'default',
+        'Забронировать',
+        {withArrow: true}
+      )

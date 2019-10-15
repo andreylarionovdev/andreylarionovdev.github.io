@@ -32,6 +32,7 @@
     font-size: 24px;
     margin-left: 4px;
     margin-right: 1px;
+    color: $color-dark-100;
   }
   &__feature {
     color: $color-purple;
@@ -73,5 +74,88 @@
   &__dropdown {
     height: 44px;
     margin: 5px 0;
+  }
+  &__result {
+    border: none;
+    width: 100%;
+  }
+  &__th,
+  &__td {
+    padding-left: 1px;
+    padding-top: 14px;
+    height: 33px;
+    line-height: 20px;
+    vertical-align: top;
+  }
+  &__th {
+    font-weight: normal;
+    text-align: left;
+    width: 68%;
+  }
+  &__td {
+    text-align: right;
+  }
+  &__td-icon {
+    text-align: left;
+    padding-top: 11px;
+    padding-left: 4px;
+    vertical-align: top;
+    color: $color-dark-25;
+  }
+  &__total {
+    vertical-align: bottom;
+    height: 52px;
+  }
+  &__total-label,
+  &__total-value {
+    width: 20%;
+    font-size: 19px;
+  }
+  &__total-label {
+    text-align: left;
+    font-size: 19px;
+    font-family: Open Sans, sans-serif;
+    vertical-align: bottom;
+    &:after {
+      content: '';
+      display: inline-block;
+      height: 1px;
+      width: 72%;
+      border-bottom: 1px dotted $color-dark-25;
+    }
+  }
+  &__total-underscore {
+    text-align: left;
+    font-size: 19px;
+    font-family: Open Sans, sans-serif;
+    vertical-align: bottom;
+    &:after {
+      content: '';
+      display: inline-block;
+      height: 1px;
+      width: 90%;
+      border-bottom: 1px dotted $color-dark-25;
+    }
+  }
+  &__total-value {
+    font-family: Quicksand, sans-serif;
+    text-align: right;
+    font-weight: bold;
+  }
+  &__info {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    border: 1px solid $color-dark-75;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+    border-color: $color-dark-25;
+  }
+  &__button {
+    margin-top: 19px;
   }
 }

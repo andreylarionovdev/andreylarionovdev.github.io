@@ -1197,7 +1197,8 @@
   .room-book__number-value {
     font-size: 24px;
     margin-left: 4px;
-    margin-right: 1px; }
+    margin-right: 1px;
+    color: #1F2041; }
   .room-book__feature {
     color: #BC9CFF; }
   .room-book__price-per-day {
@@ -1222,6 +1223,73 @@
   .room-book__dropdown {
     height: 44px;
     margin: 5px 0; }
+  .room-book__result {
+    border: none;
+    width: 100%; }
+  .room-book__th, .room-book__td {
+    padding-left: 1px;
+    padding-top: 14px;
+    height: 33px;
+    line-height: 20px;
+    vertical-align: top; }
+  .room-book__th {
+    font-weight: normal;
+    text-align: left;
+    width: 68%; }
+  .room-book__td {
+    text-align: right; }
+  .room-book__td-icon {
+    text-align: left;
+    padding-top: 11px;
+    padding-left: 4px;
+    vertical-align: top;
+    color: rgba(31, 32, 65, 0.25); }
+  .room-book__total {
+    vertical-align: bottom;
+    height: 52px; }
+  .room-book__total-label, .room-book__total-value {
+    width: 20%;
+    font-size: 19px; }
+  .room-book__total-label {
+    text-align: left;
+    font-size: 19px;
+    font-family: Open Sans, sans-serif;
+    vertical-align: bottom; }
+    .room-book__total-label:after {
+      content: '';
+      display: inline-block;
+      height: 1px;
+      width: 72%;
+      border-bottom: 1px dotted rgba(31, 32, 65, 0.25); }
+  .room-book__total-underscore {
+    text-align: left;
+    font-size: 19px;
+    font-family: Open Sans, sans-serif;
+    vertical-align: bottom; }
+    .room-book__total-underscore:after {
+      content: '';
+      display: inline-block;
+      height: 1px;
+      width: 90%;
+      border-bottom: 1px dotted rgba(31, 32, 65, 0.25); }
+  .room-book__total-value {
+    font-family: Quicksand, sans-serif;
+    text-align: right;
+    font-weight: bold; }
+  .room-book__info {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    border: 1px solid rgba(31, 32, 65, 0.75);
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+    border-color: rgba(31, 32, 65, 0.25); }
+  .room-book__button {
+    margin-top: 19px; }
 
 .room-search {
   border: 1px solid rgba(0, 0, 0, 0.12);
