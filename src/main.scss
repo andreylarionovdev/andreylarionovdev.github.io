@@ -57,12 +57,12 @@ $grad-green: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 @import 'components/form/groups/feature-group';
 @import 'components/form/feature/feature';
 @import 'components/form/feedback/feedback';
-@import 'components/cards/booking/booking';
-@import 'components/cards/calendar/calendar';
-@import 'components/cards/room-search/room-search';
-@import 'components/cards/room-thumb/room-thumb';
-@import 'components/cards/sign-in/sign-in';
-@import 'components/cards/sign-up/sign-up';
+@import 'components/card/room-book/room-book';
+@import 'components/card/calendar/calendar';
+@import 'components/card/room-search/room-search';
+@import 'components/card/room-thumb/room-thumb';
+@import 'components/card/sign-in/sign-in';
+@import 'components/card/sign-up/sign-up';
 
 *, *:after, *:before {
     -webkit-box-sizing: border-box;

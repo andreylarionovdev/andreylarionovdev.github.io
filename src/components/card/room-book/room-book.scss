@@ -1,0 +1,77 @@
+@import '../card';
+.room-book {
+  @include card;
+  padding: 39px 30px 29px 27px;
+  &__number,
+  &__feature {
+    float: left;
+  }
+  &__headline {
+    vertical-align: bottom;
+    margin-bottom: 8px;
+  }
+  &__number {
+    vertical-align: bottom;
+    font-family: Quicksand, sans-serif;
+  }
+  &__number-sign,
+  &__number-value,
+  &__number-feature {
+    display: inline-block;
+    height: 30px;
+  }
+  &__number-sign,
+  &__number-value {
+    font-weight: bold;
+  }
+
+  &__number-sign {
+    font-size: 14px;
+  }
+  &__number-value {
+    font-size: 24px;
+    margin-left: 4px;
+    margin-right: 1px;
+  }
+  &__feature {
+    color: $color-purple;
+  }
+  &__price-per-day {
+    font-family: Montserrat, sans-serif;
+    vertical-align: bottom;
+    float: right;
+    line-height: 39px;
+  }
+  &__date-unit,
+  &__cost {
+    display: inline-block;
+    height: 30px;
+  }
+  &__cost {
+    font-weight: bold;
+  }
+  &__date-unit {
+    font-size: 12px;
+  }
+  &__date-range {
+    margin-bottom: 15px;
+  }
+  &__arrival,
+  &__departure {
+    float: left;
+    width: 47%;
+  }
+  &__arrival {
+    margin-right: 6%;
+  }
+  &__departure {
+
+  }
+  &__label {
+
+  }
+  &__dropdown {
+    height: 44px;
+    margin: 5px 0;
+  }
+}

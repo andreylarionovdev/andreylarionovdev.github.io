@@ -1,0 +1,62 @@
+include ../../form/label/label
+include ../../form/dropdown/dropdown
+
+mixin room-book(roomNumber, pricePerDay, options)
+  - const blockName = 'room-book'
+  - var feature = ''
+
+  if options
+    if options.feature
+      - feature = options.feature
+
+  div(class=blockName)
+    div(class=[blockName+'__headline', 'clearfix'])
+      div(class=blockName+'__number')
+        span(class=blockName+'__number-sign')= '№'
+        span(class=blockName+'__number-value')= roomNumber
+        h3(class=[blockName+'__number-feature', 'h3', 'h3--purple'])= feature
+      div(class=[blockName+'__price-per-day', 'body'])
+        span(class=blockName+'__cost')!= pricePerDay.toLocaleString('ru-RU')+'₽&nbsp;'
+        span(class=blockName+'__date-unit')= 'в сутки'
+    div(class=[blockName+'__date-range', 'clearfix'])
+      div(class=blockName+'__arrival')
+        div(class=blockName+'__label')
+          +label('Прибытие')
+        div(class=blockName+'__dropdown')
+          +dropdown('room-book__arrival-date', {emptyValue: '19.08.2019'})
+      div(class=blockName+'__departure')
+        div(class=blockName + '__label')
+          +label('Выезд')
+        div(class=blockName + '__dropdown')
+          +dropdown(
+            'room-book__departure-date',
+            {emptyValue: '23.08.2019'}
+          )
+    div(class=blockName+'__guests')
+      div(class=blockName+'__label')
+        +label('Гости')
+      div(class=blockName+'__dropdown')
+        +dropdown(
+          'room-book__arrival-date',
+          {emptyValue: '3 гостя'}
+        )
+    table(class=blockName+'__result')
+      tbody
+        tr.body
+          th= '9990'.toLocaleString('ru-RU')+'₽ x 4 суток'
+          td
+            i.material-icons= 'info_outline'
+          td= '39960'.toLocaleString('ru-RU')+'₽'
+        tr
+          th= 'Сбор за услуги: скидка 2179'.toLocaleString('ru-RU')+'₽'
+          td
+            i.material-icons= 'info_outline'
+          td
+        tr
+          th
+          td
+      tfoot
+        tr
+          th
+          td
+

@@ -6,4 +6,7 @@
   text-transform: uppercase;
   color: $color-dark-100;
   margin: 0;
+  &--purple {
+    color: $color-purple;
+  }
 }

@@ -13,7 +13,6 @@ mixin room-search()
         div(class=blockName+'__date-dropdown')
           +dropdown(
             'arrival-date',
-            null,
             {emptyValue: 'ДД.ММ.ГГГГ'}
           )
       div(class=blockName+'__departure')
@@ -22,7 +21,6 @@ mixin room-search()
         div(class=blockName+'__date-dropdown')
           +dropdown(
             'departure-date',
-            null,
             {emptyValue: 'ДД.ММ.ГГГГ'}
           )
     div(class=blockName+'__guests')
@@ -31,7 +29,6 @@ mixin room-search()
       div(class=blockName+'__guests-dropdown')
         +dropdown(
           'guests',
-          null,
           {
             type: 'json',
             emptyValue: 'Сколько гостей',

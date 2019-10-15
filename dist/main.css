@@ -237,6 +237,8 @@
   text-transform: uppercase;
   color: #1F2041;
   margin: 0; }
+  .h3--purple {
+    color: #BC9CFF; }
 
 .body {
   font-family: Montserrat, sans-serif;
@@ -1169,6 +1171,57 @@
     color: rgba(31, 32, 65, 0.75); }
   .feedback__text {
     margin-top: 10px; }
+
+.room-book {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  padding: 39px 30px 29px 27px; }
+  .room-book__number, .room-book__feature {
+    float: left; }
+  .room-book__headline {
+    vertical-align: bottom;
+    margin-bottom: 8px; }
+  .room-book__number {
+    vertical-align: bottom;
+    font-family: Quicksand, sans-serif; }
+  .room-book__number-sign, .room-book__number-value, .room-book__number-feature {
+    display: inline-block;
+    height: 30px; }
+  .room-book__number-sign, .room-book__number-value {
+    font-weight: bold; }
+  .room-book__number-sign {
+    font-size: 14px; }
+  .room-book__number-value {
+    font-size: 24px;
+    margin-left: 4px;
+    margin-right: 1px; }
+  .room-book__feature {
+    color: #BC9CFF; }
+  .room-book__price-per-day {
+    font-family: Montserrat, sans-serif;
+    vertical-align: bottom;
+    float: right;
+    line-height: 39px; }
+  .room-book__date-unit, .room-book__cost {
+    display: inline-block;
+    height: 30px; }
+  .room-book__cost {
+    font-weight: bold; }
+  .room-book__date-unit {
+    font-size: 12px; }
+  .room-book__date-range {
+    margin-bottom: 15px; }
+  .room-book__arrival, .room-book__departure {
+    float: left;
+    width: 47%; }
+  .room-book__arrival {
+    margin-right: 6%; }
+  .room-book__dropdown {
+    height: 44px;
+    margin: 5px 0; }
 
 .room-search {
   border: 1px solid rgba(0, 0, 0, 0.12);

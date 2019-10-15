@@ -1,7 +1,7 @@
 include ../label/label
 include ../button/button
 
-mixin dropdown(id, value, options)
+mixin dropdown(id, options)
   - var blockName = 'dropdown'
   - var modifiers = []
   - var data = []
@@ -25,14 +25,11 @@ mixin dropdown(id, value, options)
     if options.zIndex
       - zIndex = options.zIndex
 
-  if type === 'json'
-    - value = JSON.stringify(data)
-
   div(class=blockName class=modifiers data-type=type id=id)
     div(class=blockName+'__select')
       span(class=blockName+'__text')= emptyValue
       i(class=[blockName+'__icon', 'material-icons'])= 'keyboard_arrow_down'
-    input(class=blockName+'__input' type='hidden' value=value)
+    input(class=blockName+'__input' type='hidden')
     if type === 'json'
       ul(class=blockName+'__menu' style={'z-index': zIndex})
         each item in data

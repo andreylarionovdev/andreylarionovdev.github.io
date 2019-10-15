@@ -1,12 +1,12 @@
 extends base
 
 include components/logo/logo
-include components/cards/booking/booking
-include components/cards/calendar/calendar
-include components/cards/room-search/room-search
-include components/cards/room-thumb/room-thumb
-include components/cards/sign-in/sign-in
-include components/cards/sign-up/sign-up
+include components/card/room-book/room-book
+include components/card/calendar/calendar
+include components/card/room-search/room-search
+include components/card/room-thumb/room-thumb
+include components/card/sign-in/sign-in
+include components/card/sign-up/sign-up
 
 block vars
   - var title = 'UI Kit - Cards'
@@ -21,8 +21,11 @@ block content
       +sign-up()
   .column.column--4.second
     .ui__booking
-      +room-search()
-      +booking()
+      +room-book(
+        '888',
+        9990,
+        {feature: 'люкс'}
+      )
     .ui__sign-in
       +sign-in()
   .column.column--4.third
