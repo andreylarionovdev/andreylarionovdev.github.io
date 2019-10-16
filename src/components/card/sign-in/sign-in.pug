@@ -1,3 +1,30 @@
+include ../../form/input-text/input-text
+include ../../form/button/button
+
 mixin sign-in()
   - const blockName = 'sign-in'
   div(class=blockName)
+    h1(class=blockName+'__title').h1= 'Войти'
+    div(class=blockName+'__input')
+      +input-text(
+        'sign-in_email',
+        'Email'
+      )
+    div(class=blockName+'__input')
+      +input-text(
+        'sign-in_pass',
+        'Пароль'
+      )
+    div(class=blockName+'__login-button')
+      +button(
+        'default',
+        'Войти',
+        {withArrow: true}
+      )
+    div(class=blockName+'__create-account')
+      span.body= 'Нет аккаунта на Toxin?'
+      div(class=blockName+'__create-button')
+        +button(
+          'transparent',
+          'Создать'
+        )

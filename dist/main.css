@@ -210,7 +210,8 @@
     .ui--cards > .column.third {
       padding-left: 3.5%;
       width: 30%; } }
-  .ui--cards .ui__room-search {
+  .ui--cards .ui__room-search,
+  .ui--cards .ui__booking {
     margin-bottom: 40px; }
 
 .h1 {
@@ -1308,6 +1309,28 @@
     margin-right: 6%; }
   .room-search__button {
     margin-top: 31px; }
+
+.sign-in {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  padding: 39px 28px 29px 27px; }
+  .sign-in__title {
+    margin-bottom: 20px; }
+  .sign-in__input {
+    position: relative;
+    margin-bottom: 10px; }
+  .sign-in__login-button {
+    margin-top: 20px; }
+  .sign-in__create-account {
+    margin-top: 29px;
+    height: 46px;
+    line-height: 44px; }
+  .sign-in__create-button {
+    float: right;
+    width: 31%; }
 
 .sign-up {
   border: 1px solid rgba(0, 0, 0, 0.12);

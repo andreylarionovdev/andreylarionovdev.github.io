@@ -1,1 +1,24 @@
-.sign-in {}
+@import '../card';
+.sign-in {
+  @include card;
+  padding: 39px 28px 29px 27px;
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__input {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  &__login-button {
+    margin-top: 20px;
+  }
+  &__create-account {
+    margin-top: 29px;
+    height: 46px;
+    line-height: 44px;
+  }
+  &__create-button {
+    float: right;
+    width: 31%;
+  }
+}
