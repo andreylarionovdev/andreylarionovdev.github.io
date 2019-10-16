@@ -61,6 +61,7 @@ $(document).ready(function () {
             $(o).text(0);
         })
     });
+
     $('.dropdown__li-apply').on('click', function () {
         $(this).closest('.dropdown')
             .removeClass('dropdown--edited')
@@ -69,6 +70,14 @@ $(document).ready(function () {
 
     datepickerFactory($);
     datepickerJAFactory($);
+
     $.datepicker.setDefaults($.datepicker.regional['ru']);
-    $('.dropdown--with-datepicker').find('input').datepicker();
+
+    $('.dropdown--with-datepicker').find('input').datepicker({
+        onSelect: function (value, data) {
+            var $input = data.input;
+            var $thatDropdown = $input.closest('.dropdown');
+            $thatDropdown.find('.dropdown__text').text(value);
+        }
+    });
 });
