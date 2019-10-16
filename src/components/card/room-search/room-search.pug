@@ -13,7 +13,10 @@ mixin room-search()
         div(class=blockName+'__date-dropdown')
           +dropdown(
             'arrival-date',
-            {emptyValue: 'ДД.ММ.ГГГГ'}
+            {
+              type: 'datepicker',
+              emptyValue: 'ДД.ММ.ГГГГ'
+            }
           )
       div(class=blockName+'__departure')
         div(class=blockName+'__label')
@@ -21,7 +24,10 @@ mixin room-search()
         div(class=blockName+'__date-dropdown')
           +dropdown(
             'departure-date',
-            {emptyValue: 'ДД.ММ.ГГГГ'}
+              {
+                type: 'datepicker',
+                emptyValue: 'ДД.ММ.ГГГГ'
+              }
           )
     div(class=blockName+'__guests')
       div(class=blockName+'__label')

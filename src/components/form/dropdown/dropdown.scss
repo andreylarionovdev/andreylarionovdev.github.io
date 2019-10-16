@@ -27,6 +27,11 @@
         right: 10px;
         top: 10px;
     }
+    &__input {
+        height: 0;
+        width: 0;
+        border: 0;
+    }
     #{$menu} {
         position: absolute;
         width: 100%;
