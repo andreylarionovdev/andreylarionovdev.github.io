@@ -58,9 +58,11 @@ mixin room-book(roomNumber, pricePerDay, discount, fee, options)
           td(class=blockName+'__td')= fee.toLocaleString('ru-RU')+'₽'
       tfoot
         tr(class=blockName+'__total')
-          th(class=blockName+'__total-label')= 'Итого'
-          td(class=blockName+'__total-underscore')
-          td(class=blockName+'__total-value')= (pricePerDay*4-discount+fee).toLocaleString('ru-RU')+'₽'
+          th(class=blockName+'__total-th')
+            span(class=blockName+'__total-word')= 'Итого'
+          td(class=blockName+'__total-line')
+          td(class=blockName+'__total-td')
+            span(class=blockName+'__total-value')= (pricePerDay*4-discount+fee).toLocaleString('ru-RU')+'₽'
     div(class=blockName+'__button')
       +button(
         'default',
