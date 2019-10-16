@@ -4,25 +4,25 @@
     font-size: 12px;
 
     &--hovered {
-        #{$parent}__input-text {
+        #{$parent}__input {
             outline: none;
             border: 1px solid $color-dark-50;
         }
-        #{$parent}__input-t-submit {
+        #{$parent}__submit-button {
             border: 1px solid $color-dark-50;
             border-left: none;
         }
     }
     &--visible {
-        #{$parent}__input-text {
+        #{$parent}__input {
             display: inline;
         }
-        #{$parent}__input-t-submit {
+        #{$parent}__submit-button {
             display: inline;
             cursor: pointer;
         }
     }
-    &__input-text {
+    &__input {
         bottom: 0;
         left: 0;
         position: absolute;
@@ -40,13 +40,13 @@
             outline: none;
             border: 1px solid $color-dark-50;
         }
-        &:focus + #{$parent}__input-t-submit,
-        &:hover + #{$parent}__input-t-submit {
+        &:focus + #{$parent}__submit-button,
+        &:hover + #{$parent}__submit-button {
             border: 1px solid $color-dark-50;
             border-left: none;
         }
     }
-    &__input-t-submit {
+    &__submit-button {
         display: none;
         position: absolute;
         right: 0;

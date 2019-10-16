@@ -362,18 +362,18 @@
 .input-text {
   height: 44px;
   font-size: 12px; }
-  .input-text--hovered .input-text__input-text {
+  .input-text--hovered .input-text__input {
     outline: none;
     border: 1px solid rgba(31, 32, 65, 0.5); }
-  .input-text--hovered .input-text__input-t-submit {
+  .input-text--hovered .input-text__submit-button {
     border: 1px solid rgba(31, 32, 65, 0.5);
     border-left: none; }
-  .input-text--visible .input-text__input-text {
+  .input-text--visible .input-text__input {
     display: inline; }
-  .input-text--visible .input-text__input-t-submit {
+  .input-text--visible .input-text__submit-button {
     display: inline;
     cursor: pointer; }
-  .input-text__input-text {
+  .input-text__input {
     bottom: 0;
     left: 0;
     position: absolute;
@@ -387,14 +387,14 @@
     font-size: 14px;
     color: rgba(31, 32, 65, 0.75);
     padding: 0 14px; }
-    .input-text__input-text:focus, .input-text__input-text:hover {
+    .input-text__input:focus, .input-text__input:hover {
       outline: none;
       border: 1px solid rgba(31, 32, 65, 0.5); }
-    .input-text__input-text:focus + .input-text__input-t-submit,
-    .input-text__input-text:hover + .input-text__input-t-submit {
+    .input-text__input:focus + .input-text__submit-button,
+    .input-text__input:hover + .input-text__submit-button {
       border: 1px solid rgba(31, 32, 65, 0.5);
       border-left: none; }
-  .input-text__input-t-submit {
+  .input-text__submit-button {
     display: none;
     position: absolute;
     right: 0;
