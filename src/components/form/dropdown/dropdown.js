@@ -1,5 +1,3 @@
-import datepickerFactory from 'jquery-datepicker';
-import datepickerJAFactory from 'jquery-datepicker/i18n/jquery.ui.datepicker-ru'
 $(document).ready(function () {
     var $select         = $('.dropdown__select')
         , expandedClass = 'dropdown--expanded'
@@ -11,7 +9,7 @@ $(document).ready(function () {
         var $dropdown = $(this).closest('.dropdown');
         // .. if with datepicker
         if ($dropdown.hasClass('dropdown--with-datepicker')) {
-            $dropdown.find('input').datepicker('show');
+            $dropdown.find('input').datepicker().data('datepicker').show();
         }
         //// .. if with drop menu ..
         if ($dropdown.find('.dropdown__menu').length === 1) {
@@ -68,16 +66,12 @@ $(document).ready(function () {
             .removeClass('dropdown--expanded');
     });
 
-    datepickerFactory($);
-    datepickerJAFactory($);
-
-    $.datepicker.setDefaults($.datepicker.regional['ru']);
-
     $('.dropdown--with-datepicker').find('input').datepicker({
-        onSelect: function (value, data) {
-            var $input = data.input;
+        range: true,
+        onSelect: function (formattedDate, date, inst) {
+            var $input = $(inst.el);
             var $thatDropdown = $input.closest('.dropdown');
-            $thatDropdown.find('.dropdown__text').text(value);
+            $thatDropdown.find('.dropdown__text').text(formattedDate);
         }
-    });
+    })
 });

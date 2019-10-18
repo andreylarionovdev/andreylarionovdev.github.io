@@ -32,7 +32,7 @@ mixin dropdown(id, options)
     div(class=blockName+'__select')
       span(class=blockName+'__text')= emptyValue
       i(class=[blockName+'__icon', 'material-icons'])= 'keyboard_arrow_down'
-    input(class=blockName+'__input' type='text' name=id)
+      input(class=blockName+'__input' type='text' name=id)
     if type === 'json'
       ul(class=blockName+'__menu' style={'z-index': zIndex})
         each item in data

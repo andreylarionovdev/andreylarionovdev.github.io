@@ -2,6 +2,7 @@
 import '../node_modules/ion-rangeslider/js/ion.rangeSlider.min.js'
 import '../node_modules/paginationjs/dist/pagination.min.js'
 import '../node_modules/jquery-datepicker/jquery-datepicker.js'
+import '../node_modules/air-datepicker/dist/js/datepicker.min'
 
 // App
 import './components/form/range-slider/range-slider'

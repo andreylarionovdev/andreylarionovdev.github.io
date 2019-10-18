@@ -47,7 +47,15 @@ mixin room-book(roomNumber, pricePerDay, discount, fee, options)
       div(class=blockName+'__dropdown')
         +dropdown(
           'room-book__arrival-date',
-          {emptyValue: '3 гостя'}
+          {
+            type: 'json',
+            emptyValue: '3 гостя',
+            data: [
+              {count: 2, text: 'взрослые', name: 'adult'},
+              {count: 1, text: 'дети', name: 'kids'},
+              {count: 0, text: 'младенцы', name: 'baby'}
+            ]
+          }
         )
     table(class=blockName+'__result' cellspacing='0' cellpadding='0')
       tbody

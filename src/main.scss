@@ -17,6 +17,7 @@ $color-dark-100: #1F2041;
 $grad-purple: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 $grad-green: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 
+@import '../node_modules/air-datepicker/dist/css/datepicker.min.css';
 @import 'fonts/fonts.css';
 @import 'components/container/container';
 @import 'components/h1/h1';
