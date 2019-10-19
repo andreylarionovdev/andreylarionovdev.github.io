@@ -33,33 +33,5 @@ mixin dropdown(id, options)
       span(class=blockName+'__text')= emptyValue
       i(class=[blockName+'__icon', 'material-icons'])= 'keyboard_arrow_down'
       input(class=blockName+'__input' type='text' name=id)
-    if type === 'json'
-      ul(class=blockName+'__menu' style={'z-index': zIndex})
-        each item in data
-          li(class=blockName+'__li' class='clearfix' data-name=item.name)
-            span(class=blockName+'__li-name')= item.text
-            span(class=blockName+'__li-inc')= '+'
-            span(class=blockName+'__li-count')= item.count
-            span(class=blockName+'__li-dec')= '-'
-        li(class=[blockName+'__li'] class='clearfix' data-actions)
-          span(class=blockName+'__li-clear')
-            +button(
-              'textual',
-              'очистить',
-              {
-                hover: true,
-                attributes: {
-                  'data-action': 'clear'
-                }
-              }
-            )
-          span(class=blockName+'__li-apply')
-            +button(
-              'textual',
-              'применить',
-              {
-                attributes: {
-                  'data-action': 'apply'
-                }
-              }
-            )
+    if type === 'select-box'
+      include dropdown-select-box

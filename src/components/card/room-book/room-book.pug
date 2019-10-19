@@ -48,7 +48,7 @@ mixin room-book(roomNumber, pricePerDay, discount, fee, options)
         +dropdown(
           'room-book__check-in-date',
           {
-            type: 'json',
+            type: 'select-box',
             emptyValue: '3 гостя',
             data: [
               {count: 2, text: 'взрослые', name: 'adult'},
