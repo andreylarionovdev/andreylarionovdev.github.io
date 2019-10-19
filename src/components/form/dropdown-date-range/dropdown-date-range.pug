@@ -1,0 +1,29 @@
+include ../../form/label/label
+include ../../form/dropdown/dropdown
+
+mixin dropdown-date-range(id, fromValue, toValue)
+  - var blockName = 'dropdown-date-range'
+  - const mask = 'ДД.ММ.ГГГГ'
+  div(class=blockName)
+    div(class=blockName + '__from')
+      div(class=blockName + '__label')
+        +label('Прибытие')
+      div(class=blockName + '__dropdown')
+        +dropdown(
+          id + '__from-date',
+          {
+            type: 'datepicker',
+            value: fromValue || mask
+          }
+        )
+    div(class=blockName + '__to')
+      div(class=blockName + '__label')
+        +label('Выезд')
+      div(class=blockName + '__dropdown')
+        +dropdown(
+          id + '__to-date',
+          {
+            type: 'datepicker',
+            value: toValue || mask
+          }
+        )

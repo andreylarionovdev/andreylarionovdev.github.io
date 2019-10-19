@@ -7,10 +7,6 @@ $(document).ready(function () {
     //// By click on select ...
     $select.on('click', function () {
         var $dropdown = $(this).closest('.dropdown');
-        // .. if with datepicker
-        if ($dropdown.hasClass('dropdown--with-datepicker')) {
-            $dropdown.find('input').datepicker().data('datepicker').show();
-        }
         //// .. if with drop menu ..
         if ($dropdown.find('.dropdown__menu').length === 1) {
             //// ... toggle modifying class on parent dropdown
@@ -65,13 +61,4 @@ $(document).ready(function () {
             .removeClass('dropdown--edited')
             .removeClass('dropdown--expanded');
     });
-
-    $('.dropdown--with-datepicker').find('input').datepicker({
-        range: true,
-        onSelect: function (formattedDate, date, inst) {
-            var $input = $(inst.el);
-            var $thatDropdown = $input.closest('.dropdown');
-            $thatDropdown.find('.dropdown__text').text(formattedDate);
-        }
-    })
 });

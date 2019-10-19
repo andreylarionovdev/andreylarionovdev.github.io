@@ -37,6 +37,9 @@
   &__feature {
     color: $color-purple;
   }
+  &__guests {
+    margin-top: 16px;
+  }
   &__price-per-day {
     font-family: Montserrat, sans-serif;
     vertical-align: bottom;
@@ -53,28 +56,6 @@
   }
   &__date-unit {
     font-size: 12px;
-  }
-  &__date-range {
-    margin-bottom: 15px;
-  }
-  &__check-in,
-  &__check-out {
-    float: left;
-    width: 47%;
-  }
-  &__check-in {
-    margin-right: 6%;
-  }
-  &__check-out {
-
-  }
-  &__label {
-
-  }
-  &__dropdown {
-    position: relative;
-    height: 44px;
-    margin: 5px 0;
   }
   &__result {
     border: none;
@@ -105,7 +86,7 @@
   }
   &__total {
     vertical-align: bottom;
-    height: 46px;
+    height: 45px;
   }
   &__total-th,
   &__total-line,
@@ -155,5 +136,9 @@
   }
   &__button {
     margin-top: 25px;
+  }
+  &__dropdown {
+    margin: 5px auto;
+    height: 44px;
   }
 }

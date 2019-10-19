@@ -9,22 +9,22 @@
     margin-bottom: 5px;
   }
   &__guests {
-    margin-top: 21px;
+    margin-top: 16px;
   }
   &__guests-dropdown,
   &__date-dropdown {
     position: relative;
     height: 44px;
   }
-  &__check-in,
-  &__check-out {
+  &__from,
+  &__to {
     float: left;
     width: 47%;
   }
-  &__check-in {
+  &__from {
     margin-right: 6%;
   }
-  &__check-out {
+  &__to {
 
   }
   &__button {

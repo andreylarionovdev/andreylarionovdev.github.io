@@ -58,6 +58,7 @@ $grad-green: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 @import 'components/form/groups/feature-group';
 @import 'components/form/feature/feature';
 @import 'components/form/feedback/feedback';
+@import 'components/form/dropdown-date-range/dropdown-date-range';
 @import 'components/card/room-book/room-book';
 @import 'components/card/calendar/calendar';
 @import 'components/card/room-search/room-search';
@@ -66,40 +67,44 @@ $grad-green: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 @import 'components/card/sign-up/sign-up';
 
 *, *:after, *:before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
+
 input[type=text] {
-    appearance: none;
+  appearance: none;
 }
+
 ::placeholder {
-    color: $color-dark-50;
+  color: $color-dark-50;
 }
+
 body {
-    font-family: Quicksand, sans-serif;
-    margin: 0;
-    //// ... 767px
-    //@media (max-width: $screen-xs-max) {
-    //    background-color: brown;
-    //}
-    //// 768px ... 991px
-    //@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-    //    background-color: blue;
-    //}
-    //// 992px ... 1199px
-    //@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-    //    background-color: yellow;
-    //}
-    //// 1200px ...
-    //@media (min-width: $screen-lg-min) {
-    //    background-color: green;
-    //}
+  font-family: Quicksand, sans-serif;
+  margin: 0;
+  //// ... 767px
+  //@media (max-width: $screen-xs-max) {
+  //    background-color: brown;
+  //}
+  //// 768px ... 991px
+  //@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  //    background-color: blue;
+  //}
+  //// 992px ... 1199px
+  //@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  //    background-color: yellow;
+  //}
+  //// 1200px ...
+  //@media (min-width: $screen-lg-min) {
+  //    background-color: green;
+  //}
 }
+
 .clearfix {
-    &:after {
-        content: '';
-        display: table;
-        clear: both;
-    }
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
 }

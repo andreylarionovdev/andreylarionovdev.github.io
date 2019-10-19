@@ -1179,6 +1179,21 @@
   .feedback__text {
     margin-top: 10px; }
 
+.dropdown-date-range__from, .dropdown-date-range__to {
+  float: left;
+  width: 47%; }
+
+.dropdown-date-range__from {
+  margin-right: 6%; }
+
+.dropdown-date-range__date-range {
+  margin-bottom: 15px; }
+
+.dropdown-date-range__dropdown {
+  position: relative;
+  height: 44px;
+  margin: 5px 0; }
+
 .room-book {
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 4px;
@@ -1208,6 +1223,8 @@
     color: #1F2041; }
   .room-book__feature {
     color: #BC9CFF; }
+  .room-book__guests {
+    margin-top: 16px; }
   .room-book__price-per-day {
     font-family: Montserrat, sans-serif;
     vertical-align: bottom;
@@ -1220,17 +1237,6 @@
     font-weight: bold; }
   .room-book__date-unit {
     font-size: 12px; }
-  .room-book__date-range {
-    margin-bottom: 15px; }
-  .room-book__check-in, .room-book__check-out {
-    float: left;
-    width: 47%; }
-  .room-book__check-in {
-    margin-right: 6%; }
-  .room-book__dropdown {
-    position: relative;
-    height: 44px;
-    margin: 5px 0; }
   .room-book__result {
     border: none;
     width: 100%; }
@@ -1254,7 +1260,7 @@
     color: rgba(31, 32, 65, 0.25); }
   .room-book__total {
     vertical-align: bottom;
-    height: 46px; }
+    height: 45px; }
   .room-book__total-th, .room-book__total-line, .room-book__total-td {
     border-bottom: 1px dotted rgba(31, 32, 65, 0.25); }
   .room-book__total-th, .room-book__total-td {
@@ -1291,6 +1297,9 @@
     border-color: rgba(31, 32, 65, 0.25); }
   .room-book__button {
     margin-top: 25px; }
+  .room-book__dropdown {
+    margin: 5px auto;
+    height: 44px; }
 
 .room-search {
   border: 1px solid rgba(0, 0, 0, 0.12);
@@ -1304,14 +1313,14 @@
   .room-search__label {
     margin-bottom: 5px; }
   .room-search__guests {
-    margin-top: 21px; }
+    margin-top: 16px; }
   .room-search__guests-dropdown, .room-search__date-dropdown {
     position: relative;
     height: 44px; }
-  .room-search__check-in, .room-search__check-out {
+  .room-search__from, .room-search__to {
     float: left;
     width: 47%; }
-  .room-search__check-in {
+  .room-search__from {
     margin-right: 6%; }
   .room-search__button {
     margin-top: 31px; }
