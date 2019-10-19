@@ -372,10 +372,16 @@
               </label>
             </div>
             <div class="dropdown-group__dropdown">
-              <div class="dropdown" data-type="empty" id="dropdown-expanded">
-                <div class="dropdown__select"><span class="dropdown__text">Выберите</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i>
+              <div class="dropdown dropdown--expanded dropdown--edited dropdown--empty" data-type="json" id="dropdown-expanded">
+                <div class="dropdown__select"><span class="dropdown__text">Сколько гостей</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i>
                   <input class="dropdown__input" type="text" name="dropdown-expanded">
                 </div>
+                <ul class="dropdown__menu" style="z-index:99;">
+                  <li class="dropdown__li clearfix" data-name="adult"><span class="dropdown__li-name">взрослые</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
+                  <li class="dropdown__li clearfix" data-name="kids"><span class="dropdown__li-name">дети</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
+                  <li class="dropdown__li clearfix" data-name="baby"><span class="dropdown__li-name">младенцы</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
+                  <li class="dropdown__li clearfix" data-actions><span class="dropdown__li-clear"><a class="button button--textual button--hovered" href="javascript:void(0);" data-action="clear">очистить</a></span><span class="dropdown__li-apply"><a class="button button--textual" href="javascript:void(0);" data-action="apply">применить</a></span></li>
+                </ul>
               </div>
             </div>
           </div>
@@ -390,10 +396,16 @@
               </label>
             </div>
             <div class="dropdown-group__dropdown">
-              <div class="dropdown" data-type="empty" id="dropdown-expanded">
-                <div class="dropdown__select"><span class="dropdown__text">Выберите</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i>
+              <div class="dropdown dropdown--expanded dropdown--edited" data-type="json" id="dropdown-expanded">
+                <div class="dropdown__select"><span class="dropdown__text">3 гостя</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i>
                   <input class="dropdown__input" type="text" name="dropdown-expanded">
                 </div>
+                <ul class="dropdown__menu" style="z-index:9;">
+                  <li class="dropdown__li clearfix" data-name="adult"><span class="dropdown__li-name">взрослые</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">2</span><span class="dropdown__li-dec">-</span></li>
+                  <li class="dropdown__li clearfix" data-name="kids"><span class="dropdown__li-name">дети</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">1</span><span class="dropdown__li-dec">-</span></li>
+                  <li class="dropdown__li clearfix" data-name="baby"><span class="dropdown__li-name">младенцы</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
+                  <li class="dropdown__li clearfix" data-actions><span class="dropdown__li-clear"><a class="button button--textual button--hovered" href="javascript:void(0);" data-action="clear">очистить</a></span><span class="dropdown__li-apply"><a class="button button--textual" href="javascript:void(0);" data-action="apply">применить</a></span></li>
+                </ul>
               </div>
             </div>
           </div>
