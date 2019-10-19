@@ -7,23 +7,23 @@ mixin room-search()
   div(class=[blockName, 'clearfix'])
     h1(class=[blockName+'__title', 'h1'])= 'Найдём номера под ваши пожелания'
     .clearfix
-      div(class=blockName+'__arrival')
+      div(class=blockName+'__check-in')
         div(class=blockName+'__label')
           +label('Прибытие')
         div(class=blockName+'__date-dropdown')
           +dropdown(
-            'arrival-date',
+            'check-in-date',
             {
               type: 'datepicker',
               emptyValue: 'ДД.ММ.ГГГГ'
             }
           )
-      div(class=blockName+'__departure')
+      div(class=blockName+'__check-out')
         div(class=blockName+'__label')
           +label('Выезд')
         div(class=blockName+'__date-dropdown')
           +dropdown(
-            'departure-date',
+            'check-out-date',
               {
                 type: 'datepicker',
                 emptyValue: 'ДД.ММ.ГГГГ'

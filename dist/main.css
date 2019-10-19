@@ -1221,10 +1221,10 @@
     font-size: 12px; }
   .room-book__date-range {
     margin-bottom: 15px; }
-  .room-book__arrival, .room-book__departure {
+  .room-book__check-in, .room-book__check-out {
     float: left;
     width: 47%; }
-  .room-book__arrival {
+  .room-book__check-in {
     margin-right: 6%; }
   .room-book__dropdown {
     position: relative;
@@ -1307,10 +1307,10 @@
   .room-search__guests-dropdown, .room-search__date-dropdown {
     position: relative;
     height: 44px; }
-  .room-search__arrival, .room-search__departure {
+  .room-search__check-in, .room-search__check-out {
     float: left;
     width: 47%; }
-  .room-search__arrival {
+  .room-search__check-in {
     margin-right: 6%; }
   .room-search__button {
     margin-top: 31px; }
