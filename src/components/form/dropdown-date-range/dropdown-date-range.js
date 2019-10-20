@@ -16,18 +16,10 @@ $(document).ready(function () {
             },
             prevHtml: '<i class="material-icons">arrow_back</i>',
             nextHtml: '<i class="material-icons">arrow_forward</i>',
-            onSelect: function (formattedDate, date, inst) {
-                // var formattedDates = formattedDate.split(',');
-                // $dropdownFrom.find('.dropdown__text').text(formattedDates[0]);
-                // $dropdownFrom.find('.dropdown__input').val(formattedDates[0]);
-                // if (formattedDates.length > 1) {
-                //     $dropdownTo.find('.dropdown__text').text(formattedDates[1]);
-                //     $dropdownTo.find('.dropdown__input').val(formattedDates[1]);
-                // }
-            },
-            onShow: function () {
+            onShow: function (inst) {
                 var parentWidth = $(o).outerWidth();
                 resizeDatepicker(parentWidth);
+                addActionButtons(inst.$datepicker);
             }
         }).data('datepicker');
         // Handle pre-selected date from input values
@@ -64,5 +56,48 @@ $(document).ready(function () {
         var resizeDatepicker = function (toWidth) {
             $('.datepicker.active').css('width', toWidth+'px');
         };
+
+        var clearDropdown = function ($dropdown) {
+            var emptyValue = 'ДД.ММ.ГГГГ';
+            $dropdown.find('.dropdown__text').text(emptyValue);
+            $dropdown.find('.dropdown__input').val('');
+        };
+
+        var updateDropdown = function (dates, dropdowns) {
+            var from = ('0' + dates[0].getDate()).slice(-2) + '.'
+                + ('0' + (dates[0].getMonth() + 1)).slice(-2) + '.'
+                + dates[0].getFullYear();
+            dropdowns[0].find('.dropdown__text').text(from);
+            dropdowns[0].find('.dropdown__input').val(from);
+            if (dates.length > 1) {
+                var to = ('0' + dates[1].getDate()).slice(-2) + '.'
+                    + ('0' + (dates[1].getMonth() + 1)).slice(-2) + '.'
+                    + dates[1].getFullYear();
+                dropdowns[1].find('.dropdown__text').text(to);
+                dropdowns[1].find('.dropdown__input').val(to);
+            }
+        };
+
+        var addActionButtons = function ($_datepicker) {
+            var $clearBtn = $('<a class="datepicker--clear-btn">Очистить</a>');
+            var $applyBtn = $('<a class="datepicker--apply-btn">Применить</a>');
+            if ($_datepicker.find('.datepicker--clear-btn').length === 0) {
+                $_datepicker.append($clearBtn);
+                $_datepicker.find('.datepicker--clear-btn').on('click', function () {
+                    $datepicker.clear();
+                    clearDropdown($dropdownFrom);
+                    clearDropdown($dropdownTo);
+                });
+            }
+            if ($_datepicker.find('.datepicker--apply-btn').length === 0) {
+                $_datepicker.append($applyBtn);
+                $_datepicker.find('.datepicker--apply-btn').on('click', function () {
+                    $datepicker.selectDate($datepicker.selectedDates);
+                    updateDropdown($datepicker.selectedDates, [$dropdownFrom, $dropdownTo]);
+                    $datepicker.hide();
+                });
+            }
+        };
+
     });
 });

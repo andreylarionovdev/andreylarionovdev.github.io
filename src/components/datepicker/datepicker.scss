@@ -56,8 +56,8 @@
     box-sizing: content-box;
     padding: $datepickerPadding;
   }
-  &::before,
-  &::after {
+  &--clear-btn,
+  &--apply-btn {
     cursor: pointer;
     font-family: Montserrat, sans-serif;
     font-size: 12px;
@@ -70,13 +70,11 @@
     padding: 18px;
   }
 
-  &::before {
-    content: 'Очистить';
+  &--clear-btn {
     left: 0;
     color: $color-dark-50;
   }
-  &::after {
-    content: 'Применить';
+  &--apply-btn {
     right: 0;
     color: $color-purple;
   }
