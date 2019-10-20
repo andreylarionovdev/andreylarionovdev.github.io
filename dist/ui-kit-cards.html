@@ -269,64 +269,66 @@
     </div>
     <div class="column column--4 third">
       <div class="ui__calendar">
-        <div class="room-search clearfix">
-          <h1 class="room-search__title h1">Найдём номера под ваши пожелания</h1>
-          <div class="room-search__date-range clearfix">
-            <div class="dropdown-date-range">
-              <div class="dropdown-date-range__from">
-                <div class="dropdown-date-range__label">
-                  <label class="label clearfix">
-                    <h3 class="label__left h3">Прибытие</h3><span class="label__right"></span>
-                  </label>
+        <!--+room-search()-->
+        <div class="calendar">
+          <div class="datepicker -bottom-left- -from-bottom- active">
+            <nav class="datepicker--nav">
+              <div class="datepicker--nav-action"><i class="material-icons">arrow_back</i></div>
+              <div class="datepicker--nav-title">Август<i>2019</i></div>
+              <div class="datepicker--nav-action"><i class="material-icons">arrow_forward</i></div>
+            </nav>
+            <div class="datepicker--content">
+              <div class="datepicker--days datepicker--body active">
+                <div class="datepicker--days-names">
+                  <div class="datepicker--day-name">Пн</div>
+                  <div class="datepicker--day-name">Вт</div>
+                  <div class="datepicker--day-name">Ср</div>
+                  <div class="datepicker--day-name">Чт</div>
+                  <div class="datepicker--day-name">Пт</div>
+                  <div class="datepicker--day-name -weekend-">Сб</div>
+                  <div class="datepicker--day-name -weekend-">Вс</div>
                 </div>
-                <div class="dropdown-date-range__dropdown">
-                  <div class="dropdown" data-type="datepicker" id="room-book__check-in-out__from-date">
-                    <div class="dropdown__select"><span class="dropdown__text">ДД.ММ.ГГГГ</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i>
-                      <input class="dropdown__input" type="text" name="room-book__check-in-out__from-date" value="ДД.ММ.ГГГГ">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="dropdown-date-range__to">
-                <div class="dropdown-date-range__label">
-                  <label class="label clearfix">
-                    <h3 class="label__left h3">Выезд</h3><span class="label__right"></span>
-                  </label>
-                </div>
-                <div class="dropdown-date-range__dropdown">
-                  <div class="dropdown" data-type="datepicker" id="room-book__check-in-out__to-date">
-                    <div class="dropdown__select"><span class="dropdown__text">ДД.ММ.ГГГГ</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i>
-                      <input class="dropdown__input" type="text" name="room-book__check-in-out__to-date" value="ДД.ММ.ГГГГ">
-                    </div>
-                  </div>
+                <div class="datepicker--cells datepicker--cells-days">
+                  <div class="datepicker--cell datepicker--cell-day -other-month-">29</div>
+                  <div class="datepicker--cell datepicker--cell-day -other-month-">30</div>
+                  <div class="datepicker--cell datepicker--cell-day -other-month-">31</div>
+                  <div class="datepicker--cell datepicker--cell-day">1</div>
+                  <div class="datepicker--cell datepicker--cell-day">2</div>
+                  <div class="datepicker--cell datepicker--cell-day">3</div>
+                  <div class="datepicker--cell datepicker--cell-day">4</div>
+                  <div class="datepicker--cell datepicker--cell-day">5</div>
+                  <div class="datepicker--cell datepicker--cell-day">6</div>
+                  <div class="datepicker--cell datepicker--cell-day">7</div>
+                  <div class="datepicker--cell datepicker--cell-day -focus-">8</div>
+                  <div class="datepicker--cell datepicker--cell-day">9</div>
+                  <div class="datepicker--cell datepicker--cell-day">10</div>
+                  <div class="datepicker--cell datepicker--cell-day">11</div>
+                  <div class="datepicker--cell datepicker--cell-day">12</div>
+                  <div class="datepicker--cell datepicker--cell-day">13</div>
+                  <div class="datepicker--cell datepicker--cell-day">14</div>
+                  <div class="datepicker--cell datepicker--cell-day">15</div>
+                  <div class="datepicker--cell datepicker--cell-day">16</div>
+                  <div class="datepicker--cell datepicker--cell-day">17</div>
+                  <div class="datepicker--cell datepicker--cell-day">18</div>
+                  <div class="datepicker--cell datepicker--cell-day -range-from- -selected-">19</div>
+                  <div class="datepicker--cell datepicker--cell-day -in-range-">20</div>
+                  <div class="datepicker--cell datepicker--cell-day -in-range-">21</div>
+                  <div class="datepicker--cell datepicker--cell-day -in-range-">22</div>
+                  <div class="datepicker--cell datepicker--cell-day -range-to- -selected-">23</div>
+                  <div class="datepicker--cell datepicker--cell-day">24</div>
+                  <div class="datepicker--cell datepicker--cell-day">25</div>
+                  <div class="datepicker--cell datepicker--cell-day">26</div>
+                  <div class="datepicker--cell datepicker--cell-day">27</div>
+                  <div class="datepicker--cell datepicker--cell-day">28</div>
+                  <div class="datepicker--cell datepicker--cell-day">29</div>
+                  <div class="datepicker--cell datepicker--cell-day">30</div>
+                  <div class="datepicker--cell datepicker--cell-day">31</div>
+                  <div class="datepicker--cell datepicker--cell-day -weekend- -other-month-">1</div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="room-search__guests">
-            <div class="room-search__label">
-              <label class="label clearfix">
-                <h3 class="label__left h3">Гости</h3><span class="label__right"></span>
-              </label>
-            </div>
-            <div class="room-search__guests-dropdown">
-              <div class="dropdown" data-type="select-box" id="guests">
-                <div class="dropdown__select"><span class="dropdown__text">Сколько гостей</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i>
-                  <input class="dropdown__input" type="text" name="guests" value="Сколько гостей">
-                </div>
-                <ul class="dropdown__menu" style="z-index:9;">
-                  <li class="dropdown__li clearfix" data-name="adult"><span class="dropdown__li-name">взрослые</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
-                  <li class="dropdown__li clearfix" data-name="kids"><span class="dropdown__li-name">дети</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
-                  <li class="dropdown__li clearfix" data-name="baby"><span class="dropdown__li-name">младенцы</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
-                  <li class="dropdown__li clearfix" data-actions><span class="dropdown__li-clear"><a class="button button--textual button--hovered" href="javascript:void(0);" data-action="clear">очистить</a></span><span class="dropdown__li-apply"><a class="button button--textual" href="javascript:void(0);" data-action="apply">применить</a></span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="room-search__button"><a class="button button--default" href="javascript:void(0);"><span class="button__arrow">Подобрать номер<i class="material-icons arrow">arrow_forward</i></span></a>
           </div>
         </div>
-        <div class="calendar"></div>
       </div>
       <div class="ui__room-thumb--vip">
         <div class="room-thumb"></div>

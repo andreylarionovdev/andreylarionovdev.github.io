@@ -1,0 +1,184 @@
+@import 'datepicker-config';
+
+.datepicker {
+  &--cells {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &--cell {
+    border-radius: 22px;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: $datepickerDayCellSize;
+    font-size: 12px;
+    line-height: 15px;
+    z-index: 1;
+    color: $color-dark-50;
+
+    &.-focus- {
+      background: $grad-green;
+      color: white;
+      font-weight: bold;
+      &.-range-from-,
+      &.-range-to- {
+        background: $grad-purple;
+      }
+      &.-in-range- {
+        background: $grad-purple-25;
+        color: white;
+      }
+    }
+
+    &.-current- {
+      color: map_get($datepickerTextColor, currentDate);
+
+      &.-focus- {
+        color: map_get($datepickerTextColor, common);
+      }
+
+      &.-in-range- {
+        color: map_get($datepickerTextColor, currentDate);
+      }
+    }
+
+    &.-in-range- {
+      border-radius: 0;
+      background: $grad-purple-25;
+      color: $color-dark-50;
+
+      &.-focus- {
+        background-color: $grad-purple-25;
+      }
+    }
+
+    &.-disabled- {
+      cursor: default;
+      color: map_get($datepickerTextColor, disabled);
+
+      &.-focus- {
+        color: map_get($datepickerTextColor, disabled);
+      }
+
+      &.-in-range- {
+        color: darken(map_get($datepickerTextColor, disabled), 5);
+      }
+
+      &.-current- {
+        &.-focus- {
+          color: map_get($datepickerTextColor, disabled);
+        }
+      }
+    }
+
+    &.-range-from- {
+      border-radius: 22px;
+      background: $grad-purple;
+      font-weight: bold;
+      color: white;
+      &::after {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 40px;
+        background: $grad-purple-25;
+        right: 0;
+        z-index: -1;
+      }
+    }
+    &.-range-to- {
+      border-radius: 22px;
+      background: $grad-purple;
+      font-weight: bold;
+      color: white;
+      &::before {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 40px;
+        background: $grad-purple-25;
+        left: 0;
+        z-index: -1;
+      }
+    }
+
+    &.-range-from-.-range-to- {
+      border-radius: 22px;
+      background-color: $grad-purple;
+      font-weight: bold;
+    }
+
+    &.-selected- {
+      color: white;
+      border: none;
+      background: $grad-purple;
+
+      &.-current- {
+        color: #fff;
+        background: map_get($datepickerBG, selected);
+      }
+
+      &.-focus- {
+        background: $grad-purple;
+      }
+    }
+
+    &:empty {
+      cursor: default;
+    }
+  }
+  &--days-names {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &--day-name {
+    color: $color-purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 12px;
+    height: 40px;
+    font-weight: bold;
+  }
+
+  &--cell-day {
+    width: (100/7)#{'%'};
+
+    &.-other-month- {
+      @extend %otherMonth;
+    }
+  }
+
+
+  &--cells-months {
+    height: $datepickerMinBodyHeight;
+  }
+
+  &--cell-month {
+    width: 33.33%;
+    height: 25%;
+  }
+
+  &--years {
+    height: $datepickerMinBodyHeight;
+  }
+
+  &--cells-years {
+    height: $datepickerMinBodyHeight;
+  }
+
+  &--cell-year {
+    width: 100% / $datepickerYearsPerRow;
+    height: 33.33%;
+
+    &.-other-decade- {
+      @extend %otherMonth;
+    }
+  }
+}

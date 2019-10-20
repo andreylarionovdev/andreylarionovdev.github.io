@@ -1,3 +1,40 @@
 mixin calendar()
   - const blockName = 'calendar'
   div(class=blockName)
+    .datepicker.-bottom-left-.-from-bottom-.active
+      nav.datepicker--nav
+        .datepicker--nav-action
+          i.material-icons= 'arrow_back'
+        .datepicker--nav-title!= 'Август<i>2019</i>'
+        .datepicker--nav-action
+          i.material-icons= 'arrow_forward'
+      .datepicker--content
+        .datepicker--days.datepicker--body.active
+          .datepicker--days-names
+            each dayName, i in ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
+              if i < 5
+                .datepicker--day-name= dayName
+              else
+                .datepicker--day-name.-weekend-= dayName
+          .datepicker--cells.datepicker--cells-days
+            - var i = 29
+            while i < 32
+              .datepicker--cell.datepicker--cell-day.-other-month-= i
+              - i++
+            - i = 1
+            - var rangeStartEnd = [19, 23]
+            - var inRange = [20,21,22]
+            while i < 32
+              if rangeStartEnd.indexOf(i) !== -1 || inRange.indexOf(i) !== -1 || i === 8
+                if i === 8
+                  .datepicker--cell.datepicker--cell-day.-focus-= i
+                if i === 19
+                  .datepicker--cell.datepicker--cell-day.-range-from-.-selected-= i
+                if i === 23
+                  .datepicker--cell.datepicker--cell-day.-range-to-.-selected-= i
+                if inRange.indexOf(i) !== -1
+                  .datepicker--cell.datepicker--cell-day.-in-range-= i
+              else
+                .datepicker--cell.datepicker--cell-day= i
+              - i++
+            .datepicker--cell.datepicker--cell-day.-weekend-.-other-month-= '1'

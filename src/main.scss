@@ -15,9 +15,13 @@ $color-dark-50: rgba(31, 32, 65, 0.5);
 $color-dark-75: rgba(31, 32, 65, 0.75);
 $color-dark-100: #1F2041;
 $grad-purple: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+$grad-purple-25: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
 $grad-green: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 
-@import '../node_modules/air-datepicker/dist/css/datepicker.min.css';
+//@import '../node_modules/air-datepicker/dist/css/datepicker.min.css';
+@import 'components/datepicker/datepicker';
+@import 'components/datepicker/navigation';
+@import 'components/datepicker/cell';
 @import 'fonts/fonts.css';
 @import 'components/container/container';
 @import 'components/h1/h1';
