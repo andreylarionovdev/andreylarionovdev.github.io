@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .datepicker--cell-day.-other-month-, .datepicker--cell-year.-other-decade- {
   color: #dedede; }
   .datepicker--cell-day.-other-month-:hover, .datepicker--cell-year.-other-decade-:hover {
@@ -37,6 +38,7 @@
   font-size: 14px;
   color: #4a4a4a;
   padding: 15px;
+  padding-bottom: 50px;
   position: absolute;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease, left 0s 0.3s, -webkit-transform 0.3s ease;
@@ -72,6 +74,25 @@
     -webkit-box-sizing: content-box;
             box-sizing: content-box;
     padding: 4px; }
+  .datepicker::before, .datepicker::after {
+    cursor: pointer;
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: bold;
+    display: inline-block;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 0;
+    padding: 18px; }
+  .datepicker::before {
+    content: 'Очистить';
+    left: 0;
+    color: rgba(31, 32, 65, 0.5); }
+  .datepicker::after {
+    content: 'Применить';
+    right: 0;
+    color: #BC9CFF; }
 
 .datepicker-inline .datepicker {
   border-color: #d7d7d7;

@@ -11,20 +11,19 @@ $(document).ready(function () {
         ;
         var $datepicker = $inputFrom.datepicker({
             range: true,
-            autoClose: true,
             navTitles: {
                 days: 'MM <i>yyyy</i>'
             },
             prevHtml: '<i class="material-icons">arrow_back</i>',
             nextHtml: '<i class="material-icons">arrow_forward</i>',
             onSelect: function (formattedDate, date, inst) {
-                var formattedDates = formattedDate.split(',');
-                $dropdownFrom.find('.dropdown__text').text(formattedDates[0]);
-                $dropdownFrom.find('.dropdown__input').val(formattedDates[0]);
-                if (formattedDates.length > 1) {
-                    $dropdownTo.find('.dropdown__text').text(formattedDates[1]);
-                    $dropdownTo.find('.dropdown__input').val(formattedDates[1]);
-                }
+                // var formattedDates = formattedDate.split(',');
+                // $dropdownFrom.find('.dropdown__text').text(formattedDates[0]);
+                // $dropdownFrom.find('.dropdown__input').val(formattedDates[0]);
+                // if (formattedDates.length > 1) {
+                //     $dropdownTo.find('.dropdown__text').text(formattedDates[1]);
+                //     $dropdownTo.find('.dropdown__input').val(formattedDates[1]);
+                // }
             },
             onShow: function () {
                 var parentWidth = $(o).outerWidth();
