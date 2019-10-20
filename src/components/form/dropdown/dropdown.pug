@@ -29,6 +29,6 @@ mixin dropdown(id, options)
     div(class=blockName+'__select')
       span(class=blockName+'__text')= value
       i(class=[blockName+'__icon', 'material-icons'])= 'keyboard_arrow_down'
-      input(class=blockName+'__input' type='text' name=id)
+      input(class=blockName+'__input' type='text' name=id value=value)
     if type === 'select-box'
       include dropdown-select-box

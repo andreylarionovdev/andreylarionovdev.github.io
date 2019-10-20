@@ -462,6 +462,9 @@
     right: 10px;
     top: 10px; }
   .dropdown__input {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     height: 0;
     width: 0;
     border: 0; }
@@ -1224,6 +1227,7 @@
   .room-book__feature {
     color: #BC9CFF; }
   .room-book__guests {
+    position: relative;
     margin-top: 16px; }
   .room-book__price-per-day {
     font-family: Montserrat, sans-serif;

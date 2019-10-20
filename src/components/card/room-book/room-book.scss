@@ -38,6 +38,7 @@
     color: $color-purple;
   }
   &__guests {
+    position: relative;
     margin-top: 16px;
   }
   &__price-per-day {

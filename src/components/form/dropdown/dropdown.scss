@@ -1,124 +1,127 @@
 .dropdown {
-    $menu: #{&}__menu;
-    $clearBtn: #{&}__li-clear;
-    display: inline-block;
+  $menu: #{&}__menu;
+  $clearBtn: #{&}__li-clear;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  border: 1px solid $color-dark-25;
+  border-radius: 4px;
+  text-align: left;
+  color: $color-dark-75;
+  user-select: none;
+  font-family: Montserrat, sans-serif;
+  &__select {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+    padding-top: 11px;
+  }
+  &__text {
+    padding-left: 5px;
+  }
+  &__icon {
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    top: 10px;
+  }
+  &__input {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    border: 0;
+  }
+  #{$menu} {
+    position: absolute;
     width: 100%;
-    height: 100%;
-    font-size: 14px;
-    border: 1px solid $color-dark-25;
-    border-radius: 4px;
-    text-align: left;
-    color: $color-dark-75;
-    user-select: none;
-    font-family: Montserrat, sans-serif;
-    &__select {
-        position: relative;
-        cursor: pointer;
-        display: block;
-        padding: 10px;
-        padding-top: 11px;
+    left: 0;
+    overflow: hidden;
+    display: none;
+    overflow-y: auto;
+    padding: 0;
+    padding-bottom: 3px;
+    list-style: none;
+    border: 1px solid $color-dark-50;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    margin: 0;
+    margin-top: 3px;
+    box-shadow: 0 10px 20px $color-dark-5;
+    background-color: white;
+  }
+  &__li {
+    display: block;
+    padding: 5px 7px;
+    height: 38px;
+    &[data-actions] {
+      display: none;
     }
-    &__text {
-        padding-left: 5px;
+    &-clear,
+    &-apply,
+    &-name,
+    &-count {
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: bold;
     }
-    &__icon {
-        position: absolute;
-        cursor: pointer;
-        right: 10px;
-        top: 10px;
+    &-clear,
+    &-name {
+      float: left;
+      padding: 6px 7px;
     }
-    &__input {
-        height: 0;
-        width: 0;
-        border: 0;
+    &-clear,
+    &-apply {
+      padding-top: 8px;
     }
+    &-apply {
+      float: right;
+    }
+    &-count {
+      float: right;
+      padding-top: 6px;
+      width: 32px;
+      text-align: center;
+    }
+    &-dec,
+    &-inc {
+      cursor: pointer;
+      display: inline-block;
+      float: right;
+      width: 30px;
+      height: 30px;
+      border-radius: 15px;
+      font-size: 18px;
+      text-align: center;
+      vertical-align: middle;
+      padding: 3px;
+    }
+    &-dec {
+      border: 1px solid $color-dark-25;
+    }
+    &-inc {
+      border: 1px solid $color-dark-50;
+    }
+  }
+  &--expanded {
+    border: 1px solid $color-dark-50;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
     #{$menu} {
-        position: absolute;
-        width: 100%;
-        left: 0;
-        overflow: hidden;
-        display: none;
-        overflow-y: auto;
-        padding: 0;
-        padding-bottom: 3px;
-        list-style: none;
-        border: 1px solid $color-dark-50;
-        border-bottom-right-radius: 4px;
-        border-bottom-left-radius: 4px;
-        margin: 0;
-        margin-top: 3px;
-        box-shadow: 0 10px 20px $color-dark-5;
-        background-color: white;
+      display: block;
     }
-    &__li {
-        display: block;
-        padding: 5px 7px;
-        height: 38px;
-        &[data-actions] {
-            display: none;
-        }
-        &-clear,
-        &-apply,
-        &-name,
-        &-count {
-            text-transform: uppercase;
-            font-size: 12px;
-            font-weight: bold;
-        }
-        &-clear,
-        &-name {
-            float: left;
-            padding: 6px 7px;
-        }
-        &-clear,
-        &-apply {
-            padding-top: 8px;
-        }
-        &-apply {
-            float: right;
-        }
-        &-count {
-            float: right;
-            padding-top: 6px;
-            width: 32px;
-            text-align: center;
-        }
-        &-dec,
-        &-inc {
-            cursor: pointer;
-            display: inline-block;
-            float: right;
-            width: 30px;
-            height: 30px;
-            border-radius: 15px;
-            font-size: 18px;
-            text-align: center;
-            vertical-align: middle;
-            padding: 3px;
-        }
-        &-dec {
-            border: 1px solid $color-dark-25;
-        }
-        &-inc {
-            border: 1px solid $color-dark-50;
-        }
+  }
+  &--edited {
+    [data-actions] {
+      display: block;
     }
-    &--expanded {
-        border: 1px solid $color-dark-50;
-        border-bottom-right-radius: 0;
-        border-bottom-left-radius: 0;
-        #{$menu} {
-            display: block;
-        }
+  }
+  &--empty {
+    #{$clearBtn} {
+      display: none;
     }
-    &--edited {
-        [data-actions] {
-            display: block;
-        }
-    }
-    &--empty {
-        #{$clearBtn} {
-            display: none;
-        }
-    }
+  }
 }
