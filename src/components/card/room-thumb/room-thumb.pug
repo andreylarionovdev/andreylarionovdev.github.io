@@ -1,8 +1,15 @@
 include ../../form/rate-button/rate-button
 
-mixin room-thumb(roomNumber, pricePerDay, feedbackCounter, rate, images, feature)
+mixin room-thumb(roomNumber, pricePerDay, feedbackCounter, rate, images, options)
   - const blockName = 'room-thumb'
-  div(class=blockName)
+  - let feature = ''
+  - let modifiers = []
+  if options
+    if options.feature
+      - feature = options.feature
+    if options.focus
+      - modifiers.push(blockName+'--focus')
+  div(class=blockName class=modifiers)
     div(class=blockName+'__image-wrapper')
       each image, i in images
         img(class=blockName+'__image' src=require('./img/' + image))
@@ -11,6 +18,8 @@ mixin room-thumb(roomNumber, pricePerDay, feedbackCounter, rate, images, feature
           - let activeClass = blockName+'__slider-li--active'
           li(class=blockName+'__slider-li' class=i===0 ? activeClass : '')
             a(class=blockName+'__slider-a' href=require('./img/' + image))
+      a(class=[blockName + '__image-prev-btn', 'material-icons'] href='javascript:void(0)')= 'keyboard_arrow_down'
+      a(class=[blockName + '__image-next-btn', 'material-icons'] href='javascript:void(0)')= 'keyboard_arrow_down'
     div(class=[blockName+'__headline', 'clearfix'])
       div(class=blockName+'__number')
         span(class=blockName + '__number-sign')= '№'
