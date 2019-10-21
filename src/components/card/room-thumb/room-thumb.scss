@@ -1,1 +1,87 @@
-.room-thumb {}
+@import '../../card/card';
+.room-thumb {
+  @include card;
+  &__image-wrapper {
+    min-height: 151px;
+    width: 100%;
+    background: $grad-purple-25;
+    overflow: hidden;
+  }
+  &__number,
+  &__feature {
+    float: left;
+  }
+  &__headline {
+    vertical-align: bottom;
+    margin-bottom: 8px;
+    padding: 15px 17px 0 20px;
+  }
+  &__number {
+    vertical-align: bottom;
+    line-height: 35px;
+    font-family: Quicksand, sans-serif;
+  }
+  &__number-sign,
+  &__number-value,
+  &__number-feature {
+    display: inline-block;
+  }
+  &__number-sign,
+  &__number-value {
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  &__number-value {
+    font-size: 19px;
+    margin-left: 4px;
+    margin-right: 1px;
+    color: $color-dark-100;
+  }
+  &__price-per-day {
+    color: $color-dark-50;
+    font-family: Montserrat, sans-serif;
+    vertical-align: bottom;
+    float: right;
+    line-height: 39px;
+  }
+  &__date-unit,
+  &__cost {
+    display: inline-block;
+    height: 30px;
+  }
+  &__cost {
+    font-weight: bold;
+  }
+  &__date-unit {
+    font-size: 12px;
+  }
+  &__footer {
+    padding: 2px 20px 18px 21px;
+    position: relative;
+  }
+  &__feedback-counter {
+    float: right;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    color: $color-dark-50;
+    line-height: 22px;
+  }
+  &__counter {
+    font-weight: bold;
+    margin-right: 2px;
+  }
+  &__rate {
+    float: left;
+  }
+  &__line {
+    position: absolute;
+    top: -8px;
+    right: 20px;
+    left: 20px;
+    height: 1px;
+    border-bottom: 1px solid $color-dark-10;
+    display: inline-block;
+  }
+}

@@ -1,217 +1,223 @@
 .ui {
-    $parent: #{&};
-    &--index,
-    &--color-type {
-        max-width: 1140px;
-        margin: 0 auto;
-        margin-top: 145px;
+  $parent: #{&};
+  &--index,
+  &--color-type {
+    max-width: 1140px;
+    margin: 0 auto;
+    margin-top: 145px;
+  }
+
+  @mixin responsive-columns(
+    $margin-bottom,
+    $pad1: 6.8%,
+    $pad2: 6.7%,
+    $pad3: 2.7%,
+    $width1: 33.33%,
+    $width2: 33.33%,
+    $width3: 33.33%
+  ) {
+    margin-bottom: $margin-bottom;
+    > .column {
+      // ... 1199px
+      @media (max-width: $screen-md-max) {
+        padding: 0 2%;
+      }
+      // 1200px ...
+      @media (min-width: $screen-lg-min) {
+        &.first {
+          padding-left: $pad1;
+          width: $width1;
+        }
+        &.second {
+          padding-left: $pad2;
+          width: $width2;
+        }
+        &.third {
+          padding-left: $pad3;
+          width: $width3;
+        }
+      }
+    }
+  }
+
+  &--form-components {
+    font-family: Montserrat, sans-serif;
+    max-width: 1340px;
+    margin: 143px auto;
+
+    @mixin responsive-wrapper($lgWidth) {
+      position: relative;
+      width: $lgWidth;
+      // ... 1199px
+      @media (max-width: $screen-md-max) {
+        width: 100%;
+      }
     }
 
-    @mixin responsive-columns(
-        $margin-bottom,
-        $pad1: 6.8%,
-        $pad2: 6.7%,
-        $pad3: 2.7%,
-        $width1: 33.33%,
-        $width2: 33.33%,
-        $width3: 33.33%
-    ) {
-        margin-bottom: $margin-bottom;
-        > .column {
-            // ... 1199px
-            @media (max-width: $screen-md-max) {
-                padding: 0 2%;
-            }
-            // 1200px ...
-            @media (min-width: $screen-lg-min) {
-                &.first {
-                    padding-left: $pad1;
-                    width: $width1;
-                }
-                &.second {
-                    padding-left: $pad2;
-                    width: $width2;
-                }
-                &.third {
-                    padding-left: $pad3;
-                    width: $width3;
-                }
-            }
-        }
+    #{$parent}__top {
+      @include responsive-columns(100px, 6.8%, 6.7%, 2.7%, 33.33%, 33.33%, 33.33%)
+    }
+    #{$parent}__dropdown-states {
+      @include responsive-columns(160px, 6.7%, 6.7%, 2.7%, 33.33%, 33.33%, 33.33%)
+    }
+    #{$parent}__rich-lists {
+      @include responsive-columns(0, 6.7%, 6.75%, 2.7%, 33.33%, 33.33%, 33.33%)
+    }
+    #{$parent}__bottom {
+      @include responsive-columns(0, 6.7%, 6.75%, 0, 33.33%, 66.66%)
     }
 
-    &--form-components {
-        font-family: Montserrat, sans-serif;
-        max-width: 1340px;
-        margin: 143px auto;
-
-        @mixin responsive-wrapper($lgWidth) {
-            position: relative;
-            width: $lgWidth;
-            // ... 1199px
-            @media (max-width: $screen-md-max) {
-                width: 100%;
-            }
-        }
-
-        #{$parent}__top {
-            @include responsive-columns(100px, 6.8%, 6.7%, 2.7%, 33.33%, 33.33%, 33.33%)
-        }
-        #{$parent}__dropdown-states {
-            @include responsive-columns(160px, 6.7%, 6.7%, 2.7%, 33.33%, 33.33%, 33.33%)
-        }
-        #{$parent}__rich-lists {
-            @include responsive-columns(0, 6.7%, 6.75%, 2.7%, 33.33%, 33.33%, 33.33%)
-        }
-        #{$parent}__bottom {
-            @include responsive-columns(0, 6.7%, 6.75%, 0, 33.33%, 66.66%)
-        }
-
-        // 90% width
-        #{$parent}__dropdown-group,
-        #{$parent}__dropdown-group--inline,
-        #{$parent}__dropdown-group--with-apply-btn,
-        #{$parent}__feedback-group,
-        #{$parent}__input-text-group,
-        #{$parent}__input-text-group--masked,
-        #{$parent}__input-text-group--hovered,
-        #{$parent}__like-button-group,
-        #{$parent}__paginator-group,
-        #{$parent}__radio-group,
-        #{$parent}__rate-group,
-        #{$parent}__toggle-group {
-            @include responsive-wrapper(90%)
-        }
-        // 78% width
-        #{$parent}__button-group,
-        #{$parent}__dropdown-group--with-clear-btn,
-        #{$parent}__feature-group {
-            @include responsive-wrapper(78%)
-        }
-        // 75% width
-        #{$parent}__checkbox-list-xp-group--collapsed,
-        #{$parent}__checkbox-list-xp-group--expanded,
-        #{$parent}__dropdown-group--date-filter,
-        #{$parent}__dropdown-group--collapsed,
-        #{$parent}__dropdown-group--expanded,
-        #{$parent}__input-text-group--with-submit,
-        #{$parent}__rich-checkbox-group {
-            @include responsive-wrapper(75%)
-        }
-        // 65% width
-        #{$parent}__checkbox-group,
-        #{$parent}__range-slider {
-            @include responsive-wrapper(65%)
-        }
-        // 63% width
-        #{$parent}__bullet-list-group {
-            @include responsive-wrapper(63%)
-        }
-
-        #{$parent}__toggle-group {
-            margin-bottom: 44px;
-        }
-        #{$parent}__rate-group,
-        #{$parent}__radio-group {
-            margin-bottom: 43px;
-        }
-        #{$parent}__checkbox-group {
-            margin-bottom: 42px;
-        }
-        #{$parent}__dropdown-group--inline,
-        #{$parent}__dropdown-group--date-filter {
-            margin-bottom: 41px;
-        }
-        #{$parent}__input-text-group--masked {
-            margin-bottom: 40px;
-        }
-        #{$parent}__like-button-group {
-            margin-bottom: 36px;
-        }
-        #{$parent}__feedback-group {
-            margin-top: 30px;
-        }
-        #{$parent}__checkbox-list-xp-group--collapsed {
-            margin-bottom: 26px;
-        }
-        #{$parent}__dropdown-group {
-            margin-bottom: 22px;
-        }
-        #{$parent}__input-text-group {
-            margin-bottom: 21px;
-        }
-        #{$parent}__input-text-group--hovered,
-        #{$parent}__dropdown-group--collapsed {
-            margin-bottom: 20px;
-        }
-        #{$parent}__range-slider {
-            margin-bottom: 18px;
-        }
-        #{$parent}__checkbox-list-xp-group--expanded {
-            margin-bottom: 14px;
-        }
-        #{$parent}__bullet-list-group,
-        #{$parent}__rich-checkbox-group {
-            margin-top: 12px;
-        }
-
-        #{$parent}__dropdown-group--inline {
-            .dropdown-group {
-                float: left;
-                width: 47%;
-                &:first-child {
-                    margin-right: 6%;
-                }
-                // ... 991px
-                @media (max-width: $screen-sm-max) {
-                    width: 100%;
-                    margin-right: 0;
-                    margin-bottom: 15px;
-                }
-            }
-        }
-
-        #{$parent}__input-text-group--with-submit {
-            // ... 767px
-            @media (max-width: $screen-xs-max) {
-                margin-bottom: 40px;
-            }
-        }
-        #{$parent}__dropdown-group--with-apply-btn {
-            // ... 767px
-            @media (max-width: $screen-xs-max) {
-                margin-bottom: 170px;
-            }
-        }
-        #{$parent}__dropdown-group--expanded {
-            // ... 767px
-            @media (max-width: $screen-xs-max) {
-                margin-bottom: 130px;
-            }
-        }
-        #{$parent}__dropdown-states {
-            // ... 767px
-            @media (max-width: $screen-xs-max) {
-                margin-bottom: 200px;
-            }
-        }
+    // 90% width
+    #{$parent}__dropdown-group,
+    #{$parent}__dropdown-group--inline,
+    #{$parent}__dropdown-group--with-apply-btn,
+    #{$parent}__feedback-group,
+    #{$parent}__input-text-group,
+    #{$parent}__input-text-group--masked,
+    #{$parent}__input-text-group--hovered,
+    #{$parent}__like-button-group,
+    #{$parent}__paginator-group,
+    #{$parent}__radio-group,
+    #{$parent}__rate-group,
+    #{$parent}__toggle-group {
+      @include responsive-wrapper(90%)
+    }
+    // 78% width
+    #{$parent}__button-group,
+    #{$parent}__dropdown-group--with-clear-btn,
+    #{$parent}__feature-group {
+      @include responsive-wrapper(78%)
+    }
+    // 75% width
+    #{$parent}__checkbox-list-xp-group--collapsed,
+    #{$parent}__checkbox-list-xp-group--expanded,
+    #{$parent}__dropdown-group--date-filter,
+    #{$parent}__dropdown-group--collapsed,
+    #{$parent}__dropdown-group--expanded,
+    #{$parent}__input-text-group--with-submit,
+    #{$parent}__rich-checkbox-group {
+      @include responsive-wrapper(75%)
+    }
+    // 65% width
+    #{$parent}__checkbox-group,
+    #{$parent}__range-slider {
+      @include responsive-wrapper(65%)
+    }
+    // 63% width
+    #{$parent}__bullet-list-group {
+      @include responsive-wrapper(63%)
     }
 
-    &--cards {
-        max-width: 1200px;
-        margin: 150px auto;
-        background: {
-            color: #E5E5E5
-        };
-        @include responsive-columns(0, 1.7%, 3.5%, 3.5%, 33.33%, 35%, 30%);
-
-        #{$parent}__room-search,
-        #{$parent}__sign-in,
-        #{$parent}__sign-up,
-        #{$parent}__datepicker-sample,
-        #{$parent}__room-thumb,
-        #{$parent}__room-book {
-            margin-bottom: 40px;
-        }
+    #{$parent}__toggle-group {
+      margin-bottom: 44px;
     }
+    #{$parent}__rate-group,
+    #{$parent}__radio-group {
+      margin-bottom: 43px;
+    }
+    #{$parent}__checkbox-group {
+      margin-bottom: 42px;
+    }
+    #{$parent}__dropdown-group--inline,
+    #{$parent}__dropdown-group--date-filter {
+      margin-bottom: 41px;
+    }
+    #{$parent}__input-text-group--masked {
+      margin-bottom: 40px;
+    }
+    #{$parent}__like-button-group {
+      margin-bottom: 36px;
+    }
+    #{$parent}__feedback-group {
+      margin-top: 30px;
+    }
+    #{$parent}__checkbox-list-xp-group--collapsed {
+      margin-bottom: 26px;
+    }
+    #{$parent}__dropdown-group {
+      margin-bottom: 22px;
+    }
+    #{$parent}__input-text-group {
+      margin-bottom: 21px;
+    }
+    #{$parent}__input-text-group--hovered,
+    #{$parent}__dropdown-group--collapsed {
+      margin-bottom: 20px;
+    }
+    #{$parent}__range-slider {
+      margin-bottom: 18px;
+    }
+    #{$parent}__checkbox-list-xp-group--expanded {
+      margin-bottom: 14px;
+    }
+    #{$parent}__bullet-list-group,
+    #{$parent}__rich-checkbox-group {
+      margin-top: 12px;
+    }
+
+    #{$parent}__dropdown-group--inline {
+      .dropdown-group {
+        float: left;
+        width: 47%;
+        &:first-child {
+          margin-right: 6%;
+        }
+        // ... 991px
+        @media (max-width: $screen-sm-max) {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    #{$parent}__input-text-group--with-submit {
+      // ... 767px
+      @media (max-width: $screen-xs-max) {
+        margin-bottom: 40px;
+      }
+    }
+    #{$parent}__dropdown-group--with-apply-btn {
+      // ... 767px
+      @media (max-width: $screen-xs-max) {
+        margin-bottom: 170px;
+      }
+    }
+    #{$parent}__dropdown-group--expanded {
+      // ... 767px
+      @media (max-width: $screen-xs-max) {
+        margin-bottom: 130px;
+      }
+    }
+    #{$parent}__dropdown-states {
+      // ... 767px
+      @media (max-width: $screen-xs-max) {
+        margin-bottom: 200px;
+      }
+    }
+  }
+
+  &--cards {
+    max-width: 1200px;
+    margin: 150px auto;
+    background: {
+      color: #E5E5E5
+    }
+  ;
+    @include responsive-columns(0, 1.7%, 3.5%, 3.3%, 33.33%, 35%, 30%);
+
+    #{$parent}__room-search,
+    #{$parent}__sign-in,
+    #{$parent}__sign-up,
+    #{$parent}__datepicker-sample,
+    #{$parent}__room-thumb--vip,
+    #{$parent}__room-thumb,
+    #{$parent}__room-book {
+      margin-bottom: 40px;
+    }
+    #{$parent}__room-thumb--vip,
+    #{$parent}__room-thumb {
+      padding-right: 50px;
+    }
+  }
 }

@@ -1,3 +1,21 @@
-mixin room-thumb()
+include ../../form/rate-button/rate-button
+
+mixin room-thumb(roomNumber, pricePerDay, feedbackCounter, rate, feature)
   - const blockName = 'room-thumb'
   div(class=blockName)
+    div(class=blockName+'__image-wrapper')
+    div(class=[blockName+'__headline', 'clearfix'])
+      div(class=blockName+'__number')
+        span(class=blockName + '__number-sign')= '№'
+        span(class=blockName + '__number-value')= roomNumber
+        h3(class=[blockName + '__number-feature', 'h3', 'h3--purple'])= feature
+      div(class=[blockName + '__price-per-day', 'body'])
+        span(class=blockName + '__cost')!= pricePerDay.toLocaleString('ru-RU') + '₽&nbsp;'
+        span(class=blockName + '__date-unit')= 'в сутки'
+    div(class=[blockName+'__footer', 'clearfix'])
+      span(class=blockName+'__line')
+      div(class=blockName+'__rate')
+        +rate-button(roomNumber+'__rate', 5, rate)
+      div(class=blockName+'__feedback-counter')
+        span(class=blockName+'__counter')= feedbackCounter
+        span(class=blockName+'__text')= 'Отзывов'

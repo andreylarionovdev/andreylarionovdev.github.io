@@ -19,6 +19,7 @@
   color: map_get($datepickerTextColor, common);
   padding: 15px;
   padding-bottom: 50px;
+  padding-left: 17px;
   position: absolute;
   opacity: 0;
   transition: opacity $datepickerTransitionSpeed $datepickerTransitionEase, transform $datepickerTransitionSpeed $datepickerTransitionEase, left 0s $datepickerTransitionSpeed;
