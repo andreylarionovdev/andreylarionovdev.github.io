@@ -596,7 +596,11 @@
       padding-left: 3.5%;
       width: 30%; } }
   .ui--cards .ui__room-search,
-  .ui--cards .ui__booking {
+  .ui--cards .ui__sign-in,
+  .ui--cards .ui__sign-up,
+  .ui--cards .ui__datepicker-sample,
+  .ui--cards .ui__room-thumb,
+  .ui--cards .ui__room-book {
     margin-bottom: 40px; }
 
 .h1 {
@@ -1691,7 +1695,7 @@
     margin: 5px auto;
     height: 44px; }
 
-.calendar .datepicker {
+.datepicker-sample .datepicker {
   position: static; }
 
 .room-search {

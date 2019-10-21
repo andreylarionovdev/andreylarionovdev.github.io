@@ -18,7 +18,7 @@ $(document).ready(function () {
             nextHtml: '<i class="material-icons">arrow_forward</i>',
             onShow: function (inst) {
                 var parentWidth = $(o).outerWidth();
-                resizeDatepicker(parentWidth);
+                resizeDatepicker(inst.$datepicker, parentWidth);
                 addActionButtons(inst.$datepicker);
             }
         }).data('datepicker');
@@ -53,8 +53,8 @@ $(document).ready(function () {
             $datepicker.show();
         });
 
-        var resizeDatepicker = function (toWidth) {
-            $('.datepicker.active').css('width', toWidth+'px');
+        var resizeDatepicker = function ($datepicker, toWidth) {
+            $datepicker.css('width', toWidth+'px');
         };
 
         var clearDropdown = function ($dropdown) {

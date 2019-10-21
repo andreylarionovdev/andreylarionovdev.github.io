@@ -206,7 +206,11 @@
         @include responsive-columns(0, 1.7%, 3.5%, 3.5%, 33.33%, 35%, 30%);
 
         #{$parent}__room-search,
-        #{$parent}__booking {
+        #{$parent}__sign-in,
+        #{$parent}__sign-up,
+        #{$parent}__datepicker-sample,
+        #{$parent}__room-thumb,
+        #{$parent}__room-book {
             margin-bottom: 40px;
         }
     }

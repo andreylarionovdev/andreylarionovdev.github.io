@@ -2,7 +2,7 @@ extends base
 
 include components/logo/logo
 include components/card/room-book/room-book
-include components/card/calendar/calendar
+include components/card/datepicker-sample/datepicker-sample
 include components/card/room-search/room-search
 include components/card/room-thumb/room-thumb
 include components/card/sign-in/sign-in
@@ -20,7 +20,7 @@ block content
     .ui__sign-up
       +sign-up()
   .column.column--4.second
-    .ui__booking
+    .ui__room-book
       +room-book(
         888,
         9990,
@@ -31,9 +31,8 @@ block content
     .ui__sign-in
       +sign-in()
   .column.column--4.third
-    .ui__calendar
-      //+room-search()
-      +calendar()
+    .ui__datepicker-sample
+      +datepicker-sample()
     .ui__room-thumb--vip
       +room-thumb()
     .ui__room-thumb
