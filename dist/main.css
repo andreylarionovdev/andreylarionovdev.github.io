@@ -40,7 +40,7 @@
   padding-bottom: 50px;
   padding-left: 17px;
   position: absolute;
-  opacity: 0;
+  display: none;
   -webkit-transition: opacity 0.3s ease, left 0s 0.3s, -webkit-transform 0.3s ease;
   transition: opacity 0.3s ease, left 0s 0.3s, -webkit-transform 0.3s ease;
   transition: opacity 0.3s ease, transform 0.3s ease, left 0s 0.3s;
@@ -59,7 +59,7 @@
     -webkit-transform: translateX(-8px);
             transform: translateX(-8px); }
   .datepicker.active {
-    opacity: 1;
+    display: block;
     -webkit-transform: translate(0);
             transform: translate(0);
     -webkit-transition: opacity 0.3s ease, left 0s 0s, -webkit-transform 0.3s ease;

@@ -21,7 +21,7 @@
   padding-bottom: 50px;
   padding-left: 17px;
   position: absolute;
-  opacity: 0;
+  display: none;
   transition: opacity $datepickerTransitionSpeed $datepickerTransitionEase, transform $datepickerTransitionSpeed $datepickerTransitionEase, left 0s $datepickerTransitionSpeed;
   z-index: $datepickerZIndex;
 
@@ -40,7 +40,7 @@
 
 
   &.active {
-    opacity: 1;
+    display: block;
     transform: translate(0);
     transition: opacity $datepickerTransitionSpeed $datepickerTransitionEase, transform $datepickerTransitionSpeed $datepickerTransitionEase, left 0s 0s;
   }
