@@ -1799,6 +1799,25 @@
     height: 1px;
     border-bottom: 1px solid rgba(31, 32, 65, 0.1);
     display: inline-block; }
+  .room-thumb__slider {
+    position: absolute;
+    right: 15px;
+    bottom: -7px;
+    list-style: none; }
+  .room-thumb__slider-li {
+    display: inline-block;
+    float: left;
+    margin-left: 3px; }
+    .room-thumb__slider-li--active .room-thumb__slider-a {
+      background: white; }
+  .room-thumb__slider-a {
+    height: 8px;
+    width: 8px;
+    border-radius: 4px;
+    display: inline-block;
+    border: 1px solid white;
+    -webkit-box-shadow: 0 5px 5px rgba(31, 32, 65, 0.3);
+            box-shadow: 0 5px 5px rgba(31, 32, 65, 0.3); }
 
 .sign-in {
   border: 1px solid rgba(0, 0, 0, 0.12);

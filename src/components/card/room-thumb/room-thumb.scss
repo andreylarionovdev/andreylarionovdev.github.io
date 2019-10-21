@@ -1,5 +1,6 @@
 @import '../../card/card';
 .room-thumb {
+  $parent: #{&};
   @include card;
   border: none;
   &__image-wrapper {
@@ -90,4 +91,29 @@
     border-bottom: 1px solid $color-dark-10;
     display: inline-block;
   }
+  &__slider {
+    position: absolute;
+    right: 15px;
+    bottom: -7px;
+    list-style: none;
+  }
+  &__slider-li {
+    display: inline-block;
+    float: left;
+    margin-left: 3px;
+    &--active {
+      #{$parent}__slider-a {
+        background: white;
+      }
+    }
+  }
+  &__slider-a {
+    height: 8px;
+    width: 8px;
+    border-radius: 4px;
+    display: inline-block;
+    border: 1px solid white;
+    box-shadow: 0 5px 5px rgba(31, 32, 65, 0.3);
+  }
+
 }
