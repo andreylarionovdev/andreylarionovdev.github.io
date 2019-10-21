@@ -1,9 +1,11 @@
 include ../../form/rate-button/rate-button
 
-mixin room-thumb(roomNumber, pricePerDay, feedbackCounter, rate, feature)
+mixin room-thumb(roomNumber, pricePerDay, feedbackCounter, rate, images, feature)
   - const blockName = 'room-thumb'
   div(class=blockName)
     div(class=blockName+'__image-wrapper')
+      each image, i in images
+        img(class=blockName+'__image' src=require('./img/' + image))
     div(class=[blockName+'__headline', 'clearfix'])
       div(class=blockName+'__number')
         span(class=blockName + '__number-sign')= '№'
