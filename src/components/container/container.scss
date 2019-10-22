@@ -1,5 +1,10 @@
 .ui {
   $parent: #{&};
+  &__logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
   &--index,
   &--color-type {
     max-width: 1140px;
@@ -200,10 +205,7 @@
   &--cards {
     max-width: 1200px;
     margin: 150px auto;
-    background: {
-      color: #E5E5E5
-    }
-  ;
+    background: #E5E5E5;
     @include responsive-columns(0, 1.7%, 3.5%, 3.3%, 33.33%, 35%, 30%);
 
     #{$parent}__room-search,
@@ -218,6 +220,16 @@
     #{$parent}__room-thumb--vip,
     #{$parent}__room-thumb {
       padding-right: 50px;
+    }
+  }
+
+  &--headers-footers {
+    margin-top: 150px;
+    background: #E5E5E5;
+    #{$parent}__header--anon,
+    #{$parent}__header--signed {
+      margin-top: 40px;
+      height: 70px;
     }
   }
 }

@@ -47,6 +47,7 @@ const config = {
             },
             {
                 test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                exclude: path.resolve(__dirname, './src/img/'),
                 use: [{
                     loader: 'file-loader',
                     options: {
@@ -56,7 +57,8 @@ const config = {
                 }]
             },
             {
-                test: /\.(png|gif|jpe?g)$/,
+                test: /\.(png|gif|svg|jpe?g)$/,
+                exclude: path.resolve(__dirname, './src/fonts/'),
                 use: [{
                     loader: 'file-loader',
                     options: {
@@ -83,7 +85,7 @@ const config = {
         }),
         new HtmlWebpackPlugin({
             filename: 'ui-kit-colors-n-type.html',
-            template: 'src/ui-kit-colors-n-type.pug'
+            template: 'src/ui-kit-colors-type.pug'
         }),
         new HtmlWebpackPlugin({
             filename: 'ui-kit-form-elements.html',
@@ -92,6 +94,10 @@ const config = {
         new HtmlWebpackPlugin({
             filename: 'ui-kit-cards.html',
             template: 'src/ui-kit-cards.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'ui-kit-headers-footers.html',
+            template: 'src/ui-kit-headers-footers.pug'
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css',

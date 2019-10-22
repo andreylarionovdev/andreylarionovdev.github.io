@@ -1,0 +1,17 @@
+.header {
+  height: inherit;
+  background: white;
+  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+  &__wrapper {
+    width: 80.5%;
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+  }
+  &__logo {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+  }
+}

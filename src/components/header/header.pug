@@ -1,0 +1,8 @@
+include  ../logo/logo
+
+mixin header(user)
+  - const blockName = 'header'
+  div(class=blockName)
+    div(class=blockName+'__wrapper')
+      div(class=blockName+'__logo')
+        +logo(null, true)

@@ -1,0 +1,13 @@
+extends base
+
+include components/logo/logo
+include components/header/header
+
+block vars
+  - var title = 'UI Kit - Headers & Footers'
+  - var bodyClasses = ['ui', 'ui--headers-footers']
+block content
+  .ui__header--anon
+    +header('anon')
+  .ui__header--signed
+    +header('Cosmin Negoita')
