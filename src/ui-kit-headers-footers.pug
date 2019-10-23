@@ -6,30 +6,8 @@ include components/header/header
 block vars
   - var title = 'UI Kit - Headers & Footers'
   - var bodyClasses = ['ui', 'ui--headers-footers']
-  -
-    var menu = [
-      {name: '<b>Home</b>', href: 'javascript:void(0)'},
-      {name: 'About Us', href: 'javascript:void(0)'},
-      {
-        name: 'Services',
-        sub: [
-          {name: 'Services 1', href: 'javascript:void(0)'},
-          {name: 'Services 2', href: 'javascript:void(0)'},
-          {name: 'Services 3', href: 'javascript:void(0)'}
-        ]
-      },
-      {name: 'Careers', href: 'javascript:void(0)'},
-      {name: 'News', href: 'javascript:void(0)'},
-      {name: 'Documentation', href: 'javascript:void(0)'}
-    ]
 block content
   .ui__header--anon
-    +header(
-      'anon.',
-      menu
-    )
+    +header
   .ui__header--signed
-    +header(
-      'Cosmin Negoita',
-      menu
-    )
+    +header('Cosmin Negoita')

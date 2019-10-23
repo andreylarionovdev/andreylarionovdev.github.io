@@ -1,19 +1,50 @@
 include  ../logo/logo
 
-mixin header(user, menuItems)
+mixin header(user, menuItems, buttons)
   - const blockName = 'header'
+  // Default menu
+  if !menuItems
+    -
+      menuItems = [
+        {name: '<b>Home</b>', href: 'javascript:void(0)'},
+        {name: 'About Us', href: 'javascript:void(0)'},
+        {
+          name: 'Services',
+          sub: [
+            {name: 'Services 1', href: 'javascript:void(0)'},
+            {name: 'Services 2', href: 'javascript:void(0)'},
+            {name: 'Services 3', href: 'javascript:void(0)'}
+          ]
+        },
+        {name: 'Careers', href: 'javascript:void(0)'},
+        {name: 'News', href: 'javascript:void(0)'},
+        {name: 'Documentation', href: 'javascript:void(0)'}
+      ]
+  // Default buttons
+  if !buttons
+    -
+      buttons = [
+
+      ]
   header(class=blockName)
     nav(class=blockName+'__nav')
       div(class=blockName+'__logo')
         +logo(null, true)
-      ul(class=blockName+'__menu')
-        each item, _ in menuItems
-          li(class=[blockName+'__menu-item'])
-            if item.sub
-              a(class=[blockName+'__menu-a'] href='javascript:void(0)')= item.name
-              ul(class=[blockName+'__menu', blockName+'__menu--is-sub'])
-                each _item, _ in item.sub
-                  li(class=blockName+'__menu-item')
-                    a(class=blockName+'__menu-a' href=_item.href)!= _item.name
-            else
-              a(class=blockName+'__menu-a' href=item.href)!= item.name
+      div(class=blockName + '__account')
+        if user
+          = user
+        else
+      div(class=blockName+'__menu-wrapper')
+        ul(class=blockName+'__menu')
+          each item, _ in menuItems
+            li(class=[blockName+'__menu-item'])
+              if item.sub
+                a(class=[blockName+'__menu-a'] href='javascript:void(0)')
+                  span(class=blockName+'__dropdown-text')= item.name
+                  i(class=[blockName+'__dropdown-arrow', 'material-icons'])= 'keyboard_arrow_down'
+                ul(class=[blockName+'__menu', blockName+'__menu--is-sub'])
+                  each _item, _ in item.sub
+                    li(class=blockName+'__menu-item')
+                      a(class=blockName+'__menu-a' href=_item.href)!= _item.name
+              else
+                a(class=blockName+'__menu-a' href=item.href)!= item.name
