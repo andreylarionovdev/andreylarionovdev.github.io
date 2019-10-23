@@ -1,17 +1,75 @@
 .header {
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  color: $color-dark-50;
+  $parent: #{&};
+  $menu: #{&}__menu;
+  $menu-item: #{&}__menu-item;
   height: inherit;
   background: white;
   box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
-  &__wrapper {
+  &__logo {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+  }
+  &__nav {
     width: 80.5%;
     max-width: 1920px;
     margin: 0 auto;
     position: relative;
     height: 100%;
   }
-  &__logo {
-    position: absolute;
+
+  &__menu {
+    position: relative;
+    float: right;
     top: 50%;
+    display: block;
+    list-style: none;
+    margin: 0;
     margin-top: -20px;
+    padding-left: 0;
+    height: 40px;
+    line-height: 40px;
+    &--is-sub {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      transition: all 0.5s ease;
+      margin-top: 1rem;
+      left: 0;
+      display: none;
+    }
+  }
+
+  &__menu-a {
+    color: $color-dark-100;
+    opacity: 0.5;
+    text-decoration: none;
+    :hover {
+      opacity: 1;
+    }
+  }
+
+  &__menu-item {
+    display: block;
+    float: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+    transition-duration: 0.5s;
+    #{$menu-item} {
+      clear: both;
+      width: 100%;
+    }
+    &:hover {
+      #{$menu} {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+      }
+    }
   }
 }

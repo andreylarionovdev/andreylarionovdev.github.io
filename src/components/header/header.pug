@@ -1,8 +1,19 @@
 include  ../logo/logo
 
-mixin header(user)
+mixin header(user, menuItems)
   - const blockName = 'header'
-  div(class=blockName)
-    div(class=blockName+'__wrapper')
+  header(class=blockName)
+    nav(class=blockName+'__nav')
       div(class=blockName+'__logo')
         +logo(null, true)
+      ul(class=blockName+'__menu')
+        each item, _ in menuItems
+          li(class=[blockName+'__menu-item'])
+            if item.sub
+              a(class=[blockName+'__menu-a'] href='javascript:void(0)')= item.name
+              ul(class=[blockName+'__menu', blockName+'__menu--is-sub'])
+                each _item, _ in item.sub
+                  li(class=blockName+'__menu-item')
+                    a(class=blockName+'__menu-a' href=_item.href)!= _item.name
+            else
+              a(class=blockName+'__menu-a' href=item.href)!= item.name
