@@ -13,6 +13,7 @@ html(lang='en')
       title= 'Toxin booking'
 
   body(class=bodyClasses)
-    .ui__logo
-      +logo
+    if withoutLogo !== true
+      .ui__logo
+        +logo
     block content

@@ -6,6 +6,7 @@ include components/site-menu/site-menu
 block vars
   - var title = 'Main'
   - var bodyClasses = ['ui', 'ui--index']
+  - var withoutLogo = true
 block content
   .column.column--6
     +site-menu(
@@ -22,6 +23,6 @@ block content
       'green',
       [
         {text: 'Landing page', href: 'dist/landing-page.html'},
-        {text: 'Search room', href: 'dist/search-room.html'},
+        {text: 'Search room', href: 'dist/search-room.html'}
       ]
     )
