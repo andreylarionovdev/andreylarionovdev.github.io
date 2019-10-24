@@ -30,7 +30,7 @@ mixin header(user, menuItems, buttons)
       buttons = [
 
       ]
-  header(class=blockName class=modifiers)
+  header(class=[blockName, 'clearfix'] class=modifiers)
     nav(class=blockName+'__nav')
       div(class=blockName+'__logo')
         +logo(null, true)
@@ -43,7 +43,7 @@ mixin header(user, menuItems, buttons)
           div(class=blockName + '__button--sign-in')
             +button('transparent', 'Login')
       div(class=blockName+'__menu-wrapper')
-        ul(class=blockName+'__menu')
+        ul(class=[blockName+'__menu', 'clearfix'])
           each item, _ in menuItems
             - let active = ''
             if item.active
