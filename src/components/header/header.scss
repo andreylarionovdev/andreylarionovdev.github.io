@@ -1,12 +1,12 @@
 .header {
   font-family: Montserrat, sans-serif;
   font-size: 14px;
-  line-height: 17px;
   color: $color-dark-50;
   $parent: #{&};
   $menu: #{&}__menu;
   $menu-item: #{&}__menu-item;
   $menu-a: #{&}__menu-a;
+  $menu-wrapper: #{&}__menu-wrapper;
   $account: #{&}__account;
   height: inherit;
   background: white;
@@ -29,6 +29,9 @@
     @media (max-width: $screen-md-min) {
       width: 98.5%;
     }
+    @media (max-width: $screen-md-min) {
+      width: 100%;
+    }
   }
 
   &__menu-wrapper {
@@ -42,6 +45,48 @@
     line-height: 40px;
     @media (max-width: $screen-md-min) {
       float: left;
+      width: 100%;
+      left: -9999px;
+    }
+  }
+
+  &__menu-button {
+    cursor: pointer;
+    display: none;
+    height: 40px;
+    width: 40px;
+    background: $color-dark-5;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    margin-left: 10px;
+    border: 1px solid $color-dark-25;
+    &:hover {
+      background: $color-dark-25;
+    }
+    &:before {
+      position: absolute;
+      top: 15px;
+      right: 10px;
+      display: block;
+      height: 4px;
+      width: 20px;
+      border-top: 4px solid $color-dark-25;
+      content: '';
+    }
+    &:after {
+      position: absolute;
+      top: 25px;
+      right: 10px;
+      display: block;
+      height: 4px;
+      width: 20px;
+      border-top: 4px solid $color-dark-25;
+      content: '';
+    }
+    @media (max-width: $screen-md-min) {
+      display: block;
     }
   }
 
@@ -50,6 +95,10 @@
     text-decoration: none;
     &:hover {
       color: $color-dark-100;
+    }
+    @media (max-width: $screen-md-min) {
+      width: 75%;
+      display: inline-block;
     }
   }
 
@@ -64,9 +113,24 @@
       #{$menu-a} {
         display: inline-block;
         width: 200px;
-        padding: 10px;
         border-bottom: 1px solid $color-dark-5;
+        @media (max-width: $screen-md-min) {
+          width: 100%;
+          border-bottom: none;
+        }
       }
+      
+      @media (max-width: $screen-md-min) {
+        position: relative;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        text-align: left;
+      }
+    }
+    @media (max-width: $screen-md-min) {
+      width: 100%;
+      background: white;
     }
   }
 
@@ -87,10 +151,14 @@
     }
     @mixin menu-visible() {
       left: auto;
+      z-index: 9;
     }
     &:hover {
       #{$menu} {
         @include menu-visible;
+      }
+      #{$menu-item} {
+        height: auto;
       }
     }
     #{$menu} {
@@ -98,10 +166,10 @@
         @include menu-visible;
       }
     }
-
-    @media (max-width: $screen-sm-min) {
+    @media (max-width: $screen-md-min) {
       width: 100%;
-      background: white;
+      border-top: 1px solid $color-dark-5;
+      float: none;
     }
   }
 
@@ -125,6 +193,9 @@
   }
   &__account {
     @include account-height(34px);
+    @media (max-width: $screen-md-min) {
+      margin-right: 10px;
+    }
   }
   &--signed {
     #{$account} {
@@ -133,6 +204,9 @@
       line-height: $height;
       border-left: 1px solid $color-dark-10;
       padding-left: 31px;
+      @media (max-width: $screen-md-min) {
+        border-left: none;
+      }
     }
   }
   &__button {
@@ -147,6 +221,29 @@
     }
     &--sign-up {
       width: 100px;
+    }
+  }
+
+  &__close-button {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    color: $color-dark-75;
+    @media (max-width: $screen-md-min) {
+      display: block;
+    }
+    &:hover {
+      color: $color-dark-100;
+    }
+  }
+
+  &--expanded {
+    #{$menu-wrapper} {
+      top: 0;
+      left: auto;
+      z-index: 9;
     }
   }
 }

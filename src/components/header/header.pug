@@ -32,6 +32,7 @@ mixin header(user, menuItems, buttons)
       ]
   header(class=[blockName, 'clearfix'] class=modifiers)
     nav(class=blockName+'__nav')
+      div(class=blockName+'__menu-button')
       div(class=blockName+'__logo')
         +logo(null, true)
       div(class=blockName + '__account')
@@ -59,3 +60,4 @@ mixin header(user, menuItems, buttons)
                       a(class=blockName+'__menu-a' href=_item.href)!= _item.name
               else
                 a(class=blockName+'__menu-a' href=item.href)!= item.name
+        i(class=[blockName+'__close-button', 'material-icons'])= 'close'
