@@ -21,9 +21,10 @@ mixin sign-in()
         'Войти',
         {withArrow: true}
       )
-    div(class=blockName+'__create-account')
-      span.body= 'Нет аккаунта на Toxin?'
-      div(class=blockName+'__create-button')
+    div(class=[blockName + '__create-account', 'clearfix'])
+      div(class=blockName + '__hint')
+        span.body.body--black= 'Нет аккаунта на Toxin?'
+      div(class=blockName + '__create-button')
         +button(
           'transparent',
           'Создать'

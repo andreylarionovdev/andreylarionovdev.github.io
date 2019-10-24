@@ -15,14 +15,6 @@ mixin button(theme, caption, options)
     if options.attributes
       - attributes = options.attributes
 
-  a(
-    class=blockName
-    class=modifiers
-    href=href
-  )&attributes(attributes)
-    if withArrow
-      span.button__arrow
-        = caption
-        i.material-icons.arrow= 'arrow_forward'
-    else
-      = caption
+  a(class=blockName class=modifiers href=href)&attributes(attributes)
+    div(class=blockName+'__cell')
+      div(class=blockName+'__caption')= caption

@@ -1,19 +1,23 @@
-include  ../logo/logo
+include ../logo/logo
+include ../../components/form/button/button
 
 mixin header(user, menuItems, buttons)
   - const blockName = 'header'
+  - var modifiers = []
+  if user
+    - modifiers.push(blockName+'--signed')
   // Default menu
   if !menuItems
     -
       menuItems = [
-        {name: '<b>Home</b>', href: 'javascript:void(0)'},
+        {name: 'Home', href: 'javascript:void(0)', active: true},
         {name: 'About Us', href: 'javascript:void(0)'},
         {
           name: 'Services',
           sub: [
-            {name: 'Services 1', href: 'javascript:void(0)'},
-            {name: 'Services 2', href: 'javascript:void(0)'},
-            {name: 'Services 3', href: 'javascript:void(0)'}
+            {name: 'One One', href: 'javascript:void(0)'},
+            {name: 'Two Two', href: 'javascript:void(0)'},
+            {name: 'Three', href: 'javascript:void(0)'}
           ]
         },
         {name: 'Careers', href: 'javascript:void(0)'},
@@ -26,7 +30,7 @@ mixin header(user, menuItems, buttons)
       buttons = [
 
       ]
-  header(class=blockName)
+  header(class=blockName class=modifiers)
     nav(class=blockName+'__nav')
       div(class=blockName+'__logo')
         +logo(null, true)
@@ -34,12 +38,19 @@ mixin header(user, menuItems, buttons)
         if user
           = user
         else
+          div(class=blockName+'__button--sign-up')
+            +button('default', 'Register')
+          div(class=blockName + '__button--sign-in')
+            +button('transparent', 'Login')
       div(class=blockName+'__menu-wrapper')
         ul(class=blockName+'__menu')
           each item, _ in menuItems
-            li(class=[blockName+'__menu-item'])
+            - let active = ''
+            if item.active
+              - active = blockName+'__menu-item--active'
+            li(class=blockName+'__menu-item' class=active)
               if item.sub
-                a(class=[blockName+'__menu-a'] href='javascript:void(0)')
+                a(class=blockName+'__menu-a' class=active href='javascript:void(0)')
                   span(class=blockName+'__dropdown-text')= item.name
                   i(class=[blockName+'__dropdown-arrow', 'material-icons'])= 'keyboard_arrow_down'
                 ul(class=[blockName+'__menu', blockName+'__menu--is-sub'])

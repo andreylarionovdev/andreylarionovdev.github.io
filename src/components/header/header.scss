@@ -6,6 +6,8 @@
   $parent: #{&};
   $menu: #{&}__menu;
   $menu-item: #{&}__menu-item;
+  $menu-a: #{&}__menu-a;
+  $account: #{&}__account;
   height: inherit;
   background: white;
   box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
@@ -41,18 +43,16 @@
       visibility: hidden;
       opacity: 0;
       position: absolute;
-      margin-top: 1rem;
       left: 0;
       display: none;
     }
   }
 
   &__menu-a {
-    color: $color-dark-100;
-    opacity: 0.5;
+    color: $color-dark-50;
     text-decoration: none;
     &:hover {
-      opacity: 1;
+      color: $color-dark-100;
     }
   }
 
@@ -61,15 +61,29 @@
     float: left;
     padding: 0 15px;
     position: relative;
+    &--active {
+      font-weight: bold;
+      #{$menu-a} {
+        color: $color-dark-75;
+      }
+    }
     #{$menu-item} {
       clear: both;
       width: 100%;
     }
+    @mixin menu-visible() {
+      visibility: visible;
+      opacity: 1;
+      display: block;
+    }
     &:hover {
       #{$menu} {
-        visibility: visible;
-        opacity: 1;
-        display: block;
+        @include menu-visible;
+      }
+    }
+    #{$menu} {
+      &:hover {
+        @include menu-visible;
       }
     }
   }
@@ -84,17 +98,38 @@
     margin-top: -12px;
     margin-left: -13px;
   }
-
-  &__account {
-    $height: 30px;
+  @mixin account-height($height) {
     display: inline-block;
     height: $height;
-    line-height: $height;
-    padding-left: 31px;
-    border-left: 1px solid $color-dark-10;
-    float: right;
-    position: relative;
     top: 50%;
     margin-top: -($height) / 2;
+    position: relative;
+    float: right;
+  }
+  &__account {
+    @include account-height(34px);
+  }
+  &--signed {
+    #{$account} {
+      $height: 30px;
+      @include account-height($height);
+      line-height: $height;
+      border-left: 1px solid $color-dark-10;
+      padding-left: 31px;
+    }
+  }
+  &__button {
+    &--sign-in,
+    &--sign-up {
+      height: 34px;
+      float: right;
+    }
+    &--sign-in {
+      width: 79px;
+      margin-right: 20px;
+    }
+    &--sign-up {
+      width: 100px;
+    }
   }
 }

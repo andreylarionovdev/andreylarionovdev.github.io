@@ -10,15 +10,20 @@
     margin-bottom: 10px;
   }
   &__login-button {
+    height: 44px;
     margin-top: 20px;
   }
   &__create-account {
     margin-top: 29px;
-    height: 46px;
+    height: 44px;
+  }
+  &__hint {
     line-height: 44px;
+    float: left;
   }
   &__create-button {
     float: right;
+    height: 44px;
     width: 31%;
   }
 }
