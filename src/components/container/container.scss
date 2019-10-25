@@ -228,7 +228,8 @@
     background: #E5E5E5;
     #{$parent}__header--anon,
     #{$parent}__header--signed,
-    #{$parent}__footer {
+    #{$parent}__footer,
+    #{$parent}__footer--creative {
       margin-bottom: 40px;
     }
     #{$parent}__header--anon,
@@ -237,6 +238,9 @@
     }
     #{$parent}__footer {
       height: 372px + 70px;
+      &--creative {
+        height: 367px;
+      }
     }
   }
 }

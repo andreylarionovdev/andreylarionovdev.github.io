@@ -48,6 +48,9 @@ mixin footer(data)
       - rightDescription = data.rightDescription
     if data.rightTitle
       - rightTitle = data.rightTitle
+    if data.theme
+      - modifiers.push(blockName+'--'+data.theme)
+
 
   footer(class=blockName class=modifiers)
     div(class=[blockName+'__inner', 'clearfix'])
@@ -57,6 +60,13 @@ mixin footer(data)
             +logo(null, true)
           div(class=[blockName + '__description', 'body'])
             = leftDescription
+          div(class=blockName+'__social--creative')
+            a(href='javascript:void(0);')
+              img(class=blockName + '__icon' src=require('./img/tw.svg'))
+            a(href='javascript:void(0);')
+              img(class=[blockName + '__icon', blockName + '__icon--fb'] src=require('./img/fb.svg'))
+            a(href='javascript:void(0);')
+              img(class=blockName + '__icon' src=require('./img/ig.svg'))
         div(class=blockName+'__center')
           nav(class=blockName + '__nav')
             each section, _ in menus
@@ -79,7 +89,7 @@ mixin footer(data)
           a(href='javascript:void(0);')
             img(class=blockName+'__icon' src=require('./img/ig.svg'))
           a(href='javascript:void(0);')
-            img(class=blockName + '__icon' src=require('./img/fb.svg'))
+            img(class=[blockName + '__icon', blockName + '__icon--fb'] src=require('./img/fb.svg'))
           a(href='javascript:void(0);')
             img(class=blockName + '__icon' src=require('./img/tw.svg'))
     div(class=blockName+'__hr')

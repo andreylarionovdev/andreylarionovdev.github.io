@@ -1,4 +1,5 @@
 .footer {
+  $parent: #{&};
   height: inherit;
   background: white;
   box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
@@ -68,10 +69,15 @@
     height: 24px;
     top: 50%;
     margin-top: -10px;
+    &--creative {
+      display: none;
+    }
   }
   &__icon {
     float: right;
-    margin-left: 22px;
+    &--fb {
+      margin: 0 22px;
+    }
   }
   &__logo {
     margin-bottom: 13px;
@@ -84,5 +90,31 @@
     border-bottom: 1px solid $color-dark-5;
     height: 1px;
     bottom: 70px;
+  }
+  &--creative {
+    #{$parent}__left {
+      width: 100%;
+      text-align: center;
+    }
+    #{$parent}__bottom {
+      display: none;
+    }
+    #{$parent}__hr,
+    #{$parent}__center,
+    #{$parent}__right {
+      display: none;
+    }
+    #{$parent}__description {
+      padding: 0 25%;
+    }
+    #{$parent}__social {
+      &--creative {
+        display: block;
+        margin-top: 30px;
+      }
+    }
+    #{$parent}__icon {
+      float: none;
+    }
   }
 }
