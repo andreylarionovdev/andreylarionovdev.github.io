@@ -227,9 +227,16 @@
     margin-top: 150px;
     background: #E5E5E5;
     #{$parent}__header--anon,
+    #{$parent}__header--signed,
+    #{$parent}__footer {
+      margin-bottom: 40px;
+    }
+    #{$parent}__header--anon,
     #{$parent}__header--signed {
-      margin-top: 40px;
       height: 70px;
+    }
+    #{$parent}__footer {
+      height: 372px + 70px;
     }
   }
 }

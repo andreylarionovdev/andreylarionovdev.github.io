@@ -70,6 +70,8 @@ $grad-green: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 @import 'components/card/sign-in/sign-in';
 @import 'components/card/sign-up/sign-up';
 @import 'components/header/header';
+@import 'components/footer/footer';
+@import 'components/footer/menu-section/menu-section';
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;

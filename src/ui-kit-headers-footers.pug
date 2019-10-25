@@ -2,6 +2,7 @@ extends base
 
 include components/logo/logo
 include components/header/header
+include components/footer/footer
 
 block vars
   - var title = 'UI Kit - Headers & Footers'
@@ -11,3 +12,5 @@ block content
     +header
   .ui__header--signed
     +header('Cosmin Negoita')
+  .ui__footer
+    +footer()

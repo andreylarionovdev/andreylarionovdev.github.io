@@ -1,0 +1,85 @@
+include ../logo/logo
+include menu-section/menu-section
+include ../form/input-text/input-text
+
+mixin footer(data)
+  - const blockName = 'footer'
+  - var modifiers = []
+  - var rightTitle = 'Subscribe&nbsp;to&nbsp;our&nbsp;newsletter'
+  - var leftDescription = 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.'
+  - var rightDescription = 'Receive our latest news and promotions in your inbox!'
+  - var copyright = 'Copyright © 2018 Toxin UI Kit. All rights reserved.'
+  -
+    var menus = [
+      {
+        title: 'Navigation',
+        links: [
+          {text: 'About Us', href: 'javascript:void(0)'},
+          {text: 'News', href: 'javascript:void(0)'},
+          {text: 'Support', href: 'javascript:void(0)'},
+          {text: 'Products', href: 'javascript:void(0)'}
+        ]
+      },
+      {
+        title: 'About Us',
+        links: [
+          {text: 'Who we are', href: 'javascript:void(0)'},
+          {text: 'Our team', href: 'javascript:void(0)'},
+          {text: 'Careers', href: 'javascript:void(0)'},
+          {text: 'Investors', href: 'javascript:void(0)'}
+        ]
+      },
+      {
+        title: 'Support',
+        links: [
+          {text: 'Documentation', href: 'javascript:void(0)'},
+          {text: 'Community', href: 'javascript:void(0)'},
+          {text: 'Get in Touch', href: 'javascript:void(0)'}
+        ]
+      }
+    ]
+
+  if data
+    if data.menus
+      - menus = data.menus
+    if data.leftDescription
+      - leftDescription = data.leftDescription
+    if data.rightDescription
+      - rightDescription = data.rightDescription
+    if data.rightTitle
+      - rightTitle = data.rightTitle
+
+  footer(class=blockName class=modifiers)
+    div(class=[blockName+'__inner', 'clearfix'])
+      div(class=[blockName+'__top', 'clearfix'])
+        div(class=blockName+'__left')
+          div(class=blockName + '__logo')
+            +logo(null, true)
+          div(class=[blockName + '__description', 'body'])
+            = leftDescription
+        div(class=blockName+'__center')
+          nav(class=blockName + '__nav')
+            each section, _ in menus
+              div(class=blockName + '__nav-menu')
+                +menu-section(section.title, section.links)
+        div(class=blockName+'__right')
+          h3(class=[blockName+'__subscribe-title', 'h3'])!= rightTitle
+          p(class=[blockName+'__subscribe-description', 'body'])
+            = rightDescription
+          div(class=blockName+'__subscribe-input')
+            +input-text(
+              'subscribe',
+              'Your email address',
+              '',
+              {withButton: true}
+            )
+      div(class=[blockName+'__bottom', 'clearfix'])
+        p(class=[blockName+'__copyright', 'body'])= copyright
+        div(class=blockName+'__social')
+          a(href='javascript:void(0);')
+            img(class=blockName+'__icon' src=require('./img/ig.svg'))
+          a(href='javascript:void(0);')
+            img(class=blockName + '__icon' src=require('./img/fb.svg'))
+          a(href='javascript:void(0);')
+            img(class=blockName + '__icon' src=require('./img/tw.svg'))
+    div(class=blockName+'__hr')
