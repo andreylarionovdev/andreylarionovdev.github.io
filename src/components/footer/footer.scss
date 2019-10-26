@@ -10,6 +10,9 @@
     max-width: 1920px;
     position: relative;
     height: 100%;
+    @media (max-width: $screen-md-min) {
+      width: 95.5%;
+    }
   }
   &__left,
   &__center,
@@ -19,12 +22,29 @@
   &__top {
     padding-top: 100px;
     height: 372px;
+    @media (max-width: $screen-md-min) {
+      padding-top: 20px;
+    }
   }
   &__left {
     width: 24%;
+    @media (max-width: $screen-md-min) {
+      width: 35%;
+    }
+    @media (max-width: $screen-sm-min) {
+      width: 100%;
+      text-align: center;
+    }
   }
   &__center {
     width: 52%;
+    @media (max-width: $screen-md-min) {
+      width: 65%;
+    }
+    @media (max-width: $screen-sm-min) {
+      width: 100%;
+      margin: 20px 0;
+    }
   }
   &__nav {
     padding-left: 2px;
@@ -33,10 +53,18 @@
     float: left;
     width: 33.33%;
     padding: 4px 3%;
+    @media (max-width: $screen-sm-min) {
+      width: 100%;
+      text-align: center;
+    }
   }
   &__subscribe-description {
     margin-top: 18px;
     margin-bottom: 23px;
+    @media (max-width: $screen-md-min) {
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
   }
   &__subscribe-input {
     position: relative;
@@ -45,23 +73,48 @@
     width: 24%;
     padding: 4px 18px;
     padding-right: 0;
+    @media (max-width: $screen-md-min) {
+      position: relative;
+      text-align: center;
+      width: 100%;
+      padding: 3% 20%;
+    }
+    @media (max-width: $screen-sm-min) {
+      padding: 0 5%;
+    }
   }
   &__bottom {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 70px;
+    @media (max-width: $screen-md-min) {
+      position: relative;
+    }
+    @media (max-width: $screen-sm-min) {
+      height: auto;
+      bottom: auto;
+    }
   }
   &__copyright,
   &__social {
     width: 50%;
     float: left;
+    @media (max-width: $screen-sm-min) {
+      width: 100%;
+      display: inline-block;
+      text-align: center;
+    }
   }
   &__copyright {
     position: relative;
     height: 18px;
     top: 50%;
     margin-top: -11px;
+    @media (max-width: $screen-sm-min) {
+      top: 0;
+      margin: 20px 0;
+    }
   }
   &__social {
     position: relative;
@@ -69,6 +122,11 @@
     height: 24px;
     top: 50%;
     margin-top: -10px;
+    @media (max-width: $screen-sm-min) {
+      top: 0;
+      margin: 20px 0;
+      padding: 0 30%;
+    }
     &--creative {
       display: none;
     }
@@ -81,6 +139,9 @@
   }
   &__logo {
     margin-bottom: 13px;
+    @media (max-width: $screen-sm-min) {
+      margin: 0;
+    }
   }
   &__hr {
     position: absolute;
@@ -90,8 +151,16 @@
     border-bottom: 1px solid $color-dark-5;
     height: 1px;
     bottom: 70px;
+    @media (max-width: $screen-md-min) {
+      display: none;
+    }
   }
   &--creative {
+    #{$parent}__top {
+      @media (max-width: $screen-sm-min) {
+        padding-top: 20%;
+      }
+    }
     #{$parent}__left {
       width: 100%;
       text-align: center;
@@ -106,6 +175,9 @@
     }
     #{$parent}__description {
       padding: 0 25%;
+      @media (max-width: $screen-sm-min) {
+        padding: 0 5%;
+      }
     }
     #{$parent}__social {
       &--creative {

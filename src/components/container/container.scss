@@ -237,9 +237,9 @@
       height: 70px;
     }
     #{$parent}__footer {
-      height: 372px + 70px;
+      min-height: 372px + 70px;
       &--creative {
-        height: 367px;
+        min-height: 367px;
       }
     }
   }
