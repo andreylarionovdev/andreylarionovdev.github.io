@@ -1,22 +1,26 @@
 .column {
-    float: left;
-    &--6 {
-        width: 50%;
+  float: left;
+  &--6 {
+    width: 50%;
+    @media (max-width: $screen-sm-min) {
+      width: 98%;
+      padding: 0 1%;
     }
-    &--4 {
-        width: 33.33%;
-        // ... 767px
-        @media (max-width: $screen-xs-max) {
-            width: 98%;
-            padding: 0 1%;
-        }
+  }
+  &--4 {
+    width: 33.33%;
+    // ... 767px
+    @media (max-width: $screen-sm-min) {
+      width: 98%;
+      padding: 0 1%;
     }
-    &--8 {
-        width: 66.66%;
-        // ... 767px
-        @media (max-width: $screen-xs-max) {
-            width: 98%;
-            padding: 0 1%;
-        }
+  }
+  &--8 {
+    width: 66.66%;
+    // ... 767px
+    @media (max-width: $screen-sm-min) {
+      width: 98%;
+      padding: 0 1%;
     }
+  }
 }

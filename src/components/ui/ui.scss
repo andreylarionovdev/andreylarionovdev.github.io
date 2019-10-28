@@ -1,5 +1,8 @@
 .ui {
   $parent: #{&};
+  max-width: 1920px;
+  min-width: 320px;
+  margin: 0 auto;
   &__logo {
     position: absolute;
     top: 30px;
@@ -7,8 +10,7 @@
   }
   &--index,
   &--color-type {
-    max-width: 1140px;
-    margin: 0 auto;
+    width: 79.2%;
     margin-top: 145px;
   }
 
@@ -47,8 +49,8 @@
 
   &--form-components {
     font-family: Montserrat, sans-serif;
-    max-width: 1340px;
-    margin: 143px auto;
+    width: 93%;
+    margin-top: 143px;
 
     @mixin responsive-wrapper($lgWidth) {
       position: relative;
@@ -203,8 +205,8 @@
   }
 
   &--cards {
-    max-width: 1200px;
-    margin: 150px auto;
+    width: 83.5%;
+    margin-top: 150px;
     background: #E5E5E5;
     @include responsive-columns(0, 1.7%, 3.5%, 3.3%, 33.33%, 35%, 30%);
 
@@ -239,7 +241,7 @@
     #{$parent}__footer {
       min-height: 372px + 70px;
       &--creative {
-        min-height: 367px;
+        height: 368px;
       }
     }
   }
