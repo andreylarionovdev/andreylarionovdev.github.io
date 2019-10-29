@@ -8,6 +8,10 @@ mixin button(theme, caption, options)
   if options
     if options.hover
       - modifiers.push(blockName + '--hovered')
+    if options.fluid
+      - modifiers.push(blockName+'--fluid')
+    if options.small
+      - modifiers.push(blockName+'--small')
     if options.href
       - href = options.href
     if options.withArrow
@@ -16,10 +20,6 @@ mixin button(theme, caption, options)
       - attributes = options.attributes
 
   a(class=blockName class=modifiers href=href)&attributes(attributes)
-    if theme === 'textual'
-      = caption
-    else
-      div(class=blockName+'__cell')
-        span(class=blockName+'__caption')= caption
-        if withArrow
-          i(class=[blockName+'__arrow', 'material-icons'])= 'arrow_forward'
+    = caption
+    if withArrow
+      i(class=[blockName+'__arrow', 'material-icons'])= 'arrow_forward'

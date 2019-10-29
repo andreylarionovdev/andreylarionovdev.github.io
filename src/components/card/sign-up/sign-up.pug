@@ -62,7 +62,10 @@ mixin sign-up()
       +button(
         'default',
         'Перейти к оплате',
-        {withArrow: true}
+        {
+          withArrow: true,
+          fluid: true
+        }
       )
     div(class=[blockName+'__auth', 'clearfix'])
       div(class=blockName+'__auth-hint')
@@ -70,5 +73,6 @@ mixin sign-up()
       div(class=blockName+'__auth-button')
         +button(
           'transparent',
-          'Войти'
+          'Войти',
+          {fluid: true}
         )

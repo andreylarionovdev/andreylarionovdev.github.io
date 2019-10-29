@@ -19,7 +19,10 @@ mixin sign-in()
       +button(
         'default',
         'Войти',
-        {withArrow: true}
+        {
+          withArrow: true,
+          fluid: true
+        }
       )
     div(class=[blockName + '__create-account', 'clearfix'])
       div(class=blockName + '__hint')
@@ -27,5 +30,6 @@ mixin sign-in()
       div(class=blockName + '__create-button')
         +button(
           'transparent',
-          'Создать'
+          'Создать',
+          {fluid: true}
         )

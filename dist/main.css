@@ -1334,31 +1334,26 @@
 
 .button {
   font-family: Montserrat, sans-serif;
-  text-align: center;
-  text-decoration: none;
   border-radius: 22px;
-  font-style: normal;
   font-size: 12px;
-  font-weight: bold;
   text-transform: uppercase;
-  height: 100%;
-  width: 100%;
-  display: block; }
-  .button__cell {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    height: 100%; }
-  .button__caption {
-    position: absolute;
-    display: block;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    height: 15px;
-    font-size: 12px; }
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border: 1px solid transparent;
+  padding: 1em 1.5em;
+  line-height: 1.5; }
+  .button--small {
+    padding: 0.5em 1.5em; }
+  .button--fluid {
+    width: 100%; }
   .button--hovered, .button:hover {
     opacity: 0.5; }
   .button__arrow {
@@ -1379,7 +1374,8 @@
   .button--textual {
     display: inline;
     border: none;
-    color: #BC9CFF; }
+    color: #BC9CFF;
+    padding: 1em 0; }
     .button--textual:hover, .button--textual.button--hovered {
       color: rgba(31, 32, 65, 0.5);
       opacity: 1; }
@@ -2109,13 +2105,9 @@
       .header--signed .header__account {
         border-left: none; } }
   .header__button--sign-in, .header__button--sign-up {
-    height: 34px;
     float: right; }
   .header__button--sign-in {
-    width: 79px;
     margin-right: 20px; }
-  .header__button--sign-up {
-    width: 100px; }
   .header__close-button {
     display: none;
     position: absolute;

@@ -211,15 +211,10 @@
   &__button {
     &--sign-in,
     &--sign-up {
-      height: 34px;
       float: right;
     }
     &--sign-in {
-      width: 79px;
       margin-right: 20px;
-    }
-    &--sign-up {
-      width: 100px;
     }
   }
 

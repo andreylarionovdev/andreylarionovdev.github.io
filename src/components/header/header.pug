@@ -52,7 +52,8 @@ mixin header(user, menuItems, menuButtons)
             div(class=blockName+'__button--'+button.name)
               +button(
                 button.theme,
-                button.caption
+                button.caption,
+                {small: true}
               )
       div(class=blockName+'__menu-wrapper')
         ul(class=[blockName+'__menu', 'clearfix'])
