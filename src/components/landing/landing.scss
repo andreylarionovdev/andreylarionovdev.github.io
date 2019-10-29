@@ -23,6 +23,10 @@
     bottom: 2.6%;
     width: 20%;
     text-align: right;
+    @media (max-width: $screen-sm-min) {
+      width: 80%;
+      right: 4%;
+    }
   }
   &__room-search {
     width: 380px;
