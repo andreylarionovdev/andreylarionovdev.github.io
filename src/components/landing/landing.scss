@@ -3,22 +3,35 @@
     height: 70px;
   }
   &__hero-section {
-    padding: 70px 140px;
+    padding: 4.9% 9.7%;
     height: 831px;
     width: 100%;
     position: relative;
     background-image: url(../../img/landing.png);
-    background-position: center -70px;
+    background-position: center bottom;
     background-repeat: no-repeat;
     //background-attachment: fixed;
     background-size: cover;
     background-color: $color-gray;
+    @media (max-width: $screen-sm-min) {
+      padding: 3% 1%;
+    }
+  }
+  &__hero-text {
+    position: absolute;
+    right: 9.3%;
+    bottom: 2.6%;
+    width: 20%;
+    text-align: right;
   }
   &__room-search {
     width: 380px;
     height: 374px;
+    @media (max-width: $screen-sm-min) {
+      width: 100%;
+    }
   }
   &__footer {
-    height: 372px + 70px;
+    min-height: 372px + 70px;
   }
 }
