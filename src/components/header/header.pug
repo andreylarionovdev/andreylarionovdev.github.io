@@ -59,9 +59,12 @@ mixin header(user, menuItems, menuButtons)
         ul(class=[blockName+'__menu', 'clearfix'])
           each item, _ in menuItems
             - let active = ''
+            - let hasDropdown = ''
             if item.active
               - active = blockName+'__menu-item--active'
-            li(class=blockName+'__menu-item' class=active)
+            if item.sub
+              - hasDropdown = blockName+'__menu-item--has-dropdown'
+            li(class=blockName+'__menu-item' class=active class=hasDropdown)
               if item.sub
                 a(class=blockName+'__menu-a' class=active href='javascript:void(0)')
                   span(class=blockName+'__dropdown-text')= item.name
