@@ -2300,6 +2300,27 @@
     color: rgba(31, 32, 65, 0.5);
     text-decoration: none; }
 
+.landing__header {
+  height: 70px; }
+
+.landing__hero-section {
+  padding: 70px 140px;
+  height: 831px;
+  width: 100%;
+  position: relative;
+  background-image: url(img/landing.png);
+  background-position: center -70px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #E5E5E5; }
+
+.landing__room-search {
+  width: 380px;
+  height: 374px; }
+
+.landing__footer {
+  height: 442px; }
+
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }

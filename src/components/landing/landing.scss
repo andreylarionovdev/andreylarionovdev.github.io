@@ -1,0 +1,24 @@
+.landing {
+  &__header {
+    height: 70px;
+  }
+  &__hero-section {
+    padding: 70px 140px;
+    height: 831px;
+    width: 100%;
+    position: relative;
+    background-image: url(../../img/landing.png);
+    background-position: center -70px;
+    background-repeat: no-repeat;
+    //background-attachment: fixed;
+    background-size: cover;
+    background-color: $color-gray;
+  }
+  &__room-search {
+    width: 380px;
+    height: 374px;
+  }
+  &__footer {
+    height: 372px + 70px;
+  }
+}

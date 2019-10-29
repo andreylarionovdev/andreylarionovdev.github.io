@@ -8,6 +8,7 @@ mixin footer(data)
   - var rightTitle = 'Subscribe&nbsp;to&nbsp;our&nbsp;newsletter'
   - var leftDescription = 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.'
   - var rightDescription = 'Receive our latest news and promotions in your inbox!'
+  - var rightPlaceholder = 'Your email address'
   - var copyright = 'Copyright © 2018 Toxin UI Kit. All rights reserved.'
   -
     var menus = [
@@ -48,6 +49,10 @@ mixin footer(data)
       - rightDescription = data.rightDescription
     if data.rightTitle
       - rightTitle = data.rightTitle
+    if data.rightPlaceholder
+      - rightPlaceholder = data.rightPlaceholder
+    if data.copyright
+      - copyright = data.copyright
     if data.theme
       - modifiers.push(blockName+'--'+data.theme)
 
@@ -79,7 +84,7 @@ mixin footer(data)
           div(class=blockName+'__subscribe-input')
             +input-text(
               'subscribe',
-              'Your email address',
+              rightPlaceholder,
               '',
               {withButton: true}
             )

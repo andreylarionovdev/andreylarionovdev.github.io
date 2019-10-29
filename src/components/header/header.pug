@@ -1,7 +1,7 @@
 include ../logo/logo
 include ../../components/form/button/button
 
-mixin header(user, menuItems, buttons)
+mixin header(user, menuItems, menuButtons)
   - const blockName = 'header'
   - var modifiers = []
   if user
@@ -25,10 +25,19 @@ mixin header(user, menuItems, buttons)
         {name: 'Documentation', href: 'javascript:void(0)'}
       ]
   // Default buttons
-  if !buttons
+  if !menuButtons
     -
-      buttons = [
-
+      menuButtons = [
+        {
+          name: 'sign-up',
+          theme: 'default',
+          caption: 'Register'
+        },
+        {
+          name: 'sign-in',
+          theme: 'transparent',
+          caption: 'Login'
+        }
       ]
   header(class=[blockName, 'clearfix'] class=modifiers)
     nav(class=blockName+'__nav')
@@ -39,10 +48,12 @@ mixin header(user, menuItems, buttons)
         if user
           = user
         else
-          div(class=blockName+'__button--sign-up')
-            +button('default', 'Register')
-          div(class=blockName + '__button--sign-in')
-            +button('transparent', 'Login')
+          each button, _ in menuButtons
+            div(class=blockName+'__button--'+button.name)
+              +button(
+                button.theme,
+                button.caption
+              )
       div(class=blockName+'__menu-wrapper')
         ul(class=[blockName+'__menu', 'clearfix'])
           each item, _ in menuItems

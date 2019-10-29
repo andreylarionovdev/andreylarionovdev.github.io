@@ -8,6 +8,7 @@ $screen-lg-min: 1200px;
 // Colors and gradients
 $color-purple: #BC9CFF;
 $color-green: #6FCF97;
+$color-gray: #E5E5E5;
 $color-dark-5: rgba(31, 32, 65, 0.05);
 $color-dark-10: rgba(31, 32, 65, 0.1);
 $color-dark-25: rgba(31, 32, 65, 0.25);
@@ -72,6 +73,7 @@ $grad-green: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 @import 'components/header/header';
 @import 'components/footer/footer';
 @import 'components/footer/menu-section/menu-section';
+@import 'components/landing/landing';
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;

@@ -37,12 +37,24 @@ const config = {
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                            hmr: process.env.NODE_ENV === 'development',
+                            hmr: process.env.NODE_ENV === 'development'
                         },
                     },
                     'css-loader',
                     'postcss-loader',
-                    'sass-loader',
+                    {
+                        loader: 'resolve-url-loader',
+                        options: {
+                            debug: true,
+                            sourceMap: false
+                        }
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    },
                 ],
             },
             {
@@ -99,9 +111,9 @@ const config = {
             filename: 'ui-kit-headers-footers.html',
             template: 'src/ui-kit-headers-footers.pug'
         }),
-        new MiniCssExtractPlugin({
-            filename: '[name].css',
-            publicPath: "../"
+        new HtmlWebpackPlugin({
+            filename: 'landing.html',
+            template: 'src/landing.pug'
         }),
     ]
 };

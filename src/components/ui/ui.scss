@@ -207,7 +207,7 @@
   &--cards {
     width: 83.5%;
     margin-top: 150px;
-    background: #E5E5E5;
+    background: $color-gray;
     @include responsive-columns(0, 1.7%, 3.5%, 3.3%, 33.33%, 35%, 30%);
 
     #{$parent}__room-search,
@@ -227,7 +227,7 @@
 
   &--headers-footers {
     margin-top: 150px;
-    background: #E5E5E5;
+    background: $color-gray;
     #{$parent}__header--anon,
     #{$parent}__header--signed,
     #{$parent}__footer,
