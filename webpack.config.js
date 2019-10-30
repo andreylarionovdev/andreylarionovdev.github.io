@@ -96,20 +96,20 @@ const config = {
             template: 'src/index.pug'
         }),
         new HtmlWebpackPlugin({
-            filename: 'ui-kit-colors-n-type.html',
-            template: 'src/ui-kit-colors-type.pug'
+            filename: 'ui-colors-type.html',
+            template: 'src/ui-colors-type.pug'
         }),
         new HtmlWebpackPlugin({
-            filename: 'ui-kit-form-elements.html',
-            template: 'src/ui-kit-form-elements.pug'
+            filename: 'ui-form-elements.html',
+            template: 'src/ui-form-elements.pug'
         }),
         new HtmlWebpackPlugin({
-            filename: 'ui-kit-cards.html',
-            template: 'src/ui-kit-cards.pug'
+            filename: 'ui-cards.html',
+            template: 'src/ui-cards.pug'
         }),
         new HtmlWebpackPlugin({
-            filename: 'ui-kit-headers-footers.html',
-            template: 'src/ui-kit-headers-footers.pug'
+            filename: 'ui-headers-footers.html',
+            template: 'src/ui-headers-footers.pug'
         }),
         new HtmlWebpackPlugin({
             filename: 'landing.html',
