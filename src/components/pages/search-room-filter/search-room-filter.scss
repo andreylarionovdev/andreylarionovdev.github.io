@@ -1,12 +1,29 @@
 .search-room-filter {
   &__sidebar,
   &__search-result {
-    position: relative;
+    //position: relative;
   }
-  &__date-dropdown {
-    position: relative;
+  &__sidebar {
+    padding-right: 2%;
   }
   &__search-result {
-    position: relative;
+    padding-left: 3%;
+  }
+  &__date-dropdown {
+    //position: relative;
+    height: 44px;
+  }
+  &__date-dropdown-label,
+  &__guests-dropdown-label {
+    margin-bottom: 5px;
+  }
+  &__search-result {
+    //position: relative;
+  }
+  &__content {
+    width: 80.5%;
+    max-width: 1920px;
+    margin: 0 auto;
+    margin-top: 30px;
   }
 }

@@ -6,16 +6,26 @@ block vars
   - var withoutLogo = true
 
 block main
-  .column.column--4.search-room-filter__sidebar
-    .search-room-filter__date-dropdown
-      +label(
-        'Даты пребывания в отеле',
-        null,
-        'date-dropdown'
-      )
-      +dropdown(
-        'date-dropdown',
-        {value: '19 авг. - 23 авг.'}
-      )
-  .column.column--8.search-room-filter__search-result
-    h1.h1= 'Номера, которые мы для вас подобрали'
+  .search-room-filter__content.clearfix
+    .column.column--3.search-room-filter__sidebar
+      .search-room-filter__date-dropdown-label
+        +label(
+          'Даты пребывания в отеле',
+          null,
+          'date-dropdown'
+        )
+      .search-room-filter__date-dropdown
+        +dropdown(
+          'date-dropdown',
+          {value: '19 авг. - 23 авг.'}
+        )
+      .search-room-filter__guests-dropdown-label
+        +label(
+          'Гости',
+          null,
+          'guests-dropdown'
+        )
+      .search-room-filter__guests-dropdown
+
+    .column.column--9.search-room-filter__search-result
+      h1.h1= 'Номера, которые мы для вас подобрали'
