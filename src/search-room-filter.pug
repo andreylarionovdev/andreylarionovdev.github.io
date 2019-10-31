@@ -1,0 +1,21 @@
+extends components/pages/layout/layout
+
+block vars
+  - var title = 'Search room/Filter'
+  - var bodyClasses = ['search-room-filter', 'clearfix']
+  - var withoutLogo = true
+
+block main
+  .column.column--4.search-room-filter__sidebar
+    .search-room-filter__date-dropdown
+      +label(
+        'Даты пребывания в отеле',
+        null,
+        'date-dropdown'
+      )
+      +dropdown(
+        'date-dropdown',
+        {value: '19 авг. - 23 авг.'}
+      )
+  .column.column--8.search-room-filter__search-result
+    h1.h1= 'Номера, которые мы для вас подобрали'

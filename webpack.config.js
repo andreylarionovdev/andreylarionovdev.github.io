@@ -115,6 +115,10 @@ const config = {
             filename: 'landing.html',
             template: 'src/landing.pug'
         }),
+        new HtmlWebpackPlugin({
+            filename: 'search-room-filter.html',
+            template: 'src/search-room-filter.pug'
+        }),
     ]
 };
 module.exports = config;

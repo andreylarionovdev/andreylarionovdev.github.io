@@ -2296,8 +2296,11 @@
     color: rgba(31, 32, 65, 0.5);
     text-decoration: none; }
 
-.landing__header {
+.layout__header {
   height: 70px; }
+
+.layout__footer {
+  min-height: 442px; }
 
 .landing__hero-section {
   padding: 4.9% 9.7%;
@@ -2308,7 +2311,7 @@
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #E5E5E5; }
+  background-color: #6FCF97; }
   @media (max-width: 768px) {
     .landing__hero-section {
       padding: 3% 1%; } }
@@ -2331,8 +2334,14 @@
     .landing__room-search {
       width: 100%; } }
 
-.landing__footer {
-  min-height: 442px; }
+.search-room-filter__sidebar, .search-room-filter__search-result {
+  position: relative; }
+
+.search-room-filter__date-dropdown {
+  position: relative; }
+
+.search-room-filter__search-result {
+  position: relative; }
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;

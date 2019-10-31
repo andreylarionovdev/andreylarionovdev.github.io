@@ -1,0 +1,8 @@
+.layout {
+  &__header {
+    height: 70px;
+  }
+  &__footer {
+    min-height: 372px + 70px;
+  }
+}

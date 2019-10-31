@@ -1,90 +1,13 @@
-extends base
-
-include components/logo/logo
-include components/header/header
-include components/footer/footer
-include components/card/room-search/room-search
+extends components/pages/layout/layout
 
 block vars
   - var title = 'Landing page'
   - var bodyClasses = ['landing', 'clearfix']
   - var withoutLogo = true
-block content
-  .landing__header
-    +header(
-      null,
-      [
-        {name: 'О нас', href: 'javascript:void(0)'},
-        {
-          name: 'Услуги',
-          sub: [
-            {name: 'Услуга 1', href: 'javascript:void(0)'},
-            {name: 'Услуга 2', href: 'javascript:void(0)'},
-            {name: 'Услуга 3', href: 'javascript:void(0)'}
-          ]
-        },
-        {name: 'Вакансии', href: 'javascript:void(0)'},
-        {name: 'Новости', href: 'javascript:void(0)'},
-        {
-          name: 'Соглашения',
-          sub: [
-            {name: 'Соглашение 1', href: 'javascript:void(0)'},
-            {name: 'Соглашение 2', href: 'javascript:void(0)'},
-            {name: 'Соглашение 3', href: 'javascript:void(0)'}
-          ]
-        }
-      ],
-      [
-        {
-          name: 'sign-up',
-          theme: 'default',
-          caption: 'Зарегистрироваться'
-        },
-        {
-          name: 'sign-in',
-          theme: 'transparent',
-          caption: 'Войти'
-        }
-      ]
-    )
+
+block main
   .landing__hero-section
     .landing__room-search
       +room-search
     .landing__hero-text.body
       = 'Лучшие номера для вашей работы, отдыха и просто вдохновения'
-  .landing__footer
-    +footer({
-      rightTitle: 'Подписка',
-      leftDescription: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
-      rightDescription: 'Получайте специальные предложения и новости сервиса',
-      rightPlaceholder: 'Email',
-      copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.',
-      menus: [
-      {
-        title: 'Навигация',
-        links: [
-            {text: 'О нас', href: 'javascript:void(0)'},
-            {text: 'Новости', href: 'javascript:void(0)'},
-            {text: 'Служба поддержки', href: 'javascript:void(0)'},
-            {text: 'Услуги', href: 'javascript:void(0)'}
-        ]
-      },
-          {
-              title: 'О нас',
-              links: [
-                  {text: 'О сервисе', href: 'javascript:void(0)'},
-                  {text: 'Наша команда', href: 'javascript:void(0)'},
-                  {text: 'Вакансии', href: 'javascript:void(0)'},
-                  {text: 'Инвесторы', href: 'javascript:void(0)'}
-              ]
-          },
-          {
-              title: 'Служба поддержки',
-              links: [
-                  {text: 'Соглашения', href: 'javascript:void(0)'},
-                  {text: 'Сообщества', href: 'javascript:void(0)'},
-                  {text: 'Связь с нами', href: 'javascript:void(0)'}
-              ]
-          }
-      ]
-    })
