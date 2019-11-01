@@ -1,8 +1,7 @@
 mixin logo(href, withText)
   - const blockName = 'logo'
   - var href = href || '../index.html'
-    a(class=blockName href=href)
-      if withText === true
-        img(src=require('./img/logo--with-text.svg'))
-      else
-        img(src=require('./img/logo.svg'))
+  - var modifiers = []
+  if withText
+    - modifiers.push(blockName+'--with-text')
+  a(class=blockName class=modifiers href=href)

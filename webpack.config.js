@@ -113,11 +113,11 @@ const config = {
         }),
         new HtmlWebpackPlugin({
             filename: 'landing.html',
-            template: 'src/landing.pug'
+            template: 'src/components/pages/landing/landing.pug'
         }),
         new HtmlWebpackPlugin({
             filename: 'search-room-filter.html',
-            template: 'src/search-room-filter.pug'
+            template: 'src/components/pages/search-room-filter/search-room-filter.pug'
         }),
     ]
 };

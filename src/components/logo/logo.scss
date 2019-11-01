@@ -1,2 +1,14 @@
 .logo {
+  display: inline-block;
+  text-decoration: none;
+  height: 48px;
+  width: 48px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url('../../img/logo.svg');
+  &--with-text {
+    height: 40px;
+    width: 106px;
+    background-image: url('../../img/logo--with-text.svg');
+  }
 }

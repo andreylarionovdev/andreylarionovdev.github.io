@@ -130,8 +130,20 @@
   }
   &__icon {
     float: right;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-position: center center;
+    background-repeat: no-repeat;
     &--fb {
       margin: 0 22px;
+      background-image: url('../../img/fb.svg');
+    }
+    &--tw {
+      background-image: url('../../img/tw.svg');
+    }
+    &--ig {
+      background-image: url('../../img/ig.svg');
     }
   }
   &__logo {

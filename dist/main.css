@@ -707,6 +707,19 @@
   .site-menu a:hover {
     color: #1F2041; }
 
+.logo {
+  display: inline-block;
+  text-decoration: none;
+  height: 48px;
+  width: 48px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(img/logo.svg); }
+  .logo--with-text {
+    height: 40px;
+    width: 106px;
+    background-image: url(img/logo--with-text.svg); }
+
 .color-sample {
   font-family: Quicksand, sans-serif;
   position: relative;
@@ -2254,9 +2267,19 @@
     .footer__social--creative {
       display: none; }
   .footer__icon {
-    float: right; }
+    float: right;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-position: center center;
+    background-repeat: no-repeat; }
     .footer__icon--fb {
-      margin: 0 22px; }
+      margin: 0 22px;
+      background-image: url(img/fb.svg); }
+    .footer__icon--tw {
+      background-image: url(img/tw.svg); }
+    .footer__icon--ig {
+      background-image: url(img/ig.svg); }
   .footer__logo {
     margin-bottom: 13px; }
     @media (max-width: 768px) {
