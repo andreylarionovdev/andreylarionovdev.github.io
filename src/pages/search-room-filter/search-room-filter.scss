@@ -1,21 +1,46 @@
 .search-room-filter {
-  &__sidebar,
-  &__search-result {
-    //position: relative;
-  }
   &__sidebar {
     padding-right: 2%;
   }
   &__search-result {
     padding-left: 3%;
   }
-  &__date-dropdown {
-    //position: relative;
+  &__date-dropdown,
+  &__guests-dropdown,
+  &__feature-dropdown,
+  &__additional-checkbox-list-xp-group {
+    position: relative;
     height: 44px;
   }
+  &__guests-dropdown-group {
+    margin-top: 21px;
+  }
+  &__additional-checkbox-list-xp-group {
+    margin-top: 18px;
+  }
   &__date-dropdown-label,
+  &__feature-dropdown-label,
   &__guests-dropdown-label {
     margin-bottom: 5px;
+  }
+  &__feature-dropdown-group {
+    margin-top: 28px;
+  }
+  &__rich-checkbox-group {
+    margin-top: 31px;
+  }
+  &__price-slider,
+  &__checkbox-group {
+    margin-top: 30px;
+  }
+  &__price-slider-hint {
+    margin-top: 6px;
+    font-size: 12px;
+    font-family: Montserrat, sans-serif;
+    color: $color-dark-50;
+  }
+  &__checkbox-group {
+    padding-right: 20px;
   }
   &__search-result {
     //position: relative;

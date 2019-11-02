@@ -555,7 +555,7 @@
     .ui--form-components .ui__dropdown-group--collapsed {
       margin-bottom: 20px; }
     .ui--form-components .ui__range-slider {
-      margin-bottom: 18px; }
+      margin-bottom: 38px; }
     .ui--form-components .ui__checkbox-list-xp-group--expanded {
       margin-bottom: 14px; }
     .ui--form-components .ui__bullet-list-group,
@@ -1271,7 +1271,7 @@
   border-color: transparent !important; }
 
 .irs--big {
-  height: 55px; }
+  height: 35px; }
 
 .irs--big.irs-with-grid {
   height: 70px; }
@@ -1465,6 +1465,7 @@
   display: inline-block;
   width: 100%;
   height: 100%;
+  font-family: Montserrat, sans-serif;
   font-size: 14px;
   text-align: left;
   color: rgba(31, 32, 65, 0.75);
@@ -1523,7 +1524,8 @@
   margin-bottom: 7px; }
 
 .rich-checkbox {
-  font-size: 12px; }
+  font-size: 12px;
+  font-family: Montserrat, sans-serif; }
   .rich-checkbox__input {
     position: absolute;
     opacity: 0; }
@@ -2375,11 +2377,36 @@
 .search-room-filter__search-result {
   padding-left: 3%; }
 
-.search-room-filter__date-dropdown {
+.search-room-filter__date-dropdown, .search-room-filter__guests-dropdown, .search-room-filter__feature-dropdown, .search-room-filter__additional-checkbox-list-xp-group {
+  position: relative;
   height: 44px; }
 
-.search-room-filter__date-dropdown-label, .search-room-filter__guests-dropdown-label {
+.search-room-filter__guests-dropdown-group {
+  margin-top: 21px; }
+
+.search-room-filter__additional-checkbox-list-xp-group {
+  margin-top: 18px; }
+
+.search-room-filter__date-dropdown-label, .search-room-filter__feature-dropdown-label, .search-room-filter__guests-dropdown-label {
   margin-bottom: 5px; }
+
+.search-room-filter__feature-dropdown-group {
+  margin-top: 28px; }
+
+.search-room-filter__rich-checkbox-group {
+  margin-top: 31px; }
+
+.search-room-filter__price-slider, .search-room-filter__checkbox-group {
+  margin-top: 30px; }
+
+.search-room-filter__price-slider-hint {
+  margin-top: 6px;
+  font-size: 12px;
+  font-family: Montserrat, sans-serif;
+  color: rgba(31, 32, 65, 0.5); }
+
+.search-room-filter__checkbox-group {
+  padding-right: 20px; }
 
 .search-room-filter__content {
   width: 80.5%;

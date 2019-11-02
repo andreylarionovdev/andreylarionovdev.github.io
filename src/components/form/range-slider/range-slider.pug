@@ -1,9 +1,8 @@
 include ../label/label
 
 mixin range-slider(options)
-  - var thisModifiers = []
-  if options.modifiers
-    - thisModifiers = options.modifiers.this || []
-  div(class='range-slider' class=thisModifiers)
-    +label('range slider')
-    input(class='range-slider__input' type='text' name=options.name value='')
+  - const blockName = 'range-slider'
+  - let caption = options.caption || 'range slider'
+  div(class=blockName)
+    +label(caption)
+    input(class=blockName+'__input' type='text' name=options.name value='')

@@ -50,24 +50,169 @@
     </div>
     <div class="search-room-filter__content clearfix">
       <div class="column column--3 search-room-filter__sidebar">
-        <div class="search-room-filter__date-dropdown-label">
-          <label class="label clearfix" for="date-dropdown">
-            <h3 class="label__left h3">Даты пребывания в отеле</h3><span class="label__right"></span>
-          </label>
-        </div>
-        <div class="search-room-filter__date-dropdown">
-          <div class="dropdown" data-type="empty" id="date-dropdown">
-            <div class="dropdown__select"><span class="dropdown__text">19 авг. - 23 авг.</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i>
-              <input class="dropdown__input" type="text" name="date-dropdown" value="19 авг. - 23 авг.">
+        <div class="search-room-filter__date-dropdown-group">
+          <div class="search-room-filter__date-dropdown-label">
+            <label class="label clearfix" for="date-dropdown">
+              <h3 class="label__left h3">Даты пребывания в отеле</h3><span class="label__right"></span>
+            </label>
+          </div>
+          <div class="search-room-filter__date-dropdown">
+            <div class="dropdown" data-type="empty" id="date-dropdown">
+              <div class="dropdown__select"><span class="dropdown__text">19 авг. - 23 авг.</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i>
+                <input class="dropdown__input" type="text" name="date-dropdown" value="19 авг. - 23 авг.">
+              </div>
             </div>
           </div>
         </div>
-        <div class="search-room-filter__guests-dropdown-label">
-          <label class="label clearfix" for="guests-dropdown">
-            <h3 class="label__left h3">Гости</h3><span class="label__right"></span>
-          </label>
+        <div class="search-room-filter__guests-dropdown-group">
+          <div class="search-room-filter__guests-dropdown-label">
+            <label class="label clearfix" for="guests-dropdown">
+              <h3 class="label__left h3">Гости</h3><span class="label__right"></span>
+            </label>
+          </div>
+          <div class="search-room-filter__guests-dropdown">
+            <div class="dropdown" data-type="select-box" id="guests-dropdown">
+              <div class="dropdown__select"><span class="dropdown__text">3 гостя, 1 младенец</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i>
+                <input class="dropdown__input" type="text" name="guests-dropdown" value="3 гостя, 1 младенец">
+              </div>
+              <ul class="dropdown__menu" style="z-index:9;">
+                <li class="dropdown__li clearfix" data-name="adult"><span class="dropdown__li-name">взрослые</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">2</span><span class="dropdown__li-dec">-</span></li>
+                <li class="dropdown__li clearfix" data-name="kids"><span class="dropdown__li-name">дети</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
+                <li class="dropdown__li clearfix" data-name="baby"><span class="dropdown__li-name">младенцы</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">1</span><span class="dropdown__li-dec">-</span></li>
+                <li class="dropdown__li clearfix" data-actions><span class="dropdown__li-clear"><a class="button button--textual button--hovered" href="javascript:void(0);" data-action="clear">очистить</a></span><span class="dropdown__li-apply"><a class="button button--textual" href="javascript:void(0);" data-action="apply">применить</a></span></li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="search-room-filter__guests-dropdown"></div>
+        <div class="search-room-filter__price-slider">
+          <div class="range-slider">
+            <label class="label clearfix">
+              <h3 class="label__left h3">Диапазон цены</h3><span class="label__right"></span>
+            </label>
+            <input class="range-slider__input" type="text" name="price-slider" value="">
+          </div>
+        </div>
+        <p class="search-room-filter__price-slider-hint">Стоимость за сутки пребывания в номере
+        </p>
+        <div class="search-room-filter__checkbox-group">
+          <div class="checkbox-group__label">
+            <label class="label clearfix">
+              <h3 class="label__left h3">checkbox buttons</h3><span class="label__right"></span>
+            </label>
+          </div>
+          <div class="checkbox-group__checkbox">
+            <div class="checkbox">
+              <input class="checkbox__input" id="smoke-allowed" type="checkbox">
+              <label class="checkbox__label" for="smoke-allowed">Можно курить</label>
+            </div>
+          </div>
+          <div class="checkbox-group__checkbox">
+            <div class="checkbox">
+              <input class="checkbox__input" id="pets-allowed" type="checkbox" checked>
+              <label class="checkbox__label" for="pets-allowed">Можно с питомцами</label>
+            </div>
+          </div>
+          <div class="checkbox-group__checkbox">
+            <div class="checkbox">
+              <input class="checkbox__input" id="guests-allowed" type="checkbox" checked>
+              <label class="checkbox__label" for="guests-allowed">Можно пригласить гостей (до 10 человек)</label>
+            </div>
+          </div>
+        </div>
+        <div class="search-room-filter__rich-checkbox-group">
+          <div class="rich-checkbox-group__label">
+            <label class="label clearfix">
+              <h3 class="label__left h3">Доступность</h3><span class="label__right"></span>
+            </label>
+          </div>
+          <div class="rich-checkbox-group__rich-checkbox clearfix">
+            <div class="rich-checkbox">
+              <input class="rich-checkbox__input" id="wide-hall-checkbox" type="checkbox">
+              <label class="rich-checkbox__label" for="wide-hall-checkbox"><span class="rich-checkbox__title clearfix">Широкий коридор</span><span class="rich-checkbox__hint">Ширина коридоров в номере не&nbsp;менее 91 см.</span></label>
+            </div>
+          </div>
+          <div class="rich-checkbox-group__rich-checkbox clearfix">
+            <div class="rich-checkbox">
+              <input class="rich-checkbox__input" id="disable-assistant-checkbox" type="checkbox">
+              <label class="rich-checkbox__label" for="disable-assistant-checkbox"><span class="rich-checkbox__title clearfix">Помощник для инвалидов</span><span class="rich-checkbox__hint">На 1 этаже вас встретит специалист и проводит до номера.</span></label>
+            </div>
+          </div>
+        </div>
+        <div class="search-room-filter__feature-dropdown-group">
+          <div class="search-room-filter__feature-dropdown-label">
+            <label class="label clearfix" for="feature-dropdown">
+              <h3 class="label__left h3">Удобства номера</h3><span class="label__right"></span>
+            </label>
+          </div>
+          <div class="search-room-filter__feature-dropdown">
+            <div class="dropdown" data-type="select-box" id="feature-dropdown">
+              <div class="dropdown__select"><span class="dropdown__text">2 спальни, 2 кровати...</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i>
+                <input class="dropdown__input" type="text" name="feature-dropdown" value="2 спальни, 2 кровати...">
+              </div>
+              <ul class="dropdown__menu" style="z-index:9;">
+                <li class="dropdown__li clearfix" data-name="bedroom"><span class="dropdown__li-name">спальни</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">2</span><span class="dropdown__li-dec">-</span></li>
+                <li class="dropdown__li clearfix" data-name="bed"><span class="dropdown__li-name">кровати</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">2</span><span class="dropdown__li-dec">-</span></li>
+                <li class="dropdown__li clearfix" data-name="bathroom"><span class="dropdown__li-name">ванные комнаты</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
+                <li class="dropdown__li clearfix" data-actions><span class="dropdown__li-clear"><a class="button button--textual button--hovered" href="javascript:void(0);" data-action="clear">очистить</a></span><span class="dropdown__li-apply"><a class="button button--textual" href="javascript:void(0);" data-action="apply">применить</a></span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="search-room-filter__additional-checkbox-list-xp-group">
+            <div class="checkbox-list-xp" id="additional">
+              <div class="checkbox-list-xp__select"><span class="checkbox-list-xp__label">Дополнительные удобства</span><i class="checkbox-list-xp__icon-down material-icons">keyboard_arrow_down</i><i class="checkbox-list-xp__icon-up material-icons">keyboard_arrow_up</i></div>
+              <ul class="checkbox-list-xp__list">
+                <li class="checkbox-list-xp__li clearfix">
+                  <div class="checkbox">
+                    <input class="checkbox__input" id="additional_breakfast" type="checkbox">
+                    <label class="checkbox__label" for="additional_breakfast">Завтрак</label>
+                  </div>
+                </li>
+                <li class="checkbox-list-xp__li clearfix">
+                  <div class="checkbox">
+                    <input class="checkbox__input" id="additional_table" type="checkbox" checked>
+                    <label class="checkbox__label" for="additional_table">Письменный стол</label>
+                  </div>
+                </li>
+                <li class="checkbox-list-xp__li clearfix">
+                  <div class="checkbox">
+                    <input class="checkbox__input" id="additional_baby-chair-for-eat" type="checkbox" checked>
+                    <label class="checkbox__label" for="additional_baby-chair-for-eat">Стул для кормления</label>
+                  </div>
+                </li>
+                <li class="checkbox-list-xp__li clearfix">
+                  <div class="checkbox">
+                    <input class="checkbox__input" id="additional_baby-bed" type="checkbox" checked>
+                    <label class="checkbox__label" for="additional_baby-bed">Кроватка</label>
+                  </div>
+                </li>
+                <li class="checkbox-list-xp__li clearfix">
+                  <div class="checkbox">
+                    <input class="checkbox__input" id="additional_tv_1" type="checkbox">
+                    <label class="checkbox__label" for="additional_tv_1">Телевизор</label>
+                  </div>
+                </li>
+                <li class="checkbox-list-xp__li clearfix">
+                  <div class="checkbox">
+                    <input class="checkbox__input" id="additional_shampoo_1" type="checkbox">
+                    <label class="checkbox__label" for="additional_shampoo_1">Шампунь</label>
+                  </div>
+                </li>
+                <li class="checkbox-list-xp__li clearfix">
+                  <div class="checkbox">
+                    <input class="checkbox__input" id="additional_tv_2" type="checkbox">
+                    <label class="checkbox__label" for="additional_tv_2">Телевизор</label>
+                  </div>
+                </li>
+                <li class="checkbox-list-xp__li clearfix">
+                  <div class="checkbox">
+                    <input class="checkbox__input" id="additional_shampoo_2" type="checkbox">
+                    <label class="checkbox__label" for="additional_shampoo_2">Шампунь</label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="column column--9 search-room-filter__search-result">
         <h1 class="h1">Номера, которые мы для вас подобрали</h1>
