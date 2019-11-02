@@ -10,7 +10,7 @@ mixin feedback(author, date, text, options)
 
   div(class=blockName)
     if image
-      img(class=blockName+'__image' src=require('./img/' + image))
+      img(class=blockName+'__image' src=require('../img/' + image))
     div(class=blockName+'__like-button')
       +like-button(12, true)
     h3(class=blockName+'__author')= author

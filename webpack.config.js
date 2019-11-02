@@ -93,31 +93,31 @@ const config = {
         }),
         new HtmlWebpackPlugin({
             filename: __dirname + '/index.html',
-            template: 'src/index.pug'
+            template: 'src/pages/index.pug'
         }),
         new HtmlWebpackPlugin({
             filename: 'ui-colors-type.html',
-            template: 'src/ui-colors-type.pug'
+            template: 'src/pages/ui-colors-type.pug'
         }),
         new HtmlWebpackPlugin({
             filename: 'ui-form-elements.html',
-            template: 'src/ui-form-elements.pug'
+            template: 'src/pages/ui-form-elements.pug'
         }),
         new HtmlWebpackPlugin({
             filename: 'ui-cards.html',
-            template: 'src/ui-cards.pug'
+            template: 'src/pages/ui-cards.pug'
         }),
         new HtmlWebpackPlugin({
             filename: 'ui-headers-footers.html',
-            template: 'src/ui-headers-footers.pug'
+            template: 'src/pages/ui-headers-footers.pug'
         }),
         new HtmlWebpackPlugin({
             filename: 'landing.html',
-            template: 'src/components/pages/landing/landing.pug'
+            template: 'src/pages/landing/landing.pug'
         }),
         new HtmlWebpackPlugin({
             filename: 'search-room-filter.html',
-            template: 'src/components/pages/search-room-filter/search-room-filter.pug'
+            template: 'src/pages/search-room-filter/search-room-filter.pug'
         }),
     ]
 };
