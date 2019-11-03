@@ -2368,11 +2368,28 @@
     .landing__room-search {
       width: 100%; } }
 
+.search-room-filter__sidebar, .search-room-filter__search-result {
+  float: left; }
+
 .search-room-filter__sidebar {
+  width: 25%;
   padding-right: 2%; }
+  @media (max-width: 1199px) {
+    .search-room-filter__sidebar {
+      width: 33.33%; } }
+  @media (max-width: 991px) {
+    .search-room-filter__sidebar {
+      width: 50%; } }
 
 .search-room-filter__search-result {
+  width: 75%;
   padding-left: 3%; }
+  @media (max-width: 1199px) {
+    .search-room-filter__search-result {
+      width: 66.66%; } }
+  @media (max-width: 991px) {
+    .search-room-filter__search-result {
+      width: 50%; } }
 
 .search-room-filter__date-dropdown, .search-room-filter__guests-dropdown, .search-room-filter__feature-dropdown, .search-room-filter__additional-checkbox-list-xp-group {
   position: relative;
@@ -2410,8 +2427,18 @@
   margin-top: 20px;
   margin-right: 1.4%;
   float: left; }
-  .search-room-filter__room-thumb:nth-child(3n) {
-    margin-right: 0; }
+  @media (min-width: 1199px) {
+    .search-room-filter__room-thumb:nth-child(3n) {
+      margin-right: 0; } }
+  @media (max-width: 1199px) {
+    .search-room-filter__room-thumb {
+      width: 48%; }
+      .search-room-filter__room-thumb:nth-child(2n) {
+        margin-right: 0; } }
+  @media (max-width: 991px) {
+    .search-room-filter__room-thumb {
+      width: 100%;
+      margin-right: 0; } }
 
 .search-room-filter__paginator {
   margin: 40px auto;

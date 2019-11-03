@@ -1,9 +1,27 @@
 .search-room-filter {
+  &__sidebar,
+  &__search-result {
+    float: left;
+  }
   &__sidebar {
+    width: 25%;
     padding-right: 2%;
+    @media (max-width: $screen-md-max) {
+      width: 33.33%;
+    }
+    @media (max-width: $screen-sm-max) {
+      width: 50%;
+    }
   }
   &__search-result {
+    width: 75%;
     padding-left: 3%;
+    @media (max-width: $screen-md-max) {
+      width: 66.66%;
+    }
+    @media (max-width: $screen-sm-max) {
+      width: 50%;
+    }
   }
   &__date-dropdown,
   &__guests-dropdown,
@@ -50,7 +68,19 @@
     margin-top: 20px;
     margin-right: 1.4%;
     float: left;
-    &:nth-child(3n) {
+    @media (min-width: $screen-md-max) {
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+    @media (max-width: $screen-md-max) {
+      width: 48%;
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+    @media (max-width: $screen-sm-max) {
+      width: 100%;
       margin-right: 0;
     }
   }
