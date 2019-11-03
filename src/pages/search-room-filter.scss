@@ -45,6 +45,20 @@
   &__search-result {
     //position: relative;
   }
+  &__room-thumb {
+    width: 32.4%;
+    margin-top: 20px;
+    margin-right: 1.4%;
+    float: left;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  &__paginator {
+    margin: 40px auto;
+    margin-bottom: 75px;
+    width: 30%;
+  }
   &__content {
     width: 80.5%;
     max-width: 1920px;

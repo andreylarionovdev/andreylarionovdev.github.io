@@ -1409,57 +1409,54 @@
 .paginator-group__label {
   margin-bottom: 17px; }
 
-.paginator__arrow-next, .paginator__arrow-prev {
-  position: relative;
-  top: 7px;
-  color: white; }
-
-.paginator__ul {
-  margin: 0;
-  padding: 0; }
-
-.paginator .paginator-page,
-.paginator .paginator-ellipsis,
-.paginator .paginator-next,
-.paginator .paginator-prev {
-  width: 40px;
-  height: 40px;
-  display: inline-block;
-  font-style: normal;
-  font-size: 12px;
-  line-height: 40px;
-  text-align: center; }
-  .paginator .paginator-page a,
-  .paginator .paginator-ellipsis a,
-  .paginator .paginator-next a,
-  .paginator .paginator-prev a {
-    text-decoration: none;
-    color: rgba(31, 32, 65, 0.5); }
-
-.paginator .paginator-page--active {
-  border-radius: 20px;
-  font-weight: bold;
-  background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
-  .paginator .paginator-page--active a {
+.paginator {
+  font-family: Montserrat, sans-serif; }
+  .paginator__arrow-next, .paginator__arrow-prev {
+    position: relative;
+    top: 7px;
     color: white; }
-
-.paginator .paginator-next,
-.paginator .paginator-prev {
-  border-radius: 20px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#6FCF97), to(#66D2EA));
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%); }
-  .paginator .paginator-next a,
-  .paginator .paginator-prev a {
+  .paginator__ul {
+    margin: 0;
+    padding: 0; }
+  .paginator .paginator-page,
+  .paginator .paginator-ellipsis,
+  .paginator .paginator-next,
+  .paginator .paginator-prev {
+    width: 40px;
+    height: 40px;
     display: inline-block;
-    width: 100%; }
-
-.paginator .paginator-nav {
-  font-size: 14px;
-  line-height: 24px;
-  padding-top: 7px;
-  padding-left: 6px;
-  color: rgba(31, 32, 65, 0.75); }
+    font-style: normal;
+    font-size: 12px;
+    line-height: 40px;
+    text-align: center; }
+    .paginator .paginator-page a,
+    .paginator .paginator-ellipsis a,
+    .paginator .paginator-next a,
+    .paginator .paginator-prev a {
+      text-decoration: none;
+      color: rgba(31, 32, 65, 0.5); }
+  .paginator .paginator-page--active {
+    border-radius: 20px;
+    font-weight: bold;
+    background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
+    .paginator .paginator-page--active a {
+      color: white; }
+  .paginator .paginator-next,
+  .paginator .paginator-prev {
+    border-radius: 20px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#6FCF97), to(#66D2EA));
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%); }
+    .paginator .paginator-next a,
+    .paginator .paginator-prev a {
+      display: inline-block;
+      width: 100%; }
+  .paginator .paginator-nav {
+    font-size: 14px;
+    line-height: 24px;
+    padding-top: 7px;
+    padding-left: 6px;
+    color: rgba(31, 32, 65, 0.75); }
 
 .checkbox-list-xp {
   display: inline-block;
@@ -2407,6 +2404,19 @@
 
 .search-room-filter__checkbox-group {
   padding-right: 20px; }
+
+.search-room-filter__room-thumb {
+  width: 32.4%;
+  margin-top: 20px;
+  margin-right: 1.4%;
+  float: left; }
+  .search-room-filter__room-thumb:nth-child(3n) {
+    margin-right: 0; }
+
+.search-room-filter__paginator {
+  margin: 40px auto;
+  margin-bottom: 75px;
+  width: 30%; }
 
 .search-room-filter__content {
   width: 80.5%;

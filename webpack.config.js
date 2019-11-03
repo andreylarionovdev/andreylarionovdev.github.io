@@ -117,7 +117,7 @@ const config = {
         }),
         new HtmlWebpackPlugin({
             filename: 'search-room-filter.html',
-            template: 'src/pages/search-room-filter/search-room-filter.pug'
+            template: 'src/pages/search-room-filter.pug'
         }),
     ]
 };
