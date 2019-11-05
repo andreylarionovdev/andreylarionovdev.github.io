@@ -119,6 +119,18 @@ const config = {
             filename: 'search-room-filter.html',
             template: 'src/pages/search-room-filter.pug'
         }),
+        new HtmlWebpackPlugin({
+            filename: 'room-details.html',
+            template: 'src/pages/room-details.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'registration.html',
+            template: 'src/pages/registration.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'sign-in.html',
+            template: 'src/pages/sign-in.pug'
+        })
     ]
 };
 module.exports = config;

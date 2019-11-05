@@ -1,0 +1,13 @@
+extends layout
+
+block vars
+  - var title = 'Sign in'
+  - var bodyClasses = ['sign-in', 'clearfix']
+  - var withoutLogo = true
+
+block main
+  .landing__hero-section
+    .landing__room-search
+      +room-search
+    .landing__hero-text.body
+      = 'Лучшие номера для вашей работы, отдыха и просто вдохновения'

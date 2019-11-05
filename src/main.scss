@@ -73,9 +73,10 @@ $grad-green: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 @import 'components/header/header';
 @import 'components/footer/footer';
 @import 'components/footer/menu-section/menu-section';
-@import 'pages/layout/layout';
-@import 'pages/landing/landing';
+@import 'pages/layout';
+@import 'pages/landing';
 @import 'pages/search-room-filter';
+@import 'pages/room-details';
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;

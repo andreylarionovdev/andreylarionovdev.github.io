@@ -637,7 +637,7 @@
   margin: 0; }
 
 .h2 {
-  font-family: Quicksand, sans-serif;
+  font-family: Open Sans, sans-serif;
   font-weight: bold;
   font-size: 19px;
   line-height: 24px;
@@ -1569,7 +1569,8 @@
   font-size: 14px;
   padding-left: 20px;
   margin: 0;
-  list-style-type: none; }
+  list-style-type: none;
+  font-family: Montserrat, sans-serif; }
   .bullet-list__li {
     position: relative;
     margin-bottom: 10px;
@@ -1586,7 +1587,8 @@
 
 .feature {
   padding: 20px 0;
-  border-bottom: 1px solid rgba(31, 32, 65, 0.1); }
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  font-family: Montserrat, sans-serif; }
   .feature--last {
     border-bottom: none; }
   .feature__icon {
@@ -1606,7 +1608,8 @@
     line-height: 24px; }
 
 .feedback {
-  position: relative; }
+  position: relative;
+  font-family: Montserrat, sans-serif; }
   .feedback__image {
     position: absolute;
     display: block;
@@ -2456,6 +2459,96 @@
   max-width: 1920px;
   margin: 0 auto;
   margin-top: 30px; }
+
+.room-details__content {
+  width: 80.5%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-top: 70px;
+  padding-bottom: 63px; }
+
+.room-details__feature-images {
+  position: relative;
+  width: 100%;
+  height: 485px; }
+
+.room-details__left-image, .room-details__top-image, .room-details__bottom-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.room-details__top-image, .room-details__bottom-image {
+  float: left;
+  height: 50%;
+  width: 31.9%; }
+
+.room-details__left-image {
+  float: left;
+  width: 68.1%;
+  height: 100%;
+  background-image: url(img/room-details-left.png); }
+
+.room-details__top-image {
+  background-image: url(img/room-details-top.png); }
+
+.room-details__bottom-image {
+  background-image: url(img/room-details-bottom.png); }
+
+.room-details__main, .room-details__right {
+  position: relative;
+  float: left; }
+
+.room-details__main {
+  width: 66.66%;
+  padding-right: 5.4%; }
+
+.room-details__feedbacks, .room-details__info, .room-details__rate {
+  position: relative;
+  float: left; }
+
+.room-details__info {
+  width: 39.1%; }
+
+.room-details__rate {
+  width: 60.9%;
+  padding-left: 11.5%; }
+
+.room-details__feedbacks {
+  margin-top: 12px;
+  margin-bottom: 34px;
+  width: 100%; }
+
+.room-details__feedbacks-counter, .room-details__feedbacks-title {
+  display: inline-block;
+  width: 50%; }
+
+.room-details__feedbacks-counter {
+  text-align: right;
+  color: rgba(31, 32, 65, 0.5); }
+
+.room-details__feedback {
+  width: 100%;
+  margin-top: 20px; }
+
+.room-details__rules, .room-details__cancel {
+  float: left;
+  width: 50%; }
+
+.room-details__cancel {
+  padding-left: 1%;
+  padding-right: 1%; }
+
+.room-details__rules {
+  padding-right: 13%; }
+
+.room-details__rules-title {
+  padding-left: 20px; }
+
+.room-details__rules-title, .room-details__cancel-title {
+  margin-bottom: 17px; }
+
+.room-details__right {
+  width: 33.33%; }
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
