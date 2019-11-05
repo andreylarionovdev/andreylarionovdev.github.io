@@ -2498,6 +2498,9 @@
   position: relative;
   float: left; }
 
+.room-details__right {
+  padding-left: 0.7%; }
+
 .room-details__main {
   width: 66.66%;
   padding-right: 5.4%; }

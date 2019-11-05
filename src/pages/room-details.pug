@@ -2,6 +2,7 @@ extends layout
 include ../components/form/feature/feature
 include ../components/form/feedback/feedback
 include ../components/form/bullet-list/bullet-list
+include ../components/card/room-book/room-book
 
 block vars
   - var title = 'Room details'
@@ -75,3 +76,10 @@ block main
           = 'Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.'
     .room-details__right
       .room-details__book-form
+        +room-book(
+          888,
+          9990,
+          2179,
+          300,
+          {feature: 'люкс'}
+        )
