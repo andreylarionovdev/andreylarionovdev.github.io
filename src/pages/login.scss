@@ -1,0 +1,23 @@
+.login {
+  &__hero-section {
+    position: relative;
+    width: 100%;
+    height: 684px;
+    background-image: url('../img/sign-in-up.png');
+    background-color: $color-purple;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__form {
+    position: relative;
+    width: 380px;
+    height: 358px;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    @media (max-width: $screen-sm-min) {
+      width: 100%;
+    }
+  }
+}

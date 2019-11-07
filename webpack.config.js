@@ -128,8 +128,8 @@ const config = {
             template: 'src/pages/registration.pug'
         }),
         new HtmlWebpackPlugin({
-            filename: 'sign-in.html',
-            template: 'src/pages/sign-in.pug'
+            filename: 'login.html',
+            template: 'src/pages/login.pug'
         })
     ]
 };

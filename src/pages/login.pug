@@ -1,0 +1,13 @@
+extends layout
+
+include ../components/card/sign-in/sign-in
+
+block vars
+  - var title = 'Sign in'
+  - var bodyClasses = ['login', 'clearfix']
+  - var withoutLogo = true
+
+block main
+  .login__hero-section
+    .login__form
+      +sign-in

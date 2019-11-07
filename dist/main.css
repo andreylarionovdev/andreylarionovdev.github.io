@@ -2343,7 +2343,7 @@
 
 .landing__hero-section {
   padding: 4.9% 9.7%;
-  height: 831px;
+  height: 830px;
   width: 100%;
   position: relative;
   background-image: url(img/landing.png);
@@ -2554,6 +2554,50 @@
 
 .room-details__right {
   width: 33.33%; }
+
+.registration__hero-section {
+  position: relative;
+  width: 100%;
+  height: 702px;
+  background-image: url(img/sign-in-up.png);
+  background-color: #BC9CFF;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.registration__form {
+  position: relative;
+  width: 380px;
+  height: 646px;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
+  @media (max-width: 380px) {
+    .registration__form {
+      width: 100%; } }
+
+.login__hero-section {
+  position: relative;
+  width: 100%;
+  height: 684px;
+  background-image: url(img/sign-in-up.png);
+  background-color: #BC9CFF;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.login__form {
+  position: relative;
+  width: 380px;
+  height: 358px;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
+  @media (max-width: 768px) {
+    .login__form {
+      width: 100%; } }
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;

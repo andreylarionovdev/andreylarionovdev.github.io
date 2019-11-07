@@ -1,182 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Toxin booking | Sign in</title>
-  <link href="styles.css" rel="stylesheet"><link href="main.css" rel="stylesheet"></head>
-  <body class="sign-in clearfix">
-    <div class="layout__header">
-      <!-- Default menu-->
-      <!-- Default buttons-->
-      <header class="header clearfix">
-        <nav class="header__nav">
-          <div class="header__menu-button"></div>
-          <div class="header__logo"><a class="logo logo--with-text" href="../index.html"></a>
-          </div>
-          <div class="header__account">
-            <div class="header__button--sign-up"><a class="button button--default button--small" href="javascript:void(0);">Зарегистрироваться</a>
-            </div>
-            <div class="header__button--sign-in"><a class="button button--transparent button--small" href="javascript:void(0);">Войти</a>
-            </div>
-          </div>
-          <div class="header__menu-wrapper">
-            <ul class="header__menu clearfix">
-              <li class="header__menu-item"><a class="header__menu-a" href="javascript:void(0)">О нас</a>
-              </li>
-              <li class="header__menu-item header__menu-item--has-dropdown"><a class="header__menu-a" href="javascript:void(0)"><span class="header__dropdown-text">Услуги</span><i class="header__dropdown-arrow material-icons">keyboard_arrow_down</i></a>
-                <ul class="header__menu header__menu--is-sub">
-                  <li class="header__menu-item"><a class="header__menu-a" href="javascript:void(0)">Услуга 1</a></li>
-                  <li class="header__menu-item"><a class="header__menu-a" href="javascript:void(0)">Услуга 2</a></li>
-                  <li class="header__menu-item"><a class="header__menu-a" href="javascript:void(0)">Услуга 3</a></li>
-                </ul>
-              </li>
-              <li class="header__menu-item"><a class="header__menu-a" href="javascript:void(0)">Вакансии</a>
-              </li>
-              <li class="header__menu-item"><a class="header__menu-a" href="javascript:void(0)">Новости</a>
-              </li>
-              <li class="header__menu-item header__menu-item--has-dropdown"><a class="header__menu-a" href="javascript:void(0)"><span class="header__dropdown-text">Соглашения</span><i class="header__dropdown-arrow material-icons">keyboard_arrow_down</i></a>
-                <ul class="header__menu header__menu--is-sub">
-                  <li class="header__menu-item"><a class="header__menu-a" href="javascript:void(0)">Соглашение 1</a></li>
-                  <li class="header__menu-item"><a class="header__menu-a" href="javascript:void(0)">Соглашение 2</a></li>
-                  <li class="header__menu-item"><a class="header__menu-a" href="javascript:void(0)">Соглашение 3</a></li>
-                </ul>
-              </li>
-            </ul><i class="header__close-button material-icons">close</i>
-          </div>
-        </nav>
-      </header>
-    </div>
-    <div class="landing__hero-section">
-      <div class="landing__room-search">
-        <div class="room-search clearfix">
-          <h1 class="room-search__title h1">Найдём номера под ваши пожелания</h1>
-          <div class="room-search__date-range clearfix">
-            <div class="dropdown-date-range">
-              <div class="dropdown-date-range__from">
-                <div class="dropdown-date-range__label">
-                  <label class="label clearfix">
-                    <h3 class="label__left h3">Прибытие</h3><span class="label__right"></span>
-                  </label>
-                </div>
-                <div class="dropdown-date-range__dropdown">
-                  <div class="dropdown" data-type="datepicker" id="room-book__check-in-out__from-date">
-                    <div class="dropdown__select"><span class="dropdown__text">ДД.ММ.ГГГГ</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i>
-                      <input class="dropdown__input" type="text" name="room-book__check-in-out__from-date" value="ДД.ММ.ГГГГ">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="dropdown-date-range__to">
-                <div class="dropdown-date-range__label">
-                  <label class="label clearfix">
-                    <h3 class="label__left h3">Выезд</h3><span class="label__right"></span>
-                  </label>
-                </div>
-                <div class="dropdown-date-range__dropdown">
-                  <div class="dropdown" data-type="datepicker" id="room-book__check-in-out__to-date">
-                    <div class="dropdown__select"><span class="dropdown__text">ДД.ММ.ГГГГ</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i>
-                      <input class="dropdown__input" type="text" name="room-book__check-in-out__to-date" value="ДД.ММ.ГГГГ">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="room-search__guests">
-            <div class="room-search__label">
-              <label class="label clearfix">
-                <h3 class="label__left h3">Гости</h3><span class="label__right"></span>
-              </label>
-            </div>
-            <div class="room-search__guests-dropdown">
-              <div class="dropdown" data-type="select-box" id="guests">
-                <div class="dropdown__select"><span class="dropdown__text">Сколько гостей</span><i class="dropdown__icon material-icons">keyboard_arrow_down</i>
-                  <input class="dropdown__input" type="text" name="guests" value="Сколько гостей">
-                </div>
-                <ul class="dropdown__menu" style="z-index:9;">
-                  <li class="dropdown__li clearfix" data-name="adult"><span class="dropdown__li-name">взрослые</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
-                  <li class="dropdown__li clearfix" data-name="kids"><span class="dropdown__li-name">дети</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
-                  <li class="dropdown__li clearfix" data-name="baby"><span class="dropdown__li-name">младенцы</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
-                  <li class="dropdown__li clearfix" data-actions><span class="dropdown__li-clear"><a class="button button--textual button--hovered" href="javascript:void(0);" data-action="clear">очистить</a></span><span class="dropdown__li-apply"><a class="button button--textual" href="javascript:void(0);" data-action="apply">применить</a></span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="room-search__button"><a class="button button--default button--fluid" href="search-room-filter.html">Подобрать номер<i class="button__arrow material-icons">arrow_forward</i></a>
-          </div>
-        </div>
-      </div>
-      <div class="landing__hero-text body">Лучшие номера для вашей работы, отдыха и просто вдохновения
-      </div>
-    </div>
-    <div class="layout__footer">
-      <footer class="footer">
-        <div class="footer__inner clearfix">
-          <div class="footer__top clearfix">
-            <div class="footer__left">
-              <div class="footer__logo"><a class="logo logo--with-text" href="../index.html"></a>
-              </div>
-              <div class="footer__description body">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-              </div>
-              <div class="footer__social--creative"><a class="footer__icon footer__icon--tw" href="javascript:void(0);"></a><a class="footer__icon footer__icon--fb" href="javascript:void(0);"></a><a class="footer__icon footer__icon--ig" href="javascript:void(0);"></a></div>
-            </div>
-            <div class="footer__center">
-              <nav class="footer__nav">
-                <div class="footer__nav-menu">
-                  <div class="menu-section">
-                    <h3 class="menu-section__title h3">Навигация</h3>
-                    <ul class="menu-section__ul">
-                      <li class="menu-section__li"><a class="menu-section__a body" href="javascript:void(0)">О нас</a></li>
-                      <li class="menu-section__li"><a class="menu-section__a body" href="javascript:void(0)">Новости</a></li>
-                      <li class="menu-section__li"><a class="menu-section__a body" href="javascript:void(0)">Служба поддержки</a></li>
-                      <li class="menu-section__li"><a class="menu-section__a body" href="javascript:void(0)">Услуги</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="footer__nav-menu">
-                  <div class="menu-section">
-                    <h3 class="menu-section__title h3">О нас</h3>
-                    <ul class="menu-section__ul">
-                      <li class="menu-section__li"><a class="menu-section__a body" href="javascript:void(0)">О сервисе</a></li>
-                      <li class="menu-section__li"><a class="menu-section__a body" href="javascript:void(0)">Наша команда</a></li>
-                      <li class="menu-section__li"><a class="menu-section__a body" href="javascript:void(0)">Вакансии</a></li>
-                      <li class="menu-section__li"><a class="menu-section__a body" href="javascript:void(0)">Инвесторы</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="footer__nav-menu">
-                  <div class="menu-section">
-                    <h3 class="menu-section__title h3">Служба поддержки</h3>
-                    <ul class="menu-section__ul">
-                      <li class="menu-section__li"><a class="menu-section__a body" href="javascript:void(0)">Соглашения</a></li>
-                      <li class="menu-section__li"><a class="menu-section__a body" href="javascript:void(0)">Сообщества</a></li>
-                      <li class="menu-section__li"><a class="menu-section__a body" href="javascript:void(0)">Связь с нами</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </nav>
-            </div>
-            <div class="footer__right">
-              <h3 class="footer__subscribe-title h3">Подписка</h3>
-              <p class="footer__subscribe-description body">Получайте специальные предложения и новости сервиса
-              </p>
-              <div class="footer__subscribe-input">
-                <div class="input-text input-text--visible">
-                  <input class="input-text__input" id="subscribe" type="text" placeholder="Email" value="">
-                  <input class="input-text__submit-button" type="submit">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="footer__bottom clearfix">
-            <p class="footer__copyright body">Copyright © 2018 Toxin отель. Все права зачищены.</p>
-            <div class="footer__social"><a class="footer__icon footer__icon--ig" href="javascript:void(0);"></a><a class="footer__icon footer__icon--fb" href="javascript:void(0);"></a><a class="footer__icon footer__icon--tw" href="javascript:void(0);"></a></div>
-          </div>
-        </div>
-        <div class="footer__hr"></div>
-      </footer>
-    </div>
-  <script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
-</html>
+<head><link href="styles.css" rel="stylesheet"><link href="main.css" rel="stylesheet"></head>Html Webpack Plugin:
+<pre>
+  Error: Child compilation failed:
+  Module build failed (from ./node_modules/pug-loader/index.js):
+  Error: ENOENT: no such file or directory, open '/Users/andreylarionov/www/toxin-booking-frontend/src/pages/sign-in.pug':
+  Error: ENOENT: no such file or directory, open '/Users/andreylarionov/www/toxin-booking-frontend/src/pages/sign-in.pug'
+  
+  - compiler.js:79 childCompiler.runAsChild
+    [toxin-booking-frontend]/[html-webpack-plugin]/lib/compiler.js:79:16
+  
+  - Compiler.js:306 compile
+    [toxin-booking-frontend]/[webpack]/lib/Compiler.js:306:11
+  
+  - Compiler.js:631 hooks.afterCompile.callAsync.err
+    [toxin-booking-frontend]/[webpack]/lib/Compiler.js:631:15
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [toxin-booking-frontend]/[tapable]/lib/Hook.js:154:20
+  
+  - Compiler.js:628 compilation.seal.err
+    [toxin-booking-frontend]/[webpack]/lib/Compiler.js:628:31
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [toxin-booking-frontend]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1325 hooks.optimizeAssets.callAsync.err
+    [toxin-booking-frontend]/[webpack]/lib/Compilation.js:1325:35
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [toxin-booking-frontend]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1316 hooks.optimizeChunkAssets.callAsync.err
+    [toxin-booking-frontend]/[webpack]/lib/Compilation.js:1316:32
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [toxin-booking-frontend]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1311 hooks.additionalAssets.callAsync.err
+    [toxin-booking-frontend]/[webpack]/lib/Compilation.js:1311:36
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [toxin-booking-frontend]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1307 hooks.optimizeTree.callAsync.err
+    [toxin-booking-frontend]/[webpack]/lib/Compilation.js:1307:32
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [toxin-booking-frontend]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1244 Compilation.seal
+    [toxin-booking-frontend]/[webpack]/lib/Compilation.js:1244:27
+  
+  - Compiler.js:625 compilation.finish.err
+    [toxin-booking-frontend]/[webpack]/lib/Compiler.js:625:18
+  
+  - Compilation.js:1167 hooks.finishModules.callAsync.err
+    [toxin-booking-frontend]/[webpack]/lib/Compilation.js:1167:4
+  
+  
+  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
+    [toxin-booking-frontend]/[tapable]/lib/Hook.js:154:20
+  
+  - Compilation.js:1159 Compilation.finish
+    [toxin-booking-frontend]/[webpack]/lib/Compilation.js:1159:28
+  
+  - Compiler.js:622 hooks.make.callAsync.err
+    [toxin-booking-frontend]/[webpack]/lib/Compiler.js:622:17
+  
+  
+  - Compilation.js:1091 _addModuleChain
+    [toxin-booking-frontend]/[webpack]/lib/Compilation.js:1091:12
+  
+  - Compilation.js:1003 processModuleDependencies.err
+    [toxin-booking-frontend]/[webpack]/lib/Compilation.js:1003:9
+  
+</pre><script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script>
