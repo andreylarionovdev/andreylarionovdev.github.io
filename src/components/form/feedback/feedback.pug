@@ -3,16 +3,22 @@ include ../like-button/like-button
 mixin feedback(author, date, text, options)
   - var blockName = 'feedback'
   - var image = null
+  - var favCount = '0'
+  - var fav = false
 
   if options
     if options.image
       - image = options.image
+    if options.favCount
+      - favCount = options.favCount
+    if options.fav
+      - fav = options.fav
 
   div(class=blockName)
     if image
       img(class=blockName+'__image' src=require('../img/' + image))
     div(class=blockName+'__like-button')
-      +like-button(12, true)
+      +like-button(favCount, fav)
     h3(class=blockName+'__author')= author
     p(class=blockName+'__date')= date
     p(class=blockName+'__text')!= text

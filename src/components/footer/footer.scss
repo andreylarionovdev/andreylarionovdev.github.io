@@ -164,6 +164,9 @@
       display: none;
     }
   }
+  &--bordered {
+    border-top: 1px solid $color-dark-25;
+  }
   &--creative {
     #{$parent}__top {
       @media (max-width: $screen-sm-min) {

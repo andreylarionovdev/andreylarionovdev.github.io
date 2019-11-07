@@ -2298,6 +2298,8 @@
     @media (max-width: 992px) {
       .footer__hr {
         display: none; } }
+  .footer--bordered {
+    border-top: 1px solid rgba(31, 32, 65, 0.25); }
   @media (max-width: 768px) {
     .footer--creative .footer__top {
       padding-top: 20%; } }
