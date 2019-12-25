@@ -1,7 +1,6 @@
 {
-  "name": "toxin_booking",
+  "name": "toxin-booking",
   "version": "0.0.1",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +8,7 @@
     "prod": "webpack --mode production"
   },
   "keywords": [],
-  "author": "",
+  "author": "Andrey Larionov",
   "license": "ISC",
   "devDependencies": {
     "air-datepicker": "^2.2.3",
