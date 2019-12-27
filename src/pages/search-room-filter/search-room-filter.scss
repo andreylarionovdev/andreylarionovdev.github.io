@@ -88,14 +88,12 @@
     }
   }
   &__paginator {
-    margin: 40px auto;
-    margin-bottom: 75px;
+    margin: 40px auto 75px;
     text-align: center;
   }
   &__content {
     width: 80.5%;
     max-width: 1920px;
-    margin: 0 auto;
-    margin-top: 30px;
+    margin: 30px auto 0;
   }
 }

@@ -1,0 +1,13 @@
+extends ../layout/layout
+
+include ../../components/card/sign-up/sign-up
+
+block vars
+  - const title = 'Registration'
+  - const bodyClasses = ['registration', 'clearfix']
+  - const withoutLogo = true
+
+block main
+  .registration__hero-section
+    .registration__form
+      +sign-up

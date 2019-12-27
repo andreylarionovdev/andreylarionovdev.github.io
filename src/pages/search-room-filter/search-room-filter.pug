@@ -1,18 +1,18 @@
-extends layout
+extends ../layout/layout
 
-include ../components/form/range-slider/range-slider
-include ../components/form/label/label
-include ../components/form/checkbox/checkbox
-include ../components/form/rich-checkbox/rich-checkbox
-include ../components/form/checkbox-list-xp/checkbox-list-xp
-include ../components/card/room-thumb/room-thumb
-include ../components/form/paginator/paginator
+include ../../components/form/range-slider/range-slider
+include ../../components/form/label/label
+include ../../components/form/checkbox/checkbox
+include ../../components/form/rich-checkbox/rich-checkbox
+include ../../components/form/checkbox-list-xp/checkbox-list-xp
+include ../../components/card/room-thumb/room-thumb
+include ../../components/form/paginator/paginator
 
 block vars
-  - var title = 'Search room/Filter'
-  - var bodyClasses = ['search-room-filter', 'clearfix']
-  - var withoutLogo = true
-  - var footerTheme = 'bordered'
+  - const title = 'Search room/Filter'
+  - const bodyClasses = ['search-room-filter', 'clearfix']
+  - const withoutLogo = true
+  - const footerTheme = 'bordered'
 
 block main
   .search-room-filter__content.clearfix

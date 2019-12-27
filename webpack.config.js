@@ -97,39 +97,39 @@ const config = {
     }),
     new HtmlWebpackPlugin({
       filename: 'ui-colors-type.html',
-      template: 'src/pages/ui-colors-type.pug'
+      template: 'src/pages/ui/colors-type.pug'
     }),
     new HtmlWebpackPlugin({
       filename: 'ui-form-elements.html',
-      template: 'src/pages/ui-form-elements.pug'
+      template: 'src/pages/ui/form-elements.pug'
     }),
     new HtmlWebpackPlugin({
       filename: 'ui-cards.html',
-      template: 'src/pages/ui-cards.pug'
+      template: 'src/pages/ui/cards.pug'
     }),
     new HtmlWebpackPlugin({
       filename: 'ui-headers-footers.html',
-      template: 'src/pages/ui-headers-footers.pug'
+      template: 'src/pages/ui/headers-footers.pug'
     }),
     new HtmlWebpackPlugin({
       filename: 'landing.html',
-      template: 'src/pages/landing.pug'
+      template: 'src/pages/landing/landing.pug'
     }),
     new HtmlWebpackPlugin({
       filename: 'search-room-filter.html',
-      template: 'src/pages/search-room-filter.pug'
+      template: 'src/pages/search-room-filter/search-room-filter.pug'
     }),
     new HtmlWebpackPlugin({
       filename: 'room-details.html',
-      template: 'src/pages/room-details.pug'
+      template: 'src/pages/room-details/room-details.pug'
     }),
     new HtmlWebpackPlugin({
       filename: 'registration.html',
-      template: 'src/pages/registration.pug'
+      template: 'src/pages/registration/registration.pug'
     }),
     new HtmlWebpackPlugin({
       filename: 'login.html',
-      template: 'src/pages/login.pug'
+      template: 'src/pages/login/login.pug'
     })
   ]
 };

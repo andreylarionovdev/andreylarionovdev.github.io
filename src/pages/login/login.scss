@@ -1,23 +1,22 @@
-.registration {
+.login {
   &__hero-section {
     position: relative;
     width: 100%;
-    height: 702px;
-    background-image: url('../img/sign-in-up.png');
+    height: 684px;
+    background-image: url('../../img/sign-in-up.png');
     background-color: $color-purple;
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
   }
-  $form-width: 380px;
   &__form {
     position: relative;
-    width: $form-width;
-    height: 646px;
+    width: 380px;
+    height: 358px;
     margin: 0 auto;
     top: 50%;
     transform: translateY(-50%);
-    @media (max-width: $form-width) {
+    @media (max-width: $screen-sm-min) {
       width: 100%;
     }
   }
