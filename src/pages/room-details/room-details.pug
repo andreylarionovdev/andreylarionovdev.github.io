@@ -3,6 +3,7 @@ include ../../components/form/feature/feature
 include ../../components/form/feedback/feedback
 include ../../components/form/bullet-list/bullet-list
 include ../../components/card/room-book/room-book
+include ../../components/votes-chart/votes-chart
 
 block vars
   - var title = 'Room details'
@@ -40,6 +41,15 @@ block main
             )
       .room-details__rate
         h2.h2= 'Впечатления от номера'
+        .room-details__votes-chart
+          +votes-chart(
+            'votes-chart',
+            [
+              { label: 'perfect', count: 520 },
+              { label: 'good', count: 261 },
+              { label: 'satisfactorily', count: 260 },
+            ]
+          )
       .room-details__feedbacks
         h2.room-details__feedbacks-title.h2= 'Отзывы посетителей номера'
         span.room-details__feedbacks-counter.body

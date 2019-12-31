@@ -1,0 +1,82 @@
+.votes-chart {
+  &__chart,
+  &__labels {
+    display: block;
+    float: left;
+  }
+  &__labels {
+    list-style: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family: Montserrat, sans-serif;
+    line-height: 24px;
+    color: $color-dark-75;
+    margin-top: 27px;
+  }
+  &__label {
+    cursor: pointer;
+    &--perfect::before {
+      background: #FFE39C;
+    }
+    &--good::before {
+      background: #6FCF97;
+    }
+    &--satisfactorily::before {
+      background: #BC9CFF;
+    }
+    &--bad::before {
+      background: #919191;
+    }
+    &--focus {
+      font-weight: bold;
+    }
+  }
+  &__label::before {
+    content: "";
+    font-weight: bold;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    margin-left: -11px;
+    margin-right: 5px;
+  }
+  &__circle {
+    &--focus {
+      stroke-width: 6;
+    }
+  }
+  &__count {
+    font-family: Quicksand, sans-serif;
+
+    @mixin svg-color($color) {
+      color: $color;
+      fill: $color;
+      stroke: $color;
+    }
+
+    @include svg-color($color-dark-25);
+
+    &--perfect {
+      @include svg-color(#FFE39C);
+    }
+    &--good {
+      @include svg-color(#6FCF97);
+    }
+    &--satisfactorily {
+      @include svg-color(#BC9CFF);
+    }
+    &--bad {
+      @include svg-color(#919191);
+    }
+  }
+  &__count-value {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Quicksand, sans-serif;
+  }
+  &__count-unit {
+    font-size: 15px;
+    font-family: Montserrat, sans-serif;
+  }
+}
