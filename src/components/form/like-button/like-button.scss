@@ -1,29 +1,40 @@
 .like-button {
-    display: inline-block;
-    min-width: 40px;
-    height: 20px;
+  $heart: #{&}__heart;
+  $counter: #{&}__counter;
+  display: inline-block;
+  min-width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid $color-dark-25;
+  color: $color-dark-25;
+
+  #{$heart},
+  #{$counter} {
+    display: block;
     font-size: 10px;
-    border-radius: 10px;
-    border: 1px solid $color-dark-25;
-    color: $color-dark-25;
-    &--favorite {
-        border: 1px solid $color-purple;
-        .like-button__counter {
-            color: $color-purple;
-        }
+    float: left;
+    position: relative;
+  }
+
+  #{$heart} {
+    top: 4px;
+    left: 4px;
+  }
+
+  #{$counter} {
+    top: 2px;
+    left: 10px;
+  }
+
+  &--favorite {
+    border: 1px solid $color-purple;
+
+    #{$counter} {
+      color: $color-purple;
     }
-    &__favorite,
-    &__counter {
-        display: block;
-        float: left;
-        position: relative;
+
+    #{$heart} {
+      color: $color-purple;
     }
-    &__favorite {
-        top: 3px;
-        left: 4px;
-    }
-    &__counter {
-        top: 2px;
-        left: 10px;
-    }
+  }
 }

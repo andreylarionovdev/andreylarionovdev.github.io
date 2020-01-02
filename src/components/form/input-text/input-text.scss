@@ -13,7 +13,7 @@
       border-left: none;
     }
   }
-  &--visible {
+  &--with-arrow {
     #{$parent}__input {
       display: inline;
     }
@@ -54,18 +54,17 @@
     bottom: 0;
     width: 44px;
     height: 44px;
-    background: #FFFFFF;
     border: 1px solid $color-dark-25;
     border-left: none;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
     box-sizing: border-box;
     font-size: 0;
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkgMC45ODQzNzVMMTcuMDE1NiA5TDkgMTcuMDE1Nkw3LjU5Mzc1IDE1LjYwOTRMMTMuMTcxOSA5Ljk4NDM4SDAuOTg0Mzc1VjguMDE1NjJIMTMuMTcxOUw3LjU5Mzc1IDIuMzkwNjJMOSAwLjk4NDM3NVoiIGZpbGw9InVybCgjcGFpbnQwX2xpbmVhcikiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhciIgeDE9IjkiIHkxPSItMTMiIHgyPSI5IiB5Mj0iMzEiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iI0JDOUNGRiIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM4QkE0RjkiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K);
-    background-position: right 13px center;
-    background-repeat: no-repeat;
+    background: #FFFFFF no-repeat right 13px center;
+    color: $color-purple;
   }
   ::placeholder {
     font-family: Montserrat, sans-serif;
+    color: $color-dark-50;
   }
 }

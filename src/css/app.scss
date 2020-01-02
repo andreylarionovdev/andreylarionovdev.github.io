@@ -35,7 +35,6 @@
 @import '../components/form/rich-checkbox/rich-checkbox';
 @import '../components/form/groups/bullet-list-group';
 @import '../components/form/bullet-list/bullet-list';
-@import '../components/form/groups/feature-group';
 @import '../components/form/feature/feature';
 @import '../components/form/feedback/feedback';
 @import '../components/form/dropdown-date-range/dropdown-date-range';
@@ -65,10 +64,6 @@
 
 input[type=text] {
   appearance: none;
-}
-
-::placeholder {
-  color: $color-dark-50;
 }
 
 body {

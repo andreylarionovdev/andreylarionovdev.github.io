@@ -179,9 +179,9 @@
   .input-text--hovered .input-text__submit-button {
     border: 1px solid rgba(31, 32, 65, 0.5);
     border-left: none; }
-  .input-text--visible .input-text__input {
+  .input-text--with-arrow .input-text__input {
     display: inline; }
-  .input-text--visible .input-text__submit-button {
+  .input-text--with-arrow .input-text__submit-button {
     display: inline;
     cursor: pointer; }
   .input-text__input {
@@ -213,7 +213,6 @@
     bottom: 0;
     width: 44px;
     height: 44px;
-    background: #FFFFFF;
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-left: none;
     border-top-right-radius: 4px;
@@ -221,19 +220,23 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     font-size: 0;
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkgMC45ODQzNzVMMTcuMDE1NiA5TDkgMTcuMDE1Nkw3LjU5Mzc1IDE1LjYwOTRMMTMuMTcxOSA5Ljk4NDM4SDAuOTg0Mzc1VjguMDE1NjJIMTMuMTcxOUw3LjU5Mzc1IDIuMzkwNjJMOSAwLjk4NDM3NVoiIGZpbGw9InVybCgjcGFpbnQwX2xpbmVhcikiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhciIgeDE9IjkiIHkxPSItMTMiIHgyPSI5IiB5Mj0iMzEiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iI0JDOUNGRiIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM4QkE0RjkiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K);
-    background-position: right 13px center;
-    background-repeat: no-repeat; }
+    background: #FFFFFF no-repeat right 13px center;
+    color: #BC9CFF; }
   .input-text ::-webkit-input-placeholder {
-    font-family: Montserrat, sans-serif; }
+    font-family: Montserrat, sans-serif;
+    color: rgba(31, 32, 65, 0.5); }
   .input-text ::-moz-placeholder {
-    font-family: Montserrat, sans-serif; }
+    font-family: Montserrat, sans-serif;
+    color: rgba(31, 32, 65, 0.5); }
   .input-text :-ms-input-placeholder {
-    font-family: Montserrat, sans-serif; }
+    font-family: Montserrat, sans-serif;
+    color: rgba(31, 32, 65, 0.5); }
   .input-text ::-ms-input-placeholder {
-    font-family: Montserrat, sans-serif; }
+    font-family: Montserrat, sans-serif;
+    color: rgba(31, 32, 65, 0.5); }
   .input-text ::placeholder {
-    font-family: Montserrat, sans-serif; }
+    font-family: Montserrat, sans-serif;
+    color: rgba(31, 32, 65, 0.5); }
 
 .input-text-group__label {
   margin-bottom: 5px; }
@@ -508,24 +511,27 @@
   display: inline-block;
   min-width: 40px;
   height: 20px;
-  font-size: 10px;
   border-radius: 10px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   color: rgba(31, 32, 65, 0.25); }
+  .like-button .like-button__heart,
+  .like-button .like-button__counter {
+    display: block;
+    font-size: 10px;
+    float: left;
+    position: relative; }
+  .like-button .like-button__heart {
+    top: 4px;
+    left: 4px; }
+  .like-button .like-button__counter {
+    top: 2px;
+    left: 10px; }
   .like-button--favorite {
     border: 1px solid #BC9CFF; }
     .like-button--favorite .like-button__counter {
       color: #BC9CFF; }
-  .like-button__favorite, .like-button__counter {
-    display: block;
-    float: left;
-    position: relative; }
-  .like-button__favorite {
-    top: 3px;
-    left: 4px; }
-  .like-button__counter {
-    top: 2px;
-    left: 10px; }
+    .like-button--favorite .like-button__heart {
+      color: #BC9CFF; }
 
 .rate-button-group__label {
   margin-bottom: 16px; }
@@ -2670,21 +2676,6 @@ input[type=text] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none; }
-
-::-webkit-input-placeholder {
-  color: rgba(31, 32, 65, 0.5); }
-
-::-moz-placeholder {
-  color: rgba(31, 32, 65, 0.5); }
-
-:-ms-input-placeholder {
-  color: rgba(31, 32, 65, 0.5); }
-
-::-ms-input-placeholder {
-  color: rgba(31, 32, 65, 0.5); }
-
-::placeholder {
-  color: rgba(31, 32, 65, 0.5); }
 
 body {
   font-family: Quicksand, sans-serif;

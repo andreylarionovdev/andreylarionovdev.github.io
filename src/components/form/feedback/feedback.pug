@@ -1,10 +1,11 @@
 include ../like-button/like-button
 
 mixin feedback(author, date, text, options)
-  - var blockName = 'feedback'
-  - var image = null
-  - var favCount = '0'
-  - var fav = false
+  - const blockName = 'feedback'
+
+  - let image = null
+  - let favCount = 0
+  - let fav = false
 
   if options
     if options.image

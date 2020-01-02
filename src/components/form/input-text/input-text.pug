@@ -1,10 +1,13 @@
 mixin input-text(id, placeholder, value, options)
-  - var blockName = 'input-text'
-  - var modifiers = []
-  if options && options.withButton
-    - modifiers.push(blockName + '--visible')
-  if options && options.hovered
-    - modifiers.push(blockName + '--hovered')
+  - const blockName = 'input-text'
+  - const modifiers = []
+
+  if options
+    if options.withArrow
+      - modifiers.push(blockName + '--with-arrow')
+    if options.hovered
+      - modifiers.push(blockName + '--hovered')
+
   div(class=blockName class=modifiers)
     input(
       id=id
@@ -13,7 +16,5 @@ mixin input-text(id, placeholder, value, options)
       placeholder=placeholder
       value=value
     )
-    input(
-      type='submit'
-      class=blockName + '__submit-button'
-    )
+    button(class=blockName + '__submit-button')
+      i(class=[blockName + '__arrow', 'material-icons'])= 'arrow_forward'
