@@ -2,28 +2,23 @@ include ../label/label
 include ../button/button
 
 mixin dropdown(id, options)
-  - var blockName = 'dropdown'
-  - var modifiers = []
-  - var data = []
-  - var type = 'empty'
-  - var value = 'Выберите'
-  - var zIndex = 9
+  - const blockName = 'dropdown'
+
+  - let modifiers = []
+  - let type = 'empty'
+  - let value = 'Выберите'
 
   if options
     if options.type
       - type = options.type
-    if options.data
-      - data = options.data
+    if options.value
+      - value = options.value
     if options.expanded
       - modifiers.push(blockName+'--expanded')
     if options.edited
       - modifiers.push(blockName+'--edited')
     if options.isEmpty
       - modifiers.push(blockName+'--empty')
-    if options.value
-      - value = options.value
-    if options.zIndex
-      - zIndex = options.zIndex
 
   div(class=blockName class=modifiers data-type=type id=id)
     div(class=blockName+'__select')

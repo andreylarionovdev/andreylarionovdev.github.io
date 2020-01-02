@@ -1,13 +1,13 @@
 mixin bullet-list(id, options)
-  - var blockName = 'bullet-list'
-  - var data = []
+  - const blockName = 'bullet-list'
+  - let items = []
 
   if options
-    if options.data
-      - data = options.data
+    if options.items
+      - items = options.items
 
   ul(class=blockName id=id)
-    each item, index in data
+    each item, index in items
       li(class=blockName+'__li')
         != item.text
         span(class=blockName+'__marker')

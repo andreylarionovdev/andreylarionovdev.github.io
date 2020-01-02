@@ -1,9 +1,9 @@
-mixin menu-section(title, data)
+mixin menu-section(title, menuItems)
   - const blockName = 'menu-section'
 
   div(class=blockName)
     h3(class=[blockName+'__title', 'h3'])= title
     ul(class=blockName+'__ul')
-      each item, _ in data
+      each item, _ in menuItems
         li(class=blockName+'__li')
           a(class=[blockName+'__a', 'body'] href=item.href)= item.text

@@ -278,7 +278,7 @@ block content
                 expanded: true,
                 value: '2 спальни, 2 кровати...',
                 zIndex: 999,
-                data: [
+                selectOptions: [
                   {count: 2, text: 'спальни', name: 'bedroom'},
                   {count: 2, text: 'кровати', name: 'bed'},
                   {count: 0, text: 'ванные комнаты', name: 'bathroom'}
@@ -300,7 +300,7 @@ block content
                 isEmpty: true,
                 zIndex: 99,
                 value: 'Сколько гостей',
-                data: [
+                selectOptions: [
                   {count: 0, text: 'взрослые', name: 'adult'},
                   {count: 0, text: 'дети', name: 'kids'},
                   {count: 0, text: 'младенцы', name: 'baby'}
@@ -320,7 +320,7 @@ block content
                 expanded: true,
                 edited: true,
                 value: '3 гостя',
-                data: [
+                selectOptions: [
                   {count: 2, text: 'взрослые', name: 'adult'},
                   {count: 1, text: 'дети', name: 'kids'},
                   {count: 0, text: 'младенцы', name: 'baby'}
@@ -380,7 +380,7 @@ block content
             +bullet-list(
               'bullet-list',
               {
-                data: [
+                items: [
                   {text: 'Нельзя с питомцами'},
                   {text: 'Без вечеринок и мероприятий'},
                   {text: 'Время прибытия &mdash; после 13:00, а выезд до 12:00'}

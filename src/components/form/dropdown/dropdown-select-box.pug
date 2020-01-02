@@ -1,5 +1,14 @@
+- let zIndex = 9
+- let selectOptions = []
+
+if options
+  if options.zIndex
+    - zIndex = options.zIndex
+  if options.selectOptions
+    - selectOptions = options.selectOptions
+
 ul(class=blockName + '__menu' style={'z-index': zIndex})
-  each item in data
+  each item in selectOptions
     li(class=blockName + '__li' class='clearfix' data-name=item.name)
       span(class=blockName + '__li-name')= item.text
       span(class=blockName + '__li-inc')= '+'

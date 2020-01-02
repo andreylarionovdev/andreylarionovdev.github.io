@@ -1,17 +1,18 @@
-include ../logo/logo
 include menu-section/menu-section
+include ../logo/logo
 include ../form/input-text/input-text
 
-mixin footer(data)
+mixin footer(options)
   - const blockName = 'footer'
-  - var modifiers = []
-  - var rightTitle = 'Subscribe&nbsp;to&nbsp;our&nbsp;newsletter'
-  - var leftDescription = 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.'
-  - var rightDescription = 'Receive our latest news and promotions in your inbox!'
-  - var rightPlaceholder = 'Your email address'
-  - var copyright = 'Copyright © 2018 Toxin UI Kit. All rights reserved.'
+
+  - let rightTitle = 'Subscribe&nbsp;to&nbsp;our&nbsp;newsletter'
+  - let leftDescription = 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.'
+  - let rightDescription = 'Receive our latest news and promotions in your inbox!'
+  - let rightPlaceholder = 'Your email address'
+  - let copyright = 'Copyright © 2018 Toxin UI Kit. All rights reserved.'
+
   -
-    var menus = [
+    let menus = [
       {
         title: 'Navigation',
         links: [
@@ -40,21 +41,23 @@ mixin footer(data)
       }
     ]
 
-  if data
-    if data.menus
-      - menus = data.menus
-    if data.leftDescription
-      - leftDescription = data.leftDescription
-    if data.rightDescription
-      - rightDescription = data.rightDescription
-    if data.rightTitle
-      - rightTitle = data.rightTitle
-    if data.rightPlaceholder
-      - rightPlaceholder = data.rightPlaceholder
-    if data.copyright
-      - copyright = data.copyright
-    if data.theme
-      - modifiers.push(blockName+'--'+data.theme)
+  - let modifiers = []
+
+  if options
+    if options.menus
+      - menus = options.menus
+    if options.leftDescription
+      - leftDescription = options.leftDescription
+    if options.rightDescription
+      - rightDescription = options.rightDescription
+    if options.rightTitle
+      - rightTitle = options.rightTitle
+    if options.rightPlaceholder
+      - rightPlaceholder = options.rightPlaceholder
+    if options.copyright
+      - copyright = options.copyright
+    if options.theme
+      - modifiers.push(blockName+'--'+options.theme)
 
 
   footer(class=blockName class=modifiers)
@@ -88,7 +91,7 @@ mixin footer(data)
       div(class=[blockName+'__bottom', 'clearfix'])
         p(class=[blockName+'__copyright', 'body'])= copyright
         div(class=blockName+'__social')
-          a(class=[blockName+'__icon', blockName+'__icon--ig'] href='javascript:void(0);')
-          a(class=[blockName + '__icon', blockName + '__icon--fb'] href='javascript:void(0);')
-          a(class=[blockName+'__icon', blockName+'__icon--tw'] href='javascript:void(0);')
+          a(class=[blockName+'__icon', blockName+'__icon--ig'] href='/change-me')
+          a(class=[blockName + '__icon', blockName + '__icon--fb'] href='/change-me')
+          a(class=[blockName+'__icon', blockName+'__icon--tw'] href='/change-me')
     div(class=blockName+'__hr')
