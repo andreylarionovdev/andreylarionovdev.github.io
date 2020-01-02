@@ -1,15 +1,16 @@
 include ../checkbox/checkbox
 
 mixin checkbox-list-xp(id, label, options)
-  - var blockName = 'checkbox-list-xp'
-  - var modifiers = []
-  - var data = []
+  - const blockName = 'checkbox-list-xp'
+
+  - let modifiers = []
+  - let items = []
 
   if options
     if options.expanded
       - modifiers.push(blockName+'--expanded')
-    if options.data
-      - data = options.data
+    if options.items
+      - items = options.items
 
   div(class=blockName class=modifiers id=id)
     div(class=blockName + '__select')
@@ -17,7 +18,7 @@ mixin checkbox-list-xp(id, label, options)
       i(class=[blockName + '__icon-down', 'material-icons'])= 'keyboard_arrow_down'
       i(class=[blockName + '__icon-up', 'material-icons'])= 'keyboard_arrow_up'
     ul(class=blockName + '__list')
-      each item, index in data
+      each item, index in items
         li(class=blockName + '__li' class='clearfix')
           +checkbox(
             id+'_'+item.name,

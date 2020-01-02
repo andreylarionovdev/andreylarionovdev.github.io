@@ -21,18 +21,6 @@
   &--fluid {
     width: 100%;
   }
-
-  &--hovered,
-  &:hover {
-    opacity: 0.5;
-  }
-  &__arrow {
-    display: inline-block;
-    position: absolute;
-    right: 3%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
   &--default {
     color: white;
     background: $grad-purple;
@@ -52,5 +40,16 @@
       color: $color-dark-50;
       opacity: 1;
     }
+  }
+  &--hovered,
+  &:hover {
+    opacity: 0.5;
+  }
+  &__arrow {
+    display: inline-block;
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }

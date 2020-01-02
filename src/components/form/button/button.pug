@@ -1,9 +1,10 @@
 mixin button(theme, caption, options)
-  - var blockName = 'button'
-  - var modifiers = [blockName + '--' + theme]
-  - var href = 'javascript:void(0);'
-  - var withArrow = false
-  - var attributes = {}
+  - const blockName = 'button'
+
+  - let modifiers = [blockName + '--' + theme]
+  - let href = 'javascript:void(0);'
+  - let withArrow = false
+  - let attr = {}
 
   if options
     if options.hover
@@ -16,10 +17,10 @@ mixin button(theme, caption, options)
       - href = options.href
     if options.withArrow
       - withArrow = options.withArrow
-    if options.attributes
-      - attributes = options.attributes
+    if options.attr
+      - attr = options.attr
 
-  a(class=blockName class=modifiers href=href)&attributes(attributes)
+  a(class=blockName class=modifiers href=href)&attributes(attr)
     = caption
     if withArrow
       i(class=[blockName+'__arrow', 'material-icons'])= 'arrow_forward'
