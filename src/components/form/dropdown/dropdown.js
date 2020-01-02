@@ -1,11 +1,11 @@
 $(document).ready(function () {
-  const $select = $('.dropdown__select');
-  const classExpanded = 'dropdown--expanded';
-  const $inc = $('.dropdown__li-inc');
-  const $dec = $('.dropdown__li-dec');
+  const className = 'dropdown';
+  const classExpanded = `${className}--expanded`;
+
+  const $select = $(`.${className}__select`);
 
   $select.on('click', function () {
-    const $dropdown = $(this).closest('.dropdown');
+    const $dropdown = $(this).closest(`.${className}`);
     if ($dropdown.find('.dropdown__menu').length === 1) {
       $dropdown.toggleClass(classExpanded)
     }
@@ -13,12 +13,12 @@ $(document).ready(function () {
 
   // +/- click handler
   const numberChangerOnClick = function () {
-    const $li = $(this).closest('.dropdown__li');
-    const $dropdown = $(this).closest('.dropdown');
-    const $count = $li.find('.dropdown__li-count');
+    const $li = $(this).closest(`.${className}__li`);
+    const $dropdown = $(this).closest(`.${className}`);
+    const $count = $li.find(`.${className}__li-count`);
 
     let n = parseInt($count.text())
-    let operator = $(this).closest('.dropdown__li-dec').length === 1
+    let operator = $(this).closest(`.${className}__li-dec`).length === 1
       ? '-'
       : '+';
 
@@ -29,22 +29,25 @@ $(document).ready(function () {
     }
     $count.text(n);
     $dropdown
-      .addClass('dropdown--edited')
-      .removeClass('dropdown--empty');
+      .addClass(`${className}--edited`)
+      .removeClass(`${className}--empty`);
   };
+
+  const $inc = $(`.${className}__li-inc`);
+  const $dec = $(`.${className}__li-dec`);
 
   $inc.on('click', numberChangerOnClick);
   $dec.on('click', numberChangerOnClick);
 
-  $('.dropdown__li-clear').on('click', function () {
-    $(this).closest('.dropdown').find('.dropdown__li-count').each(function (i, o) {
+  $(`.${className}__li-clear`).on('click', function () {
+    $(this).closest(`.${className}`).find(`.${className}__li-count`).each(function (i, o) {
       $(o).text(0);
     })
   });
 
-  $('.dropdown__li-apply').on('click', function () {
+  $(`.${className}__li-apply`).on('click', function () {
     $(this).closest('.dropdown')
-      .removeClass('dropdown--edited')
-      .removeClass('dropdown--expanded');
+      .removeClass(`${className}--edited`)
+      .removeClass(`${className}--expanded`);
   });
 });

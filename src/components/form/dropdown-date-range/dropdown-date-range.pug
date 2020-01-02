@@ -1,7 +1,7 @@
 include ../../form/label/label
 include ../../form/dropdown/dropdown
 
-mixin dropdown-date-range(id, fromValue, toValue)
+mixin dropdown-date-range(id, from, to)
   - var blockName = 'dropdown-date-range'
   - const mask = 'ДД.ММ.ГГГГ'
   div(class=blockName)
@@ -13,7 +13,7 @@ mixin dropdown-date-range(id, fromValue, toValue)
           id + '__from-date',
           {
             type: 'datepicker',
-            value: fromValue || mask
+            value: from || mask
           }
         )
     div(class=blockName + '__to')
@@ -24,6 +24,6 @@ mixin dropdown-date-range(id, fromValue, toValue)
           id + '__to-date',
           {
             type: 'datepicker',
-            value: toValue || mask
+            value: to || mask
           }
         )
