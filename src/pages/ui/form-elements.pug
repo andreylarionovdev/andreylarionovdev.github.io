@@ -248,7 +248,11 @@ block content
           .paginator-group__label
             +label('pagination')
           .paginator-group__paginator
-            +paginator()
+            +paginator({
+              source: JSON.stringify([...Array(180).keys()]),
+              pageSize: 12,
+              pageRange: 1
+            })
   .ui__dropdown-states.clearfix
     .column.column--4.first
       .ui__dropdown-group--collapsed

@@ -1,2 +1,10 @@
 mixin paginator(options)
-  div.paginator
+  - const blockName = 'paginator'
+  - const { source, pageSize, pageRange } = options
+
+  div(
+    class=blockName
+    data-source=source
+    data-page-size=pageSize
+    data-page-range=pageRange
+  )

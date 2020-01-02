@@ -231,4 +231,8 @@ block main
               room.options
             )
       .search-room-filter__paginator
-        +paginator
+        +paginator({
+          source: JSON.stringify([...Array(180).keys()]),
+          pageSize: 12,
+          pageRange: 1
+        })
