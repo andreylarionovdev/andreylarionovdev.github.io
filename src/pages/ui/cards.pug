@@ -2,7 +2,7 @@ extends ../base
 
 include ../../components/logo/logo
 include ../../components/card/room-book/room-book
-include ../../components/card/datepicker-sample/datepicker-sample
+include ../../components/card/datepicker/datepicker
 include ../../components/card/room-search/room-search
 include ../../components/card/room-thumb/room-thumb
 include ../../components/card/sign-in/sign-in
@@ -31,7 +31,7 @@ block content
       +sign-in()
   .column.column--4.third
     .ui__datepicker-sample
-      +datepicker-sample()
+      +datepicker()
     .ui__room-thumb--vip
       +room-thumb(
         888,

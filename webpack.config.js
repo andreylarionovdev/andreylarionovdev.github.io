@@ -6,7 +6,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
 
 const config = {
-  entry: [__dirname + '/src/app.js', __dirname + '/src/main.scss'],
+  entry: [
+    __dirname + '/src/app.js',
+    __dirname + '/src/css/app.scss'
+  ],
   output: {
     filename: '[name].bundle.js',
   },

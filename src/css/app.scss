@@ -1,0 +1,104 @@
+@import './config';
+@import '../components/card/datepicker/datepicker';
+@import '../components/card/datepicker/navigation';
+@import '../components/card/datepicker/cell';
+@import '../fonts/fonts.css';
+@import '../pages/ui/ui';
+@import '../components/h1/h1';
+@import '../components/h2/h2';
+@import '../components/h3/h3';
+@import '../components/body/body';
+@import '../components/column/column';
+@import '../components/site-menu/site-menu';
+@import '../components/logo/logo';
+@import '../components/color-sample/color-sample';
+@import '../components/font-sample/font-sample';
+@import '../components/form/label/label';
+@import '../components/form/input-text/input-text';
+@import '../components/form/groups/input-text-group';
+@import '../components/form/groups/dropdown-group';
+@import '../components/form/dropdown/dropdown';
+@import '../components/form/groups/checkbox-group';
+@import '../components/form/checkbox/checkbox';
+@import '../components/form/groups/radio-button-group';
+@import '../components/form/radio-button/radio-button';
+@import '../components/form/groups/toggle-group';
+@import '../components/form/toggle-button/toggle-button';
+@import '../components/form/groups/like-button-group';
+@import '../components/form/like-button/like-button';
+@import '../components/form/groups/rate-button-group';
+@import '../components/form/rate-button/rate-button';
+@import '../components/form/range-slider/range-slider';
+@import '../components/form/groups/button-group';
+@import '../components/form/button/button';
+@import '../components/form/groups/paginator-group';
+@import '../components/form/paginator/paginator';
+@import '../components/form/checkbox-list-xp/checkbox-list-xp';
+@import '../components/form/groups/checkbox-list-xp-group';
+@import '../components/form/groups/rich-checkbox-group';
+@import '../components/form/rich-checkbox/rich-checkbox';
+@import '../components/form/groups/bullet-list-group';
+@import '../components/form/bullet-list/bullet-list';
+@import '../components/form/groups/feature-group';
+@import '../components/form/feature/feature';
+@import '../components/form/feedback/feedback';
+@import '../components/form/dropdown-date-range/dropdown-date-range';
+@import '../components/card/room-book/room-book';
+@import '../components/card/datepicker/datepicker';
+@import '../components/card/room-search/room-search';
+@import '../components/card/room-thumb/room-thumb';
+@import '../components/card/sign-in/sign-in';
+@import '../components/card/sign-up/sign-up';
+@import '../components/header/header';
+@import '../components/footer/footer';
+@import '../components/footer/menu-section/menu-section';
+@import '../components/votes-chart/votes-chart';
+@import '../pages/layout/layout';
+@import '../pages/landing/landing';
+@import '../pages/search-room-filter/search-room-filter';
+@import '../pages/room-details/room-details';
+@import '../pages/registration/registration';
+@import '../pages/login/login';
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input[type=text] {
+  appearance: none;
+}
+
+::placeholder {
+  color: $color-dark-50;
+}
+
+body {
+  font-family: Quicksand, sans-serif;
+  margin: 0;
+  //// ... 767px
+  //@media (max-width: $screen-xs-max) {
+  //    background-color: brown;
+  //}
+  //// 768px ... 991px
+  //@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  //    background-color: blue;
+  //}
+  //// 992px ... 1199px
+  //@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  //    background-color: yellow;
+  //}
+  //// 1200px ...
+  //@media (min-width: $screen-lg-min) {
+  //    background-color: green;
+  //}
+}
+
+.clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

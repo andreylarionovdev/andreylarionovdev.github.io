@@ -1,5 +1,5 @@
-mixin datepicker-sample()
-  - const blockName = 'datepicker-sample'
+mixin datepicker()
+  - const blockName = 'datepicker-card'
   div(class=blockName)
     .datepicker.-bottom-left-.-from-bottom-.active
       nav.datepicker--nav
@@ -17,13 +17,13 @@ mixin datepicker-sample()
               else
                 .datepicker--day-name.-weekend-= dayName
           .datepicker--cells.datepicker--cells-days
-            - var i = 29
+            - let i = 29
             while i < 32
               .datepicker--cell.datepicker--cell-day.-other-month-= i
               - i++
             - i = 1
-            - var rangeStartEnd = [19, 23]
-            - var inRange = [20,21,22]
+            - let rangeStartEnd = [19, 23]
+            - let inRange = [20,21,22]
             while i < 32
               if rangeStartEnd.indexOf(i) !== -1 || inRange.indexOf(i) !== -1 || i === 8
                 if i === 8

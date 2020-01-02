@@ -310,25 +310,25 @@ eval("/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {\n
 
 /***/ }),
 
-/***/ "./src/main.scss":
-/*!***********************!*\
-  !*** ./src/main.scss ***!
-  \***********************/
+/***/ "./src/css/app.scss":
+/*!**************************!*\
+  !*** ./src/css/app.scss ***!
+  \**************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/main.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/css/app.scss?");
 
 /***/ }),
 
 /***/ 0:
-/*!******************************************!*\
-  !*** multi ./src/app.js ./src/main.scss ***!
-  \******************************************/
+/*!*********************************************!*\
+  !*** multi ./src/app.js ./src/css/app.scss ***!
+  \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! /Users/andreylarionov/www/toxin-booking-frontend/src/app.js */\"./src/app.js\");\nmodule.exports = __webpack_require__(/*! /Users/andreylarionov/www/toxin-booking-frontend/src/main.scss */\"./src/main.scss\");\n\n\n//# sourceURL=webpack:///multi_./src/app.js_./src/main.scss?");
+eval("__webpack_require__(/*! /Users/andreylarionov/www/toxin-booking-frontend/src/app.js */\"./src/app.js\");\nmodule.exports = __webpack_require__(/*! /Users/andreylarionov/www/toxin-booking-frontend/src/css/app.scss */\"./src/css/app.scss\");\n\n\n//# sourceURL=webpack:///multi_./src/app.js_./src/css/app.scss?");
 
 /***/ })
 
