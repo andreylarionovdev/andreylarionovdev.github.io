@@ -3,7 +3,7 @@ include ../../components/form/button/button
 
 mixin header(user, menuItems, menuButtons)
   - const blockName = 'header'
-  - var modifiers = []
+  - let modifiers = []
   if user
     - modifiers.push(blockName+'--signed')
   // Default menu

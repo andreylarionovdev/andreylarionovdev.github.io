@@ -1502,13 +1502,12 @@
     width: 20px;
     height: 20px;
     font-size: 12px;
-    border: 1px solid rgba(31, 32, 65, 0.75);
     border-radius: 10px;
     font-style: normal;
     font-weight: bold;
     text-align: center;
     line-height: 20px;
-    border-color: rgba(31, 32, 65, 0.25); }
+    border: 1px solid rgba(31, 32, 65, 0.25); }
   .room-book__button {
     margin-top: 25px;
     height: 44px; }

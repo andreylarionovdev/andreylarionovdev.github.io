@@ -1,7 +1,6 @@
 mixin logo(href, withText)
   - const blockName = 'logo'
-  - var href = href || '../index.html'
-  - var modifiers = []
+  - let modifiers = []
   if withText
     - modifiers.push(blockName+'--with-text')
-  a(class=blockName class=modifiers href=href)
+  a(class=blockName class=modifiers href=href ? href : '../index.html')

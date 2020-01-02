@@ -4,7 +4,7 @@ include ../../form/dropdown-date-range/dropdown-date-range
 
 mixin room-book(roomNumber, pricePerDay, discount, fee, options)
   - const blockName = 'room-book'
-  - var feature = ''
+  - let feature = ''
 
   if options
     if options.feature

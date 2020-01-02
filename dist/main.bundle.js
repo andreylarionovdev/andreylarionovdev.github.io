@@ -306,7 +306,7 @@ eval("/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {\n
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {\n    $('.header__menu-button').on('click', function () {\n        var $header = $(this).closest('.header');\n        if ($header.hasClass('header--expanded')) {\n            $header.removeClass('header--expanded');\n        } else {\n            $header.addClass('header--expanded');\n        }\n    });\n    $('.header__close-button').on('click', function () {\n        var $header = $(this).closest('.header');\n            $header.removeClass('header--expanded');\n    });\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/components/header/header.js?");
+eval("/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {\n  const className = 'header';\n  const classExpanded = `${className}--expanded`;\n  const classMenuBtn = `${className}__menu-button`;\n  const classCloseBtn = `${className}__close-button`;\n\n  $(`.${classMenuBtn}`).on('click', function () {\n    const $header = $(this).closest(`.${className}`);\n    $header.toggleClass(classExpanded)\n  });\n  $(`.${classCloseBtn}`).on('click', function () {\n    const $header = $(this).closest(`.${className}`);\n    $header.removeClass(classExpanded);\n  });\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/components/header/header.js?");
 
 /***/ }),
 
