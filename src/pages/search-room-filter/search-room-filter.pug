@@ -52,7 +52,13 @@ block main
       .search-room-filter__price-slider
         +range-slider({
           caption: 'Диапазон цены',
-          name: 'price-slider'
+          name: 'price-slider',
+          type: 'double',
+          skin: 'big',
+          min: 0,
+          max: 16000,
+          from: 5000,
+          to: 10000,
         })
       p.search-room-filter__price-slider-hint
         = 'Стоимость за сутки пребывания в номере'

@@ -1,141 +1,163 @@
 .irs {
-    position: relative;
-    display: block;
-    -webkit-touch-callout: none;
-    user-select: none;
-    font-size: 12px;
-    font-family: Arial, sans-serif;
+  position: relative;
+  display: block;
+  -webkit-touch-callout: none;
+  user-select: none;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
 }
+
 .irs-line {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    outline: none !important;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  outline: none !important;
 }
+
 .irs-bar {
-    position: absolute;
-    display: block;
-    left: 0;
-    width: 0;
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 0;
 }
+
 .irs-shadow {
-    position: absolute;
-    display: none;
-    left: 0;
-    width: 0;
+  position: absolute;
+  display: none;
+  left: 0;
+  width: 0;
 }
+
 .irs-handle {
-    position: absolute;
-    display: block;
-    box-sizing: border-box;
-    cursor: default;
-    z-index: 1;
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  cursor: default;
+  z-index: 1;
 }
+
 .irs-handle.type_last {
-    z-index: 2;
+  z-index: 2;
 }
+
 .irs-min,
 .irs-max {
-    position: absolute;
-    display: block;
-    cursor: default;
+  position: absolute;
+  display: block;
+  cursor: default;
 }
+
 .irs-min {
-    left: 0;
+  left: 0;
 }
+
 .irs-max {
-    right: 0;
+  right: 0;
 }
+
 .irs-from,
 .irs-to,
 .irs-single {
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    cursor: default;
-    white-space: nowrap;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  cursor: default;
+  white-space: nowrap;
 }
+
 .irs-hidden-input {
-    position: absolute !important;
-    display: block !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 0 !important;
-    height: 0 !important;
-    font-size: 0 !important;
-    line-height: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    overflow: hidden;
-    outline: none !important;
-    z-index: -9999 !important;
-    background: none !important;
-    border-style: solid !important;
-    border-color: transparent !important;
+  position: absolute !important;
+  display: block !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden;
+  outline: none !important;
+  z-index: -9999 !important;
+  background: none !important;
+  border-style: solid !important;
+  border-color: transparent !important;
 }
+
 .irs--big {
-    height: 35px;
+  height: 35px;
 }
+
 .irs--big.irs-with-grid {
-    height: 70px;
+  height: 70px;
 }
+
 $irs-bar-top: 24px;
 $irs-handle-top: $irs-bar-top - 5px;
 .irs--big .irs-line {
-    top: $irs-bar-top;
-    height: 6px;
-    background-color: white;
-    border: 1px solid rgba(31, 32, 65, 0.25);
-    border-radius: 3px;
+  top: $irs-bar-top;
+  height: 6px;
+  background-color: white;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 3px;
 }
+
 .irs--big .irs-bar {
-    top: $irs-bar-top;
-    height: 6px;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  top: $irs-bar-top;
+  height: 6px;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 }
+
 .irs--big .irs-bar--single {
-    border-radius: 12px 0 0 12px;
+  border-radius: 12px 0 0 12px;
 }
+
 .irs--big .irs-shadow {
-    height: 1px;
-    bottom: 16px;
-    background-color: rgba(66, 139, 202, 0.5);
+  height: 1px;
+  bottom: 16px;
+  background-color: rgba(66, 139, 202, 0.5);
 }
+
 .irs--big .irs-handle {
-    top: $irs-handle-top;
-    width: 16px;
-    height: 16px;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-    border: 2px solid #FFFFFF;
-    border-radius: 10px;
+  top: $irs-handle-top;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
 }
+
 .irs--big .irs-handle.state_hover,
 .irs--big .irs-handle:hover {
-    border-color: #6FCF97;
+  border-color: #6FCF97;
 }
+
 .irs--big .irs-min,
 .irs--big .irs-max {
-    top: 0;
-    padding: 1px 5px;
-    color: white;
-    text-shadow: none;
-    background-color: #9f9f9f;
-    border-radius: 3px;
+  top: 0;
+  padding: 1px 5px;
+  color: white;
+  text-shadow: none;
+  background-color: #9f9f9f;
+  border-radius: 3px;
 }
+
 .irs--big .irs-from,
 .irs--big .irs-to,
 .irs--big .irs-single {
-    color: white;
-    text-shadow: none;
-    padding: 1px 5px;
-    background-color: #428bca;
-    background: linear-gradient(to bottom, #428bca 0%, #3071a9 100%);
-    border-radius: 3px;
+  color: white;
+  text-shadow: none;
+  padding: 1px 5px;
+  background-color: #428bca;
+  background: linear-gradient(to bottom, #428bca 0%, #3071a9 100%);
+  border-radius: 3px;
 }
+
 .irs--big .irs-grid-pol {
-    background-color: #428bca;
+  background-color: #428bca;
 }
+
 .irs--big .irs-grid-text {
-    color: #428bca;
+  color: #428bca;
 }

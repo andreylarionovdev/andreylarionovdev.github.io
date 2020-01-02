@@ -1,24 +1,18 @@
-$(document).ready(function() {
-    var render = function (data) {
-        var $label  = $('.range-slider').find('.label__right');
-        var from    = data.from;
-        var to      = data.to;
-        var range   = from.toLocaleString('ru-RU') + '₽ - ' + to.toLocaleString('ru-RU') + '₽';
+$(document).ready(function () {
+  const className = 'range-slider';
 
-        $label.text(range);
-    };
+  const render = function (data) {
+    const $label = $(`.${className} .label__right`);
+    const range = data.from.toLocaleString('ru-RU') + '₽ - ' + data.to.toLocaleString('ru-RU') + '₽';
 
-    var $slider = $('.range-slider__input');
-    $slider.ionRangeSlider({
-        type: 'double',
-        skin: 'big',
-        min: 0,
-        max: 16000,
-        from: 5000,
-        to: 10000,
-        hide_min_max: true,
-        hide_from_to: true,
-        onStart: render,
-        onChange: render
-    });
+    $label.text(range);
+  };
+
+  const $slider = $(`.${className}__input`);
+  $slider.ionRangeSlider({
+    hide_min_max: true,
+    hide_from_to: true,
+    onStart: render,
+    onChange: render
+  });
 });

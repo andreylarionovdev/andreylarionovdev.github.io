@@ -1,9 +1,9 @@
 mixin rate-button(id, base, rate, options)
-  - var blockName = 'rate-button'
+  - const blockName = 'rate-button'
   div(class='rate-button' id=id)
-    - var n = base
+    - let n = base
     while n > 0
-      - var inputId = id + n
+      - const inputId = id + n
       input(
         id=inputId
         type='radio'
@@ -16,4 +16,4 @@ mixin rate-button(id, base, rate, options)
         for=inputId
         class=blockName+'__label'
       )= n
-      - n--
+      - n = n - 1

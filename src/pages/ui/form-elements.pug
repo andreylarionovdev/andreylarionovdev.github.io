@@ -194,7 +194,13 @@ block content
     .column.column--4.third
       .ui__range-slider
         +range-slider({
-          'name': 'range-slider'
+          name: 'range-slider',
+          type: 'double',
+          skin: 'big',
+          min: 0,
+          max: 16000,
+          from: 5000,
+          to: 10000,
         })
       .ui__button-group
         .button-group
