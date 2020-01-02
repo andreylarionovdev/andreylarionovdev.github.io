@@ -1,36 +1,47 @@
 .font-sample {
-    $desc: #{&}__desc;
-    position: relative;
-    padding-left: 34%;
-    padding-right: 6%;
-    margin-bottom: 50px;
-    &--text-header {
-        min-height: 60px;
-        #{$desc} {
-            font-family: Quicksand, sans-serif;
-        }
+  $desc: #{&}__desc;
+  position: relative;
+  padding-left: 34%;
+  padding-right: 6%;
+  margin-bottom: 50px;
+
+  &--text-header {
+    min-height: 60px;
+
+    #{$desc} {
+      font-family: Quicksand, sans-serif;
     }
-    &--text-header-inside {
-        min-height: 50px;
+  }
+
+  &--text-header-inside {
+    min-height: 50px;
+
+    #{$desc} {
+      font-family: Quicksand, sans-serif;
     }
-    &--text-label {
-        min-height: 10px;
-    }
-    &--text-body {
-        padding-right: 60px;
-    }
-    &__desc {
-        float: left;
-    }
-    &__name {
-        float: left;
-        font-family: Montserrat, sans-serif;
-        position: absolute;
-        text-align: right;
-        top: 0;
-        left: 0;
-        width: 28.5%;
-        font-weight: normal;
-        color: $color-dark-25;
-    }
+  }
+
+  &--text-label {
+    min-height: 10px;
+  }
+
+  &--text-body {
+    padding-right: 60px;
+  }
+
+  &__desc {
+    float: left;
+  }
+
+  &__name {
+    float: left;
+    font-family: Montserrat, sans-serif;
+    position: absolute;
+    text-align: right;
+    top: 0;
+    left: 0;
+    width: 28.5%;
+    font-weight: normal;
+    color: $color-dark-25;
+  }
 }

@@ -1,9 +1,5 @@
 @import './config';
-@import '../components/card/datepicker/datepicker';
-@import '../components/card/datepicker/navigation';
-@import '../components/card/datepicker/cell';
 @import '../fonts/fonts.css';
-@import '../pages/ui/ui';
 @import '../components/h1/h1';
 @import '../components/h2/h2';
 @import '../components/h3/h3';
@@ -43,8 +39,8 @@
 @import '../components/form/feature/feature';
 @import '../components/form/feedback/feedback';
 @import '../components/form/dropdown-date-range/dropdown-date-range';
-@import '../components/card/room-book/room-book';
 @import '../components/card/datepicker/datepicker';
+@import '../components/card/room-book/room-book';
 @import '../components/card/room-search/room-search';
 @import '../components/card/room-thumb/room-thumb';
 @import '../components/card/sign-in/sign-in';
@@ -53,6 +49,7 @@
 @import '../components/footer/footer';
 @import '../components/footer/menu-section/menu-section';
 @import '../components/votes-chart/votes-chart';
+@import '../pages/ui/ui';
 @import '../pages/layout/layout';
 @import '../pages/landing/landing';
 @import '../pages/search-room-filter/search-room-filter';
