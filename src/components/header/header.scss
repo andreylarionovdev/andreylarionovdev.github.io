@@ -45,6 +45,7 @@
       float: left;
       width: 100%;
       left: -9999px;
+      margin-top: 0;
     }
   }
 
@@ -105,6 +106,19 @@
     list-style: none;
     margin: 0;
     padding-left: 0;
+    @media (max-width: $screen-md-min) {
+      border-bottom: 1px solid $color-dark-25;
+      padding: 20px;
+      box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+    }
+    @media (max-width: $screen-md-max) {
+      width: 100%;
+      background: white;
+      &--is-sub {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
     &--is-sub {
       position: absolute;
       left: -9999px;
@@ -129,10 +143,6 @@
         margin: 0;
         text-align: left;
       }
-    }
-    @media (max-width: $screen-md-min) {
-      width: 100%;
-      background: white;
     }
   }
 
@@ -234,6 +244,7 @@
     color: $color-dark-75;
     @media (max-width: $screen-md-min) {
       display: block;
+      top: 30px;
     }
     &:hover {
       color: $color-dark-100;
