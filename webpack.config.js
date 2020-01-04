@@ -12,6 +12,7 @@ const config = {
   ],
   output: {
     filename: '[name].bundle.js',
+    path: path.resolve(__dirname, './docs'),
   },
   optimization: {
     splitChunks: {
@@ -95,8 +96,8 @@ const config = {
       'window.jQuery': 'jquery'
     }),
     new HtmlWebpackPlugin({
-      filename: __dirname + '/index.html',
-      template: 'src/pages/index.pug'
+      filename: 'index.html',
+        template: 'src/pages/index.pug'
     }),
     new HtmlWebpackPlugin({
       filename: 'ui-colors-type.html',

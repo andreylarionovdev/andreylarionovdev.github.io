@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Toxin booking | Registration</title>
+    <title>Toxin booking | Sign in</title>
   <link href="styles.css" rel="stylesheet"><link href="main.css" rel="stylesheet"></head>
-  <body class="registration clearfix">
+  <body class="login clearfix">
     <div class="layout__header">
       <!-- Default menu-->
       <!-- Default buttons-->
       <header class="header clearfix">
         <nav class="header__nav"><i class="material-icons header__menu-button">menu</i>
-          <div class="header__logo"><a class="logo logo--with-text" href="../index.html"></a>
+          <div class="header__logo"><a class="logo logo--with-text" href="./index.html"></a>
           </div>
           <div class="header__account">
             <div class="header__button--sign-up"><a class="button button--default button--small" href="javascript:void(0);">Зарегистрироваться</a>
@@ -52,81 +52,27 @@
         </nav>
       </header>
     </div>
-    <div class="registration__hero-section">
-      <div class="registration__form">
-        <div class="sign-up">
-          <h1 class="sign-up__title h1">Регистрация аккаунта</h1>
-          <div class="sign-up__input">
+    <div class="login__hero-section">
+      <div class="login__form">
+        <div class="sign-in">
+          <h1 class="sign-in__title h1">Войти</h1>
+          <div class="sign-in__input">
             <div class="input-text">
-              <input class="input-text__input" id="first-name" type="text" placeholder="Имя">
+              <input class="input-text__input" id="sign-in_email" type="text" placeholder="Email">
               <button class="input-text__submit-button"><i class="input-text__arrow material-icons">arrow_forward</i></button>
             </div>
           </div>
-          <div class="sign-up__input">
+          <div class="sign-in__input">
             <div class="input-text">
-              <input class="input-text__input" id="last-name" type="text" placeholder="Фамилия">
+              <input class="input-text__input" id="sign-in_pass" type="text" placeholder="Пароль">
               <button class="input-text__submit-button"><i class="input-text__arrow material-icons">arrow_forward</i></button>
             </div>
           </div>
-          <div class="sign-up__gender clearfix">
-            <div class="sign-up__radio-button">
-              <div class="radio-button">
-                <input class="radio-button__input" id="g-male" type="radio" name="gender" value="m" checked>
-                <label class="radio-button__label" for="g-male">Мужчина</label>
-              </div>
-            </div>
-            <div class="sign-up__radio-button">
-              <div class="radio-button">
-                <input class="radio-button__input" id="g-female" type="radio" name="gender" value="f">
-                <label class="radio-button__label" for="g-female">Женщина</label>
-              </div>
-            </div>
+          <div class="sign-in__login-button"><a class="button button--default button--fluid" href="javascript:void(0);">Войти<i class="button__arrow material-icons">arrow_forward</i></a>
           </div>
-          <div class="sign-up__birthday">
-            <div class="sign-up__label">
-              <label class="label clearfix">
-                <h3 class="label__left h3">Дата рождения</h3><span class="label__right"></span>
-              </label>
-            </div>
-            <div class="sign-up__input">
-              <div class="input-text">
-                <input class="input-text__input" id="sign-up__input-birthday" type="text" placeholder="ДД.ММ.ГГГГ">
-                <button class="input-text__submit-button"><i class="input-text__arrow material-icons">arrow_forward</i></button>
-              </div>
-            </div>
-          </div>
-          <div class="sign-up__email">
-            <div class="sign-up__label">
-              <label class="label clearfix">
-                <h3 class="label__left h3">Данные для входа в сервис</h3><span class="label__right"></span>
-              </label>
-            </div>
-            <div class="sign-up__input">
-              <div class="input-text">
-                <input class="input-text__input" id="sign-up__input-email" type="text" placeholder="Email">
-                <button class="input-text__submit-button"><i class="input-text__arrow material-icons">arrow_forward</i></button>
-              </div>
-            </div>
-          </div>
-          <div class="sign-up__input">
-            <div class="input-text">
-              <input class="input-text__input" id="sign-up__input-password" type="text" placeholder="Пароль">
-              <button class="input-text__submit-button"><i class="input-text__arrow material-icons">arrow_forward</i></button>
-            </div>
-          </div>
-          <div class="sign-up__toggle">
-            <div class="toggle-button">
-              <div class="toggle-button__toggle">
-                <input class="toggle-button__input" id="sign-up__toggle-promote" type="checkbox">
-                <label class="toggle-button__label" for="sign-up__toggle-promote">Получать спецпредложения</label>
-              </div>
-            </div>
-          </div>
-          <div class="sign-up__pay-button"><a class="button button--default button--fluid" href="javascript:void(0);">Перейти к оплате<i class="button__arrow material-icons">arrow_forward</i></a>
-          </div>
-          <div class="sign-up__auth clearfix">
-            <div class="sign-up__auth-hint"><span class="body body--black">Уже есть аккаунт на Toxin</span></div>
-            <div class="sign-up__auth-button"><a class="button button--transparent button--fluid" href="javascript:void(0);">Войти</a>
+          <div class="sign-in__create-account clearfix">
+            <div class="sign-in__hint"><span class="body body--black">Нет аккаунта на Toxin?</span></div>
+            <div class="sign-in__create-button"><a class="button button--transparent button--fluid" href="javascript:void(0);">Создать</a>
             </div>
           </div>
         </div>
@@ -137,7 +83,7 @@
         <div class="footer__inner clearfix">
           <div class="footer__top clearfix">
             <div class="footer__left">
-              <div class="footer__logo"><a class="logo logo--with-text" href="../index.html"></a>
+              <div class="footer__logo"><a class="logo logo--with-text" href="./index.html"></a>
               </div>
               <div class="footer__description body">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
               </div>

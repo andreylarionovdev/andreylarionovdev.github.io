@@ -1,8 +1,8 @@
-mixin logo(href, withText)
+mixin logo(withText)
   - const blockName = 'logo'
   - let modifiers = []
 
   if withText
     - modifiers.push(blockName+'--with-text')
 
-  a(class=blockName class=modifiers href=href ? href : '../index.html')
+  a(class=blockName class=modifiers href='./index.html')

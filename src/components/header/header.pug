@@ -43,7 +43,7 @@ mixin header(user, menuItems, menuButtons)
     nav(class=blockName+'__nav')
       i(class=['material-icons', blockName+'__menu-button'])= 'menu'
       div(class=blockName+'__logo')
-        +logo(null, true)
+        +logo(true)
       div(class=blockName + '__account')
         if user
           = user
