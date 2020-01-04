@@ -1,5 +1,5 @@
 # The Toxin website frontend
-This repository contains html layouts of Toxin website. You can see demo here - [http://andreylarionovdev.github.io/](http://andreylarionovdev.github.io/) 
+This repository contains html layouts of Toxin website. You can see demo here - [http://andreylarionovdev.github.io/](http://andreylarionovdev.github.io/toxin) 
 
 ## Build project
 Clone repository:
