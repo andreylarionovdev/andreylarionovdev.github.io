@@ -83,6 +83,7 @@
   &__info {
     width: 39.1%;
     @media (max-width: $screen-xs-max) {
+      margin-top: 20px;
       width: 100%;
     }
   }

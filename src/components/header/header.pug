@@ -41,7 +41,7 @@ mixin header(user, menuItems, menuButtons)
       ]
   header(class=[blockName, 'clearfix'] class=modifiers)
     nav(class=blockName+'__nav')
-      div(class=blockName+'__menu-button')
+      i(class=['material-icons', blockName+'__menu-button'])= 'menu'
       div(class=blockName+'__logo')
         +logo(null, true)
       div(class=blockName + '__account')
