@@ -5,11 +5,22 @@
     margin: 0 auto;
     padding-top: 70px;
     padding-bottom: 63px;
+    @media (max-width: $screen-md-max) {
+      width: 95.5%;
+    }
   }
   &__feature-images {
     position: relative;
     width: 100%;
     height: 485px;
+  }
+  &__feature {
+    border-bottom: 1px solid $color-dark-10;
+    &:last-child {
+      @media (max-width: $screen-xs-max) {
+        border-bottom: none;
+      }
+    }
   }
   &__left-image,
   &__top-image,
@@ -29,13 +40,22 @@
     width: 68.1%;
     height: 100%;
     background-image: url('../../img/room-details-left.png');
-
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+      height: 50%;
+    }
   }
   &__top-image {
     background-image: url('../../img/room-details-top.png');
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+    }
   }
   &__bottom-image {
     background-image: url('../../img/room-details-bottom.png');
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+    }
   }
 
   &__main,
@@ -49,6 +69,10 @@
   &__main {
     width: 66.66%;
     padding-right: 5.4%;
+    @media (max-width: $screen-sm-max) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
   &__feedbacks,
   &__info,
@@ -58,10 +82,17 @@
   }
   &__info {
     width: 39.1%;
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+    }
   }
   &__rate {
     width: 60.9%;
     padding-left: 11.5%;
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+      padding-left: 0;
+    }
   }
   &__feedbacks {
     margin-top: 12px;
@@ -89,12 +120,24 @@
   &__cancel {
     padding-left: 1%;
     padding-right: 1%;
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
   &__rules {
     padding-right: 13%;
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+      padding-right: 0;
+    }
   }
   &__rules-title {
     padding-left: 20px;
+    @media (max-width: $screen-sm-max) {
+      padding-left: 0;
+    }
   }
   &__rules-title,
   &__cancel-title {
@@ -102,6 +145,9 @@
   }
   &__right {
     width: 33.33%;
+    @media (max-width: $screen-sm-max) {
+      width: 100%;
+    }
   }
   &__votes-chart {
     padding-top: 20px;
