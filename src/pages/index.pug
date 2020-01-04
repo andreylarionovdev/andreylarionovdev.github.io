@@ -4,9 +4,9 @@ include ../components/logo/logo
 include ../components/site-menu/site-menu
 
 block vars
-  - var title = 'Main'
-  - var bodyClasses = ['ui', 'ui--index']
-  - var withoutLogo = true
+  - const title = 'Main'
+  - const bodyClasses = ['ui', 'ui--index']
+  - const withoutLogo = true
 block content
   .column.column--6
     +site-menu(
