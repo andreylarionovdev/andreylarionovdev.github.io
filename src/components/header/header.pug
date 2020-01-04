@@ -75,4 +75,13 @@ mixin header(user, menuItems, menuButtons)
                       a(class=blockName+'__menu-a' href=_item.href)!= _item.name
               else
                 a(class=blockName+'__menu-a' href=item.href)!= item.name
+          li(class=[blockName+'__menu-item', blockName+'__menu-item--account-buttons'])
+            each button, _ in menuButtons
+              div(class=blockName+'__button--'+button.name)
+                +button(
+                  button.theme,
+                  button.caption,
+                  {small: true}
+                )
+
         i(class=[blockName+'__close-button', 'material-icons'])= 'close'

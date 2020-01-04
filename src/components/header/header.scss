@@ -145,6 +145,13 @@
         color: $color-dark-75;
       }
     }
+    &--account-buttons {
+      display: none;
+      padding-top: 15px;
+      @media (max-width: $screen-md-min) {
+        display: block;
+      }
+    }
     #{$menu-item} {
       clear: both;
       width: 100%;

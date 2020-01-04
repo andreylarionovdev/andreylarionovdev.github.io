@@ -1834,6 +1834,12 @@
       font-weight: bold; }
       .header__menu-item--active .header__menu-a {
         color: rgba(31, 32, 65, 0.75); }
+    .header__menu-item--account-buttons {
+      display: none;
+      padding-top: 15px; }
+      @media (max-width: 992px) {
+        .header__menu-item--account-buttons {
+          display: block; } }
     .header__menu-item .header__menu-item {
       clear: both;
       width: 100%; }
