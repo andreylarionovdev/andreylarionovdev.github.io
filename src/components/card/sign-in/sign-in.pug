@@ -3,7 +3,7 @@ include ../../form/button/button
 
 mixin sign-in()
   - const blockName = 'sign-in'
-  div(class=blockName)
+  form(class=blockName)
     h1(class=blockName+'__title').h1= 'Войти'
     div(class=blockName+'__input')
       +input-text(
@@ -26,7 +26,7 @@ mixin sign-in()
       )
     div(class=[blockName + '__create-account', 'clearfix'])
       div(class=blockName + '__hint')
-        span.body.body--black= 'Нет аккаунта на Toxin?'
+        p.body.body--black= 'Нет аккаунта на Toxin?'
       div(class=blockName + '__create-button')
         +button(
           'transparent',
