@@ -2397,13 +2397,13 @@
       .ui--headers-footers .ui__footer--creative {
         height: 368px; }
 
-.layout__header {
+.wrapper-header {
   height: 70px; }
 
-.layout__footer {
+.wrapper-footer {
   min-height: 442px; }
 
-.landing__hero-section {
+.landing__hero {
   padding: 4.9% 9.7%;
   height: 830px;
   width: 100%;
@@ -2414,7 +2414,7 @@
   background-size: cover;
   background-color: #6FCF97; }
   @media (max-width: 768px) {
-    .landing__hero-section {
+    .landing__hero {
       padding: 3% 1%; } }
 
 .landing__hero-text {

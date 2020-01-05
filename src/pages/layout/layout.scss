@@ -1,8 +1,9 @@
-.layout {
-  &__header {
-    height: 70px;
+.wrapper {
+  $min-height: 70px;
+  &-header {
+    height: $min-height;
   }
-  &__footer {
-    min-height: 372px + 70px;
+  &-footer {
+    min-height: 372px + $min-height;
   }
 }
