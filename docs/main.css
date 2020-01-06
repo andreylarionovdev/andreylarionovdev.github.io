@@ -95,20 +95,24 @@
   position: relative;
   padding-left: 110px;
   height: 70px;
-  margin-bottom: 20px;
-  font-size: 19px; }
+  margin-bottom: 20px; }
+  .color-sample__title, .color-sample__hex {
+    font-size: 19px;
+    margin: 0; }
   .color-sample__title {
     font-weight: bold;
     padding-top: 9px; }
   .color-sample__hex {
-    padding-top: 5px; }
+    padding-top: 5px;
+    font-weight: normal; }
   .color-sample .color-sample__rect {
     position: absolute;
     top: 0;
     left: 0;
     height: 70px;
     width: 70px;
-    border-radius: 6px; }
+    border-radius: 6px;
+    margin: 0; }
   .color-sample--dark-100 .color-sample__rect {
     background-color: #1F2041; }
   .color-sample--dark-75 .color-sample__rect {
@@ -142,7 +146,8 @@
   .font-sample--text-body {
     padding-right: 60px; }
   .font-sample__desc {
-    float: left; }
+    float: left;
+    font-style: normal; }
   .font-sample__name {
     float: left;
     font-family: Montserrat, sans-serif;

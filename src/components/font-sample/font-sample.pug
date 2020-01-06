@@ -9,6 +9,6 @@ mixin font-sample(theme, name, description, options)
     if options.bold
       - descModifiers.push(element + '--bold')
 
-  div(class=blockName class=blockName+'--'+theme)
-    div(class=blockName+'__name' class=nameModifiers)= name
-    div(class=blockName+'__desc' class=descModifiers)= description
+  article(class=blockName class=blockName+'--'+theme)
+    abbr(class=blockName+'__name' class=nameModifiers)= name
+    dfn(class=blockName+'__desc' class=descModifiers)= description
