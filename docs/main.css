@@ -1985,10 +1985,7 @@
     .footer__icon--ig {
       background-image: url(img/ig.svg); }
   .footer__logo {
-    margin-bottom: 13px; }
-    @media (max-width: 768px) {
-      .footer__logo {
-        margin: 0; } }
+    margin: 0; }
   .footer__hr {
     position: absolute;
     display: block;

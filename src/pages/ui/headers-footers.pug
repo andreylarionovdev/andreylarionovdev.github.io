@@ -8,11 +8,11 @@ block vars
   - const title = 'UI Kit - Headers & Footers'
   - const bodyClasses = ['ui', 'ui--headers-footers', 'clearfix']
 block content
-  .ui__header--anon
+  article.ui__header--anon
     +header
-  .ui__header--signed
+  article.ui__header--signed
     +header('Cosmin Negoita')
-  .ui__footer
+  article.ui__footer
     +footer
-  .ui__footer--creative
+  article.ui__footer--creative
     +footer({theme:'creative'})

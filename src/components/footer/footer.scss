@@ -147,10 +147,7 @@
     }
   }
   &__logo {
-    margin-bottom: 13px;
-    @media (max-width: $screen-sm-min) {
-      margin: 0;
-    }
+    margin: 0;
   }
   &__hr {
     position: absolute;
