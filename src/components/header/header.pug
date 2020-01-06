@@ -31,12 +31,18 @@ mixin header(user, menuItems, menuButtons)
         {
           name: 'sign-up',
           theme: 'default',
-          caption: 'Register'
+          caption: 'Register',
+          options: {
+            small: true
+          }
         },
         {
           name: 'sign-in',
           theme: 'transparent',
-          caption: 'Login'
+          caption: 'Login',
+          options: {
+            small: true
+          }
         }
       ]
   header(class=[blockName, 'clearfix'] class=modifiers)
@@ -67,8 +73,9 @@ mixin header(user, menuItems, menuButtons)
             li(class=blockName+'__menu-item' class=active class=hasDropdown)
               if item.sub
                 a(class=blockName+'__menu-a' class=active href='javascript:void(0)')
-                  span(class=blockName+'__dropdown-text')= item.name
-                  i(class=[blockName+'__dropdown-arrow', 'material-icons'])= 'keyboard_arrow_down'
+                  span(class=blockName+'__dropdown-text')
+                    = item.name
+                    i(class=[blockName+'__dropdown-arrow', 'material-icons'])= 'keyboard_arrow_down'
                 ul(class=[blockName+'__menu', blockName+'__menu--is-sub'])
                   each _item, _ in item.sub
                     li(class=blockName+'__menu-item')

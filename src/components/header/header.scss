@@ -176,19 +176,14 @@
   &__dropdown-arrow {
     position: absolute;
     top: 50%;
-    margin-top: -12px;
-    margin-left: -13px;
+    transform: translateY(-50%);
   }
-  @mixin account-height($height) {
-    display: inline-block;
-    height: $height;
-    top: 50%;
-    margin-top: -($height) / 2;
+  #{$account} {
     position: relative;
     float: right;
-  }
-  &__account {
-    @include account-height(34px);
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
     @media (max-width: $screen-md-min) {
       margin-right: 10px;
       display: none;
@@ -196,9 +191,11 @@
   }
   &--signed {
     #{$account} {
-      $height: 30px;
-      @include account-height($height);
-      line-height: $height;
+      position: relative;
+      line-height: 30px;
+      display: inline-block;
+      top: 50%;
+      transform: translateY(-50%);
       border-left: 1px solid $color-dark-10;
       padding-left: 31px;
       @media (max-width: $screen-md-min) {
