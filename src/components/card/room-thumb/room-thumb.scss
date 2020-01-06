@@ -16,6 +16,7 @@
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     overflow: hidden;
+    margin: 0;
     &:hover {
       #{$parent}__image-prev-btn,
       #{$parent}__image-next-btn {
@@ -104,6 +105,7 @@
     font-size: 14px;
     color: $color-dark-50;
     line-height: 22px;
+    margin: 0;
   }
   &__counter {
     font-weight: bold;

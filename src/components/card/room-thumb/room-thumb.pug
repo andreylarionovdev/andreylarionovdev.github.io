@@ -9,8 +9,8 @@ mixin room-thumb(roomNumber, pricePerDay, feedbackCounter, rate, images, options
       - feature = options.feature
     if options.focus
       - modifiers.push(blockName+'--focus')
-  div(class=blockName class=modifiers)
-    div(class=blockName+'__image-wrapper')
+  article(class=blockName class=modifiers)
+    figure(class=blockName+'__image-wrapper' role="group")
       each image, i in images
         img(class=blockName+'__image' src=require('../../img/' + image))
       ul(class=blockName+'__slider')
@@ -20,7 +20,7 @@ mixin room-thumb(roomNumber, pricePerDay, feedbackCounter, rate, images, options
             a(class=blockName+'__slider-a')
       a(class=[blockName + '__image-prev-btn', 'material-icons'] href='javascript:void(0)')= 'keyboard_arrow_down'
       a(class=[blockName + '__image-next-btn', 'material-icons'] href='javascript:void(0)')= 'keyboard_arrow_down'
-    div(class=[blockName+'__headline', 'clearfix'])
+    header(class=[blockName+'__headline', 'clearfix'])
       div(class=blockName+'__number')
         span(class=blockName + '__number-sign')= '№'
         span(class=blockName + '__number-value')= roomNumber
@@ -28,10 +28,10 @@ mixin room-thumb(roomNumber, pricePerDay, feedbackCounter, rate, images, options
       div(class=[blockName + '__price-per-day', 'body'])
         span(class=blockName + '__cost')!= pricePerDay.toLocaleString('ru-RU') + '₽&nbsp;'
         span(class=blockName + '__date-unit')= 'в сутки'
-    div(class=[blockName+'__footer', 'clearfix'])
+    footer(class=[blockName+'__footer', 'clearfix'])
       span(class=blockName+'__line')
       div(class=blockName+'__rate')
         +rate-button(roomNumber+'__rate', 5, rate)
-      div(class=blockName+'__feedback-counter')
+      p(class=blockName+'__feedback-counter')
         span(class=blockName+'__counter')= feedbackCounter
         span(class=blockName+'__text')= 'Отзывов'

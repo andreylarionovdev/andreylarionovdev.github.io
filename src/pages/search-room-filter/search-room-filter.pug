@@ -10,13 +10,13 @@ include ../../components/form/paginator/paginator
 
 block vars
   - const title = 'Search room/Filter'
-  - const bodyClasses = ['search-room-filter', 'clearfix']
+  - const bodyClasses = ['clearfix']
   - const withoutLogo = true
   - const footerTheme = 'bordered'
 
 block main
-  .search-room-filter__content.clearfix
-    .search-room-filter__sidebar
+  article.search-room-filter.clearfix
+    section.search-room-filter__sidebar
       .search-room-filter__date-dropdown-group
         .search-room-filter__date-dropdown-label
           +label(
@@ -60,8 +60,8 @@ block main
           from: 5000,
           to: 10000,
         })
-      p.search-room-filter__price-slider-hint
-        = 'Стоимость за сутки пребывания в номере'
+        p.search-room-filter__price-slider-hint
+          = 'Стоимость за сутки пребывания в номере'
       .search-room-filter__checkbox-group
         .checkbox-group__label
           +label('checkbox buttons')
@@ -134,7 +134,7 @@ block main
               ]
             }
           )
-    .search-room-filter__search-result
+    section.search-room-filter__search-result
       h1.h1= 'Номера, которые мы для вас подобрали'
       .search-room-filter__search-result-list.clearfix
         -
@@ -236,7 +236,7 @@ block main
               room.images,
               room.options
             )
-      .search-room-filter__paginator
+      section.search-room-filter__paginator
         +paginator({
           source: JSON.stringify([...Array(180).keys()]),
           pageSize: 12,

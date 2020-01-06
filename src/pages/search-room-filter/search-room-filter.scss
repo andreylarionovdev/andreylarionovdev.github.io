@@ -1,4 +1,7 @@
 .search-room-filter {
+  width: 80.5%;
+  max-width: 1920px;
+  margin: 30px auto 0;
   &__sidebar,
   &__search-result {
     float: left;
@@ -90,10 +93,5 @@
   &__paginator {
     margin: 40px auto 75px;
     text-align: center;
-  }
-  &__content {
-    width: 80.5%;
-    max-width: 1920px;
-    margin: 30px auto 0;
   }
 }
