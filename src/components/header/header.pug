@@ -42,9 +42,9 @@ mixin header(user, menuItems, menuButtons)
   header(class=[blockName, 'clearfix'] class=modifiers)
     nav(class=blockName+'__nav')
       i(class=['material-icons', blockName+'__menu-button'])= 'menu'
-      div(class=blockName+'__logo')
+      figure(class=blockName+'__logo')
         +logo(true)
-      div(class=blockName + '__account')
+      section(class=blockName + '__account')
         if user
           = user
         else

@@ -10,11 +10,12 @@
   $account: #{&}__account;
   height: inherit;
   background: white;
-  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+  box-shadow: 0 10px 20px $color-dark-5;
   &__logo {
+    margin: 0;
     position: absolute;
     top: 50%;
-    margin-top: -20px;
+    transform: translateY(-50%);
     @media (max-width: $screen-lg-min) {
       left: 10px;
     }

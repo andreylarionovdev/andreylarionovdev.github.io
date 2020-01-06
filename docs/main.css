@@ -1679,9 +1679,11 @@
   -webkit-box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
           box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05); }
   .header__logo {
+    margin: 0;
     position: absolute;
     top: 50%;
-    margin-top: -20px; }
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
     @media (max-width: 1200px) {
       .header__logo {
         left: 10px; } }
