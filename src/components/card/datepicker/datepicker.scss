@@ -15,19 +15,6 @@
   transition: opacity $datepickerTransitionSpeed $datepickerTransitionEase, transform $datepickerTransitionSpeed $datepickerTransitionEase, left 0s $datepickerTransitionSpeed;
   z-index: $datepickerZIndex;
 
-  &.-from-top- {
-    transform: translateY(-$datepickerTransitionOffset);
-  }
-  &.-from-right- {
-    transform: translateX($datepickerTransitionOffset);
-  }
-  &.-from-bottom- {
-    transform: translateY($datepickerTransitionOffset);
-  }
-  &.-from-left- {
-    transform: translateX(-$datepickerTransitionOffset);
-  }
-
   &.active {
     display: block;
     transform: translate(0);
@@ -67,22 +54,6 @@
   &--apply-btn {
     right: 0;
     color: $color-purple;
-  }
-}
-
-.datepicker-inline {
-  .datepicker {
-    border-color: map-get($datepickerBorderColor, inline);
-    box-shadow: none;
-    position: static;
-    left: auto;
-    right: auto;
-    opacity: 1;
-    transform: none;
-  }
-
-  &--pointer {
-    display: none;
   }
 }
 
