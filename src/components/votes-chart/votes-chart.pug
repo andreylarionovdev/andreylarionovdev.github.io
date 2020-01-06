@@ -27,7 +27,7 @@ mixin votes-chart(id, votes, options)
   - const total = sortedValues.reduce((acc, { count }) => acc + count, 0)
 
   - let angleOffset = 90
-  div(class=blockName)
+  figure(class=[blockName, 'clearfix'])
     svg(class=blockName+'__chart' height=height width=width viewBox=[0, 0, width, height].join(' '))
       each item in sortedValues
         - const key = item.label

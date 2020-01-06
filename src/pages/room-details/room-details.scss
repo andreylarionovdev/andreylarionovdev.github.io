@@ -13,6 +13,7 @@
     position: relative;
     width: 100%;
     height: 485px;
+    margin: 0;
   }
   &__feature {
     border-bottom: 1px solid $color-dark-10;
@@ -25,18 +26,18 @@
   &__left-image,
   &__top-image,
   &__bottom-image {
+    margin: 0;
+    float: left;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   &__top-image,
   &__bottom-image {
-    float: left;
     height: 50%;
     width: 31.9%;
   }
   &__left-image {
-    float: left;
     width: 68.1%;
     height: 100%;
     background-image: url('../../img/room-details-left.png');

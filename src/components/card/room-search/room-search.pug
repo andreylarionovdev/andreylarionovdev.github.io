@@ -5,7 +5,7 @@ include ../../form/dropdown-date-range/dropdown-date-range
 
 mixin room-search()
   - const blockName = 'room-search'
-  div(class=[blockName, 'clearfix'])
+  form(class=[blockName, 'clearfix'])
     h1(class=[blockName+'__title', 'h1'])= 'Найдём номера под ваши пожелания'
     div(class=[blockName+'__date-range', 'clearfix'])
       +dropdown-date-range('room-book__check-in-out')

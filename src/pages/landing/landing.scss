@@ -1,18 +1,15 @@
 .landing {
-  &__hero {
-    padding: 4.9% 9.7%;
-    height: 830px;
-    width: 100%;
-    position: relative;
-    background-image: url(../../img/landing.png);
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    //background-attachment: fixed;
-    background-size: cover;
-    background-color: $color-green;
-    @media (max-width: $screen-sm-min) {
-      padding: 3% 1%;
-    }
+  padding: 4.9% 9.7%;
+  height: 830px;
+  width: 100%;
+  position: relative;
+  background-image: url(../../img/landing.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $color-green;
+  @media (max-width: $screen-sm-min) {
+    padding: 3% 1%;
   }
   &__hero-text {
     position: absolute;

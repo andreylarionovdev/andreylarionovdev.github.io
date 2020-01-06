@@ -10,8 +10,8 @@ mixin room-book(roomNumber, pricePerDay, discount, fee, options)
     if options.feature
       - feature = options.feature
 
-  div(class=blockName)
-    div(class=[blockName+'__headline', 'clearfix'])
+  form(class=blockName)
+    header(class=[blockName+'__headline', 'clearfix'])
       div(class=blockName+'__number')
         span(class=blockName+'__number-sign')= '№'
         span(class=blockName+'__number-value')= roomNumber
@@ -66,7 +66,7 @@ mixin room-book(roomNumber, pricePerDay, discount, fee, options)
           td(class=blockName+'__total-line')
           td(class=blockName+'__total-td')
             span(class=blockName+'__total-value')= (pricePerDay*4-discount+fee).toLocaleString('ru-RU')+'₽'
-    div(class=blockName+'__button')
+    footer(class=blockName+'__button')
       +button(
         'default',
         'Забронировать',

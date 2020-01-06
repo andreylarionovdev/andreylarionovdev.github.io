@@ -53,7 +53,7 @@ mixin header(user, menuItems, menuButtons)
               +button(
                 button.theme,
                 button.caption,
-                {small: true}
+                button.options
               )
       div(class=blockName+'__menu-wrapper')
         ul(class=[blockName+'__menu', 'clearfix'])
@@ -81,7 +81,7 @@ mixin header(user, menuItems, menuButtons)
                 +button(
                   button.theme,
                   button.caption,
-                  {small: true}
+                  button.options
                 )
 
         i(class=[blockName+'__close-button', 'material-icons'])= 'close'
