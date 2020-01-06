@@ -14,12 +14,12 @@ block vars
 
 block content
   .column.column--4.first
-    .ui__room-search
+    article.ui__room-search
       +room-search()
-    .ui__sign-up
+    article.ui__sign-up
       +sign-up()
   .column.column--4.second
-    .ui__room-book
+    article.ui__room-book
       +room-book(
         888,
         9990,
@@ -27,12 +27,12 @@ block content
         300,
         {feature: 'люкс'}
       )
-    .ui__sign-in
+    article.ui__sign-in
       +sign-in()
   .column.column--4.third
-    .ui__datepicker-sample
+    article.ui__datepicker-sample
       +datepicker()
-    .ui__room-thumb--vip
+    article.ui__room-thumb--vip
       +room-thumb(
         888,
         9990,
@@ -49,7 +49,7 @@ block content
           focus: true
         }
       )
-    .ui__room-thumb
+    article.ui__room-thumb
       +room-thumb(
         840,
         9900,

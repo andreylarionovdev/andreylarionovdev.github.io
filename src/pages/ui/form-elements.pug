@@ -22,9 +22,9 @@ block vars
   - const title = 'UI Kit - Form elements'
   - const bodyClasses = ['ui', 'ui--form-components', 'clearfix']
 block content
-  .ui__top.clearfix
+  section.ui__top.clearfix
     .column.column--4.first
-      .ui__input-text-group
+      article.ui__input-text-group
         .input-text-group
           .input-text-group__label
             +label(
@@ -36,7 +36,7 @@ block content
               'input-email',
               'Email'
             )
-      .ui__input-text-group--hovered
+      article.ui__input-text-group--hovered
         .input-text-group
           .input-text-group__label
             +label(
@@ -50,7 +50,7 @@ block content
               'This is pretty awesome',
               {hovered: true}
             )
-      .ui__dropdown-group
+      article.ui__dropdown-group
         .dropdown-group
           .dropdown-group__label
             +label(
@@ -62,7 +62,7 @@ block content
               'default-dropdown',
               {value: 'Сколько гостей'}
             )
-      .ui__input-text-group--masked
+      article.ui__input-text-group--masked
         .input-text-group
           .input-text-group__label
             +label(
@@ -74,7 +74,7 @@ block content
               'input-text-with-mask',
               'ДД.ММ.ГГГГ'
             )
-      .ui__dropdown-group--inline.clearfix
+      article.ui__dropdown-group--inline.clearfix
         .dropdown-group
           .dropdown-group__label
             +label('date dropdown')
@@ -91,7 +91,7 @@ block content
               'date-to',
               {value: '19.08.2019'}
             )
-      .ui__dropdown-group--date-filter
+      article.ui__dropdown-group--date-filter
         .dropdown-group
           .dropdown-group__label
             +label('filter date dropdown')
@@ -100,7 +100,7 @@ block content
               'date-filter',
               {value: '19 авг - 23 авг'}
             )
-      .ui__input-text-group--with-submit
+      article.ui__input-text-group--with-submit
         .input-text-group
           .input-text-group__label
             +label('subscription text field')
@@ -112,7 +112,7 @@ block content
               {withArrow: true}
             )
     .column.column--4.second
-      .ui__checkbox-group
+      article.ui__checkbox-group
         .checkbox-group
           .checkbox-group__label
             +label('checkbox buttons')
@@ -133,7 +133,7 @@ block content
               'Можно пригласить гостей (до 10 человек)',
               true
             )
-      .ui__radio-group
+      article.ui__radio-group
         .radio-button-group.clearfix
           .radio-button-group__label
             +label('radio buttons')
@@ -152,7 +152,7 @@ block content
               'female',
               'Женщина'
             )
-      .ui__toggle-group
+      article.ui__toggle-group
         .toggle-group
           .toggle-group__label
             +label('toggle')
@@ -167,7 +167,7 @@ block content
               'second-toggle',
               'Получать спецпредложения'
             )
-      .ui__like-button-group.clearfix
+      article.ui__like-button-group.clearfix
         .like-button-group
           .like-button-group__label
             +label('like button')
@@ -175,7 +175,7 @@ block content
             +like-button(2)
           .like-button-group__like-button
             +like-button(12, true)
-      .ui__rate-button-group--default.clearfix
+      article.ui__rate-button-group--default.clearfix
         .rate-button-group
           .rate-button-group__label
             +label('rate button')
@@ -192,7 +192,7 @@ block content
               5
             )
     .column.column--4.third
-      .ui__range-slider
+      article.ui__range-slider
         +range-slider({
           name: 'range-slider',
           type: 'double',
@@ -202,7 +202,7 @@ block content
           from: 5000,
           to: 10000,
         })
-      .ui__button-group
+      article.ui__button-group
         .button-group
           .button-group__label
             +label('buttons')
@@ -249,7 +249,7 @@ block content
                 fluid: true
               }
             )
-      .ui__paginator-group
+      article.ui__paginator-group
         .paginator-group
           .paginator-group__label
             +label('pagination')
@@ -259,9 +259,9 @@ block content
               pageSize: 12,
               pageRange: 1
             })
-  .ui__dropdown-states.clearfix
+  section.ui__dropdown-states.clearfix
     .column.column--4.first
-      .ui__dropdown-group--collapsed
+      article.ui__dropdown-group--collapsed
         .dropdown-group
           .dropdown-group__label
             +label(
@@ -273,7 +273,7 @@ block content
               'dropdown-collapsed',
               {value: '2 спальни, 2 кровати...'}
             )
-      .ui__dropdown-group--expanded
+      article.ui__dropdown-group--expanded
         .dropdown-group
           .dropdown-group__label
             +label(
@@ -296,7 +296,7 @@ block content
               }
             )
     .column.column--4.second
-      .ui__dropdown-group--with-apply-btn
+      article.ui__dropdown-group--with-apply-btn
         .dropdown-group
           .dropdown-group__label
             +label('dropdown')
@@ -318,7 +318,7 @@ block content
               }
             )
     .column.column--4.third
-      .ui__dropdown-group--with-clear-btn
+      article.ui__dropdown-group--with-clear-btn
         .dropdown-group
           .dropdown-group__label
             +label('dropdown')
@@ -337,15 +337,15 @@ block content
                 ]
               }
             )
-  .ui__rich-lists.clearfix
+  section.ui__rich-lists.clearfix
     .column.column--4.first
-      .ui__checkbox-list-xp-group--collapsed
+      article.ui__checkbox-list-xp-group--collapsed
         .checkbox-list-xp-group
           +checkbox-list-xp(
             'exp_check_list_collapsed',
             'Expandable checkbox list'
           )
-      .ui__checkbox-list-xp-group--expanded
+      article.ui__checkbox-list-xp-group--expanded
         .checkbox-list-xp-group
           +checkbox-list-xp(
             'exp_check_list_collapsed',
@@ -365,7 +365,7 @@ block content
             }
           )
     .column.column--4.second
-      .ui__rich-checkbox-group
+      article.ui__rich-checkbox-group
         .rich-checkbox-group
           .rich-checkbox-group__label
             +label('rich checkbox buttons')
@@ -382,7 +382,7 @@ block content
                 'На 1 этаже вас встретит специалист и проводит до номера.'
             )
     .column.column--4.third
-      .ui__bullet-list-group
+      article.ui__bullet-list-group
         .bullet-list-group
           .bullet-list-group__label
             +label('Bullet list')
@@ -397,9 +397,9 @@ block content
                 ]
               }
             )
-  .ui__bottom.clearfix
+  section.ui__bottom.clearfix
     .column.column--4.first
-      .ui__feature-group
+      article.ui__feature-group
         .feature-group
           .feature-group__feature
             +feature(
@@ -414,7 +414,7 @@ block content
               'Окно в каждой из спален'
             )
     .column.column--8.second
-      .ui__feedback-group
+      article.ui__feedback-group
         .feedback-group
           .feedback-group__feedback
             +feedback(
