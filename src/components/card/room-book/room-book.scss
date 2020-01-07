@@ -2,6 +2,9 @@
 .room-book {
   @include card;
   padding: 39px 30px 29px 27px;
+  @media (max-width: $screen-xs-max) {
+    padding: 30px 15px;
+  }
   &__number,
   &__feature {
     float: left;

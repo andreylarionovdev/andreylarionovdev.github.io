@@ -2,6 +2,9 @@
 .sign-up {
   @include card;
   padding: 39px 28px 29px 29px;
+  @media (max-width: $screen-xs-max) {
+    padding: 30px 15px;
+  }
   &__title {
     margin-bottom: 20px;
   }
@@ -35,10 +38,17 @@
     margin: 0;
     line-height: 44px;
     float: left;
+    @media (max-width: $screen-xs-max) {
+      text-align: center;
+      width: 100%;
+    }
   }
   &__auth-button {
     width: 99px;
     height: 44px;
     float: right;
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+    }
   }
 }

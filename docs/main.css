@@ -1364,6 +1364,9 @@
           box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   background-color: white;
   padding: 39px 30px 29px 27px; }
+  @media (max-width: 767px) {
+    .room-book {
+      padding: 30px 15px; } }
   .room-book__number, .room-book__feature {
     float: left; }
   .room-book__headline {
@@ -1472,6 +1475,9 @@
           box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   background-color: white;
   padding: 39px 28px 29px 29px; }
+  @media (max-width: 767px) {
+    .room-search {
+      padding: 30px 15px; } }
   .room-search__title {
     margin-bottom: 20px; }
   .room-search__label {
@@ -1614,6 +1620,9 @@
           box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   background-color: white;
   padding: 39px 28px 29px 27px; }
+  @media (max-width: 767px) {
+    .sign-in {
+      padding: 30px 15px; } }
   .sign-in__title {
     margin-bottom: 20px; }
   .sign-in__input {
@@ -1624,14 +1633,21 @@
     margin-top: 20px; }
   .sign-in__create-account {
     margin-top: 29px;
-    height: 44px; }
+    min-height: 44px; }
   .sign-in__hint {
     line-height: 44px;
     float: left; }
+    @media (max-width: 767px) {
+      .sign-in__hint {
+        text-align: center;
+        width: 100%; } }
   .sign-in__create-button {
     float: right;
     height: 44px;
     width: 31%; }
+    @media (max-width: 767px) {
+      .sign-in__create-button {
+        width: 100%; } }
 
 .sign-up {
   border: 1px solid rgba(0, 0, 0, 0.12);
@@ -1640,6 +1656,9 @@
           box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   background-color: white;
   padding: 39px 28px 29px 29px; }
+  @media (max-width: 767px) {
+    .sign-up {
+      padding: 30px 15px; } }
   .sign-up__title {
     margin-bottom: 20px; }
   .sign-up__input {
@@ -1665,10 +1684,17 @@
     margin: 0;
     line-height: 44px;
     float: left; }
+    @media (max-width: 767px) {
+      .sign-up__auth-hint {
+        text-align: center;
+        width: 100%; } }
   .sign-up__auth-button {
     width: 99px;
     height: 44px;
     float: right; }
+    @media (max-width: 767px) {
+      .sign-up__auth-button {
+        width: 100%; } }
 
 .header {
   font-family: Montserrat, sans-serif;

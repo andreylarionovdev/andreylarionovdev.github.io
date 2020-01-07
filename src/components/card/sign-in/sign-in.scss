@@ -2,6 +2,9 @@
 .sign-in {
   @include card;
   padding: 39px 28px 29px 27px;
+  @media (max-width: $screen-xs-max) {
+    padding: 30px 15px;
+  }
   &__title {
     margin-bottom: 20px;
   }
@@ -15,15 +18,22 @@
   }
   &__create-account {
     margin-top: 29px;
-    height: 44px;
+    min-height: 44px;
   }
   &__hint {
     line-height: 44px;
     float: left;
+    @media (max-width: $screen-xs-max) {
+      text-align: center;
+      width: 100%;
+    }
   }
   &__create-button {
     float: right;
     height: 44px;
     width: 31%;
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+    }
   }
 }

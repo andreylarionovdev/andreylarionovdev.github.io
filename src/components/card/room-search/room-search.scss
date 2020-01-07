@@ -2,6 +2,9 @@
 .room-search {
   @include card;
   padding: 39px 28px 29px 29px;
+  @media (max-width: $screen-xs-max) {
+    padding: 30px 15px;
+  }
   &__title {
     margin-bottom: 20px;
   }

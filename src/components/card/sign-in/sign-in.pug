@@ -21,7 +21,8 @@ mixin sign-in()
         'Войти',
         {
           withArrow: true,
-          fluid: true
+          fluid: true,
+          href: 'login.html'
         }
       )
     div(class=[blockName + '__create-account', 'clearfix'])
@@ -31,5 +32,8 @@ mixin sign-in()
         +button(
           'transparent',
           'Создать',
-          {fluid: true}
+          {
+            fluid: true,
+            href: 'registration.html'
+          }
         )
