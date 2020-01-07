@@ -1,4 +1,4 @@
-include ../../form/input-text/input-text
+include ../../form/input/input
 include ../../form/button/button
 
 mixin sign-in()
@@ -6,15 +6,17 @@ mixin sign-in()
   form(class=blockName)
     h1(class=blockName+'__title').h1= 'Войти'
     div(class=blockName+'__input')
-      +input-text(
-        'sign-in_email',
-        'Email'
-      )
+      +input({
+        id: 'sign-in_email',
+        placeholder: 'Email',
+        type: 'email'
+      })
     div(class=blockName+'__input')
-      +input-text(
-        'sign-in_pass',
-        'Пароль'
-      )
+      +input({
+        id: 'sign-in_pass',
+        placeholder: 'Пароль',
+        type: 'password'
+      })
     div(class=blockName+'__login-button')
       +button(
         'default',

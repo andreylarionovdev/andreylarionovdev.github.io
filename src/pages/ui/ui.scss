@@ -80,9 +80,9 @@
     #{$parent}__dropdown-group--inline,
     #{$parent}__dropdown-group--with-apply-btn,
     #{$parent}__feedback-group,
-    #{$parent}__input-text-group,
-    #{$parent}__input-text-group--masked,
-    #{$parent}__input-text-group--hovered,
+    #{$parent}__input-group,
+    #{$parent}__input-group--masked,
+    #{$parent}__input-group--hovered,
     #{$parent}__like-button-group,
     #{$parent}__paginator-group,
     #{$parent}__radio-group,
@@ -102,7 +102,7 @@
     #{$parent}__dropdown-group--date-filter,
     #{$parent}__dropdown-group--collapsed,
     #{$parent}__dropdown-group--expanded,
-    #{$parent}__input-text-group--with-submit,
+    #{$parent}__input-group--with-submit,
     #{$parent}__rich-checkbox-group {
       @include responsive-wrapper(75%)
     }
@@ -130,7 +130,7 @@
     #{$parent}__dropdown-group--date-filter {
       margin-bottom: 41px;
     }
-    #{$parent}__input-text-group--masked {
+    #{$parent}__input-group--masked {
       margin-bottom: 40px;
     }
     #{$parent}__like-button-group {
@@ -145,10 +145,10 @@
     #{$parent}__dropdown-group {
       margin-bottom: 22px;
     }
-    #{$parent}__input-text-group {
+    #{$parent}__input-group {
       margin-bottom: 21px;
     }
-    #{$parent}__input-text-group--hovered,
+    #{$parent}__input-group--hovered,
     #{$parent}__dropdown-group--collapsed {
       margin-bottom: 20px;
     }
@@ -179,7 +179,7 @@
       }
     }
 
-    #{$parent}__input-text-group--with-submit {
+    #{$parent}__input-group--with-submit {
       // ... 767px
       @media (max-width: $screen-xs-max) {
         margin-bottom: 40px;

@@ -1,7 +1,7 @@
 extends ../base
 
 include ../../components/logo/logo
-include ../../components/form/input-text/input-text
+include ../../components/form/input/input
 include ../../components/form/dropdown/dropdown
 include ../../components/form/checkbox/checkbox
 include ../../components/form/radio-button/radio-button
@@ -24,32 +24,33 @@ block vars
 block content
   section.ui__top.clearfix
     .column.column--4.first
-      article.ui__input-text-group
-        .input-text-group
-          .input-text-group__label
+      article.ui__input-group
+        .input-group
+          .input-group__label
             +label(
               'text field',
               'default'
             )
-          .input-text-group__input-text
-            +input-text(
-              'input-email',
-              'Email'
-            )
-      article.ui__input-text-group--hovered
-        .input-text-group
-          .input-text-group__label
+          .input-group__input
+            +input({
+              id: 'input-email',
+              placeholder: 'Email',
+              type: 'email'
+            })
+      article.ui__input-group--hovered
+        .input-group
+          .input-group__label
             +label(
               'text field',
               'hover / focus'
             )
-          .input-text-group__input-text
-            +input-text(
-              'input-focused-hovered',
-              'Some text',
-              'This is pretty awesome',
-              {hovered: true}
-            )
+          .input-group__input
+            +input({
+              id: 'input-focused-hovered',
+              placeholder: 'Some text',
+              value: 'This is pretty awesome',
+              hovered: true
+            })
       article.ui__dropdown-group
         .dropdown-group
           .dropdown-group__label
@@ -62,18 +63,18 @@ block content
               'default-dropdown',
               {value: 'Сколько гостей'}
             )
-      article.ui__input-text-group--masked
-        .input-text-group
-          .input-text-group__label
+      article.ui__input-group--masked
+        .input-group
+          .input-group__label
             +label(
               'masked text field',
               'default'
             )
-          .input-text-group__input-text
-            +input-text(
-              'input-text-with-mask',
-              'ДД.ММ.ГГГГ'
-            )
+          .input-group__input
+            +input({
+              id: 'input-with-mask',
+              placeholder: 'ДД.ММ.ГГГГ'
+            })
       article.ui__dropdown-group--inline.clearfix
         .dropdown-group
           .dropdown-group__label
@@ -100,17 +101,17 @@ block content
               'date-filter',
               {value: '19 авг - 23 авг'}
             )
-      article.ui__input-text-group--with-submit
-        .input-text-group
-          .input-text-group__label
+      article.ui__input-group--with-submit
+        .input-group
+          .input-group__label
             +label('subscription text field')
-          .input-text-group__input-text
-            +input-text(
-              'input-text-submit',
-              'Email',
-              '',
-              {withArrow: true}
-            )
+          .input-group__input
+            +input({
+              id: 'input-submit',
+              placeholder: 'Email',
+              withArrow: true,
+              type: 'email'
+            })
     .column.column--4.second
       article.ui__checkbox-group
         .checkbox-group

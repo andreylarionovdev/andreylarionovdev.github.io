@@ -1,6 +1,6 @@
 include menu-section/menu-section
 include ../logo/logo
-include ../form/input-text/input-text
+include ../form/input/input
 
 mixin footer(options)
   - const blockName = 'footer'
@@ -82,12 +82,12 @@ mixin footer(options)
           p(class=[blockName+'__subscribe-description', 'body'])
             = rightDescription
           div(class=blockName+'__subscribe-input')
-            +input-text(
-              'subscribe',
-              rightPlaceholder,
-              '',
-              {withArrow: true}
-            )
+            +input({
+              id: 'subscribe',
+              placeholder: rightPlaceholder,
+              withArrow: true,
+              type: 'email'
+            })
       div(class=[blockName+'__bottom', 'clearfix'])
         p(class=[blockName+'__copyright', 'body'])= copyright
         section(class=blockName+'__social')

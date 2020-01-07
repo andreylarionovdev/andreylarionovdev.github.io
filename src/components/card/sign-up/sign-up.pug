@@ -1,4 +1,4 @@
-include ../../form/input-text/input-text
+include ../../form/input/input
 include ../../form/radio-button/radio-button
 include ../../form/toggle-button/toggle-button
 
@@ -7,15 +7,15 @@ mixin sign-up()
   form(class=blockName)
     h1(class=[blockName+'__title', 'h1'])= 'Регистрация аккаунта'
     div(class=blockName+'__input')
-      +input-text(
-        'first-name',
-        'Имя'
-      )
+      +input({
+        id: 'first-name',
+        placeholder: 'Имя'
+      })
     div(class=blockName + '__input')
-      +input-text(
-        'last-name',
-        'Фамилия'
-      )
+      +input({
+        id: 'last-name',
+        placeholder: 'Фамилия'
+      })
     div(class=[blockName+'__gender', 'clearfix'])
       div(class=blockName+'__radio-button')
         +radio-button(
@@ -36,23 +36,25 @@ mixin sign-up()
       div(class=blockName+'__label')
         +label('Дата рождения')
       div(class=blockName+'__input')
-        +input-text(
-          'sign-up__input-birthday',
-          'ДД.ММ.ГГГГ'
-        )
+        +input({
+          id: 'sign-up__input-birthday',
+          placeholder: 'ДД.ММ.ГГГГ'
+        })
     div(class=blockName+'__email')
       div(class=blockName+'__label')
         +label('Данные для входа в сервис')
       div(class=blockName+'__input')
-        +input-text(
-          'sign-up__input-email',
-          'Email'
-        )
+        +input({
+          id: 'sign-up__input-email',
+          placeholder: 'Email',
+          type: 'email'
+        })
     div(class=blockName+'__input')
-      +input-text(
-        'sign-up__input-password',
-        'Пароль'
-      )
+      +input({
+        id: 'sign-up__input-password',
+        placeholder: 'Пароль',
+        type: 'password'
+      })
     div(class=blockName+'__toggle')
       +toggle-button(
         'sign-up__toggle-promote',

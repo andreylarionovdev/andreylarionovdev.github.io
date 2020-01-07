@@ -1,17 +1,17 @@
-mixin input-text(id, placeholder, value, options)
-  - const blockName = 'input-text'
+mixin input(options)
+  - const blockName = 'input'
   - const modifiers = []
+  - const { id, placeholder, value, withArrow, hovered, type} = options
 
-  if options
-    if options.withArrow
-      - modifiers.push(blockName + '--with-arrow')
-    if options.hovered
-      - modifiers.push(blockName + '--hovered')
+  if withArrow
+    - modifiers.push(blockName + '--with-arrow')
+  if hovered
+    - modifiers.push(blockName + '--hovered')
 
   div(class=blockName class=modifiers)
     input(
       id=id
-      type='text'
+      type=(type || 'text')
       class=blockName + '__input'
       placeholder=placeholder
       value=value

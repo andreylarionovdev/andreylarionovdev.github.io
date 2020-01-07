@@ -9,31 +9,32 @@
 @import '../components/logo/logo';
 @import '../components/color-sample/color-sample';
 @import '../components/font-sample/font-sample';
-@import '../components/form/label/label';
-@import '../components/form/input-text/input-text';
-@import '../components/form/groups/input-text-group';
+@import '../components/form/groups/input-group';
 @import '../components/form/groups/dropdown-group';
-@import '../components/form/dropdown/dropdown';
 @import '../components/form/groups/checkbox-group';
-@import '../components/form/checkbox/checkbox';
 @import '../components/form/groups/radio-button-group';
-@import '../components/form/radio-button/radio-button';
 @import '../components/form/groups/toggle-group';
-@import '../components/form/toggle-button/toggle-button';
 @import '../components/form/groups/like-button-group';
-@import '../components/form/like-button/like-button';
 @import '../components/form/groups/rate-button-group';
-@import '../components/form/rate-button/rate-button';
-@import '../components/form/range-slider/range-slider';
 @import '../components/form/groups/button-group';
-@import '../components/form/button/button';
 @import '../components/form/groups/paginator-group';
-@import '../components/form/paginator/paginator';
-@import '../components/form/checkbox-list-xp/checkbox-list-xp';
 @import '../components/form/groups/checkbox-list-xp-group';
 @import '../components/form/groups/rich-checkbox-group';
-@import '../components/form/rich-checkbox/rich-checkbox';
 @import '../components/form/groups/bullet-list-group';
+@import '../components/form/groups/feature-group';
+@import '../components/form/label/label';
+@import '../components/form/input/input';
+@import '../components/form/dropdown/dropdown';
+@import '../components/form/checkbox/checkbox';
+@import '../components/form/radio-button/radio-button';
+@import '../components/form/toggle-button/toggle-button';
+@import '../components/form/like-button/like-button';
+@import '../components/form/rate-button/rate-button';
+@import '../components/form/range-slider/range-slider';
+@import '../components/form/button/button';
+@import '../components/form/paginator/paginator';
+@import '../components/form/checkbox-list-xp/checkbox-list-xp';
+@import '../components/form/rich-checkbox/rich-checkbox';
 @import '../components/form/bullet-list/bullet-list';
 @import '../components/form/feature/feature';
 @import '../components/form/feedback/feedback';
@@ -62,7 +63,9 @@
   box-sizing: border-box;
 }
 
-input[type=text] {
+input[type="password"],
+input[type="email"],
+input[type="text"] {
   appearance: none;
 }
 
