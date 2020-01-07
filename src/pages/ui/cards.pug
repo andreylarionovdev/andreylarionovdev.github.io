@@ -33,32 +33,30 @@ block content
     article.ui__datepicker-sample
       +datepicker()
     article.ui__room-thumb--vip
-      +room-thumb(
-        888,
-        9990,
-        145,
-        5,
-        [
-          'room-thumb-1.png',
-          'room-thumb-1.png',
-          'room-thumb-1.png',
-          'room-thumb-1.png'
+      +room-thumb({
+        roomNumber: 888,
+        pricePerDay: 9990,
+        feedbackCounter: 145,
+        rate: 5,
+        images: [
+          {src: 'room-thumb-1.png', alt: 'Room 888'},
+          {src: 'room-thumb-1.png', alt: 'Room 888'},
+          {src: 'room-thumb-1.png', alt: 'Room 888'},
+          {src: 'room-thumb-1.png', alt: 'Room 888'},
         ],
-        {
-          feature:'люкс',
-          focus: true
-        }
-      )
+        feature:'люкс',
+        focus: true
+      })
     article.ui__room-thumb
-      +room-thumb(
-        840,
-        9900,
-        65,
-        4,
-        [
-          'room-thumb-2.png',
-          'room-thumb-2.png',
-          'room-thumb-2.png',
-          'room-thumb-2.png'
+      +room-thumb({
+        roomNumber: 840,
+        pricePerDay: 9900,
+        feedbackCounter: 65,
+        rate: 4,
+        images: [
+          {src: 'room-thumb-2.png', alt: 'Room 840'},
+          {src: 'room-thumb-2.png', alt: 'Room 840'},
+          {src: 'room-thumb-2.png', alt: 'Room 840'},
+          {src: 'room-thumb-2.png', alt: 'Room 840'},
         ]
-      )
+      })

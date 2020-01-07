@@ -7,4 +7,4 @@ mixin like-button(count, isFavorite)
 
   i(class=blockName class=modifiers)
     i(class=[blockName + '__heart', 'material-icons'])= isFavorite ? 'favorite' : 'favorite_border'
-    span(class=blockName + '__counter')= count
+    span(class=blockName + '__counter')= count || 0

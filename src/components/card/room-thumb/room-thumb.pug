@@ -1,20 +1,20 @@
 include ../../form/rate-button/rate-button
 
-mixin room-thumb(roomNumber, pricePerDay, feedbackCounter, rate, images, options)
+mixin room-thumb(options)
   - const blockName = 'room-thumb'
-  - let feature = ''
+  - const { roomNumber, pricePerDay, feedbackCounter, rate, images, feature, focus } = options
+
   - let modifiers = []
-  if options
-    if options.feature
-      - feature = options.feature
-    if options.focus
-      - modifiers.push(blockName+'--focus')
+
+  if focus
+    - modifiers.push(blockName+'--focus')
+
   article(class=blockName class=modifiers)
     figure(class=blockName+'__image-wrapper' role="group")
-      each image, i in images
-        img(class=blockName+'__image' src=require('../../img/' + image))
+      each image in images
+        img(class=blockName+'__image' src=require('../../img/' + image.src) alt=image.alt)
       ul(class=blockName+'__slider')
-        each image, i in images
+        each _, i in images
           - let activeClass = blockName+'__slider-li--active'
           li(class=blockName+'__slider-li' class=i===0 ? activeClass : '')
             a(class=blockName+'__slider-a')
