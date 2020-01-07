@@ -10,19 +10,19 @@ mixin header(user, menuItems, menuButtons)
   if !menuItems
     -
       menuItems = [
-        {name: 'Home', href: 'javascript:void(0)', active: true},
-        {name: 'About Us', href: 'javascript:void(0)'},
+        {name: 'Home', href: '/change-me', active: true},
+        {name: 'About Us', href: '/change-me'},
         {
           name: 'Services',
           sub: [
-            {name: 'One One', href: 'javascript:void(0)'},
-            {name: 'Two Two', href: 'javascript:void(0)'},
-            {name: 'Three', href: 'javascript:void(0)'}
+            {name: 'One One', href: '/change-me'},
+            {name: 'Two Two', href: '/change-me'},
+            {name: 'Three', href: '/change-me'}
           ]
         },
-        {name: 'Careers', href: 'javascript:void(0)'},
-        {name: 'News', href: 'javascript:void(0)'},
-        {name: 'Documentation', href: 'javascript:void(0)'}
+        {name: 'Careers', href: '/change-me'},
+        {name: 'News', href: '/change-me'},
+        {name: 'Documentation', href: '/change-me'}
       ]
   // Default buttons
   if !menuButtons
@@ -72,7 +72,7 @@ mixin header(user, menuItems, menuButtons)
               - hasDropdown = blockName+'__menu-item--has-dropdown'
             li(class=blockName+'__menu-item' class=active class=hasDropdown)
               if item.sub
-                a(class=blockName+'__menu-a' class=active href='javascript:void(0)')
+                a(class=blockName+'__menu-a' class=active href='/change-me')
                   span(class=blockName+'__dropdown-text')
                     = item.name
                     i(class=[blockName+'__dropdown-arrow', 'material-icons'])= 'keyboard_arrow_down'

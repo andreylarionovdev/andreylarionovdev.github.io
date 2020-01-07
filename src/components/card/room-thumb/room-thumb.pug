@@ -18,8 +18,8 @@ mixin room-thumb(roomNumber, pricePerDay, feedbackCounter, rate, images, options
           - let activeClass = blockName+'__slider-li--active'
           li(class=blockName+'__slider-li' class=i===0 ? activeClass : '')
             a(class=blockName+'__slider-a')
-      a(class=[blockName + '__image-prev-btn', 'material-icons'] href='javascript:void(0)')= 'keyboard_arrow_down'
-      a(class=[blockName + '__image-next-btn', 'material-icons'] href='javascript:void(0)')= 'keyboard_arrow_down'
+      i(class=[blockName + '__image-prev-btn', 'material-icons'])= 'keyboard_arrow_down'
+      i(class=[blockName + '__image-next-btn', 'material-icons'])= 'keyboard_arrow_down'
     header(class=[blockName+'__headline', 'clearfix'])
       div(class=blockName+'__number')
         span(class=blockName + '__number-sign')= '№'
