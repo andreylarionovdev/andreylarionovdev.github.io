@@ -309,6 +309,17 @@ eval("module.exports = __webpack_require__.p + \"img/favicons/safari-pinned-tab.
 
 /***/ }),
 
+/***/ "./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/site.webmanifest":
+/*!*************************************************************************************************************!*\
+  !*** ./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/site.webmanifest ***!
+  \*************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"img/favicons/site.webmanifest\";\n\n//# sourceURL=webpack:///./src/favicons/site.webmanifest?./node_modules/file-loader/dist/cjs.js?name=img/favicons/%5Bname%5D.%5Bext%5D");
+
+/***/ }),
+
 /***/ "./node_modules/ion-rangeslider/js/ion.rangeSlider.min.js":
 /*!****************************************************************!*\
   !*** ./node_modules/ion-rangeslider/js/ion.rangeSlider.min.js ***!
@@ -475,14 +486,14 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 
 /***/ }),
 
-/***/ "./src/favicons sync recursive ./!./!./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./ \\.(svg|png|ico|xml|json)$":
-/*!****************************************************************************************************************************!*\
-  !*** ./src/favicons sync !./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext] \.(svg|png|ico|xml|json)$ ***!
-  \****************************************************************************************************************************/
+/***/ "./src/favicons sync recursive ./!./!./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./ \\.(svg|png|ico|xml|json|webmanifest)$":
+/*!****************************************************************************************************************************************!*\
+  !*** ./src/favicons sync !./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext] \.(svg|png|ico|xml|json|webmanifest)$ ***!
+  \****************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var map = {\n\t\"./android-chrome-192x192.png\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/android-chrome-192x192.png\",\n\t\"./android-chrome-512x512.png\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/android-chrome-512x512.png\",\n\t\"./apple-touch-icon.png\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/apple-touch-icon.png\",\n\t\"./browserconfig.xml\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/browserconfig.xml\",\n\t\"./favicon-16x16.png\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/favicon-16x16.png\",\n\t\"./favicon-32x32.png\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/favicon-32x32.png\",\n\t\"./favicon.ico\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/favicon.ico\",\n\t\"./mstile-144x144.png\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/mstile-144x144.png\",\n\t\"./mstile-150x150.png\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/mstile-150x150.png\",\n\t\"./mstile-310x150.png\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/mstile-310x150.png\",\n\t\"./mstile-310x310.png\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/mstile-310x310.png\",\n\t\"./mstile-70x70.png\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/mstile-70x70.png\",\n\t\"./safari-pinned-tab.svg\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/safari-pinned-tab.svg\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/favicons sync recursive ./!./!./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./ \\\\.(svg|png|ico|xml|json)$\";\n\n//# sourceURL=webpack:///./node_modules/file-loader/dist/cjs.js?./src/favicons_sync_");
+eval("var map = {\n\t\"./android-chrome-192x192.png\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/android-chrome-192x192.png\",\n\t\"./android-chrome-512x512.png\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/android-chrome-512x512.png\",\n\t\"./apple-touch-icon.png\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/apple-touch-icon.png\",\n\t\"./browserconfig.xml\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/browserconfig.xml\",\n\t\"./favicon-16x16.png\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/favicon-16x16.png\",\n\t\"./favicon-32x32.png\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/favicon-32x32.png\",\n\t\"./favicon.ico\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/favicon.ico\",\n\t\"./mstile-144x144.png\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/mstile-144x144.png\",\n\t\"./mstile-150x150.png\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/mstile-150x150.png\",\n\t\"./mstile-310x150.png\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/mstile-310x150.png\",\n\t\"./mstile-310x310.png\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/mstile-310x310.png\",\n\t\"./mstile-70x70.png\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/mstile-70x70.png\",\n\t\"./safari-pinned-tab.svg\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/safari-pinned-tab.svg\",\n\t\"./site.webmanifest\": \"./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./src/favicons/site.webmanifest\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/favicons sync recursive ./!./!./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./ \\\\.(svg|png|ico|xml|json|webmanifest)$\";\n\n//# sourceURL=webpack:///./node_modules/file-loader/dist/cjs.js?./src/favicons_sync_");
 
 /***/ }),
 
@@ -493,7 +504,7 @@ eval("var map = {\n\t\"./android-chrome-192x192.png\": \"./node_modules/file-loa
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const faviconsContext = __webpack_require__(\"./src/favicons sync recursive ./!./!./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./ \\\\.(svg|png|ico|xml|json)$\");\nfaviconsContext.keys().forEach(faviconsContext);\n\n//# sourceURL=webpack:///./src/favicons/favicons.js?");
+eval("const faviconsContext = __webpack_require__(\"./src/favicons sync recursive ./!./!./node_modules/file-loader/dist/cjs.js?name=img/favicons/[name].[ext]!./ \\\\.(svg|png|ico|xml|json|webmanifest)$\");\nfaviconsContext.keys().forEach(faviconsContext);\n\n//# sourceURL=webpack:///./src/favicons/favicons.js?");
 
 /***/ }),
 
