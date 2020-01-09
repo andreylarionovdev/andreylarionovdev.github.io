@@ -1,9 +1,28 @@
 .font-sample {
   $desc: #{&}__desc;
+  $name: #{&}__name;
   position: relative;
   padding-left: 34%;
   padding-right: 6%;
   margin-bottom: 50px;
+
+  #{$name} {
+    float: left;
+    font-family: Montserrat, sans-serif;
+    position: absolute;
+    text-align: right;
+    top: 0;
+    left: 0;
+    width: 28.5%;
+    font-weight: normal;
+    color: $color-dark-25;
+    text-transform: uppercase;
+  }
+
+  #{$desc} {
+    float: left;
+    font-style: normal;
+  }
 
   &--text-header {
     min-height: 60px;
@@ -27,22 +46,9 @@
 
   &--text-body {
     padding-right: 60px;
-  }
 
-  &__desc {
-    float: left;
-    font-style: normal;
-  }
-
-  &__name {
-    float: left;
-    font-family: Montserrat, sans-serif;
-    position: absolute;
-    text-align: right;
-    top: 0;
-    left: 0;
-    width: 28.5%;
-    font-weight: normal;
-    color: $color-dark-25;
+    #{$name} {
+      text-transform: capitalize;
+    }
   }
 }

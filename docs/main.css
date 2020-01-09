@@ -133,6 +133,20 @@
   padding-left: 34%;
   padding-right: 6%;
   margin-bottom: 50px; }
+  .font-sample .font-sample__name {
+    float: left;
+    font-family: Montserrat, sans-serif;
+    position: absolute;
+    text-align: right;
+    top: 0;
+    left: 0;
+    width: 28.5%;
+    font-weight: normal;
+    color: rgba(31, 32, 65, 0.25);
+    text-transform: uppercase; }
+  .font-sample .font-sample__desc {
+    float: left;
+    font-style: normal; }
   .font-sample--text-header {
     min-height: 60px; }
     .font-sample--text-header .font-sample__desc {
@@ -145,19 +159,8 @@
     min-height: 10px; }
   .font-sample--text-body {
     padding-right: 60px; }
-  .font-sample__desc {
-    float: left;
-    font-style: normal; }
-  .font-sample__name {
-    float: left;
-    font-family: Montserrat, sans-serif;
-    position: absolute;
-    text-align: right;
-    top: 0;
-    left: 0;
-    width: 28.5%;
-    font-weight: normal;
-    color: rgba(31, 32, 65, 0.25); }
+    .font-sample--text-body .font-sample__name {
+      text-transform: capitalize; }
 
 .input-group__label {
   margin-bottom: 5px; }

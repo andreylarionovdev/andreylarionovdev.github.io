@@ -1,7 +1,8 @@
-mixin color-sample(color, title, hex)
+mixin color-sample(options)
   - const blockName = 'color-sample'
+  - const { color, title, hex } = options
 
-  article(class=blockName class=blockName+'--'+color)
-    figure(class=blockName+'__rect')
-    h2(class=blockName+'__title')= title
-    h3(class=blockName+'__hex')= hex
+  article(class=blockName class=`${blockName}--${color}`)
+    figure(class=`${blockName}__rect`)
+    h2(class=`${blockName}__title`)= title
+    h3(class=`${blockName}__hex`)= hex

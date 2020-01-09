@@ -1,14 +1,7 @@
-mixin font-sample(theme, name, description, options)
+mixin font-sample(options)
   - const blockName = 'font-sample'
-  - const element = name.toLowerCase()
+  - const { theme, name, description } = options
 
-  - let nameModifiers = [element]
-  - let descModifiers = [element]
-
-  if options
-    if options.bold
-      - descModifiers.push(element + '--bold')
-
-  article(class=blockName class=blockName+'--'+theme)
-    abbr(class=blockName+'__name' class=nameModifiers)= name
-    dfn(class=blockName+'__desc' class=descModifiers)= description
+  article(class=[blockName, `${blockName}--${theme}`])
+    abbr(class=[`${blockName}__name`, name])= name
+    dfn(class=[`${blockName}__desc`, name])= description
