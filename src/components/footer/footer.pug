@@ -4,94 +4,85 @@ include ../form/input/input
 
 mixin footer(options)
   - const blockName = 'footer'
-
-  - let rightTitle = 'Subscribe&nbsp;to&nbsp;our&nbsp;newsletter'
-  - let leftDescription = 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.'
-  - let rightDescription = 'Receive our latest news and promotions in your inbox!'
-  - let rightPlaceholder = 'Your email address'
-  - let copyright = 'Copyright © 2018 Toxin UI Kit. All rights reserved.'
-
   -
-    let menus = [
-      {
-        title: 'Navigation',
-        links: [
-          {text: 'About Us', href: '/change-me'},
-          {text: 'News', href: '/change-me'},
-          {text: 'Support', href: '/change-me'},
-          {text: 'Products', href: '/change-me'}
-        ]
-      },
-      {
-        title: 'About Us',
-        links: [
-          {text: 'Who we are', href: '/change-me'},
-          {text: 'Our team', href: '/change-me'},
-          {text: 'Careers', href: '/change-me'},
-          {text: 'Investors', href: '/change-me'}
-        ]
-      },
-      {
-        title: 'Support',
-        links: [
-          {text: 'Documentation', href: '/change-me'},
-          {text: 'Community', href: '/change-me'},
-          {text: 'Get in Touch', href: '/change-me'}
-        ]
-      }
-    ]
+    const {
+      theme,
+      menus = [
+        {
+          title: 'Navigation',
+          links: [
+            {text: 'About Us', href: '/change-me'},
+            {text: 'News', href: '/change-me'},
+            {text: 'Support', href: '/change-me'},
+            {text: 'Products', href: '/change-me'}
+          ]
+        },
+        {
+          title: 'About Us',
+          links: [
+            {text: 'Who we are', href: '/change-me'},
+            {text: 'Our team', href: '/change-me'},
+            {text: 'Careers', href: '/change-me'},
+            {text: 'Investors', href: '/change-me'}
+          ]
+        },
+        {
+          title: 'Support',
+          links: [
+            {text: 'Documentation', href: '/change-me'},
+            {text: 'Community', href: '/change-me'},
+            {text: 'Get in Touch', href: '/change-me'}
+          ]
+        }
+      ],
+      leftDescription = 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
+      rightDescription = 'Receive our latest news and promotions in your inbox!',
+      rightTitle = 'Subscribe&nbsp;to&nbsp;our&nbsp;newsletter',
+      rightPlaceholder = 'Your email address',
+      copyright = 'Copyright © 2018 Toxin UI Kit. All rights reserved.'
+    } = options || {}
 
   - let modifiers = []
 
-  if options
-    if options.menus
-      - menus = options.menus
-    if options.leftDescription
-      - leftDescription = options.leftDescription
-    if options.rightDescription
-      - rightDescription = options.rightDescription
-    if options.rightTitle
-      - rightTitle = options.rightTitle
-    if options.rightPlaceholder
-      - rightPlaceholder = options.rightPlaceholder
-    if options.copyright
-      - copyright = options.copyright
-    if options.theme
-      - modifiers.push(blockName+'--'+options.theme)
+  if theme
+    - modifiers.push(`${blockName}--${theme}`)
 
 
   footer(class=blockName class=modifiers)
-    div(class=[blockName+'__inner', 'clearfix'])
-      div(class=[blockName+'__top', 'clearfix'])
-        div(class=blockName+'__left')
-          figure(class=blockName + '__logo')
+    div(class=[`${blockName}__inner`, 'clearfix'])
+      div(class=[`${blockName}__top`, 'clearfix'])
+        div(class=`${blockName}__left`)
+          figure(class=`${blockName}__logo`)
             +logo(true)
-          p(class=[blockName + '__description', 'body'])
+          p(class=[`${blockName}__description`, 'body'])
             = leftDescription
-          section(class=blockName+'__social--creative')
-            a(class=[blockName + '__icon', blockName + '__icon--tw'] href='/change-me')
-            a(class=[blockName + '__icon', blockName + '__icon--fb'] href='/change-me')
-            a(class=[blockName + '__icon', blockName + '__icon--ig'] href='/change-me')
-        div(class=blockName+'__center')
-          nav(class=blockName + '__nav')
+          section(class=`${blockName}__social--creative`)
+            a(class=[`${blockName}__icon`, `${blockName}__icon--tw`] href='/change-me')
+            a(class=[`${blockName}__icon`, `${blockName}__icon--fb`] href='/change-me')
+            a(class=[`${blockName}__icon`, `${blockName}__icon--ig`] href='/change-me')
+        div(class=`${blockName}__center`)
+          nav(class=`${blockName}__nav`)
             each section, _ in menus
-              div(class=blockName + '__nav-menu')
-                +menu-section(section.title, section.links)
-        div(class=blockName+'__right')
-          h3(class=[blockName+'__subscribe-title', 'h3'])!= rightTitle
-          p(class=[blockName+'__subscribe-description', 'body'])
+              div(class=`${blockName}__nav-menu`)
+                +menu-section({
+                  title: section.title,
+                  menuItems: section.links
+                })
+        div(class=`${blockName}__right`)
+          h3(class=[`${blockName}__subscribe-title`, 'h3'])!= rightTitle
+          p(class=[`${blockName}__subscribe-description`, 'body'])
             = rightDescription
-          div(class=blockName+'__subscribe-input')
+          div(class=`${blockName}__subscribe-input`)
             +input({
               id: 'subscribe',
               placeholder: rightPlaceholder,
               withArrow: true,
               type: 'email'
             })
-      div(class=[blockName+'__bottom', 'clearfix'])
-        p(class=[blockName+'__copyright', 'body'])= copyright
-        section(class=blockName+'__social')
-          a(class=[blockName+'__icon', blockName+'__icon--ig'] href='/change-me')
-          a(class=[blockName + '__icon', blockName + '__icon--fb'] href='/change-me')
-          a(class=[blockName+'__icon', blockName+'__icon--tw'] href='/change-me')
-    div(class=blockName+'__hr')
+      div(class=[`${blockName}__bottom`, 'clearfix'])
+        p(class=[`${blockName}__copyright`, 'body'])= copyright
+        section(class=`${blockName}__social`)
+          a(class=[`${blockName}__icon`, `${blockName}__icon--tw`] href='/change-me')
+          a(class=[`${blockName}__icon`, `${blockName}__icon--fb`] href='/change-me')
+          a(class=[`${blockName}__icon`, `${blockName}__icon--ig`] href='/change-me')
+    div(class=`${blockName}__hr`)
