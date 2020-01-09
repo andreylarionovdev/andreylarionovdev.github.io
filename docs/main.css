@@ -2063,15 +2063,15 @@
   .footer--creative .footer__icon {
     float: none; }
 
-.menu-section {
+.footer-menu-section {
   font-family: Montserrat, sans-serif; }
-  .menu-section__ul {
+  .footer-menu-section__ul {
     list-style: none;
     padding-left: 0;
     margin: 18px 0; }
-  .menu-section__li {
+  .footer-menu-section__li {
     margin-bottom: 14px; }
-  .menu-section__a {
+  .footer-menu-section__a {
     color: rgba(31, 32, 65, 0.5);
     text-decoration: none; }
 

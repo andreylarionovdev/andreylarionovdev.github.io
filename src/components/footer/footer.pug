@@ -1,4 +1,4 @@
-include menu-section/menu-section
+include ../footer-menu-section/footer-menu-section
 include ../logo/logo
 include ../form/input/input
 
@@ -64,7 +64,7 @@ mixin footer(options)
           nav(class=`${blockName}__nav`)
             each section, _ in menus
               div(class=`${blockName}__nav-menu`)
-                +menu-section({
+                +footer-menu-section({
                   title: section.title,
                   menuItems: section.links
                 })
