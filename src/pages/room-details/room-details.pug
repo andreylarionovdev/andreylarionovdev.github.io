@@ -2,7 +2,7 @@ extends ../layout/layout
 
 include ../../components/form/feature/feature
 include ../../components/form/feedback/feedback
-include ../../components/form/bullet-list/bullet-list
+include ../../components/bullet-list/bullet-list
 include ../../components/card/room-book/room-book
 include ../../components/votes-chart/votes-chart
 
@@ -80,16 +80,14 @@ block main
         section.room-details__rules
           h2.room-details__rules-title.h2= 'Правила'
           .room-details__bullet-list
-            +bullet-list(
-              'bullet-list',
-              {
-                items: [
-                  {text: 'Нельзя с питомцами'},
-                  {text: 'Без вечеринок и мероприятий'},
-                  {text: 'Время прибытия &mdash; после 13:00, а выезд до 12:00'}
-                ]
-              }
-            )
+            +bullet-list({
+              id: 'bullet-list',
+              items: [
+                {text: 'Нельзя с питомцами'},
+                {text: 'Без вечеринок и мероприятий'},
+                {text: 'Время прибытия &mdash; после 13:00, а выезд до 12:00'}
+              ]
+            })
         section.room-details__cancel
           h2.room-details__cancel-title.h2= 'Отмена'
           p.room-details__cancel-text.body

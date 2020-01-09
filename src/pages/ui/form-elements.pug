@@ -14,7 +14,7 @@ include ../../components/form/button/button
 include ../../components/form/paginator/paginator
 include ../../components/form/checkbox-list-xp/checkbox-list-xp
 include ../../components/form/rich-checkbox/rich-checkbox
-include ../../components/form/bullet-list/bullet-list
+include ../../components/bullet-list/bullet-list
 include ../../components/form/feature/feature
 include ../../components/form/feedback/feedback
 
@@ -388,16 +388,14 @@ block content
           .bullet-list-group__label
             +label('Bullet list')
           .bullet-list-group__bullet-list
-            +bullet-list(
-              'bullet-list',
-              {
-                items: [
-                  {text: 'Нельзя с питомцами'},
-                  {text: 'Без вечеринок и мероприятий'},
-                  {text: 'Время прибытия &mdash; после 13:00, а выезд до 12:00'}
-                ]
-              }
-            )
+            +bullet-list({
+              id: 'bullet-list',
+              items: [
+                {text: 'Нельзя с питомцами'},
+                {text: 'Без вечеринок и мероприятий'},
+                {text: 'Время прибытия &mdash; после 13:00, а выезд до 12:00'}
+              ]
+            })
   section.ui__bottom.clearfix
     .column.column--4.first
       article.ui__feature-group
