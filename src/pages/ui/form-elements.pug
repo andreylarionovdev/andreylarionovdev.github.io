@@ -15,7 +15,7 @@ include ../../components/form/paginator/paginator
 include ../../components/checkbox-list-xp/checkbox-list-xp
 include ../../components/form/rich-checkbox/rich-checkbox
 include ../../components/bullet-list/bullet-list
-include ../../components/form/feature/feature
+include ../../components/feature/feature
 include ../../components/form/feedback/feedback
 
 block vars
@@ -393,17 +393,17 @@ block content
       article.ui__feature-group
         .feature-group
           .feature-group__feature
-            +feature(
-              'mood',
-              'Комфорт',
-              'Шумопоглощающие стены'
-            )
+            +feature({
+              icon: 'mood',
+              title: 'Комфорт',
+              hint: 'Шумопоглощающие стены'
+            })
           .feature-group__feature
-            +feature(
-              'location_city',
-              'Удобство',
-              'Окно в каждой из спален'
-            )
+            +feature({
+              icon: 'location_city',
+              title: 'Удобство',
+              hint: 'Окно в каждой из спален'
+            })
     .column.column--8.second
       article.ui__feedback-group
         .feedback-group

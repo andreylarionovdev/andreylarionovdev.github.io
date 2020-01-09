@@ -2512,9 +2512,8 @@
 
 .room-details__feature {
   border-bottom: 1px solid rgba(31, 32, 65, 0.1); }
-  @media (max-width: 767px) {
-    .room-details__feature:last-child {
-      border-bottom: none; } }
+  .room-details__feature:last-child {
+    border-bottom: none; }
 
 .room-details__left-image, .room-details__top-image, .room-details__bottom-image {
   margin: 0;

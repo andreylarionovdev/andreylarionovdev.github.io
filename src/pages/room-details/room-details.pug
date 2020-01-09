@@ -1,6 +1,6 @@
 extends ../layout/layout
 
-include ../../components/form/feature/feature
+include ../../components/feature/feature
 include ../../components/form/feedback/feedback
 include ../../components/bullet-list/bullet-list
 include ../../components/card/room-book/room-book
@@ -22,23 +22,23 @@ block main
           h2.h2= 'Сведения о номере'
           .room-details__features
             article.room-details__feature
-              +feature(
-                'mood',
-                'Комфорт',
-                'Шумопоглощающие стены'
-              )
+              +feature({
+                icon: 'mood',
+                title: 'Комфорт',
+                hint: 'Шумопоглощающие стены'
+              })
             article.room-details__feature
-              +feature(
-                'location_city',
-                'Удобство',
-                'Окно в каждой из спален'
-              )
+              +feature({
+                icon: 'location_city',
+                title: 'Удобство',
+                hint: 'Окно в каждой из спален'
+              })
             article.room-details__feature
-              +feature(
-                'whatshot',
-                'Уют',
-                'Номер оснащен камином'
-              )
+              +feature({
+                icon: 'whatshot',
+                title: 'Уют',
+                hint: 'Номер оснащен камином'
+              })
         section.room-details__rate
           h2.h2= 'Впечатления от номера'
           .room-details__votes-chart

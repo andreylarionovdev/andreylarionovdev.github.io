@@ -18,9 +18,7 @@
   &__feature {
     border-bottom: 1px solid $color-dark-10;
     &:last-child {
-      @media (max-width: $screen-xs-max) {
-        border-bottom: none;
-      }
+      border-bottom: none;
     }
   }
   &__left-image,
