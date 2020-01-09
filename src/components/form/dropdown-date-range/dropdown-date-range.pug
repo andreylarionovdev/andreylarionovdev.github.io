@@ -1,5 +1,5 @@
 include ../../form/label/label
-include ../../form/dropdown/dropdown
+include ../../dropdown/dropdown
 
 mixin dropdown-date-range(id, from, to)
   - var blockName = 'dropdown-date-range'
@@ -9,21 +9,17 @@ mixin dropdown-date-range(id, from, to)
       div(class=blockName + '__label')
         +label('Прибытие')
       div(class=blockName + '__dropdown')
-        +dropdown(
-          id + '__from-date',
-          {
-            type: 'datepicker',
-            value: from || mask
-          }
-        )
+        +dropdown({
+          id: id + '__from-date',
+          type: 'datepicker',
+          value: from || mask
+        })
     div(class=blockName + '__to')
       div(class=blockName + '__label')
         +label('Выезд')
       div(class=blockName + '__dropdown')
-        +dropdown(
-          id + '__to-date',
-          {
-            type: 'datepicker',
-            value: to || mask
-          }
-        )
+        +dropdown({
+          id: id + '__to-date',
+          type: 'datepicker',
+          value: to || mask
+        })

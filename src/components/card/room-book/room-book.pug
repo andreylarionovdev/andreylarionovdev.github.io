@@ -1,5 +1,5 @@
 include ../../form/label/label
-include ../../form/dropdown/dropdown
+include ../../dropdown/dropdown
 include ../../form/dropdown-date-range/dropdown-date-range
 
 mixin room-book(options)
@@ -28,18 +28,16 @@ mixin room-book(options)
       div(class=`${blockName}__label`)
         +label('Гости')
       div(class=`${blockName}__dropdown`)
-        +dropdown(
-          'room-book__from-date',
-          {
-            type: 'select-box',
-            value: '3 гостя',
-            selectOptions: [
-              {count: 2, text: 'взрослые', name: 'adult'},
-              {count: 1, text: 'дети', name: 'kids'},
-              {count: 0, text: 'младенцы', name: 'baby'}
-            ]
-          }
-        )
+        +dropdown({
+          id: 'room-book__from-date',
+          type: 'select-box',
+          value: '3 гостя',
+          selectOptions: [
+            {count: 2, text: 'взрослые', name: 'adult'},
+            {count: 1, text: 'дети', name: 'kids'},
+            {count: 0, text: 'младенцы', name: 'baby'}
+          ]
+        })
 
     - const totalBruto = pricePerDay * 4
     - const totalNetto = totalBruto - discount + fee

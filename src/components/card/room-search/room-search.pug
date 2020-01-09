@@ -1,5 +1,5 @@
 include ../../form/label/label
-include ../../form/dropdown/dropdown
+include ../../dropdown/dropdown
 include ../../button/button
 include ../../form/dropdown-date-range/dropdown-date-range
 
@@ -13,18 +13,16 @@ mixin room-search()
       div(class=`${blockName}__label`)
         +label('Гости')
       div(class=`${blockName}__guests-dropdown`)
-        +dropdown(
-          'guests',
-          {
-            type: 'select-box',
-            value: 'Сколько гостей',
-            selectOptions: [
-              {count: 0, text: 'взрослые', name: 'adult'},
-              {count: 0, text: 'дети', name: 'kids'},
-              {count: 0, text: 'младенцы', name: 'baby'}
-            ]
-          }
-        )
+        +dropdown({
+          id: 'guests',
+          type: 'select-box',
+          value: 'Сколько гостей',
+          selectOptions: [
+            {count: 0, text: 'взрослые', name: 'adult'},
+            {count: 0, text: 'дети', name: 'kids'},
+            {count: 0, text: 'младенцы', name: 'baby'}
+          ]
+        })
     div(class=`${blockName}__button`)
       +button({
         theme: 'default',

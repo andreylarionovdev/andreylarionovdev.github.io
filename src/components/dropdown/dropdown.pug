@@ -1,0 +1,53 @@
+include ../form/label/label
+include ../button/button
+
+mixin dropdown(options)
+  - const blockName = 'dropdown'
+  -
+    const {
+      id,
+      type = 'empty',
+      value = 'Выберите',
+      zIndex = 9,
+      selectOptions = [],
+      isExpanded,
+      isEdited,
+      isEmpty
+    } = options || {}
+
+  - let modifiers = []
+
+  if isExpanded
+    - modifiers.push(blockName+'--expanded')
+  if isEdited
+    - modifiers.push(blockName+'--edited')
+  if isEmpty
+    - modifiers.push(blockName+'--empty')
+
+  div(id=id class=blockName class=modifiers)
+    div(class=`${blockName}__select`)
+      span(class=`${blockName}__text`)= value
+      i(class=[`${blockName}__icon`, 'material-icons'])= 'keyboard_arrow_down'
+      input(class=`${blockName}__input` type='text' name=id value=value)
+    if type === 'select-box'
+      ul(class=`${blockName}__menu` style={'z-index': zIndex})
+        each item in selectOptions
+          li(class=[`${blockName}__li`, 'clearfix'])
+            span(class=`${blockName}__li-name`)= item.text
+            span(class=`${blockName}__li-inc`)= '+'
+            span(class=`${blockName}__li-count`)= item.count
+            span(class=`${blockName}__li-dec`)= '-'
+        li(class=[`${blockName}__li`, 'clearfix'])
+          span(class=`${blockName}__li-clear`)
+            +button({
+              theme: 'textual',
+              caption: 'очистить',
+              isHovered: true,
+              href: 'javascript:void(0)',
+            })
+          span(class=`${blockName}__li-apply`)
+            +button({
+              theme: 'textual',
+              caption: 'применить',
+              href: 'javascript:void(0)',
+            })

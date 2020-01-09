@@ -1,6 +1,15 @@
 mixin button(options)
   - const blockName = 'button'
-  - const { theme, caption, href, isHovered, isFluid, isSmall, withArrow } = options
+  -
+    const {
+      theme,
+      caption,
+      href = '/change=me',
+      isHovered,
+      isFluid,
+      isSmall,
+      withArrow
+    } = options || {}
 
   - let modifiers = [blockName + '--' + theme]
 
@@ -14,7 +23,7 @@ mixin button(options)
   a(
     class=blockName
     class=modifiers
-    href=(href || '/change=me')
+    href=href
   )
     = caption
     if withArrow

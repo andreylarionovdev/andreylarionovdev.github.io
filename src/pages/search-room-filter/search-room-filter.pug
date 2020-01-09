@@ -23,10 +23,10 @@ block main
             'date-dropdown'
           )
         .search-room-filter__date-dropdown
-          +dropdown(
-            'date-dropdown',
-            {value: '19 авг. - 23 авг.'}
-          )
+          +dropdown({
+            id: 'date-dropdown',
+            value: '19 авг. - 23 авг.'
+          })
       .search-room-filter__guests-dropdown-group
         .search-room-filter__guests-dropdown-label
           +label(
@@ -35,18 +35,16 @@ block main
             'guests-dropdown'
           )
         .search-room-filter__guests-dropdown
-          +dropdown(
-            'guests-dropdown',
-            {
-              type: 'select-box',
-              value: '3 гостя, 1 младенец',
-              selectOptions: [
-                {count: 2, text: 'взрослые', name: 'adult'},
-                {count: 0, text: 'дети', name: 'kids'},
-                {count: 1, text: 'младенцы', name: 'baby'}
-              ]
-            }
-          )
+          +dropdown({
+            id: 'guests-dropdown',
+            type: 'select-box',
+            value: '3 гостя, 1 младенец',
+            selectOptions: [
+              {count: 2, text: 'взрослые', name: 'adult'},
+              {count: 0, text: 'дети', name: 'kids'},
+              {count: 1, text: 'младенцы', name: 'baby'}
+            ]
+          })
       .search-room-filter__price-slider
         +range-slider({
           caption: 'Диапазон цены',
@@ -103,18 +101,16 @@ block main
             'feature-dropdown'
           )
         .search-room-filter__feature-dropdown
-          +dropdown(
-            'feature-dropdown',
-            {
-              type: 'select-box',
-              value: '2 спальни, 2 кровати...',
-              selectOptions: [
-                {count: 2, text: 'спальни', name: 'bedroom'},
-                {count: 2, text: 'кровати', name: 'bed'},
-                {count: 0, text: 'ванные комнаты', name: 'bathroom'}
-              ]
-            }
-          )
+          +dropdown({
+            id: 'feature-dropdown',
+            type: 'select-box',
+            value: '2 спальни, 2 кровати...',
+            selectOptions: [
+              {count: 2, text: 'спальни', name: 'bedroom'},
+              {count: 2, text: 'кровати', name: 'bed'},
+              {count: 0, text: 'ванные комнаты', name: 'bathroom'}
+            ]
+          })
         .search-room-filter__additional-checkbox-list-xp-group
           +checkbox-list-xp({
             id: 'additional',
