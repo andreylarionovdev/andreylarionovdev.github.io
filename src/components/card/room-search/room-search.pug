@@ -1,14 +1,14 @@
 include ../../form/label/label
 include ../../dropdown/dropdown
 include ../../button/button
-include ../../form/dropdown-date-range/dropdown-date-range
+include ../../dropdown-date-range/dropdown-date-range
 
 mixin room-search()
   - const blockName = 'room-search'
   form(class=[blockName, 'clearfix'])
     h1(class=[`${blockName}__title`, 'h1'])= 'Найдём номера под ваши пожелания'
     div(class=[`${blockName}__date-range`, 'clearfix'])
-      +dropdown-date-range('room-book__check-in-out')
+      +dropdown-date-range({id: 'room-book__check-in-out'})
     div(class=`${blockName}__guests`)
       div(class=`${blockName}__label`)
         +label('Гости')
