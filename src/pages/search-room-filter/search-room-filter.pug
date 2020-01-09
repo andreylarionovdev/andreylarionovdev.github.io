@@ -2,9 +2,9 @@ extends ../layout/layout
 
 include ../../components/form/range-slider/range-slider
 include ../../components/form/label/label
-include ../../components/form/checkbox/checkbox
+include ../../components/checkbox/checkbox
 include ../../components/form/rich-checkbox/rich-checkbox
-include ../../components/form/checkbox-list-xp/checkbox-list-xp
+include ../../components/checkbox-list-xp/checkbox-list-xp
 include ../../components/card/room-thumb/room-thumb
 include ../../components/form/paginator/paginator
 
@@ -64,22 +64,22 @@ block main
         .checkbox-group__label
           +label('checkbox buttons')
         .checkbox-group__checkbox
-          +checkbox(
-            'smoke-allowed',
-            'Можно курить'
-          )
+          +checkbox({
+            id: 'smoke-allowed',
+            label: 'Можно курить'
+          })
         .checkbox-group__checkbox
-          +checkbox(
-            'pets-allowed',
-            'Можно с питомцами',
-            true
-          )
+          +checkbox({
+            id: 'pets-allowed',
+            label: 'Можно с питомцами',
+            isChecked: true
+          })
         .checkbox-group__checkbox
-          +checkbox(
-            'guests-allowed',
-            'Можно пригласить гостей (до 10 человек)',
-            true
-          )
+          +checkbox({
+            id: 'guests-allowed',
+            label: 'Можно пригласить гостей (до 10 человек)',
+            isChecked: true
+          })
       .search-room-filter__rich-checkbox-group
         .rich-checkbox-group__label
           +label('Доступность')
@@ -116,22 +116,20 @@ block main
             }
           )
         .search-room-filter__additional-checkbox-list-xp-group
-          +checkbox-list-xp(
-            'additional',
-            'Дополнительные удобства',
-            {
-              items: [
-                {name: 'breakfast', label: 'Завтрак'},
-                {name: 'table', label: 'Письменный стол', checked: true},
-                {name: 'baby-chair-for-eat', label: 'Стул для кормления', checked: true},
-                {name: 'baby-bed', label: 'Кроватка', checked: true},
-                {name: 'tv_1', label: 'Телевизор'},
-                {name: 'shampoo_1', label: 'Шампунь'},
-                {name: 'tv_2', label: 'Телевизор'},
-                {name: 'shampoo_2', label: 'Шампунь'}
-              ]
-            }
-          )
+          +checkbox-list-xp({
+            id: 'additional',
+            label: 'Дополнительные удобства',
+            items: [
+              {name: 'breakfast', label: 'Завтрак'},
+              {name: 'table', label: 'Письменный стол', isChecked: true},
+              {name: 'baby-chair-for-eat', label: 'Стул для кормления', isChecked: true},
+              {name: 'baby-bed', label: 'Кроватка', isChecked: true},
+              {name: 'tv_1', label: 'Телевизор'},
+              {name: 'shampoo_1', label: 'Шампунь'},
+              {name: 'tv_2', label: 'Телевизор'},
+              {name: 'shampoo_2', label: 'Шампунь'}
+            ]
+          })
     section.search-room-filter__search-result
       h1.h1= 'Номера, которые мы для вас подобрали'
       .search-room-filter__search-result-list.clearfix

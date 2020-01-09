@@ -1,0 +1,24 @@
+include ../checkbox/checkbox
+
+mixin checkbox-list-xp(options)
+  - const blockName = 'checkbox-list-xp'
+  - const { id, label, isExpanded, items = [] } = options || {}
+
+  - let modifiers = []
+
+  if isExpanded
+    - modifiers.push(`${blockName}--expanded`)
+
+  div(class=blockName class=modifiers id=id)
+    div(class=`${blockName}__select`)
+      span(class=`${blockName}__label`)= label
+      i(class=[`${blockName}__icon-down`, 'material-icons'])= 'keyboard_arrow_down'
+      i(class=[`${blockName}__icon-up`, 'material-icons'])= 'keyboard_arrow_up'
+    ul(class=`${blockName}__list`)
+      each item, index in items
+        li(class=`${blockName}__li` class='clearfix')
+          +checkbox({
+            id: `${id}_${item.name}`,
+            label: item.label,
+            isChecked: item.isChecked
+          })

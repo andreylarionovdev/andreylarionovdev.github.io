@@ -1,0 +1,15 @@
+mixin checkbox(options)
+  - const blockName = 'checkbox'
+  - const { id, label, isChecked } = options || {}
+
+  div(class=blockName)
+    input(
+      id=id
+      type='checkbox'
+      class=`${blockName}__input`
+      checked=isChecked
+    )
+    label(
+      class=`${blockName}__label`
+      for=id
+    )= label

@@ -3,7 +3,7 @@ extends ../base
 include ../../components/logo/logo
 include ../../components/form/input/input
 include ../../components/form/dropdown/dropdown
-include ../../components/form/checkbox/checkbox
+include ../../components/checkbox/checkbox
 include ../../components/form/radio-button/radio-button
 include ../../components/form/toggle-button/toggle-button
 include ../../components/form/label/label
@@ -12,7 +12,7 @@ include ../../components/form/rate-button/rate-button
 include ../../components/form/range-slider/range-slider
 include ../../components/button/button
 include ../../components/form/paginator/paginator
-include ../../components/form/checkbox-list-xp/checkbox-list-xp
+include ../../components/checkbox-list-xp/checkbox-list-xp
 include ../../components/form/rich-checkbox/rich-checkbox
 include ../../components/bullet-list/bullet-list
 include ../../components/form/feature/feature
@@ -120,22 +120,22 @@ block content
           .checkbox-group__label
             +label('checkbox buttons')
           .checkbox-group__checkbox
-            +checkbox(
-              'smoke-allowed',
-              'Можно курить'
-            )
+            +checkbox({
+              id: 'smoke-allowed',
+              label: 'Можно курить'
+            })
           .checkbox-group__checkbox
-            +checkbox(
-              'pets-allowed',
-              'Можно с питомцами',
-              true
-            )
+            +checkbox({
+              id: 'pets-allowed',
+              label: 'Можно с питомцами',
+              isChecked: true
+            })
           .checkbox-group__checkbox
-            +checkbox(
-              'guests-allowed',
-              'Можно пригласить гостей (до 10 человек)',
-              true
-            )
+            +checkbox({
+              id: 'guests-allowed',
+              label: 'Можно пригласить гостей (до 10 человек)',
+              isChecked: true
+            })
       article.ui__radio-group
         .radio-button-group.clearfix
           .radio-button-group__label
@@ -342,29 +342,27 @@ block content
     .column.column--4.first
       article.ui__checkbox-list-xp-group--collapsed
         .checkbox-list-xp-group
-          +checkbox-list-xp(
-            'exp_check_list_collapsed',
-            'Expandable checkbox list'
-          )
+          +checkbox-list-xp({
+            id: 'exp_check_list_collapsed',
+            label: 'Expandable checkbox list'
+          })
       article.ui__checkbox-list-xp-group--expanded
         .checkbox-list-xp-group
-          +checkbox-list-xp(
-            'exp_check_list_collapsed',
-            'Expandable checkbox list',
-            {
-              expanded: true,
-              items: [
-                {name: 'breakfast', label: 'Завтрак'},
-                {name: 'table', label: 'Письменный стол', checked: true},
-                {name: 'baby-chair-for-eat', label: 'Стул для кормления', checked: true},
-                {name: 'baby-bed',label: 'Кроватка',checked: true},
-                {name: 'tv_1',label: 'Телевизор'},
-                {name: 'shampoo_1', label: 'Шампунь'},
-                {name: 'tv_2', label: 'Телевизор'},
-                {name: 'shampoo_2', label: 'Шампунь'}
-              ]
-            }
-          )
+          +checkbox-list-xp({
+            id: 'exp_check_list_collapsed',
+            label: 'Expandable checkbox list',
+            isExpanded: true,
+            items: [
+              {name: 'breakfast', label: 'Завтрак'},
+              {name: 'table', label: 'Письменный стол', isChecked: true},
+              {name: 'baby-chair-for-eat', label: 'Стул для кормления', isChecked: true},
+              {name: 'baby-bed',label: 'Кроватка',isChecked: true},
+              {name: 'tv_1',label: 'Телевизор'},
+              {name: 'shampoo_1', label: 'Шампунь'},
+              {name: 'tv_2', label: 'Телевизор'},
+              {name: 'shampoo_2', label: 'Шампунь'}
+            ]
+          })
     .column.column--4.second
       article.ui__rich-checkbox-group
         .rich-checkbox-group
