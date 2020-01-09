@@ -1,26 +1,21 @@
-mixin button(theme, caption, options)
+mixin button(options)
   - const blockName = 'button'
+  - const { theme, caption, href, isHovered, isFluid, isSmall, withArrow } = options
 
   - let modifiers = [blockName + '--' + theme]
-  - let href = '/change-me'
-  - let withArrow = false
-  - let attr = {}
 
-  if options
-    if options.hover
-      - modifiers.push(blockName + '--hovered')
-    if options.fluid
-      - modifiers.push(blockName+'--fluid')
-    if options.small
-      - modifiers.push(blockName+'--small')
-    if options.href
-      - href = options.href
-    if options.withArrow
-      - withArrow = options.withArrow
-    if options.attr
-      - attr = options.attr
+  if isHovered
+    - modifiers.push(blockName + '--hovered')
+  if isFluid
+    - modifiers.push(blockName+'--fluid')
+  if isSmall
+    - modifiers.push(blockName+'--small')
 
-  a(class=blockName class=modifiers href=href)&attributes(attr)
+  a(
+    class=blockName
+    class=modifiers
+    href=(href || '/change=me')
+  )
     = caption
     if withArrow
-      i(class=[blockName+'__arrow', 'material-icons'])= 'arrow_forward'
+      i(class=[`${blockName}__arrow`, 'material-icons'])= 'arrow_forward'

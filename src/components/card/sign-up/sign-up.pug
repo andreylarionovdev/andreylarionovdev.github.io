@@ -61,23 +61,19 @@ mixin sign-up()
         'Получать спецпредложения'
       )
     div(class=blockName+'__pay-button')
-      +button(
-        'default',
-        'Перейти к оплате',
-        {
-          withArrow: true,
-          fluid: true
-        }
-      )
+      +button({
+        theme: 'default',
+        caption: 'Перейти к оплате',
+        withArrow: true,
+        isFluid: true
+      })
     div(class=[blockName+'__auth', 'clearfix'])
       p(class=blockName+'__auth-hint')
         span.body.body--black= 'Уже есть аккаунт на Toxin'
       div(class=blockName+'__auth-button')
-        +button(
-          'transparent',
-          'Войти',
-          {
-            fluid: true,
-            href: 'login.html'
-          }
-        )
+        +button({
+          theme: 'transparent',
+          caption: 'Войти',
+          isFluid: true,
+          href: 'login.html'
+        })

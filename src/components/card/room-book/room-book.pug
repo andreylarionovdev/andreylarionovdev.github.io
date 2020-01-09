@@ -67,11 +67,9 @@ mixin room-book(roomNumber, pricePerDay, discount, fee, options)
           td(class=blockName+'__total-td')
             span(class=blockName+'__total-value')= (pricePerDay*4-discount+fee).toLocaleString('ru-RU')+'₽'
     footer(class=blockName+'__button')
-      +button(
-        'default',
-        'Забронировать',
-        {
-          withArrow: true,
-          fluid: true
-        }
-      )
+      +button({
+        theme: 'default',
+        caption: 'Забронировать',
+        withArrow: true,
+        isFluid: true,
+      })

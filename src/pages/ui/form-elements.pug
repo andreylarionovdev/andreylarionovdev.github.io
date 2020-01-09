@@ -210,48 +210,46 @@ block content
           .button-group__label
             +label('buttons')
           .button-group__button
-            +button(
-              'default',
-              'click me'
-            )
+            +button({
+              theme: 'default',
+              caption: 'click me'
+            })
           .button-group__button
-            +button(
-              'default',
-              'click me',
-              {hover: true}
-            )
+            +button({
+              theme: 'default',
+              caption: 'click me',
+              isHovered: true
+            })
           .button-group__button
-            +button(
-              'transparent',
-              'click me'
-            )
+            +button({
+              theme: 'transparent',
+              caption: 'click me'
+            })
           .button-group__button
-            +button(
-              'transparent',
-              'click me',
-              {hover: true}
-            )
+            +button({
+              theme: 'transparent',
+              caption: 'click me',
+              isHovered: true
+            })
           .clearfix
           .button-group__button--textual
-            +button(
-              'textual',
-              'click me'
-            )
+            +button({
+              theme: 'textual',
+              caption: 'click me'
+            })
           .button-group__button--textual
-            +button(
-              'textual',
-              'click me',
-              {hover: true}
-            )
+            +button({
+              theme: 'textual',
+              caption: 'click me',
+              isHovered: true
+            })
           .button-group__button--large
-            +button(
-              'default',
-              'перейти к оплате',
-              {
-                withArrow: true,
-                fluid: true
-              }
-            )
+            +button({
+              theme: 'default',
+              caption: 'перейти к оплате',
+              withArrow: true,
+              isFluid: true
+            })
       article.ui__paginator-group
         .paginator-group
           .paginator-group__label

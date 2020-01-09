@@ -26,12 +26,10 @@ mixin room-search()
           }
         )
     div(class=blockName+'__button')
-      +button(
-        'default',
-        'Подобрать номер',
-        {
-          href: 'search-room-filter.html',
-          withArrow: true,
-          fluid: true
-        }
-      )
+      +button({
+        theme: 'default',
+        caption: 'Подобрать номер',
+        href: 'search-room-filter.html',
+        withArrow: true,
+        isFluid: true
+      })

@@ -18,24 +18,20 @@ mixin sign-in()
         type: 'password'
       })
     div(class=blockName+'__login-button')
-      +button(
-        'default',
-        'Войти',
-        {
-          withArrow: true,
-          fluid: true,
-          href: 'login.html'
-        }
-      )
+      +button({
+        theme: 'default',
+        caption: 'Войти',
+        withArrow: true,
+        isFluid: true,
+        href: 'login.html'
+      })
     div(class=[blockName + '__create-account', 'clearfix'])
       div(class=blockName + '__hint')
         p.body.body--black= 'Нет аккаунта на Toxin?'
       div(class=blockName + '__create-button')
-        +button(
-          'transparent',
-          'Создать',
-          {
-            fluid: true,
-            href: 'registration.html'
-          }
-        )
+        +button({
+          theme: 'transparent',
+          caption: 'Создать',
+          isFluid: true,
+          href: 'registration.html'
+        })

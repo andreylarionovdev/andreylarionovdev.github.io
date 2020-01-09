@@ -17,7 +17,7 @@ $(document).ready(function () {
     const $dropdown = $(this).closest(`.${className}`);
     const $count = $li.find(`.${className}__li-count`);
 
-    let n = parseInt($count.text())
+    let n = parseInt($count.text());
     let operator = $(this).closest(`.${className}__li-dec`).length === 1
       ? '-'
       : '+';

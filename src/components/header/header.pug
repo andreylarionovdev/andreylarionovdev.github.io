@@ -32,17 +32,13 @@ mixin header(user, menuItems, menuButtons)
           name: 'sign-up',
           theme: 'default',
           caption: 'Register',
-          options: {
-            small: true
-          }
+          isSmall: true
         },
         {
           name: 'sign-in',
           theme: 'transparent',
           caption: 'Login',
-          options: {
-            small: true
-          }
+          isSmall: true
         }
       ]
   header(class=[blockName, 'clearfix'] class=modifiers)
@@ -56,11 +52,11 @@ mixin header(user, menuItems, menuButtons)
         else
           each button, _ in menuButtons
             div(class=blockName+'__button--'+button.name)
-              +button(
-                button.theme,
-                button.caption,
-                button.options
-              )
+              +button({
+                theme: button.theme,
+                caption: button.caption,
+                isSmall: button.isSmall
+              })
       div(class=blockName+'__menu-wrapper')
         ul(class=[blockName+'__menu', 'clearfix'])
           each item, _ in menuItems
@@ -85,10 +81,10 @@ mixin header(user, menuItems, menuButtons)
           li(class=[blockName+'__menu-item', blockName+'__menu-item--account-buttons'])
             each button, _ in menuButtons
               div(class=blockName+'__button--'+button.name)
-                +button(
-                  button.theme,
-                  button.caption,
-                  button.options
-                )
+                +button({
+                  theme: button.theme,
+                  caption: button.caption,
+                  isSmall: button.isSmall
+                })
 
         i(class=[blockName+'__close-button', 'material-icons'])= 'close'
