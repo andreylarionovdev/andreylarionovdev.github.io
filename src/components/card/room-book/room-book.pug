@@ -2,35 +2,32 @@ include ../../form/label/label
 include ../../form/dropdown/dropdown
 include ../../form/dropdown-date-range/dropdown-date-range
 
-mixin room-book(roomNumber, pricePerDay, discount, fee, options)
+mixin room-book(options)
   - const blockName = 'room-book'
-  - let feature = ''
-
-  if options
-    if options.feature
-      - feature = options.feature
+  - const { roomNumber, pricePerDay, discount, fee, feature } = options
 
   form(class=blockName)
-    header(class=[blockName+'__headline', 'clearfix'])
-      div(class=blockName+'__number')
-        span(class=blockName+'__number-sign')= '№'
-        span(class=blockName+'__number-value')= roomNumber
-        h3(class=[blockName+'__number-feature', 'h3', 'h3--purple'])= feature
+    header(class=[`${blockName}__headline`, 'clearfix'])
+      div(class=`${blockName}__number`)
+        span(class=`${blockName}__number-sign`)= '№'
+        span(class=`${blockName}__number-value`)= roomNumber
+        if feature
+          h3(class=[`${blockName}__number-feature`, 'h3', 'h3--purple'])= feature
       div(class=[blockName+'__price-per-day', 'body'])
-        span(class=blockName+'__cost')!= pricePerDay.toLocaleString('ru-RU')+'₽&nbsp;'
-        span(class=blockName+'__date-unit')= 'в сутки'
+        span(class=`${blockName}__cost`)!= `${pricePerDay.toLocaleString('ru-RU')}₽&nbsp;`
+        span(class=`${blockName}__date-unit`)= 'в сутки'
 
-    div(class=[blockName+'__date-range', 'clearfix'])
+    div(class=[`${blockName}__date-range`, 'clearfix'])
       +dropdown-date-range(
         'room-book__check-in-out',
         '19.08.2019',
         '23.08.2019'
       )
 
-    div(class=blockName+'__guests')
-      div(class=blockName+'__label')
+    div(class=`${blockName}__guests`)
+      div(class=`${blockName}__label`)
         +label('Гости')
-      div(class=blockName+'__dropdown')
+      div(class=`${blockName}__dropdown`)
         +dropdown(
           'room-book__from-date',
           {
@@ -43,30 +40,34 @@ mixin room-book(roomNumber, pricePerDay, discount, fee, options)
             ]
           }
         )
-    table(class=blockName+'__result' cellspacing='0' cellpadding='0')
+
+    - const totalBruto = pricePerDay * 4
+    - const totalNetto = totalBruto - discount + fee
+
+    table(class=`${blockName}__result` cellspacing='0' cellpadding='0')
       tbody
         tr.body
-          th(class=blockName+'__th')= pricePerDay.toLocaleString('ru-RU')+'₽ x 4 суток'
-          td(class=blockName+'__td-icon')
-          td(class=blockName+'__td')= (pricePerDay*4).toLocaleString('ru-RU')+'₽'
+          th(class=`${blockName}__th`)= `${pricePerDay.toLocaleString('ru-RU')}₽ x 4 суток`
+          td(class=`${blockName}__td-icon`)
+          td(class=`${blockName}__td`)= `${totalBruto.toLocaleString('ru-RU')}₽`
         tr.body
-          th(class=blockName+'__th')= 'Сбор за услуги: скидка '+ discount.toLocaleString('ru-RU')+'₽'
-          td(class=blockName+'__td-icon')
-            i(class=blockName+'__info')= 'i'
-          td(class=blockName+'__td')= '0₽'
+          th(class=`${blockName}__th`)= `Сбор за услуги: скидка ${discount.toLocaleString('ru-RU')}₽`
+          td(class=`${blockName}__td-icon`)
+            i(class=`${blockName}__info`)= 'i'
+          td(class=`${blockName}__td`)= '0₽'
         tr.body
-          th(class=blockName+'__th')= 'Сбор за дополнительные услуги'
-          td(class=blockName+'__td-icon')
-            i(class=blockName+'__info')= 'i'
-          td(class=blockName+'__td')= fee.toLocaleString('ru-RU')+'₽'
+          th(class=`${blockName}__th`)= 'Сбор за дополнительные услуги'
+          td(class=`${blockName}__td-icon`)
+            i(class=`${blockName}__info`)= 'i'
+          td(class=`${blockName}__td`)= `${fee.toLocaleString('ru-RU')}₽`
       tfoot
-        tr(class=blockName+'__total')
-          th(class=blockName+'__total-th')
-            span(class=blockName+'__total-word')= 'Итого'
-          td(class=blockName+'__total-line')
-          td(class=blockName+'__total-td')
-            span(class=blockName+'__total-value')= (pricePerDay*4-discount+fee).toLocaleString('ru-RU')+'₽'
-    footer(class=blockName+'__button')
+        tr(class=`${blockName}__total`)
+          th(class=`${blockName}__total-th`)
+            span(class=`${blockName}__total-word`)= 'Итого'
+          td(class=`${blockName}__total-line`)
+          td(class=`${blockName}__total-td`)
+            span(class=`${blockName}__total-value`)= `${totalNetto.toLocaleString('ru-RU')}₽`
+    footer(class=`${blockName}__button`)
       +button({
         theme: 'default',
         caption: 'Забронировать',

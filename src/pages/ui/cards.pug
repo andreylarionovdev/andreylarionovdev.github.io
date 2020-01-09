@@ -22,13 +22,13 @@ block content
       +sign-up()
   .column.column--4.second
     article.ui__room-book
-      +room-book(
-        888,
-        9990,
-        2179,
-        300,
-        {feature: 'люкс'}
-      )
+      +room-book({
+        roomNumber: 888,
+        pricePerDay: 9990,
+        discount: 2179,
+        fee: 300,
+        feature: 'люкс'
+      })
     article.ui__sign-in
       +sign-in()
   .column.column--4.third
