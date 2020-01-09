@@ -5,19 +5,19 @@ include ../../form/toggle-button/toggle-button
 mixin sign-up()
   - const blockName = 'sign-up'
   form(class=blockName)
-    h1(class=[blockName+'__title', 'h1'])= 'Регистрация аккаунта'
-    div(class=blockName+'__input')
+    h1(class=[`${blockName}__title`, 'h1'])= 'Регистрация аккаунта'
+    div(class=`${blockName}__input`)
       +input({
         id: 'first-name',
         placeholder: 'Имя'
       })
-    div(class=blockName + '__input')
+    div(class=`${blockName}__input`)
       +input({
         id: 'last-name',
         placeholder: 'Фамилия'
       })
-    div(class=[blockName+'__gender', 'clearfix'])
-      div(class=blockName+'__radio-button')
+    div(class=[`${blockName}__gender`, 'clearfix'])
+      div(class=`${blockName}__radio-button`)
         +radio-button(
           'g-male',
           'gender',
@@ -25,52 +25,52 @@ mixin sign-up()
           'Мужчина',
           true
         )
-      div(class=blockName+'__radio-button')
+      div(class=`${blockName}__radio-button`)
         +radio-button(
           'g-female',
           'gender',
           'f',
           'Женщина'
         )
-    div(class=blockName+'__birthday')
-      div(class=blockName+'__label')
+    div(class=`${blockName}__birthday`)
+      div(class=`${blockName}__label`)
         +label('Дата рождения')
-      div(class=blockName+'__input')
+      div(class=`${blockName}__input`)
         +input({
           id: 'sign-up__input-birthday',
           placeholder: 'ДД.ММ.ГГГГ'
         })
-    div(class=blockName+'__email')
-      div(class=blockName+'__label')
+    div(class=`${blockName}__email`)
+      div(class=`${blockName}__label`)
         +label('Данные для входа в сервис')
-      div(class=blockName+'__input')
+      div(class=`${blockName}__input`)
         +input({
           id: 'sign-up__input-email',
           placeholder: 'Email',
           type: 'email'
         })
-    div(class=blockName+'__input')
+    div(class=`${blockName}__input`)
       +input({
         id: 'sign-up__input-password',
         placeholder: 'Пароль',
         type: 'password'
       })
-    div(class=blockName+'__toggle')
+    div(class=`${blockName}__toggle`)
       +toggle-button(
         'sign-up__toggle-promote',
         'Получать спецпредложения'
       )
-    div(class=blockName+'__pay-button')
+    div(class=`${blockName}__pay-button`)
       +button({
         theme: 'default',
         caption: 'Перейти к оплате',
         withArrow: true,
         isFluid: true
       })
-    div(class=[blockName+'__auth', 'clearfix'])
-      p(class=blockName+'__auth-hint')
+    div(class=[`${blockName}__auth`, 'clearfix'])
+      p(class=`${blockName}__auth-hint`)
         span.body.body--black= 'Уже есть аккаунт на Toxin'
-      div(class=blockName+'__auth-button')
+      div(class=`${blockName}__auth-button`)
         +button({
           theme: 'transparent',
           caption: 'Войти',

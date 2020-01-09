@@ -4,20 +4,20 @@ include ../../form/button/button
 mixin sign-in()
   - const blockName = 'sign-in'
   form(class=blockName)
-    h1(class=blockName+'__title').h1= 'Войти'
-    div(class=blockName+'__input')
+    h1(class=[`${blockName}__title`, 'h1'])= 'Войти'
+    div(class=`${blockName}__input`)
       +input({
         id: 'sign-in_email',
         placeholder: 'Email',
         type: 'email'
       })
-    div(class=blockName+'__input')
+    div(class=`${blockName}__input`)
       +input({
         id: 'sign-in_pass',
         placeholder: 'Пароль',
         type: 'password'
       })
-    div(class=blockName+'__login-button')
+    div(class=`${blockName}__login-button`)
       +button({
         theme: 'default',
         caption: 'Войти',
@@ -25,10 +25,10 @@ mixin sign-in()
         isFluid: true,
         href: 'login.html'
       })
-    div(class=[blockName + '__create-account', 'clearfix'])
-      div(class=blockName + '__hint')
+    div(class=[`${blockName}__create-account`, 'clearfix'])
+      div(class=`${blockName}__hint`)
         p.body.body--black= 'Нет аккаунта на Toxin?'
-      div(class=blockName + '__create-button')
+      div(class=`${blockName}__create-button`)
         +button({
           theme: 'transparent',
           caption: 'Создать',
