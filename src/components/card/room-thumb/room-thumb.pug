@@ -10,28 +10,28 @@ mixin room-thumb(options)
     - modifiers.push(blockName+'--focus')
 
   article(class=blockName class=modifiers)
-    figure(class=blockName+'__image-wrapper' role="group")
+    figure(class=`${blockName}__image-wrapper` role="group")
       each image in images
-        img(class=blockName+'__image' src=require('../../img/' + image.src) alt=image.alt)
-      ul(class=blockName+'__slider')
+        img(class=`${blockName}__image` src=require(`../../img/${image.src}`) alt=image.alt)
+      ul(class=`${blockName}__slider`)
         each _, i in images
-          - let activeClass = blockName+'__slider-li--active'
-          li(class=blockName+'__slider-li' class=i===0 ? activeClass : '')
-            a(class=blockName+'__slider-a')
-      i(class=[blockName + '__image-prev-btn', 'material-icons'])= 'keyboard_arrow_down'
-      i(class=[blockName + '__image-next-btn', 'material-icons'])= 'keyboard_arrow_down'
-    header(class=[blockName+'__headline', 'clearfix'])
-      div(class=blockName+'__number')
-        span(class=blockName + '__number-sign')= '№'
-        span(class=blockName + '__number-value')= roomNumber
-        h3(class=[blockName + '__number-feature', 'h3', 'h3--purple'])= feature
-      div(class=[blockName + '__price-per-day', 'body'])
-        span(class=blockName + '__cost')!= pricePerDay.toLocaleString('ru-RU') + '₽&nbsp;'
-        span(class=blockName + '__date-unit')= 'в сутки'
-    footer(class=[blockName+'__footer', 'clearfix'])
-      span(class=blockName+'__line')
-      div(class=blockName+'__rate')
-        +rate-button(roomNumber+'__rate', 5, rate)
-      p(class=blockName+'__feedback-counter')
-        span(class=blockName+'__counter')= feedbackCounter
-        span(class=blockName+'__text')= 'Отзывов'
+          - const classActive = (i === 0) ? `${blockName}__slider-li--active` : '';
+          li(class=`${blockName}__slider-li` class=classActive)
+            a(class=`${blockName}__slider-a`)
+      i(class=[`${blockName}__image-prev-btn`, 'material-icons'])= 'keyboard_arrow_down'
+      i(class=[`${blockName}__image-next-btn`, 'material-icons'])= 'keyboard_arrow_down'
+    header(class=[`${blockName}__headline`, 'clearfix'])
+      div(class=`${blockName}__number`)
+        span(class=`${blockName}__number-sign`)= '№'
+        span(class=`${blockName}__number-value`)= roomNumber
+        h3(class=[`${blockName}__number-feature`, 'h3', 'h3--purple'])= feature
+      div(class=[`${blockName}__price-per-day`, 'body'])
+        span(class=`${blockName}__cost`)!= pricePerDay.toLocaleString('ru-RU') + '₽&nbsp;'
+        span(class=`${blockName}__date-unit`)= 'в сутки'
+    footer(class=[`${blockName}__footer`, 'clearfix'])
+      span(class=`${blockName}__line`)
+      div(class=`${blockName}__rate`)
+        +rate-button(`${roomNumber}__rate`, 5, rate)
+      p(class=`${blockName}__feedback-counter`)
+        span(class=`${blockName}__counter`)= feedbackCounter
+        span(class=`${blockName}__text`)= 'Отзывов'
