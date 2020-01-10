@@ -1,4 +1,4 @@
-include ../../form/rate-button/rate-button
+include ../../rate-button/rate-button
 
 mixin room-thumb(options)
   - const blockName = 'room-thumb'
@@ -31,7 +31,11 @@ mixin room-thumb(options)
     footer(class=[`${blockName}__footer`, 'clearfix'])
       span(class=`${blockName}__line`)
       div(class=`${blockName}__rate`)
-        +rate-button(`${roomNumber}__rate`, 5, rate)
+        +rate-button({
+          id: `${roomNumber}__rate`,
+          base: 5,
+          rate
+        })
       p(class=`${blockName}__feedback-counter`)
         span(class=`${blockName}__counter`)= feedbackCounter
         span(class=`${blockName}__text`)= 'Отзывов'

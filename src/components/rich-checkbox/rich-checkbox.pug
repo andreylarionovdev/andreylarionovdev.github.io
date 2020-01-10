@@ -1,0 +1,12 @@
+mixin rich-checkbox(options)
+  - const blockName = 'rich-checkbox'
+  - const { id, label, hint, isChecked } = options || {}
+
+  div(class=blockName)
+    +checkbox({ id, isChecked })
+    label(
+      class=`${blockName}__label`
+      for=id
+    )
+      span(class=[`${blockName}__title`, 'clearfix'])= label
+      span(class=`${blockName}__hint`)!= hint

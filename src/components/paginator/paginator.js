@@ -3,9 +3,9 @@ $(document).ready(function () {
   $(`.${className}`).each(function (i, o) {
     const $pager = $(o);
 
-    const dataSource = $pager.data('source') || [];
-    const pageSize = $pager.data('page-size') || 12;
-    const pageRange = $pager.data('page-range') || 1;
+    const dataSource = $pager.data('source');
+    const pageSize = $pager.data('page-size');
+    const pageRange = $pager.data('page-range');
 
     $pager.pagination({
       dataSource: dataSource,

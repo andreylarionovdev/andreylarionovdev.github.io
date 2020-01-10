@@ -1,0 +1,16 @@
+mixin toggle-button(options)
+  - const blockName = 'toggle-button'
+  - const { id, label, isChecked } = options || {}
+
+  div(class=blockName)
+    div(class=`${blockName}__toggle`)
+      input(
+        id=id
+        class=`${blockName}__input`
+        type='checkbox'
+        checked=isChecked
+      )
+      label(
+        for=id
+        class=`${blockName}__label`
+      )= label

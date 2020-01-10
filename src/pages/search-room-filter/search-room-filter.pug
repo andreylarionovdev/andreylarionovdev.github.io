@@ -1,12 +1,12 @@
 extends ../layout/layout
 
-include ../../components/form/range-slider/range-slider
+include ../../components/range-slider/range-slider
 include ../../components/label/label
 include ../../components/checkbox/checkbox
-include ../../components/form/rich-checkbox/rich-checkbox
+include ../../components/rich-checkbox/rich-checkbox
 include ../../components/checkbox-list-xp/checkbox-list-xp
 include ../../components/card/room-thumb/room-thumb
-include ../../components/form/paginator/paginator
+include ../../components/paginator/paginator
 
 block vars
   - const title = 'Search room/Filter'
@@ -82,17 +82,17 @@ block main
         .rich-checkbox-group__label
           +label('Доступность')
         .rich-checkbox-group__rich-checkbox.clearfix
-          +rich-checkbox(
-            'wide-hall-checkbox',
-            'Широкий коридор',
-            'Ширина коридоров в номере не&nbsp;менее 91 см.'
-          )
+          +rich-checkbox({
+            id: 'wide-hall-checkbox',
+            label: 'Широкий коридор',
+            hint: 'Ширина коридоров в номере не&nbsp;менее 91 см.'
+          })
         .rich-checkbox-group__rich-checkbox.clearfix
-          +rich-checkbox(
-            'disable-assistant-checkbox',
-            'Помощник для инвалидов',
-            'На 1 этаже вас встретит специалист и проводит до номера.'
-          )
+          +rich-checkbox({
+            id: 'disable-assistant-checkbox',
+            label: 'Помощник для инвалидов',
+            hint: 'На 1 этаже вас встретит специалист и проводит до номера.'
+          })
       .search-room-filter__feature-dropdown-group
         .search-room-filter__feature-dropdown-label
           +label(

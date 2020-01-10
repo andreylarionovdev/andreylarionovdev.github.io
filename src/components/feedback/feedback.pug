@@ -1,4 +1,4 @@
-include ../form/like-button/like-button
+include ../like-button/like-button
 
 mixin feedback(options)
   - const blockName = 'feedback'
@@ -8,7 +8,10 @@ mixin feedback(options)
     if image
       img(class=`${blockName}__image` src=require(`../../img/${image.src}`) alt=image.alt)
     div(class=`${blockName}__like-button`)
-      +like-button(favoritesCount, isFavorite)
+      +like-button({
+        count: favoritesCount,
+        isFavorite
+      })
     h3(class=`${blockName}__author`)= author
     p(class=`${blockName}__date`)= date
     p(class=`${blockName}__text`)!= text

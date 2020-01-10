@@ -4,16 +4,16 @@ include ../../components/logo/logo
 include ../../components/input/input
 include ../../components/dropdown/dropdown
 include ../../components/checkbox/checkbox
-include ../../components/form/radio-button/radio-button
-include ../../components/form/toggle-button/toggle-button
+include ../../components/radio-button/radio-button
+include ../../components/toggle-button/toggle-button
 include ../../components/label/label
-include ../../components/form/like-button/like-button
-include ../../components/form/rate-button/rate-button
-include ../../components/form/range-slider/range-slider
+include ../../components/like-button/like-button
+include ../../components/rate-button/rate-button
+include ../../components/range-slider/range-slider
 include ../../components/button/button
-include ../../components/form/paginator/paginator
+include ../../components/paginator/paginator
 include ../../components/checkbox-list-xp/checkbox-list-xp
-include ../../components/form/rich-checkbox/rich-checkbox
+include ../../components/rich-checkbox/rich-checkbox
 include ../../components/bullet-list/bullet-list
 include ../../components/feature/feature
 include ../../components/feedback/feedback
@@ -141,59 +141,64 @@ block content
           .radio-button-group__label
             +label('radio buttons')
           .radio-button-group__radio-button
-            +radio-button(
-              'radio-male',
-              'gender',
-              'male',
-              'Мужчина',
-              true
-            )
+            +radio-button({
+              id: 'radio-male',
+              name: 'gender',
+              value: 'male',
+              label: 'Мужчина',
+              isChecked: true
+            })
           .radio-button-group__radio-button
-            +radio-button(
-              'radio-female',
-              'gender',
-              'female',
-              'Женщина'
-            )
+            +radio-button({
+              id: 'radio-female',
+              name: 'gender',
+              value: 'female',
+              label: 'Женщина'
+            })
       article.ui__toggle-group
         .toggle-group
           .toggle-group__label
             +label('toggle')
           .toggle-group__toggle-button
-            +toggle-button(
-              'first-toggle',
-              'Получать спецпредложения',
-              true
-            )
+            +toggle-button({
+              id: 'first-toggle',
+              label: 'Получать спецпредложения',
+              isChecked: true
+            })
           .toggle-group__toggle-button
-            +toggle-button(
-              'second-toggle',
-              'Получать спецпредложения'
-            )
+            +toggle-button({
+              id: 'second-toggle',
+              label: 'Получать спецпредложения'
+            })
       article.ui__like-button-group.clearfix
         .like-button-group
           .like-button-group__label
             +label('like button')
           .like-button-group__like-button
-            +like-button(2)
+            +like-button({
+              count: 2
+            })
           .like-button-group__like-button
-            +like-button(12, true)
+            +like-button({
+              count:12,
+              isFavorite: true
+            })
       article.ui__rate-button-group--default.clearfix
         .rate-button-group
           .rate-button-group__label
             +label('rate button')
           .rate-button-group__rate-button
-            +rate-button(
-              'rate-first',
-              5,
-              4
-            )
+            +rate-button({
+              id: 'rate-first',
+              base: 5,
+              rate: 4
+            })
           .rate-button-group__rate-button
-            +rate-button(
-              'rate-second',
-              5,
-              5
-            )
+            +rate-button({
+              id: 'rate-second',
+              base: 5,
+              rate: 5
+            })
     .column.column--4.third
       article.ui__range-slider
         +range-slider({
@@ -363,17 +368,17 @@ block content
           .rich-checkbox-group__label
             +label('rich checkbox buttons')
           .rich-checkbox-group__rich-checkbox.clearfix
-            +rich-checkbox(
-              'wide-hall-checkbox',
-              'Широкий коридор',
-              'Ширина коридоров в номере не&nbsp;менее 91 см.'
-            )
+            +rich-checkbox({
+              id: 'wide-hall-checkbox',
+              label: 'Широкий коридор',
+              hint: 'Ширина коридоров в номере не&nbsp;менее 91 см.'
+            })
           .rich-checkbox-group__rich-checkbox.clearfix
-            +rich-checkbox(
-                'disable-assistant-checkbox',
-                'Помощник для инвалидов',
-                'На 1 этаже вас встретит специалист и проводит до номера.'
-            )
+            +rich-checkbox({
+                id: 'disable-assistant-checkbox',
+                label: 'Помощник для инвалидов',
+                hint: 'На 1 этаже вас встретит специалист и проводит до номера.'
+            })
     .column.column--4.third
       article.ui__bullet-list-group
         .bullet-list-group

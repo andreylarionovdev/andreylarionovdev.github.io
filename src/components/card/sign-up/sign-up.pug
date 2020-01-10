@@ -1,6 +1,6 @@
 include ../../input/input
-include ../../form/radio-button/radio-button
-include ../../form/toggle-button/toggle-button
+include ../../radio-button/radio-button
+include ../../toggle-button/toggle-button
 
 mixin sign-up()
   - const blockName = 'sign-up'
@@ -18,20 +18,20 @@ mixin sign-up()
       })
     div(class=[`${blockName}__gender`, 'clearfix'])
       div(class=`${blockName}__radio-button`)
-        +radio-button(
-          'g-male',
-          'gender',
-          'm',
-          'Мужчина',
-          true
-        )
+        +radio-button({
+          id: 'g-male',
+          name: 'gender',
+          value: 'm',
+          label: 'Мужчина',
+          isChecked: true
+        })
       div(class=`${blockName}__radio-button`)
-        +radio-button(
-          'g-female',
-          'gender',
-          'f',
-          'Женщина'
-        )
+        +radio-button({
+          id: 'g-female',
+          name: 'gender',
+          value: 'f',
+          label: 'Женщина'
+        })
     div(class=`${blockName}__birthday`)
       div(class=`${blockName}__label`)
         +label('Дата рождения')
@@ -56,10 +56,10 @@ mixin sign-up()
         type: 'password'
       })
     div(class=`${blockName}__toggle`)
-      +toggle-button(
-        'sign-up__toggle-promote',
-        'Получать спецпредложения'
-      )
+      +toggle-button({
+        id: 'sign-up__toggle-promote',
+        label: 'Получать спецпредложения'
+      })
     div(class=`${blockName}__pay-button`)
       +button({
         theme: 'default',

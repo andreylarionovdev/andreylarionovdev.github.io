@@ -1,4 +1,4 @@
-include ../../label/label
+include ../label/label
 
 mixin range-slider(options)
   - const blockName = 'range-slider'
@@ -8,7 +8,7 @@ mixin range-slider(options)
   div(class=blockName)
     +label(caption)
     input(
-      class=blockName+'__input'
+      class=`${blockName}__input`
       type='text'
       name=options.name
       value=''
