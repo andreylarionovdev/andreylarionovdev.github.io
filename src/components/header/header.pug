@@ -1,14 +1,11 @@
 include ../logo/logo
 include ../button/button
 
-mixin header(user, menuItems, menuButtons)
+mixin header(options)
   - const blockName = 'header'
-  - let modifiers = []
-  if user
-    - modifiers.push(blockName+'--signed')
-  // Default menu
-  if !menuItems
-    -
+  -
+    const {
+      user,
       menuItems = [
         {name: 'Home', href: '/change-me', active: true},
         {name: 'About Us', href: '/change-me'},
@@ -23,10 +20,7 @@ mixin header(user, menuItems, menuButtons)
         {name: 'Careers', href: '/change-me'},
         {name: 'News', href: '/change-me'},
         {name: 'Documentation', href: '/change-me'}
-      ]
-  // Default buttons
-  if !menuButtons
-    -
+      ],
       menuButtons = [
         {
           name: 'sign-up',
@@ -41,50 +35,57 @@ mixin header(user, menuItems, menuButtons)
           isSmall: true
         }
       ]
+    } = options || {}
+
+  - let modifiers = []
+
+  if user
+      - modifiers.push(`${blockName}--signed`)
+
   header(class=[blockName, 'clearfix'] class=modifiers)
-    nav(class=blockName+'__nav')
-      i(class=['material-icons', blockName+'__menu-button'])= 'menu'
-      figure(class=blockName+'__logo')
+    nav(class=`${blockName}__nav`)
+      i(class=[`${blockName}__menu-button`, 'material-icons'])= 'menu'
+      figure(class=`${blockName}__logo`)
         +logo(true)
-      section(class=blockName + '__account')
+      section(class=`${blockName}__account`)
         if user
           = user
         else
           each button, _ in menuButtons
-            div(class=blockName+'__button--'+button.name)
+            div(class=`${blockName}__button--${button.name}`)
               +button({
                 theme: button.theme,
                 caption: button.caption,
                 isSmall: button.isSmall
               })
-      div(class=blockName+'__menu-wrapper')
-        ul(class=[blockName+'__menu', 'clearfix'])
+      div(class=`${blockName}__menu-wrapper`)
+        ul(class=[`${blockName}__menu`, 'clearfix'])
           each item, _ in menuItems
             - let active = ''
             - let hasDropdown = ''
             if item.active
-              - active = blockName+'__menu-item--active'
+              - active = `${blockName}__menu-item--active`
             if item.sub
-              - hasDropdown = blockName+'__menu-item--has-dropdown'
-            li(class=blockName+'__menu-item' class=active class=hasDropdown)
+              - hasDropdown = `${blockName}__menu-item--has-dropdown`
+            li(class=`${blockName}__menu-item` class=active class=hasDropdown)
               if item.sub
-                a(class=blockName+'__menu-a' class=active href='/change-me')
-                  span(class=blockName+'__dropdown-text')
+                a(class=`${blockName}__menu-a` class=active href='/change-me')
+                  span(class=`${blockName}__dropdown-text`)
                     = item.name
-                    i(class=[blockName+'__dropdown-arrow', 'material-icons'])= 'keyboard_arrow_down'
-                ul(class=[blockName+'__menu', blockName+'__menu--is-sub'])
+                    i(class=[`${blockName}__dropdown-arrow`, 'material-icons'])= 'keyboard_arrow_down'
+                ul(class=[`${blockName}__menu`, `${blockName}__menu--is-sub`])
                   each _item, _ in item.sub
-                    li(class=blockName+'__menu-item')
-                      a(class=blockName+'__menu-a' href=_item.href)!= _item.name
+                    li(class=`${blockName}__menu-item`)
+                      a(class=`${blockName}__menu-a` href=_item.href)!= _item.name
               else
-                a(class=blockName+'__menu-a' href=item.href)!= item.name
-          li(class=[blockName+'__menu-item', blockName+'__menu-item--account-buttons'])
+                a(class=`${blockName}__menu-a` href=item.href)!= item.name
+          li(class=[`${blockName}__menu-item`, `${blockName}__menu-item--account-buttons`])
             each button, _ in menuButtons
-              div(class=blockName+'__button--'+button.name)
+              div(class=`${blockName}__button--${button.name}`)
                 +button({
                   theme: button.theme,
                   caption: button.caption,
                   isSmall: button.isSmall
                 })
 
-        i(class=[blockName+'__close-button', 'material-icons'])= 'close'
+        i(class=[`${blockName}__close-button`, 'material-icons'])= 'close'

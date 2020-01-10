@@ -42,14 +42,7 @@ block main
         section.room-details__rate
           h2.h2= 'Впечатления от номера'
           .room-details__votes-chart
-            +votes-chart(
-              'votes-chart',
-              [
-                { label: 'perfect', count: 520 },
-                { label: 'good', count: 261 },
-                { label: 'satisfactorily', count: 260 },
-              ]
-            )
+            +votes-chart('votes-chart')
         section.room-details__feedbacks
           h2.room-details__feedbacks-title.h2= 'Отзывы посетителей номера'
           span.room-details__feedbacks-counter.body

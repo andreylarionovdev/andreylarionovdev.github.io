@@ -13,7 +13,9 @@ block content
   article.ui__header--anon
     +header
   article.ui__header--signed
-    +header('Cosmin Negoita')
+    +header({
+      user: 'Cosmin Negoita'
+    })
   article.ui__footer
     +footer
   article.ui__footer--creative

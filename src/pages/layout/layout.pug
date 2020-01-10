@@ -8,9 +8,8 @@ include ../../components/card/room-search/room-search
 block content
   block head
     .wrapper-header
-      +header(
-        null,
-        [
+      +header({
+        menuItems: [
           {name: 'О нас', href: '/change-me'},
           {
             name: 'Услуги',
@@ -31,7 +30,7 @@ block content
             ]
           }
         ],
-        [
+        menuButtons: [
           {
             name: 'sign-up',
             theme: 'default',
@@ -47,7 +46,7 @@ block content
             href: 'login.html'
           }
         ]
-      )
+      })
   block main
   block foot
     .wrapper-footer
