@@ -1,20 +1,28 @@
 mixin input(options)
   - const blockName = 'input'
   - const modifiers = []
-  - const { id, placeholder, value, withArrow, hovered, type} = options
+  -
+    const {
+      id,
+      type = 'text',
+      placeholder,
+      value,
+      withArrow,
+      isHovered
+    } = options || {}
 
   if withArrow
-    - modifiers.push(blockName + '--with-arrow')
-  if hovered
-    - modifiers.push(blockName + '--hovered')
+    modifiers.push(`${blockName}--with-arrow`)
+  if isHovered
+    - modifiers.push(`${blockName}--hovered`)
 
   div(class=blockName class=modifiers)
     input(
       id=id
-      type=(type || 'text')
-      class=blockName + '__input'
+      type=type
+      class=`${blockName}__input`
       placeholder=placeholder
       value=value
     )
-    button(class=blockName + '__submit-button')
-      i(class=[blockName + '__arrow', 'material-icons'])= 'arrow_forward'
+    button(class=`${blockName}__submit-button`)
+      i(class=[`${blockName}__arrow`, 'material-icons'])= 'arrow_forward'

@@ -1,12 +1,12 @@
 extends ../base
 
 include ../../components/logo/logo
-include ../../components/form/input/input
+include ../../components/input/input
 include ../../components/dropdown/dropdown
 include ../../components/checkbox/checkbox
 include ../../components/form/radio-button/radio-button
 include ../../components/form/toggle-button/toggle-button
-include ../../components/form/label/label
+include ../../components/label/label
 include ../../components/form/like-button/like-button
 include ../../components/form/rate-button/rate-button
 include ../../components/form/range-slider/range-slider
@@ -16,7 +16,7 @@ include ../../components/checkbox-list-xp/checkbox-list-xp
 include ../../components/form/rich-checkbox/rich-checkbox
 include ../../components/bullet-list/bullet-list
 include ../../components/feature/feature
-include ../../components/form/feedback/feedback
+include ../../components/feedback/feedback
 
 block vars
   - const title = 'UI Kit - Form elements'
@@ -51,7 +51,7 @@ block content
               id: 'input-focused-hovered',
               placeholder: 'Some text',
               value: 'This is pretty awesome',
-              hovered: true
+              isHovered: true
             })
       article.ui__dropdown-group
         .dropdown-group
@@ -412,7 +412,7 @@ block content
               author: 'Мурад Сарафанов',
               date: '5 дней назад',
               text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И&nbsp;стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
-              favCount: 12,
+              favoritesCount: 12,
               isFavorite: true,
               image: {
                 src: 'murad.png',
