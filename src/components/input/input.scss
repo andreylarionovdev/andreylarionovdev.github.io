@@ -1,7 +1,7 @@
 .input {
   $parent: &;
   height: 44px;
-  font-size: 12px;
+  font-size: 0.75rem;
 
   &--hovered {
     #{$parent}__input {
@@ -33,7 +33,7 @@
     border: 1px solid $color-dark-25;
     box-sizing: border-box;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: $color-dark-75;
     padding: 0 14px;
     &:focus,

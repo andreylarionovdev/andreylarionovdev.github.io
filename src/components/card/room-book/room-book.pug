@@ -26,7 +26,9 @@ mixin room-book(options)
 
     div(class=`${blockName}__guests`)
       div(class=`${blockName}__label`)
-        +label('Гости')
+        +label({
+          label: 'Гости'
+        })
       div(class=`${blockName}__dropdown`)
         +dropdown({
           id: 'room-book__from-date',

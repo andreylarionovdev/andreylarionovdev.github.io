@@ -5,23 +5,11 @@
 @import '../components/h3/h3';
 @import '../components/body/body';
 @import '../components/column/column';
+@import '../components/groups/groups';
 @import '../components/site-menu/site-menu';
 @import '../components/logo/logo';
 @import '../components/color-sample/color-sample';
 @import '../components/font-sample/font-sample';
-@import '../components/groups/input-group';
-@import '../components/groups/dropdown-group';
-@import '../components/groups/checkbox-group';
-@import '../components/groups/radio-button-group';
-@import '../components/groups/toggle-group';
-@import '../components/groups/like-button-group';
-@import '../components/groups/rate-button-group';
-@import '../components/groups/button-group';
-@import '../components/groups/paginator-group';
-@import '../components/groups/checkbox-list-xp-group';
-@import '../components/groups/rich-checkbox-group';
-@import '../components/groups/bullet-list-group';
-@import '../components/groups/feature-group';
 @import '../components/label/label';
 @import '../components/input/input';
 @import '../components/dropdown/dropdown';
@@ -39,16 +27,16 @@
 @import '../components/feature/feature';
 @import '../components/feedback/feedback';
 @import '../components/dropdown-date-range/dropdown-date-range';
+@import '../components/header/header';
+@import '../components/footer/footer';
+@import '../components/footer-menu-section/footer-menu-section';
+@import '../components/votes-chart/votes-chart';
 @import '../components/card/datepicker/datepicker';
 @import '../components/card/room-book/room-book';
 @import '../components/card/room-search/room-search';
 @import '../components/card/room-thumb/room-thumb';
 @import '../components/card/sign-in/sign-in';
 @import '../components/card/sign-up/sign-up';
-@import '../components/header/header';
-@import '../components/footer/footer';
-@import '../components/footer-menu-section/footer-menu-section';
-@import '../components/votes-chart/votes-chart';
 @import '../pages/ui/ui';
 @import '../pages/layout/layout';
 @import '../pages/landing/landing';
@@ -69,8 +57,12 @@ input[type="text"] {
   appearance: none;
 }
 
-body {
+html {
   font-family: Quicksand, sans-serif;
+  font-size: 16px;
+}
+
+body {
   margin: 0;
   //// ... 767px
   //@media (max-width: $screen-xs-max) {

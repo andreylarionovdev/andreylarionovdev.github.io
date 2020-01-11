@@ -34,7 +34,9 @@ mixin sign-up()
         })
     div(class=`${blockName}__birthday`)
       div(class=`${blockName}__label`)
-        +label('Дата рождения')
+        +label({
+          label: 'Дата рождения'
+        })
       div(class=`${blockName}__input`)
         +input({
           id: 'sign-up__input-birthday',
@@ -42,7 +44,9 @@ mixin sign-up()
         })
     div(class=`${blockName}__email`)
       div(class=`${blockName}__label`)
-        +label('Данные для входа в сервис')
+        +label({
+          label: 'Данные для входа в сервис'
+        })
       div(class=`${blockName}__input`)
         +input({
           id: 'sign-up__input-email',

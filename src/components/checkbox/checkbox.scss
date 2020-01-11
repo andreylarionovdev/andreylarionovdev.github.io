@@ -1,6 +1,6 @@
 .checkbox {
   $parent: &;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Montserrat, sans-serif;
 
   &__input {
@@ -21,7 +21,7 @@
     position: relative;
     padding-left: 30px;
     padding-top: 1px;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: $color-dark-50;
 
     &:after,

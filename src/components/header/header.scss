@@ -1,6 +1,6 @@
 .header {
   font-family: Montserrat, sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: $color-dark-50;
   $parent: #{&};
   $menu: #{&}__menu;
@@ -57,7 +57,7 @@
     top: 50%;
     transform: translateY(-50%);
     right: 10px;
-    font-size: 48px;
+    font-size: 3rem;
     color: $color-dark-50;
     @media (max-width: $screen-md-min) {
       display: block;

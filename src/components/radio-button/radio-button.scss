@@ -1,6 +1,6 @@
 .radio-button {
   $parent: &;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: Montserrat, sans-serif;
   display: inline-block;
 
@@ -35,7 +35,7 @@
     font-family: Montserrat, sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: $color-dark-50;
 
     &:after,

@@ -8,7 +8,7 @@
   &__labels {
     list-style: none;
     display: inline-block;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: Montserrat, sans-serif;
     line-height: 24px;
     color: $color-dark-75;
@@ -72,12 +72,12 @@
     }
   }
   &__count-value {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
     font-family: Quicksand, sans-serif;
   }
   &__count-unit {
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-family: Montserrat, sans-serif;
   }
 }

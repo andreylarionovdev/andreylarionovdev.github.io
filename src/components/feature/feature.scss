@@ -7,7 +7,7 @@
   &__icon {
     display: inline-block;
     float: left;
-    font-size: 48px;
+    font-size: 3rem;
     background: $grad-purple;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -16,7 +16,7 @@
   &__hint {
     color: $color-dark-75;
     margin: 0;
-    font-size: 14px;
+    font-size: 0.875rem;
     padding-left: 58px;
     display: block;
     line-height: 24px;

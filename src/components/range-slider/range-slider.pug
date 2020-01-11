@@ -6,7 +6,9 @@ mixin range-slider(options)
   - const { type, skin, min, max, from, to } = options
 
   div(class=blockName)
-    +label(caption)
+    +label({
+      label: caption
+    })
     input(
       class=`${blockName}__input`
       type='text'

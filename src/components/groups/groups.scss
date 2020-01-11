@@ -1,0 +1,134 @@
+.bullet-list-group {
+  &__label {
+    margin-bottom: 13px;
+  }
+  &__bullet-list {
+  }
+}
+
+.button-group {
+  &__label {
+    margin-bottom: 15px;
+  }
+  &__button {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    min-width: 99px;
+    height: 44px;
+    &--textual {
+      display: inline-block;
+      margin-bottom: 27px;
+      margin-right: 17px;
+    }
+    &--large {
+      width: 100%;
+      margin-bottom: 40px;
+      height: 44px;
+    }
+    // ... 991px
+    @media (max-width: $screen-sm-max) {
+      width: 100%;
+    }
+  }
+}
+
+.checkbox-group {
+  &__label {
+    margin-bottom: 17px;
+  }
+  &__checkbox {
+    min-height: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+.checkbox-list-xp-group {
+  &__checkbox-list-xp {
+    height: 44px;
+  }
+}
+
+.dropdown-group {
+  &__label {
+    margin-bottom: 5px;
+  }
+  &__dropdown {
+    height: 44px;
+  }
+}
+
+.feature-group {
+  &__feature {
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.input-group {
+  &__label {
+    margin-bottom: 5px;
+  }
+}
+
+.like-button-group {
+  &__label {
+    margin-bottom: 16px;
+  }
+  &__like-button {
+    margin-right: 10px;
+    float: left;
+  }
+}
+
+.paginator-group {
+  &__label {
+    margin-bottom: 17px;
+  }
+}
+
+.radio-button-group {
+  &__label {
+    margin-bottom: 13px;
+  }
+  &__radio-button {
+    height: 20px;
+    float: left;
+    margin-right: 19px;
+    // ... 991px
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.rate-button-group {
+  &__label {
+    margin-bottom: 16px;
+  }
+  &__rate-button {
+    margin: 2px 18px 0 2px;
+    float: left;
+  }
+}
+
+.rich-checkbox-group {
+  &__label {
+    margin-bottom: 16px;
+  }
+  &__rich-checkbox {
+    min-height: 20px;
+    margin-bottom: 7px;
+  }
+}
+
+.toggle-group {
+  &__label {
+    margin-bottom: 16px;
+  }
+  &__toggle-button {
+    margin-bottom: 14px;
+  }
+}

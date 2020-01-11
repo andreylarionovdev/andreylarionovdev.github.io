@@ -68,11 +68,11 @@
   &__number-sign,
   &__number-value {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 
   &__number-value {
-    font-size: 19px;
+    font-size: 1.1875rem;
     margin-left: 4px;
     margin-right: 1px;
     color: $color-dark-100;
@@ -93,7 +93,7 @@
     font-weight: bold;
   }
   &__date-unit {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   &__footer {
     padding: 3px 8% 18px;
@@ -103,7 +103,7 @@
     float: right;
     font-family: Montserrat, sans-serif;
     font-style: normal;
-    font-size: 14px;
+    font-size: 0.875rem;
     color: $color-dark-50;
     line-height: 22px;
     margin: 0;

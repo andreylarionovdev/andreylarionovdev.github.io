@@ -17,11 +17,10 @@ block main
     section.search-room-filter__sidebar
       .search-room-filter__date-dropdown-group
         .search-room-filter__date-dropdown-label
-          +label(
-            'Даты пребывания в отеле',
-            null,
-            'date-dropdown'
-          )
+          +label({
+            label: 'Даты пребывания в отеле',
+            _for: 'date-dropdown'
+          })
         .search-room-filter__date-dropdown
           +dropdown({
             id: 'date-dropdown',
@@ -29,11 +28,10 @@ block main
           })
       .search-room-filter__guests-dropdown-group
         .search-room-filter__guests-dropdown-label
-          +label(
-            'Гости',
-            null,
-            'guests-dropdown'
-          )
+          +label({
+            label: 'Гости',
+            _for: 'guests-dropdown'
+          })
         .search-room-filter__guests-dropdown
           +dropdown({
             id: 'guests-dropdown',
@@ -60,7 +58,9 @@ block main
           = 'Стоимость за сутки пребывания в номере'
       .search-room-filter__checkbox-group
         .checkbox-group__label
-          +label('checkbox buttons')
+          +label({
+            label: 'checkbox buttons'
+          })
         .checkbox-group__checkbox
           +checkbox({
             id: 'smoke-allowed',
@@ -80,7 +80,9 @@ block main
           })
       .search-room-filter__rich-checkbox-group
         .rich-checkbox-group__label
-          +label('Доступность')
+          +label({
+            label: 'Доступность'
+          })
         .rich-checkbox-group__rich-checkbox.clearfix
           +rich-checkbox({
             id: 'wide-hall-checkbox',
@@ -95,11 +97,10 @@ block main
           })
       .search-room-filter__feature-dropdown-group
         .search-room-filter__feature-dropdown-label
-          +label(
-            'Удобства номера',
-            null,
-            'feature-dropdown'
-          )
+          +label({
+            label: 'Удобства номера',
+            _for: 'feature-dropdown'
+          })
         .search-room-filter__feature-dropdown
           +dropdown({
             id: 'feature-dropdown',

@@ -14,7 +14,9 @@ mixin dropdown-date-range(options)
   div(class=blockName)
     div(class=`${blockName}__from`)
       div(class=`${blockName}__label`)
-        +label('Прибытие')
+        +label({
+          label: 'Прибытие'
+        })
       div(class=`${blockName}__dropdown`)
         +dropdown({
           id: `${id}__from-date`,
@@ -23,7 +25,9 @@ mixin dropdown-date-range(options)
         })
     div(class=`${blockName}__to`)
       div(class=`${blockName}__label`)
-        +label('Выезд')
+        +label({
+          label: 'Выезд'
+        })
       div(class=`${blockName}__dropdown`)
         +dropdown({
           id: `${id}__to-date`,

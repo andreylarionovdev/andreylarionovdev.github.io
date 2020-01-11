@@ -37,7 +37,7 @@ mixin dropdown(options)
             span(class=`${blockName}__li-inc`)= '+'
             span(class=`${blockName}__li-count`)= item.count
             span(class=`${blockName}__li-dec`)= '-'
-        li(class=[`${blockName}__li`, 'clearfix'])
+        li(class=[`${blockName}__li`, `${blockName}__li--has-buttons`, 'clearfix'])
           span(class=`${blockName}__li-clear`)
             +button({
               theme: 'textual',

@@ -19,9 +19,9 @@
           <figure class="header__logo"><a class="logo logo--with-text" href="./index.html"></a>
           </figure>
           <section class="header__account">
-            <div class="header__button--sign-up"><a class="button button--default button--small" href="/change=me">Зарегистрироваться</a>
+            <div class="header__button--sign-up"><a class="button button--default button--small" href="registration.html">Зарегистрироваться</a>
             </div>
-            <div class="header__button--sign-in"><a class="button button--transparent button--small" href="/change=me">Войти</a>
+            <div class="header__button--sign-in"><a class="button button--transparent button--small" href="login.html">Войти</a>
             </div>
           </section>
           <div class="header__menu-wrapper">
@@ -47,9 +47,9 @@
                 </ul>
               </li>
               <li class="header__menu-item header__menu-item--account-buttons">
-                <div class="header__button--sign-up"><a class="button button--default button--small" href="/change=me">Зарегистрироваться</a>
+                <div class="header__button--sign-up"><a class="button button--default button--small" href="registration.html">Зарегистрироваться</a>
                 </div>
-                <div class="header__button--sign-in"><a class="button button--transparent button--small" href="/change=me">Войти</a>
+                <div class="header__button--sign-in"><a class="button button--transparent button--small" href="login.html">Войти</a>
                 </div>
               </li>
             </ul><i class="header__close-button material-icons">close</i>
@@ -61,8 +61,8 @@
       <section class="search-room-filter__sidebar">
         <div class="search-room-filter__date-dropdown-group">
           <div class="search-room-filter__date-dropdown-label">
-            <label class="label clearfix">
-              <h3 class="label__left h3"></h3><span class="label__right"></span>
+            <label class="label clearfix" for="date-dropdown">
+              <h3 class="label__left h3">Даты пребывания в отеле</h3><span class="label__right"></span>
             </label>
           </div>
           <div class="search-room-filter__date-dropdown">
@@ -75,8 +75,8 @@
         </div>
         <div class="search-room-filter__guests-dropdown-group">
           <div class="search-room-filter__guests-dropdown-label">
-            <label class="label clearfix">
-              <h3 class="label__left h3"></h3><span class="label__right"></span>
+            <label class="label clearfix" for="guests-dropdown">
+              <h3 class="label__left h3">Гости</h3><span class="label__right"></span>
             </label>
           </div>
           <div class="search-room-filter__guests-dropdown">
@@ -88,7 +88,7 @@
                 <li class="dropdown__li clearfix"><span class="dropdown__li-name">взрослые</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">2</span><span class="dropdown__li-dec">-</span></li>
                 <li class="dropdown__li clearfix"><span class="dropdown__li-name">дети</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
                 <li class="dropdown__li clearfix"><span class="dropdown__li-name">младенцы</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">1</span><span class="dropdown__li-dec">-</span></li>
-                <li class="dropdown__li clearfix"><span class="dropdown__li-clear"><a class="button button--textual button--hovered" href="javascript:void(0)">очистить</a></span><span class="dropdown__li-apply"><a class="button button--textual" href="javascript:void(0)">применить</a></span></li>
+                <li class="dropdown__li dropdown__li--has-buttons clearfix"><span class="dropdown__li-clear"><a class="button button--textual button--hovered" href="javascript:void(0)">очистить</a></span><span class="dropdown__li-apply"><a class="button button--textual" href="javascript:void(0)">применить</a></span></li>
               </ul>
             </div>
           </div>
@@ -96,7 +96,7 @@
         <div class="search-room-filter__price-slider">
           <div class="range-slider">
             <label class="label clearfix">
-              <h3 class="label__left h3"></h3><span class="label__right"></span>
+              <h3 class="label__left h3">Диапазон цены</h3><span class="label__right"></span>
             </label>
             <input class="range-slider__input" type="text" name="price-slider" value="" data-type="double" data-skin="big" data-min="0" data-max="16000" data-from="5000" data-to="10000">
           </div>
@@ -106,7 +106,7 @@
         <div class="search-room-filter__checkbox-group">
           <div class="checkbox-group__label">
             <label class="label clearfix">
-              <h3 class="label__left h3"></h3><span class="label__right"></span>
+              <h3 class="label__left h3">checkbox buttons</h3><span class="label__right"></span>
             </label>
           </div>
           <div class="checkbox-group__checkbox">
@@ -131,7 +131,7 @@
         <div class="search-room-filter__rich-checkbox-group">
           <div class="rich-checkbox-group__label">
             <label class="label clearfix">
-              <h3 class="label__left h3"></h3><span class="label__right"></span>
+              <h3 class="label__left h3">Доступность</h3><span class="label__right"></span>
             </label>
           </div>
           <div class="rich-checkbox-group__rich-checkbox clearfix">
@@ -155,8 +155,8 @@
         </div>
         <div class="search-room-filter__feature-dropdown-group">
           <div class="search-room-filter__feature-dropdown-label">
-            <label class="label clearfix">
-              <h3 class="label__left h3"></h3><span class="label__right"></span>
+            <label class="label clearfix" for="feature-dropdown">
+              <h3 class="label__left h3">Удобства номера</h3><span class="label__right"></span>
             </label>
           </div>
           <div class="search-room-filter__feature-dropdown">
@@ -168,7 +168,7 @@
                 <li class="dropdown__li clearfix"><span class="dropdown__li-name">спальни</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">2</span><span class="dropdown__li-dec">-</span></li>
                 <li class="dropdown__li clearfix"><span class="dropdown__li-name">кровати</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">2</span><span class="dropdown__li-dec">-</span></li>
                 <li class="dropdown__li clearfix"><span class="dropdown__li-name">ванные комнаты</span><span class="dropdown__li-inc">+</span><span class="dropdown__li-count">0</span><span class="dropdown__li-dec">-</span></li>
-                <li class="dropdown__li clearfix"><span class="dropdown__li-clear"><a class="button button--textual button--hovered" href="javascript:void(0)">очистить</a></span><span class="dropdown__li-apply"><a class="button button--textual" href="javascript:void(0)">применить</a></span></li>
+                <li class="dropdown__li dropdown__li--has-buttons clearfix"><span class="dropdown__li-clear"><a class="button button--textual button--hovered" href="javascript:void(0)">очистить</a></span><span class="dropdown__li-apply"><a class="button button--textual" href="javascript:void(0)">применить</a></span></li>
               </ul>
             </div>
           </div>

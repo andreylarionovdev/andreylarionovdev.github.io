@@ -56,7 +56,8 @@ mixin header(options)
               +button({
                 theme: button.theme,
                 caption: button.caption,
-                isSmall: button.isSmall
+                isSmall: button.isSmall,
+                href: button.href
               })
       div(class=`${blockName}__menu-wrapper`)
         ul(class=[`${blockName}__menu`, 'clearfix'])
@@ -85,7 +86,8 @@ mixin header(options)
                 +button({
                   theme: button.theme,
                   caption: button.caption,
-                  isSmall: button.isSmall
+                  isSmall: button.isSmall,
+                  href: button.href
                 })
 
         i(class=[`${blockName}__close-button`, 'material-icons'])= 'close'
