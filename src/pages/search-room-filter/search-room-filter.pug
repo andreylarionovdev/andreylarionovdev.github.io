@@ -3,7 +3,6 @@ extends ../layout/layout
 include ../../components/range-slider/range-slider
 include ../../components/label/label
 include ../../components/checkbox/checkbox
-include ../../components/rich-checkbox/rich-checkbox
 include ../../components/checkbox-list-xp/checkbox-list-xp
 include ../../components/card/room-thumb/room-thumb
 include ../../components/paginator/paginator
@@ -84,13 +83,13 @@ block main
             label: 'Доступность'
           })
         .rich-checkbox-group__rich-checkbox.clearfix
-          +rich-checkbox({
+          +checkbox({
             id: 'wide-hall-checkbox',
             label: 'Широкий коридор',
             hint: 'Ширина коридоров в номере не&nbsp;менее 91 см.'
           })
         .rich-checkbox-group__rich-checkbox.clearfix
-          +rich-checkbox({
+          +checkbox({
             id: 'disable-assistant-checkbox',
             label: 'Помощник для инвалидов',
             hint: 'На 1 этаже вас встретит специалист и проводит до номера.'

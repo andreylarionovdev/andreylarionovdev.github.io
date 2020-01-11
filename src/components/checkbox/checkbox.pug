@@ -1,8 +1,13 @@
 mixin checkbox(options)
   - const blockName = 'checkbox'
-  - const { id, label, isChecked } = options || {}
+  - const { id, label, hint, isChecked } = options || {}
 
-  div(class=blockName)
+  - let modifiers = []
+
+  if hint
+    - modifiers.push(`${blockName}--has-hint`)
+
+  div(class=blockName class=modifiers)
     input(
       id=id
       type='checkbox'
@@ -13,3 +18,5 @@ mixin checkbox(options)
       class=`${blockName}__label`
       for=id
     )= label
+    if hint
+      p(class=`${blockName}__hint`)!= hint

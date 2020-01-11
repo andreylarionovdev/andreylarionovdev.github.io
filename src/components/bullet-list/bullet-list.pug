@@ -7,4 +7,4 @@ mixin bullet-list(options)
       li(class=`${blockName}__li`)
         div(class=`${blockName}__marker-wrapper`)
           span(class=`${blockName}__marker`)
-        p(class=`${blockName}__text`)= item.text
+        p(class=`${blockName}__text`)!= item.text
