@@ -1,55 +1,47 @@
 .checkbox-list-xp {
-  $menu: #{&}__list;
+  $list: #{&}__list;
   $upArrow: #{&}__icon-up;
   $downArrow: #{&}__icon-down;
-  display: inline-block;
-  width: 100%;
-  height: 100%;
   font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
-  text-align: left;
   color: $color-dark-75;
   user-select: none;
   &__select {
+    margin: 0;
+    padding: 0.5rem 0.625rem 0.6875rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     cursor: pointer;
-    display: block;
-    padding: 10px 10px 10px 0;
   }
   &__label {
-    text-transform: uppercase;
-    font-weight: bold;
     font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
     color: $color-dark-100;
   }
-  &__list {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    overflow: hidden;
+  #{$list} {
+    margin: 0;
+    padding: 0;
     display: none;
-    overflow-y: auto;
-    padding: 0 0 3px;
+    width: 100%;
     list-style: none;
-    margin: 7px 0 0;
   }
   &__li {
-    display: block;
-    height: 20px;
-    margin-bottom: 10px;
+    padding-bottom: 0.625rem;
   }
   #{$downArrow},
   #{$upArrow} {
     display: none;
     cursor: pointer;
     float: right;
-    margin-top: -1px;
   }
   #{$downArrow} {
     display: inline-block;
   }
   &--expanded {
-    #{$menu} {
-      display: block;
+    #{$list} {
+      display: inline-block;
     }
     #{$downArrow} {
       display: none;

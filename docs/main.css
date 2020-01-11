@@ -879,50 +879,48 @@
     color: rgba(31, 32, 65, 0.75); }
 
 .checkbox-list-xp {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
   font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
-  text-align: left;
   color: rgba(31, 32, 65, 0.75);
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
   .checkbox-list-xp__select {
-    cursor: pointer;
-    display: block;
-    padding: 10px 10px 10px 0; }
+    margin: 0;
+    padding: 0.5rem 0.625rem 0.6875rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer; }
   .checkbox-list-xp__label {
-    text-transform: uppercase;
-    font-weight: bold;
     font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
     color: #1F2041; }
-  .checkbox-list-xp__list {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    overflow: hidden;
+  .checkbox-list-xp .checkbox-list-xp__list {
+    margin: 0;
+    padding: 0;
     display: none;
-    overflow-y: auto;
-    padding: 0 0 3px;
-    list-style: none;
-    margin: 7px 0 0; }
+    width: 100%;
+    list-style: none; }
   .checkbox-list-xp__li {
-    display: block;
-    height: 20px;
-    margin-bottom: 10px; }
+    padding-bottom: 0.625rem; }
   .checkbox-list-xp .checkbox-list-xp__icon-down,
   .checkbox-list-xp .checkbox-list-xp__icon-up {
     display: none;
     cursor: pointer;
-    float: right;
-    margin-top: -1px; }
+    float: right; }
   .checkbox-list-xp .checkbox-list-xp__icon-down {
     display: inline-block; }
   .checkbox-list-xp--expanded .checkbox-list-xp__list {
-    display: block; }
+    display: inline-block; }
   .checkbox-list-xp--expanded .checkbox-list-xp__icon-down {
     display: none; }
   .checkbox-list-xp--expanded .checkbox-list-xp__icon-up {
@@ -952,7 +950,7 @@
     background-color: rgba(31, 32, 65, 0.25); }
   .bullet-list__text {
     line-height: 1.5rem;
-    margin: 0.5rem 0 0.5rem 1.25rem; }
+    margin: 0.5rem 0 0.625rem 1.25rem; }
 
 .feature {
   padding: 20px 0;
@@ -2275,7 +2273,7 @@
     .ui--form-components .ui__feedback-group {
       margin-top: 30px; }
     .ui--form-components .ui__checkbox-list-xp-group--collapsed {
-      margin-bottom: 26px; }
+      margin-bottom: 1.3125rem; }
     .ui--form-components .ui__dropdown-group {
       margin-bottom: 22px; }
     .ui--form-components .ui__input-group {
@@ -2286,7 +2284,7 @@
     .ui--form-components .ui__range-slider {
       margin-bottom: 38px; }
     .ui--form-components .ui__checkbox-list-xp-group--expanded {
-      margin-bottom: 14px; }
+      margin-bottom: 0.6875rem; }
     .ui--form-components .ui__bullet-list-group,
     .ui--form-components .ui__rich-checkbox-group {
       margin-top: 12px; }
@@ -2435,7 +2433,7 @@
   .search-room-filter__feature-dropdown-group {
     margin-top: 28px; }
   .search-room-filter__rich-checkbox-group {
-    margin-top: 31px; }
+    margin-top: 1.75rem; }
   .search-room-filter__price-slider, .search-room-filter__checkbox-group {
     margin-top: 30px; }
   .search-room-filter__price-slider-hint {

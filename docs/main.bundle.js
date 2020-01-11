@@ -394,7 +394,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nod
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {\n  const className = 'checkbox-list-xp';\n  const classExpanded = `${className}--expanded`;\n\n  $('.checkbox-list-xp__select').on('click', function () {\n    const $dropdown = $(this).closest(`.${className}`);\n\n    $dropdown.toggleClass(classExpanded);\n    resize($dropdown);\n  });\n\n  const resize = function ($dropdown) {\n    const $drop = $dropdown.find('.checkbox-list-xp__list');\n    let dropH = 0;\n\n    if ($dropdown.hasClass(classExpanded)) {\n      dropH = $drop.outerHeight() + 'px';\n    }\n    $dropdown.css('margin-bottom', dropH);\n  };\n\n  $(`.${classExpanded}`).each(function (i, o) {\n    resize($(o));\n  });\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/components/checkbox-list-xp/checkbox-list-xp.js?");
+eval("/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {\n  const className = 'checkbox-list-xp';\n  const classExpanded = `${className}--expanded`;\n\n  $('.checkbox-list-xp__select').on('click', function () {\n    const $dropdown = $(this).closest(`.${className}`);\n\n    $dropdown.toggleClass(classExpanded);\n  });\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/components/checkbox-list-xp/checkbox-list-xp.js?");
 
 /***/ }),
 

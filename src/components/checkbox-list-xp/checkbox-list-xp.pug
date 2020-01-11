@@ -10,15 +10,15 @@ mixin checkbox-list-xp(options)
     - modifiers.push(`${blockName}--expanded`)
 
   div(class=blockName class=modifiers id=id)
-    div(class=`${blockName}__select`)
+    h3(class=`${blockName}__select`)
       span(class=`${blockName}__label`)= label
       i(class=[`${blockName}__icon-down`, 'material-icons'])= 'keyboard_arrow_down'
       i(class=[`${blockName}__icon-up`, 'material-icons'])= 'keyboard_arrow_up'
     ul(class=`${blockName}__list`)
       each item, index in items
-        li(class=`${blockName}__li` class='clearfix')
+        li(class=[`${blockName}__li`, 'clearfix'])
           +checkbox({
-            id: `${id}_${item.name}`,
+            id: `${id}-${item.name}`,
             label: item.label,
             isChecked: item.isChecked
           })
