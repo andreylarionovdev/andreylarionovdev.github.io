@@ -5,5 +5,6 @@ mixin bullet-list(options)
   ul(class=blockName id=id)
     each item, index in items
       li(class=`${blockName}__li`)
-        != item.text
-        span(class=`${blockName}__marker`)
+        div(class=`${blockName}__marker-wrapper`)
+          span(class=`${blockName}__marker`)
+        p(class=`${blockName}__text`)= item.text

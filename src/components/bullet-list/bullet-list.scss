@@ -1,23 +1,30 @@
 .bullet-list {
-  color: $color-dark-75;
-  font-size: 0.875rem;
-  padding-left: 20px;
   margin: 0;
+  padding: 0;
   list-style-type: none;
   font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  color: $color-dark-75;
   &__li {
     position: relative;
-    margin-bottom: 10px;
-    line-height: 24px;
+  }
+  &__marker-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0.625rem;
+    line-height: 1.5rem;
   }
   &__marker {
-    position: absolute;
     display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 0.3125rem;
     background-color: $color-dark-25;
-    left: -20px;
-    top: 7px;
+  }
+  &__text {
+    line-height: 1.5rem;
+    margin: 0.5rem 0 0.5rem 1.25rem;
   }
 }
