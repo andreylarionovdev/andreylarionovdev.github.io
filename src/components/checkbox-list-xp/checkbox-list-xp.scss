@@ -20,6 +20,15 @@
     text-transform: uppercase;
     color: $color-dark-100;
   }
+  #{$downArrow},
+  #{$upArrow} {
+    display: none;
+    cursor: pointer;
+    float: right;
+  }
+  #{$downArrow} {
+    display: inline-block;
+  }
   #{$list} {
     margin: 0;
     padding: 0;
@@ -30,23 +39,14 @@
   &__li {
     padding-bottom: 0.625rem;
   }
-  #{$downArrow},
-  #{$upArrow} {
-    display: none;
-    cursor: pointer;
-    float: right;
-  }
-  #{$downArrow} {
-    display: inline-block;
-  }
   &--expanded {
-    #{$list} {
-      display: inline-block;
-    }
     #{$downArrow} {
       display: none;
     }
     #{$upArrow} {
+      display: inline-block;
+    }
+    #{$list} {
       display: inline-block;
     }
   }

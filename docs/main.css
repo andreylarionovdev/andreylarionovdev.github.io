@@ -904,6 +904,13 @@
     font-weight: bold;
     text-transform: uppercase;
     color: #1F2041; }
+  .checkbox-list-xp .checkbox-list-xp__icon-down,
+  .checkbox-list-xp .checkbox-list-xp__icon-up {
+    display: none;
+    cursor: pointer;
+    float: right; }
+  .checkbox-list-xp .checkbox-list-xp__icon-down {
+    display: inline-block; }
   .checkbox-list-xp .checkbox-list-xp__list {
     margin: 0;
     padding: 0;
@@ -912,18 +919,11 @@
     list-style: none; }
   .checkbox-list-xp__li {
     padding-bottom: 0.625rem; }
-  .checkbox-list-xp .checkbox-list-xp__icon-down,
-  .checkbox-list-xp .checkbox-list-xp__icon-up {
-    display: none;
-    cursor: pointer;
-    float: right; }
-  .checkbox-list-xp .checkbox-list-xp__icon-down {
-    display: inline-block; }
-  .checkbox-list-xp--expanded .checkbox-list-xp__list {
-    display: inline-block; }
   .checkbox-list-xp--expanded .checkbox-list-xp__icon-down {
     display: none; }
   .checkbox-list-xp--expanded .checkbox-list-xp__icon-up {
+    display: inline-block; }
+  .checkbox-list-xp--expanded .checkbox-list-xp__list {
     display: inline-block; }
 
 .bullet-list {
