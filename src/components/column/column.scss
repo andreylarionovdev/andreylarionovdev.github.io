@@ -1,21 +1,7 @@
 .column {
   float: left;
-  &--6 {
-    width: 50%;
-    @media (max-width: $screen-sm-min) {
-      width: 98%;
-      padding: 0 1%;
-    }
-  }
   &--3 {
     width: 25%;
-    @media (max-width: $screen-sm-min) {
-      width: 98%;
-      padding: 0 1%;
-    }
-  }
-  &--9 {
-    width: 75%;
     @media (max-width: $screen-sm-min) {
       width: 98%;
       padding: 0 1%;
@@ -28,8 +14,22 @@
       padding: 0 1%;
     }
   }
+  &--6 {
+    width: 50%;
+    @media (max-width: $screen-sm-min) {
+      width: 98%;
+      padding: 0 1%;
+    }
+  }
   &--8 {
     width: 66.66%;
+    @media (max-width: $screen-sm-min) {
+      width: 98%;
+      padding: 0 1%;
+    }
+  }
+  &--9 {
+    width: 75%;
     @media (max-width: $screen-sm-min) {
       width: 98%;
       padding: 0 1%;

@@ -37,22 +37,10 @@
 
 .column {
   float: left; }
-  .column--6 {
-    width: 50%; }
-    @media (max-width: 768px) {
-      .column--6 {
-        width: 98%;
-        padding: 0 1%; } }
   .column--3 {
     width: 25%; }
     @media (max-width: 768px) {
       .column--3 {
-        width: 98%;
-        padding: 0 1%; } }
-  .column--9 {
-    width: 75%; }
-    @media (max-width: 768px) {
-      .column--9 {
         width: 98%;
         padding: 0 1%; } }
   .column--4 {
@@ -61,10 +49,22 @@
       .column--4 {
         width: 98%;
         padding: 0 1%; } }
+  .column--6 {
+    width: 50%; }
+    @media (max-width: 768px) {
+      .column--6 {
+        width: 98%;
+        padding: 0 1%; } }
   .column--8 {
     width: 66.66%; }
     @media (max-width: 768px) {
       .column--8 {
+        width: 98%;
+        padding: 0 1%; } }
+  .column--9 {
+    width: 75%; }
+    @media (max-width: 768px) {
+      .column--9 {
         width: 98%;
         padding: 0 1%; } }
 
