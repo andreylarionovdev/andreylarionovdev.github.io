@@ -346,6 +346,7 @@
       -ms-user-select: none;
           user-select: none; }
   .dropdown__toggle {
+    position: relative;
     padding: 0.5rem 0.625rem 0.625rem 0.875rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -361,6 +362,15 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis; }
+  .dropdown__data-input {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border: none;
+    outline: none;
+    z-index: -1; }
   .dropdown .dropdown__menu {
     margin: 0;
     position: absolute;

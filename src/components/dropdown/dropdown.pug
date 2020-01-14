@@ -27,6 +27,7 @@ mixin dropdown(options)
     label(class=`${blockName}__toggle`)
       span(class=`${blockName}__text`)= value
       i(class=[`${blockName}__arrow`, 'material-icons'])= 'keyboard_arrow_down'
+      input(class=`${blockName}__data-input` type='text' value=value)
     if selectOptions.length > 0
       ul(class=`${blockName}__menu` style={'z-index': zIndex})
         each item in selectOptions

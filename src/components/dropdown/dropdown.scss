@@ -9,6 +9,7 @@
   border-radius: 0.25rem;
   user-select: none;
   &__toggle {
+    position: relative;
     padding: 0.5rem 0.625rem 0.625rem 0.875rem;
     display: flex;
     justify-content: space-between;
@@ -19,6 +20,16 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+  }
+  &__data-input {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border: none;
+    outline: none;
+    z-index: -1;
   }
   #{$menu} {
     margin: 0;
