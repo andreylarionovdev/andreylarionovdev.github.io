@@ -1,116 +1,85 @@
 .dropdown {
   $menu: #{&}__menu;
-  $clearBtn: #{&}__li-clear;
-  $liWithButtons: #{&}__li--has-buttons;
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  font-size: 0.875rem;
-  border: 1px solid $color-dark-25;
-  border-radius: 4px;
-  text-align: left;
-  color: $color-dark-75;
-  user-select: none;
+  $clearBtn: #{&}__clear-button;
+  $liFooterButtons: #{&}__li--footer-buttons;
   font-family: Montserrat, sans-serif;
-  &__select {
-    position: relative;
+  font-size: 0.875rem;
+  color: $color-dark-75;
+  border: 1px solid $color-dark-25;
+  border-radius: 0.25rem;
+  user-select: none;
+  &__toggle {
+    padding: 0.5rem 0.625rem 0.625rem 0.875rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     cursor: pointer;
-    display: block;
-    height: 100%;
-    padding: 11px 10px 10px;
   }
   &__text {
-    display: inline-block;
-    padding-left: 5px;
-    height: 100%;
-    width: 85%;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
-  &__icon {
-    position: absolute;
-    cursor: pointer;
-    right: 10px;
-    top: 10px;
-  }
-  &__input {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 0;
-    width: 0;
-    border: 0;
-    z-index: -1;
-  }
   #{$menu} {
+    margin: 0;
     position: absolute;
-    width: 100%;
     left: 0;
-    overflow: hidden;
     display: none;
-    overflow-y: auto;
-    padding: 0 0 3px;
+    width: 100%;
+    padding: 0.3125rem 0.375rem 0 0.875rem;
     list-style: none;
     border: 1px solid $color-dark-50;
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px;
-    margin: 0;
-    box-shadow: 0 10px 20px $color-dark-5;
+    border-bottom-right-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    box-shadow: 0 0.625rem 1.25rem $color-dark-5;
     background-color: white;
   }
   &__li {
-    display: block;
-    padding: 5px 7px;
-    height: 38px;
-    &-clear,
-    &-apply,
-    &-name,
-    &-count {
-      text-transform: uppercase;
-      font-size: 0.75rem;
-      font-weight: bold;
-    }
-    &-clear,
-    &-name {
-      float: left;
-      padding: 6px 7px;
-    }
-    &-clear,
-    &-apply {
-      padding-top: 8px;
-    }
-    &-apply {
-      float: right;
-    }
-    &-count {
-      float: right;
-      padding-top: 6px;
-      width: 32px;
-      text-align: center;
-    }
-    &-dec,
-    &-inc {
-      cursor: pointer;
-      display: inline-block;
-      float: right;
-      width: 30px;
-      height: 30px;
-      border-radius: 15px;
-      font-size: 1.125rem;
-      text-align: center;
-      vertical-align: middle;
-      padding: 3px;
-    }
-    &-dec {
-      border: 1px solid $color-dark-25;
-    }
-    &-inc {
-      border: 1px solid $color-dark-50;
-    }
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.4375rem;
   }
-  #{$liWithButtons} {
+  &__count-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 5.75rem;
+  }
+  &__item-name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  &__item-name,
+  &__count {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
+  &__dec-button,
+  &__inc-button {
+    $diam: 1.875rem;
+    display: inline-block;
+    font-size: 1.125rem;
+    text-align: center;
+    width: $diam;
+    height: $diam;
+    line-height: $diam;
+    border-radius: $diam / 2;
+    cursor: pointer;
+  }
+  &__dec-button {
+    border: 1px solid $color-dark-25;
+  }
+  &__inc-button {
+    border: 1px solid $color-dark-50;
+  }
+  #{$liFooterButtons} {
     display: none;
+    margin: 0;
+    line-height: 2.5rem;
   }
   &--expanded {
     border: 1px solid $color-dark-50;
@@ -121,13 +90,13 @@
     }
   }
   &--edited {
-    #{$liWithButtons} {
-      display: block;
+    #{$liFooterButtons} {
+      display: flex;
     }
   }
   &--empty {
     #{$clearBtn} {
-      display: none;
+      visibility: hidden;
     }
   }
 }

@@ -2,9 +2,9 @@ $(document).ready(function () {
   const className = 'dropdown';
   const classExpanded = `${className}--expanded`;
 
-  const $select = $(`.${className}__select`);
+  const $toggle = $(`.${className}__toggle`);
 
-  $select.on('click', function () {
+  $toggle.on('click', function () {
     const $dropdown = $(this).closest(`.${className}`);
     if ($dropdown.find('.dropdown__menu').length === 1) {
       $dropdown.toggleClass(classExpanded)
@@ -15,10 +15,10 @@ $(document).ready(function () {
   const numberChangerOnClick = function () {
     const $li = $(this).closest(`.${className}__li`);
     const $dropdown = $(this).closest(`.${className}`);
-    const $count = $li.find(`.${className}__li-count`);
+    const $count = $li.find(`.${className}__count`);
 
     let n = parseInt($count.text());
-    let operator = $(this).closest(`.${className}__li-dec`).length === 1
+    let operator = $(this).closest(`.${className}__dec-button`).length === 1
       ? '-'
       : '+';
 
@@ -33,19 +33,19 @@ $(document).ready(function () {
       .removeClass(`${className}--empty`);
   };
 
-  const $inc = $(`.${className}__li-inc`);
-  const $dec = $(`.${className}__li-dec`);
+  const $incBtn = $(`.${className}__inc-button`);
+  const $decBtn = $(`.${className}__dec-button`);
 
-  $inc.on('click', numberChangerOnClick);
-  $dec.on('click', numberChangerOnClick);
+  $incBtn.on('click', numberChangerOnClick);
+  $decBtn.on('click', numberChangerOnClick);
 
-  $(`.${className}__li-clear`).on('click', function () {
-    $(this).closest(`.${className}`).find(`.${className}__li-count`).each(function (i, o) {
+  $(`.${className}__clear-button`).on('click', function () {
+    $(this).closest(`.${className}`).find(`.${className}__count`).each(function (i, o) {
       $(o).text(0);
     })
   });
 
-  $(`.${className}__li-apply`).on('click', function () {
+  $(`.${className}__apply-button`).on('click', function () {
     $(this).closest('.dropdown')
       .removeClass(`${className}--edited`)
       .removeClass(`${className}--expanded`);

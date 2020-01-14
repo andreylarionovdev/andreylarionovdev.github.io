@@ -6,7 +6,6 @@ mixin dropdown(options)
   -
     const {
       id,
-      type = 'empty',
       value = 'Выберите',
       zIndex = 9,
       selectOptions = [],
@@ -18,34 +17,34 @@ mixin dropdown(options)
   - let modifiers = []
 
   if isExpanded
-    - modifiers.push(blockName+'--expanded')
+    - modifiers.push(`${blockName}--expanded`)
   if isEdited
-    - modifiers.push(blockName+'--edited')
+    - modifiers.push(`${blockName}--edited`)
   if isEmpty
-    - modifiers.push(blockName+'--empty')
+    - modifiers.push(`${blockName}--empty`)
 
   div(id=id class=blockName class=modifiers)
-    div(class=`${blockName}__select`)
+    label(class=`${blockName}__toggle`)
       span(class=`${blockName}__text`)= value
-      i(class=[`${blockName}__icon`, 'material-icons'])= 'keyboard_arrow_down'
-      input(class=`${blockName}__input` type='text' name=id value=value)
-    if type === 'select-box'
+      i(class=[`${blockName}__arrow`, 'material-icons'])= 'keyboard_arrow_down'
+    if selectOptions.length > 0
       ul(class=`${blockName}__menu` style={'z-index': zIndex})
         each item in selectOptions
-          li(class=[`${blockName}__li`, 'clearfix'])
-            span(class=`${blockName}__li-name`)= item.text
-            span(class=`${blockName}__li-inc`)= '+'
-            span(class=`${blockName}__li-count`)= item.count
-            span(class=`${blockName}__li-dec`)= '-'
-        li(class=[`${blockName}__li`, `${blockName}__li--has-buttons`, 'clearfix'])
-          span(class=`${blockName}__li-clear`)
+          li(class=`${blockName}__li`)
+            span(class=`${blockName}__item-name`)= item.text
+            span(class=`${blockName}__count-buttons`)
+              span(class=`${blockName}__dec-button`)= '-'
+              span(class=`${blockName}__count`)= item.count
+              span(class=`${blockName}__inc-button`)= '+'
+        li(class=[`${blockName}__li`, `${blockName}__li--footer-buttons`])
+          span(class=`${blockName}__clear-button`)
             +button({
               theme: 'textual',
               caption: 'очистить',
               isHovered: true,
               href: 'javascript:void(0)',
             })
-          span(class=`${blockName}__li-apply`)
+          span(class=`${blockName}__apply-button`)
             +button({
               theme: 'textual',
               caption: 'применить',

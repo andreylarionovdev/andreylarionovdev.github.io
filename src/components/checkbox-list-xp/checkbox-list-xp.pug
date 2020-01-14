@@ -10,7 +10,7 @@ mixin checkbox-list-xp(options)
     - modifiers.push(`${blockName}--expanded`)
 
   div(class=blockName class=modifiers id=id)
-    h3(class=`${blockName}__select`)
+    h3(class=`${blockName}__toggle`)
       span(class=`${blockName}__label`)= label
       i(class=[`${blockName}__icon-down`, 'material-icons'])= 'keyboard_arrow_down'
       i(class=[`${blockName}__icon-up`, 'material-icons'])= 'keyboard_arrow_up'

@@ -6,7 +6,7 @@
   font-size: 0.875rem;
   color: $color-dark-75;
   user-select: none;
-  &__select {
+  &__toggle {
     margin: 0;
     padding: 0.5rem 0.625rem 0.6875rem 0;
     display: flex;
@@ -19,6 +19,9 @@
     font-weight: bold;
     text-transform: uppercase;
     color: $color-dark-100;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   #{$downArrow},
   #{$upArrow} {
