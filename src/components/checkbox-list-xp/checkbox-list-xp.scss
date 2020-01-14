@@ -1,7 +1,6 @@
 .checkbox-list-xp {
   $list: #{&}__list;
-  $upArrow: #{&}__icon-up;
-  $downArrow: #{&}__icon-down;
+  $arrow: #{&}__arrow;
   font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
   color: $color-dark-75;
@@ -23,14 +22,10 @@
     white-space: nowrap;
     text-overflow: ellipsis;
   }
-  #{$downArrow},
-  #{$upArrow} {
-    display: none;
-    cursor: pointer;
-    float: right;
-  }
-  #{$downArrow} {
+  #{$arrow} {
     display: inline-block;
+    cursor: pointer;
+    transition: transform .1s ease-out;
   }
   #{$list} {
     margin: 0;
@@ -43,11 +38,8 @@
     padding-bottom: 0.625rem;
   }
   &--expanded {
-    #{$downArrow} {
-      display: none;
-    }
-    #{$upArrow} {
-      display: inline-block;
+    #{$arrow} {
+      transform: rotate(180deg);
     }
     #{$list} {
       display: inline-block;

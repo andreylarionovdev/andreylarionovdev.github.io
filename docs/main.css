@@ -914,13 +914,13 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis; }
-  .checkbox-list-xp .checkbox-list-xp__icon-down,
-  .checkbox-list-xp .checkbox-list-xp__icon-up {
-    display: none;
+  .checkbox-list-xp .checkbox-list-xp__arrow {
+    display: inline-block;
     cursor: pointer;
-    float: right; }
-  .checkbox-list-xp .checkbox-list-xp__icon-down {
-    display: inline-block; }
+    -webkit-transition: -webkit-transform .1s ease-out;
+    transition: -webkit-transform .1s ease-out;
+    transition: transform .1s ease-out;
+    transition: transform .1s ease-out, -webkit-transform .1s ease-out; }
   .checkbox-list-xp .checkbox-list-xp__list {
     margin: 0;
     padding: 0;
@@ -929,10 +929,9 @@
     list-style: none; }
   .checkbox-list-xp__li {
     padding-bottom: 0.625rem; }
-  .checkbox-list-xp--expanded .checkbox-list-xp__icon-down {
-    display: none; }
-  .checkbox-list-xp--expanded .checkbox-list-xp__icon-up {
-    display: inline-block; }
+  .checkbox-list-xp--expanded .checkbox-list-xp__arrow {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
   .checkbox-list-xp--expanded .checkbox-list-xp__list {
     display: inline-block; }
 

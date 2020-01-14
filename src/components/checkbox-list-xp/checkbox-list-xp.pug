@@ -12,8 +12,7 @@ mixin checkbox-list-xp(options)
   div(class=blockName class=modifiers id=id)
     h3(class=`${blockName}__toggle`)
       span(class=`${blockName}__label`)= label
-      i(class=[`${blockName}__icon-down`, 'material-icons'])= 'keyboard_arrow_down'
-      i(class=[`${blockName}__icon-up`, 'material-icons'])= 'keyboard_arrow_up'
+      i(class=[`${blockName}__arrow`, 'material-icons'])= 'keyboard_arrow_down'
     ul(class=`${blockName}__list`)
       each item, index in items
         li(class=[`${blockName}__li`, 'clearfix'])
