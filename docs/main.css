@@ -1020,13 +1020,8 @@
 .dropdown-date-range__from {
   margin-right: 6%; }
 
-.dropdown-date-range__date-range {
-  margin-bottom: 15px; }
-
 .dropdown-date-range__dropdown {
-  position: relative;
-  height: 44px;
-  margin: 5px 0; }
+  margin: 0.3125rem 0; }
 
 .header {
   font-family: Montserrat, sans-serif;
@@ -2199,7 +2194,7 @@
           padding-left: 0;
           width: 33.33%; } }
     .ui--form-components .ui__dropdown-group,
-    .ui--form-components .ui__dropdown-group--inline,
+    .ui--form-components .ui__dropdown-group--date-range,
     .ui--form-components .ui__dropdown-group--with-apply-btn,
     .ui--form-components .ui__feedback-group,
     .ui--form-components .ui__input-group,
@@ -2214,7 +2209,7 @@
       width: 90%; }
       @media (max-width: 1199px) {
         .ui--form-components .ui__dropdown-group,
-        .ui--form-components .ui__dropdown-group--inline,
+        .ui--form-components .ui__dropdown-group--date-range,
         .ui--form-components .ui__dropdown-group--with-apply-btn,
         .ui--form-components .ui__feedback-group,
         .ui--form-components .ui__input-group,
@@ -2275,7 +2270,7 @@
       margin-bottom: 43px; }
     .ui--form-components .ui__checkbox-group {
       margin-bottom: 42px; }
-    .ui--form-components .ui__dropdown-group--inline,
+    .ui--form-components .ui__dropdown-group--date-range,
     .ui--form-components .ui__dropdown-group--date-filter {
       margin-bottom: 41px; }
     .ui--form-components .ui__input-group--masked {
@@ -2300,13 +2295,13 @@
     .ui--form-components .ui__bullet-list-group,
     .ui--form-components .ui__rich-checkbox-group {
       margin-top: 12px; }
-    .ui--form-components .ui__dropdown-group--inline .dropdown-group {
+    .ui--form-components .ui__dropdown-group--date-range .dropdown-group {
       float: left;
       width: 47%; }
-      .ui--form-components .ui__dropdown-group--inline .dropdown-group:first-child {
+      .ui--form-components .ui__dropdown-group--date-range .dropdown-group:first-child {
         margin-right: 6%; }
       @media (max-width: 991px) {
-        .ui--form-components .ui__dropdown-group--inline .dropdown-group {
+        .ui--form-components .ui__dropdown-group--date-range .dropdown-group {
           width: 100%;
           margin-right: 0;
           margin-bottom: 15px; } }

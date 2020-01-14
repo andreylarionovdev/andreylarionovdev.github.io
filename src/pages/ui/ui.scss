@@ -77,7 +77,7 @@
 
     // 90% width
     #{$parent}__dropdown-group,
-    #{$parent}__dropdown-group--inline,
+    #{$parent}__dropdown-group--date-range,
     #{$parent}__dropdown-group--with-apply-btn,
     #{$parent}__feedback-group,
     #{$parent}__input-group,
@@ -126,7 +126,7 @@
     #{$parent}__checkbox-group {
       margin-bottom: 42px;
     }
-    #{$parent}__dropdown-group--inline,
+    #{$parent}__dropdown-group--date-range,
     #{$parent}__dropdown-group--date-filter {
       margin-bottom: 41px;
     }
@@ -163,7 +163,7 @@
       margin-top: 12px;
     }
 
-    #{$parent}__dropdown-group--inline {
+    #{$parent}__dropdown-group--date-range {
       .dropdown-group {
         float: left;
         width: 47%;
