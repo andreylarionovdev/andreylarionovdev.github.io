@@ -110,8 +110,6 @@
 
 .feature-group__feature {
   border-bottom: 1px solid rgba(31, 32, 65, 0.1); }
-  .feature-group__feature:last-child {
-    border-bottom: none; }
 
 .input-group__label {
   margin-bottom: 5px; }
@@ -965,10 +963,8 @@
     margin: 0.5rem 0 0.625rem 1.25rem; }
 
 .feature {
-  padding: 20px 0;
+  padding: 1.25rem 0;
   font-family: Montserrat, sans-serif; }
-  .feature--last {
-    border-bottom: none; }
   .feature__icon {
     display: inline-block;
     float: left;
@@ -978,12 +974,12 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
   .feature__title, .feature__hint {
-    color: rgba(31, 32, 65, 0.75);
     margin: 0;
-    font-size: 0.875rem;
-    padding-left: 58px;
     display: block;
-    line-height: 24px; }
+    color: rgba(31, 32, 65, 0.75);
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    padding-left: 3.625rem; }
 
 .feedback {
   position: relative;
@@ -1020,8 +1016,8 @@
 .dropdown-date-range__from {
   margin-right: 6%; }
 
-.dropdown-date-range__dropdown {
-  margin: 0.3125rem 0; }
+.dropdown-date-range__label {
+  margin-bottom: 0.3125rem; }
 
 .header {
   font-family: Montserrat, sans-serif;
@@ -1903,7 +1899,7 @@
   .room-search__label {
     margin-bottom: 5px; }
   .room-search__guests {
-    margin-top: 16px; }
+    margin-top: 1.25rem; }
   .room-search__guests-dropdown, .room-search__date-dropdown {
     position: relative;
     height: 44px; }
@@ -2134,7 +2130,7 @@
     width: 93%;
     margin-top: 143px; }
     .ui--form-components .ui__top {
-      margin-bottom: 100px; }
+      margin-bottom: 6.25rem; }
       @media (max-width: 1199px) {
         .ui--form-components .ui__top > .column {
           padding: 0 2%; } }
@@ -2149,7 +2145,7 @@
           padding-left: 2.7%;
           width: 33.33%; } }
     .ui--form-components .ui__dropdown-states {
-      margin-bottom: 160px; }
+      margin-bottom: 10rem; }
       @media (max-width: 1199px) {
         .ui--form-components .ui__dropdown-states > .column {
           padding: 0 2%; } }
@@ -2179,7 +2175,7 @@
           padding-left: 2.7%;
           width: 33.33%; } }
     .ui--form-components .ui__bottom {
-      margin-bottom: 0; }
+      margin-bottom: 10rem; }
       @media (max-width: 1199px) {
         .ui--form-components .ui__bottom > .column {
           padding: 0 2%; } }

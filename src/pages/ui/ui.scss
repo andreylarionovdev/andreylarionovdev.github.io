@@ -63,16 +63,16 @@
     }
 
     #{$parent}__top {
-      @include responsive-columns(100px, 6.8%, 6.7%, 2.7%, 33.33%, 33.33%, 33.33%)
+      @include responsive-columns(6.25rem, 6.8%, 6.7%, 2.7%, 33.33%, 33.33%, 33.33%)
     }
     #{$parent}__dropdown-states {
-      @include responsive-columns(160px, 6.7%, 6.7%, 2.7%, 33.33%, 33.33%, 33.33%)
+      @include responsive-columns(10rem, 6.7%, 6.7%, 2.7%, 33.33%, 33.33%, 33.33%)
     }
     #{$parent}__rich-lists {
       @include responsive-columns(0, 6.7%, 6.75%, 2.7%, 33.33%, 33.33%, 33.33%)
     }
     #{$parent}__bottom {
-      @include responsive-columns(0, 6.7%, 6.75%, 0, 33.33%, 66.66%)
+      @include responsive-columns(10rem, 6.7%, 6.75%, 0, 33.33%, 66.66%)
     }
 
     // 90% width
