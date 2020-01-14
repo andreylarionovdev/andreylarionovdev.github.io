@@ -427,17 +427,19 @@ block content
               hint: 'Окно в каждой из спален'
             })
     .column.column--8.second
-      article.ui__feedback-group
+      .ui__feedback-group
         .feedback-group
           .feedback-group__feedback
             +feedback({
-              author: 'Мурад Сарафанов',
+              author: {
+                name: 'Мурад Сарафанов',
+                image: {
+                  src: 'murad.png',
+                  alt: 'Фото автора'
+                }
+              },
               date: '5 дней назад',
               text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И&nbsp;стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
               favoritesCount: 12,
               isFavorite: true,
-              image: {
-                src: 'murad.png',
-                alt: 'Фото автора'
-              }
             })

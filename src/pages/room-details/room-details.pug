@@ -47,28 +47,32 @@ block main
           h2.room-details__feedbacks-title.h2= 'Отзывы посетителей номера'
           span.room-details__feedbacks-counter.body
             = '2 отзыва'
-          article.room-details__feedback
+          .room-details__feedback
             +feedback({
-              author: 'Мурад Сарафанов',
+              author: {
+                name: 'Мурад Сарафанов',
+                image: {
+                  src: 'murad.png',
+                  alt: 'Фото автора'
+                }
+              },
               date: '5 дней назад',
               text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И&nbsp;стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
               favoritesCount: 12,
               isFavorite: true,
-              image: {
-                src: 'murad.png',
-                alt: 'Фото автора'
-              }
             })
-          article.room-details__feedback
+          .room-details__feedback
             +feedback({
-              author: 'Патриция Стёклышкова',
+              author: {
+                name: 'Патриция Стёклышкова',
+                image: {
+                  src: 'patricia.png',
+                  alt: 'Фото автора'
+                }
+              },
               date: 'Неделю назад',
               text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',
               favoritesCount: 2,
-              image: {
-                src: 'patricia.png',
-                alt: 'Фото автора'
-              }
             })
         section.room-details__rules
           h2.room-details__rules-title.h2= 'Правила'

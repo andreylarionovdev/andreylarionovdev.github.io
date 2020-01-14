@@ -1,34 +1,52 @@
 .feedback {
-  position: relative;
   font-family: Montserrat, sans-serif;
-  &__image {
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    width: 48px;
-    height: 48px;
+  font-size: 0.875rem;
+  color: $color-dark-75;
+  $picture-width: 3rem;
+  $left-indent: $picture-width + 0.625rem;
+  &__author-picture-wrapper {
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: $picture-width;
+    height: $picture-width;
+    overflow: hidden;
     border-radius: 50%;
-    box-shadow: 0 10px 20px rgba(31, 32, 65, 0.1);
+    box-shadow: 0 0.625rem 1.25rem rgba(31, 32, 65, 0.1);
     border: 2px solid white;
-
+  }
+  &__author-picture {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__author-name,
+  &__date,
+  &__text {
+    padding-left: $left-indent;
+    margin: 0;
+  }
+  &__author-name {
+    line-height: 1.5rem;
+    font-weight: bold;
+  }
+  &__date {
+    line-height: 1.625rem;
+  }
+  &__content {
+    position: relative;
+    margin-top: 0.625rem;
   }
   &__like-button {
     position: absolute;
-    left: 4px;
-    top: 60px;
-  }
-  &__author,
-  &__date,
-  &__text {
-    margin: 0;
-    font-size: 0.875rem;
-    display: block;
-    padding-left: 58px;
-    line-height: 24px;
-    color: $color-dark-75;
+    left: 0.1875rem;
+    top: 0;
+    height: 100%;
+    width: 0.625rem;
   }
   &__text {
-    margin-top: 10px;
+    line-height: 1.5rem;
   }
 }

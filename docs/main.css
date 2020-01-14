@@ -981,32 +981,46 @@
     padding-left: 3.625rem; }
 
 .feedback {
-  position: relative;
-  font-family: Montserrat, sans-serif; }
-  .feedback__image {
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    width: 48px;
-    height: 48px;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  color: rgba(31, 32, 65, 0.75); }
+  .feedback__author-picture-wrapper {
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 3rem;
+    height: 3rem;
+    overflow: hidden;
     border-radius: 50%;
-    -webkit-box-shadow: 0 10px 20px rgba(31, 32, 65, 0.1);
-            box-shadow: 0 10px 20px rgba(31, 32, 65, 0.1);
+    -webkit-box-shadow: 0 0.625rem 1.25rem rgba(31, 32, 65, 0.1);
+            box-shadow: 0 0.625rem 1.25rem rgba(31, 32, 65, 0.1);
     border: 2px solid white; }
+  .feedback__author-picture {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+  .feedback__author-name, .feedback__date, .feedback__text {
+    padding-left: 3.625rem;
+    margin: 0; }
+  .feedback__author-name {
+    line-height: 1.5rem;
+    font-weight: bold; }
+  .feedback__date {
+    line-height: 1.625rem; }
+  .feedback__content {
+    position: relative;
+    margin-top: 0.625rem; }
   .feedback__like-button {
     position: absolute;
-    left: 4px;
-    top: 60px; }
-  .feedback__author, .feedback__date, .feedback__text {
-    margin: 0;
-    font-size: 0.875rem;
-    display: block;
-    padding-left: 58px;
-    line-height: 24px;
-    color: rgba(31, 32, 65, 0.75); }
+    left: 0.1875rem;
+    top: 0;
+    height: 100%;
+    width: 0.625rem; }
   .feedback__text {
-    margin-top: 10px; }
+    line-height: 1.5rem; }
 
 .dropdown-date-range__from, .dropdown-date-range__to {
   float: left;
