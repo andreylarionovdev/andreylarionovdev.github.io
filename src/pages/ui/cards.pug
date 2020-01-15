@@ -15,50 +15,51 @@ block vars
 block content
   nav.ui__logo
     +logo
-  .column.column--4.first
-    article.ui__room-search
-      +room-search()
-    article.ui__sign-up
-      +sign-up()
-  .column.column--4.second
-    article.ui__room-book
-      +room-book({
-        roomNumber: 888,
-        pricePerDay: 9990,
-        discount: 2179,
-        fee: 300,
-        feature: 'люкс'
-      })
-    article.ui__sign-in
-      +sign-in()
-  .column.column--4.third
-    article.ui__datepicker-sample
-      +datepicker()
-    article.ui__room-thumb--vip
-      +room-thumb({
-        roomNumber: 888,
-        pricePerDay: 9990,
-        feedbackCounter: 145,
-        rate: 5,
-        images: [
-          {src: 'room-thumb-1.png', alt: 'Room 888'},
-          {src: 'room-thumb-1.png', alt: 'Room 888'},
-          {src: 'room-thumb-1.png', alt: 'Room 888'},
-          {src: 'room-thumb-1.png', alt: 'Room 888'},
-        ],
-        feature:'люкс',
-        focus: true
-      })
-    article.ui__room-thumb
-      +room-thumb({
-        roomNumber: 840,
-        pricePerDay: 9900,
-        feedbackCounter: 65,
-        rate: 4,
-        images: [
-          {src: 'room-thumb-2.png', alt: 'Room 840'},
-          {src: 'room-thumb-2.png', alt: 'Room 840'},
-          {src: 'room-thumb-2.png', alt: 'Room 840'},
-          {src: 'room-thumb-2.png', alt: 'Room 840'},
-        ]
-      })
+  div.ui__cards-container
+    div.grid-column
+      article.ui__card
+        +room-search()
+      article.ui__card
+        +sign-up()
+    div.grid-column
+      article.ui__card
+        +room-book({
+          roomNumber: 888,
+          pricePerDay: 9990,
+          discount: 2179,
+          fee: 300,
+          feature: 'люкс'
+        })
+      article.ui__card
+        +sign-in()
+    div.grid-column
+      article.ui__card
+        +datepicker()
+      article.ui__card.ui__card--room-thumb-vip
+        +room-thumb({
+          roomNumber: 888,
+          pricePerDay: 9990,
+          feedbackCounter: 145,
+          rate: 5,
+          images: [
+            {src: 'room-thumb-1.png', alt: 'Room 888'},
+            {src: 'room-thumb-1.png', alt: 'Room 888'},
+            {src: 'room-thumb-1.png', alt: 'Room 888'},
+            {src: 'room-thumb-1.png', alt: 'Room 888'},
+          ],
+          feature:'люкс',
+          focus: true
+        })
+      article.ui__card.ui__card--room-thumb
+        +room-thumb({
+          roomNumber: 840,
+          pricePerDay: 9900,
+          feedbackCounter: 65,
+          rate: 4,
+          images: [
+            {src: 'room-thumb-2.png', alt: 'Room 840'},
+            {src: 'room-thumb-2.png', alt: 'Room 840'},
+            {src: 'room-thumb-2.png', alt: 'Room 840'},
+            {src: 'room-thumb-2.png', alt: 'Room 840'},
+          ]
+        })

@@ -1,7 +1,7 @@
 @import '../card';
 .room-book {
   @include card;
-  padding: 39px 30px 29px 27px;
+  padding: 2.375rem 1.875rem 1.875rem 1.75rem;
   @media (max-width: $screen-xs-max) {
     padding: 30px 15px;
   }
@@ -42,7 +42,7 @@
   }
   &__guests {
     position: relative;
-    margin-top: 16px;
+    margin-top: 1.25rem;
   }
   &__price-per-day {
     font-family: Montserrat, sans-serif;

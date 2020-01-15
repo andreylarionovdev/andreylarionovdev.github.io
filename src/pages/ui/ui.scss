@@ -206,23 +206,26 @@
   }
 
   &--cards {
-    width: 83.5%;
-    margin-top: 150px;
-    background: $color-gray;
-    @include responsive-columns(0, 1.7%, 3.5%, 3.3%, 33.33%, 35%, 30%);
-
-    #{$parent}__room-search,
-    #{$parent}__sign-in,
-    #{$parent}__sign-up,
-    #{$parent}__datepicker-sample,
-    #{$parent}__room-thumb--vip,
-    #{$parent}__room-thumb,
-    #{$parent}__room-book {
-      margin-bottom: 40px;
+    width: 80.5%;
+    @media (max-width: $screen-md-min) {
+      width: 90.5%;
     }
-    #{$parent}__room-thumb--vip,
-    #{$parent}__room-thumb {
-      padding-right: 50px;
+    margin-top: 9.375rem;
+    background: $color-gray;
+    #{$parent}__cards-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 0.84210526315fr;
+      @media (max-width: $screen-lg-min) {
+        grid-template-columns: repeat(auto-fill, minmax(23.75rem, 1fr));
+      }
+      grid-column-gap: 2.5rem;
+    }
+    #{$parent}__card {
+      margin-bottom: 2.5rem;
+      &--room-thumb-vip,
+      &--room-thumb {
+        width: 16.875rem;
+      }
     }
   }
 
