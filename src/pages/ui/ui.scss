@@ -1,7 +1,7 @@
 .ui {
   $parent: #{&};
-  max-width: 1920px;
-  min-width: 320px;
+  max-width: 120rem;
+  min-width: 20rem;
   margin: 0 auto;
   &__logo {
     margin: 0;
@@ -15,192 +15,111 @@
     margin-top: 145px;
   }
 
-  @mixin responsive-columns(
-    $margin-bottom,
-    $pad1: 6.8%,
-    $pad2: 6.7%,
-    $pad3: 2.7%,
-    $width1: 33.33%,
-    $width2: 33.33%,
-    $width3: 33.33%
-  ) {
-    margin-bottom: $margin-bottom;
-    > .column {
-      // ... 1199px
-      @media (max-width: $screen-md-max) {
-        padding: 0 2%;
-      }
-      // 1200px ...
-      @media (min-width: $screen-lg-min) {
-        &.first {
-          padding-left: $pad1;
-          width: $width1;
-        }
-        &.second {
-          padding-left: $pad2;
-          width: $width2;
-        }
-        &.third {
-          padding-left: $pad3;
-          width: $width3;
-        }
-      }
-    }
-  }
-
   &--form-components {
+    margin-top: 8.9375rem;
+    width: 80.5%;
     font-family: Montserrat, sans-serif;
-    width: 93%;
-    margin-top: 143px;
-
-    @mixin responsive-wrapper($lgWidth) {
-      position: relative;
-      width: $lgWidth;
-      // ... 1199px
-      @media (max-width: $screen-md-max) {
-        width: 100%;
-      }
-    }
 
     #{$parent}__top {
-      @include responsive-columns(6.25rem, 6.8%, 6.7%, 2.7%, 33.33%, 33.33%, 33.33%)
+      margin-bottom: 5rem;
+      display: grid;
+      grid-template-columns: 27.63% 10.88% 27.63% 6.2176% 27.63%;
+
+      #{$parent}__input-group {
+        margin-bottom: 1.25rem;
+        &--masked {
+          margin-bottom: 2.5rem;
+        }
+        &--with-submit {
+          padding-right: 3.375rem;
+        }
+      }
+      #{$parent}__dropdown-group {
+        margin-bottom: 1.4375rem;
+        &--date-range,
+        &--date-filter {
+          margin-bottom: 2.5625rem;
+        }
+        &--date-filter {
+          padding-right: 3.375rem;
+        }
+      }
+      #{$parent}__checkbox-group {
+        margin-bottom: 2.5rem;
+        padding-right: 5rem;
+      }
+      #{$parent}__radio-group,
+      #{$parent}__rate-group {
+        margin-bottom: 2.625rem;
+      }
+      #{$parent}__toggle-group {
+        margin-bottom: 2.75rem;
+      }
+      #{$parent}__like-button-group {
+        margin-bottom: 2.25rem;
+      }
+      #{$parent}__range-slider {
+        margin-bottom: 2.375rem;
+        padding-right: 3.375rem;
+      }
+      #{$parent}__button-group {
+        margin-bottom: 2.5rem;
+      }
     }
+
     #{$parent}__dropdown-states {
-      @include responsive-columns(10rem, 6.7%, 6.7%, 2.7%, 33.33%, 33.33%, 33.33%)
+      margin-bottom: 2.5625rem;
+      display: grid;
+      grid-template-columns: 22.95% 15.62% 27.61% 6.21% 27.61%;
+      .grid-column {
+        min-height: 16.625rem;
+      }
+      #{$parent}__dropdown-group {
+        &--collapsed {
+          margin-bottom: 1.25rem;
+        }
+      }
     }
+
     #{$parent}__rich-lists {
-      @include responsive-columns(0, 6.7%, 6.75%, 2.7%, 33.33%, 33.33%, 33.33%)
+      display: grid;
+      grid-template-columns: 22.95% 15.62% 27.61% 6.21% 27.61%;
+
+      #{$parent}__rich-checkbox-group {
+        padding: 0.8125rem 3.5rem 0 0;
+      }
+      #{$parent}__bullet-list-group {
+        padding: 0.8125rem 3.75rem 0 0;
+      }
+
+      #{$parent}__checkbox-list-xp-group {
+        &--collapsed {
+          margin-bottom: 1.3125rem;
+        }
+        &--expanded {
+          margin-bottom: 0.6875rem;
+        }
+      }
     }
+
     #{$parent}__bottom {
-      @include responsive-columns(10rem, 6.7%, 6.75%, 0, 33.33%, 66.66%)
+      display: grid;
+      grid-template-columns: 22.95% 15.62% 61.43%;
+
+      #{$parent}__feedback-group {
+        margin-top: 1.875rem;
+      }
     }
 
-    // 90% width
-    #{$parent}__dropdown-group,
-    #{$parent}__dropdown-group--date-range,
-    #{$parent}__dropdown-group--with-apply-btn,
-    #{$parent}__feedback-group,
-    #{$parent}__input-group,
-    #{$parent}__input-group--masked,
-    #{$parent}__input-group--hovered,
-    #{$parent}__like-button-group,
-    #{$parent}__paginator-group,
-    #{$parent}__radio-group,
-    #{$parent}__rate-group,
-    #{$parent}__toggle-group {
-      @include responsive-wrapper(90%)
-    }
-    // 78% width
-    #{$parent}__button-group,
-    #{$parent}__dropdown-group--with-clear-btn,
-    #{$parent}__feature-group {
-      @include responsive-wrapper(78%)
-    }
-    // 75% width
-    #{$parent}__checkbox-list-xp-group--collapsed,
-    #{$parent}__checkbox-list-xp-group--expanded,
-    #{$parent}__dropdown-group--date-filter,
-    #{$parent}__dropdown-group--collapsed,
-    #{$parent}__dropdown-group--expanded,
-    #{$parent}__input-group--with-submit,
-    #{$parent}__rich-checkbox-group {
-      @include responsive-wrapper(74.5%)
-    }
-    // 65% width
-    #{$parent}__checkbox-group,
-    #{$parent}__range-slider {
-      @include responsive-wrapper(65%)
-    }
-    // 63% width
-    #{$parent}__bullet-list-group {
-      @include responsive-wrapper(63%)
-    }
-
-    #{$parent}__toggle-group {
-      margin-bottom: 44px;
-    }
-    #{$parent}__rate-group,
-    #{$parent}__radio-group {
-      margin-bottom: 43px;
-    }
-    #{$parent}__checkbox-group {
-      margin-bottom: 42px;
-    }
-    #{$parent}__dropdown-group--date-range,
-    #{$parent}__dropdown-group--date-filter {
-      margin-bottom: 41px;
-    }
-    #{$parent}__input-group--masked {
-      margin-bottom: 40px;
-    }
-    #{$parent}__like-button-group {
-      margin-bottom: 36px;
-    }
-    #{$parent}__feedback-group {
-      margin-top: 30px;
-    }
-    #{$parent}__checkbox-list-xp-group--collapsed {
-      margin-bottom: 1.3125rem;
-    }
-    #{$parent}__dropdown-group {
-      margin-bottom: 22px;
-    }
-    #{$parent}__input-group {
-      margin-bottom: 21px;
-    }
-    #{$parent}__input-group--hovered,
-    #{$parent}__dropdown-group--collapsed {
-      margin-bottom: 20px;
-    }
-    #{$parent}__range-slider {
-      margin-bottom: 38px;
-    }
-    #{$parent}__checkbox-list-xp-group--expanded {
-      margin-bottom: 0.6875rem;
-    }
-    #{$parent}__bullet-list-group,
-    #{$parent}__rich-checkbox-group {
-      margin-top: 12px;
-    }
-
-    #{$parent}__dropdown-group--date-range {
-      .dropdown-group {
-        float: left;
-        width: 47%;
-        &:first-child {
-          margin-right: 6%;
+    .row {
+      @media (max-width: $screen-lg-min) {
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+        grid-gap: 2.5rem;
+      }
+      .grid-column-gap {
+        @media (max-width: $screen-lg-min) {
+          display: none;
         }
-        // ... 991px
-        @media (max-width: $screen-sm-max) {
-          width: 100%;
-          margin-right: 0;
-          margin-bottom: 15px;
-        }
-      }
-    }
-
-    #{$parent}__input-group--with-submit {
-      // ... 767px
-      @media (max-width: $screen-xs-max) {
-        margin-bottom: 40px;
-      }
-    }
-    #{$parent}__dropdown-group--with-apply-btn {
-      // ... 767px
-      @media (max-width: $screen-xs-max) {
-        margin-bottom: 170px;
-      }
-    }
-    #{$parent}__dropdown-group--expanded {
-      // ... 767px
-      @media (max-width: $screen-xs-max) {
-        margin-bottom: 130px;
-      }
-    }
-    #{$parent}__dropdown-states {
-      // ... 767px
-      @media (max-width: $screen-xs-max) {
-        margin-bottom: 200px;
       }
     }
   }

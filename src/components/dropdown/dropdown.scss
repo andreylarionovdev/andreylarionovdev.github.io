@@ -2,19 +2,21 @@
   $menu: #{&}__menu;
   $clearBtn: #{&}__clear-button;
   $liFooterButtons: #{&}__li--footer-buttons;
+  $toggle: #{&}__toggle;
+  position: relative;
   font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
   color: $color-dark-75;
-  border: 1px solid $color-dark-25;
-  border-radius: 0.25rem;
   user-select: none;
-  &__toggle {
+  #{$toggle} {
     position: relative;
     padding: 0.5rem 0.625rem 0.625rem 0.875rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    border: 1px solid $color-dark-25;
+    border-radius: 0.25rem;
   }
   &__text {
     overflow: hidden;
@@ -93,9 +95,11 @@
     line-height: 2.5rem;
   }
   &--expanded {
-    border: 1px solid $color-dark-50;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+    #{$toggle} {
+      border: 1px solid $color-dark-50;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
     #{$menu} {
       display: block;
     }
