@@ -1,0 +1,9 @@
+.ui-colors-type {
+  width: 79.2%;
+  margin: 9rem auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @media (max-width: $screen-lg-min) {
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  }
+}

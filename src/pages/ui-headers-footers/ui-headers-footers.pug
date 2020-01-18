@@ -1,0 +1,21 @@
+extends ../base
+
+include ../../components/logo/logo
+include ../../components/header/header
+include ../../components/footer/footer
+
+block vars
+  - const title = 'UI Kit - Headers & Footers'
+  - const theme = 'gray'
+block content
+  div.ui-headers-footers
+    nav.container__logo
+      +logo
+    article.ui-headers-footers__header
+      +header
+    article.ui-headers-footers__header.ui-headers-footers__header--signed
+      +header({user: 'Cosmin Negoita'})
+    article.ui-headers-footers__footer
+      +footer
+    article.ui-headers-footers__footer.ui-headers-footers__footer--creative
+      +footer({theme:'creative'})

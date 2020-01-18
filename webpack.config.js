@@ -104,19 +104,19 @@ const config = {
     }),
     new HtmlWebpackPlugin({
       filename: 'ui-colors-type.html',
-      template: 'src/pages/ui/colors-type.pug'
+      template: 'src/pages/ui-colors-type/ui-colors-type.pug'
     }),
     new HtmlWebpackPlugin({
       filename: 'ui-form-elements.html',
-      template: 'src/pages/ui/form-elements.pug'
+      template: 'src/pages/ui-form-elements/ui-form-elements.pug'
     }),
     new HtmlWebpackPlugin({
       filename: 'ui-cards.html',
-      template: 'src/pages/ui/cards.pug'
+      template: 'src/pages/ui-cards/ui-cards.pug'
     }),
     new HtmlWebpackPlugin({
       filename: 'ui-headers-footers.html',
-      template: 'src/pages/ui/headers-footers.pug'
+      template: 'src/pages/ui-headers-footers/ui-headers-footers.pug'
     }),
     new HtmlWebpackPlugin({
       filename: 'landing.html',

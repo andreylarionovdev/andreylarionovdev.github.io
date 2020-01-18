@@ -1,0 +1,21 @@
+.ui-cards {
+  margin: 9.375rem auto 0;
+  width: 80.5%;
+  @media (max-width: $screen-md-min) {
+    width: 90.5%;
+  }
+  display: grid;
+  grid-template-columns: 1.1875fr 1.1875fr 1fr;
+  @media (max-width: $screen-lg-min) {
+    grid-template-columns: repeat(auto-fill, minmax(23.75rem, 1fr));
+  }
+  grid-column-gap: 2.5rem;
+
+  &__card {
+    margin-bottom: 2.5rem;
+    &--room-thumb-vip,
+    &--room-thumb {
+      width: 16.875rem;
+    }
+  }
+}

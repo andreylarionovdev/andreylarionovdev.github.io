@@ -35,39 +35,6 @@
   .body--black {
     color: black; }
 
-.column {
-  float: left; }
-  .column--3 {
-    width: 25%; }
-    @media (max-width: 768px) {
-      .column--3 {
-        width: 98%;
-        padding: 0 1%; } }
-  .column--4 {
-    width: 33.33%; }
-    @media (max-width: 768px) {
-      .column--4 {
-        width: 98%;
-        padding: 0 1%; } }
-  .column--6 {
-    width: 50%; }
-    @media (max-width: 768px) {
-      .column--6 {
-        width: 98%;
-        padding: 0 1%; } }
-  .column--8 {
-    width: 66.66%; }
-    @media (max-width: 768px) {
-      .column--8 {
-        width: 98%;
-        padding: 0 1%; } }
-  .column--9 {
-    width: 75%; }
-    @media (max-width: 768px) {
-      .column--9 {
-        width: 98%;
-        padding: 0 1%; } }
-
 .bullet-list-group__label {
   margin-bottom: 13px; }
 
@@ -2129,117 +2096,106 @@
       .sign-up__auth-button {
         width: 100%; } }
 
-.ui {
-  max-width: 120rem;
-  min-width: 20rem;
-  margin: 0 auto; }
-  .ui__logo {
-    margin: 0;
-    position: absolute;
-    top: 30px;
-    left: 30px; }
-  .ui--index, .ui--color-type {
-    width: 79.2%;
-    margin-top: 145px; }
-  .ui--form-components {
-    margin-top: 8.9375rem;
-    width: 80.5%;
-    font-family: Montserrat, sans-serif; }
-    .ui--form-components .ui__top {
-      margin-bottom: 5rem;
-      display: grid;
-      grid-template-columns: 27.63% 10.88% 27.63% 6.2176% 27.63%; }
-      .ui--form-components .ui__top .ui__input-group {
-        margin-bottom: 1.25rem; }
-        .ui--form-components .ui__top .ui__input-group--masked {
-          margin-bottom: 2.5rem; }
-        .ui--form-components .ui__top .ui__input-group--with-submit {
-          padding-right: 3.375rem; }
-      .ui--form-components .ui__top .ui__dropdown-group {
-        margin-bottom: 1.4375rem; }
-        .ui--form-components .ui__top .ui__dropdown-group--date-range, .ui--form-components .ui__top .ui__dropdown-group--date-filter {
-          margin-bottom: 2.5625rem; }
-        .ui--form-components .ui__top .ui__dropdown-group--date-filter {
-          padding-right: 3.375rem; }
-      .ui--form-components .ui__top .ui__checkbox-group {
-        margin-bottom: 2.5rem;
-        padding-right: 5rem; }
-      .ui--form-components .ui__top .ui__radio-group,
-      .ui--form-components .ui__top .ui__rate-group {
-        margin-bottom: 2.625rem; }
-      .ui--form-components .ui__top .ui__toggle-group {
-        margin-bottom: 2.75rem; }
-      .ui--form-components .ui__top .ui__like-button-group {
-        margin-bottom: 2.25rem; }
-      .ui--form-components .ui__top .ui__range-slider {
-        margin-bottom: 2.375rem;
-        padding-right: 3.375rem; }
-      .ui--form-components .ui__top .ui__button-group {
-        margin-bottom: 2.5rem; }
-    .ui--form-components .ui__dropdown-states {
-      margin-bottom: 2.5625rem;
-      display: grid;
-      grid-template-columns: 22.95% 15.62% 27.61% 6.21% 27.61%; }
-      .ui--form-components .ui__dropdown-states .grid-column {
-        min-height: 16.625rem; }
-      .ui--form-components .ui__dropdown-states .ui__dropdown-group--collapsed {
-        margin-bottom: 1.25rem; }
-    .ui--form-components .ui__rich-lists {
-      display: grid;
-      grid-template-columns: 22.95% 15.62% 27.61% 6.21% 27.61%; }
-      .ui--form-components .ui__rich-lists .ui__rich-checkbox-group {
-        padding: 0.8125rem 3.5rem 0 0; }
-      .ui--form-components .ui__rich-lists .ui__bullet-list-group {
-        padding: 0.8125rem 3.75rem 0 0; }
-      .ui--form-components .ui__rich-lists .ui__checkbox-list-xp-group--collapsed {
-        margin-bottom: 1.3125rem; }
-      .ui--form-components .ui__rich-lists .ui__checkbox-list-xp-group--expanded {
-        margin-bottom: 0.6875rem; }
-    .ui--form-components .ui__bottom {
-      display: grid;
-      grid-template-columns: 22.95% 15.62% 61.43%; }
-      .ui--form-components .ui__bottom .ui__feedback-group {
-        margin-top: 1.875rem; }
+.ui-colors-type {
+  width: 79.2%;
+  margin: 9rem auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  @media (max-width: 1200px) {
+    .ui-colors-type {
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); } }
+
+.ui-cards {
+  margin: 9.375rem auto 0;
+  width: 80.5%;
+  display: grid;
+  grid-template-columns: 1.1875fr 1.1875fr 1fr;
+  grid-column-gap: 2.5rem; }
+  @media (max-width: 992px) {
+    .ui-cards {
+      width: 90.5%; } }
+  @media (max-width: 1200px) {
+    .ui-cards {
+      grid-template-columns: repeat(auto-fill, minmax(23.75rem, 1fr)); } }
+  .ui-cards__card {
+    margin-bottom: 2.5rem; }
+    .ui-cards__card--room-thumb-vip, .ui-cards__card--room-thumb {
+      width: 16.875rem; }
+
+.ui-form-elements {
+  margin: 8.9375rem auto 0;
+  font-family: Montserrat, sans-serif;
+  width: 80.5%; }
+  .ui-form-elements__top {
+    margin-bottom: 5rem;
+    grid-template-columns: 27.63% 10.88% 27.63% 6.2176% 27.63%; }
+  .ui-form-elements__dropdown-states {
+    margin-bottom: 2.5625rem;
+    grid-template-columns: 22.95% 15.62% 27.61% 6.21% 27.61%; }
+    .ui-form-elements__dropdown-states .grid-column {
+      min-height: 16.625rem; }
+  .ui-form-elements__rich-lists {
+    grid-template-columns: 22.95% 15.62% 27.61% 6.21% 27.61%; }
+  .ui-form-elements__bottom {
+    grid-template-columns: 22.95% 15.62% 61.43%; }
+  .ui-form-elements .row {
+    display: grid; }
     @media (max-width: 1200px) {
-      .ui--form-components .row {
+      .ui-form-elements .row {
         grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
         grid-gap: 2.5rem; } }
     @media (max-width: 1200px) {
-      .ui--form-components .row .grid-column-gap {
+      .ui-form-elements .row .grid-column-gap {
         display: none; } }
-  .ui--cards {
-    width: 80.5%;
-    margin-top: 9.375rem;
-    background: #E5E5E5; }
-    @media (max-width: 992px) {
-      .ui--cards {
-        width: 90.5%; } }
-    .ui--cards .ui__cards-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr 0.84210526315fr;
-      grid-column-gap: 2.5rem; }
-      @media (max-width: 1200px) {
-        .ui--cards .ui__cards-container {
-          grid-template-columns: repeat(auto-fill, minmax(23.75rem, 1fr)); } }
-    .ui--cards .ui__card {
+  .ui-form-elements__input-group {
+    margin-bottom: 1.25rem; }
+    .ui-form-elements__input-group--masked {
       margin-bottom: 2.5rem; }
-      .ui--cards .ui__card--room-thumb-vip, .ui--cards .ui__card--room-thumb {
-        width: 16.875rem; }
-  .ui--headers-footers {
-    margin-top: 150px;
-    background: #E5E5E5; }
-    .ui--headers-footers .ui__header--anon,
-    .ui--headers-footers .ui__header--signed,
-    .ui--headers-footers .ui__footer,
-    .ui--headers-footers .ui__footer--creative {
-      margin-bottom: 40px; }
-    .ui--headers-footers .ui__header--anon,
-    .ui--headers-footers .ui__header--signed {
-      height: 70px; }
-    .ui--headers-footers .ui__footer {
-      min-height: 442px; }
-      .ui--headers-footers .ui__footer--creative {
-        height: 368px; }
+    .ui-form-elements__input-group--with-submit {
+      padding-right: 3.375rem; }
+  .ui-form-elements__dropdown-group {
+    margin-bottom: 1.4375rem; }
+    .ui-form-elements__dropdown-group--date-range, .ui-form-elements__dropdown-group--date-filter {
+      margin-bottom: 2.5625rem; }
+    .ui-form-elements__dropdown-group--date-filter {
+      padding-right: 3.375rem; }
+    .ui-form-elements__dropdown-group--collapsed {
+      margin-bottom: 1.25rem; }
+  .ui-form-elements__checkbox-group {
+    margin-bottom: 2.5rem;
+    padding-right: 5rem; }
+  .ui-form-elements__radio-group, .ui-form-elements__rate-group {
+    margin-bottom: 2.625rem; }
+  .ui-form-elements__toggle-group {
+    margin-bottom: 2.75rem; }
+  .ui-form-elements__like-button-group {
+    margin-bottom: 2.25rem; }
+  .ui-form-elements__range-slider {
+    margin-bottom: 2.375rem;
+    padding-right: 3.375rem; }
+  .ui-form-elements__button-group {
+    margin-bottom: 2.5rem; }
+  .ui-form-elements__rich-checkbox-group {
+    padding: 0.8125rem 3.5rem 0 0; }
+  .ui-form-elements__bullet-list-group {
+    padding: 0.8125rem 3.75rem 0 0; }
+  .ui-form-elements__checkbox-list-xp-group--collapsed {
+    margin-bottom: 1.3125rem; }
+  .ui-form-elements__checkbox-list-xp-group--expanded {
+    margin-bottom: 0.6875rem; }
+  .ui-form-elements__feedback-group {
+    margin-top: 1.875rem; }
+
+.ui-headers-footers {
+  margin-top: 9.375rem; }
+  .ui-headers-footers__header, .ui-headers-footers__footer {
+    margin-bottom: 2.5rem; }
+  .ui-headers-footers__header {
+    height: 4.375rem; }
+  .ui-headers-footers__footer {
+    min-height: 27.625rem; }
+    .ui-headers-footers__footer--creative {
+      min-height: 23rem; }
 
 .wrapper-header {
   height: 70px; }
@@ -2550,6 +2506,17 @@ html {
 
 body {
   margin: 0; }
+
+.container {
+  max-width: 120rem;
+  min-width: 20rem; }
+  .container__logo {
+    margin: 0;
+    position: absolute;
+    top: 1.875rem;
+    left: 1.875rem; }
+  .container--gray {
+    background-color: #E5E5E5; }
 
 .clearfix:after {
   content: '';

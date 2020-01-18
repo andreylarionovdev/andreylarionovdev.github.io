@@ -10,19 +10,18 @@ include ../../components/card/sign-up/sign-up
 
 block vars
   - const title = 'UI Kit - Cards'
-  - const bodyClasses = ['ui', 'ui--cards']
-
+  - const theme = 'gray'
 block content
-  nav.ui__logo
-    +logo
-  div.ui__cards-container
+  div.ui-cards
+    nav.container__logo
+      +logo
     div.grid-column
-      article.ui__card
+      article.ui-cards__card
         +room-search()
-      article.ui__card
+      article.ui-cards__card
         +sign-up()
     div.grid-column
-      article.ui__card
+      article.ui-cards__card
         +room-book({
           roomNumber: 888,
           pricePerDay: 9990,
@@ -30,12 +29,12 @@ block content
           fee: 300,
           feature: 'люкс'
         })
-      article.ui__card
+      article.ui-cards__card
         +sign-in()
     div.grid-column
-      article.ui__card
+      article.ui-cards__card
         +datepicker()
-      article.ui__card.ui__card--room-thumb-vip
+      article.ui-cards__card.ui-cards__card--room-thumb-vip
         +room-thumb({
           roomNumber: 888,
           pricePerDay: 9990,
@@ -50,7 +49,7 @@ block content
           feature:'люкс',
           focus: true
         })
-      article.ui__card.ui__card--room-thumb
+      article.ui-cards__card.ui-cards__card--room-thumb
         +room-thumb({
           roomNumber: 840,
           pricePerDay: 9900,

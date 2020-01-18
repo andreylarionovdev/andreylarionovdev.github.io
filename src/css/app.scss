@@ -4,7 +4,6 @@
 @import '../components/h2/h2';
 @import '../components/h3/h3';
 @import '../components/body/body';
-@import '../components/column/column';
 @import '../components/groups/groups';
 @import '../components/site-menu/site-menu';
 @import '../components/logo/logo';
@@ -36,7 +35,10 @@
 @import '../components/card/room-thumb/room-thumb';
 @import '../components/card/sign-in/sign-in';
 @import '../components/card/sign-up/sign-up';
-@import '../pages/ui/ui';
+@import '../pages/ui-colors-type/ui-colors-type';
+@import '../pages/ui-cards/ui-cards';
+@import '../pages/ui-form-elements/ui-form-elements';
+@import '../pages/ui-headers-footers/ui-headers-footers';
 @import '../pages/layout/layout';
 @import '../pages/landing/landing';
 @import '../pages/search-room-filter/search-room-filter';
@@ -79,6 +81,20 @@ body {
   //@media (min-width: $screen-lg-min) {
   //    background-color: green;
   //}
+}
+
+.container {
+  max-width: 120rem;
+  min-width: 20rem;
+  &__logo {
+    margin: 0;
+    position: absolute;
+    top: 1.875rem;
+    left: 1.875rem;
+  }
+  &--gray {
+    background-color: $color-gray;
+  }
 }
 
 .clearfix {

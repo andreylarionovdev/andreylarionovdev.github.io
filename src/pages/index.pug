@@ -5,9 +5,7 @@ include ../components/site-menu/site-menu
 
 block vars
   - const title = 'Main'
-  - const bodyClasses = ['ui', 'ui--index']
 block content
-  .column.column--6
     +site-menu({
       theme: 'purple',
       items: [
@@ -17,7 +15,6 @@ block content
         {text: 'Headers & Footers', href: 'ui-headers-footers.html'}
       ]
     })
-  .column.column--6
     +site-menu({
       theme: 'green',
       items: [

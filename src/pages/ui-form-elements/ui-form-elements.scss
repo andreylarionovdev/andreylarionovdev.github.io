@@ -1,0 +1,102 @@
+.ui-form-elements {
+  margin: 8.9375rem auto 0;
+  font-family: Montserrat, sans-serif;
+  width: 80.5%;
+
+  &__top {
+    margin-bottom: 5rem;
+    grid-template-columns: 27.63% 10.88% 27.63% 6.2176% 27.63%;
+  }
+
+  &__dropdown-states {
+    margin-bottom: 2.5625rem;
+    grid-template-columns: 22.95% 15.62% 27.61% 6.21% 27.61%;
+    .grid-column {
+      min-height: 16.625rem;
+    }
+  }
+
+  &__rich-lists {
+    grid-template-columns: 22.95% 15.62% 27.61% 6.21% 27.61%;
+  }
+
+  &__bottom {
+    grid-template-columns: 22.95% 15.62% 61.43%;
+  }
+
+  .row {
+    display: grid;
+    @media (max-width: $screen-lg-min) {
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+      grid-gap: 2.5rem;
+    }
+    .grid-column-gap {
+      @media (max-width: $screen-lg-min) {
+        display: none;
+      }
+    }
+  }
+
+  // Custom padding/margin for groups
+  &__input-group {
+    margin-bottom: 1.25rem;
+    &--masked {
+      margin-bottom: 2.5rem;
+    }
+    &--with-submit {
+      padding-right: 3.375rem;
+    }
+  }
+  &__dropdown-group {
+    margin-bottom: 1.4375rem;
+    &--date-range,
+    &--date-filter {
+      margin-bottom: 2.5625rem;
+    }
+    &--date-filter {
+      padding-right: 3.375rem;
+    }
+    &--collapsed {
+      margin-bottom: 1.25rem;
+    }
+  }
+  &__checkbox-group {
+    margin-bottom: 2.5rem;
+    padding-right: 5rem;
+  }
+  &__radio-group,
+  &__rate-group {
+    margin-bottom: 2.625rem;
+  }
+  &__toggle-group {
+    margin-bottom: 2.75rem;
+  }
+  &__like-button-group {
+    margin-bottom: 2.25rem;
+  }
+  &__range-slider {
+    margin-bottom: 2.375rem;
+    padding-right: 3.375rem;
+  }
+  &__button-group {
+    margin-bottom: 2.5rem;
+  }
+  &__rich-checkbox-group {
+    padding: 0.8125rem 3.5rem 0 0;
+  }
+  &__bullet-list-group {
+    padding: 0.8125rem 3.75rem 0 0;
+  }
+  &__checkbox-list-xp-group {
+    &--collapsed {
+      margin-bottom: 1.3125rem;
+    }
+    &--expanded {
+      margin-bottom: 0.6875rem;
+    }
+  }
+  &__feedback-group {
+    margin-top: 1.875rem;
+  }
+
+}
