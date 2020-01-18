@@ -4,10 +4,11 @@ $(document).ready(function () {
 
   const $toggle = $(`.${className}__toggle`);
 
-  $toggle.on('click', function () {
+  $toggle.on('click', function (e) {
+    e.preventDefault();
     const $dropdown = $(this).closest(`.${className}`);
-    if ($dropdown.find('.dropdown__menu').length === 1) {
-      $dropdown.toggleClass(classExpanded)
+    if ($dropdown.find(`.${className}__menu`).length === 1) {
+      $dropdown.toggleClass(classExpanded);
     }
   });
 
