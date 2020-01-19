@@ -6,8 +6,9 @@
   $left-indent: $picture-width + 0.625rem;
   &__author-picture-wrapper {
     margin: 0;
-    position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     float: left;
     width: $picture-width;
     height: $picture-width;
@@ -15,12 +16,6 @@
     border-radius: 50%;
     box-shadow: 0 0.625rem 1.25rem rgba(31, 32, 65, 0.1);
     border: 2px solid white;
-  }
-  &__author-picture {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
   &__author-name,
   &__date,

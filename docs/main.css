@@ -956,8 +956,15 @@
   color: rgba(31, 32, 65, 0.75); }
   .feedback__author-picture-wrapper {
     margin: 0;
-    position: relative;
-    display: inline-block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     float: left;
     width: 3rem;
     height: 3rem;
@@ -966,12 +973,6 @@
     -webkit-box-shadow: 0 0.625rem 1.25rem rgba(31, 32, 65, 0.1);
             box-shadow: 0 0.625rem 1.25rem rgba(31, 32, 65, 0.1);
     border: 2px solid white; }
-  .feedback__author-picture {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); }
   .feedback__author-name, .feedback__date, .feedback__text {
     padding-left: 3.625rem;
     margin: 0; }
