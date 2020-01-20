@@ -7,7 +7,7 @@ include ../../components/card/room-search/room-search
 
 block content
   block head
-    .wrapper-header
+    header.wrapper-header
       +header({
         menuItems: [
           {name: 'О нас', href: '/change-me'},
@@ -32,24 +32,24 @@ block content
         ],
         menuButtons: [
           {
-            name: 'sign-up',
-            theme: 'default',
-            caption: 'Зарегистрироваться',
-            isSmall: true,
-            href: 'registration.html'
-          },
-          {
             name: 'sign-in',
             theme: 'transparent',
             caption: 'Войти',
             isSmall: true,
             href: 'login.html'
+          },
+          {
+            name: 'sign-up',
+            theme: 'default',
+            caption: 'Зарегистрироваться',
+            isSmall: true,
+            href: 'registration.html'
           }
         ]
       })
   block main
   block foot
-    .wrapper-footer
+    footer.wrapper-footer
       +footer({
         rightTitle: 'Подписка',
         leftDescription: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',

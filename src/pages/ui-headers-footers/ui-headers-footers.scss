@@ -1,16 +1,9 @@
 .ui-headers-footers {
   margin-top: 9.375rem;
-  &__header,
-  &__footer {
+  .ui-section {
     margin-bottom: 2.5rem;
   }
   &__header {
-    height: 4.375rem;
-  }
-  &__footer {
-    min-height: 23.25rem + 4.375rem;
-    &--creative {
-      min-height: 23rem;
-    }
+    min-height: 4.375rem;
   }
 }

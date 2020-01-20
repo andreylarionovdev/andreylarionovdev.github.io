@@ -1,15 +1,11 @@
 $(document).ready(function () {
   const className = 'header';
-  const classExpanded = `${className}--expanded`;
-  const classMenuBtn = `${className}__menu-button`;
-  const classCloseBtn = `${className}__close-button`;
+  const classNav = `${className}__nav`;
+  const classNavActive = `${classNav}--active`;
+  const classToggleBtn = `${className}__nav-toggle`;
 
-  $(`.${classMenuBtn}`).on('click', function () {
+  $(`.${classToggleBtn}`).on('click', function () {
     const $header = $(this).closest(`.${className}`);
-    $header.toggleClass(classExpanded)
-  });
-  $(`.${classCloseBtn}`).on('click', function () {
-    const $header = $(this).closest(`.${className}`);
-    $header.removeClass(classExpanded);
+    $header.find(`.${classNav}`).toggleClass(classNavActive)
   });
 });

@@ -1,9 +1,9 @@
 .wrapper {
-  $min-height: 70px;
+  $min-height: 4.375rem;
   &-header {
-    height: $min-height;
+    min-height: $min-height;
   }
   &-footer {
-    min-height: 372px + $min-height;
+    min-height: 23.25rem + $min-height;
   }
 }

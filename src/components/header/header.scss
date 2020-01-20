@@ -2,238 +2,87 @@
   font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
   color: $color-dark-50;
-  $parent: #{&};
-  $menu: #{&}__menu;
-  $menu-item: #{&}__menu-item;
-  $menu-a: #{&}__menu-a;
-  $menu-wrapper: #{&}__menu-wrapper;
-  $account: #{&}__account;
-  height: inherit;
   background: white;
-  box-shadow: 0 10px 20px $color-dark-5;
-  &__logo {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    @media (max-width: $screen-lg-min) {
-      left: 10px;
+  box-shadow: 0 0.625rem 1.25rem $color-dark-5;
+  min-height: inherit;
+  &__navbar {
+    padding: 5%;
+    min-height: inherit;
+    @media (min-width: $screen-md-min) {
+      margin: 0 auto;
+      padding: 0;
+      width: 80.5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
   }
-  &__nav {
-    width: 80.5%;
-    max-width: 1920px;
-    margin: 0 auto;
-    position: relative;
-    height: 100%;
-    @media (max-width: $screen-md-max) {
-      width: 98.5%;
+  &__nav-toggle {
+    @media (min-width: $screen-md-min) {
+      display: none;
     }
-    @media (max-width: $screen-md-min) {
-      width: 100%;
-    }
-  }
-
-  &__menu-wrapper {
-    position: relative;
-    float: right;
-    top: 50%;
-    display: block;
-    margin-top: -20px;
-    height: 40px;
-    line-height: 40px;
-    @media (max-width: $screen-md-min) {
-      float: left;
-      width: 100%;
-      left: -9999px;
-      margin-top: 0;
-    }
-  }
-
-  &__menu-button {
     cursor: pointer;
-    display: none;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 10px;
+    right: 0.625rem;
     font-size: 3rem;
     color: $color-dark-50;
-    @media (max-width: $screen-md-min) {
-      display: block;
-    }
   }
-
-  &__menu-a {
-    color: $color-dark-50;
-    text-decoration: none;
-    &:hover {
-      color: $color-dark-100;
-    }
-    @media (max-width: $screen-md-min) {
-      width: 75%;
-      display: inline-block;
-    }
-  }
-
-  &__menu {
-    list-style: none;
+  &__logo {
     margin: 0;
-    padding-left: 0;
-    @media (max-width: $screen-md-min) {
-      border-bottom: 1px solid $color-dark-25;
-      padding: 20px;
-      box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
-    }
-    @media (max-width: $screen-md-max) {
-      width: 100%;
-      background: white;
-      &--is-sub {
-        padding-top: 0;
-        padding-bottom: 0;
-      }
-    }
-    &--is-sub {
-      position: absolute;
-      left: -9999px;
-      background: white;
-      #{$menu-a} {
-        display: inline-block;
-        width: 200px;
-        border-bottom: 1px solid $color-dark-5;
-        @media (max-width: $screen-md-min) {
-          width: 100%;
-          border-bottom: none;
-        }
-      }
-      #{$menu-item} {
-        padding: 0 15px;
-      }
-      
-      @media (max-width: $screen-md-min) {
-        position: relative;
-        left: 0;
-        width: 100%;
-        margin: 0;
-        text-align: left;
-      }
-    }
+    display: inline-block;
   }
-
-  &__menu-item {
-    @mixin menu-visible() {
-      left: auto;
-      z-index: 9;
-    }
-    display: block;
-    float: left;
-    margin-right: 20px;
-    position: relative;
-    &--has-dropdown {
-      margin-right: 33px;
-      &:hover {
-        #{$menu} {
-          @include menu-visible;
-        }
-        #{$menu-item} {
-          height: auto;
-        }
-      }
+  &__nav {
+    padding: 0;
+    list-style-type: none;
+    display: none;
+    @media (min-width: $screen-md-min) {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
     }
     &--active {
-      font-weight: bold;
-      #{$menu-a} {
-        color: $color-dark-75;
-      }
-    }
-    &--account-buttons {
-      display: none;
-      padding-top: 15px;
-      @media (max-width: $screen-md-min) {
-        display: block;
-      }
-    }
-    #{$menu-item} {
-      clear: both;
-      width: 100%;
-    }
-    #{$menu} {
-      &:hover {
-        @include menu-visible;
-      }
-    }
-    @media (max-width: $screen-md-min) {
-      width: 100%;
-      border-top: 1px solid $color-dark-5;
-      float: none;
-    }
-  }
-
-  &__dropdown-text {
-    margin-right: 14px;
-  }
-
-  &__dropdown-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  #{$account} {
-    position: relative;
-    float: right;
-    display: inline-block;
-    top: 50%;
-    transform: translateY(-50%);
-    @media (max-width: $screen-md-min) {
-      margin-right: 10px;
-      display: none;
-    }
-  }
-  &--signed {
-    #{$account} {
-      position: relative;
-      line-height: 30px;
-      display: inline-block;
-      top: 50%;
-      transform: translateY(-50%);
-      border-left: 1px solid $color-dark-10;
-      padding-left: 31px;
-      @media (max-width: $screen-md-min) {
-        border-left: none;
-      }
-    }
-  }
-  &__button {
-    &--sign-in,
-    &--sign-up {
-      float: right;
-    }
-    &--sign-in {
-      margin-right: 20px;
-    }
-  }
-
-  &__close-button {
-    display: none;
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    cursor: pointer;
-    color: $color-dark-75;
-    @media (max-width: $screen-md-min) {
       display: block;
-      top: 30px;
     }
+  }
+  &__nav-item {
+    text-align: center;
+    margin: 1rem auto;
+    @media (min-width: $screen-md-min) {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      &--sign-up {
+        margin-left: 1.25rem;
+      }
+      &--sign-in {
+        margin-left: 1.875rem;
+      }
+      &--account {
+        margin-left: 1.875rem;
+        border-left: 1px solid $color-dark-10;
+      }
+    }
+  }
+  &__nav-link {
+    text-decoration: none;
+    color: $color-dark-50;
     &:hover {
       color: $color-dark-100;
     }
-  }
-
-  &--expanded {
-    #{$menu-wrapper} {
-      top: 0;
-      left: auto;
-      z-index: 9;
+    &--has-submenu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:after {
+        content: 'keyboard_arrow_down';
+        font-family: 'Material Icons';
+        font-size: 1.5rem;
+        height: 1.25rem;
+        width: 0.5rem;
+      }
+    }
+    @media (min-width: $screen-md-min) {
+      margin-left: 1.875rem;
     }
   }
 }

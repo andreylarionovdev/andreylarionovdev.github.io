@@ -3,91 +3,36 @@ include ../button/button
 
 mixin header(options)
   - const blockName = 'header'
-  -
-    const {
-      user,
-      menuItems = [
-        {name: 'Home', href: '/change-me', active: true},
-        {name: 'About Us', href: '/change-me'},
-        {
-          name: 'Services',
-          sub: [
-            {name: 'One One', href: '/change-me'},
-            {name: 'Two Two', href: '/change-me'},
-            {name: 'Three', href: '/change-me'}
-          ]
-        },
-        {name: 'Careers', href: '/change-me'},
-        {name: 'News', href: '/change-me'},
-        {name: 'Documentation', href: '/change-me'}
-      ],
-      menuButtons = [
-        {
-          name: 'sign-up',
-          theme: 'default',
-          caption: 'Register',
-          isSmall: true
-        },
-        {
-          name: 'sign-in',
-          theme: 'transparent',
-          caption: 'Login',
-          isSmall: true
-        }
-      ]
-    } = options || {}
+  - const { user, menuItems, menuButtons } = options || {}
 
   - let modifiers = []
 
-  if user
-      - modifiers.push(`${blockName}--signed`)
-
-  header(class=[blockName, 'clearfix'] class=modifiers)
-    nav(class=`${blockName}__nav`)
-      i(class=[`${blockName}__menu-button`, 'material-icons'])= 'menu'
+  nav(class=blockName)
+    div(class=`${blockName}__navbar`)
+      i(class=[`${blockName}__nav-toggle`, 'material-icons'])= 'menu'
       figure(class=`${blockName}__logo`)
         +logo(true)
-      section(class=`${blockName}__account`)
+      ul(class=`${blockName}__nav`)
+        each item, _ in menuItems
+          - let navLinkClasses = [`${blockName}__nav-link`]
+          li(class=`${blockName}__nav-item`)
+            if item.sub
+              - navLinkClasses.push(`${blockName}__nav-link--has-submenu`)
+            a(class=navLinkClasses href=item.href)
+              if item.active
+                b= item.name
+              else
+                = item.name
         if user
-          = user
+          li(class=[`${blockName}__nav-item`, `${blockName}__nav-item--account`])
+            a(class=`${blockName}__nav-link`)
+              = user
         else
           each button, _ in menuButtons
-            div(class=`${blockName}__button--${button.name}`)
+            li(class=[`${blockName}__nav-item`, `${blockName}__nav-item--${button.name}`])
               +button({
                 theme: button.theme,
                 caption: button.caption,
                 isSmall: button.isSmall,
                 href: button.href
               })
-      div(class=`${blockName}__menu-wrapper`)
-        ul(class=[`${blockName}__menu`, 'clearfix'])
-          each item, _ in menuItems
-            - let active = ''
-            - let hasDropdown = ''
-            if item.active
-              - active = `${blockName}__menu-item--active`
-            if item.sub
-              - hasDropdown = `${blockName}__menu-item--has-dropdown`
-            li(class=`${blockName}__menu-item` class=active class=hasDropdown)
-              if item.sub
-                a(class=`${blockName}__menu-a` class=active href='/change-me')
-                  span(class=`${blockName}__dropdown-text`)
-                    = item.name
-                    i(class=[`${blockName}__dropdown-arrow`, 'material-icons'])= 'keyboard_arrow_down'
-                ul(class=[`${blockName}__menu`, `${blockName}__menu--is-sub`])
-                  each _item, _ in item.sub
-                    li(class=`${blockName}__menu-item`)
-                      a(class=`${blockName}__menu-a` href=_item.href)!= _item.name
-              else
-                a(class=`${blockName}__menu-a` href=item.href)!= item.name
-          li(class=[`${blockName}__menu-item`, `${blockName}__menu-item--account-buttons`])
-            each button, _ in menuButtons
-              div(class=`${blockName}__button--${button.name}`)
-                +button({
-                  theme: button.theme,
-                  caption: button.caption,
-                  isSmall: button.isSmall,
-                  href: button.href
-                })
-
-        i(class=[`${blockName}__close-button`, 'material-icons'])= 'close'

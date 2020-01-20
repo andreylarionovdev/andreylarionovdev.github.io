@@ -427,7 +427,7 @@ eval("/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {\n
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {\n  const className = 'header';\n  const classExpanded = `${className}--expanded`;\n  const classMenuBtn = `${className}__menu-button`;\n  const classCloseBtn = `${className}__close-button`;\n\n  $(`.${classMenuBtn}`).on('click', function () {\n    const $header = $(this).closest(`.${className}`);\n    $header.toggleClass(classExpanded)\n  });\n  $(`.${classCloseBtn}`).on('click', function () {\n    const $header = $(this).closest(`.${className}`);\n    $header.removeClass(classExpanded);\n  });\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/components/header/header.js?");
+eval("/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {\n  const className = 'header';\n  const classNav = `${className}__nav`;\n  const classNavActive = `${classNav}--active`;\n  const classToggleBtn = `${className}__nav-toggle`;\n\n  $(`.${classToggleBtn}`).on('click', function () {\n    const $header = $(this).closest(`.${className}`);\n    $header.find(`.${classNav}`).toggleClass(classNavActive)\n  });\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/components/header/header.js?");
 
 /***/ }),
 
