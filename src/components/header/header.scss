@@ -6,12 +6,15 @@
   box-shadow: 0 0.625rem 1.25rem $color-dark-5;
   min-height: inherit;
   &__navbar {
-    padding: 5%;
+    padding: 0.75rem 0;
+    margin: 0 auto;
+    width: 95.5%;
     min-height: inherit;
     @media (min-width: $screen-md-min) {
-      margin: 0 auto;
       padding: 0;
       width: 80.5%;
+      max-width: 120rem;
+      min-width: 20rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
