@@ -1978,9 +1978,13 @@
   margin: 9rem auto 0;
   display: grid;
   grid-template-columns: 1fr 1fr; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1199px) {
     .ui-colors-type {
       grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); } }
+  @media (max-width: 767px) {
+    .ui-colors-type {
+      width: 95.5%;
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); } }
 
 .ui-cards {
   margin: 9.375rem auto 0;
@@ -1988,12 +1992,13 @@
   display: grid;
   grid-template-columns: 1.1875fr 1.1875fr 1fr;
   grid-column-gap: 2.5rem; }
-  @media (max-width: 992px) {
+  @media (max-width: 1199px) {
     .ui-cards {
-      width: 90.5%; } }
-  @media (max-width: 1200px) {
-    .ui-cards {
+      width: 90.5%;
       grid-template-columns: repeat(auto-fill, minmax(23.75rem, 1fr)); } }
+  @media (max-width: 767px) {
+    .ui-cards {
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); } }
   .ui-cards__card {
     margin-bottom: 2.5rem; }
     .ui-cards__card--room-thumb-vip, .ui-cards__card--room-thumb {
@@ -2003,6 +2008,9 @@
   margin: 8.9375rem auto 0;
   font-family: Montserrat, sans-serif;
   width: 80.5%; }
+  @media (max-width: 767px) {
+    .ui-form-elements {
+      width: 95.5%; } }
   .ui-form-elements__top {
     margin-bottom: 5rem;
     grid-template-columns: 27.63% 10.88% 27.63% 6.2176% 27.63%; }
@@ -2017,11 +2025,14 @@
     grid-template-columns: 22.95% 15.62% 61.43%; }
   .ui-form-elements .row {
     display: grid; }
-    @media (max-width: 1200px) {
+    @media (max-width: 1199px) {
       .ui-form-elements .row {
         grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
         grid-gap: 2.5rem; } }
-    @media (max-width: 1200px) {
+    @media (max-width: 767px) {
+      .ui-form-elements .row {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); } }
+    @media (max-width: 1199px) {
       .ui-form-elements .row .grid-column-gap {
         display: none; } }
   .ui-form-elements__input-group {

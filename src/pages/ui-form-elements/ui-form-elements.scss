@@ -2,6 +2,9 @@
   margin: 8.9375rem auto 0;
   font-family: Montserrat, sans-serif;
   width: 80.5%;
+  @media (max-width: $screen-xs-max) {
+    width: 95.5%;
+  }
 
   &__top {
     margin-bottom: 5rem;
@@ -26,12 +29,15 @@
 
   .row {
     display: grid;
-    @media (max-width: $screen-lg-min) {
+    @media (max-width: $screen-md-max) {
       grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
       grid-gap: 2.5rem;
     }
+    @media (max-width: $screen-xs-max) {
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
     .grid-column-gap {
-      @media (max-width: $screen-lg-min) {
+      @media (max-width: $screen-md-max) {
         display: none;
       }
     }
@@ -98,5 +104,4 @@
   &__feedback-group {
     margin-top: 1.875rem;
   }
-
 }
