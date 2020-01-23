@@ -1639,110 +1639,92 @@
   -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   background-color: white;
-  padding: 2.375rem 1.875rem 1.875rem 1.75rem; }
+  padding: 2.375rem 1.875rem 1.875rem 1.8125rem; }
   @media (max-width: 767px) {
     .room-book {
-      padding: 30px 15px; } }
+      padding: 2rem 1rem; } }
   .room-book__number, .room-book__feature {
     float: left; }
-  .room-book__headline {
-    vertical-align: bottom;
-    margin-bottom: 8px; }
+  .room-book__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 0.6875rem; }
   .room-book__number {
-    vertical-align: bottom;
     font-family: Quicksand, sans-serif; }
   .room-book__number-sign, .room-book__number-value, .room-book__number-feature {
-    display: inline-block;
-    height: 30px; }
+    display: inline-block; }
   .room-book__number-sign, .room-book__number-value {
     font-weight: bold; }
   .room-book__number-sign {
     font-size: 0.875rem; }
   .room-book__number-value {
     font-size: 1.5rem;
-    margin-left: 4px;
-    margin-right: 1px;
+    padding-left: 0.25rem;
     color: #1F2041; }
   .room-book__feature {
     color: #BC9CFF; }
-  .room-book__guests {
-    position: relative;
-    margin-top: 1.25rem; }
   .room-book__price-per-day {
     font-family: Montserrat, sans-serif;
-    vertical-align: bottom;
-    float: right;
-    line-height: 39px; }
-  .room-book__date-unit, .room-book__cost {
+    line-height: 2.375rem; }
+  .room-book__cost, .room-book__date-unit {
     display: inline-block;
-    height: 30px; }
+    color: rgba(31, 32, 65, 0.5); }
   .room-book__cost {
     font-weight: bold; }
   .room-book__date-unit {
     font-size: 0.75rem; }
-  .room-book__result {
-    border: none;
-    width: 100%; }
-  .room-book__th, .room-book__td {
-    padding-left: 1px;
-    padding-top: 14px;
-    height: 33px;
-    line-height: 20px;
-    vertical-align: top; }
-  .room-book__th {
-    font-weight: normal;
-    text-align: left;
-    width: 68%; }
-  .room-book__td {
-    text-align: right; }
-  .room-book__td-icon {
-    text-align: left;
-    padding-top: 11px;
-    padding-left: 4px;
-    vertical-align: top;
-    color: rgba(31, 32, 65, 0.25); }
-  .room-book__total {
-    vertical-align: bottom;
-    height: 45px; }
-  .room-book__total-th, .room-book__total-line, .room-book__total-td {
-    border-bottom: 1px dotted rgba(31, 32, 65, 0.25); }
-  .room-book__total-th, .room-book__total-td {
-    width: 20%;
-    font-size: 1.1875rem; }
-  .room-book__total-th {
-    text-align: left;
-    font-size: 1.1875rem;
-    font-family: Open Sans, sans-serif;
-    vertical-align: bottom; }
-  .room-book__total-value, .room-book__total-word {
-    display: block;
-    background-color: white;
-    margin-bottom: -7px; }
-  .room-book__total-value {
-    padding-left: 5px; }
-  .room-book__total-word {
-    width: 64px; }
-  .room-book__total-td {
-    font-family: Quicksand, sans-serif;
-    text-align: right;
-    font-weight: bold; }
-  .room-book__info {
+  .room-book__guests {
+    margin-top: 1.25rem; }
+  .room-book__label {
+    margin-bottom: 0.3125rem; }
+  .room-book__table-result {
+    margin-top: 1.125rem;
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+    grid-row-gap: 0.375rem;
+    font-family: Montserrat, sans-serif;
+    font-size: 0.875rem;
+    color: rgba(31, 32, 65, 0.75); }
+  .room-book .grid-cell {
+    padding-top: 0.1875rem; }
+    .room-book .grid-cell--info {
+      padding: 0;
+      color: rgba(31, 32, 65, 0.25); }
+    .room-book .grid-cell--sum {
+      text-align: right; }
+  .room-book__info-icon {
+    cursor: help; }
+  .room-book__total-row {
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end; }
+  .room-book__total-header, .room-book__total-sum {
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    font-size: 0.75rem;
-    border-radius: 10px;
-    font-style: normal;
+    padding: 0;
+    margin: 0;
+    font-size: 1.1875rem;
+    line-height: 1rem; }
+  .room-book__total-header {
+    font-family: Open Sans, sans-serif;
+    margin-right: 0.3125rem; }
+  .room-book__total-line {
+    height: 1px;
+    border-bottom: 1px dotted rgba(31, 32, 65, 0.25); }
+  .room-book__total-sum {
+    font-family: Quicksand, sans-serif;
     font-weight: bold;
-    text-align: center;
-    line-height: 20px;
-    border: 1px solid rgba(31, 32, 65, 0.25); }
+    text-align: right;
+    margin-left: 0.3125rem; }
   .room-book__button {
-    margin-top: 25px;
-    height: 44px; }
-  .room-book__dropdown {
-    margin: 5px auto;
-    height: 44px; }
+    margin-top: 1.5625rem; }
 
 .room-search {
   border: 1px solid rgba(0, 0, 0, 0.12);
@@ -2386,7 +2368,8 @@ input[type="text"] {
 
 html {
   font-family: Quicksand, sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  color: #1F2041; }
 
 body {
   margin: 0; }

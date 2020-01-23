@@ -160,13 +160,13 @@
       <div class="grid-column">
         <article class="ui-cards__card">
           <form class="room-book">
-            <header class="room-book__headline clearfix">
+            <header class="room-book__header">
               <div class="room-book__number"><span class="room-book__number-sign">№</span><span class="room-book__number-value">888</span>
                 <h3 class="room-book__number-feature h3 h3--purple">люкс</h3>
               </div>
               <div class="room-book__price-per-day body"><span class="room-book__cost">9,990₽&nbsp;</span><span class="room-book__date-unit">в сутки</span></div>
             </header>
-            <div class="room-book__date-range clearfix">
+            <div class="room-book__date-range">
               <div class="dropdown-date-range">
                 <div class="clearfix">
                   <div class="dropdown-date-range__from">
@@ -220,32 +220,18 @@
                 </div>
               </div>
             </div>
-            <table class="room-book__result" cellspacing="0" cellpadding="0">
-              <tbody>
-                <tr class="body">
-                  <th class="room-book__th">9,990₽ x 4 суток</th>
-                  <td class="room-book__td-icon"></td>
-                  <td class="room-book__td">39,960₽</td>
-                </tr>
-                <tr class="body">
-                  <th class="room-book__th">Сбор за услуги: скидка 2,179₽</th>
-                  <td class="room-book__td-icon"><i class="room-book__info">i</i></td>
-                  <td class="room-book__td">0₽</td>
-                </tr>
-                <tr class="body">
-                  <th class="room-book__th">Сбор за дополнительные услуги</th>
-                  <td class="room-book__td-icon"><i class="room-book__info">i</i></td>
-                  <td class="room-book__td">300₽</td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr class="room-book__total">
-                  <th class="room-book__total-th"><span class="room-book__total-word">Итого</span></th>
-                  <td class="room-book__total-line"></td>
-                  <td class="room-book__total-td"><span class="room-book__total-value">38,081₽</span></td>
-                </tr>
-              </tfoot>
-            </table>
+            <div class="room-book__table-result">
+              <div class="grid-cell">9,990₽ x 4 суток</div>
+              <div class="grid-cell grid-cell--info"></div>
+              <div class="grid-cell grid-cell--sum">39,960₽</div>
+              <div class="grid-cell">Сбор за услуги: скидка 2,179₽</div>
+              <div class="grid-cell grid-cell--info"><i class="room-book__info-icon material-icons" title="change me">info_outline</i></div>
+              <div class="grid-cell grid-cell--sum">0₽</div>
+              <div class="grid-cell">Сбор за дополнительные услуги</div>
+              <div class="grid-cell grid-cell--info"><i class="room-book__info-icon material-icons" title="change me">info_outline</i></div>
+              <div class="grid-cell grid-cell--sum">300₽</div>
+            </div>
+            <p class="room-book__total-row"><span class="room-book__total-header">Итого</span><span class="room-book__total-line"></span><span class="room-book__total-sum">38,081₽</span></p>
             <footer class="room-book__button"><a class="button button--default button--fluid" href="/change=me">Забронировать<i class="button__arrow material-icons">arrow_forward</i></a>
             </footer>
           </form>
