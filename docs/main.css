@@ -1580,9 +1580,9 @@
 
 .datepicker {
   border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
   background-color: white;
   border: 1px solid rgba(31, 32, 65, 0.25);
   font-family: Montserrat, sans-serif;
@@ -1635,9 +1635,9 @@
 
 .room-book {
   border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
   background-color: white;
   padding: 2.375rem 1.875rem 1.875rem 1.8125rem; }
   @media (max-width: 767px) {
@@ -1728,9 +1728,9 @@
 
 .room-search {
   border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
   background-color: white;
   padding: 2.4375rem 1.75rem 1.8125rem 1.8125rem; }
   @media (max-width: 767px) {
@@ -1745,9 +1745,9 @@
 
 .room-thumb {
   border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
   background-color: white;
   border: none; }
   .room-thumb--focus .room-thumb__image-prev-btn,
@@ -1863,9 +1863,9 @@
 
 .sign-in {
   border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
   background-color: white;
   padding: 39px 28px 29px 27px; }
   @media (max-width: 767px) {
@@ -1899,47 +1899,57 @@
 
 .sign-up {
   border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
   background-color: white;
-  padding: 39px 28px 29px 29px; }
+  padding: 2.4375rem 1.75rem 1.8125rem 1.8125rem; }
   @media (max-width: 767px) {
     .sign-up {
-      padding: 30px 15px; } }
-  .sign-up__title {
-    margin-bottom: 20px; }
+      padding: 2rem 1rem; } }
+  .sign-up__title, .sign-up__birthday {
+    margin-bottom: 1.25rem; }
   .sign-up__input {
-    position: relative;
-    margin-bottom: 10px; }
+    margin-bottom: 0.625rem; }
   .sign-up__gender {
-    margin-top: 10px;
-    margin-bottom: 25px; }
+    margin: 0.625rem 0 1.5625rem 0; }
   .sign-up__radio-button {
     display: inline-block;
     float: left;
-    margin-right: 20px; }
+    margin-right: 1.25rem; }
   .sign-up__label {
-    margin-bottom: 5px; }
-  .sign-up__birthday {
-    margin-bottom: 20px; }
+    margin-bottom: 0.3125rem; }
   .sign-up__pay-button {
-    height: 44px;
-    margin-top: 23px; }
+    margin-top: 1.4375rem; }
   .sign-up__auth {
-    margin-top: 29px; }
+    margin-top: 1.8125rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    @media (max-width: 767px) {
+      .sign-up__auth {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
   .sign-up__auth-hint {
     margin: 0;
-    line-height: 44px;
-    float: left; }
+    font-size: 0.875rem;
+    font-family: Montserrat, sans-serif;
+    color: black;
+    line-height: 2.75rem; }
     @media (max-width: 767px) {
       .sign-up__auth-hint {
         text-align: center;
         width: 100%; } }
   .sign-up__auth-button {
-    width: 99px;
-    height: 44px;
-    float: right; }
+    width: 31%; }
     @media (max-width: 767px) {
       .sign-up__auth-button {
         width: 100%; } }

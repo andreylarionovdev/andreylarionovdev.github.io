@@ -71,9 +71,8 @@ mixin sign-up()
         withArrow: true,
         isFluid: true
       })
-    div(class=[`${blockName}__auth`, 'clearfix'])
-      p(class=`${blockName}__auth-hint`)
-        span.body.body--black= 'Уже есть аккаунт на Toxin'
+    div(class=`${blockName}__auth`)
+      p(class=`${blockName}__auth-hint`)= 'Уже есть аккаунт на Toxin'
       div(class=`${blockName}__auth-button`)
         +button({
           theme: 'transparent',
