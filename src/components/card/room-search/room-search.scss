@@ -1,34 +1,18 @@
 @import '../card';
 .room-search {
   @include card;
-  padding: 39px 28px 29px 29px;
+  padding: 2.4375rem 1.75rem 1.8125rem 1.8125rem;
   @media (max-width: $screen-xs-max) {
-    padding: 30px 15px;
+    padding: 2rem 1rem;
   }
-  &__title {
-    margin-bottom: 20px;
+  &__title,
+  &__date-range {
+    margin-bottom: 1.25rem;
   }
   &__label {
-    margin-bottom: 5px;
-  }
-  &__guests {
-    margin-top: 1.25rem;
-  }
-  &__guests-dropdown,
-  &__date-dropdown {
-    position: relative;
-    height: 44px;
-  }
-  &__from,
-  &__to {
-    float: left;
-    width: 47%;
-  }
-  &__from {
-    margin-right: 6%;
+    margin-bottom: 0.3125rem;
   }
   &__button {
-    margin-top: 31px;
-    height: 44px;
+    margin-top: 1.9375rem;
   }
 }

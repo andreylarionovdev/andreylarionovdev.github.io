@@ -1732,27 +1732,16 @@
   -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   background-color: white;
-  padding: 39px 28px 29px 29px; }
+  padding: 2.4375rem 1.75rem 1.8125rem 1.8125rem; }
   @media (max-width: 767px) {
     .room-search {
-      padding: 30px 15px; } }
-  .room-search__title {
-    margin-bottom: 20px; }
+      padding: 2rem 1rem; } }
+  .room-search__title, .room-search__date-range {
+    margin-bottom: 1.25rem; }
   .room-search__label {
-    margin-bottom: 5px; }
-  .room-search__guests {
-    margin-top: 1.25rem; }
-  .room-search__guests-dropdown, .room-search__date-dropdown {
-    position: relative;
-    height: 44px; }
-  .room-search__from, .room-search__to {
-    float: left;
-    width: 47%; }
-  .room-search__from {
-    margin-right: 6%; }
+    margin-bottom: 0.3125rem; }
   .room-search__button {
-    margin-top: 31px;
-    height: 44px; }
+    margin-top: 1.9375rem; }
 
 .room-thumb {
   border: 1px solid rgba(0, 0, 0, 0.12);
