@@ -1867,31 +1867,44 @@
   -webkit-box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 1.5625rem rgba(0, 0, 0, 0.2);
   background-color: white;
-  padding: 39px 28px 29px 27px; }
+  padding: 2.4375rem 1.8125rem 1.8125rem 1.8125rem; }
   @media (max-width: 767px) {
     .sign-in {
-      padding: 30px 15px; } }
+      padding: 2rem 1rem; } }
   .sign-in__title {
-    margin-bottom: 20px; }
+    margin-bottom: 1.25rem; }
   .sign-in__input {
-    position: relative;
-    margin-bottom: 10px; }
+    margin-bottom: 0.625rem; }
   .sign-in__login-button {
-    height: 44px;
-    margin-top: 20px; }
+    margin-top: 1.25rem; }
   .sign-in__create-account {
-    margin-top: 29px;
-    min-height: 44px; }
+    margin-top: 1.75rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    @media (max-width: 767px) {
+      .sign-in__create-account {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
   .sign-in__hint {
-    line-height: 44px;
-    float: left; }
+    margin: 0;
+    font-size: 0.875rem;
+    font-family: Montserrat, sans-serif;
+    color: black;
+    line-height: 2.75rem; }
     @media (max-width: 767px) {
       .sign-in__hint {
         text-align: center;
         width: 100%; } }
   .sign-in__create-button {
-    float: right;
-    height: 44px;
     width: 31%; }
     @media (max-width: 767px) {
       .sign-in__create-button {

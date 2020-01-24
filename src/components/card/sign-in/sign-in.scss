@@ -1,36 +1,40 @@
 @import '../card';
 .sign-in {
   @include card;
-  padding: 39px 28px 29px 27px;
+  padding: 2.4375rem 1.8125rem 1.8125rem 1.8125rem;
   @media (max-width: $screen-xs-max) {
-    padding: 30px 15px;
+    padding: 2rem 1rem;
   }
   &__title {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
   &__input {
-    position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
   }
   &__login-button {
-    height: 44px;
-    margin-top: 20px;
+    margin-top: 1.25rem;
   }
   &__create-account {
-    margin-top: 29px;
-    min-height: 44px;
+    margin-top: 1.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: $screen-xs-max) {
+      flex-direction: column;
+    }
   }
   &__hint {
-    line-height: 44px;
-    float: left;
+    margin: 0;
+    font-size: 0.875rem;
+    font-family: Montserrat, sans-serif;
+    color: black;
+    line-height: 2.75rem;
     @media (max-width: $screen-xs-max) {
       text-align: center;
       width: 100%;
     }
   }
   &__create-button {
-    float: right;
-    height: 44px;
     width: 31%;
     @media (max-width: $screen-xs-max) {
       width: 100%;

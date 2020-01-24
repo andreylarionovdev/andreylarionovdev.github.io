@@ -25,9 +25,8 @@ mixin sign-in()
         isFluid: true,
         href: 'login.html'
       })
-    div(class=[`${blockName}__create-account`, 'clearfix'])
-      div(class=`${blockName}__hint`)
-        p.body.body--black= 'Нет аккаунта на Toxin?'
+    div(class=`${blockName}__create-account`)
+      p(class=`${blockName}__hint`)= 'Нет аккаунта на Toxin?'
       div(class=`${blockName}__create-button`)
         +button({
           theme: 'transparent',
