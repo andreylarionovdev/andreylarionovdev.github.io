@@ -8,7 +8,7 @@ mixin header(options)
   - let modifiers = []
 
   nav(class=blockName)
-    div(class=`${blockName}__navbar`)
+    div(class=`${blockName}__inner`)
       i(class=[`${blockName}__nav-toggle`, 'material-icons'])= 'menu'
       figure(class=`${blockName}__logo`)
         +logo(true)

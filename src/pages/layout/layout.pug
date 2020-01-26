@@ -6,27 +6,28 @@ include ../../components/footer/footer
 include ../../components/card/room-search/room-search
 
 block content
+  - const href = '/change-me'
   block head
-    header.wrapper-header
+    header.layout__header
       +header({
         menuItems: [
-          {name: 'О нас', href: '/change-me'},
+          {name: 'О нас', href},
           {
             name: 'Услуги',
             sub: [
-              {name: 'Услуга 1', href: '/change-me'},
-              {name: 'Услуга 2', href: '/change-me'},
-              {name: 'Услуга 3', href: '/change-me'}
+              {name: 'Услуга 1', href},
+              {name: 'Услуга 2', href},
+              {name: 'Услуга 3', href}
             ]
           },
-          {name: 'Вакансии', href: '/change-me'},
-          {name: 'Новости', href: '/change-me'},
+          {name: 'Вакансии', href},
+          {name: 'Новости', href},
           {
             name: 'Соглашения',
             sub: [
-              {name: 'Соглашение 1', href: '/change-me'},
-              {name: 'Соглашение 2', href: '/change-me'},
-              {name: 'Соглашение 3', href: '/change-me'}
+              {name: 'Соглашение 1', href},
+              {name: 'Соглашение 2', href},
+              {name: 'Соглашение 3', href}
             ]
           }
         ],
@@ -49,7 +50,7 @@ block content
       })
   block main
   block foot
-    footer.wrapper-footer
+    footer.layout__footer
       +footer({
         rightTitle: 'Подписка',
         leftDescription: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
@@ -61,27 +62,27 @@ block content
           {
             title: 'Навигация',
             links: [
-              {text: 'О нас', href: '/change-me'},
-              {text: 'Новости', href: '/change-me'},
-              {text: 'Служба поддержки', href: '/change-me'},
-              {text: 'Услуги', href: '/change-me'}
+              {text: 'О нас', href},
+              {text: 'Новости', href},
+              {text: 'Служба поддержки', href},
+              {text: 'Услуги', href}
             ]
           },
           {
             title: 'О нас',
             links: [
-              {text: 'О сервисе', href: '/change-me'},
-              {text: 'Наша команда', href: '/change-me'},
-              {text: 'Вакансии', href: '/change-me'},
-              {text: 'Инвесторы', href: '/change-me'}
+              {text: 'О сервисе', href},
+              {text: 'Наша команда', href},
+              {text: 'Вакансии', href},
+              {text: 'Инвесторы', href}
             ]
           },
           {
             title: 'Служба поддержки',
             links: [
-              {text: 'Соглашения', href: '/change-me'},
-              {text: 'Сообщества', href: '/change-me'},
-              {text: 'Связь с нами', href: '/change-me'}
+              {text: 'Соглашения', href},
+              {text: 'Сообщества', href},
+              {text: 'Связь с нами', href}
             ]
           }
         ]
