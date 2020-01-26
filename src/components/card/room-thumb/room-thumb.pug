@@ -2,34 +2,48 @@ include ../../rate-button/rate-button
 
 mixin room-thumb(options)
   - const blockName = 'room-thumb'
-  - const { roomNumber, pricePerDay, feedbackCounter, rate, images, feature, focus } = options
+  -
+    const {
+      roomNumber,
+      href='change-me',
+      pricePerDay,
+      feedbackCounter,
+      rate,
+      images,
+      feature,
+      focus
+    } = options || {}
 
   - let modifiers = []
 
   if focus
     - modifiers.push(blockName+'--focus')
 
-  article(class=blockName class=modifiers)
-    figure(class=`${blockName}__image-wrapper` role="group")
-      each image in images
-        img(class=`${blockName}__image` src=require(`../../img/${image.src}`) alt=image.alt)
-      ul(class=`${blockName}__slider`)
+  div(class=blockName class=modifiers)
+    figure(class=`${blockName}__carousel-inner` role="group")
+      each image, inx in images
+        - let imageClasses = [`${blockName}__carousel-image`]
+        if inx === 0
+          - imageClasses.push(`${blockName}__carousel-image--active`)
+        img(class=imageClasses src=require(`../../img/${image.src}`) alt=image.alt)
+      div(class=[`${blockName}__carousel-control`, `${blockName}__carousel-control--prev`])
+        i(class=[`${blockName}__arrow-left`, 'material-icons'])= 'keyboard_arrow_left'
+      div(class=[`${blockName}__carousel-control`, `${blockName}__carousel-control--next`])
+        i(class=[`${blockName}__arrow-right`, 'material-icons'])= 'keyboard_arrow_left'
+      ul(class=`${blockName}__carousel-indicators`)
         each _, i in images
-          - const classActive = (i === 0) ? `${blockName}__slider-li--active` : '';
-          li(class=`${blockName}__slider-li` class=classActive)
-            a(class=`${blockName}__slider-a`)
-      i(class=[`${blockName}__image-prev-btn`, 'material-icons'])= 'keyboard_arrow_down'
-      i(class=[`${blockName}__image-next-btn`, 'material-icons'])= 'keyboard_arrow_down'
-    header(class=[`${blockName}__headline`, 'clearfix'])
-      div(class=`${blockName}__number`)
+          - const classActive = (i === 0) ? `${blockName}__carousel-indicator--active` : '';
+          li(class=`${blockName}__carousel-indicator` class=classActive)
+    header(class=[`${blockName}__header`])
+      a(class=`${blockName}__number` href=href)
         span(class=`${blockName}__number-sign`)= '№'
         span(class=`${blockName}__number-value`)= roomNumber
         h3(class=[`${blockName}__number-feature`, 'h3', 'h3--purple'])= feature
       div(class=[`${blockName}__price-per-day`, 'body'])
-        span(class=`${blockName}__cost`)!= pricePerDay.toLocaleString('ru-RU') + '₽&nbsp;'
+        span(class=`${blockName}__cost`)!= pricePerDay.toLocaleString('ru-RU') + '₽'
+        |&nbsp;
         span(class=`${blockName}__date-unit`)= 'в сутки'
-    footer(class=[`${blockName}__footer`, 'clearfix'])
-      span(class=`${blockName}__line`)
+    footer(class=`${blockName}__footer`)
       div(class=`${blockName}__rate`)
         +rate-button({
           id: `${roomNumber}__rate`,
@@ -37,5 +51,6 @@ mixin room-thumb(options)
           rate
         })
       p(class=`${blockName}__feedback-counter`)
-        span(class=`${blockName}__counter`)= feedbackCounter
-        span(class=`${blockName}__text`)= 'Отзывов'
+        b= feedbackCounter
+        |&nbsp;
+        span= 'Отзывов'

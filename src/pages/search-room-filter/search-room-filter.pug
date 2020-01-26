@@ -140,7 +140,8 @@ block main
                 alt: 'Room 888',
                 src: 'room-thumb-1.png'
               }),
-              feature: 'люкс'
+              feature: 'люкс',
+              focus: true
             },
             {
               number: 840,
@@ -254,6 +255,7 @@ block main
               })
             }
           ]
+        - const href = 'room-details.html'
         each room, i in searchResult
           .search-room-filter__room-thumb
             +room-thumb({
@@ -262,7 +264,9 @@ block main
               feedbackCounter: room.feedbackCounter,
               rate: room.rate,
               images: room.images,
-              feature: room.feature
+              feature: room.feature,
+              focus: room.focus,
+              href
             })
       section.search-room-filter__paginator
         +paginator({
