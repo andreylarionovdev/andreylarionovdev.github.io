@@ -1,7 +1,5 @@
-@import '../../card/card';
 .room-thumb {
   $parent: #{&};
-  @include card;
   border: none;
   &__carousel-inner {
     position: relative;

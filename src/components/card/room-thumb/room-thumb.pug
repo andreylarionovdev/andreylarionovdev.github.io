@@ -19,7 +19,7 @@ mixin room-thumb(options)
   if focus
     - modifiers.push(blockName+'--focus')
 
-  div(class=blockName class=modifiers)
+  div(class=[blockName, 'card'] class=modifiers)
     figure(class=`${blockName}__carousel-inner` role="group")
       each image, inx in images
         - let imageClasses = [`${blockName}__carousel-image`]

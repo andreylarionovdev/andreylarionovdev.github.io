@@ -1,10 +1,8 @@
 @import 'config';
 @import 'navigation';
 @import 'cell';
-@import '../card';
 
 .datepicker {
-  @include card;
   border: 1px solid $color-dark-25;
   font-family: $datepickerFontFamily, sans-serif;
   font-size: $datepickerFontSize;

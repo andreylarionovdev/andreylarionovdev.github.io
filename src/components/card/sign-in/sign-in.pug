@@ -3,7 +3,7 @@ include ../../button/button
 
 mixin sign-in()
   - const blockName = 'sign-in'
-  form(class=blockName)
+  form(class=[blockName, 'card'])
     h1(class=[`${blockName}__title`, 'h1'])= 'Войти'
     div(class=`${blockName}__input`)
       +input({

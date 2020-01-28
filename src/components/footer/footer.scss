@@ -1,3 +1,4 @@
+@import '../../css/mixins';
 .footer {
   $row-divider: #{&}__row-divider;
   $inner: #{&}__inner;
@@ -25,11 +26,8 @@
     }
   }
   #{$inner} {
+    @include inner;
     padding-top: 6.25rem;
-    width: 80.5%;
-    margin: 0 auto;
-    max-width: 120rem;
-    min-width: 20rem;
     position: relative;
     height: 100%;
     display: grid;
@@ -39,7 +37,6 @@
       'copyright copyright social';
     grid-row-gap: 5rem;
     @media (max-width: $screen-sm-max) {
-      width: 95.5%;
       grid-template-columns: 1fr 1fr;
       grid-template-areas:
         'header subscribe'

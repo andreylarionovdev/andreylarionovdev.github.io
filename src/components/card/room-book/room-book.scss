@@ -1,6 +1,4 @@
-@import '../card';
 .room-book {
-  @include card;
   padding: 2.375rem 1.875rem 1.875rem 1.8125rem;
   @media (max-width: $screen-xs-max) {
     padding: 2rem 1rem;

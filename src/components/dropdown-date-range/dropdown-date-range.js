@@ -13,6 +13,7 @@ $(document).ready(function () {
       prevHtml: '<i class="material-icons">arrow_back</i>',
       nextHtml: '<i class="material-icons">arrow_forward</i>',
       onShow: function (inst) {
+        inst.$datepicker.addClass('card');
         const parentWidth = $(o).outerWidth();
         resizeDatepicker(inst.$datepicker, parentWidth);
         addActionButtons(inst.$datepicker);

@@ -1,3 +1,4 @@
+@import '../../css/mixins';
 .landing {
   width: 100%;
   background-image: url(../../img/landing.png);
@@ -6,17 +7,13 @@
   background-size: cover;
   background-color: $color-green;
   &__inner {
-    width: 80.5%;
-    margin: 0 auto;
+    @include inner;
     padding: 4.3125rem 0 0.75rem 0;
     display: grid;
     grid-template-rows: 23.375rem 23.375rem;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 0.625rem;
     align-items: flex-end;
-    @media (max-width: $screen-xs-max) {
-      width: 90.5%;
-    }
   }
   &__room-search {
     grid-column: 1 / 2;
