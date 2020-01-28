@@ -13,7 +13,7 @@
     <title>Toxin booking | Landing page</title>
   <link href="styles.css" rel="stylesheet"><link href="main.css" rel="stylesheet"></head>
   <body class="container clearfix">
-    <header class="layout__header">
+    <header class="page__header">
       <nav class="header">
         <div class="header__inner"><i class="header__nav-toggle material-icons">menu</i>
           <figure class="header__logo"><a class="logo logo--with-text" href="./index.html"></a>
@@ -37,74 +37,76 @@
         </div>
       </nav>
     </header>
-    <article class="landing">
-      <div class="landing__inner">
-        <section class="landing__room-search">
-          <form class="room-search">
-            <h1 class="room-search__title h1">Найдём номера под ваши пожелания</h1>
-            <div class="room-search__date-range">
-              <div class="dropdown-date-range">
-                <div class="clearfix">
-                  <div class="dropdown-date-range__from">
-                    <div class="dropdown-date-range__label">
-                      <label class="label clearfix">
-                        <h3 class="label__left h3">Прибытие</h3><span class="label__right"></span>
-                      </label>
-                    </div>
-                    <div class="dropdown-date-range__dropdown">
-                      <div class="dropdown" id="room-book__check-in-out__from-date">
-                        <label class="dropdown__toggle"><span class="dropdown__text">ДД.ММ.ГГГГ</span><i class="dropdown__arrow material-icons">keyboard_arrow_down</i>
-                          <input class="dropdown__data-input" type="text" value="ДД.ММ.ГГГГ">
+    <div class="page_main">
+      <article class="landing">
+        <div class="landing__inner">
+          <section class="landing__room-search">
+            <form class="room-search">
+              <h1 class="room-search__title h1">Найдём номера под ваши пожелания</h1>
+              <div class="room-search__date-range">
+                <div class="dropdown-date-range">
+                  <div class="clearfix">
+                    <div class="dropdown-date-range__from">
+                      <div class="dropdown-date-range__label">
+                        <label class="label clearfix">
+                          <h3 class="label__left h3">Прибытие</h3><span class="label__right"></span>
                         </label>
                       </div>
+                      <div class="dropdown-date-range__dropdown">
+                        <div class="dropdown" id="room-book__check-in-out__from-date">
+                          <label class="dropdown__toggle"><span class="dropdown__text">ДД.ММ.ГГГГ</span><i class="dropdown__arrow material-icons">keyboard_arrow_down</i>
+                            <input class="dropdown__data-input" type="text" value="ДД.ММ.ГГГГ">
+                          </label>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="dropdown-date-range__to">
-                    <div class="dropdown-date-range__label">
-                      <label class="label clearfix">
-                        <h3 class="label__left h3">Выезд</h3><span class="label__right"></span>
-                      </label>
-                    </div>
-                    <div class="dropdown-date-range__dropdown">
-                      <div class="dropdown" id="room-book__check-in-out__to-date">
-                        <label class="dropdown__toggle"><span class="dropdown__text">ДД.ММ.ГГГГ</span><i class="dropdown__arrow material-icons">keyboard_arrow_down</i>
-                          <input class="dropdown__data-input" type="text" value="ДД.ММ.ГГГГ">
+                    <div class="dropdown-date-range__to">
+                      <div class="dropdown-date-range__label">
+                        <label class="label clearfix">
+                          <h3 class="label__left h3">Выезд</h3><span class="label__right"></span>
                         </label>
+                      </div>
+                      <div class="dropdown-date-range__dropdown">
+                        <div class="dropdown" id="room-book__check-in-out__to-date">
+                          <label class="dropdown__toggle"><span class="dropdown__text">ДД.ММ.ГГГГ</span><i class="dropdown__arrow material-icons">keyboard_arrow_down</i>
+                            <input class="dropdown__data-input" type="text" value="ДД.ММ.ГГГГ">
+                          </label>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="room-search__guests">
-              <div class="room-search__label">
-                <label class="label clearfix">
-                  <h3 class="label__left h3">Гости</h3><span class="label__right"></span>
-                </label>
-              </div>
-              <div class="room-search__guests-dropdown">
-                <div class="dropdown" id="guests">
-                  <label class="dropdown__toggle"><span class="dropdown__text">Сколько гостей</span><i class="dropdown__arrow material-icons">keyboard_arrow_down</i>
-                    <input class="dropdown__data-input" type="text" value="Сколько гостей">
+              <div class="room-search__guests">
+                <div class="room-search__label">
+                  <label class="label clearfix">
+                    <h3 class="label__left h3">Гости</h3><span class="label__right"></span>
                   </label>
-                  <ul class="dropdown__menu" style="z-index:9;">
-                    <li class="dropdown__li"><span class="dropdown__item-name">взрослые</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">0</span><span class="dropdown__inc-button">+</span></span></li>
-                    <li class="dropdown__li"><span class="dropdown__item-name">дети</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">0</span><span class="dropdown__inc-button">+</span></span></li>
-                    <li class="dropdown__li"><span class="dropdown__item-name">младенцы</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">0</span><span class="dropdown__inc-button">+</span></span></li>
-                    <li class="dropdown__li dropdown__li--footer-buttons"><span class="dropdown__clear-button"><a class="button button--textual button--hovered" href="javascript:void(0)">очистить</a></span><span class="dropdown__apply-button"><a class="button button--textual" href="javascript:void(0)">применить</a></span></li>
-                  </ul>
+                </div>
+                <div class="room-search__guests-dropdown">
+                  <div class="dropdown" id="guests">
+                    <label class="dropdown__toggle"><span class="dropdown__text">Сколько гостей</span><i class="dropdown__arrow material-icons">keyboard_arrow_down</i>
+                      <input class="dropdown__data-input" type="text" value="Сколько гостей">
+                    </label>
+                    <ul class="dropdown__menu" style="z-index:9;">
+                      <li class="dropdown__li"><span class="dropdown__item-name">взрослые</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">0</span><span class="dropdown__inc-button">+</span></span></li>
+                      <li class="dropdown__li"><span class="dropdown__item-name">дети</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">0</span><span class="dropdown__inc-button">+</span></span></li>
+                      <li class="dropdown__li"><span class="dropdown__item-name">младенцы</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">0</span><span class="dropdown__inc-button">+</span></span></li>
+                      <li class="dropdown__li dropdown__li--footer-buttons"><span class="dropdown__clear-button"><a class="button button--textual button--hovered" href="javascript:void(0)">очистить</a></span><span class="dropdown__apply-button"><a class="button button--textual" href="javascript:void(0)">применить</a></span></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="room-search__button"><a class="button button--default button--fluid" href="search-room-filter.html">Подобрать номер<i class="button__arrow material-icons">arrow_forward</i></a>
-            </div>
-          </form>
-        </section>
-        <aside class="landing__hero-text body">Лучшие номера для вашей работы, отдыха и просто вдохновения
-        </aside>
-      </div>
-    </article>
-    <footer class="layout__footer">
+              <div class="room-search__button"><a class="button button--default button--fluid" href="search-room-filter.html">Подобрать номер<i class="button__arrow material-icons">arrow_forward</i></a>
+              </div>
+            </form>
+          </section>
+          <aside class="landing__hero-text body">Лучшие номера для вашей работы, отдыха и просто вдохновения
+          </aside>
+        </div>
+      </article>
+    </div>
+    <footer class="page__footer">
       <div class="footer">
         <hr class="footer__row-divider">
         <div class="footer__inner">

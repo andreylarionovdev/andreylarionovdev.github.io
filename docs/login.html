@@ -13,7 +13,7 @@
     <title>Toxin booking | Sign in</title>
   <link href="styles.css" rel="stylesheet"><link href="main.css" rel="stylesheet"></head>
   <body class="container clearfix">
-    <header class="layout__header">
+    <header class="page__header">
       <nav class="header">
         <div class="header__inner"><i class="header__nav-toggle material-icons">menu</i>
           <figure class="header__logo"><a class="logo logo--with-text" href="./index.html"></a>
@@ -37,33 +37,37 @@
         </div>
       </nav>
     </header>
-    <article class="login">
-      <section class="login__form">
-        <form class="sign-in">
-          <h1 class="sign-in__title h1">Войти</h1>
-          <div class="sign-in__input">
-            <div class="input">
-              <input class="input__input" id="sign-in_email" type="email" placeholder="Email">
-              <button class="input__submit-button"><i class="input__arrow material-icons">arrow_forward</i></button>
-            </div>
-          </div>
-          <div class="sign-in__input">
-            <div class="input">
-              <input class="input__input" id="sign-in_pass" type="password" placeholder="Пароль">
-              <button class="input__submit-button"><i class="input__arrow material-icons">arrow_forward</i></button>
-            </div>
-          </div>
-          <div class="sign-in__login-button"><a class="button button--default button--fluid" href="login.html">Войти<i class="button__arrow material-icons">arrow_forward</i></a>
-          </div>
-          <div class="sign-in__create-account">
-            <p class="sign-in__hint">Нет аккаунта на Toxin?</p>
-            <div class="sign-in__create-button"><a class="button button--transparent button--fluid" href="registration.html">Создать</a>
-            </div>
-          </div>
-        </form>
-      </section>
-    </article>
-    <footer class="layout__footer">
+    <div class="page_main">
+      <article class="auth">
+        <div class="auth__inner">
+          <section class="auth__form">
+            <form class="sign-in">
+              <h1 class="sign-in__title h1">Войти</h1>
+              <div class="sign-in__input">
+                <div class="input">
+                  <input class="input__input" id="sign-in_email" type="email" placeholder="Email">
+                  <button class="input__submit-button"><i class="input__arrow material-icons">arrow_forward</i></button>
+                </div>
+              </div>
+              <div class="sign-in__input">
+                <div class="input">
+                  <input class="input__input" id="sign-in_pass" type="password" placeholder="Пароль">
+                  <button class="input__submit-button"><i class="input__arrow material-icons">arrow_forward</i></button>
+                </div>
+              </div>
+              <div class="sign-in__login-button"><a class="button button--default button--fluid" href="login.html">Войти<i class="button__arrow material-icons">arrow_forward</i></a>
+              </div>
+              <div class="sign-in__create-account">
+                <p class="sign-in__hint">Нет аккаунта на Toxin?</p>
+                <div class="sign-in__create-button"><a class="button button--transparent button--fluid" href="registration.html">Создать</a>
+                </div>
+              </div>
+            </form>
+          </section>
+        </div>
+      </article>
+    </div>
+    <footer class="page__footer">
       <div class="footer">
         <hr class="footer__row-divider">
         <div class="footer__inner">

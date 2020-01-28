@@ -1,90 +1,701 @@
-<head><link href="styles.css" rel="stylesheet"><link href="main.css" rel="stylesheet"></head>Html Webpack Plugin:
-<pre>
-  Error: Child compilation failed:
-  Module parse failed: Identifier 'href' has already been declared (1454:6)
-  File was processed with these loaders:
-   * ./node_modules/html-webpack-plugin/lib/loader.js
-   * ./node_modules/pug-loader/index.js
-  You may need an additional loader to handle the result of these loaders.
-  |   }
-  | ]
-  > const href = 'room-details.html'
-  | // iterate searchResult
-  | ;(function(){:
-  SyntaxError: Identifier 'href' has already been declared (1454:6)
-  
-  - compiler.js:79 
-    [toxin-booking-frontend]/[html-webpack-plugin]/lib/compiler.js:79:16
-  
-  - Compiler.js:306 
-    [toxin-booking-frontend]/[webpack]/lib/Compiler.js:306:11
-  
-  - Compiler.js:631 
-    [toxin-booking-frontend]/[webpack]/lib/Compiler.js:631:15
-  
-  
-  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
-    [toxin-booking-frontend]/[tapable]/lib/Hook.js:154:20
-  
-  - Compiler.js:628 
-    [toxin-booking-frontend]/[webpack]/lib/Compiler.js:628:31
-  
-  
-  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
-    [toxin-booking-frontend]/[tapable]/lib/Hook.js:154:20
-  
-  - Compilation.js:1325 
-    [toxin-booking-frontend]/[webpack]/lib/Compilation.js:1325:35
-  
-  
-  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
-    [toxin-booking-frontend]/[tapable]/lib/Hook.js:154:20
-  
-  - Compilation.js:1316 
-    [toxin-booking-frontend]/[webpack]/lib/Compilation.js:1316:32
-  
-  
-  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
-    [toxin-booking-frontend]/[tapable]/lib/Hook.js:154:20
-  
-  - Compilation.js:1311 
-    [toxin-booking-frontend]/[webpack]/lib/Compilation.js:1311:36
-  
-  
-  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
-    [toxin-booking-frontend]/[tapable]/lib/Hook.js:154:20
-  
-  - Compilation.js:1307 
-    [toxin-booking-frontend]/[webpack]/lib/Compilation.js:1307:32
-  
-  
-  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
-    [toxin-booking-frontend]/[tapable]/lib/Hook.js:154:20
-  
-  - Compilation.js:1244 Compilation.seal
-    [toxin-booking-frontend]/[webpack]/lib/Compilation.js:1244:27
-  
-  - Compiler.js:625 
-    [toxin-booking-frontend]/[webpack]/lib/Compiler.js:625:18
-  
-  - Compilation.js:1167 
-    [toxin-booking-frontend]/[webpack]/lib/Compilation.js:1167:4
-  
-  
-  - Hook.js:154 AsyncSeriesHook.lazyCompileHook
-    [toxin-booking-frontend]/[tapable]/lib/Hook.js:154:20
-  
-  - Compilation.js:1159 Compilation.finish
-    [toxin-booking-frontend]/[webpack]/lib/Compilation.js:1159:28
-  
-  - Compiler.js:622 
-    [toxin-booking-frontend]/[webpack]/lib/Compiler.js:622:17
-  
-  
-  - Compilation.js:1091 
-    [toxin-booking-frontend]/[webpack]/lib/Compilation.js:1091:12
-  
-  - Compilation.js:1003 
-    [toxin-booking-frontend]/[webpack]/lib/Compilation.js:1003:9
-  
-</pre><script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Toxin booking | Search room/Filter</title>
+  <link href="styles.css" rel="stylesheet"><link href="main.css" rel="stylesheet"></head>
+  <body class="container clearfix">
+    <header class="page__header">
+      <nav class="header">
+        <div class="header__inner"><i class="header__nav-toggle material-icons">menu</i>
+          <figure class="header__logo"><a class="logo logo--with-text" href="./index.html"></a>
+          </figure>
+          <ul class="header__nav">
+            <li class="header__nav-item"><a class="header__nav-link" href="/change-me">О нас</a>
+            </li>
+            <li class="header__nav-item"><a class="header__nav-link header__nav-link--has-submenu">Услуги</a>
+            </li>
+            <li class="header__nav-item"><a class="header__nav-link" href="/change-me">Вакансии</a>
+            </li>
+            <li class="header__nav-item"><a class="header__nav-link" href="/change-me">Новости</a>
+            </li>
+            <li class="header__nav-item"><a class="header__nav-link header__nav-link--has-submenu">Соглашения</a>
+            </li>
+            <li class="header__nav-item header__nav-item--sign-in"><a class="button button--transparent button--small" href="login.html">Войти</a>
+            </li>
+            <li class="header__nav-item header__nav-item--sign-up"><a class="button button--default button--small" href="registration.html">Зарегистрироваться</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="page_main">
+      <article class="search-room-filter clearfix">
+        <section class="search-room-filter__sidebar">
+          <div class="search-room-filter__date-dropdown-group">
+            <div class="search-room-filter__date-dropdown-label">
+              <label class="label clearfix" for="date-dropdown">
+                <h3 class="label__left h3">Даты пребывания в отеле</h3><span class="label__right"></span>
+              </label>
+            </div>
+            <div class="search-room-filter__date-dropdown">
+              <div class="dropdown" id="date-dropdown">
+                <label class="dropdown__toggle"><span class="dropdown__text">19 авг. - 23 авг.</span><i class="dropdown__arrow material-icons">keyboard_arrow_down</i>
+                  <input class="dropdown__data-input" type="text" value="19 авг. - 23 авг.">
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="search-room-filter__guests-dropdown-group">
+            <div class="search-room-filter__guests-dropdown-label">
+              <label class="label clearfix" for="guests-dropdown">
+                <h3 class="label__left h3">Гости</h3><span class="label__right"></span>
+              </label>
+            </div>
+            <div class="search-room-filter__guests-dropdown">
+              <div class="dropdown" id="guests-dropdown">
+                <label class="dropdown__toggle"><span class="dropdown__text">3 гостя, 1 младенец</span><i class="dropdown__arrow material-icons">keyboard_arrow_down</i>
+                  <input class="dropdown__data-input" type="text" value="3 гостя, 1 младенец">
+                </label>
+                <ul class="dropdown__menu" style="z-index:9;">
+                  <li class="dropdown__li"><span class="dropdown__item-name">взрослые</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">2</span><span class="dropdown__inc-button">+</span></span></li>
+                  <li class="dropdown__li"><span class="dropdown__item-name">дети</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">0</span><span class="dropdown__inc-button">+</span></span></li>
+                  <li class="dropdown__li"><span class="dropdown__item-name">младенцы</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">1</span><span class="dropdown__inc-button">+</span></span></li>
+                  <li class="dropdown__li dropdown__li--footer-buttons"><span class="dropdown__clear-button"><a class="button button--textual button--hovered" href="javascript:void(0)">очистить</a></span><span class="dropdown__apply-button"><a class="button button--textual" href="javascript:void(0)">применить</a></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="search-room-filter__price-slider">
+            <div class="range-slider">
+              <label class="label clearfix">
+                <h3 class="label__left h3">Диапазон цены</h3><span class="label__right"></span>
+              </label>
+              <input class="range-slider__input" type="text" name="price-slider" value="" data-type="double" data-skin="big" data-min="0" data-max="16000" data-from="5000" data-to="10000">
+            </div>
+            <p class="search-room-filter__price-slider-hint">Стоимость за сутки пребывания в номере
+            </p>
+          </div>
+          <div class="search-room-filter__checkbox-group">
+            <div class="checkbox-group__label">
+              <label class="label clearfix">
+                <h3 class="label__left h3">checkbox buttons</h3><span class="label__right"></span>
+              </label>
+            </div>
+            <div class="checkbox-group__checkbox">
+              <div class="checkbox">
+                <input class="checkbox__input" id="smoke-allowed" type="checkbox">
+                <label class="checkbox__label" for="smoke-allowed">Можно курить</label>
+              </div>
+            </div>
+            <div class="checkbox-group__checkbox">
+              <div class="checkbox">
+                <input class="checkbox__input" id="pets-allowed" type="checkbox" checked>
+                <label class="checkbox__label" for="pets-allowed">Можно с питомцами</label>
+              </div>
+            </div>
+            <div class="checkbox-group__checkbox">
+              <div class="checkbox">
+                <input class="checkbox__input" id="guests-allowed" type="checkbox" checked>
+                <label class="checkbox__label" for="guests-allowed">Можно пригласить гостей (до 10 человек)</label>
+              </div>
+            </div>
+          </div>
+          <div class="search-room-filter__rich-checkbox-group">
+            <div class="rich-checkbox-group__label">
+              <label class="label clearfix">
+                <h3 class="label__left h3">Доступность</h3><span class="label__right"></span>
+              </label>
+            </div>
+            <div class="rich-checkbox-group__rich-checkbox clearfix">
+              <div class="checkbox checkbox--has-hint">
+                <input class="checkbox__input" id="wide-hall-checkbox" type="checkbox">
+                <label class="checkbox__label" for="wide-hall-checkbox">Широкий коридор</label>
+                <p class="checkbox__hint">Ширина коридоров в номере не&nbsp;менее 91 см.</p>
+              </div>
+            </div>
+            <div class="rich-checkbox-group__rich-checkbox clearfix">
+              <div class="checkbox checkbox--has-hint">
+                <input class="checkbox__input" id="disable-assistant-checkbox" type="checkbox">
+                <label class="checkbox__label" for="disable-assistant-checkbox">Помощник для инвалидов</label>
+                <p class="checkbox__hint">На 1 этаже вас встретит специалист и проводит до номера.</p>
+              </div>
+            </div>
+          </div>
+          <div class="search-room-filter__feature-dropdown-group">
+            <div class="search-room-filter__feature-dropdown-label">
+              <label class="label clearfix" for="feature-dropdown">
+                <h3 class="label__left h3">Удобства номера</h3><span class="label__right"></span>
+              </label>
+            </div>
+            <div class="search-room-filter__feature-dropdown">
+              <div class="dropdown" id="feature-dropdown">
+                <label class="dropdown__toggle"><span class="dropdown__text">2 спальни, 2 кровати...</span><i class="dropdown__arrow material-icons">keyboard_arrow_down</i>
+                  <input class="dropdown__data-input" type="text" value="2 спальни, 2 кровати...">
+                </label>
+                <ul class="dropdown__menu" style="z-index:9;">
+                  <li class="dropdown__li"><span class="dropdown__item-name">спальни</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">2</span><span class="dropdown__inc-button">+</span></span></li>
+                  <li class="dropdown__li"><span class="dropdown__item-name">кровати</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">2</span><span class="dropdown__inc-button">+</span></span></li>
+                  <li class="dropdown__li"><span class="dropdown__item-name">ванные комнаты</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">0</span><span class="dropdown__inc-button">+</span></span></li>
+                  <li class="dropdown__li dropdown__li--footer-buttons"><span class="dropdown__clear-button"><a class="button button--textual button--hovered" href="javascript:void(0)">очистить</a></span><span class="dropdown__apply-button"><a class="button button--textual" href="javascript:void(0)">применить</a></span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="search-room-filter__additional-checkbox-list-xp-group">
+              <div class="checkbox-list-xp" id="additional">
+                <h3 class="checkbox-list-xp__toggle"><span class="checkbox-list-xp__label">Дополнительные удобства</span><i class="checkbox-list-xp__arrow material-icons">keyboard_arrow_down</i></h3>
+                <ul class="checkbox-list-xp__list">
+                  <li class="checkbox-list-xp__li clearfix">
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="additional-breakfast" type="checkbox">
+                      <label class="checkbox__label" for="additional-breakfast">Завтрак</label>
+                    </div>
+                  </li>
+                  <li class="checkbox-list-xp__li clearfix">
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="additional-table" type="checkbox" checked>
+                      <label class="checkbox__label" for="additional-table">Письменный стол</label>
+                    </div>
+                  </li>
+                  <li class="checkbox-list-xp__li clearfix">
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="additional-baby-chair-for-eat" type="checkbox" checked>
+                      <label class="checkbox__label" for="additional-baby-chair-for-eat">Стул для кормления</label>
+                    </div>
+                  </li>
+                  <li class="checkbox-list-xp__li clearfix">
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="additional-baby-bed" type="checkbox" checked>
+                      <label class="checkbox__label" for="additional-baby-bed">Кроватка</label>
+                    </div>
+                  </li>
+                  <li class="checkbox-list-xp__li clearfix">
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="additional-tv_1" type="checkbox">
+                      <label class="checkbox__label" for="additional-tv_1">Телевизор</label>
+                    </div>
+                  </li>
+                  <li class="checkbox-list-xp__li clearfix">
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="additional-shampoo_1" type="checkbox">
+                      <label class="checkbox__label" for="additional-shampoo_1">Шампунь</label>
+                    </div>
+                  </li>
+                  <li class="checkbox-list-xp__li clearfix">
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="additional-tv_2" type="checkbox">
+                      <label class="checkbox__label" for="additional-tv_2">Телевизор</label>
+                    </div>
+                  </li>
+                  <li class="checkbox-list-xp__li clearfix">
+                    <div class="checkbox">
+                      <input class="checkbox__input" id="additional-shampoo_2" type="checkbox">
+                      <label class="checkbox__label" for="additional-shampoo_2">Шампунь</label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="search-room-filter__search-result">
+          <h1 class="h1">Номера, которые мы для вас подобрали</h1>
+          <div class="search-room-filter__search-result-list clearfix">
+            <div class="search-room-filter__room-thumb">
+              <div class="room-thumb room-thumb--focus">
+                <figure class="room-thumb__carousel-inner" role="group"><img class="room-thumb__carousel-image room-thumb__carousel-image--active" src="img/room-thumb-1.png" alt="Room 888"><img class="room-thumb__carousel-image" src="img/room-thumb-1.png" alt="Room 888"><img class="room-thumb__carousel-image" src="img/room-thumb-1.png" alt="Room 888"><img class="room-thumb__carousel-image" src="img/room-thumb-1.png" alt="Room 888">
+                  <div class="room-thumb__carousel-control room-thumb__carousel-control--prev"><i class="room-thumb__arrow-left material-icons">keyboard_arrow_left</i></div>
+                  <div class="room-thumb__carousel-control room-thumb__carousel-control--next"><i class="room-thumb__arrow-right material-icons">keyboard_arrow_left</i></div>
+                  <ul class="room-thumb__carousel-indicators">
+                    <li class="room-thumb__carousel-indicator room-thumb__carousel-indicator--active"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                  </ul>
+                </figure>
+                <header class="room-thumb__header"><a class="room-thumb__number" href="room-details.html"><span class="room-thumb__number-sign">№</span><span class="room-thumb__number-value">888</span>
+                    <h3 class="room-thumb__number-feature h3 h3--purple">люкс</h3></a>
+                  <div class="room-thumb__price-per-day body"><span class="room-thumb__cost">9,990₽</span>&nbsp;<span class="room-thumb__date-unit">в сутки</span></div>
+                </header>
+                <footer class="room-thumb__footer">
+                  <div class="room-thumb__rate">
+                    <div class="rate-button" id="888__rate">
+                      <input class="rate-button__radio" id="888__rate5" type="radio" name="888__rate" value="5" checked>
+                      <label class="rate-button__label" for="888__rate5">5</label>
+                      <input class="rate-button__radio" id="888__rate4" type="radio" name="888__rate" value="4">
+                      <label class="rate-button__label" for="888__rate4">4</label>
+                      <input class="rate-button__radio" id="888__rate3" type="radio" name="888__rate" value="3">
+                      <label class="rate-button__label" for="888__rate3">3</label>
+                      <input class="rate-button__radio" id="888__rate2" type="radio" name="888__rate" value="2">
+                      <label class="rate-button__label" for="888__rate2">2</label>
+                      <input class="rate-button__radio" id="888__rate1" type="radio" name="888__rate" value="1">
+                      <label class="rate-button__label" for="888__rate1">1</label>
+                    </div>
+                  </div>
+                  <p class="room-thumb__feedback-counter"><b>145</b>&nbsp;<span>Отзывов</span></p>
+                </footer>
+              </div>
+            </div>
+            <div class="search-room-filter__room-thumb">
+              <div class="room-thumb">
+                <figure class="room-thumb__carousel-inner" role="group"><img class="room-thumb__carousel-image room-thumb__carousel-image--active" src="img/room-thumb-2.png" alt="Room 840"><img class="room-thumb__carousel-image" src="img/room-thumb-2.png" alt="Room 840"><img class="room-thumb__carousel-image" src="img/room-thumb-2.png" alt="Room 840"><img class="room-thumb__carousel-image" src="img/room-thumb-2.png" alt="Room 840">
+                  <div class="room-thumb__carousel-control room-thumb__carousel-control--prev"><i class="room-thumb__arrow-left material-icons">keyboard_arrow_left</i></div>
+                  <div class="room-thumb__carousel-control room-thumb__carousel-control--next"><i class="room-thumb__arrow-right material-icons">keyboard_arrow_left</i></div>
+                  <ul class="room-thumb__carousel-indicators">
+                    <li class="room-thumb__carousel-indicator room-thumb__carousel-indicator--active"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                  </ul>
+                </figure>
+                <header class="room-thumb__header"><a class="room-thumb__number" href="room-details.html"><span class="room-thumb__number-sign">№</span><span class="room-thumb__number-value">840</span>
+                    <h3 class="room-thumb__number-feature h3 h3--purple"></h3></a>
+                  <div class="room-thumb__price-per-day body"><span class="room-thumb__cost">9,900₽</span>&nbsp;<span class="room-thumb__date-unit">в сутки</span></div>
+                </header>
+                <footer class="room-thumb__footer">
+                  <div class="room-thumb__rate">
+                    <div class="rate-button" id="840__rate">
+                      <input class="rate-button__radio" id="840__rate5" type="radio" name="840__rate" value="5">
+                      <label class="rate-button__label" for="840__rate5">5</label>
+                      <input class="rate-button__radio" id="840__rate4" type="radio" name="840__rate" value="4" checked>
+                      <label class="rate-button__label" for="840__rate4">4</label>
+                      <input class="rate-button__radio" id="840__rate3" type="radio" name="840__rate" value="3">
+                      <label class="rate-button__label" for="840__rate3">3</label>
+                      <input class="rate-button__radio" id="840__rate2" type="radio" name="840__rate" value="2">
+                      <label class="rate-button__label" for="840__rate2">2</label>
+                      <input class="rate-button__radio" id="840__rate1" type="radio" name="840__rate" value="1">
+                      <label class="rate-button__label" for="840__rate1">1</label>
+                    </div>
+                  </div>
+                  <p class="room-thumb__feedback-counter"><b>65</b>&nbsp;<span>Отзывов</span></p>
+                </footer>
+              </div>
+            </div>
+            <div class="search-room-filter__room-thumb">
+              <div class="room-thumb">
+                <figure class="room-thumb__carousel-inner" role="group"><img class="room-thumb__carousel-image room-thumb__carousel-image--active" src="img/room-thumb-3.png" alt="Room 980"><img class="room-thumb__carousel-image" src="img/room-thumb-3.png" alt="Room 980"><img class="room-thumb__carousel-image" src="img/room-thumb-3.png" alt="Room 980"><img class="room-thumb__carousel-image" src="img/room-thumb-3.png" alt="Room 980">
+                  <div class="room-thumb__carousel-control room-thumb__carousel-control--prev"><i class="room-thumb__arrow-left material-icons">keyboard_arrow_left</i></div>
+                  <div class="room-thumb__carousel-control room-thumb__carousel-control--next"><i class="room-thumb__arrow-right material-icons">keyboard_arrow_left</i></div>
+                  <ul class="room-thumb__carousel-indicators">
+                    <li class="room-thumb__carousel-indicator room-thumb__carousel-indicator--active"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                  </ul>
+                </figure>
+                <header class="room-thumb__header"><a class="room-thumb__number" href="room-details.html"><span class="room-thumb__number-sign">№</span><span class="room-thumb__number-value">980</span>
+                    <h3 class="room-thumb__number-feature h3 h3--purple">люкс</h3></a>
+                  <div class="room-thumb__price-per-day body"><span class="room-thumb__cost">8,500₽</span>&nbsp;<span class="room-thumb__date-unit">в сутки</span></div>
+                </header>
+                <footer class="room-thumb__footer">
+                  <div class="room-thumb__rate">
+                    <div class="rate-button" id="980__rate">
+                      <input class="rate-button__radio" id="980__rate5" type="radio" name="980__rate" value="5">
+                      <label class="rate-button__label" for="980__rate5">5</label>
+                      <input class="rate-button__radio" id="980__rate4" type="radio" name="980__rate" value="4">
+                      <label class="rate-button__label" for="980__rate4">4</label>
+                      <input class="rate-button__radio" id="980__rate3" type="radio" name="980__rate" value="3" checked>
+                      <label class="rate-button__label" for="980__rate3">3</label>
+                      <input class="rate-button__radio" id="980__rate2" type="radio" name="980__rate" value="2">
+                      <label class="rate-button__label" for="980__rate2">2</label>
+                      <input class="rate-button__radio" id="980__rate1" type="radio" name="980__rate" value="1">
+                      <label class="rate-button__label" for="980__rate1">1</label>
+                    </div>
+                  </div>
+                  <p class="room-thumb__feedback-counter"><b>35</b>&nbsp;<span>Отзывов</span></p>
+                </footer>
+              </div>
+            </div>
+            <div class="search-room-filter__room-thumb">
+              <div class="room-thumb">
+                <figure class="room-thumb__carousel-inner" role="group"><img class="room-thumb__carousel-image room-thumb__carousel-image--active" src="img/room-thumb-4.png" alt="Room 856"><img class="room-thumb__carousel-image" src="img/room-thumb-4.png" alt="Room 856"><img class="room-thumb__carousel-image" src="img/room-thumb-4.png" alt="Room 856"><img class="room-thumb__carousel-image" src="img/room-thumb-4.png" alt="Room 856">
+                  <div class="room-thumb__carousel-control room-thumb__carousel-control--prev"><i class="room-thumb__arrow-left material-icons">keyboard_arrow_left</i></div>
+                  <div class="room-thumb__carousel-control room-thumb__carousel-control--next"><i class="room-thumb__arrow-right material-icons">keyboard_arrow_left</i></div>
+                  <ul class="room-thumb__carousel-indicators">
+                    <li class="room-thumb__carousel-indicator room-thumb__carousel-indicator--active"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                  </ul>
+                </figure>
+                <header class="room-thumb__header"><a class="room-thumb__number" href="room-details.html"><span class="room-thumb__number-sign">№</span><span class="room-thumb__number-value">856</span>
+                    <h3 class="room-thumb__number-feature h3 h3--purple"></h3></a>
+                  <div class="room-thumb__price-per-day body"><span class="room-thumb__cost">7,300₽</span>&nbsp;<span class="room-thumb__date-unit">в сутки</span></div>
+                </header>
+                <footer class="room-thumb__footer">
+                  <div class="room-thumb__rate">
+                    <div class="rate-button" id="856__rate">
+                      <input class="rate-button__radio" id="856__rate5" type="radio" name="856__rate" value="5" checked>
+                      <label class="rate-button__label" for="856__rate5">5</label>
+                      <input class="rate-button__radio" id="856__rate4" type="radio" name="856__rate" value="4">
+                      <label class="rate-button__label" for="856__rate4">4</label>
+                      <input class="rate-button__radio" id="856__rate3" type="radio" name="856__rate" value="3">
+                      <label class="rate-button__label" for="856__rate3">3</label>
+                      <input class="rate-button__radio" id="856__rate2" type="radio" name="856__rate" value="2">
+                      <label class="rate-button__label" for="856__rate2">2</label>
+                      <input class="rate-button__radio" id="856__rate1" type="radio" name="856__rate" value="1">
+                      <label class="rate-button__label" for="856__rate1">1</label>
+                    </div>
+                  </div>
+                  <p class="room-thumb__feedback-counter"><b>19</b>&nbsp;<span>Отзывов</span></p>
+                </footer>
+              </div>
+            </div>
+            <div class="search-room-filter__room-thumb">
+              <div class="room-thumb">
+                <figure class="room-thumb__carousel-inner" role="group"><img class="room-thumb__carousel-image room-thumb__carousel-image--active" src="img/room-thumb-5.png" alt="Room 740"><img class="room-thumb__carousel-image" src="img/room-thumb-5.png" alt="Room 740"><img class="room-thumb__carousel-image" src="img/room-thumb-5.png" alt="Room 740"><img class="room-thumb__carousel-image" src="img/room-thumb-5.png" alt="Room 740">
+                  <div class="room-thumb__carousel-control room-thumb__carousel-control--prev"><i class="room-thumb__arrow-left material-icons">keyboard_arrow_left</i></div>
+                  <div class="room-thumb__carousel-control room-thumb__carousel-control--next"><i class="room-thumb__arrow-right material-icons">keyboard_arrow_left</i></div>
+                  <ul class="room-thumb__carousel-indicators">
+                    <li class="room-thumb__carousel-indicator room-thumb__carousel-indicator--active"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                  </ul>
+                </figure>
+                <header class="room-thumb__header"><a class="room-thumb__number" href="room-details.html"><span class="room-thumb__number-sign">№</span><span class="room-thumb__number-value">740</span>
+                    <h3 class="room-thumb__number-feature h3 h3--purple"></h3></a>
+                  <div class="room-thumb__price-per-day body"><span class="room-thumb__cost">6,000₽</span>&nbsp;<span class="room-thumb__date-unit">в сутки</span></div>
+                </header>
+                <footer class="room-thumb__footer">
+                  <div class="room-thumb__rate">
+                    <div class="rate-button" id="740__rate">
+                      <input class="rate-button__radio" id="740__rate5" type="radio" name="740__rate" value="5">
+                      <label class="rate-button__label" for="740__rate5">5</label>
+                      <input class="rate-button__radio" id="740__rate4" type="radio" name="740__rate" value="4" checked>
+                      <label class="rate-button__label" for="740__rate4">4</label>
+                      <input class="rate-button__radio" id="740__rate3" type="radio" name="740__rate" value="3">
+                      <label class="rate-button__label" for="740__rate3">3</label>
+                      <input class="rate-button__radio" id="740__rate2" type="radio" name="740__rate" value="2">
+                      <label class="rate-button__label" for="740__rate2">2</label>
+                      <input class="rate-button__radio" id="740__rate1" type="radio" name="740__rate" value="1">
+                      <label class="rate-button__label" for="740__rate1">1</label>
+                    </div>
+                  </div>
+                  <p class="room-thumb__feedback-counter"><b>44</b>&nbsp;<span>Отзывов</span></p>
+                </footer>
+              </div>
+            </div>
+            <div class="search-room-filter__room-thumb">
+              <div class="room-thumb">
+                <figure class="room-thumb__carousel-inner" role="group"><img class="room-thumb__carousel-image room-thumb__carousel-image--active" src="img/room-thumb-6.png" alt="Room 982"><img class="room-thumb__carousel-image" src="img/room-thumb-6.png" alt="Room 982"><img class="room-thumb__carousel-image" src="img/room-thumb-6.png" alt="Room 982"><img class="room-thumb__carousel-image" src="img/room-thumb-6.png" alt="Room 982">
+                  <div class="room-thumb__carousel-control room-thumb__carousel-control--prev"><i class="room-thumb__arrow-left material-icons">keyboard_arrow_left</i></div>
+                  <div class="room-thumb__carousel-control room-thumb__carousel-control--next"><i class="room-thumb__arrow-right material-icons">keyboard_arrow_left</i></div>
+                  <ul class="room-thumb__carousel-indicators">
+                    <li class="room-thumb__carousel-indicator room-thumb__carousel-indicator--active"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                  </ul>
+                </figure>
+                <header class="room-thumb__header"><a class="room-thumb__number" href="room-details.html"><span class="room-thumb__number-sign">№</span><span class="room-thumb__number-value">982</span>
+                    <h3 class="room-thumb__number-feature h3 h3--purple"></h3></a>
+                  <div class="room-thumb__price-per-day body"><span class="room-thumb__cost">5,800₽</span>&nbsp;<span class="room-thumb__date-unit">в сутки</span></div>
+                </header>
+                <footer class="room-thumb__footer">
+                  <div class="room-thumb__rate">
+                    <div class="rate-button" id="982__rate">
+                      <input class="rate-button__radio" id="982__rate5" type="radio" name="982__rate" value="5">
+                      <label class="rate-button__label" for="982__rate5">5</label>
+                      <input class="rate-button__radio" id="982__rate4" type="radio" name="982__rate" value="4">
+                      <label class="rate-button__label" for="982__rate4">4</label>
+                      <input class="rate-button__radio" id="982__rate3" type="radio" name="982__rate" value="3" checked>
+                      <label class="rate-button__label" for="982__rate3">3</label>
+                      <input class="rate-button__radio" id="982__rate2" type="radio" name="982__rate" value="2">
+                      <label class="rate-button__label" for="982__rate2">2</label>
+                      <input class="rate-button__radio" id="982__rate1" type="radio" name="982__rate" value="1">
+                      <label class="rate-button__label" for="982__rate1">1</label>
+                    </div>
+                  </div>
+                  <p class="room-thumb__feedback-counter"><b>56</b>&nbsp;<span>Отзывов</span></p>
+                </footer>
+              </div>
+            </div>
+            <div class="search-room-filter__room-thumb">
+              <div class="room-thumb">
+                <figure class="room-thumb__carousel-inner" role="group"><img class="room-thumb__carousel-image room-thumb__carousel-image--active" src="img/room-thumb-7.png" alt="Room 678"><img class="room-thumb__carousel-image" src="img/room-thumb-7.png" alt="Room 678"><img class="room-thumb__carousel-image" src="img/room-thumb-7.png" alt="Room 678"><img class="room-thumb__carousel-image" src="img/room-thumb-7.png" alt="Room 678">
+                  <div class="room-thumb__carousel-control room-thumb__carousel-control--prev"><i class="room-thumb__arrow-left material-icons">keyboard_arrow_left</i></div>
+                  <div class="room-thumb__carousel-control room-thumb__carousel-control--next"><i class="room-thumb__arrow-right material-icons">keyboard_arrow_left</i></div>
+                  <ul class="room-thumb__carousel-indicators">
+                    <li class="room-thumb__carousel-indicator room-thumb__carousel-indicator--active"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                  </ul>
+                </figure>
+                <header class="room-thumb__header"><a class="room-thumb__number" href="room-details.html"><span class="room-thumb__number-sign">№</span><span class="room-thumb__number-value">678</span>
+                    <h3 class="room-thumb__number-feature h3 h3--purple"></h3></a>
+                  <div class="room-thumb__price-per-day body"><span class="room-thumb__cost">5,500₽</span>&nbsp;<span class="room-thumb__date-unit">в сутки</span></div>
+                </header>
+                <footer class="room-thumb__footer">
+                  <div class="room-thumb__rate">
+                    <div class="rate-button" id="678__rate">
+                      <input class="rate-button__radio" id="678__rate5" type="radio" name="678__rate" value="5" checked>
+                      <label class="rate-button__label" for="678__rate5">5</label>
+                      <input class="rate-button__radio" id="678__rate4" type="radio" name="678__rate" value="4">
+                      <label class="rate-button__label" for="678__rate4">4</label>
+                      <input class="rate-button__radio" id="678__rate3" type="radio" name="678__rate" value="3">
+                      <label class="rate-button__label" for="678__rate3">3</label>
+                      <input class="rate-button__radio" id="678__rate2" type="radio" name="678__rate" value="2">
+                      <label class="rate-button__label" for="678__rate2">2</label>
+                      <input class="rate-button__radio" id="678__rate1" type="radio" name="678__rate" value="1">
+                      <label class="rate-button__label" for="678__rate1">1</label>
+                    </div>
+                  </div>
+                  <p class="room-thumb__feedback-counter"><b>45</b>&nbsp;<span>Отзывов</span></p>
+                </footer>
+              </div>
+            </div>
+            <div class="search-room-filter__room-thumb">
+              <div class="room-thumb">
+                <figure class="room-thumb__carousel-inner" role="group"><img class="room-thumb__carousel-image room-thumb__carousel-image--active" src="img/room-thumb-8.png" alt="Room 450"><img class="room-thumb__carousel-image" src="img/room-thumb-8.png" alt="Room 450"><img class="room-thumb__carousel-image" src="img/room-thumb-8.png" alt="Room 450"><img class="room-thumb__carousel-image" src="img/room-thumb-8.png" alt="Room 450">
+                  <div class="room-thumb__carousel-control room-thumb__carousel-control--prev"><i class="room-thumb__arrow-left material-icons">keyboard_arrow_left</i></div>
+                  <div class="room-thumb__carousel-control room-thumb__carousel-control--next"><i class="room-thumb__arrow-right material-icons">keyboard_arrow_left</i></div>
+                  <ul class="room-thumb__carousel-indicators">
+                    <li class="room-thumb__carousel-indicator room-thumb__carousel-indicator--active"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                  </ul>
+                </figure>
+                <header class="room-thumb__header"><a class="room-thumb__number" href="room-details.html"><span class="room-thumb__number-sign">№</span><span class="room-thumb__number-value">450</span>
+                    <h3 class="room-thumb__number-feature h3 h3--purple"></h3></a>
+                  <div class="room-thumb__price-per-day body"><span class="room-thumb__cost">5,300₽</span>&nbsp;<span class="room-thumb__date-unit">в сутки</span></div>
+                </header>
+                <footer class="room-thumb__footer">
+                  <div class="room-thumb__rate">
+                    <div class="rate-button" id="450__rate">
+                      <input class="rate-button__radio" id="450__rate5" type="radio" name="450__rate" value="5">
+                      <label class="rate-button__label" for="450__rate5">5</label>
+                      <input class="rate-button__radio" id="450__rate4" type="radio" name="450__rate" value="4" checked>
+                      <label class="rate-button__label" for="450__rate4">4</label>
+                      <input class="rate-button__radio" id="450__rate3" type="radio" name="450__rate" value="3">
+                      <label class="rate-button__label" for="450__rate3">3</label>
+                      <input class="rate-button__radio" id="450__rate2" type="radio" name="450__rate" value="2">
+                      <label class="rate-button__label" for="450__rate2">2</label>
+                      <input class="rate-button__radio" id="450__rate1" type="radio" name="450__rate" value="1">
+                      <label class="rate-button__label" for="450__rate1">1</label>
+                    </div>
+                  </div>
+                  <p class="room-thumb__feedback-counter"><b>39</b>&nbsp;<span>Отзывов</span></p>
+                </footer>
+              </div>
+            </div>
+            <div class="search-room-filter__room-thumb">
+              <div class="room-thumb">
+                <figure class="room-thumb__carousel-inner" role="group"><img class="room-thumb__carousel-image room-thumb__carousel-image--active" src="img/room-thumb-9.png" alt="Room 350"><img class="room-thumb__carousel-image" src="img/room-thumb-9.png" alt="Room 350"><img class="room-thumb__carousel-image" src="img/room-thumb-9.png" alt="Room 350"><img class="room-thumb__carousel-image" src="img/room-thumb-9.png" alt="Room 350">
+                  <div class="room-thumb__carousel-control room-thumb__carousel-control--prev"><i class="room-thumb__arrow-left material-icons">keyboard_arrow_left</i></div>
+                  <div class="room-thumb__carousel-control room-thumb__carousel-control--next"><i class="room-thumb__arrow-right material-icons">keyboard_arrow_left</i></div>
+                  <ul class="room-thumb__carousel-indicators">
+                    <li class="room-thumb__carousel-indicator room-thumb__carousel-indicator--active"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                  </ul>
+                </figure>
+                <header class="room-thumb__header"><a class="room-thumb__number" href="room-details.html"><span class="room-thumb__number-sign">№</span><span class="room-thumb__number-value">350</span>
+                    <h3 class="room-thumb__number-feature h3 h3--purple"></h3></a>
+                  <div class="room-thumb__price-per-day body"><span class="room-thumb__cost">5,000₽</span>&nbsp;<span class="room-thumb__date-unit">в сутки</span></div>
+                </header>
+                <footer class="room-thumb__footer">
+                  <div class="room-thumb__rate">
+                    <div class="rate-button" id="350__rate">
+                      <input class="rate-button__radio" id="350__rate5" type="radio" name="350__rate" value="5">
+                      <label class="rate-button__label" for="350__rate5">5</label>
+                      <input class="rate-button__radio" id="350__rate4" type="radio" name="350__rate" value="4">
+                      <label class="rate-button__label" for="350__rate4">4</label>
+                      <input class="rate-button__radio" id="350__rate3" type="radio" name="350__rate" value="3" checked>
+                      <label class="rate-button__label" for="350__rate3">3</label>
+                      <input class="rate-button__radio" id="350__rate2" type="radio" name="350__rate" value="2">
+                      <label class="rate-button__label" for="350__rate2">2</label>
+                      <input class="rate-button__radio" id="350__rate1" type="radio" name="350__rate" value="1">
+                      <label class="rate-button__label" for="350__rate1">1</label>
+                    </div>
+                  </div>
+                  <p class="room-thumb__feedback-counter"><b>77</b>&nbsp;<span>Отзывов</span></p>
+                </footer>
+              </div>
+            </div>
+            <div class="search-room-filter__room-thumb">
+              <div class="room-thumb">
+                <figure class="room-thumb__carousel-inner" role="group"><img class="room-thumb__carousel-image room-thumb__carousel-image--active" src="img/room-thumb-10.png" alt="Room 666"><img class="room-thumb__carousel-image" src="img/room-thumb-10.png" alt="Room 666"><img class="room-thumb__carousel-image" src="img/room-thumb-10.png" alt="Room 666"><img class="room-thumb__carousel-image" src="img/room-thumb-10.png" alt="Room 666">
+                  <div class="room-thumb__carousel-control room-thumb__carousel-control--prev"><i class="room-thumb__arrow-left material-icons">keyboard_arrow_left</i></div>
+                  <div class="room-thumb__carousel-control room-thumb__carousel-control--next"><i class="room-thumb__arrow-right material-icons">keyboard_arrow_left</i></div>
+                  <ul class="room-thumb__carousel-indicators">
+                    <li class="room-thumb__carousel-indicator room-thumb__carousel-indicator--active"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                  </ul>
+                </figure>
+                <header class="room-thumb__header"><a class="room-thumb__number" href="room-details.html"><span class="room-thumb__number-sign">№</span><span class="room-thumb__number-value">666</span>
+                    <h3 class="room-thumb__number-feature h3 h3--purple"></h3></a>
+                  <div class="room-thumb__price-per-day body"><span class="room-thumb__cost">5,000₽</span>&nbsp;<span class="room-thumb__date-unit">в сутки</span></div>
+                </header>
+                <footer class="room-thumb__footer">
+                  <div class="room-thumb__rate">
+                    <div class="rate-button" id="666__rate">
+                      <input class="rate-button__radio" id="666__rate5" type="radio" name="666__rate" value="5" checked>
+                      <label class="rate-button__label" for="666__rate5">5</label>
+                      <input class="rate-button__radio" id="666__rate4" type="radio" name="666__rate" value="4">
+                      <label class="rate-button__label" for="666__rate4">4</label>
+                      <input class="rate-button__radio" id="666__rate3" type="radio" name="666__rate" value="3">
+                      <label class="rate-button__label" for="666__rate3">3</label>
+                      <input class="rate-button__radio" id="666__rate2" type="radio" name="666__rate" value="2">
+                      <label class="rate-button__label" for="666__rate2">2</label>
+                      <input class="rate-button__radio" id="666__rate1" type="radio" name="666__rate" value="1">
+                      <label class="rate-button__label" for="666__rate1">1</label>
+                    </div>
+                  </div>
+                  <p class="room-thumb__feedback-counter"><b>25</b>&nbsp;<span>Отзывов</span></p>
+                </footer>
+              </div>
+            </div>
+            <div class="search-room-filter__room-thumb">
+              <div class="room-thumb">
+                <figure class="room-thumb__carousel-inner" role="group"><img class="room-thumb__carousel-image room-thumb__carousel-image--active" src="img/room-thumb-11.png" alt="Room 444"><img class="room-thumb__carousel-image" src="img/room-thumb-11.png" alt="Room 444"><img class="room-thumb__carousel-image" src="img/room-thumb-11.png" alt="Room 444"><img class="room-thumb__carousel-image" src="img/room-thumb-11.png" alt="Room 444">
+                  <div class="room-thumb__carousel-control room-thumb__carousel-control--prev"><i class="room-thumb__arrow-left material-icons">keyboard_arrow_left</i></div>
+                  <div class="room-thumb__carousel-control room-thumb__carousel-control--next"><i class="room-thumb__arrow-right material-icons">keyboard_arrow_left</i></div>
+                  <ul class="room-thumb__carousel-indicators">
+                    <li class="room-thumb__carousel-indicator room-thumb__carousel-indicator--active"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                  </ul>
+                </figure>
+                <header class="room-thumb__header"><a class="room-thumb__number" href="room-details.html"><span class="room-thumb__number-sign">№</span><span class="room-thumb__number-value">444</span>
+                    <h3 class="room-thumb__number-feature h3 h3--purple"></h3></a>
+                  <div class="room-thumb__price-per-day body"><span class="room-thumb__cost">5,000₽</span>&nbsp;<span class="room-thumb__date-unit">в сутки</span></div>
+                </header>
+                <footer class="room-thumb__footer">
+                  <div class="room-thumb__rate">
+                    <div class="rate-button" id="444__rate">
+                      <input class="rate-button__radio" id="444__rate5" type="radio" name="444__rate" value="5">
+                      <label class="rate-button__label" for="444__rate5">5</label>
+                      <input class="rate-button__radio" id="444__rate4" type="radio" name="444__rate" value="4">
+                      <label class="rate-button__label" for="444__rate4">4</label>
+                      <input class="rate-button__radio" id="444__rate3" type="radio" name="444__rate" value="3" checked>
+                      <label class="rate-button__label" for="444__rate3">3</label>
+                      <input class="rate-button__radio" id="444__rate2" type="radio" name="444__rate" value="2">
+                      <label class="rate-button__label" for="444__rate2">2</label>
+                      <input class="rate-button__radio" id="444__rate1" type="radio" name="444__rate" value="1">
+                      <label class="rate-button__label" for="444__rate1">1</label>
+                    </div>
+                  </div>
+                  <p class="room-thumb__feedback-counter"><b>15</b>&nbsp;<span>Отзывов</span></p>
+                </footer>
+              </div>
+            </div>
+            <div class="search-room-filter__room-thumb">
+              <div class="room-thumb">
+                <figure class="room-thumb__carousel-inner" role="group"><img class="room-thumb__carousel-image room-thumb__carousel-image--active" src="img/room-thumb-12.png" alt="Room 352"><img class="room-thumb__carousel-image" src="img/room-thumb-12.png" alt="Room 352"><img class="room-thumb__carousel-image" src="img/room-thumb-12.png" alt="Room 352"><img class="room-thumb__carousel-image" src="img/room-thumb-12.png" alt="Room 352">
+                  <div class="room-thumb__carousel-control room-thumb__carousel-control--prev"><i class="room-thumb__arrow-left material-icons">keyboard_arrow_left</i></div>
+                  <div class="room-thumb__carousel-control room-thumb__carousel-control--next"><i class="room-thumb__arrow-right material-icons">keyboard_arrow_left</i></div>
+                  <ul class="room-thumb__carousel-indicators">
+                    <li class="room-thumb__carousel-indicator room-thumb__carousel-indicator--active"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                    <li class="room-thumb__carousel-indicator"></li>
+                  </ul>
+                </figure>
+                <header class="room-thumb__header"><a class="room-thumb__number" href="room-details.html"><span class="room-thumb__number-sign">№</span><span class="room-thumb__number-value">352</span>
+                    <h3 class="room-thumb__number-feature h3 h3--purple"></h3></a>
+                  <div class="room-thumb__price-per-day body"><span class="room-thumb__cost">5,000₽</span>&nbsp;<span class="room-thumb__date-unit">в сутки</span></div>
+                </header>
+                <footer class="room-thumb__footer">
+                  <div class="room-thumb__rate">
+                    <div class="rate-button" id="352__rate">
+                      <input class="rate-button__radio" id="352__rate5" type="radio" name="352__rate" value="5">
+                      <label class="rate-button__label" for="352__rate5">5</label>
+                      <input class="rate-button__radio" id="352__rate4" type="radio" name="352__rate" value="4">
+                      <label class="rate-button__label" for="352__rate4">4</label>
+                      <input class="rate-button__radio" id="352__rate3" type="radio" name="352__rate" value="3" checked>
+                      <label class="rate-button__label" for="352__rate3">3</label>
+                      <input class="rate-button__radio" id="352__rate2" type="radio" name="352__rate" value="2">
+                      <label class="rate-button__label" for="352__rate2">2</label>
+                      <input class="rate-button__radio" id="352__rate1" type="radio" name="352__rate" value="1">
+                      <label class="rate-button__label" for="352__rate1">1</label>
+                    </div>
+                  </div>
+                  <p class="room-thumb__feedback-counter"><b>55</b>&nbsp;<span>Отзывов</span></p>
+                </footer>
+              </div>
+            </div>
+          </div>
+          <section class="search-room-filter__paginator">
+            <div class="paginator" data-source="[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179]" data-page-size="12" data-page-range="1"></div>
+          </section>
+        </section>
+      </article>
+    </div>
+    <footer class="page__footer">
+      <div class="footer footer--bordered">
+        <hr class="footer__row-divider">
+        <div class="footer__inner">
+          <div class="footer__header">
+            <figure class="footer__logo"><a class="logo logo--with-text" href="./index.html"></a>
+            </figure>
+            <p class="footer__description body">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+            </p>
+          </div>
+          <nav class="footer__navbar">
+            <section class="footer__nav-section">
+              <div class="footer-menu-section">
+                <h3 class="footer-menu-section__title h3">Навигация</h3>
+                <ul class="footer-menu-section__ul">
+                  <li class="footer-menu-section__li"><a class="footer-menu-section__a body" href="/change-me">О нас</a></li>
+                  <li class="footer-menu-section__li"><a class="footer-menu-section__a body" href="/change-me">Новости</a></li>
+                  <li class="footer-menu-section__li"><a class="footer-menu-section__a body" href="/change-me">Служба поддержки</a></li>
+                  <li class="footer-menu-section__li"><a class="footer-menu-section__a body" href="/change-me">Услуги</a></li>
+                </ul>
+              </div>
+            </section>
+            <section class="footer__nav-section">
+              <div class="footer-menu-section">
+                <h3 class="footer-menu-section__title h3">О нас</h3>
+                <ul class="footer-menu-section__ul">
+                  <li class="footer-menu-section__li"><a class="footer-menu-section__a body" href="/change-me">О сервисе</a></li>
+                  <li class="footer-menu-section__li"><a class="footer-menu-section__a body" href="/change-me">Наша команда</a></li>
+                  <li class="footer-menu-section__li"><a class="footer-menu-section__a body" href="/change-me">Вакансии</a></li>
+                  <li class="footer-menu-section__li"><a class="footer-menu-section__a body" href="/change-me">Инвесторы</a></li>
+                </ul>
+              </div>
+            </section>
+            <section class="footer__nav-section">
+              <div class="footer-menu-section">
+                <h3 class="footer-menu-section__title h3">Служба поддержки</h3>
+                <ul class="footer-menu-section__ul">
+                  <li class="footer-menu-section__li"><a class="footer-menu-section__a body" href="/change-me">Соглашения</a></li>
+                  <li class="footer-menu-section__li"><a class="footer-menu-section__a body" href="/change-me">Сообщества</a></li>
+                  <li class="footer-menu-section__li"><a class="footer-menu-section__a body" href="/change-me">Связь с нами</a></li>
+                </ul>
+              </div>
+            </section>
+          </nav>
+          <div class="footer__subscribe">
+            <h3 class="footer__subscribe-title h3">Подписка</h3>
+            <p class="footer__subscribe-description body">Получайте специальные предложения и новости сервиса
+            </p>
+            <div class="footer__subscribe-input">
+              <div class="input input--with-arrow">
+                <input class="input__input" id="subscribe" type="email" placeholder="Email">
+                <button class="input__submit-button"><i class="input__arrow material-icons">arrow_forward</i></button>
+              </div>
+            </div>
+          </div>
+          <p class="footer__copyright body">Copyright © 2018 Toxin отель. Все права зачищены.</p>
+          <section class="footer__social"><a class="footer__social-link footer__social-link--tw" href="/change-me"></a><a class="footer__social-link footer__social-link--fb" href="/change-me"></a><a class="footer__social-link footer__social-link--ig" href="/change-me"></a>
+          </section>
+        </div>
+      </div>
+    </footer>
+  <script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
+</html>

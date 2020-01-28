@@ -1,0 +1,27 @@
+.auth {
+  width: 100%;
+
+  background-image: url('../../img/sign-in-up.png');
+  background-color: $color-purple;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__inner {
+    width: 80.5%;
+    min-height: 42.75rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: $screen-xs-max) {
+      width: 90.5%;
+    }
+  }
+  &__form {
+    width: 23.75rem;
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+    }
+  }
+}

@@ -1,11 +1,9 @@
-extends ../layout/layout
+extends ../layouts/auth
 
 include ../../components/card/sign-in/sign-in
 
 block vars
   - const title = 'Sign in'
 
-block main
-  article.login
-    section.login__form
-      +sign-in
+block form
+  +sign-in

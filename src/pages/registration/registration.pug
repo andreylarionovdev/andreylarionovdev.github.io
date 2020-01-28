@@ -1,11 +1,10 @@
-extends ../layout/layout
+extends ../layouts/auth
 
 include ../../components/card/sign-up/sign-up
 
 block vars
   - const title = 'Registration'
 
-block main
-  article.registration
-    section.registration__form
-      +sign-up
+block form
+  div.registration__form
+    +sign-up

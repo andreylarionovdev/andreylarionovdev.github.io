@@ -1,4 +1,4 @@
-extends ../layout/layout
+extends ../layouts/page
 
 include ../../components/range-slider/range-slider
 include ../../components/label/label
@@ -255,7 +255,6 @@ block main
               })
             }
           ]
-        - const href = 'room-details.html'
         each room, i in searchResult
           .search-room-filter__room-thumb
             +room-thumb({
@@ -266,7 +265,7 @@ block main
               images: room.images,
               feature: room.feature,
               focus: room.focus,
-              href
+              href: 'room-details.html'
             })
       section.search-room-filter__paginator
         +paginator({

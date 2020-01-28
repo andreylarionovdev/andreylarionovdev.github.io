@@ -35,6 +35,7 @@
 @import '../components/card/room-thumb/room-thumb';
 @import '../components/card/sign-in/sign-in';
 @import '../components/card/sign-up/sign-up';
+@import '../pages/layouts/auth';
 @import '../pages/ui-colors-type/ui-colors-type';
 @import '../pages/ui-cards/ui-cards';
 @import '../pages/ui-form-elements/ui-form-elements';
@@ -43,7 +44,6 @@
 @import '../pages/search-room-filter/search-room-filter';
 @import '../pages/room-details/room-details';
 @import '../pages/registration/registration';
-@import '../pages/login/login';
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
