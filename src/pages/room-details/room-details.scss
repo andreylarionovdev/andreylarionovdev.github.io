@@ -1,19 +1,58 @@
+@import '../../css/mixins';
 .room-details {
-  &__content {
-    width: 80.5%;
-    max-width: 1920px;
-    margin: 0 auto;
-    padding-top: 70px;
-    padding-bottom: 63px;
-    @media (max-width: $screen-md-max) {
-      width: 95.5%;
+  border-bottom: 1px solid $color-dark-25;
+  &__inner {
+    padding: 4.375rem 0 3.9375rem 0;
+    @include inner;
+    display: grid;
+    grid-template-columns: 1.868fr 1fr;
+    grid-column-gap: 4.375rem;
+    @media (max-width: $screen-xs-max) {
+      grid-template-columns: 1fr;
     }
   }
   &__feature-images {
-    position: relative;
+    display: grid;
     width: 100%;
-    height: 485px;
     margin: 0;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      'a b'
+      'a c';
+  }
+  &__feature-image {
+    margin: 0;
+    width: 100%;
+    object-fit: cover;
+    &:nth-child(1) {
+      height: 100%;
+      grid-area: a;
+    }
+    &:nth-child(2) {
+      grid-area: b;
+    }
+    &:nth-child(3) {
+      grid-area: c;
+    }
+  }
+  &__main {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    grid-column-gap: 5rem;
+    grid-row-gap: 0.75rem;
+    grid-template-areas:
+      'info rate'
+      'feed feed'
+      'rules cancel';
+    @media (max-width: $screen-xs-max) {
+      grid-template-areas:
+        'info'
+        'rate'
+        'feed'
+        'rules'
+        'cancel';
+      grid-template-columns: 1fr;
+    }
   }
   &__feature {
     border-bottom: 1px solid $color-dark-10;
@@ -21,135 +60,52 @@
       border-bottom: none;
     }
   }
-  &__left-image,
-  &__top-image,
-  &__bottom-image {
-    margin: 0;
-    float: left;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  &__top-image,
-  &__bottom-image {
-    height: 50%;
-    width: 31.9%;
-  }
-  &__left-image {
-    width: 68.1%;
-    height: 100%;
-    background-image: url('../../img/room-details-left.png');
-    @media (max-width: $screen-xs-max) {
-      width: 100%;
-      height: 50%;
-    }
-  }
-  &__top-image {
-    background-image: url('../../img/room-details-top.png');
-    @media (max-width: $screen-xs-max) {
-      width: 100%;
-    }
-  }
-  &__bottom-image {
-    background-image: url('../../img/room-details-bottom.png');
-    @media (max-width: $screen-xs-max) {
-      width: 100%;
-    }
-  }
-
-  &__main,
-  &__right {
-    position: relative;
-    float: left;
-  }
-  &__right {
-    padding-left: 0.7%;
-  }
-  &__main {
-    width: 66.66%;
-    padding-right: 5.4%;
-    @media (max-width: $screen-sm-max) {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-  }
-  &__feedbacks,
-  &__info,
-  &__rate {
-    position: relative;
-    float: left;
-  }
   &__info {
-    width: 39.1%;
-    @media (max-width: $screen-xs-max) {
-      margin-top: 20px;
-      width: 100%;
-    }
+    grid-area: info;
   }
   &__rate {
-    width: 60.9%;
-    padding-left: 11.5%;
-    @media (max-width: $screen-xs-max) {
-      width: 100%;
-      padding-left: 0;
-    }
+    grid-area: rate;
+  }
+  &__rate-title {
+    margin-bottom: 1.25rem;
   }
   &__feedbacks {
-    margin-top: 12px;
-    margin-bottom: 34px;
-    width: 100%;
+    grid-area: feed;
+    display: grid;
+    grid-row-gap: 1.25rem;
   }
-  &__feedbacks-counter,
-  &__feedbacks-title {
-    display: inline-block;
-    width: 50%;
+  &__feedbacks-header {
+    display: flex;
+    justify-content: space-between;
   }
-  &__feedbacks-counter{
+  &__feedbacks-counter {
     text-align: right;
     color: $color-dark-50;
   }
-  &__feedback {
-    width: 100%;
-    margin-top: 20px;
-  }
   &__rules,
   &__cancel {
-    float: left;
-    width: 50%;
-  }
-  &__cancel {
-    padding-left: 1%;
-    padding-right: 1%;
-    @media (max-width: $screen-xs-max) {
-      width: 100%;
-      padding-right: 0;
-      padding-left: 0;
-    }
+    padding: 1.25rem 1.25rem 0 0;
   }
   &__rules {
-    padding-right: 13%;
-    @media (max-width: $screen-xs-max) {
-      width: 100%;
-      padding-right: 0;
-    }
+    grid-area: rules;
   }
-  &__rules-title {
-    padding-left: 20px;
-    @media (max-width: $screen-sm-max) {
-      padding-left: 0;
-    }
+  &__cancel {
+    grid-area: cancel;
   }
   &__rules-title,
   &__cancel-title {
-    margin-bottom: 17px;
+    margin-bottom: 1.0625rem;
   }
-  &__right {
-    width: 33.33%;
-    @media (max-width: $screen-sm-max) {
-      width: 100%;
+  &__rules-title {
+    padding-left: 1.25rem;
+    @media (max-width: $screen-xs-max) {
+      padding-left: 0;
     }
   }
-  &__votes-chart {
-    padding-top: 20px;
+  &__main,
+  &__sidebar {
+    @media (max-width: $screen-sm-max) {
+      grid-column: span 2;
+    }
   }
 }

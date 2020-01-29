@@ -2191,147 +2191,91 @@
     grid-column: 1 / 4;
     text-align: center; }
 
-.room-details__content {
-  width: 80.5%;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding-top: 70px;
-  padding-bottom: 63px; }
-  @media (max-width: 1199px) {
-    .room-details__content {
-      width: 95.5%; } }
-
-.room-details__feature-images {
-  position: relative;
-  width: 100%;
-  height: 485px;
-  margin: 0; }
-
-.room-details__feature {
-  border-bottom: 1px solid rgba(31, 32, 65, 0.1); }
-  .room-details__feature:last-child {
-    border-bottom: none; }
-
-.room-details__left-image, .room-details__top-image, .room-details__bottom-image {
-  margin: 0;
-  float: left;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-.room-details__top-image, .room-details__bottom-image {
-  height: 50%;
-  width: 31.9%; }
-
-.room-details__left-image {
-  width: 68.1%;
-  height: 100%;
-  background-image: url(img/room-details-left.png); }
-  @media (max-width: 767px) {
-    .room-details__left-image {
-      width: 100%;
-      height: 50%; } }
-
-.room-details__top-image {
-  background-image: url(img/room-details-top.png); }
-  @media (max-width: 767px) {
-    .room-details__top-image {
-      width: 100%; } }
-
-.room-details__bottom-image {
-  background-image: url(img/room-details-bottom.png); }
-  @media (max-width: 767px) {
-    .room-details__bottom-image {
-      width: 100%; } }
-
-.room-details__main, .room-details__right {
-  position: relative;
-  float: left; }
-
-.room-details__right {
-  padding-left: 0.7%; }
-
-.room-details__main {
-  width: 66.66%;
-  padding-right: 5.4%; }
+.room-details {
+  border-bottom: 1px solid rgba(31, 32, 65, 0.25); }
+  .room-details__inner {
+    padding: 4.375rem 0 3.9375rem 0;
+    margin: 0 auto;
+    width: 95.5%;
+    display: grid;
+    grid-template-columns: 1.868fr 1fr;
+    grid-column-gap: 4.375rem; }
+    @media (min-width: 992px) {
+      .room-details__inner {
+        width: 80.5%;
+        max-width: 120rem;
+        min-width: 20rem; } }
+    @media (max-width: 767px) {
+      .room-details__inner {
+        grid-template-columns: 1fr; } }
+  .room-details__feature-images {
+    display: grid;
+    width: 100%;
+    margin: 0;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'a b' 'a c'; }
+  .room-details__feature-image {
+    margin: 0;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover; }
+    .room-details__feature-image:nth-child(1) {
+      height: 100%;
+      grid-area: a; }
+    .room-details__feature-image:nth-child(2) {
+      grid-area: b; }
+    .room-details__feature-image:nth-child(3) {
+      grid-area: c; }
+  .room-details__main {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    grid-column-gap: 5rem;
+    grid-row-gap: 0.75rem;
+    grid-template-areas: 'info rate' 'feed feed' 'rules cancel'; }
+    @media (max-width: 767px) {
+      .room-details__main {
+        grid-template-areas: 'info' 'rate' 'feed' 'rules' 'cancel';
+        grid-template-columns: 1fr; } }
+  .room-details__feature {
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1); }
+    .room-details__feature:last-child {
+      border-bottom: none; }
+  .room-details__info {
+    grid-area: info; }
+  .room-details__rate {
+    grid-area: rate; }
+  .room-details__rate-title {
+    margin-bottom: 1.25rem; }
+  .room-details__feedbacks {
+    grid-area: feed;
+    display: grid;
+    grid-row-gap: 1.25rem; }
+  .room-details__feedbacks-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .room-details__feedbacks-counter {
+    text-align: right;
+    color: rgba(31, 32, 65, 0.5); }
+  .room-details__rules, .room-details__cancel {
+    padding: 1.25rem 1.25rem 0 0; }
+  .room-details__rules {
+    grid-area: rules; }
+  .room-details__cancel {
+    grid-area: cancel; }
+  .room-details__rules-title, .room-details__cancel-title {
+    margin-bottom: 1.0625rem; }
+  .room-details__rules-title {
+    padding-left: 1.25rem; }
+    @media (max-width: 767px) {
+      .room-details__rules-title {
+        padding-left: 0; } }
   @media (max-width: 991px) {
-    .room-details__main {
-      width: 100%;
-      margin-bottom: 20px; } }
-
-.room-details__feedbacks, .room-details__info, .room-details__rate {
-  position: relative;
-  float: left; }
-
-.room-details__info {
-  width: 39.1%; }
-  @media (max-width: 767px) {
-    .room-details__info {
-      margin-top: 20px;
-      width: 100%; } }
-
-.room-details__rate {
-  width: 60.9%;
-  padding-left: 11.5%; }
-  @media (max-width: 767px) {
-    .room-details__rate {
-      width: 100%;
-      padding-left: 0; } }
-
-.room-details__feedbacks {
-  margin-top: 12px;
-  margin-bottom: 34px;
-  width: 100%; }
-
-.room-details__feedbacks-counter, .room-details__feedbacks-title {
-  display: inline-block;
-  width: 50%; }
-
-.room-details__feedbacks-counter {
-  text-align: right;
-  color: rgba(31, 32, 65, 0.5); }
-
-.room-details__feedback {
-  width: 100%;
-  margin-top: 20px; }
-
-.room-details__rules, .room-details__cancel {
-  float: left;
-  width: 50%; }
-
-.room-details__cancel {
-  padding-left: 1%;
-  padding-right: 1%; }
-  @media (max-width: 767px) {
-    .room-details__cancel {
-      width: 100%;
-      padding-right: 0;
-      padding-left: 0; } }
-
-.room-details__rules {
-  padding-right: 13%; }
-  @media (max-width: 767px) {
-    .room-details__rules {
-      width: 100%;
-      padding-right: 0; } }
-
-.room-details__rules-title {
-  padding-left: 20px; }
-  @media (max-width: 991px) {
-    .room-details__rules-title {
-      padding-left: 0; } }
-
-.room-details__rules-title, .room-details__cancel-title {
-  margin-bottom: 17px; }
-
-.room-details__right {
-  width: 33.33%; }
-  @media (max-width: 991px) {
-    .room-details__right {
-      width: 100%; } }
-
-.room-details__votes-chart {
-  padding-top: 20px; }
+    .room-details__main, .room-details__sidebar {
+      grid-column: span 2; } }
 
 .registration__form {
   padding: 1.875rem 0 1.625rem 0; }

@@ -39,12 +39,8 @@
     </header>
     <div class="page_main">
       <article class="room-details">
-        <figure class="room-details__feature-images" role="group">
-          <figure class="room-details__left-image"></figure>
-          <figure class="room-details__top-image"></figure>
-          <figure class="room-details__bottom-image"></figure>
-        </figure>
-        <div class="room-details__content clearfix">
+        <figure class="room-details__feature-images"><img class="room-details__feature-image" src="img/room-details-left.png"><img class="room-details__feature-image" src="img/room-details-top.png"><img class="room-details__feature-image" src="img/room-details-bottom.png"></figure>
+        <div class="room-details__inner">
           <div class="room-details__main">
             <section class="room-details__info">
               <h2 class="h2">Сведения о номере</h2>
@@ -70,7 +66,7 @@
               </div>
             </section>
             <section class="room-details__rate">
-              <h2 class="h2">Впечатления от номера</h2>
+              <h2 class="room-details__rate-title h2">Впечатления от номера</h2>
               <div class="room-details__votes-chart">
                 <figure class="votes-chart clearfix">
                   <svg class="votes-chart__chart" height="122" width="122" viewBox="0 0 122 122">
@@ -98,7 +94,9 @@
               </div>
             </section>
             <section class="room-details__feedbacks">
-              <h2 class="room-details__feedbacks-title h2">Отзывы посетителей номера</h2><span class="room-details__feedbacks-counter body">2 отзыва</span>
+              <div class="room-details__feedbacks-header">
+                <h2 class="room-details__feedbacks-title h2">Отзывы посетителей номера</h2><span class="room-details__feedbacks-counter body">2 отзыва</span>
+              </div>
               <div class="room-details__feedback">
                 <article class="feedback">
                   <header class="feedback__header">
@@ -155,7 +153,7 @@
               </p>
             </section>
           </div>
-          <div class="room-details__right">
+          <div class="room-details__sidebar">
             <section class="room-details__book-form">
               <form class="room-book card">
                 <header class="room-book__header">
@@ -239,7 +237,7 @@
       </article>
     </div>
     <footer class="page__footer">
-      <div class="footer footer--bordered">
+      <div class="footer">
         <hr class="footer__row-divider">
         <div class="footer__inner">
           <div class="footer__header">
