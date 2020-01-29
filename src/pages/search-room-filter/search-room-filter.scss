@@ -1,97 +1,65 @@
+@import '../../css/mixins';
 .search-room-filter {
-  width: 80.5%;
-  max-width: 1920px;
-  margin: 30px auto 0;
-  &__sidebar,
-  &__search-result {
-    float: left;
+  border-bottom: 1px solid $color-dark-25;
+  &__inner {
+    @include inner;
+    padding-top: 1.875rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   &__sidebar {
-    width: 25%;
-    padding-right: 2%;
-    @media (max-width: $screen-md-max) {
-      width: 33.33%;
-    }
-    @media (max-width: $screen-sm-max) {
-      width: 50%;
-    }
+    grid-column: 1 / 2;
+    padding-right: 1.5rem;
     @media (max-width: $screen-xs-max) {
-      width: 100%;
+      padding: 0;
+      grid-column: 1 / 5;
     }
   }
-  &__search-result {
-    width: 75%;
-    padding-left: 3%;
-    @media (max-width: $screen-md-max) {
-      width: 66.66%;
-    }
-    @media (max-width: $screen-sm-max + 20px) {
-      width: 50%;
-    }
-    @media (max-width: $screen-xs-max) {
-      width: 100%;
-    }
-  }
-  &__date-dropdown,
-  &__guests-dropdown,
-  &__feature-dropdown,
-  &__additional-checkbox-list-xp-group {
-    position: relative;
-    height: 44px;
+  &__sidebar-label {
+    margin-bottom: 0.3125rem;
   }
   &__guests-dropdown-group {
-    margin-top: 21px;
+    margin-top: 1.3152rem;
   }
-  &__additional-checkbox-list-xp-group {
-    margin-top: 18px;
-  }
-  &__date-dropdown-label,
-  &__feature-dropdown-label,
-  &__guests-dropdown-label {
-    margin-bottom: 5px;
-  }
-  &__feature-dropdown-group {
-    margin-top: 28px;
-  }
-  &__rich-checkbox-group {
-    margin-top: 1.75rem;
-  }
-  &__price-slider,
+  &__price-slider-group,
   &__checkbox-group {
-    margin-top: 30px;
+    margin-top: 1.875rem;
   }
   &__price-slider-hint {
-    margin-top: 6px;
+    margin-top: 0.375rem;
     font-size: 0.75rem;
     font-family: Montserrat, sans-serif;
     color: $color-dark-50;
   }
-  &__checkbox-group {
-    padding-right: 20px;
+  &__rich-checkbox-group,
+  &__feature-dropdown-group {
+    margin-top: 1.75rem;
   }
-  &__room-thumb {
-    width: 32.4%;
-    margin-top: 20px;
-    margin-right: 1.4%;
-    float: left;
-    @media (min-width: $screen-md-max) {
-      &:nth-child(3n) {
-        margin-right: 0;
-      }
+  &__additional-checkbox-list-xp-group {
+    margin-top: 1rem;
+  }
+  &__checkbox-group {
+    padding-right: 1.25rem;
+  }
+
+  &__search-result {
+    grid-column: 2 / 5;
+    padding-left: 2.1875rem;
+    @media (max-width: $screen-xs-max) {
+      padding: 0;
+      grid-column: 1 / 5;
     }
-    @media (max-width: $screen-md-max) {
-      width: 48%;
-      &:nth-child(2n) {
-        margin-right: 0;
-      }
-    }
-    @media (max-width: $screen-sm-max + 20px) {
-      width: 100%;
-      margin-right: 0;
-    }
+  }
+  &__thumb-list {
+    padding-top: 1.25rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16.875rem, 1fr));
+    grid-column-gap: 0.75rem;
+    grid-row-gap: 1.25rem;
   }
   &__paginator {
-    margin: 40px auto 75px;
+    margin: 2.6875rem auto 4.5rem;
+    grid-column: 1 / 4;
     text-align: center;
   }
 }

@@ -12,105 +12,106 @@ block vars
   - const footerTheme = 'bordered'
 
 block main
-  article.search-room-filter.clearfix
-    section.search-room-filter__sidebar
-      .search-room-filter__date-dropdown-group
-        .search-room-filter__date-dropdown-label
-          +label({
-            label: 'Даты пребывания в отеле',
-            _for: 'date-dropdown'
+  article.search-room-filter
+    div.search-room-filter__inner
+      section.search-room-filter__sidebar
+        .search-room-filter__date-dropdown-group
+          .search-room-filter__sidebar-label
+            +label({
+              label: 'Даты пребывания в отеле',
+              _for: 'date-dropdown'
+            })
+          .search-room-filter__date-dropdown
+            +dropdown({
+              id: 'date-dropdown',
+              value: '19 авг. - 23 авг.'
+            })
+        .search-room-filter__guests-dropdown-group
+          .search-room-filter__sidebar-label
+            +label({
+              label: 'Гости',
+              _for: 'guests-dropdown'
+            })
+          .search-room-filter__guests-dropdown
+            +dropdown({
+              id: 'guests-dropdown',
+              type: 'select-box',
+              value: '3 гостя, 1 младенец',
+              selectOptions: [
+                {count: 2, text: 'взрослые', name: 'adult'},
+                {count: 0, text: 'дети', name: 'kids'},
+                {count: 1, text: 'младенцы', name: 'baby'}
+              ]
+            })
+        .search-room-filter__price-slider-group
+          +range-slider({
+            caption: 'Диапазон цены',
+            name: 'price-slider',
+            type: 'double',
+            skin: 'big',
+            min: 0,
+            max: 16000,
+            from: 5000,
+            to: 10000,
           })
-        .search-room-filter__date-dropdown
-          +dropdown({
-            id: 'date-dropdown',
-            value: '19 авг. - 23 авг.'
-          })
-      .search-room-filter__guests-dropdown-group
-        .search-room-filter__guests-dropdown-label
-          +label({
-            label: 'Гости',
-            _for: 'guests-dropdown'
-          })
-        .search-room-filter__guests-dropdown
-          +dropdown({
-            id: 'guests-dropdown',
-            type: 'select-box',
-            value: '3 гостя, 1 младенец',
-            selectOptions: [
-              {count: 2, text: 'взрослые', name: 'adult'},
-              {count: 0, text: 'дети', name: 'kids'},
-              {count: 1, text: 'младенцы', name: 'baby'}
-            ]
-          })
-      .search-room-filter__price-slider
-        +range-slider({
-          caption: 'Диапазон цены',
-          name: 'price-slider',
-          type: 'double',
-          skin: 'big',
-          min: 0,
-          max: 16000,
-          from: 5000,
-          to: 10000,
-        })
-        p.search-room-filter__price-slider-hint
-          = 'Стоимость за сутки пребывания в номере'
-      .search-room-filter__checkbox-group
-        .checkbox-group__label
-          +label({
-            label: 'checkbox buttons'
-          })
-        .checkbox-group__checkbox
-          +checkbox({
-            id: 'smoke-allowed',
-            label: 'Можно курить'
-          })
-        .checkbox-group__checkbox
-          +checkbox({
-            id: 'pets-allowed',
-            label: 'Можно с питомцами',
-            isChecked: true
-          })
-        .checkbox-group__checkbox
-          +checkbox({
-            id: 'guests-allowed',
-            label: 'Можно пригласить гостей (до 10 человек)',
-            isChecked: true
-          })
-      .search-room-filter__rich-checkbox-group
-        .rich-checkbox-group__label
-          +label({
-            label: 'Доступность'
-          })
-        .rich-checkbox-group__rich-checkbox.clearfix
-          +checkbox({
-            id: 'wide-hall-checkbox',
-            label: 'Широкий коридор',
-            hint: 'Ширина коридоров в номере не&nbsp;менее 91 см.'
-          })
-        .rich-checkbox-group__rich-checkbox.clearfix
-          +checkbox({
-            id: 'disable-assistant-checkbox',
-            label: 'Помощник для инвалидов',
-            hint: 'На 1 этаже вас встретит специалист и проводит до номера.'
-          })
-      .search-room-filter__feature-dropdown-group
-        .search-room-filter__feature-dropdown-label
-          +label({
-            label: 'Удобства номера',
-            _for: 'feature-dropdown'
-          })
-        .search-room-filter__feature-dropdown
-          +dropdown({
-            id: 'feature-dropdown',
-            type: 'select-box',
-            value: '2 спальни, 2 кровати...',
-            selectOptions: [
-              {count: 2, text: 'спальни', name: 'bedroom'},
-              {count: 2, text: 'кровати', name: 'bed'},
-              {count: 0, text: 'ванные комнаты', name: 'bathroom'}
-            ]
-          })
+          p.search-room-filter__price-slider-hint
+            = 'Стоимость за сутки пребывания в номере'
+        .search-room-filter__checkbox-group
+          .checkbox-group__label
+            +label({
+              label: 'checkbox buttons'
+            })
+          .checkbox-group__checkbox
+            +checkbox({
+              id: 'smoke-allowed',
+              label: 'Можно курить'
+            })
+          .checkbox-group__checkbox
+            +checkbox({
+              id: 'pets-allowed',
+              label: 'Можно с питомцами',
+              isChecked: true
+            })
+          .checkbox-group__checkbox
+            +checkbox({
+              id: 'guests-allowed',
+              label: 'Можно пригласить гостей (до 10 человек)',
+              isChecked: true
+            })
+        .search-room-filter__rich-checkbox-group
+          .rich-checkbox-group__label
+            +label({
+              label: 'Доступность'
+            })
+          .rich-checkbox-group__rich-checkbox.clearfix
+            +checkbox({
+              id: 'wide-hall-checkbox',
+              label: 'Широкий коридор',
+              hint: 'Ширина коридоров в номере не&nbsp;менее 91 см.'
+            })
+          .rich-checkbox-group__rich-checkbox.clearfix
+            +checkbox({
+              id: 'disable-assistant-checkbox',
+              label: 'Помощник для инвалидов',
+              hint: 'На 1 этаже вас встретит специалист и проводит до номера.'
+            })
+        .search-room-filter__feature-dropdown-group
+          .search-room-filter__sidebar-label
+            +label({
+              label: 'Удобства номера',
+              _for: 'feature-dropdown'
+            })
+          .search-room-filter__feature-dropdown
+            +dropdown({
+              id: 'feature-dropdown',
+              type: 'select-box',
+              value: '2 спальни, 2 кровати...',
+              selectOptions: [
+                {count: 2, text: 'спальни', name: 'bedroom'},
+                {count: 2, text: 'кровати', name: 'bed'},
+                {count: 0, text: 'ванные комнаты', name: 'bathroom'}
+              ]
+            })
         .search-room-filter__additional-checkbox-list-xp-group
           +checkbox-list-xp({
             id: 'additional',
@@ -126,150 +127,150 @@ block main
               {name: 'shampoo_2', label: 'Шампунь'}
             ]
           })
-    section.search-room-filter__search-result
-      h1.h1= 'Номера, которые мы для вас подобрали'
-      .search-room-filter__search-result-list.clearfix
-        -
-          let searchResult = [
-            {
-              number: 888,
-              pricePerDay: 9990,
-              feedbackCounter: 145,
-              rate: 5,
-              images: new Array(4).fill({
-                alt: 'Room 888',
-                src: 'room-thumb-1.png'
-              }),
-              feature: 'люкс',
-              focus: true
-            },
-            {
-              number: 840,
-              pricePerDay: 9900,
-              feedbackCounter: 65,
-              rate: 4,
-              images: new Array(4).fill({
-                alt: 'Room 840',
-                src: 'room-thumb-2.png'
+      section.search-room-filter__search-result
+        h1.h1= 'Номера, которые мы для вас подобрали'
+        .search-room-filter__thumb-list
+          -
+            let searchResult = [
+              {
+                number: 888,
+                pricePerDay: 9990,
+                feedbackCounter: 145,
+                rate: 5,
+                images: new Array(4).fill({
+                  alt: 'Room 888',
+                  src: 'room-thumb-1.png'
+                }),
+                feature: 'люкс',
+                focus: true
+              },
+              {
+                number: 840,
+                pricePerDay: 9900,
+                feedbackCounter: 65,
+                rate: 4,
+                images: new Array(4).fill({
+                  alt: 'Room 840',
+                  src: 'room-thumb-2.png'
+                })
+              },
+              {
+                number: 980,
+                pricePerDay: 8500,
+                feedbackCounter: 35,
+                rate: 3,
+                images: new Array(4).fill({
+                  alt: 'Room 980',
+                  src: 'room-thumb-3.png'
+                }),
+                feature: 'люкс'
+              },
+              {
+                number: 856,
+                pricePerDay: 7300,
+                feedbackCounter: 19,
+                rate: 5,
+                images: new Array(4).fill({
+                  alt: 'Room 856',
+                  src: 'room-thumb-4.png'
+                })
+              },
+              {
+                number: 740,
+                pricePerDay: 6000,
+                feedbackCounter: 44,
+                rate: 4,
+                images: new Array(4).fill({
+                  alt: 'Room 740',
+                  src: 'room-thumb-5.png'
+                })
+              },
+              {
+                number: 982,
+                pricePerDay: 5800,
+                feedbackCounter: 56,
+                rate: 3,
+                images: new Array(4).fill({
+                  alt: 'Room 982',
+                  src: 'room-thumb-6.png'
+                })
+              },
+              {
+                number: 678,
+                pricePerDay: 5500,
+                feedbackCounter: 45,
+                rate: 5,
+                images: new Array(4).fill({
+                  alt: 'Room 678',
+                  src: 'room-thumb-7.png'
+                })
+              },
+              {
+                number: 450,
+                pricePerDay: 5300,
+                feedbackCounter: 39,
+                rate: 4,
+                images: new Array(4).fill({
+                  alt: 'Room 450',
+                  src: 'room-thumb-8.png'
+                })
+              },
+              {
+                number: 350,
+                pricePerDay: 5000,
+                feedbackCounter: 77,
+                rate: 3,
+                images: new Array(4).fill({
+                  alt: 'Room 350',
+                  src: 'room-thumb-9.png'
+                })
+              },
+              {
+                number: 666,
+                pricePerDay: 5000,
+                feedbackCounter: 25,
+                rate: 5,
+                images: new Array(4).fill({
+                  alt: 'Room 666',
+                  src: 'room-thumb-10.png'
+                })
+              },
+              {
+                number: 444,
+                pricePerDay: 5000,
+                feedbackCounter: 15,
+                rate: 3,
+                images: new Array(4).fill({
+                  alt: 'Room 444',
+                  src: 'room-thumb-11.png'
+                })
+              },
+              {
+                number: 352,
+                pricePerDay: 5000,
+                feedbackCounter: 55,
+                rate: 3,
+                images: new Array(4).fill({
+                  alt: 'Room 352',
+                  src: 'room-thumb-12.png'
+                })
+              }
+            ]
+          each room, i in searchResult
+            .search-room-filter__room-thumb
+              +room-thumb({
+                roomNumber: room.number,
+                pricePerDay: room.pricePerDay,
+                feedbackCounter: room.feedbackCounter,
+                rate: room.rate,
+                images: room.images,
+                feature: room.feature,
+                focus: room.focus,
+                href: 'room-details.html'
               })
-            },
-            {
-              number: 980,
-              pricePerDay: 8500,
-              feedbackCounter: 35,
-              rate: 3,
-              images: new Array(4).fill({
-                alt: 'Room 980',
-                src: 'room-thumb-3.png'
-              }),
-              feature: 'люкс'
-            },
-            {
-              number: 856,
-              pricePerDay: 7300,
-              feedbackCounter: 19,
-              rate: 5,
-              images: new Array(4).fill({
-                alt: 'Room 856',
-                src: 'room-thumb-4.png'
-              })
-            },
-            {
-              number: 740,
-              pricePerDay: 6000,
-              feedbackCounter: 44,
-              rate: 4,
-              images: new Array(4).fill({
-                alt: 'Room 740',
-                src: 'room-thumb-5.png'
-              })
-            },
-            {
-              number: 982,
-              pricePerDay: 5800,
-              feedbackCounter: 56,
-              rate: 3,
-              images: new Array(4).fill({
-                alt: 'Room 982',
-                src: 'room-thumb-6.png'
-              })
-            },
-            {
-              number: 678,
-              pricePerDay: 5500,
-              feedbackCounter: 45,
-              rate: 5,
-              images: new Array(4).fill({
-                alt: 'Room 678',
-                src: 'room-thumb-7.png'
-              })
-            },
-            {
-              number: 450,
-              pricePerDay: 5300,
-              feedbackCounter: 39,
-              rate: 4,
-              images: new Array(4).fill({
-                alt: 'Room 450',
-                src: 'room-thumb-8.png'
-              })
-            },
-            {
-              number: 350,
-              pricePerDay: 5000,
-              feedbackCounter: 77,
-              rate: 3,
-              images: new Array(4).fill({
-                alt: 'Room 350',
-                src: 'room-thumb-9.png'
-              })
-            },
-            {
-              number: 666,
-              pricePerDay: 5000,
-              feedbackCounter: 25,
-              rate: 5,
-              images: new Array(4).fill({
-                alt: 'Room 666',
-                src: 'room-thumb-10.png'
-              })
-            },
-            {
-              number: 444,
-              pricePerDay: 5000,
-              feedbackCounter: 15,
-              rate: 3,
-              images: new Array(4).fill({
-                alt: 'Room 444',
-                src: 'room-thumb-11.png'
-              })
-            },
-            {
-              number: 352,
-              pricePerDay: 5000,
-              feedbackCounter: 55,
-              rate: 3,
-              images: new Array(4).fill({
-                alt: 'Room 352',
-                src: 'room-thumb-12.png'
-              })
-            }
-          ]
-        each room, i in searchResult
-          .search-room-filter__room-thumb
-            +room-thumb({
-              roomNumber: room.number,
-              pricePerDay: room.pricePerDay,
-              feedbackCounter: room.feedbackCounter,
-              rate: room.rate,
-              images: room.images,
-              feature: room.feature,
-              focus: room.focus,
-              href: 'room-details.html'
-            })
-      section.search-room-filter__paginator
-        +paginator({
-          source: JSON.stringify([...Array(180).keys()]),
-          pageSize: 12,
-          pageRange: 1
-        })
+        section.search-room-filter__paginator
+          +paginator({
+            source: JSON.stringify([...Array(180).keys()]),
+            pageSize: 12,
+            pageRange: 1
+          })

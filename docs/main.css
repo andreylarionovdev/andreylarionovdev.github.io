@@ -2137,76 +2137,58 @@
         grid-column: 1 / 4; } }
 
 .search-room-filter {
-  width: 80.5%;
-  max-width: 1920px;
-  margin: 30px auto 0; }
-  .search-room-filter__sidebar, .search-room-filter__search-result {
-    float: left; }
+  border-bottom: 1px solid rgba(31, 32, 65, 0.25); }
+  .search-room-filter__inner {
+    margin: 0 auto;
+    width: 95.5%;
+    padding-top: 1.875rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; }
+    @media (min-width: 992px) {
+      .search-room-filter__inner {
+        width: 80.5%;
+        max-width: 120rem;
+        min-width: 20rem; } }
   .search-room-filter__sidebar {
-    width: 25%;
-    padding-right: 2%; }
-    @media (max-width: 1199px) {
-      .search-room-filter__sidebar {
-        width: 33.33%; } }
-    @media (max-width: 991px) {
-      .search-room-filter__sidebar {
-        width: 50%; } }
+    grid-column: 1 / 2;
+    padding-right: 1.5rem; }
     @media (max-width: 767px) {
       .search-room-filter__sidebar {
-        width: 100%; } }
-  .search-room-filter__search-result {
-    width: 75%;
-    padding-left: 3%; }
-    @media (max-width: 1199px) {
-      .search-room-filter__search-result {
-        width: 66.66%; } }
-    @media (max-width: 1011px) {
-      .search-room-filter__search-result {
-        width: 50%; } }
-    @media (max-width: 767px) {
-      .search-room-filter__search-result {
-        width: 100%; } }
-  .search-room-filter__date-dropdown, .search-room-filter__guests-dropdown, .search-room-filter__feature-dropdown, .search-room-filter__additional-checkbox-list-xp-group {
-    position: relative;
-    height: 44px; }
+        padding: 0;
+        grid-column: 1 / 5; } }
+  .search-room-filter__sidebar-label {
+    margin-bottom: 0.3125rem; }
   .search-room-filter__guests-dropdown-group {
-    margin-top: 21px; }
-  .search-room-filter__additional-checkbox-list-xp-group {
-    margin-top: 18px; }
-  .search-room-filter__date-dropdown-label, .search-room-filter__feature-dropdown-label, .search-room-filter__guests-dropdown-label {
-    margin-bottom: 5px; }
-  .search-room-filter__feature-dropdown-group {
-    margin-top: 28px; }
-  .search-room-filter__rich-checkbox-group {
-    margin-top: 1.75rem; }
-  .search-room-filter__price-slider, .search-room-filter__checkbox-group {
-    margin-top: 30px; }
+    margin-top: 1.3152rem; }
+  .search-room-filter__price-slider-group, .search-room-filter__checkbox-group {
+    margin-top: 1.875rem; }
   .search-room-filter__price-slider-hint {
-    margin-top: 6px;
+    margin-top: 0.375rem;
     font-size: 0.75rem;
     font-family: Montserrat, sans-serif;
     color: rgba(31, 32, 65, 0.5); }
+  .search-room-filter__rich-checkbox-group, .search-room-filter__feature-dropdown-group {
+    margin-top: 1.75rem; }
+  .search-room-filter__additional-checkbox-list-xp-group {
+    margin-top: 1rem; }
   .search-room-filter__checkbox-group {
-    padding-right: 20px; }
-  .search-room-filter__room-thumb {
-    width: 32.4%;
-    margin-top: 20px;
-    margin-right: 1.4%;
-    float: left; }
-    @media (min-width: 1199px) {
-      .search-room-filter__room-thumb:nth-child(3n) {
-        margin-right: 0; } }
-    @media (max-width: 1199px) {
-      .search-room-filter__room-thumb {
-        width: 48%; }
-        .search-room-filter__room-thumb:nth-child(2n) {
-          margin-right: 0; } }
-    @media (max-width: 1011px) {
-      .search-room-filter__room-thumb {
-        width: 100%;
-        margin-right: 0; } }
+    padding-right: 1.25rem; }
+  .search-room-filter__search-result {
+    grid-column: 2 / 5;
+    padding-left: 2.1875rem; }
+    @media (max-width: 767px) {
+      .search-room-filter__search-result {
+        padding: 0;
+        grid-column: 1 / 5; } }
+  .search-room-filter__thumb-list {
+    padding-top: 1.25rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16.875rem, 1fr));
+    grid-column-gap: 0.75rem;
+    grid-row-gap: 1.25rem; }
   .search-room-filter__paginator {
-    margin: 40px auto 75px;
+    margin: 2.6875rem auto 4.5rem;
+    grid-column: 1 / 4;
     text-align: center; }
 
 .room-details__content {
