@@ -1,55 +1,75 @@
 .button {
-  $buttonHovered: #{&}--hovered;
-  position: relative;
-  display: inline-block;
-  padding: 0.75rem 1.125rem;
-  line-height: 1.125rem;
+  $blockClass: &;
+  display: inline-grid;
+  text-decoration: none;
   font-family: Montserrat, sans-serif;
   font-size: 0.75rem;
   font-weight: bold;
   text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-  border: 1px solid transparent;
+  line-height: 2.5rem;
   border-radius: 1.375rem;
-  white-space: nowrap;
-  vertical-align: middle;
   user-select: none;
+  padding: 2px;
+  background: $grad-purple;
+  transition: opacity .15s ease-in-out;
+  &__inner {
+    background: white;
+    display: grid;
+    border-radius: 1.375rem;
+    grid-template-columns: 1fr auto 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  &__caption {
+    grid-column-start: 2;
+  }
   &__arrow {
-    display: inline-block;
-    position: absolute;
-    right: 3%;
-    top: 50%;
-    transform: translateY(-50%);
+    display: none;
+    text-align: right;
   }
   &--small {
-    padding: 0.375rem 1.125rem;
+    line-height: 1.875rem;
   }
   &--fluid {
     width: 100%;
   }
   &--default {
     color: white;
-    background: $grad-purple;
+    #{$blockClass}__inner {
+      background: $grad-purple;
+    }
   }
   &--transparent {
     color: $color-purple;
-    background: transparent;
-    border: 2px solid $color-purple;
   }
   &--textual {
+    padding: 0;
+    line-height: 1rem;
     display: inline;
-    padding: 0.75rem 0;
     border: none;
+    background: none;
     color: $color-purple;
+    #{$blockClass}__inner {
+      display: inline;
+      background: none;
+      padding: 0;
+    }
     &:hover,
-    &#{$buttonHovered} {
-      color: $color-dark-50;
-      opacity: 1;
+    &#{$blockClass}--hovered {
+      color: $color-dark-100;
     }
   }
-  &#{$buttonHovered},
-  &:hover {
+  &--with-arrow {
+    #{$blockClass}__arrow {
+      display: inline-block;
+    }
+    #{$blockClass}__inner {
+      padding: 0 0.5rem;
+    }
+  }
+  &:hover,
+  &--hovered {
     opacity: 0.5;
   }
 }

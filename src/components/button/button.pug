@@ -14,17 +14,15 @@ mixin button(options)
   - let modifiers = [blockName + '--' + theme]
 
   if isHovered
-    - modifiers.push(blockName + '--hovered')
+    - modifiers.push(`${blockName}--hovered`)
   if isFluid
-    - modifiers.push(blockName+'--fluid')
+    - modifiers.push(`${blockName}--fluid`)
   if isSmall
-    - modifiers.push(blockName+'--small')
+    - modifiers.push(`${blockName}--small`)
+  if withArrow
+    - modifiers.push(`${blockName}--with-arrow`)
 
-  a(
-    class=blockName
-    class=modifiers
-    href=href
-  )
-    = caption
-    if withArrow
+  a(class=blockName class=modifiers href=href)
+    div(class=`${blockName}__inner`)
+      span(class=`${blockName}__caption`)= caption
       i(class=[`${blockName}__arrow`, 'material-icons'])= 'arrow_forward'

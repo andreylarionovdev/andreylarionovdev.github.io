@@ -12,7 +12,7 @@
     <meta name="theme-color" content="#ffffff">
     <title>Toxin booking | UI Kit - Form elements</title>
   <link href="styles.css" rel="stylesheet"><link href="main.css" rel="stylesheet"></head>
-  <body class="container clearfix">
+  <body class="container">
     <div class="ui-form-elements">
       <nav class="container__logo"><a class="logo" href="./index.html"></a>
       </nav>
@@ -260,27 +260,25 @@
             </div>
           </article>
           <article class="ui-form-elements__button-group">
-            <div class="button-group">
-              <div class="button-group__label">
-                <label class="label clearfix">
-                  <h3 class="label__left h3">buttons</h3><span class="label__right"></span>
-                </label>
-              </div>
-              <div class="button-group__button"><a class="button button--default" href="/change=me">click me</a>
-              </div>
-              <div class="button-group__button"><a class="button button--default button--hovered" href="/change=me">click me</a>
-              </div>
-              <div class="button-group__button"><a class="button button--transparent" href="/change=me">click me</a>
-              </div>
-              <div class="button-group__button"><a class="button button--transparent button--hovered" href="/change=me">click me</a>
-              </div>
-              <div class="clearfix"></div>
-              <div class="button-group__button--textual"><a class="button button--textual" href="/change=me">click me</a>
-              </div>
-              <div class="button-group__button--textual"><a class="button button--textual button--hovered" href="/change=me">click me</a>
-              </div>
-              <div class="button-group__button--large"><a class="button button--default button--fluid" href="/change=me">перейти к оплате<i class="button__arrow material-icons">arrow_forward</i></a>
-              </div>
+            <div class="ui-form-elements__label">
+              <label class="label clearfix">
+                <h3 class="label__left h3">buttons</h3><span class="label__right"></span>
+              </label>
+            </div>
+            <div class="row"><a class="button button--default" href="/change=me">
+                <div class="button__inner"><span class="button__caption">click me</span><i class="button__arrow material-icons">arrow_forward</i></div></a><a class="button button--default button--hovered" href="/change=me">
+                <div class="button__inner"><span class="button__caption">click me</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
+            </div>
+            <div class="row"><a class="button button--transparent" href="/change=me">
+                <div class="button__inner"><span class="button__caption">click me</span><i class="button__arrow material-icons">arrow_forward</i></div></a><a class="button button--transparent button--hovered" href="/change=me">
+                <div class="button__inner"><span class="button__caption">click me</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
+            </div>
+            <div class="row"><a class="button button--textual" href="/change=me">
+                <div class="button__inner"><span class="button__caption">click me</span><i class="button__arrow material-icons">arrow_forward</i></div></a><a class="button button--textual button--hovered" href="/change=me">
+                <div class="button__inner"><span class="button__caption">click me</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
+            </div>
+            <div class="row"><a class="button button--default button--fluid button--with-arrow" href="/change=me">
+                <div class="button__inner"><span class="button__caption">перейти к оплате</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
             </div>
           </article>
           <article class="ui-form-elements__paginator-group">
@@ -328,7 +326,9 @@
                   <li class="dropdown__li"><span class="dropdown__item-name">спальни</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">2</span><span class="dropdown__inc-button">+</span></span></li>
                   <li class="dropdown__li"><span class="dropdown__item-name">кровати</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">2</span><span class="dropdown__inc-button">+</span></span></li>
                   <li class="dropdown__li"><span class="dropdown__item-name">ванные комнаты</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">0</span><span class="dropdown__inc-button">+</span></span></li>
-                  <li class="dropdown__li dropdown__li--footer-buttons"><span class="dropdown__clear-button"><a class="button button--textual button--hovered" href="javascript:void(0)">очистить</a></span><span class="dropdown__apply-button"><a class="button button--textual" href="javascript:void(0)">применить</a></span></li>
+                  <li class="dropdown__li dropdown__li--footer-buttons"><span class="dropdown__clear-button"><a class="button button--textual button--hovered" href="javascript:void(0)">
+                        <div class="button__inner"><span class="button__caption">очистить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span><span class="dropdown__apply-button"><a class="button button--textual" href="javascript:void(0)">
+                        <div class="button__inner"><span class="button__caption">применить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span></li>
                 </ul>
               </div>
             </div>
@@ -351,7 +351,9 @@
                   <li class="dropdown__li"><span class="dropdown__item-name">взрослые</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">0</span><span class="dropdown__inc-button">+</span></span></li>
                   <li class="dropdown__li"><span class="dropdown__item-name">дети</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">0</span><span class="dropdown__inc-button">+</span></span></li>
                   <li class="dropdown__li"><span class="dropdown__item-name">младенцы</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">0</span><span class="dropdown__inc-button">+</span></span></li>
-                  <li class="dropdown__li dropdown__li--footer-buttons"><span class="dropdown__clear-button"><a class="button button--textual button--hovered" href="javascript:void(0)">очистить</a></span><span class="dropdown__apply-button"><a class="button button--textual" href="javascript:void(0)">применить</a></span></li>
+                  <li class="dropdown__li dropdown__li--footer-buttons"><span class="dropdown__clear-button"><a class="button button--textual button--hovered" href="javascript:void(0)">
+                        <div class="button__inner"><span class="button__caption">очистить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span><span class="dropdown__apply-button"><a class="button button--textual" href="javascript:void(0)">
+                        <div class="button__inner"><span class="button__caption">применить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span></li>
                 </ul>
               </div>
             </div>
@@ -374,7 +376,9 @@
                   <li class="dropdown__li"><span class="dropdown__item-name">взрослые</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">2</span><span class="dropdown__inc-button">+</span></span></li>
                   <li class="dropdown__li"><span class="dropdown__item-name">дети</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">1</span><span class="dropdown__inc-button">+</span></span></li>
                   <li class="dropdown__li"><span class="dropdown__item-name">младенцы</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">0</span><span class="dropdown__inc-button">+</span></span></li>
-                  <li class="dropdown__li dropdown__li--footer-buttons"><span class="dropdown__clear-button"><a class="button button--textual button--hovered" href="javascript:void(0)">очистить</a></span><span class="dropdown__apply-button"><a class="button button--textual" href="javascript:void(0)">применить</a></span></li>
+                  <li class="dropdown__li dropdown__li--footer-buttons"><span class="dropdown__clear-button"><a class="button button--textual button--hovered" href="javascript:void(0)">
+                        <div class="button__inner"><span class="button__caption">очистить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span><span class="dropdown__apply-button"><a class="button button--textual" href="javascript:void(0)">
+                        <div class="button__inner"><span class="button__caption">применить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span></li>
                 </ul>
               </div>
             </div>
@@ -472,28 +476,26 @@
         </div>
         <div class="grid-column-gap"></div>
         <div class="grid-column">
-          <article class="bullet-list-group ui-form-elements__bullet-list-group">
-            <div class="bullet-list-group__label">
+          <article class="ui-form-elements__bullet-list-group">
+            <div class="ui-form-elements__label">
               <label class="label clearfix">
                 <h3 class="label__left h3">Bullet list</h3><span class="label__right"></span>
               </label>
             </div>
-            <div class="bullet-list-group__bullet-list">
-              <ul class="bullet-list" id="bullet-list">
-                <li class="bullet-list__li">
-                  <div class="bullet-list__marker-wrapper"><span class="bullet-list__marker"></span></div>
-                  <p class="bullet-list__text">Нельзя с питомцами</p>
-                </li>
-                <li class="bullet-list__li">
-                  <div class="bullet-list__marker-wrapper"><span class="bullet-list__marker"></span></div>
-                  <p class="bullet-list__text">Без вечеринок и мероприятий</p>
-                </li>
-                <li class="bullet-list__li">
-                  <div class="bullet-list__marker-wrapper"><span class="bullet-list__marker"></span></div>
-                  <p class="bullet-list__text">Время прибытия &mdash; после 13:00, а выезд до 12:00</p>
-                </li>
-              </ul>
-            </div>
+            <ul class="bullet-list" id="bullet-list">
+              <li class="bullet-list__li">
+                <div class="bullet-list__marker-wrapper"><span class="bullet-list__marker"></span></div>
+                <p class="bullet-list__text">Нельзя с питомцами</p>
+              </li>
+              <li class="bullet-list__li">
+                <div class="bullet-list__marker-wrapper"><span class="bullet-list__marker"></span></div>
+                <p class="bullet-list__text">Без вечеринок и мероприятий</p>
+              </li>
+              <li class="bullet-list__li">
+                <div class="bullet-list__marker-wrapper"><span class="bullet-list__marker"></span></div>
+                <p class="bullet-list__text">Время прибытия &mdash; после 13:00, а выезд до 12:00</p>
+              </li>
+            </ul>
           </article>
         </div>
       </section>

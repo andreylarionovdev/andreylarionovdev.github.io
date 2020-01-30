@@ -12,7 +12,7 @@
     <meta name="theme-color" content="#ffffff">
     <title>Toxin booking | Sign in</title>
   <link href="styles.css" rel="stylesheet"><link href="main.css" rel="stylesheet"></head>
-  <body class="container clearfix">
+  <body class="container">
     <header class="page__header">
       <nav class="header">
         <div class="header__inner"><i class="header__nav-toggle material-icons">menu</i>
@@ -29,9 +29,11 @@
             </li>
             <li class="header__nav-item"><a class="header__nav-link header__nav-link--has-submenu">Соглашения</a>
             </li>
-            <li class="header__nav-item header__nav-item--sign-in"><a class="button button--transparent button--small" href="login.html">Войти</a>
+            <li class="header__nav-item header__nav-item--sign-in"><a class="button button--transparent button--small" href="login.html">
+                <div class="button__inner"><span class="button__caption">Войти</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
             </li>
-            <li class="header__nav-item header__nav-item--sign-up"><a class="button button--default button--small" href="registration.html">Зарегистрироваться</a>
+            <li class="header__nav-item header__nav-item--sign-up"><a class="button button--default button--small" href="registration.html">
+                <div class="button__inner"><span class="button__caption">Зарегистрироваться</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
             </li>
           </ul>
         </div>
@@ -55,11 +57,13 @@
                   <button class="input__submit-button"><i class="input__arrow material-icons">arrow_forward</i></button>
                 </div>
               </div>
-              <div class="sign-in__login-button"><a class="button button--default button--fluid" href="login.html">Войти<i class="button__arrow material-icons">arrow_forward</i></a>
+              <div class="sign-in__login-button"><a class="button button--default button--fluid button--with-arrow" href="login.html">
+                  <div class="button__inner"><span class="button__caption">Войти</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
               </div>
               <div class="sign-in__create-account">
                 <p class="sign-in__hint">Нет аккаунта на Toxin?</p>
-                <div class="sign-in__create-button"><a class="button button--transparent button--fluid" href="registration.html">Создать</a>
+                <div class="sign-in__create-button"><a class="button button--transparent button--fluid" href="registration.html">
+                    <div class="button__inner"><span class="button__caption">Создать</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
                 </div>
               </div>
             </form>

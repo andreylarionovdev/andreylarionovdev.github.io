@@ -207,46 +207,41 @@ block content
             to: 10000,
           })
         article.ui-form-elements__button-group
-          .button-group
-            .button-group__label
+            .ui-form-elements__label
               +label({
                 label: 'buttons'
               })
-            .button-group__button
+            .row
               +button({
                 theme: 'default',
                 caption: 'click me'
               })
-            .button-group__button
               +button({
                 theme: 'default',
                 caption: 'click me',
                 isHovered: true
               })
-            .button-group__button
+            .row
               +button({
                 theme: 'transparent',
                 caption: 'click me'
               })
-            .button-group__button
               +button({
                 theme: 'transparent',
                 caption: 'click me',
                 isHovered: true
               })
-            .clearfix
-            .button-group__button--textual
+            .row
               +button({
                 theme: 'textual',
                 caption: 'click me'
               })
-            .button-group__button--textual
               +button({
                 theme: 'textual',
                 caption: 'click me',
                 isHovered: true
               })
-            .button-group__button--large
+            .row
               +button({
                 theme: 'default',
                 caption: 'перейти к оплате',
@@ -383,20 +378,19 @@ block content
             })
       div.grid-column-gap
       div.grid-column
-        article.bullet-list-group.ui-form-elements__bullet-list-group
-          .bullet-list-group__label
+        article.ui-form-elements__bullet-list-group
+          .ui-form-elements__label
             +label({
               label: 'Bullet list'
             })
-          .bullet-list-group__bullet-list
-            +bullet-list({
-              id: 'bullet-list',
-              items: [
-                {text: 'Нельзя с питомцами'},
-                {text: 'Без вечеринок и мероприятий'},
-                {text: 'Время прибытия &mdash; после 13:00, а выезд до 12:00'}
-              ]
-            })
+          +bullet-list({
+            id: 'bullet-list',
+            items: [
+              {text: 'Нельзя с питомцами'},
+              {text: 'Без вечеринок и мероприятий'},
+              {text: 'Время прибытия &mdash; после 13:00, а выезд до 12:00'}
+            ]
+          })
     section.row.ui-form-elements__bottom.clearfix
       div.grid-column
         article.feature-group.ui-form-elements__feature-group

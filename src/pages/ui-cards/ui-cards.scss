@@ -1,11 +1,11 @@
+@import '../../css/mixins';
 .ui-cards {
-  margin: 9.375rem auto 0;
-  width: 80.5%;
+  @include inner;
+  margin-top: 9.375rem;
   display: grid;
   grid-template-columns: 1.1875fr 1.1875fr 1fr;
   grid-column-gap: 2.5rem;
   @media (max-width: $screen-md-max) {
-    width: 90.5%;
     grid-template-columns: repeat(auto-fill, minmax(23.75rem, 1fr));
   }
   @media (max-width: $screen-xs-max) {
