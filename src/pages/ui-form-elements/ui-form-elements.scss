@@ -44,6 +44,9 @@
   // Custom padding/margin for groups
   &__input-group {
     margin-bottom: 1.25rem;
+    .ui-form-elements__label {
+      margin-bottom: 0.3125rem;
+    }
     &--masked {
       margin-bottom: 2.5rem;
     }

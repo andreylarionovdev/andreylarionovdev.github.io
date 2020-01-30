@@ -26,31 +26,29 @@ block content
       +logo
     section.row.ui-form-elements__top
       div.grid-column
-        article.input-group.ui-form-elements__input-group
-          .input-group__label
+        article.ui-form-elements__input-group
+          .ui-form-elements__label
             +label({
               label: 'text field',
               hint: 'default'
             })
-          .input-group__input
-            +input({
-              id: 'input-email',
-              placeholder: 'Email',
-              type: 'email'
-            })
-        article.input-group.ui-form-elements__input-group.ui-form-elements__input-group--hovered
-          .input-group__label
+          +input({
+            id: 'input-email',
+            placeholder: 'Email',
+            type: 'email'
+          })
+        article.ui-form-elements__input-group.ui-form-elements__input-group--hovered
+          .ui-form-elements__label
             +label({
               label: 'text field',
               hint: 'hover / focus'
             })
-          .input-group__input
-            +input({
-              id: 'input-focused-hovered',
-              placeholder: 'Some text',
-              value: 'This is pretty awesome',
-              isHovered: true
-            })
+          +input({
+            id: 'input-focused-hovered',
+            placeholder: 'Some text',
+            value: 'This is pretty awesome',
+            isHovered: true
+          })
         article.ui-form-elements__dropdown-group
           .ui-form-elements__label
             +label({
@@ -61,17 +59,16 @@ block content
             id: 'default-dropdown',
             value: 'Сколько гостей'
           })
-        article.input-group.ui-form-elements__input-group--masked
-          .input-group__label
+        article.ui-form-elements__input-group.ui-form-elements__input-group--masked
+          .ui-form-elements__label
             +label({
               label: 'masked text field',
               hint: 'default'
             })
-          .input-group__input
-            +input({
-              id: 'input-with-mask',
-              placeholder: 'ДД.ММ.ГГГГ'
-            })
+          +input({
+            id: 'input-with-mask',
+            placeholder: 'ДД.ММ.ГГГГ'
+          })
         article.ui-form-elements__dropdown-group.ui-form-elements__dropdown-group--date-range
           +dropdown-date-range({
             id: 'dropdown-date-range-demo',
@@ -89,18 +86,17 @@ block content
             id: 'date-filter',
             value: '19 авг - 23 авг'
           })
-        article.input-group.ui-form-elements__input-group.ui-form-elements__input-group--with-submit
-          .input-group__label
+        article.ui-form-elements__input-group.ui-form-elements__input-group--with-submit
+          .ui-form-elements__label
             +label({
               label: 'subscription text field'
             })
-          .input-group__input
-            +input({
-              id: 'input-submit',
-              placeholder: 'Email',
-              withArrow: true,
-              type: 'email'
-            })
+          +input({
+            id: 'input-submit',
+            placeholder: 'Email',
+            withArrow: true,
+            type: 'email'
+          })
       div.grid-column-gap
       div.grid-column
         article.ui-form-elements__checkbox-group
@@ -203,47 +199,47 @@ block content
             to: 10000,
           })
         article.ui-form-elements__button-group
-            .ui-form-elements__label
-              +label({
-                label: 'buttons'
-              })
-            .row
-              +button({
-                theme: 'default',
-                caption: 'click me'
-              })
-              +button({
-                theme: 'default',
-                caption: 'click me',
-                isHovered: true
-              })
-            .row
-              +button({
-                theme: 'transparent',
-                caption: 'click me'
-              })
-              +button({
-                theme: 'transparent',
-                caption: 'click me',
-                isHovered: true
-              })
-            .row
-              +button({
-                theme: 'textual',
-                caption: 'click me'
-              })
-              +button({
-                theme: 'textual',
-                caption: 'click me',
-                isHovered: true
-              })
-            .row
-              +button({
-                theme: 'default',
-                caption: 'перейти к оплате',
-                withArrow: true,
-                isFluid: true
-              })
+          .ui-form-elements__label
+            +label({
+              label: 'buttons'
+            })
+          .row
+            +button({
+              theme: 'default',
+              caption: 'click me'
+            })
+            +button({
+              theme: 'default',
+              caption: 'click me',
+              isHovered: true
+            })
+          .row
+            +button({
+              theme: 'transparent',
+              caption: 'click me'
+            })
+            +button({
+              theme: 'transparent',
+              caption: 'click me',
+              isHovered: true
+            })
+          .row
+            +button({
+              theme: 'textual',
+              caption: 'click me'
+            })
+            +button({
+              theme: 'textual',
+              caption: 'click me',
+              isHovered: true
+            })
+          .row
+            +button({
+              theme: 'default',
+              caption: 'перейти к оплате',
+              withArrow: true,
+              isFluid: true
+            })
         article.ui-form-elements__paginator-group
           .paginator-group
             .paginator-group__label

@@ -33,9 +33,6 @@
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75); }
 
-.input-group__label {
-  margin-bottom: 5px; }
-
 .like-button-group__label {
   margin-bottom: 16px; }
 
@@ -2051,6 +2048,8 @@
         display: none; } }
   .ui-form-elements__input-group {
     margin-bottom: 1.25rem; }
+    .ui-form-elements__input-group .ui-form-elements__label {
+      margin-bottom: 0.3125rem; }
     .ui-form-elements__input-group--masked {
       margin-bottom: 2.5rem; }
     .ui-form-elements__input-group--with-submit {
