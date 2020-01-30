@@ -33,19 +33,6 @@
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75); }
 
-.rich-checkbox-group__label {
-  margin-bottom: 16px; }
-
-.rich-checkbox-group__rich-checkbox {
-  min-height: 20px;
-  margin-bottom: 7px; }
-
-.toggle-group__label {
-  margin-bottom: 16px; }
-
-.toggle-group__toggle-button {
-  margin-bottom: 14px; }
-
 .site-menu {
   list-style: none; }
   .site-menu--purple a {
@@ -2044,6 +2031,10 @@
     padding: 0 0.9375rem 0 0.125rem; }
   .ui-form-elements__toggle-group {
     margin-bottom: 2.75rem; }
+    .ui-form-elements__toggle-group .label {
+      margin-bottom: 1rem; }
+    .ui-form-elements__toggle-group .toggle-button {
+      margin-bottom: 0.825rem; }
   .ui-form-elements__like-button-group {
     margin-bottom: 2.25rem; }
     .ui-form-elements__like-button-group .label {

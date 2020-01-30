@@ -91,9 +91,14 @@
       padding: 0 0.9375rem 0 0.125rem;
     }
   }
-
   &__toggle-group {
     margin-bottom: 2.75rem;
+    .label {
+      margin-bottom: 1rem;
+    }
+    .toggle-button {
+      margin-bottom: 0.825rem;
+    }
   }
   &__like-button-group {
     margin-bottom: 2.25rem;
