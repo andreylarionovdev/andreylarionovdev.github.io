@@ -33,9 +33,6 @@
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75); }
 
-.feature-group__feature {
-  border-bottom: 1px solid rgba(31, 32, 65, 0.1); }
-
 .input-group__label {
   margin-bottom: 5px; }
 
@@ -2021,7 +2018,7 @@
 .ui-form-elements {
   margin: 0 auto;
   width: 95.5%;
-  margin-top: 8.9375rem;
+  padding: 8.9375rem 0 8.25rem 0;
   font-family: Montserrat, sans-serif; }
   @media (min-width: 992px) {
     .ui-form-elements {
@@ -2103,6 +2100,8 @@
     margin-bottom: 1.3125rem; }
   .ui-form-elements__checkbox-list-xp-group--expanded {
     margin-bottom: 0.6875rem; }
+  .ui-form-elements__feature {
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1); }
   .ui-form-elements__feedback-group {
     margin-top: 1.875rem; }
 
