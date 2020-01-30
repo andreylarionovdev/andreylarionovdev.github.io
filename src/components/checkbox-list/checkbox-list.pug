@@ -1,0 +1,11 @@
+mixin checkbox-list(options)
+  - const blockName = 'checkbox-list'
+  - const { label, items } = options || {}
+
+  div(class=blockName)
+    div(class=`${blockName}__label`)
+      +label({ label })
+    ul(class=`${blockName}__list`)
+      each item in items
+        li(class=`${blockName}__checkbox`)
+          +checkbox(item)

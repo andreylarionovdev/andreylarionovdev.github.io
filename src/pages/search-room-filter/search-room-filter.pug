@@ -2,7 +2,7 @@ extends ../layouts/page
 
 include ../../components/range-slider/range-slider
 include ../../components/label/label
-include ../../components/checkbox/checkbox
+include ../../components/checkbox-list/checkbox-list
 include ../../components/checkbox-list-xp/checkbox-list-xp
 include ../../components/card/room-thumb/room-thumb
 include ../../components/paginator/paginator
@@ -57,44 +57,41 @@ block main
           p.search-room-filter__price-slider-hint
             = 'Стоимость за сутки пребывания в номере'
         .search-room-filter__checkbox-group
-          .checkbox-group__label
-            +label({
-              label: 'checkbox buttons'
-            })
-          .checkbox-group__checkbox
-            +checkbox({
-              id: 'smoke-allowed',
-              label: 'Можно курить'
-            })
-          .checkbox-group__checkbox
-            +checkbox({
-              id: 'pets-allowed',
-              label: 'Можно с питомцами',
-              isChecked: true
-            })
-          .checkbox-group__checkbox
-            +checkbox({
-              id: 'guests-allowed',
-              label: 'Можно пригласить гостей (до 10 человек)',
-              isChecked: true
+            +checkbox-list({
+              label: 'checkbox buttons',
+              items: [
+                {
+                  id: 'smoke-allowed',
+                  label: 'Можно курить'
+                },
+                {
+                  id: 'pets-allowed',
+                  label: 'Можно с питомцами',
+                  isChecked: true
+                },
+                {
+                  id: 'guests-allowed',
+                  label: 'Можно пригласить гостей (до 10 человек)',
+                  isChecked: true
+                }
+              ]
             })
         .search-room-filter__rich-checkbox-group
-          .rich-checkbox-group__label
-            +label({
-              label: 'Доступность'
-            })
-          .rich-checkbox-group__rich-checkbox.clearfix
-            +checkbox({
-              id: 'wide-hall-checkbox',
-              label: 'Широкий коридор',
-              hint: 'Ширина коридоров в номере не&nbsp;менее 91 см.'
-            })
-          .rich-checkbox-group__rich-checkbox.clearfix
-            +checkbox({
-              id: 'disable-assistant-checkbox',
-              label: 'Помощник для инвалидов',
-              hint: 'На 1 этаже вас встретит специалист и проводит до номера.'
-            })
+          +checkbox-list({
+            label: 'Доступность',
+            items: [
+              {
+                id: 'wide-hall-checkbox',
+                label: 'Широкий коридор',
+                hint: 'Ширина коридоров в номере не&nbsp;менее 91 см.'
+              },
+              {
+                id: 'disable-assistant-checkbox',
+                label: 'Помощник для инвалидов',
+                hint: 'На 1 этаже вас встретит специалист и проводит до номера.'
+              }
+            ]
+          })
         .search-room-filter__feature-dropdown-group
           .search-room-filter__sidebar-label
             +label({

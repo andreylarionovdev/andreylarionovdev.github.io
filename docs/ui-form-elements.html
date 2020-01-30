@@ -135,29 +135,33 @@
         </div>
         <div class="grid-column-gap"></div>
         <div class="grid-column">
-          <article class="checkbox-group ui-form-elements__checkbox-group">
-            <div class="checkbox-group__label">
-              <label class="label clearfix">
-                <h3 class="label__left h3">checkbox buttons</h3><span class="label__right"></span>
-              </label>
-            </div>
-            <div class="checkbox-group__checkbox">
-              <div class="checkbox">
-                <input class="checkbox__input" id="smoke-allowed" type="checkbox">
-                <label class="checkbox__label" for="smoke-allowed">Можно курить</label>
+          <article class="ui-form-elements__checkbox-group">
+            <div class="checkbox-list">
+              <div class="checkbox-list__label">
+                <label class="label clearfix">
+                  <h3 class="label__left h3">checkbox buttons</h3><span class="label__right"></span>
+                </label>
               </div>
-            </div>
-            <div class="checkbox-group__checkbox">
-              <div class="checkbox">
-                <input class="checkbox__input" id="pets-allowed" type="checkbox" checked>
-                <label class="checkbox__label" for="pets-allowed">Можно с питомцами</label>
-              </div>
-            </div>
-            <div class="checkbox-group__checkbox">
-              <div class="checkbox">
-                <input class="checkbox__input" id="guests-allowed" type="checkbox" checked>
-                <label class="checkbox__label" for="guests-allowed">Можно пригласить гостей (до 10 человек)</label>
-              </div>
+              <ul class="checkbox-list__list">
+                <li class="checkbox-list__checkbox">
+                  <div class="checkbox">
+                    <input class="checkbox__input" id="smoke-allowed" type="checkbox">
+                    <label class="checkbox__label" for="smoke-allowed">Можно курить</label>
+                  </div>
+                </li>
+                <li class="checkbox-list__checkbox">
+                  <div class="checkbox">
+                    <input class="checkbox__input" id="pets-allowed" type="checkbox" checked>
+                    <label class="checkbox__label" for="pets-allowed">Можно с питомцами</label>
+                  </div>
+                </li>
+                <li class="checkbox-list__checkbox">
+                  <div class="checkbox">
+                    <input class="checkbox__input" id="guests-allowed" type="checkbox" checked>
+                    <label class="checkbox__label" for="guests-allowed">Можно пригласить гостей (до 10 человек)</label>
+                  </div>
+                </li>
+              </ul>
             </div>
           </article>
           <article class="radio-button-group ui-form-elements__radio-group clearfix">
@@ -398,49 +402,49 @@
             <div class="checkbox-list-xp checkbox-list-xp--expanded" id="exp_check_list_collapsed">
               <h3 class="checkbox-list-xp__toggle"><span class="checkbox-list-xp__label">Expandable checkbox list</span><i class="checkbox-list-xp__arrow material-icons">keyboard_arrow_down</i></h3>
               <ul class="checkbox-list-xp__list">
-                <li class="checkbox-list-xp__li clearfix">
+                <li class="checkbox-list-xp__li">
                   <div class="checkbox">
                     <input class="checkbox__input" id="exp_check_list_collapsed-breakfast" type="checkbox">
                     <label class="checkbox__label" for="exp_check_list_collapsed-breakfast">Завтрак</label>
                   </div>
                 </li>
-                <li class="checkbox-list-xp__li clearfix">
+                <li class="checkbox-list-xp__li">
                   <div class="checkbox">
                     <input class="checkbox__input" id="exp_check_list_collapsed-table" type="checkbox" checked>
                     <label class="checkbox__label" for="exp_check_list_collapsed-table">Письменный стол</label>
                   </div>
                 </li>
-                <li class="checkbox-list-xp__li clearfix">
+                <li class="checkbox-list-xp__li">
                   <div class="checkbox">
                     <input class="checkbox__input" id="exp_check_list_collapsed-baby-chair-for-eat" type="checkbox" checked>
                     <label class="checkbox__label" for="exp_check_list_collapsed-baby-chair-for-eat">Стул для кормления</label>
                   </div>
                 </li>
-                <li class="checkbox-list-xp__li clearfix">
+                <li class="checkbox-list-xp__li">
                   <div class="checkbox">
                     <input class="checkbox__input" id="exp_check_list_collapsed-baby-bed" type="checkbox" checked>
                     <label class="checkbox__label" for="exp_check_list_collapsed-baby-bed">Кроватка</label>
                   </div>
                 </li>
-                <li class="checkbox-list-xp__li clearfix">
+                <li class="checkbox-list-xp__li">
                   <div class="checkbox">
                     <input class="checkbox__input" id="exp_check_list_collapsed-tv_1" type="checkbox">
                     <label class="checkbox__label" for="exp_check_list_collapsed-tv_1">Телевизор</label>
                   </div>
                 </li>
-                <li class="checkbox-list-xp__li clearfix">
+                <li class="checkbox-list-xp__li">
                   <div class="checkbox">
                     <input class="checkbox__input" id="exp_check_list_collapsed-shampoo_1" type="checkbox">
                     <label class="checkbox__label" for="exp_check_list_collapsed-shampoo_1">Шампунь</label>
                   </div>
                 </li>
-                <li class="checkbox-list-xp__li clearfix">
+                <li class="checkbox-list-xp__li">
                   <div class="checkbox">
                     <input class="checkbox__input" id="exp_check_list_collapsed-tv_2" type="checkbox">
                     <label class="checkbox__label" for="exp_check_list_collapsed-tv_2">Телевизор</label>
                   </div>
                 </li>
-                <li class="checkbox-list-xp__li clearfix">
+                <li class="checkbox-list-xp__li">
                   <div class="checkbox">
                     <input class="checkbox__input" id="exp_check_list_collapsed-shampoo_2" type="checkbox">
                     <label class="checkbox__label" for="exp_check_list_collapsed-shampoo_2">Шампунь</label>
@@ -453,24 +457,28 @@
         <div class="grid-column-gap"></div>
         <div class="grid-column">
           <article class="rich-checkbox-group ui-form-elements__rich-checkbox-group">
-            <div class="rich-checkbox-group__label">
-              <label class="label clearfix">
-                <h3 class="label__left h3">rich checkbox buttons</h3><span class="label__right"></span>
-              </label>
-            </div>
-            <div class="rich-checkbox-group__rich-checkbox clearfix">
-              <div class="checkbox checkbox--has-hint">
-                <input class="checkbox__input" id="wide-hall-checkbox" type="checkbox">
-                <label class="checkbox__label" for="wide-hall-checkbox">Широкий коридор</label>
-                <p class="checkbox__hint">Ширина коридоров в номере не&nbsp;менее 91 см.</p>
+            <div class="checkbox-list">
+              <div class="checkbox-list__label">
+                <label class="label clearfix">
+                  <h3 class="label__left h3">rich checkbox buttons</h3><span class="label__right"></span>
+                </label>
               </div>
-            </div>
-            <div class="rich-checkbox-group__rich-checkbox clearfix">
-              <div class="checkbox checkbox--has-hint">
-                <input class="checkbox__input" id="disable-assistant-checkbox" type="checkbox">
-                <label class="checkbox__label" for="disable-assistant-checkbox">Помощник для инвалидов</label>
-                <p class="checkbox__hint">На 1 этаже вас встретит специалист и проводит до номера.</p>
-              </div>
+              <ul class="checkbox-list__list">
+                <li class="checkbox-list__checkbox">
+                  <div class="checkbox checkbox--has-hint">
+                    <input class="checkbox__input" id="wide-hall-checkbox" type="checkbox">
+                    <label class="checkbox__label" for="wide-hall-checkbox">Широкий коридор</label>
+                    <p class="checkbox__hint">Ширина коридоров в номере не&nbsp;менее 91 см.</p>
+                  </div>
+                </li>
+                <li class="checkbox-list__checkbox">
+                  <div class="checkbox checkbox--has-hint">
+                    <input class="checkbox__input" id="disable-assistant-checkbox" type="checkbox">
+                    <label class="checkbox__label" for="disable-assistant-checkbox">Помощник для инвалидов</label>
+                    <p class="checkbox__hint">На 1 этаже вас встретит специалист и проводит до номера.</p>
+                  </div>
+                </li>
+              </ul>
             </div>
           </article>
         </div>

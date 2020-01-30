@@ -33,13 +33,6 @@
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75); }
 
-.checkbox-group__label {
-  margin-bottom: 17px; }
-
-.checkbox-group__checkbox {
-  min-height: 20px;
-  margin-bottom: 10px; }
-
 .checkbox-list-xp-group__checkbox-list-xp {
   height: 44px; }
 
@@ -761,7 +754,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 0 1rem; }
+    padding: 0 1.065rem; }
   .button__caption {
     grid-column-start: 2; }
   .button__arrow {
@@ -769,6 +762,8 @@
     text-align: right; }
   .button--small {
     line-height: 1.875rem; }
+    .button--small .button__inner {
+      padding: 0 1.125rem; }
   .button--fluid {
     width: 100%; }
   .button--default {
@@ -846,6 +841,17 @@
     padding-top: 7px;
     padding-left: 6px;
     color: rgba(31, 32, 65, 0.75); }
+
+.checkbox-list__label {
+  margin-bottom: 1rem; }
+
+.checkbox-list__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+.checkbox-list__checkbox {
+  margin-bottom: 0.625rem; }
 
 .checkbox-list-xp {
   font-family: Montserrat, sans-serif;

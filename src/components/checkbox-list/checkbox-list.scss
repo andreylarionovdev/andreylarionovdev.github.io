@@ -1,0 +1,13 @@
+.checkbox-list {
+  &__label {
+    margin-bottom: 1rem;
+  }
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__checkbox {
+    margin-bottom: 0.625rem;
+  }
+}

@@ -15,7 +15,7 @@ mixin checkbox-list-xp(options)
       i(class=[`${blockName}__arrow`, 'material-icons'])= 'keyboard_arrow_down'
     ul(class=`${blockName}__list`)
       each item, index in items
-        li(class=[`${blockName}__li`, 'clearfix'])
+        li(class=`${blockName}__li`)
           +checkbox({
             id: `${id}-${item.name}`,
             label: item.label,
