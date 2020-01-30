@@ -888,8 +888,13 @@
 .feedback {
   font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
-  color: rgba(31, 32, 65, 0.75); }
+  color: rgba(31, 32, 65, 0.75);
+  display: grid;
+  grid-template-areas: 'pic header' 'like text';
+  grid-template-columns: 3rem auto;
+  grid-gap: 0.625rem; }
   .feedback__author-picture-wrapper {
+    grid-area: pic;
     margin: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -900,7 +905,6 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    float: left;
     width: 3rem;
     height: 3rem;
     overflow: hidden;
@@ -908,24 +912,20 @@
     -webkit-box-shadow: 0 0.625rem 1.25rem rgba(31, 32, 65, 0.1);
             box-shadow: 0 0.625rem 1.25rem rgba(31, 32, 65, 0.1);
     border: 2px solid white; }
+  .feedback__header {
+    grid-area: header; }
   .feedback__author-name, .feedback__date, .feedback__text {
-    padding-left: 3.625rem;
     margin: 0; }
   .feedback__author-name {
     line-height: 1.5rem;
     font-weight: bold; }
   .feedback__date {
     line-height: 1.625rem; }
-  .feedback__content {
-    position: relative;
-    margin-top: 0.625rem; }
   .feedback__like-button {
-    position: absolute;
-    left: 0.1875rem;
-    top: 0;
-    height: 100%;
-    width: 0.625rem; }
+    grid-area: like;
+    text-align: center; }
   .feedback__text {
+    grid-area: text;
     line-height: 1.5rem; }
 
 .dropdown-date-range__from, .dropdown-date-range__to {

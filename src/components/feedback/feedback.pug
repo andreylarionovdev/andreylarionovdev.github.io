@@ -4,21 +4,20 @@ mixin feedback(options)
   - const blockName = 'feedback'
   - const { author, date, text, favoritesCount, isFavorite } = options || {}
 
-  article(class=blockName)
-    header(class=`${blockName}__header`)
-      figure(class=`${blockName}__author-picture-wrapper`)
-        if author.image
-          img(
-            class=`${blockName}__author-picture`
-            src=require(`../../img/${author.image.src}`)
-            alt=author.image.alt
-          )
+  div(class=blockName)
+    figure(class=`${blockName}__author-picture-wrapper`)
+      if author.image
+        img(
+          class=`${blockName}__author-picture`
+          src=require(`../../img/${author.image.src}`)
+          alt=author.image.alt
+        )
+    div(class=`${blockName}__header`)
       p(class=`${blockName}__author-name`)= author.name
       p(class=`${blockName}__date`)= date
-    div(class=`${blockName}__content`)
-      div(class=`${blockName}__like-button`)
-        +like-button({
-          count: favoritesCount,
-          isFavorite
-        })
-      p(class=`${blockName}__text`)!= text
+    div(class=`${blockName}__like-button`)
+      +like-button({
+        count: favoritesCount,
+        isFavorite
+      })
+    p(class=`${blockName}__text`)!= text

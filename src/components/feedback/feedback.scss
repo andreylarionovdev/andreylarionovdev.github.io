@@ -3,13 +3,18 @@
   font-size: 0.875rem;
   color: $color-dark-75;
   $picture-width: 3rem;
-  $left-indent: $picture-width + 0.625rem;
+  display: grid;
+  grid-template-areas:
+    'pic header'
+    'like text';
+  grid-template-columns: $picture-width auto;
+  grid-gap: 0.625rem;
   &__author-picture-wrapper {
+    grid-area: pic;
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    float: left;
     width: $picture-width;
     height: $picture-width;
     overflow: hidden;
@@ -17,10 +22,12 @@
     box-shadow: 0 0.625rem 1.25rem rgba(31, 32, 65, 0.1);
     border: 2px solid white;
   }
+  &__header {
+    grid-area: header;
+  }
   &__author-name,
   &__date,
   &__text {
-    padding-left: $left-indent;
     margin: 0;
   }
   &__author-name {
@@ -30,18 +37,12 @@
   &__date {
     line-height: 1.625rem;
   }
-  &__content {
-    position: relative;
-    margin-top: 0.625rem;
-  }
   &__like-button {
-    position: absolute;
-    left: 0.1875rem;
-    top: 0;
-    height: 100%;
-    width: 0.625rem;
+    grid-area: like;
+    text-align: center;
   }
   &__text {
+    grid-area: text;
     line-height: 1.5rem;
   }
 }
