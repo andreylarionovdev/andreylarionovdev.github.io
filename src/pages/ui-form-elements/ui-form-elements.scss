@@ -78,6 +78,14 @@
   &__rate-group {
     margin-bottom: 2.625rem;
   }
+  &__radio-group {
+    .label {
+      margin-bottom:0.875rem;
+    }
+    .radio-button {
+      margin-right: 1rem;
+    }
+  }
   &__toggle-group {
     margin-bottom: 2.75rem;
   }

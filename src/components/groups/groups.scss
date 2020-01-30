@@ -1,18 +1,3 @@
-.radio-button-group {
-  &__label {
-    margin-bottom: 13px;
-  }
-  &__radio-button {
-    height: 20px;
-    float: left;
-    margin-right: 19px;
-    // ... 991px
-    @media (max-width: $screen-sm-max) {
-      margin-bottom: 10px;
-    }
-  }
-}
-
 .rate-button-group {
   &__label {
     margin-bottom: 16px;

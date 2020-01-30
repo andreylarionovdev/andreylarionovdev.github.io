@@ -33,17 +33,6 @@
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75); }
 
-.radio-button-group__label {
-  margin-bottom: 13px; }
-
-.radio-button-group__radio-button {
-  height: 20px;
-  float: left;
-  margin-right: 19px; }
-  @media (max-width: 991px) {
-    .radio-button-group__radio-button {
-      margin-bottom: 10px; } }
-
 .rate-button-group__label {
   margin-bottom: 16px; }
 
@@ -403,6 +392,7 @@
 
 .radio-button {
   font-size: 0.75rem;
+  line-height: 1.25rem;
   font-family: Montserrat, sans-serif;
   display: inline-block; }
   .radio-button__input {
@@ -411,12 +401,12 @@
     .radio-button__input:checked + .radio-button__label {
       color: rgba(31, 32, 65, 0.75); }
       .radio-button__input:checked + .radio-button__label:after {
-        content: "";
-        top: 4px;
-        left: 4px;
-        width: 12px;
-        height: 12px;
-        border-radius: 6px;
+        content: '';
+        top: 0.25rem;
+        left: 0.25rem;
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 0.375rem;
         display: block;
         background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
@@ -425,7 +415,7 @@
   .radio-button__label {
     display: block;
     position: relative;
-    padding-left: 30px;
+    padding-left: 1.875rem;
     font-family: Montserrat, sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -433,21 +423,15 @@
     color: rgba(31, 32, 65, 0.5); }
     .radio-button__label:after, .radio-button__label:before {
       position: absolute; }
-    .radio-button__label:after {
-      content: none;
-      top: 1px;
-      left: 5px; }
     .radio-button__label:before {
-      content: "";
+      content: '';
       top: 0;
       left: 0;
-      width: 20px;
-      height: 20px;
+      width: 1.25rem;
+      height: 1.25rem;
       display: inline-block;
       border: 1px solid rgba(31, 32, 65, 0.25);
-      border-radius: 10px;
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box; }
+      border-radius: 0.625rem; }
 
 .toggle-button {
   font-size: 0.75rem;
@@ -2059,6 +2043,10 @@
     padding-right: 5rem; }
   .ui-form-elements__radio-group, .ui-form-elements__rate-group {
     margin-bottom: 2.625rem; }
+  .ui-form-elements__radio-group .label {
+    margin-bottom: 0.875rem; }
+  .ui-form-elements__radio-group .radio-button {
+    margin-right: 1rem; }
   .ui-form-elements__toggle-group {
     margin-bottom: 2.75rem; }
   .ui-form-elements__like-button-group {

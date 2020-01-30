@@ -119,26 +119,23 @@ block content
               }
             ]
           })
-        article.radio-button-group.ui-form-elements__radio-group.clearfix
-          .radio-button-group__label
-            +label({
-              label: 'radio buttons'
-            })
-          .radio-button-group__radio-button
-            +radio-button({
-              id: 'radio-male',
-              name: 'gender',
-              value: 'male',
-              label: 'Мужчина',
-              isChecked: true
-            })
-          .radio-button-group__radio-button
-            +radio-button({
-              id: 'radio-female',
-              name: 'gender',
-              value: 'female',
-              label: 'Женщина'
-            })
+        article.ui-form-elements__radio-group
+          +label({
+            label: 'radio buttons'
+          })
+          +radio-button({
+            id: 'radio-male',
+            name: 'gender',
+            value: 'male',
+            label: 'Мужчина',
+            isChecked: true
+          })
+          +radio-button({
+            id: 'radio-female',
+            name: 'gender',
+            value: 'female',
+            label: 'Женщина'
+          })
         article.toggle-group.ui-form-elements__toggle-group
           .toggle-group__label
             +label({
