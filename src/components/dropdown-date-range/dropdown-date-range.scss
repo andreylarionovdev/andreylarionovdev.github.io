@@ -1,11 +1,9 @@
 .dropdown-date-range {
+  display: flex;
+  justify-content: space-between;
   &__from,
   &__to {
-    float: left;
     width: 47%;
-  }
-  &__from {
-    margin-right: 6%;
   }
   &__label {
     margin-bottom: 0.3125rem;

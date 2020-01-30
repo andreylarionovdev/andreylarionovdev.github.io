@@ -14,26 +14,25 @@ mixin dropdown-date-range(options)
     } = options || {}
 
   div(class=blockName)
-    div.clearfix
-      div(class=`${blockName}__from`)
-        div(class=`${blockName}__label`)
-          +label({
-            label: fromLabel
-          })
-        div(class=`${blockName}__dropdown`)
-          +dropdown({
-            id: `${id}__from-date`,
-            type: 'datepicker',
-            value: from
-          })
-      div(class=`${blockName}__to`)
-        div(class=`${blockName}__label`)
-          +label({
-            label: toLabel
-          })
-        div(class=`${blockName}__dropdown`)
-          +dropdown({
-            id: `${id}__to-date`,
-            type: 'datepicker',
-            value: to
-          })
+    div(class=`${blockName}__from`)
+      div(class=`${blockName}__label`)
+        +label({
+          label: fromLabel
+        })
+      div(class=`${blockName}__dropdown`)
+        +dropdown({
+          id: `${id}__from-date`,
+          type: 'datepicker',
+          value: from
+        })
+    div(class=`${blockName}__to`)
+      div(class=`${blockName}__label`)
+        +label({
+          label: toLabel
+        })
+      div(class=`${blockName}__dropdown`)
+        +dropdown({
+          id: `${id}__to-date`,
+          type: 'datepicker',
+          value: to
+        })

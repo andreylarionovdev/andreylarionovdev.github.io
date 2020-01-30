@@ -928,15 +928,17 @@
     grid-area: text;
     line-height: 1.5rem; }
 
-.dropdown-date-range__from, .dropdown-date-range__to {
-  float: left;
-  width: 47%; }
-
-.dropdown-date-range__from {
-  margin-right: 6%; }
-
-.dropdown-date-range__label {
-  margin-bottom: 0.3125rem; }
+.dropdown-date-range {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .dropdown-date-range__from, .dropdown-date-range__to {
+    width: 47%; }
+  .dropdown-date-range__label {
+    margin-bottom: 0.3125rem; }
 
 .header {
   font-family: Montserrat, sans-serif;
