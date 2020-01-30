@@ -155,20 +155,17 @@ block content
               id: 'second-toggle',
               label: 'Получать спецпредложения'
             })
-        article.like-button-group.ui-form-elements__like-button-group.clearfix
-          .like-button-group__label
-            +label({
-              label: 'like button'
-            })
-          .like-button-group__like-button
-            +like-button({
-              count: 2
-            })
-          .like-button-group__like-button
-            +like-button({
-              count:12,
-              isFavorite: true
-            })
+        article.ui-form-elements__like-button-group
+          +label({
+            label: 'like button'
+          })
+          +like-button({
+            count: 2
+          })
+          +like-button({
+            count:12,
+            isFavorite: true
+          })
         article.rate-button-group.ui-form-elements__rate-button-group--default.clearfix
           .rate-button-group__label
             +label({

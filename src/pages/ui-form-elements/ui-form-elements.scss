@@ -44,7 +44,7 @@
   // Custom padding/margin for groups
   &__input-group {
     margin-bottom: 1.25rem;
-    .ui-form-elements__label {
+    .label {
       margin-bottom: 0.3125rem;
     }
     &--masked {
@@ -56,7 +56,7 @@
   }
   &__dropdown-group {
     margin-bottom: 1.4375rem;
-    .ui-form-elements__label {
+    .label {
       margin-bottom: 0.3125rem;
     }
     &--date-range,
@@ -83,6 +83,12 @@
   }
   &__like-button-group {
     margin-bottom: 2.25rem;
+    .label {
+      margin-bottom: 1rem;
+    }
+    .like-button {
+      margin-right: 0.625rem;
+    }
   }
   &__range-slider {
     margin-bottom: 2.375rem;
@@ -90,17 +96,17 @@
   }
   &__button-group {
     margin-bottom: 2.5rem;
-    .ui-form-elements__label {
+    .label {
       margin-bottom: 1rem;
     }
     .row {
       display: flex;
       margin-bottom: 1.875rem;
-      .button {
-        margin-right: 1.25rem;
-        &:last-child {
-          margin: 0;
-        }
+    }
+    .button {
+      margin-right: 1.25rem;
+      &:last-child {
+        margin: 0;
       }
     }
   }
@@ -109,7 +115,7 @@
   }
   &__bullet-list-group {
     padding: 0.8125rem 3.75rem 0 0;
-    .ui-form-elements__label {
+    .label {
       margin-bottom: 0.8125rem;
     }
   }

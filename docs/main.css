@@ -33,13 +33,6 @@
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75); }
 
-.like-button-group__label {
-  margin-bottom: 16px; }
-
-.like-button-group__like-button {
-  margin-right: 10px;
-  float: left; }
-
 .paginator-group__label {
   margin-bottom: 17px; }
 
@@ -2048,7 +2041,7 @@
         display: none; } }
   .ui-form-elements__input-group {
     margin-bottom: 1.25rem; }
-    .ui-form-elements__input-group .ui-form-elements__label {
+    .ui-form-elements__input-group .label {
       margin-bottom: 0.3125rem; }
     .ui-form-elements__input-group--masked {
       margin-bottom: 2.5rem; }
@@ -2056,7 +2049,7 @@
       padding-right: 3.375rem; }
   .ui-form-elements__dropdown-group {
     margin-bottom: 1.4375rem; }
-    .ui-form-elements__dropdown-group .ui-form-elements__label {
+    .ui-form-elements__dropdown-group .label {
       margin-bottom: 0.3125rem; }
     .ui-form-elements__dropdown-group--date-range, .ui-form-elements__dropdown-group--date-filter {
       margin-bottom: 2.5625rem; }
@@ -2073,27 +2066,31 @@
     margin-bottom: 2.75rem; }
   .ui-form-elements__like-button-group {
     margin-bottom: 2.25rem; }
+    .ui-form-elements__like-button-group .label {
+      margin-bottom: 1rem; }
+    .ui-form-elements__like-button-group .like-button {
+      margin-right: 0.625rem; }
   .ui-form-elements__range-slider {
     margin-bottom: 2.375rem;
     padding-right: 3.375rem; }
   .ui-form-elements__button-group {
     margin-bottom: 2.5rem; }
-    .ui-form-elements__button-group .ui-form-elements__label {
+    .ui-form-elements__button-group .label {
       margin-bottom: 1rem; }
     .ui-form-elements__button-group .row {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       margin-bottom: 1.875rem; }
-      .ui-form-elements__button-group .row .button {
-        margin-right: 1.25rem; }
-        .ui-form-elements__button-group .row .button:last-child {
-          margin: 0; }
+    .ui-form-elements__button-group .button {
+      margin-right: 1.25rem; }
+      .ui-form-elements__button-group .button:last-child {
+        margin: 0; }
   .ui-form-elements__rich-checkbox-group {
     padding: 0.8125rem 3.5rem 0 0; }
   .ui-form-elements__bullet-list-group {
     padding: 0.8125rem 3.75rem 0 0; }
-    .ui-form-elements__bullet-list-group .ui-form-elements__label {
+    .ui-form-elements__bullet-list-group .label {
       margin-bottom: 0.8125rem; }
   .ui-form-elements__checkbox-list-xp-group--collapsed {
     margin-bottom: 1.3125rem; }
