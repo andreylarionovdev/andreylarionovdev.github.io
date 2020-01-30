@@ -33,9 +33,6 @@
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75); }
 
-.paginator-group__label {
-  margin-bottom: 17px; }
-
 .radio-button-group__label {
   margin-bottom: 13px; }
 
@@ -2086,6 +2083,8 @@
       margin-right: 1.25rem; }
       .ui-form-elements__button-group .button:last-child {
         margin: 0; }
+  .ui-form-elements__paginator-group .label {
+    margin-bottom: 1rem; }
   .ui-form-elements__rich-checkbox-group {
     padding: 0.8125rem 3.5rem 0 0; }
   .ui-form-elements__bullet-list-group {

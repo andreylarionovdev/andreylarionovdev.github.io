@@ -238,17 +238,14 @@ block content
               isFluid: true
             })
         article.ui-form-elements__paginator-group
-          .paginator-group
-            .paginator-group__label
-              +label({
-                label: 'pagination'
-              })
-            .paginator-group__paginator
-              +paginator({
-                source: JSON.stringify([...Array(180).keys()]),
-                pageSize: 12,
-                pageRange: 1
-              })
+          +label({
+            label: 'pagination'
+          })
+          +paginator({
+            source: JSON.stringify([...Array(180).keys()]),
+            pageSize: 12,
+            pageRange: 1
+          })
     section.row.ui-form-elements__dropdown-states
       div.grid-column
         article.ui-form-elements__dropdown-group.ui-form-elements__dropdown-group--collapsed

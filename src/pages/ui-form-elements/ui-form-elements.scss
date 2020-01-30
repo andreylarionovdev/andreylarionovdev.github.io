@@ -110,6 +110,11 @@
       }
     }
   }
+  &__paginator-group {
+    .label {
+      margin-bottom: 1rem;
+    }
+  }
   &__rich-checkbox-group {
     padding: 0.8125rem 3.5rem 0 0;
   }
