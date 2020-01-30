@@ -1,11 +1,3 @@
-
-
-.checkbox-list-xp-group {
-  &__checkbox-list-xp {
-    height: 44px;
-  }
-}
-
 .dropdown-group {
   &__label {
     margin-bottom: 5px;
@@ -17,7 +9,7 @@
 
 .feature-group {
   &__feature {
-    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+    border-bottom: 1px solid $color-dark-10;
   }
 }
 
