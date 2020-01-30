@@ -53,6 +53,9 @@
   }
   &__dropdown-group {
     margin-bottom: 1.4375rem;
+    .ui-form-elements__label {
+      margin-bottom: 0.3125rem;
+    }
     &--date-range,
     &--date-filter {
       margin-bottom: 2.5625rem;

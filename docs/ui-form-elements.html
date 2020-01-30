@@ -44,18 +44,16 @@
               </div>
             </div>
           </article>
-          <article class="dropdown-group ui-form-elements__dropdown-group">
-            <div class="dropdown-group__label">
+          <article class="ui-form-elements__dropdown-group">
+            <div class="ui-form-elements__label">
               <label class="label clearfix">
                 <h3 class="label__left h3">dropdown</h3><span class="label__right">default</span>
               </label>
             </div>
-            <div class="dropdown-group__dropdown">
-              <div class="dropdown" id="default-dropdown">
-                <label class="dropdown__toggle"><span class="dropdown__text">Сколько гостей</span><i class="dropdown__arrow material-icons">keyboard_arrow_down</i>
-                  <input class="dropdown__data-input" type="text" value="Сколько гостей">
-                </label>
-              </div>
+            <div class="dropdown" id="default-dropdown">
+              <label class="dropdown__toggle"><span class="dropdown__text">Сколько гостей</span><i class="dropdown__arrow material-icons">keyboard_arrow_down</i>
+                <input class="dropdown__data-input" type="text" value="Сколько гостей">
+              </label>
             </div>
           </article>
           <article class="input-group ui-form-elements__input-group--masked">
@@ -71,7 +69,7 @@
               </div>
             </div>
           </article>
-          <article class="dropdown-group ui-form-elements__dropdown-group ui-form-elements__dropdown-group--date-range">
+          <article class="ui-form-elements__dropdown-group ui-form-elements__dropdown-group--date-range">
             <div class="dropdown-date-range">
               <div class="clearfix">
                 <div class="dropdown-date-range__from">
@@ -105,18 +103,16 @@
               </div>
             </div>
           </article>
-          <article class="dropdown-group ui-form-elements__dropdown-group ui-form-elements__dropdown-group--date-filter">
-            <div class="dropdown-group__label">
+          <article class="ui-form-elements__dropdown-group ui-form-elements__dropdown-group--date-filter">
+            <div class="ui-form-elements__label">
               <label class="label clearfix">
                 <h3 class="label__left h3">filter date dropdown</h3><span class="label__right"></span>
               </label>
             </div>
-            <div class="dropdown-group__dropdown">
-              <div class="dropdown" id="date-filter">
-                <label class="dropdown__toggle"><span class="dropdown__text">19 авг - 23 авг</span><i class="dropdown__arrow material-icons">keyboard_arrow_down</i>
-                  <input class="dropdown__data-input" type="text" value="19 авг - 23 авг">
-                </label>
-              </div>
+            <div class="dropdown" id="date-filter">
+              <label class="dropdown__toggle"><span class="dropdown__text">19 авг - 23 авг</span><i class="dropdown__arrow material-icons">keyboard_arrow_down</i>
+                <input class="dropdown__data-input" type="text" value="19 авг - 23 авг">
+              </label>
             </div>
           </article>
           <article class="input-group ui-form-elements__input-group ui-form-elements__input-group--with-submit">
@@ -301,90 +297,82 @@
       </section>
       <section class="row ui-form-elements__dropdown-states">
         <div class="grid-column">
-          <article class="dropdown-group ui-form-elements__dropdown-group ui-form-elements__dropdown-group--collapsed">
-            <div class="dropdown-group__label">
+          <article class="ui-form-elements__dropdown-group ui-form-elements__dropdown-group--collapsed">
+            <div class="ui-form-elements__label">
               <label class="label clearfix">
                 <h3 class="label__left h3">dropdown</h3><span class="label__right">default</span>
               </label>
             </div>
-            <div class="dropdown-group__dropdown">
-              <div class="dropdown" id="dropdown-collapsed">
-                <label class="dropdown__toggle"><span class="dropdown__text">2 спальни, 2 кровати...</span><i class="dropdown__arrow material-icons">keyboard_arrow_down</i>
-                  <input class="dropdown__data-input" type="text" value="2 спальни, 2 кровати...">
-                </label>
-              </div>
+            <div class="dropdown" id="dropdown-collapsed">
+              <label class="dropdown__toggle"><span class="dropdown__text">2 спальни, 2 кровати...</span><i class="dropdown__arrow material-icons">keyboard_arrow_down</i>
+                <input class="dropdown__data-input" type="text" value="2 спальни, 2 кровати...">
+              </label>
             </div>
           </article>
-          <article class="dropdown-group ui-form-elements__dropdown-group ui-form-elements__dropdown-group--expanded">
-            <div class="dropdown-group__label">
+          <article class="ui-form-elements__dropdown-group ui-form-elements__dropdown-group--expanded">
+            <div class="ui-form-elements__label">
               <label class="label clearfix">
                 <h3 class="label__left h3">dropdown</h3><span class="label__right">expanded</span>
               </label>
             </div>
-            <div class="dropdown-group__dropdown">
-              <div class="dropdown dropdown--expanded" id="dropdown-expanded">
-                <label class="dropdown__toggle"><span class="dropdown__text">2 спальни, 2 кровати...</span><i class="dropdown__arrow material-icons">keyboard_arrow_down</i>
-                  <input class="dropdown__data-input" type="text" value="2 спальни, 2 кровати...">
-                </label>
-                <ul class="dropdown__menu" style="z-index:999;">
-                  <li class="dropdown__li"><span class="dropdown__item-name">спальни</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">2</span><span class="dropdown__inc-button">+</span></span></li>
-                  <li class="dropdown__li"><span class="dropdown__item-name">кровати</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">2</span><span class="dropdown__inc-button">+</span></span></li>
-                  <li class="dropdown__li"><span class="dropdown__item-name">ванные комнаты</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">0</span><span class="dropdown__inc-button">+</span></span></li>
-                  <li class="dropdown__li dropdown__li--footer-buttons"><span class="dropdown__clear-button"><a class="button button--textual button--hovered" href="javascript:void(0)">
-                        <div class="button__inner"><span class="button__caption">очистить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span><span class="dropdown__apply-button"><a class="button button--textual" href="javascript:void(0)">
-                        <div class="button__inner"><span class="button__caption">применить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span></li>
-                </ul>
-              </div>
+            <div class="dropdown dropdown--expanded" id="dropdown-expanded">
+              <label class="dropdown__toggle"><span class="dropdown__text">2 спальни, 2 кровати...</span><i class="dropdown__arrow material-icons">keyboard_arrow_down</i>
+                <input class="dropdown__data-input" type="text" value="2 спальни, 2 кровати...">
+              </label>
+              <ul class="dropdown__menu" style="z-index:999;">
+                <li class="dropdown__li"><span class="dropdown__item-name">спальни</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">2</span><span class="dropdown__inc-button">+</span></span></li>
+                <li class="dropdown__li"><span class="dropdown__item-name">кровати</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">2</span><span class="dropdown__inc-button">+</span></span></li>
+                <li class="dropdown__li"><span class="dropdown__item-name">ванные комнаты</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">0</span><span class="dropdown__inc-button">+</span></span></li>
+                <li class="dropdown__li dropdown__li--footer-buttons"><span class="dropdown__clear-button"><a class="button button--textual button--hovered" href="javascript:void(0)">
+                      <div class="button__inner"><span class="button__caption">очистить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span><span class="dropdown__apply-button"><a class="button button--textual" href="javascript:void(0)">
+                      <div class="button__inner"><span class="button__caption">применить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span></li>
+              </ul>
             </div>
           </article>
         </div>
         <div class="grid-column-gap"></div>
         <div class="grid-column">
-          <article class="dropdown-group ui-form-elements__dropdown-group ui-form-elements__dropdown-group--with-apply-btn">
-            <div class="dropdown-group__label">
+          <article class="ui-form-elements__dropdown-group ui-form-elements__dropdown-group--with-apply-btn">
+            <div class="ui-form-elements__label">
               <label class="label clearfix">
                 <h3 class="label__left h3">dropdown</h3><span class="label__right"></span>
               </label>
             </div>
-            <div class="dropdown-group__dropdown">
-              <div class="dropdown dropdown--expanded dropdown--edited dropdown--empty" id="dropdown-expanded">
-                <label class="dropdown__toggle"><span class="dropdown__text">Сколько гостей</span><i class="dropdown__arrow material-icons">keyboard_arrow_down</i>
-                  <input class="dropdown__data-input" type="text" value="Сколько гостей">
-                </label>
-                <ul class="dropdown__menu" style="z-index:99;">
-                  <li class="dropdown__li"><span class="dropdown__item-name">взрослые</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">0</span><span class="dropdown__inc-button">+</span></span></li>
-                  <li class="dropdown__li"><span class="dropdown__item-name">дети</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">0</span><span class="dropdown__inc-button">+</span></span></li>
-                  <li class="dropdown__li"><span class="dropdown__item-name">младенцы</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">0</span><span class="dropdown__inc-button">+</span></span></li>
-                  <li class="dropdown__li dropdown__li--footer-buttons"><span class="dropdown__clear-button"><a class="button button--textual button--hovered" href="javascript:void(0)">
-                        <div class="button__inner"><span class="button__caption">очистить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span><span class="dropdown__apply-button"><a class="button button--textual" href="javascript:void(0)">
-                        <div class="button__inner"><span class="button__caption">применить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span></li>
-                </ul>
-              </div>
+            <div class="dropdown dropdown--expanded dropdown--edited dropdown--empty" id="dropdown-expanded">
+              <label class="dropdown__toggle"><span class="dropdown__text">Сколько гостей</span><i class="dropdown__arrow material-icons">keyboard_arrow_down</i>
+                <input class="dropdown__data-input" type="text" value="Сколько гостей">
+              </label>
+              <ul class="dropdown__menu" style="z-index:99;">
+                <li class="dropdown__li"><span class="dropdown__item-name">взрослые</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">0</span><span class="dropdown__inc-button">+</span></span></li>
+                <li class="dropdown__li"><span class="dropdown__item-name">дети</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">0</span><span class="dropdown__inc-button">+</span></span></li>
+                <li class="dropdown__li"><span class="dropdown__item-name">младенцы</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">0</span><span class="dropdown__inc-button">+</span></span></li>
+                <li class="dropdown__li dropdown__li--footer-buttons"><span class="dropdown__clear-button"><a class="button button--textual button--hovered" href="javascript:void(0)">
+                      <div class="button__inner"><span class="button__caption">очистить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span><span class="dropdown__apply-button"><a class="button button--textual" href="javascript:void(0)">
+                      <div class="button__inner"><span class="button__caption">применить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span></li>
+              </ul>
             </div>
           </article>
         </div>
         <div class="grid-column-gap"></div>
         <div class="grid-column">
-          <article class="dropdown-group ui-form-elements__dropdown-group ui-form-elements__dropdown-group--with-clear-btn">
-            <div class="dropdown-group__label">
+          <article class="ui-form-elements__dropdown-group ui-form-elements__dropdown-group--with-clear-btn">
+            <div class="ui-form-elements__label">
               <label class="label clearfix">
                 <h3 class="label__left h3">dropdown</h3><span class="label__right"></span>
               </label>
             </div>
-            <div class="dropdown-group__dropdown">
-              <div class="dropdown dropdown--expanded dropdown--edited" id="dropdown-expanded">
-                <label class="dropdown__toggle"><span class="dropdown__text">3 гостя</span><i class="dropdown__arrow material-icons">keyboard_arrow_down</i>
-                  <input class="dropdown__data-input" type="text" value="3 гостя">
-                </label>
-                <ul class="dropdown__menu" style="z-index:9;">
-                  <li class="dropdown__li"><span class="dropdown__item-name">взрослые</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">2</span><span class="dropdown__inc-button">+</span></span></li>
-                  <li class="dropdown__li"><span class="dropdown__item-name">дети</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">1</span><span class="dropdown__inc-button">+</span></span></li>
-                  <li class="dropdown__li"><span class="dropdown__item-name">младенцы</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">0</span><span class="dropdown__inc-button">+</span></span></li>
-                  <li class="dropdown__li dropdown__li--footer-buttons"><span class="dropdown__clear-button"><a class="button button--textual button--hovered" href="javascript:void(0)">
-                        <div class="button__inner"><span class="button__caption">очистить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span><span class="dropdown__apply-button"><a class="button button--textual" href="javascript:void(0)">
-                        <div class="button__inner"><span class="button__caption">применить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span></li>
-                </ul>
-              </div>
+            <div class="dropdown dropdown--expanded dropdown--edited" id="dropdown-expanded">
+              <label class="dropdown__toggle"><span class="dropdown__text">3 гостя</span><i class="dropdown__arrow material-icons">keyboard_arrow_down</i>
+                <input class="dropdown__data-input" type="text" value="3 гостя">
+              </label>
+              <ul class="dropdown__menu" style="z-index:9;">
+                <li class="dropdown__li"><span class="dropdown__item-name">взрослые</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">2</span><span class="dropdown__inc-button">+</span></span></li>
+                <li class="dropdown__li"><span class="dropdown__item-name">дети</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">1</span><span class="dropdown__inc-button">+</span></span></li>
+                <li class="dropdown__li"><span class="dropdown__item-name">младенцы</span><span class="dropdown__count-buttons"><span class="dropdown__dec-button">-</span><span class="dropdown__count">0</span><span class="dropdown__inc-button">+</span></span></li>
+                <li class="dropdown__li dropdown__li--footer-buttons"><span class="dropdown__clear-button"><a class="button button--textual button--hovered" href="javascript:void(0)">
+                      <div class="button__inner"><span class="button__caption">очистить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span><span class="dropdown__apply-button"><a class="button button--textual" href="javascript:void(0)">
+                      <div class="button__inner"><span class="button__caption">применить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span></li>
+              </ul>
             </div>
           </article>
         </div>

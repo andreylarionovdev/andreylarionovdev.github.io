@@ -51,17 +51,16 @@ block content
               value: 'This is pretty awesome',
               isHovered: true
             })
-        article.dropdown-group.ui-form-elements__dropdown-group
-          .dropdown-group__label
+        article.ui-form-elements__dropdown-group
+          .ui-form-elements__label
             +label({
               label: 'dropdown',
               hint: 'default'
             })
-          .dropdown-group__dropdown
-            +dropdown({
-              id: 'default-dropdown',
-              value: 'Сколько гостей'
-            })
+          +dropdown({
+            id: 'default-dropdown',
+            value: 'Сколько гостей'
+          })
         article.input-group.ui-form-elements__input-group--masked
           .input-group__label
             +label({
@@ -73,7 +72,7 @@ block content
               id: 'input-with-mask',
               placeholder: 'ДД.ММ.ГГГГ'
             })
-        article.dropdown-group.ui-form-elements__dropdown-group.ui-form-elements__dropdown-group--date-range
+        article.ui-form-elements__dropdown-group.ui-form-elements__dropdown-group--date-range
           +dropdown-date-range({
             id: 'dropdown-date-range-demo',
             fromLabel: 'date dropdown',
@@ -81,16 +80,15 @@ block content
             toLabel: 'date dropdown',
             to: '19.08.2019 '
           })
-        article.dropdown-group.ui-form-elements__dropdown-group.ui-form-elements__dropdown-group--date-filter
-          .dropdown-group__label
+        article.ui-form-elements__dropdown-group.ui-form-elements__dropdown-group--date-filter
+          .ui-form-elements__label
             +label({
               label: 'filter date dropdown'
             })
-          .dropdown-group__dropdown
-            +dropdown({
-              id: 'date-filter',
-              value: '19 авг - 23 авг'
-            })
+          +dropdown({
+            id: 'date-filter',
+            value: '19 авг - 23 авг'
+          })
         article.input-group.ui-form-elements__input-group.ui-form-elements__input-group--with-submit
           .input-group__label
             +label({
@@ -260,78 +258,74 @@ block content
               })
     section.row.ui-form-elements__dropdown-states
       div.grid-column
-        article.dropdown-group.ui-form-elements__dropdown-group.ui-form-elements__dropdown-group--collapsed
-          .dropdown-group__label
+        article.ui-form-elements__dropdown-group.ui-form-elements__dropdown-group--collapsed
+          .ui-form-elements__label
             +label({
               label: 'dropdown',
               hint: 'default'
             })
-          .dropdown-group__dropdown
-            +dropdown({
-              id: 'dropdown-collapsed',
-              value: '2 спальни, 2 кровати...'
-            })
-        article.dropdown-group.ui-form-elements__dropdown-group.ui-form-elements__dropdown-group--expanded
-          .dropdown-group__label
+          +dropdown({
+            id: 'dropdown-collapsed',
+            value: '2 спальни, 2 кровати...'
+          })
+        article.ui-form-elements__dropdown-group.ui-form-elements__dropdown-group--expanded
+          .ui-form-elements__label
             +label({
               label: 'dropdown',
               hint: 'expanded'
             })
-          .dropdown-group__dropdown
-            +dropdown({
-              id: 'dropdown-expanded',
-              type: 'select-box',
-              isExpanded: true,
-              value: '2 спальни, 2 кровати...',
-              zIndex: 999,
-              selectOptions: [
-                {count: 2, text: 'спальни', name: 'bedroom'},
-                {count: 2, text: 'кровати', name: 'bed'},
-                {count: 0, text: 'ванные комнаты', name: 'bathroom'}
-              ]
-            })
+          +dropdown({
+            id: 'dropdown-expanded',
+            type: 'select-box',
+            isExpanded: true,
+            value: '2 спальни, 2 кровати...',
+            zIndex: 999,
+            selectOptions: [
+              {count: 2, text: 'спальни', name: 'bedroom'},
+              {count: 2, text: 'кровати', name: 'bed'},
+              {count: 0, text: 'ванные комнаты', name: 'bathroom'}
+            ]
+          })
       div.grid-column-gap
       div.grid-column
-        article.dropdown-group.ui-form-elements__dropdown-group.ui-form-elements__dropdown-group--with-apply-btn
-          .dropdown-group__label
+        article.ui-form-elements__dropdown-group.ui-form-elements__dropdown-group--with-apply-btn
+          .ui-form-elements__label
             +label({
               label: 'dropdown'
             })
-          .dropdown-group__dropdown
-            +dropdown({
-              id: 'dropdown-expanded',
-              type: 'select-box',
-              isExpanded: true,
-              isEdited: true,
-              isEmpty: true,
-              zIndex: 99,
-              value: 'Сколько гостей',
-              selectOptions: [
-                {count: 0, text: 'взрослые', name: 'adult'},
-                {count: 0, text: 'дети', name: 'kids'},
-                {count: 0, text: 'младенцы', name: 'baby'}
-              ]
-            })
+          +dropdown({
+            id: 'dropdown-expanded',
+            type: 'select-box',
+            isExpanded: true,
+            isEdited: true,
+            isEmpty: true,
+            zIndex: 99,
+            value: 'Сколько гостей',
+            selectOptions: [
+              {count: 0, text: 'взрослые', name: 'adult'},
+              {count: 0, text: 'дети', name: 'kids'},
+              {count: 0, text: 'младенцы', name: 'baby'}
+            ]
+          })
       div.grid-column-gap
       div.grid-column
-        article.dropdown-group.ui-form-elements__dropdown-group.ui-form-elements__dropdown-group--with-clear-btn
-          .dropdown-group__label
+        article.ui-form-elements__dropdown-group.ui-form-elements__dropdown-group--with-clear-btn
+          .ui-form-elements__label
             +label({
               label: 'dropdown'
             })
-          .dropdown-group__dropdown
-            +dropdown({
-              id: 'dropdown-expanded',
-              type: 'select-box',
-              isExpanded: true,
-              isEdited: true,
-              value: '3 гостя',
-              selectOptions: [
-                {count: 2, text: 'взрослые', name: 'adult'},
-                {count: 1, text: 'дети', name: 'kids'},
-                {count: 0, text: 'младенцы', name: 'baby'}
-              ]
-            })
+          +dropdown({
+            id: 'dropdown-expanded',
+            type: 'select-box',
+            isExpanded: true,
+            isEdited: true,
+            value: '3 гостя',
+            selectOptions: [
+              {count: 2, text: 'взрослые', name: 'adult'},
+              {count: 1, text: 'дети', name: 'kids'},
+              {count: 0, text: 'младенцы', name: 'baby'}
+            ]
+          })
     section.row.ui-form-elements__rich-lists.clearfix
       div.grid-column
         article.ui-form-elements__checkbox-list-xp-group.ui-form-elements__checkbox-list-xp-group--collapsed

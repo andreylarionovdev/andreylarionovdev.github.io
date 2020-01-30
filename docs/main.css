@@ -33,12 +33,6 @@
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75); }
 
-.dropdown-group__label {
-  margin-bottom: 5px; }
-
-.dropdown-group__dropdown {
-  height: 44px; }
-
 .feature-group__feature {
   border-bottom: 1px solid rgba(31, 32, 65, 0.1); }
 
@@ -2066,6 +2060,8 @@
       padding-right: 3.375rem; }
   .ui-form-elements__dropdown-group {
     margin-bottom: 1.4375rem; }
+    .ui-form-elements__dropdown-group .ui-form-elements__label {
+      margin-bottom: 0.3125rem; }
     .ui-form-elements__dropdown-group--date-range, .ui-form-elements__dropdown-group--date-filter {
       margin-bottom: 2.5625rem; }
     .ui-form-elements__dropdown-group--date-filter {
