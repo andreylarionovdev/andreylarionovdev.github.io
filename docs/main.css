@@ -33,15 +33,6 @@
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75); }
 
-.rate-button-group__label {
-  margin-bottom: 16px; }
-
-.rate-button-group__rate-button {
-  margin: 2px 18px 0 2px;
-  float: left; }
-  .rate-button-group__rate-button:last-child {
-    margin-right: 0; }
-
 .rich-checkbox-group__label {
   margin-bottom: 16px; }
 
@@ -2041,12 +2032,16 @@
   .ui-form-elements__checkbox-group {
     margin-bottom: 2.5rem;
     padding-right: 5rem; }
-  .ui-form-elements__radio-group, .ui-form-elements__rate-group {
+  .ui-form-elements__radio-group {
     margin-bottom: 2.625rem; }
-  .ui-form-elements__radio-group .label {
-    margin-bottom: 0.875rem; }
-  .ui-form-elements__radio-group .radio-button {
-    margin-right: 1rem; }
+    .ui-form-elements__radio-group .label {
+      margin-bottom: 0.875rem; }
+    .ui-form-elements__radio-group .radio-button {
+      margin-right: 1rem; }
+  .ui-form-elements__rate-button-group .label {
+    margin-bottom: 1.0625rem; }
+  .ui-form-elements__rate-button-group .rate-button {
+    padding: 0 0.9375rem 0 0.125rem; }
   .ui-form-elements__toggle-group {
     margin-bottom: 2.75rem; }
   .ui-form-elements__like-button-group {

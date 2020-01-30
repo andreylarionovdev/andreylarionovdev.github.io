@@ -163,23 +163,20 @@ block content
             count:12,
             isFavorite: true
           })
-        article.rate-button-group.ui-form-elements__rate-button-group--default.clearfix
-          .rate-button-group__label
-            +label({
-              label: 'rate button'
-            })
-          .rate-button-group__rate-button
-            +rate-button({
-              id: 'rate-first',
-              base: 5,
-              rate: 4
-            })
-          .rate-button-group__rate-button
-            +rate-button({
-              id: 'rate-second',
-              base: 5,
-              rate: 5
-            })
+        article.ui-form-elements__rate-button-group
+          +label({
+            label: 'rate button'
+          })
+          +rate-button({
+            id: 'rate-first',
+            base: 5,
+            rate: 4
+          })
+          +rate-button({
+            id: 'rate-second',
+            base: 5,
+            rate: 5
+          })
       div.grid-column-gap
       div.grid-column
         article.ui-form-elements__range-slider

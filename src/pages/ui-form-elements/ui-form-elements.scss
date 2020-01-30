@@ -74,11 +74,8 @@
     margin-bottom: 2.5rem;
     padding-right: 5rem;
   }
-  &__radio-group,
-  &__rate-group {
-    margin-bottom: 2.625rem;
-  }
   &__radio-group {
+    margin-bottom: 2.625rem;
     .label {
       margin-bottom:0.875rem;
     }
@@ -86,6 +83,15 @@
       margin-right: 1rem;
     }
   }
+  &__rate-button-group {
+    .label {
+      margin-bottom: 1.0625rem;
+    }
+    .rate-button {
+      padding: 0 0.9375rem 0 0.125rem;
+    }
+  }
+
   &__toggle-group {
     margin-bottom: 2.75rem;
   }
