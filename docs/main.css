@@ -30,7 +30,7 @@
   font-style: normal;
   font-weight: normal;
   font-size: 0.875rem;
-  line-height: 24px;
+  line-height: 1.5rem;
   color: rgba(31, 32, 65, 0.75); }
 
 .site-menu {
@@ -144,35 +144,20 @@
     color: rgba(31, 32, 65, 0.5); }
 
 .input {
-  height: 44px;
-  font-size: 0.75rem;
-  position: relative; }
-  .input--hovered .input__input {
-    outline: none;
-    border: 1px solid rgba(31, 32, 65, 0.5); }
-  .input--hovered .input__submit-button {
-    border: 1px solid rgba(31, 32, 65, 0.5);
-    border-left: none; }
-  .input--with-arrow .input__input {
-    display: inline; }
-  .input--with-arrow .input__submit-button {
-    display: inline;
-    cursor: pointer; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 2.75rem;
+  font-size: 0.75rem; }
   .input__input {
     font-family: Montserrat, sans-serif;
-    bottom: 0;
-    left: 0;
-    position: absolute;
     width: 100%;
     line-height: 2.625rem;
-    background: #FFFFFF;
     border: 1px solid rgba(31, 32, 65, 0.25);
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     font-size: 0.875rem;
     color: rgba(31, 32, 65, 0.75);
-    padding: 0 14px; }
+    padding: 0 0.875rem; }
     .input__input:focus, .input__input:hover {
       outline: none;
       border: 1px solid rgba(31, 32, 65, 0.5); }
@@ -181,21 +166,37 @@
       border: 1px solid rgba(31, 32, 65, 0.5);
       border-left: none; }
   .input__submit-button {
-    display: none;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 44px;
-    height: 44px;
+    display: none; }
+  .input--hovered .input__input {
+    outline: none;
+    border: 1px solid rgba(31, 32, 65, 0.5); }
+  .input--hovered .input__submit-button {
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    border-left: none; }
+  .input--with-arrow .input__input {
+    display: inline-block;
+    border-right: none;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0; }
+  .input--with-arrow .input__submit-button {
+    padding: 0;
+    cursor: pointer;
+    color: #BC9CFF;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    line-height: 2.75rem;
+    width: 3rem;
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-left: none;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    font-size: 0;
-    background: #FFFFFF no-repeat right 13px center;
-    color: #BC9CFF; }
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem; }
   .input ::-webkit-input-placeholder {
     font-family: Montserrat, sans-serif;
     color: rgba(31, 32, 65, 0.5); }
@@ -2270,7 +2271,7 @@
 
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+          box-sizing: border-box; }
 
 input[type="password"],
 input[type="email"],
