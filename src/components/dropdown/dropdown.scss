@@ -1,14 +1,11 @@
 .dropdown {
-  $menu: #{&}__menu;
-  $clearBtn: #{&}__clear-button;
-  $liFooterButtons: #{&}__li--footer-buttons;
-  $toggle: #{&}__toggle;
+  $blockName: &;
   position: relative;
   font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
   color: $color-dark-75;
   user-select: none;
-  #{$toggle} {
+  &__toggle {
     position: relative;
     padding: 0.5rem 0.625rem 0.625rem 0.875rem;
     display: flex;
@@ -33,7 +30,7 @@
     outline: none;
     z-index: -1;
   }
-  #{$menu} {
+  #{$blockName}__menu {
     margin: 0;
     position: absolute;
     left: 0;
@@ -47,7 +44,7 @@
     box-shadow: 0 0.625rem 1.25rem $color-dark-5;
     background-color: white;
   }
-  &__li {
+  &__menu-item {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -58,7 +55,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 5.75rem;
+    min-width: 5.75rem;
   }
   &__item-name {
     overflow: hidden;
@@ -71,8 +68,7 @@
     font-size: 0.75rem;
     font-weight: bold;
   }
-  &__dec-button,
-  &__inc-button {
+  &__change-count-btn {
     $diam: 1.875rem;
     display: inline-block;
     font-size: 1.125rem;
@@ -82,35 +78,35 @@
     line-height: $diam;
     border-radius: $diam / 2;
     cursor: pointer;
-  }
-  &__dec-button {
-    border: 1px solid $color-dark-25;
-  }
-  &__inc-button {
     border: 1px solid $color-dark-50;
+    &--dec {
+      border: 1px solid $color-dark-25;
+    }
   }
-  #{$liFooterButtons} {
+  &__footer-buttons {
     display: none;
     margin: 0;
     line-height: 2.5rem;
   }
   &--expanded {
-    #{$toggle} {
+    #{$blockName}__toggle {
       border: 1px solid $color-dark-50;
+      border-bottom: none;
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0;
     }
-    #{$menu} {
+    #{$blockName}__menu {
       display: block;
     }
   }
   &--edited {
-    #{$liFooterButtons} {
+    #{$blockName}__footer-buttons {
       display: flex;
+      justify-content: space-between;
     }
   }
   &--empty {
-    #{$clearBtn} {
+    #{$blockName}__clear-button {
       visibility: hidden;
     }
   }

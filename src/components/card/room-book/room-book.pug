@@ -32,9 +32,8 @@ mixin room-book(options)
       div(class=`${blockName}__dropdown`)
         +dropdown({
           id: 'room-book__from-date',
-          type: 'select-box',
           value: '3 гостя',
-          selectOptions: [
+          rows: [
             {count: 2, text: 'взрослые', name: 'adult'},
             {count: 1, text: 'дети', name: 'kids'},
             {count: 0, text: 'младенцы', name: 'baby'}

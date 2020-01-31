@@ -22,7 +22,6 @@ mixin dropdown-date-range(options)
       div(class=`${blockName}__dropdown`)
         +dropdown({
           id: `${id}__from-date`,
-          type: 'datepicker',
           value: from
         })
     div(class=`${blockName}__to`)
@@ -33,6 +32,5 @@ mixin dropdown-date-range(options)
       div(class=`${blockName}__dropdown`)
         +dropdown({
           id: `${id}__to-date`,
-          type: 'datepicker',
           value: to
         })

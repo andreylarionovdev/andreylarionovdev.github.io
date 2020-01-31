@@ -257,11 +257,10 @@ block content
             })
           +dropdown({
             id: 'dropdown-expanded',
-            type: 'select-box',
             isExpanded: true,
             value: '2 спальни, 2 кровати...',
             zIndex: 999,
-            selectOptions: [
+            rows: [
               {count: 2, text: 'спальни', name: 'bedroom'},
               {count: 2, text: 'кровати', name: 'bed'},
               {count: 0, text: 'ванные комнаты', name: 'bathroom'}
@@ -276,13 +275,12 @@ block content
             })
           +dropdown({
             id: 'dropdown-expanded',
-            type: 'select-box',
             isExpanded: true,
             isEdited: true,
             isEmpty: true,
             zIndex: 99,
             value: 'Сколько гостей',
-            selectOptions: [
+            rows: [
               {count: 0, text: 'взрослые', name: 'adult'},
               {count: 0, text: 'дети', name: 'kids'},
               {count: 0, text: 'младенцы', name: 'baby'}
@@ -297,11 +295,10 @@ block content
             })
           +dropdown({
             id: 'dropdown-expanded',
-            type: 'select-box',
             isExpanded: true,
             isEdited: true,
             value: '3 гостя',
-            selectOptions: [
+            rows: [
               {count: 2, text: 'взрослые', name: 'adult'},
               {count: 1, text: 'дети', name: 'kids'},
               {count: 0, text: 'младенцы', name: 'baby'}

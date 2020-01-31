@@ -1,53 +1,37 @@
 include ../label/label
 include ../button/button
+include ./select-box
 
 mixin dropdown(options)
-  - const blockName = 'dropdown'
+  - const f = require('../../js/functions.js')
+
+  - const b = 'dropdown'
+  - const js = 'js'
+
+  - let blockModifiers = []
+
   -
     const {
       id,
       value = 'Выберите',
       zIndex = 9,
-      selectOptions = [],
+      rows = [],
       isExpanded,
       isEdited,
       isEmpty
     } = options || {}
 
-  - let modifiers = []
-
   if isExpanded
-    - modifiers.push(`${blockName}--expanded`)
+    - blockModifiers.push('expanded')
   if isEdited
-    - modifiers.push(`${blockName}--edited`)
+    - blockModifiers.push('edited')
   if isEmpty
-    - modifiers.push(`${blockName}--empty`)
+    - blockModifiers.push('empty')
 
-  div(id=id class=blockName class=modifiers)
-    label(class=`${blockName}__toggle`)
-      span(class=`${blockName}__text`)= value
-      i(class=[`${blockName}__arrow`, 'material-icons'])= 'keyboard_arrow_down'
-      input(class=`${blockName}__data-input` type='text' value=value)
-    if selectOptions.length > 0
-      ul(class=`${blockName}__menu` style={'z-index': zIndex})
-        each item in selectOptions
-          li(class=`${blockName}__li`)
-            span(class=`${blockName}__item-name`)= item.text
-            span(class=`${blockName}__count-buttons`)
-              span(class=`${blockName}__dec-button`)= '-'
-              span(class=`${blockName}__count`)= item.count
-              span(class=`${blockName}__inc-button`)= '+'
-        li(class=[`${blockName}__li`, `${blockName}__li--footer-buttons`])
-          span(class=`${blockName}__clear-button`)
-            +button({
-              theme: 'textual',
-              caption: 'очистить',
-              isHovered: true,
-              href: 'javascript:void(0)',
-            })
-          span(class=`${blockName}__apply-button`)
-            +button({
-              theme: 'textual',
-              caption: 'применить',
-              href: 'javascript:void(0)',
-            })
+  div(id=id class=f.cls({b, m: blockModifiers, js}))
+    label(class=f.cls({b, e: 'toggle', js}))
+      span(class=f.cls({b, e: 'text'}))= value
+      i(class=[...f.cls({b, e: 'arrow'}), 'material-icons'])= 'keyboard_arrow_down'
+      input(class=f.cls({b, e: 'data-input'}) type='text' value=value)
+    if rows.length > 0
+      +select-box(options)

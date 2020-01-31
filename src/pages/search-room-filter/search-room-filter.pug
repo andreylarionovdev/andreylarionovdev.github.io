@@ -35,9 +35,8 @@ block main
           .search-room-filter__guests-dropdown
             +dropdown({
               id: 'guests-dropdown',
-              type: 'select-box',
               value: '3 гостя, 1 младенец',
-              selectOptions: [
+              rows: [
                 {count: 2, text: 'взрослые', name: 'adult'},
                 {count: 0, text: 'дети', name: 'kids'},
                 {count: 1, text: 'младенцы', name: 'baby'}
@@ -101,9 +100,8 @@ block main
           .search-room-filter__feature-dropdown
             +dropdown({
               id: 'feature-dropdown',
-              type: 'select-box',
               value: '2 спальни, 2 кровати...',
-              selectOptions: [
+              rows: [
                 {count: 2, text: 'спальни', name: 'bedroom'},
                 {count: 2, text: 'кровати', name: 'bed'},
                 {count: 0, text: 'ванные комнаты', name: 'bathroom'}

@@ -17,9 +17,8 @@ mixin room-search()
       div(class=`${blockName}__guests-dropdown`)
         +dropdown({
           id: 'guests',
-          type: 'select-box',
           value: 'Сколько гостей',
-          selectOptions: [
+          rows: [
             {count: 0, text: 'взрослые', name: 'adult'},
             {count: 0, text: 'дети', name: 'kids'},
             {count: 0, text: 'младенцы', name: 'baby'}

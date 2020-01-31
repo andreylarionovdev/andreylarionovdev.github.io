@@ -1,54 +1,53 @@
 $(document).ready(function () {
-  const className = 'dropdown';
-  const classExpanded = `${className}--expanded`;
+  const classExpanded = 'dropdown--expanded';
+  const classEdited = 'dropdown--edited';
+  const classEmpty = 'dropdown--empty';
 
-  const $toggle = $(`.${className}__toggle`);
-
-  $toggle.on('click', function (e) {
+  $(`.js-dropdown__toggle`).on('click', function (e) {
     e.preventDefault();
-    const $dropdown = $(this).closest(`.${className}`);
-    if ($dropdown.find(`.${className}__menu`).length === 1) {
+    const $dropdown = $(this).closest('.js-dropdown');
+    if ($dropdown.find(`.js-dropdown__menu`).length === 1) {
       $dropdown.toggleClass(classExpanded);
     }
   });
 
-  // +/- click handler
   const numberChangerOnClick = function () {
-    const $li = $(this).closest(`.${className}__li`);
-    const $dropdown = $(this).closest(`.${className}`);
-    const $count = $li.find(`.${className}__count`);
+    const $li = $(this).closest('.js-dropdown__menu-item');
 
-    let n = parseInt($count.text());
-    let operator = $(this).closest(`.${className}__dec-button`).length === 1
-      ? '-'
-      : '+';
+    const operator = $(this).closest('.js-dropdown__change-count-btn').data('op');
+    const changeCount = {
+      '+': x => x + 1,
+      '-': x => x - 1
+    };
 
-    n = operator === '+' ? n + 1 : n - 1;
+    const $count = $li.find('.js-dropdown__count');
+    const n = changeCount[operator](parseInt($count.text()));
 
-    if (n < 0 || n > 5) {
+    if (n < 0) {
       return;
     }
+
     $count.text(n);
+
+    const $dropdown = $(this).closest('.js-dropdown');
+
     $dropdown
-      .addClass(`${className}--edited`)
-      .removeClass(`${className}--empty`);
+      .addClass(classEdited)
+      .removeClass(classEmpty);
   };
 
-  const $incBtn = $(`.${className}__inc-button`);
-  const $decBtn = $(`.${className}__dec-button`);
+  $('.js-dropdown__change-count-btn').on('click', numberChangerOnClick);
 
-  $incBtn.on('click', numberChangerOnClick);
-  $decBtn.on('click', numberChangerOnClick);
-
-  $(`.${className}__clear-button`).on('click', function () {
-    $(this).closest(`.${className}`).find(`.${className}__count`).each(function (i, o) {
+  $('.js-dropdown__clear-button').on('click', function () {
+    const $counts = $(this).closest('.js-dropdown').find('.js-dropdown__count');
+    $counts.each(function (i, o) {
       $(o).text(0);
     })
   });
 
-  $(`.${className}__apply-button`).on('click', function () {
-    $(this).closest('.dropdown')
-      .removeClass(`${className}--edited`)
-      .removeClass(`${className}--expanded`);
+  $(`.js-dropdown__apply-button`).on('click', function () {
+    $(this).closest('.js-dropdown')
+      .removeClass(classEdited)
+      .removeClass(classExpanded);
   });
 });

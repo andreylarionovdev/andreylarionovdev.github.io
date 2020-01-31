@@ -222,7 +222,7 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
-  .dropdown .dropdown__toggle {
+  .dropdown__toggle {
     position: relative;
     padding: 0.5rem 0.625rem 0.625rem 0.875rem;
     display: -webkit-box;
@@ -264,7 +264,7 @@
     -webkit-box-shadow: 0 0.625rem 1.25rem rgba(31, 32, 65, 0.05);
             box-shadow: 0 0.625rem 1.25rem rgba(31, 32, 65, 0.05);
     background-color: white; }
-  .dropdown__li {
+  .dropdown__menu-item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -289,7 +289,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 5.75rem; }
+    min-width: 5.75rem; }
   .dropdown__item-name {
     overflow: hidden;
     white-space: nowrap;
@@ -298,7 +298,7 @@
     text-transform: uppercase;
     font-size: 0.75rem;
     font-weight: bold; }
-  .dropdown__dec-button, .dropdown__inc-button {
+  .dropdown__change-count-btn {
     display: inline-block;
     font-size: 1.125rem;
     text-align: center;
@@ -306,25 +306,28 @@
     height: 1.875rem;
     line-height: 1.875rem;
     border-radius: 0.9375rem;
-    cursor: pointer; }
-  .dropdown__dec-button {
-    border: 1px solid rgba(31, 32, 65, 0.25); }
-  .dropdown__inc-button {
+    cursor: pointer;
     border: 1px solid rgba(31, 32, 65, 0.5); }
-  .dropdown .dropdown__li--footer-buttons {
+    .dropdown__change-count-btn--dec {
+      border: 1px solid rgba(31, 32, 65, 0.25); }
+  .dropdown__footer-buttons {
     display: none;
     margin: 0;
     line-height: 2.5rem; }
   .dropdown--expanded .dropdown__toggle {
     border: 1px solid rgba(31, 32, 65, 0.5);
+    border-bottom: none;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
   .dropdown--expanded .dropdown__menu {
     display: block; }
-  .dropdown--edited .dropdown__li--footer-buttons {
+  .dropdown--edited .dropdown__footer-buttons {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
   .dropdown--empty .dropdown__clear-button {
     visibility: hidden; }
 
