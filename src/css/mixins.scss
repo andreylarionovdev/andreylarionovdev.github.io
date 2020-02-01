@@ -1,8 +1,8 @@
-@mixin inner() {
+@mixin inner($mdMinWidth: 80.5%, $mdMaxWidth: 95.5%) {
   margin: 0 auto;
-  width: 95.5%;
+  width: $mdMaxWidth;
   @media (min-width: $screen-md-min) {
-    width: 80.5%;
+    width: $mdMinWidth;
     max-width: 120rem;
     min-width: 20rem;
   }
