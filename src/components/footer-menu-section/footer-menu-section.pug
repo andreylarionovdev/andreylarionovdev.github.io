@@ -1,9 +1,0 @@
-mixin footer-menu-section(options)
-  - var { title, menuItems } = options || {}
-
-  .footer-menu-section
-    h3.footer-menu-section__title.h3= title
-    ul.footer-menu-section__ul
-      each item, _ in menuItems
-        li.footer-menu-section__li
-          a.footer-menu-section__a(href=item.href).body= item.text

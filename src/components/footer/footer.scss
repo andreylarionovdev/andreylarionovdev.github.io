@@ -1,17 +1,11 @@
 @import '../../css/mixins';
 .footer {
-  $row-divider: #{&}__row-divider;
-  $inner: #{&}__inner;
-  $header: #{&}__header;
-  $navbar: #{&}__navbar;
-  $subscribe: #{&}__subscribe;
-  $copyright: #{&}__copyright;
-  $social: #{&}__social;
+  $blockName: &;
   min-height: inherit;
   background: white;
   box-shadow: 0 0.625rem 1.25rem rgba(31, 32, 65, 0.05);
   position: relative;
-  #{$row-divider} {
+  &__row-divider {
     margin: 0;
     position: absolute;
     left: 0;
@@ -25,7 +19,7 @@
       display: none;
     }
   }
-  #{$inner} {
+  &__inner {
     @include inner;
     padding-top: 6.25rem;
     position: relative;
@@ -64,7 +58,7 @@
       text-align: center;
     }
   }
-  #{$navbar} {
+  &__navbar {
     grid-area: nav;
     display: flex;
     justify-content: space-between;
@@ -75,7 +69,7 @@
       text-align: center;
     }
   }
-  #{$subscribe} {
+  &__subscribe {
     grid-area: subscribe;
     padding: 0.3125rem 0;
     @media (max-width: $screen-xs-max) {
@@ -85,7 +79,7 @@
   &__subscribe-description {
     margin: 1rem 0 1.5rem 0;
   }
-  #{$copyright} {
+  &__copyright {
     grid-area: copyright;
     line-height: 2.5rem;
     @media (max-width: $screen-xs-max) {
@@ -119,25 +113,24 @@
     }
   }
   &--creative {
-    #{$inner} {
+    #{$blockName}__inner {
       grid-template-columns: 1fr;
       grid-template-areas:
         'header'
         'social';
       grid-row-gap: 0;
     }
-    #{$header} {
+    #{$blockName}__header {
       text-align: center;
       padding: 0 25%;
     }
-    #{$social} {
+    #{$blockName}__social {
       justify-content: center;
-      //padding-right: 1.125rem;
     }
-    #{$row-divider},
-    #{$navbar},
-    #{$subscribe},
-    #{$copyright} {
+    #{$blockName}__row-divider,
+    #{$blockName}__navbar,
+    #{$blockName}__subscribe,
+    #{$blockName}__copyright {
       display: none;
     }
   }

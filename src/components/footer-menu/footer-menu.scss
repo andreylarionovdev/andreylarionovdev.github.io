@@ -1,14 +1,14 @@
-.footer-menu-section {
+.footer-menu {
   font-family: Montserrat, sans-serif;
-  &__ul {
+  &__list {
     list-style: none;
     padding-left: 0;
     margin: 18px 0;
   }
-  &__li {
+  &__item {
     margin-bottom: 14px;
   }
-  &__a {
+  &__link {
     color: $color-dark-50;
     text-decoration: none;
   }

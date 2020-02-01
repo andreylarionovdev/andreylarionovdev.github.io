@@ -1,4 +1,4 @@
-include ../footer-menu-section/footer-menu-section
+include ../footer-menu/footer-menu
 include ../logo/logo
 include ../input/input
 
@@ -59,11 +59,11 @@ mixin footer(options)
           +logo(true)
         p.footer__description.body= leftDescription
       nav.footer__navbar
-        each section, _ in menus
+        each menu, _ in menus
           section.footer__nav-section
-            +footer-menu-section({
-              title: section.title,
-              menuItems: section.links
+            +footer-menu({
+              title: menu.title,
+              menuItems: menu.links
             })
       .footer__subscribe
         h3.footer__subscribe-title.h3!= rightTitle
