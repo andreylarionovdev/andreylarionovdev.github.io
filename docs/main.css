@@ -128,19 +128,18 @@
       text-transform: capitalize; }
 
 .label {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   text-transform: uppercase;
   font-size: 0.75rem; }
-  .label__left, .label__right {
-    position: relative;
-    display: inline-block;
-    top: 0; }
-  .label__left {
-    float: left;
+  .label__title {
     font-weight: bold;
     color: #1F2041; }
-  .label__right {
-    float: right;
+  .label__hint {
     color: rgba(31, 32, 65, 0.5); }
 
 .input {

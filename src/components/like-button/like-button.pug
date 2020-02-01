@@ -1,16 +1,16 @@
 mixin like-button(options)
-  - const b = 'like-button'
-  -
-    const {
-      count = 0,
-      isFavorite
-    } = options || {}
+  - var { count = 0, isFavorite } = options || {}
 
   - var blockModifiers = []
 
   if isFavorite
-    - blockModifiers.push(`${b}--favorite`)
+    - blockModifiers.push('favorite')
 
-  i(class=b class=blockModifiers)
-    i(class=[`${b}__heart`, 'material-icons'])= isFavorite ? 'favorite' : 'favorite_border'
-    span(class=`${b}__counter`)= count
+  - var f = require('../../js/functions')
+
+  i(class=f.bem({
+    b: 'like-button',
+    m: blockModifiers
+  }))
+    i.like-button__heart.material-icons= isFavorite ? 'favorite' : 'favorite_border'
+    span.like-button__counter= count

@@ -1,7 +1,6 @@
 mixin label(options)
-  - const b = 'label'
-  - const { label, hint, _for } = options || {}
+  - var { label, hint, _for } = options || {}
 
-  label(class=[b, 'clearfix'] for=_for)
-    h3(class=[`${b}__left`, 'h3'])= label
-    span(class=`${b}__right`)= hint
+  label.label(for=_for)
+    h3.label__title.h3= label
+    span.label__hint= hint

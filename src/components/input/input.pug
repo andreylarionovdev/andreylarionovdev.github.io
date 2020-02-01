@@ -1,6 +1,4 @@
 mixin input(options)
-  - var b = 'input'
-  - var blockModifiers = []
   -
     var {
       id,
@@ -11,18 +9,19 @@ mixin input(options)
       isHovered
     } = options || {}
 
-  if withArrow
-    - blockModifiers.push(`${b}--with-arrow`)
-  if isHovered
-    - blockModifiers.push(`${b}--hovered`)
+  - var blockModifiers = []
 
-  div(class=b class=blockModifiers)
-    input(
-      id=id
-      type=type
-      class=`${b}__input`
-      placeholder=placeholder
-      value=value
-    )
-    button(class=`${b}__submit-button`)
-      i(class=[`${b}__arrow`, 'material-icons'])= 'arrow_forward'
+  if withArrow
+    - blockModifiers.push('with-arrow')
+  if isHovered
+    - blockModifiers.push('hovered')
+
+  - var f = require('../../js/functions')
+
+  div(class=f.bem({
+    b: 'input',
+    m: blockModifiers
+  }))
+    input.input__input(id=id type=type placeholder=placeholder value=value)
+    button.input__submit-button
+      i.input__arrow.material-icons= 'arrow_forward'

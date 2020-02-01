@@ -2,32 +2,36 @@ include ../logo/logo
 include ../button/button
 
 mixin header(options)
-  - const b = 'header'
-  - const { user, menuItems, menuButtons } = options || {}
+  - var { user, menuItems, menuButtons } = options || {}
 
-  nav(class=b)
-    div(class=`${b}__inner`)
-      i(class=[`${b}__nav-toggle`, 'material-icons'])= 'menu'
-      figure(class=`${b}__logo`)
+  - var f = require('../../js/functions')
+
+  nav.header
+    .header__inner
+      i.header__nav-toggle.material-icons= 'menu'
+      figure.header__logo
         +logo(true)
-      ul(class=`${b}__nav`)
+      ul.header__nav
         each item, _ in menuItems
-          - let navLinkClasses = [`${b}__nav-link`]
-          li(class=`${b}__nav-item`)
+          li.header__nav-item
+            - var bemObj = {b: 'header', e: 'nav-link'}
             if item.sub
-              - navLinkClasses.push(`${b}__nav-link--has-submenu`)
-            a(class=navLinkClasses href=item.href)
+              - bemObj.m = 'has-submenu'
+            a(class=f.bem(bemObj) href=item.href)
               if item.active
                 b= item.name
               else
                 = item.name
         if user
-          li(class=[`${b}__nav-item`, `${b}__nav-item--account`])
-            a(class=`${b}__nav-link`)
-              = user
+          li.header__nav-item.header__nav-item--account
+            a.header__nav-link= user
         else
           each button, _ in menuButtons
-            li(class=[`${b}__nav-item`, `${b}__nav-item--${button.name}`])
+            li(class=f.bem({
+              b: 'header',
+              e: 'nav-item',
+              m: button.name
+            }))
               +button({
                 theme: button.theme,
                 caption: button.caption,

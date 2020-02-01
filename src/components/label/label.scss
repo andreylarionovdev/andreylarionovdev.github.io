@@ -1,20 +1,13 @@
 .label {
-    display: block;
+    display: flex;
+    justify-content: space-between;
     text-transform: uppercase;
     font-size: 0.75rem;
-    &__left,
-    &__right {
-        position: relative;
-        display: inline-block;
-        top: 0;
-    }
-    &__left {
-        float: left;
+    &__title {
         font-weight: bold;
         color: $color-dark-100;
     }
-    &__right {
-        float: right;
+    &__hint {
         color: $color-dark-50;
     }
 }

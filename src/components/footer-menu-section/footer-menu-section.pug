@@ -1,10 +1,9 @@
 mixin footer-menu-section(options)
-  - const b = 'footer-menu-section'
-  - const { title, menuItems } = options
+  - var { title, menuItems } = options || {}
 
-  div(class=b)
-    h3(class=[`${b}__title`, 'h3'])= title
-    ul(class=`${b}__ul`)
+  .footer-menu-section
+    h3.footer-menu-section__title.h3= title
+    ul.footer-menu-section__ul
       each item, _ in menuItems
-        li(class=`${b}__li`)
-          a(class=[`${b}__a`, 'body'] href=item.href)= item.text
+        li.footer-menu-section__li
+          a.footer-menu-section__a(href=item.href).body= item.text
