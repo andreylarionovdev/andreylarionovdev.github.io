@@ -1,8 +1,7 @@
 mixin feature(options)
-  - const b = 'feature'
   - const { icon, title, hint } = options || {}
 
-  div(class=b)
-    i(class=[`${b}__icon`, 'material-icons'])= icon
-    h3(class=`${b}__title`)= title
-    p(class=`${b}__hint`)= hint
+  .feature
+    i.material-icons.feature__icon= icon
+    h3.feature__title= title
+    p.feature__hint= hint

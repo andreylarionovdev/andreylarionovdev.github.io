@@ -2,10 +2,9 @@ include ../label/label
 include ../dropdown/dropdown
 
 mixin dropdown-date-range(options)
-  - const b = 'dropdown-date-range'
-  - const mask = 'ДД.ММ.ГГГГ'
   -
-    const {
+    var mask = 'ДД.ММ.ГГГГ'
+    var {
       id,
       fromLabel = 'Прибытие',
       from = mask,
@@ -13,23 +12,19 @@ mixin dropdown-date-range(options)
       to = mask
     } = options || {}
 
-  div(class=b)
-    div(class=`${b}__from`)
-      div(class=`${b}__label`)
-        +label({
-          label: fromLabel
-        })
-      div(class=`${b}__dropdown`)
+  .dropdown-date-range
+    .dropdown-date-range__from
+      .dropdown-date-range__label
+        +label({ label: fromLabel })
+      .dropdown-date-range__dropdown
         +dropdown({
           id: `${id}__from-date`,
           value: from
         })
-    div(class=`${b}__to`)
-      div(class=`${b}__label`)
-        +label({
-          label: toLabel
-        })
-      div(class=`${b}__dropdown`)
+    .dropdown-date-range__to
+      .dropdown-date-range__label
+        +label({ label: toLabel })
+      .dropdown-date-range__dropdown
         +dropdown({
           id: `${id}__to-date`,
           value: to

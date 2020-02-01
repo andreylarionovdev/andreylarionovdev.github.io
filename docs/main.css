@@ -98,7 +98,7 @@
   padding-left: 34%;
   padding-right: 6%;
   margin-bottom: 50px; }
-  .font-sample .font-sample__name {
+  .font-sample__name {
     float: left;
     font-family: Montserrat, sans-serif;
     position: absolute;
@@ -109,7 +109,7 @@
     font-weight: normal;
     color: rgba(31, 32, 65, 0.25);
     text-transform: uppercase; }
-  .font-sample .font-sample__description {
+  .font-sample__description {
     float: left;
     font-style: normal; }
   .font-sample--text-header {

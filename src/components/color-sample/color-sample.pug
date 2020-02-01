@@ -1,8 +1,7 @@
 mixin color-sample(options)
-  - const b = 'color-sample'
-  - const { color, title, hex } = options
+  - var { color, title, hex } = options
 
-  article(class=b class=`${b}--${color}`)
-    figure(class=`${b}__rect`)
-    h2(class=`${b}__title`)= title
-    h3(class=`${b}__hex`)= hex
+  article(class=['color-sample', `color-sample-${color}`])
+    figure.color-sample__rect
+    h2.color-sample__title= title
+    h3.color-sample__hex= hex

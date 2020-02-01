@@ -3,11 +3,6 @@ include ../button/button
 include ./select-box
 
 mixin dropdown(options)
-  - var f = require('../../js/functions.js')
-
-  - var b = 'dropdown'
-  - var js = 'js'
-
   -
     var {
       id,
@@ -28,10 +23,21 @@ mixin dropdown(options)
   if isEmpty
     - blockModifiers.push('empty')
 
-  div(id=id class=f.bem({b, m: blockModifiers, js}))
-    label(class=f.bem({b, e: 'toggle', js}))
-      span(class=`${b}__text`)= value
+  - var f = require('../../js/functions.js')
+  - var js = 'js'
+
+  div(id=id class=f.bem({
+    b: 'dropdown',
+    m: blockModifiers,
+    js
+  }))
+    label(class=f.bem({
+      b: 'dropdown',
+      e: 'toggle',
+      js
+    }))
+      span.dropdown__text= value
       i.material-icons= 'keyboard_arrow_down'
-      input(class=`${b}__data-input` type='text' value=value)
+      input.dropdown__data-input(type='text' value=value)
     if rows.length > 0
       +select-box(options)
