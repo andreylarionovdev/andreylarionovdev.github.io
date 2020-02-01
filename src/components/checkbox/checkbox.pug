@@ -1,22 +1,18 @@
 mixin checkbox(options)
-  - const b = 'checkbox'
-  - const { id, label, hint, isChecked } = options || {}
+  - var { id, label, hint, isChecked } = options || {}
 
   - var blockModifiers = []
 
   if hint
-    - blockModifiers.push(`${b}--has-hint`)
+    - blockModifiers.push('has-hint')
 
-  div(class=b class=blockModifiers)
-    input(
-      id=id
-      type='checkbox'
-      class=`${b}__input`
-      checked=isChecked
-    )
-    label(
-      class=`${b}__label`
-      for=id
-    )= label
+  - var f = require('../../js/functions')
+
+  div(class=f.bem({
+    b: 'checkbox',
+    m: blockModifiers
+  }))
+    input(id=id type='checkbox' checked=isChecked).checkbox__input
+    label(for=id).checkbox__label= label
     if hint
-      p(class=`${b}__hint`)!= hint
+      p.checkbox__hint!= hint

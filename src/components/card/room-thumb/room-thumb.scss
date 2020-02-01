@@ -101,6 +101,8 @@
   &__price-per-day {
     color: $color-dark-50;
     font-family: Montserrat, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
   &__cost {
     font-weight: bold;
@@ -111,7 +113,7 @@
   &__footer {
     display: flex;
     justify-content: space-between;
-    padding: 0.5625rem 0 1.125rem 0;
+    padding: 0.75rem 0 1rem 0;
     margin: 0 1.25rem 0 1.375rem;
   }
   &__feedback-counter {

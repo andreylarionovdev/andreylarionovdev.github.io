@@ -4,17 +4,14 @@ include ../../button/button
 include ../../dropdown-date-range/dropdown-date-range
 
 mixin room-search()
-  - const b = 'room-search'
-  form(class=[b, 'card'])
-    h1(class=[`${b}__title`, 'h1'])= 'Найдём номера под ваши пожелания'
-    div(class=[`${b}__date-range`])
-      +dropdown-date-range({id: 'room-book__check-in-out'})
-    div(class=`${b}__guests`)
-      div(class=`${b}__label`)
-        +label({
-          label: 'Гости'
-        })
-      div(class=`${b}__guests-dropdown`)
+  form.card.room-search
+    h1.room-search__title.h1= 'Найдём номера под ваши пожелания'
+    div.room-search__date-range
+      +dropdown-date-range({id: `${b}__check-in-out`})
+    div.room-search__guests
+      div.room-search__label
+        +label({ label: 'Гости' })
+      div.room-search__guests-dropdown
         +dropdown({
           id: 'guests',
           value: 'Сколько гостей',
@@ -24,7 +21,7 @@ mixin room-search()
             {count: 0, text: 'младенцы', name: 'baby'}
           ]
         })
-    div(class=`${b}__button`)
+    div.room-search__button
       +button({
         theme: 'default',
         caption: 'Подобрать номер',

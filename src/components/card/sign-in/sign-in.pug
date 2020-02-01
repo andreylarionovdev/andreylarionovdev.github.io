@@ -2,22 +2,21 @@ include ../../input/input
 include ../../button/button
 
 mixin sign-in()
-  - const b = 'sign-in'
-  form(class=[b, 'card'])
-    h1(class=[`${b}__title`, 'h1'])= 'Войти'
-    div(class=`${b}__input`)
+  form.card.sign-in
+    h1.sign-in__title.h1= 'Войти'
+    .sign-in__input
       +input({
         id: 'sign-in_email',
         placeholder: 'Email',
         type: 'email'
       })
-    div(class=`${b}__input`)
+    .sign-in__input
       +input({
         id: 'sign-in_pass',
         placeholder: 'Пароль',
         type: 'password'
       })
-    div(class=`${b}__login-button`)
+    .sign-in__login-button
       +button({
         theme: 'default',
         caption: 'Войти',
@@ -25,9 +24,9 @@ mixin sign-in()
         isFluid: true,
         href: 'login.html'
       })
-    div(class=`${b}__create-account`)
-      p(class=`${b}__hint`)= 'Нет аккаунта на Toxin?'
-      div(class=`${b}__create-button`)
+    .sign-in__create-account
+      p.sign-in__hint= 'Нет аккаунта на Toxin?'
+      .sign-in__create-button
         +button({
           theme: 'transparent',
           caption: 'Создать',

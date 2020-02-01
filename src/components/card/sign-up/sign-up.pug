@@ -3,21 +3,20 @@ include ../../radio-button/radio-button
 include ../../toggle-button/toggle-button
 
 mixin sign-up()
-  - const b = 'sign-up'
-  form(class=[b, 'card'])
-    h1(class=[`${b}__title`, 'h1'])= 'Регистрация аккаунта'
-    div(class=`${b}__input`)
+  form.card.sign-up
+    h1.sign-up__title.h1= 'Регистрация аккаунта'
+    div.sign-up__input
       +input({
         id: 'first-name',
         placeholder: 'Имя'
       })
-    div(class=`${b}__input`)
+    div.sign-up__input
       +input({
         id: 'last-name',
         placeholder: 'Фамилия'
       })
-    div(class=[`${b}__gender`, 'clearfix'])
-      div(class=`${b}__radio-button`)
+    div.sign-up__gender
+      div.sign-up__radio-button
         +radio-button({
           id: 'g-male',
           name: 'gender',
@@ -25,55 +24,55 @@ mixin sign-up()
           label: 'Мужчина',
           isChecked: true
         })
-      div(class=`${b}__radio-button`)
+      div.sign-up__radio-button
         +radio-button({
           id: 'g-female',
           name: 'gender',
           value: 'f',
           label: 'Женщина'
         })
-    div(class=`${b}__birthday`)
-      div(class=`${b}__label`)
+    div.sign-up__birthday
+      div.sign-up__label
         +label({
           label: 'Дата рождения'
         })
-      div(class=`${b}__input`)
+      div.sign-up__input
         +input({
           id: 'sign-up__input-birthday',
           placeholder: 'ДД.ММ.ГГГГ'
         })
-    div(class=`${b}__email`)
-      div(class=`${b}__label`)
+    div.sign-up__email
+      div.sign-up__label
         +label({
           label: 'Данные для входа в сервис'
         })
-      div(class=`${b}__input`)
+      div.sign-up__input
         +input({
           id: 'sign-up__input-email',
           placeholder: 'Email',
           type: 'email'
         })
-    div(class=`${b}__input`)
+    div.sign-up__input
       +input({
         id: 'sign-up__input-password',
         placeholder: 'Пароль',
         type: 'password'
       })
-    div(class=`${b}__toggle`)
+    div.sign-up__toggle
       +toggle-button({
         id: 'sign-up__toggle-promote',
         label: 'Получать спецпредложения'
       })
-    div(class=`${b}__pay-button`)
+    div.sign-up__pay-button
       +button({
         theme: 'default',
         caption: 'Перейти к оплате',
         withArrow: true,
         isFluid: true
       })
-    div(class=`${b}__auth`)
-      p(class=`${b}__auth-hint`)= 'Уже есть аккаунт на Toxin'
-      div(class=`${b}__auth-button`)
+    div.sign-up__auth
+      p.sign-up__auth-hint= 'Уже есть аккаунт на Toxin'
+      div.sign-up__auth-button
         +button({
           theme: 'transparent',
           caption: 'Войти',

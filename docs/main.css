@@ -696,7 +696,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 0 1.065rem; }
+    padding: 0 1rem; }
   .button__caption {
     grid-column-start: 2; }
   .button__arrow {
@@ -1533,11 +1533,10 @@
   height: 33.33%; }
 
 .datepicker {
-  border: 1px solid rgba(31, 32, 65, 0.25);
   font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
   color: #4a4a4a;
-  padding: 15px 15px 50px 17px;
+  padding: 0.875rem 0.875rem 3rem 1rem;
   position: absolute;
   display: none;
   -webkit-transition: opacity 0.3s ease, left 0s 0.3s, -webkit-transform 0.3s ease;
@@ -1778,7 +1777,9 @@
     color: #1F2041; }
   .room-thumb__price-per-day {
     color: rgba(31, 32, 65, 0.5);
-    font-family: Montserrat, sans-serif; }
+    font-family: Montserrat, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.25rem; }
   .room-thumb__cost {
     font-weight: bold; }
   .room-thumb__date-unit {
@@ -1790,7 +1791,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 0.5625rem 0 1.125rem 0;
+    padding: 0.75rem 0 1rem 0;
     margin: 0 1.25rem 0 1.375rem; }
   .room-thumb__feedback-counter {
     margin: 0;
@@ -1856,7 +1857,10 @@
   .sign-up__input {
     margin-bottom: 0.625rem; }
   .sign-up__gender {
-    margin: 0.625rem 0 1.5625rem 0; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 1.5rem; }
   .sign-up__radio-button {
     display: inline-block;
     float: left;

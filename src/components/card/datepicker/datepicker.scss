@@ -3,11 +3,10 @@
 @import 'cell';
 
 .datepicker {
-  border: 1px solid $color-dark-25;
   font-family: $datepickerFontFamily, sans-serif;
   font-size: $datepickerFontSize;
   color: map_get($datepickerTextColor, common);
-  padding: 15px 15px 50px 17px;
+  padding: 0.875rem 0.875rem 3rem 1rem;
   position: absolute;
   display: none;
   transition: opacity $datepickerTransitionSpeed $datepickerTransitionEase, transform $datepickerTransitionSpeed $datepickerTransitionEase, left 0s $datepickerTransitionSpeed;

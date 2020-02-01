@@ -3,33 +3,31 @@ include ../../dropdown/dropdown
 include ../../dropdown-date-range/dropdown-date-range
 
 mixin room-book(options)
-  - const b = 'room-book'
-  - const { roomNumber, pricePerDay, discount, fee, feature } = options
+  - var { roomNumber, pricePerDay, discount, fee, feature } = options || {}
 
-  form(class=[b, 'card'])
-    header(class=`${b}__header`)
-      div(class=`${b}__number`)
-        span(class=`${b}__number-sign`)= '№'
-        span(class=`${b}__number-value`)= roomNumber
+  form.card.room-book
+    header.room-book__header
+      .room-book__number
+        span.room-book__number-sign= '№'
+        span.room-book__number-value= roomNumber
         if feature
-          h3(class=[`${b}__number-feature`, 'h3', 'h3--purple'])= feature
-      div(class=[b+'__price-per-day', 'body'])
-        span(class=`${b}__cost`)!= `${pricePerDay.toLocaleString('ru-RU')}₽&nbsp;`
-        span(class=`${b}__date-unit`)= 'в сутки'
+          h3.room-book__number-feature.h3.h3--purple= feature
+      .room-book__price-per-day.body
+        span.room-book__cost= `${pricePerDay.toLocaleString('ru-RU')}₽`
+        |&nbsp;
+        span.room-book__date-unit= 'в сутки'
 
-    div(class=`${b}__date-range`)
+    .room-book__date-range
       +dropdown-date-range({
         id: 'room-book__check-in-out',
         from: '19.08.2019',
         to: '23.08.2019'
       })
 
-    div(class=`${b}__guests`)
-      div(class=`${b}__label`)
-        +label({
-          label: 'Гости'
-        })
-      div(class=`${b}__dropdown`)
+    .room-book__guests
+      .room-book__label
+        +label({ label: 'Гости' })
+      .room-book__dropdown
         +dropdown({
           id: 'room-book__from-date',
           value: '3 гостя',
@@ -43,27 +41,27 @@ mixin room-book(options)
     - const totalBruto = pricePerDay * 4
     - const totalNetto = totalBruto - discount + fee
 
-    div(class=`${b}__table-result`)
-      div(class='grid-cell')= `${pricePerDay.toLocaleString('ru-RU')}₽ x 4 суток`
-      div(class='grid-cell grid-cell--info')
-      div(class=`grid-cell grid-cell--sum`)= `${totalBruto.toLocaleString('ru-RU')}₽`
+    .room-book__table-result
+      .grid-cell= `${pricePerDay.toLocaleString('ru-RU')}₽ x 4 суток`
+      .grid-cell.grid-cell--info
+      .grid-cell.grid-cell--sum= `${totalBruto.toLocaleString('ru-RU')}₽`
 
-      div(class='grid-cell')= `Сбор за услуги: скидка ${discount.toLocaleString('ru-RU')}₽`
-      div(class='grid-cell grid-cell--info')
-        i(class=[`${b}__info-icon`, 'material-icons'] title='change me')= 'info_outline'
-      div(class='grid-cell grid-cell--sum')= '0₽'
+      .grid-cell= `Сбор за услуги: скидка ${discount.toLocaleString('ru-RU')}₽`
+      .grid-cell.grid-cell--info
+        i(title='change me').room-book__info-icon.material-icons= 'info_outline'
+      .grid-cell.grid-cell--sum= '0₽'
 
-      div(class='grid-cell')= 'Сбор за дополнительные услуги'
-      div(class='grid-cell grid-cell--info')
-        i(class=[`${b}__info-icon`, 'material-icons'] title='change me')= 'info_outline'
-      div(class='grid-cell grid-cell--sum')= `${fee.toLocaleString('ru-RU')}₽`
+      .grid-cell= 'Сбор за дополнительные услуги'
+      .grid-cell.grid-cell--info
+        i(title='change me').room-book__info-icon.material-icons= 'info_outline'
+      .grid-cell.grid-cell--sum= `${fee.toLocaleString('ru-RU')}₽`
 
-    p(class=`${b}__total-row`)
-      span(class=`${b}__total-header`)= 'Итого'
-      span(class=`${b}__total-line`)
-      span(class=`${b}__total-sum`)= `${totalNetto.toLocaleString('ru-RU')}₽`
+    p.room-book__total-row
+      span.room-book__total-header= 'Итого'
+      span.room-book__total-line
+      span.room-book__total-sum= `${totalNetto.toLocaleString('ru-RU')}₽`
 
-    footer(class=`${b}__button`)
+    footer.room-book__button
       +button({
         theme: 'default',
         caption: 'Забронировать',

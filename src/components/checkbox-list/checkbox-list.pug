@@ -1,11 +1,10 @@
 mixin checkbox-list(options)
-  - const b = 'checkbox-list'
-  - const { label, items } = options || {}
+  - var { label, items } = options || {}
 
-  div(class=b)
-    div(class=`${b}__label`)
+  .checkbox-list
+    .checkbox-list__label
       +label({ label })
-    ul(class=`${b}__list`)
+    ul.checkbox-list__list
       each item in items
-        li(class=`${b}__checkbox`)
+        li.checkbox-list__checkbox
           +checkbox(item)

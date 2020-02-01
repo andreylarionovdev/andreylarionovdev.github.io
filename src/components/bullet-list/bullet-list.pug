@@ -1,10 +1,9 @@
 mixin bullet-list(options)
-  - const b = 'bullet-list'
-  - const { id, items } = options || {}
+  - var { id, items } = options || {}
 
-  ul(class=b id=id)
+  ul(id=id).bullet-list
     each item, index in items
-      li(class=`${b}__li`)
-        div(class=`${b}__marker-wrapper`)
-          span(class=`${b}__marker`)
-        p(class=`${b}__text`)!= item.text
+      li.bullet-list__li
+        .bullet-list__marker-wrapper
+          span.bullet-list__marker
+        p.bullet-list__text!= item.text

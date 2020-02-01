@@ -1,5 +1,4 @@
 mixin button(options)
-  - var b = 'button'
   -
     var {
       theme,
@@ -24,7 +23,7 @@ mixin button(options)
 
   - var f = require('../../js/functions')
 
-  a(class=f.bem({b, m: blockModifiers}) href=href)
-    div(class=f.bem({b, e: 'inner'}))
-      span(class=f.bem({b, e: 'caption'}))= caption
-      i(class=[...f.bem({b, e: 'arrow'}), 'material-icons'])= 'arrow_forward'
+  a(class=f.bem({b: 'button', m: blockModifiers}) href=href)
+    .button__inner
+      span.button__caption= caption
+      i.button__arrow.material-icons= 'arrow_forward'
