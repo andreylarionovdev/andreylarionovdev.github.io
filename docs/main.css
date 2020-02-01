@@ -461,33 +461,32 @@
       border-radius: 10px; }
 
 .like-button {
-  display: inline-block;
-  min-width: 40px;
-  height: 20px;
-  border-radius: 10px;
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1.25rem auto;
+  min-width: 2.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1.125rem;
+  border-radius: 0.625rem;
+  font-size: 0.625rem;
+  font-style: normal;
   border: 1px solid rgba(31, 32, 65, 0.25);
   color: rgba(31, 32, 65, 0.25);
-  font-style: normal;
-  cursor: pointer; }
-  .like-button .like-button__heart,
-  .like-button .like-button__counter {
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    display: block;
-    font-size: 0.625rem;
-    float: left;
-    position: relative; }
-  .like-button .like-button__heart {
-    top: 4px;
-    left: 4px; }
-  .like-button .like-button__counter {
-    top: 2px;
-    left: 10px; }
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  .like-button__count {
+    padding-right: 0.3125rem; }
+  .like-button__heart {
+    font-size: inherit;
+    padding-left: 0.3125rem; }
   .like-button--favorite {
     border: 1px solid #BC9CFF; }
-    .like-button--favorite .like-button__counter {
+    .like-button--favorite .like-button__count {
       color: #BC9CFF; }
     .like-button--favorite .like-button__heart {
       color: #BC9CFF; }
@@ -2040,7 +2039,7 @@
   .ui-form-elements__rate-button-group .rate-button {
     padding: 0 0.9375rem 0 0.125rem; }
   .ui-form-elements__toggle-group {
-    margin-bottom: 2.75rem; }
+    margin-bottom: 2.8125rem; }
     .ui-form-elements__toggle-group .label {
       margin-bottom: 1rem; }
     .ui-form-elements__toggle-group .toggle-button {

@@ -1,17 +1,14 @@
 $(document).ready(function () {
-  const className = 'like-button';
-  const classFavorite = `${className}--favorite`;
-  const classCounter = `${className}__counter`;
-  const classHeart = `${className}__heart`;
+  const classFavorite = 'like-button--favorite';
 
-  $(`.${className}`).on('click', function () {
+  $(`.js-like-button`).on('click', function () {
     $(this).toggleClass(classFavorite);
 
-    const $counter = $(this).find(`.${classCounter}`);
-    const $heart = $(this).find(`.${classHeart}`);
-    let iconName = '';
+    const $counter = $(this).find(`.js-like-button__count`);
 
     let count = parseInt($counter.text());
+    let iconName = '';
+
     if ($(this).hasClass(classFavorite)) {
       iconName = 'favorite';
       count += 1;
@@ -19,7 +16,8 @@ $(document).ready(function () {
       iconName = 'favorite_border';
       count -= 1;
     }
+
     $counter.text(count);
-    $heart.text(iconName);
+    $(this).find('.js-like-button__heart').text(iconName);
   });
 });

@@ -1,42 +1,35 @@
 .like-button {
-  $heart: #{&}__heart;
-  $counter: #{&}__counter;
-  display: inline-block;
-  min-width: 40px;
-  height: 20px;
-  border-radius: 10px;
+  $blockName: &;
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1.25rem auto;
+  min-width: 2.5rem;
+  align-items: center;
+  line-height: 1.125rem;
+  border-radius: 0.625rem;
+  font-size: 0.625rem;
+  font-style: normal;
   border: 1px solid $color-dark-25;
   color: $color-dark-25;
-  font-style: normal;
   cursor: pointer;
+  user-select: none;
 
-  #{$heart},
-  #{$counter} {
-    user-select: none;
-    display: block;
-    font-size: 0.625rem;
-    float: left;
-    position: relative;
+  &__count {
+    padding-right: 0.3125rem;
   }
-
-  #{$heart} {
-    top: 4px;
-    left: 4px;
-  }
-
-  #{$counter} {
-    top: 2px;
-    left: 10px;
+  &__heart {
+    font-size: inherit;
+    padding-left: 0.3125rem;
   }
 
   &--favorite {
     border: 1px solid $color-purple;
 
-    #{$counter} {
+    #{$blockName}__count {
       color: $color-purple;
     }
 
-    #{$heart} {
+    #{$blockName}__heart {
       color: $color-purple;
     }
   }
