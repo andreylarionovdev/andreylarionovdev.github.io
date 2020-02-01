@@ -3,7 +3,7 @@ include ../logo/logo
 include ../input/input
 
 mixin footer(options)
-  - const blockName = 'footer'
+  - const b = 'footer'
   -
     const {
       theme,
@@ -42,41 +42,41 @@ mixin footer(options)
       copyright = 'Copyright © 2018 Toxin UI Kit. All rights reserved.'
     } = options || {}
 
-  - let modifiers = []
+  - var blockModifiers = []
 
   if theme
-    - modifiers.push(`${blockName}--${theme}`)
+    - blockModifiers.push(`${b}--${theme}`)
 
 
-  div(class=blockName class=modifiers)
-    hr(class=`${blockName}__row-divider`)
-    div(class=`${blockName}__inner`)
-      div(class=`${blockName}__header`)
-        figure(class=`${blockName}__logo`)
+  div(class=b class=blockModifiers)
+    hr(class=`${b}__row-divider`)
+    div(class=`${b}__inner`)
+      div(class=`${b}__header`)
+        figure(class=`${b}__logo`)
           +logo(true)
-        p(class=[`${blockName}__description`, 'body'])
+        p(class=[`${b}__description`, 'body'])
           = leftDescription
-      nav(class=`${blockName}__navbar`)
+      nav(class=`${b}__navbar`)
         each section, _ in menus
-          section(class=`${blockName}__nav-section`)
+          section(class=`${b}__nav-section`)
             +footer-menu-section({
               title: section.title,
               menuItems: section.links
             })
-      div(class=`${blockName}__subscribe`)
-        h3(class=[`${blockName}__subscribe-title`, 'h3'])!= rightTitle
-        p(class=[`${blockName}__subscribe-description`, 'body'])
+      div(class=`${b}__subscribe`)
+        h3(class=[`${b}__subscribe-title`, 'h3'])!= rightTitle
+        p(class=[`${b}__subscribe-description`, 'body'])
           = rightDescription
-        div(class=`${blockName}__subscribe-input`)
+        div(class=`${b}__subscribe-input`)
           +input({
             id: 'subscribe',
             placeholder: rightPlaceholder,
             withArrow: true,
             type: 'email'
           })
-      p(class=[`${blockName}__copyright`, 'body'])= copyright
-      section(class=`${blockName}__social`)
-        - const socialLinkClass = `${blockName}__social-link`
+      p(class=[`${b}__copyright`, 'body'])= copyright
+      section(class=`${b}__social`)
+        - const socialLinkClass = `${b}__social-link`
         a(class=[socialLinkClass, `${socialLinkClass}--tw`] href='/change-me')
         a(class=[socialLinkClass, `${socialLinkClass}--fb`] href='/change-me')
         a(class=[socialLinkClass, `${socialLinkClass}--ig`] href='/change-me')

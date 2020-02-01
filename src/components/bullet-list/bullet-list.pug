@@ -1,10 +1,10 @@
 mixin bullet-list(options)
-  - const blockName = 'bullet-list'
+  - const b = 'bullet-list'
   - const { id, items } = options || {}
 
-  ul(class=blockName id=id)
+  ul(class=b id=id)
     each item, index in items
-      li(class=`${blockName}__li`)
-        div(class=`${blockName}__marker-wrapper`)
-          span(class=`${blockName}__marker`)
-        p(class=`${blockName}__text`)!= item.text
+      li(class=`${b}__li`)
+        div(class=`${b}__marker-wrapper`)
+          span(class=`${b}__marker`)
+        p(class=`${b}__text`)!= item.text

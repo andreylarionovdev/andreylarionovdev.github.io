@@ -1,8 +1,9 @@
 mixin logo(withText)
-  - const blockName = 'logo'
-  - let modifiers = []
+  - var b = 'logo'
+  - var f = require('../../js/functions')
+  - var m = []
 
   if withText
-    - modifiers.push(blockName+'--with-text')
+    - m.push('with-text')
 
-  a(class=blockName class=modifiers href='./index.html')
+  a(class=f.bem({b, m}) href='./index.html')

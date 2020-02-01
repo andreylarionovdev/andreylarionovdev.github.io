@@ -1,21 +1,24 @@
 include ../checkbox/checkbox
 
 mixin checkbox-list-xp(options)
-  - const blockName = 'checkbox-list-xp'
-  - const { id, label, isExpanded, items = [] } = options || {}
+  - var b = 'checkbox-list-xp'
+  - var { id, label, isExpanded, items = [] } = options || {}
 
-  - let modifiers = []
+  - let blockModifiers = []
 
   if isExpanded
-    - modifiers.push(`${blockName}--expanded`)
+    - blockModifiers.push('expanded')
 
-  div(class=blockName class=modifiers id=id)
-    h3(class=`${blockName}__toggle`)
-      span(class=`${blockName}__label`)= label
-      i(class=[`${blockName}__arrow`, 'material-icons'])= 'keyboard_arrow_down'
-    ul(class=`${blockName}__list`)
+  - var f = require('../../js/functions')
+  - var js = 'js'
+
+  div(class=f.bem({b, m: blockModifiers, js}) id=id)
+    h3(class=f.bem({b, e: 'toggle', js}))
+      span(class=`${b}__label`)= label
+      i(class=`${b}__arrow`).material-icons= 'keyboard_arrow_down'
+    ul(class=`${b}__list`)
       each item, index in items
-        li(class=`${blockName}__li`)
+        li(class=`${b}__li`)
           +checkbox({
             id: `${id}-${item.name}`,
             label: item.label,

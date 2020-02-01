@@ -180,6 +180,7 @@
     border-top-right-radius: 0; }
   .input--with-arrow .input__submit-button {
     padding: 0;
+    background: white;
     cursor: pointer;
     color: #BC9CFF;
     display: -webkit-box;

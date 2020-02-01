@@ -1,16 +1,16 @@
 include ../label/label
 
 mixin range-slider(options)
-  - const blockName = 'range-slider'
+  - const b = 'range-slider'
   - const caption = options.caption || 'range slider'
   - const { type, skin, min, max, from, to } = options
 
-  div(class=blockName)
+  div(class=b)
     +label({
       label: caption
     })
     input(
-      class=`${blockName}__input`
+      class=`${b}__input`
       type='text'
       name=options.name
       value=''

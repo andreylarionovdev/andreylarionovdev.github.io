@@ -1,19 +1,19 @@
 include ../label/label
 
 mixin radio-button(options)
-  - const blockName = 'radio-button'
+  - const b = 'radio-button'
   - const { id, name, value, label, isChecked } = options || {}
 
   div(class='radio-button')
     input(
       id=id
       type='radio'
-      class=`${blockName}__input`
+      class=`${b}__input`
       name=name
       value=value
       checked=isChecked
     )
     label(
       for=id
-      class=`${blockName}__label`
+      class=`${b}__label`
     )= label

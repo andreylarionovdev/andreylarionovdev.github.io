@@ -1,5 +1,5 @@
 mixin votes-chart(options)
-  - const blockName = 'votes-chart'
+  - const b = 'votes-chart'
 
   -
     const {
@@ -44,8 +44,8 @@ mixin votes-chart(options)
   - const total = sortedValues.reduce((acc, { count }) => acc + count, 0)
 
   - let angleOffset = 90
-  figure(class=[blockName, 'clearfix'])
-    svg(class=`${blockName}__chart` height=height width=width viewBox=[0, 0, width, height].join(' '))
+  figure(class=[b, 'clearfix'])
+    svg(class=`${b}__chart` height=height width=width viewBox=[0, 0, width, height].join(' '))
       each item in sortedValues
         - const key = item.label
         - const strokeDashOffset = circumreference - (item.count / total) * circumreference
@@ -53,7 +53,7 @@ mixin votes-chart(options)
         - angleOffset = (item.count / total) * 360 + angleOffset
         g
           circle(
-            class=[`${blockName}__circle`, `${blockName}__circle--${key}`]
+            class=[`${b}__circle`, `${b}__circle--${key}`]
             cx=cx
             cy=cy
             r=radius
@@ -64,26 +64,26 @@ mixin votes-chart(options)
             stroke-dashoffset=strokeDashOffset
             transform=circleTransformValue
           )
-      g(class=`${blockName}__count`)
+      g(class=`${b}__count`)
         text(
-          class=`${blockName}__count-value`
+          class=`${b}__count-value`
           x='50%'
           y='50%'
           text-anchor='middle'
         )= total
         text(
-          class=`${blockName}__count-unit`
+          class=`${b}__count-unit`
           x='50%'
           y='65%'
           text-anchor='middle'
         )= 'голосов'
 
-    ul(class=`${blockName}__labels`)
+    ul(class=`${b}__labels`)
       each label, key in voteLabels
         - const countSourceItem = sortedValues.find(obj => obj.label === key)
         - const count = countSourceItem !== undefined ? countSourceItem.count : '0';
         li(
-          class=[`${blockName}__label`, `${blockName}__label--${key}`]
+          class=[`${b}__label`, `${b}__label--${key}`]
           data-vote-key=key
           data-count=count
         )= label

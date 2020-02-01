@@ -1,5 +1,5 @@
 mixin rate-button(options)
-  - const blockName = 'rate-button'
+  - const b = 'rate-button'
   - const { id, base, rate, name = id } = options || {}
 
   div(class='rate-button' id=id)
@@ -8,13 +8,13 @@ mixin rate-button(options)
       input(
         id=id + n
         type='radio'
-        class=`${blockName}__radio`
+        class=`${b}__radio`
         name=name
         value=n
         checked=(n === rate)
       )
       label(
         for=id + n
-        class=`${blockName}__label`
+        class=`${b}__label`
       )= n
       - n = n - 1

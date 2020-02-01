@@ -2,34 +2,32 @@ include ../logo/logo
 include ../button/button
 
 mixin header(options)
-  - const blockName = 'header'
+  - const b = 'header'
   - const { user, menuItems, menuButtons } = options || {}
 
-  - let modifiers = []
-
-  nav(class=blockName)
-    div(class=`${blockName}__inner`)
-      i(class=[`${blockName}__nav-toggle`, 'material-icons'])= 'menu'
-      figure(class=`${blockName}__logo`)
+  nav(class=b)
+    div(class=`${b}__inner`)
+      i(class=[`${b}__nav-toggle`, 'material-icons'])= 'menu'
+      figure(class=`${b}__logo`)
         +logo(true)
-      ul(class=`${blockName}__nav`)
+      ul(class=`${b}__nav`)
         each item, _ in menuItems
-          - let navLinkClasses = [`${blockName}__nav-link`]
-          li(class=`${blockName}__nav-item`)
+          - let navLinkClasses = [`${b}__nav-link`]
+          li(class=`${b}__nav-item`)
             if item.sub
-              - navLinkClasses.push(`${blockName}__nav-link--has-submenu`)
+              - navLinkClasses.push(`${b}__nav-link--has-submenu`)
             a(class=navLinkClasses href=item.href)
               if item.active
                 b= item.name
               else
                 = item.name
         if user
-          li(class=[`${blockName}__nav-item`, `${blockName}__nav-item--account`])
-            a(class=`${blockName}__nav-link`)
+          li(class=[`${b}__nav-item`, `${b}__nav-item--account`])
+            a(class=`${b}__nav-link`)
               = user
         else
           each button, _ in menuButtons
-            li(class=[`${blockName}__nav-item`, `${blockName}__nav-item--${button.name}`])
+            li(class=[`${b}__nav-item`, `${b}__nav-item--${button.name}`])
               +button({
                 theme: button.theme,
                 caption: button.caption,

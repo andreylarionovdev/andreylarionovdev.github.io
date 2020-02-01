@@ -1,5 +1,5 @@
 mixin paginator(options)
-  - const blockName = 'paginator'
+  - const b = 'paginator'
   -
     const {
       source = [],
@@ -8,7 +8,7 @@ mixin paginator(options)
     } = options
 
   div(
-    class=blockName
+    class=b
     data-source=source
     data-page-size=pageSize
     data-page-range=pageRange

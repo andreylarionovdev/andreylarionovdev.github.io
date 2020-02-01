@@ -1,7 +1,7 @@
 mixin label(options)
-  - const blockName = 'label'
+  - const b = 'label'
   - const { label, hint, _for } = options || {}
 
-  label(class=[blockName, 'clearfix'] for=_for)
-    h3(class=[`${blockName}__left`, 'h3'])= label
-    span(class=`${blockName}__right`)= hint
+  label(class=[b, 'clearfix'] for=_for)
+    h3(class=[`${b}__left`, 'h3'])= label
+    span(class=`${b}__right`)= hint

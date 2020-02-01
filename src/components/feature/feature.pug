@@ -1,8 +1,8 @@
 mixin feature(options)
-  - const blockName = 'feature'
+  - const b = 'feature'
   - const { icon, title, hint } = options || {}
 
-  div(class=blockName)
-    i(class=[`${blockName}__icon`, 'material-icons'])= icon
-    h3(class=`${blockName}__title`)= title
-    p(class=`${blockName}__hint`)= hint
+  div(class=b)
+    i(class=[`${b}__icon`, 'material-icons'])= icon
+    h3(class=`${b}__title`)= title
+    p(class=`${b}__hint`)= hint

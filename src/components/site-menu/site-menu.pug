@@ -1,11 +1,11 @@
 mixin site-menu(options)
-  - const blockName = 'site-menu'
+  - const b = 'site-menu'
   - const { theme, items } = options || {}
 
-  - let modifiers = [`${blockName}--${theme}`]
+  - var blockModifiers = [`${b}--${theme}`]
 
-  ul(class=blockName class=modifiers)
+  ul(class=b class=blockModifiers)
     each link in items
-      li(class=`${blockName}__li`)
-        h2(class=`${blockName}__title`)
-          a(class=`${blockName}_a` href=link.href)= link.text
+      li(class=`${b}__li`)
+        h2(class=`${b}__title`)
+          a(class=`${b}_a` href=link.href)= link.text
