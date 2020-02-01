@@ -1,4 +1,4 @@
-export const cls = function ({b, e, m, js} = {}) {
+export const bem = function ({b, e, m, js} = {}) {
   let classes = [];
   let cls = b;
   const isElement = b && e;

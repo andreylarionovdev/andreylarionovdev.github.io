@@ -1,7 +1,7 @@
 mixin button(options)
-  - const blockName = 'button'
+  - var b = 'button'
   -
-    const {
+    var {
       theme,
       caption,
       href = '/change=me',
@@ -11,18 +11,20 @@ mixin button(options)
       withArrow
     } = options || {}
 
-  - let modifiers = [blockName + '--' + theme]
+  - var blockModifiers = [theme]
 
   if isHovered
-    - modifiers.push(`${blockName}--hovered`)
+    - blockModifiers.push('hovered')
   if isFluid
-    - modifiers.push(`${blockName}--fluid`)
+    - blockModifiers.push('fluid')
   if isSmall
-    - modifiers.push(`${blockName}--small`)
+    - blockModifiers.push('small')
   if withArrow
-    - modifiers.push(`${blockName}--with-arrow`)
+    - blockModifiers.push('with-arrow')
 
-  a(class=blockName class=modifiers href=href)
-    div(class=`${blockName}__inner`)
-      span(class=`${blockName}__caption`)= caption
-      i(class=[`${blockName}__arrow`, 'material-icons'])= 'arrow_forward'
+  - var f = require('../../js/functions')
+
+  a(class=f.bem({b, m: blockModifiers}) href=href)
+    div(class=f.bem({b, e: 'inner'}))
+      span(class=f.bem({b, e: 'caption'}))= caption
+      i(class=[...f.bem({b, e: 'arrow'}), 'material-icons'])= 'arrow_forward'

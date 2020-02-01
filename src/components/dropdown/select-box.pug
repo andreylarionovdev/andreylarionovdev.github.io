@@ -7,23 +7,23 @@ mixin select-box(options)
   - const js = 'js'
   - const { rows, zIndex } = options || {}
 
-  ul(class=f.cls({b, e: 'menu', js}) style={'z-index': zIndex})
+  ul(class=f.bem({b, e: 'menu', js}) style={'z-index': zIndex})
     each row in rows
-      li(class=f.cls({b, e: 'menu-item', js}))
-        span(class=f.cls({b, e: 'item-name'}))= row.text
-        span(class=f.cls({b, e: 'count-buttons'}))
-          span(class=f.cls({b, e: 'change-count-btn', m: 'dec', js}) data-op='-')= '-'
-          span(class=f.cls({b, e: 'count', js}))= row.count
-          span(class=f.cls({b, e: 'change-count-btn', m: 'inc', js}) data-op='+')= '+'
-    li(class=f.cls({b, e: 'footer-buttons'}))
-      span(class=f.cls({b, e: 'clear-button', js}))
+      li(class=f.bem({b, e: 'menu-item', js}))
+        span(class=f.bem({b, e: 'item-name'}))= row.text
+        span(class=f.bem({b, e: 'count-buttons'}))
+          span(class=f.bem({b, e: 'change-count-btn', m: 'dec', js}) data-op='-')= '-'
+          span(class=f.bem({b, e: 'count', js}))= row.count
+          span(class=f.bem({b, e: 'change-count-btn', m: 'inc', js}) data-op='+')= '+'
+    li(class=f.bem({b, e: 'footer-buttons'}))
+      span(class=f.bem({b, e: 'clear-button', js}))
         +button({
           theme: 'textual',
           caption: 'очистить',
           isHovered: true,
           href: 'javascript:void(0)',
         })
-      span(class=f.cls({b, e: 'apply-button'}))
+      span(class=f.bem({b, e: 'apply-button'}))
         +button({
           theme: 'textual',
           caption: 'применить',

@@ -1,9 +1,9 @@
 include ../../rate-button/rate-button
 
 mixin room-thumb(options)
-  - const blockName = 'room-thumb'
+  - var b = 'room-thumb'
   -
-    const {
+    var {
       roomNumber,
       href='change-me',
       pricePerDay,
@@ -14,43 +14,48 @@ mixin room-thumb(options)
       focus
     } = options || {}
 
-  - let modifiers = []
+  - var blockModifiers = []
 
   if focus
-    - modifiers.push(blockName+'--focus')
+    - blockModifiers.push('focus')
 
-  div(class=[blockName, 'card'] class=modifiers)
-    figure(class=`${blockName}__carousel-inner` role="group")
+  - var f = require('../../js/functions')
+
+  div(class=f.bem({b, m: blockModifiers})).card
+    figure(class=`${b}__carousel-inner`)
       each image, inx in images
-        - let imageClasses = [`${blockName}__carousel-image`]
+        - var bemObj = {b, e: 'carousel-image'}
         if inx === 0
-          - imageClasses.push(`${blockName}__carousel-image--active`)
-        img(class=imageClasses src=require(`../../img/${image.src}`) alt=image.alt)
-      div(class=[`${blockName}__carousel-control`, `${blockName}__carousel-control--prev`])
-        i(class=[`${blockName}__arrow-left`, 'material-icons'])= 'keyboard_arrow_left'
-      div(class=[`${blockName}__carousel-control`, `${blockName}__carousel-control--next`])
-        i(class=[`${blockName}__arrow-right`, 'material-icons'])= 'keyboard_arrow_left'
-      ul(class=`${blockName}__carousel-indicators`)
-        each _, i in images
-          - const classActive = (i === 0) ? `${blockName}__carousel-indicator--active` : '';
-          li(class=`${blockName}__carousel-indicator` class=classActive)
-    header(class=[`${blockName}__header`])
-      a(class=`${blockName}__number` href=href)
-        span(class=`${blockName}__number-sign`)= '№'
-        span(class=`${blockName}__number-value`)= roomNumber
-        h3(class=[`${blockName}__number-feature`, 'h3', 'h3--purple'])= feature
-      div(class=[`${blockName}__price-per-day`, 'body'])
-        span(class=`${blockName}__cost`)!= pricePerDay.toLocaleString('ru-RU') + '₽'
+          - bemObj.m = 'active'
+        img(class=f.bem(bemObj) src=require(`../../img/${image.src}`) alt=image.alt)
+      div(class=f.bem({b, e: 'carousel-control', m: 'prev'}))
+        i.material-icons= 'keyboard_arrow_left'
+      div(class=f.bem({b, e: 'carousel-control', m: 'next'}))
+        i.material-icons= 'keyboard_arrow_left'
+      ul(class=`${b}__carousel-indicators`)
+        each _, inx in images
+          - const classActive = (i === 0) ? `${b}__carousel-indicator--active` : '';
+          - var bemObj = {b, e: 'carousel-indicator'}
+          if inx === 0
+            - bemObj.m = 'active'
+          li(class=f.bem(bemObj))
+    header(class=[`${b}__header`])
+      a(class=`${b}__number` href=href)
+        span(class=`${b}__number-sign`)= '№'
+        span(class=`${b}__number-value`)= roomNumber
+        h3(class=`${b}__number-feature`).h3.h3--purple= feature
+      div(class=`${b}__price-per-day`).body
+        span(class=`${b}__cost`)!= pricePerDay.toLocaleString('ru-RU') + '₽'
         |&nbsp;
-        span(class=`${blockName}__date-unit`)= 'в сутки'
-    footer(class=`${blockName}__footer`)
-      div(class=`${blockName}__rate`)
+        span(class=`${b}__date-unit`)= 'в сутки'
+    footer(class=`${b}__footer`)
+      div(class=`${b}__rate`)
         +rate-button({
           id: `${roomNumber}__rate`,
           base: 5,
           rate
         })
-      p(class=`${blockName}__feedback-counter`)
+      p(class=`${b}__feedback-counter`)
         b= feedbackCounter
         |&nbsp;
         span= 'Отзывов'
