@@ -94,38 +94,28 @@
     background-color: #6FCF97; }
 
 .font-sample {
-  position: relative;
-  padding-left: 34%;
-  padding-right: 6%;
-  margin-bottom: 50px; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
   .font-sample__name {
-    float: left;
     font-family: Montserrat, sans-serif;
-    position: absolute;
     text-align: right;
-    top: 0;
-    left: 0;
-    width: 28.5%;
+    width: 2.375rem;
     font-weight: normal;
     color: rgba(31, 32, 65, 0.25);
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-right: 1.875rem; }
   .font-sample__description {
-    float: left;
     font-style: normal; }
-  .font-sample--text-header {
-    min-height: 60px; }
-    .font-sample--text-header .font-sample__description {
-      font-family: Quicksand, sans-serif; }
-  .font-sample--text-header-inside {
-    min-height: 50px; }
-    .font-sample--text-header-inside .font-sample__description {
-      font-family: Quicksand, sans-serif; }
-  .font-sample--text-label {
-    min-height: 10px; }
-  .font-sample--text-body {
-    padding-right: 60px; }
-    .font-sample--text-body .font-sample__name {
-      text-transform: capitalize; }
+  .font-sample--text-header .font-sample__description {
+    font-family: Quicksand, sans-serif; }
+  .font-sample--text-header-inside .font-sample__description {
+    font-family: Quicksand, sans-serif;
+    padding-right: 2rem; }
+  .font-sample--text-body .font-sample__name {
+    text-transform: capitalize; }
+  .font-sample--text-body .font-sample__description {
+    padding-right: 4rem; }
 
 .label {
   display: -webkit-box;
@@ -1936,7 +1926,8 @@
   width: 95.5%;
   margin-top: 9rem;
   display: grid;
-  grid-template-columns: 1fr 1fr; }
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 15.75rem; }
   @media (min-width: 992px) {
     .ui-colors-type {
       width: 79.2%;
@@ -1944,10 +1935,16 @@
       min-width: 20rem; } }
   @media (max-width: 1199px) {
     .ui-colors-type {
-      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); } }
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+      grid-row-gap: 3rem; } }
   @media (max-width: 767px) {
     .ui-colors-type {
       grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); } }
+  .ui-colors-type__fonts {
+    display: grid;
+    grid-row-gap: 3.125rem;
+    grid-auto-rows: -webkit-min-content;
+    grid-auto-rows: min-content; }
 
 .ui-cards {
   margin: 0 auto;

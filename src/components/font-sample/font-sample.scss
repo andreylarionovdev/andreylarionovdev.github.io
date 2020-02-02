@@ -1,53 +1,41 @@
 .font-sample {
   $blockName: &;
-  position: relative;
-  padding-left: 34%;
-  padding-right: 6%;
-  margin-bottom: 50px;
+  display: flex;
 
   &__name {
-    float: left;
     font-family: Montserrat, sans-serif;
-    position: absolute;
     text-align: right;
-    top: 0;
-    left: 0;
-    width: 28.5%;
+    width: 2.375rem;
     font-weight: normal;
     color: $color-dark-25;
     text-transform: uppercase;
+    margin-right: 1.875rem;
   }
 
   &__description {
-    float: left;
     font-style: normal;
   }
 
   &--text-header {
-    min-height: 60px;
-
     #{$blockName}__description {
       font-family: Quicksand, sans-serif;
     }
   }
 
   &--text-header-inside {
-    min-height: 50px;
-
     #{$blockName}__description {
       font-family: Quicksand, sans-serif;
+      padding-right: 2rem;
     }
   }
 
-  &--text-label {
-    min-height: 10px;
-  }
-
   &--text-body {
-    padding-right: 60px;
-
     #{$blockName}__name {
       text-transform: capitalize;
+    }
+
+    #{$blockName}__description {
+      padding-right: 4rem;
     }
   }
 }

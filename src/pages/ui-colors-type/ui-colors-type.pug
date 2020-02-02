@@ -7,10 +7,10 @@ include ../../components/font-sample/font-sample
 block vars
   - const title = 'UI Kit - Colors & Type'
 block content
-  div.ui-colors-type
+  .ui-colors-type
     nav.container__logo
       +logo
-    div.grid-column
+    .ui-colors-type__colors
       +color-sample({
         color: 'dark-100',
         title: 'Dark Shade 100%',
@@ -46,7 +46,7 @@ block content
         title: 'Green',
         hex: '#6FCF97'
       })
-    div.grid-column
+    .ui-colors-type__fonts
       +font-sample({
         theme: 'text-header',
         name: 'h1',
