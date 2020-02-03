@@ -14,6 +14,8 @@
   }
 
   &__colors {
+    display: grid;
+    grid-row-gap: 1.25rem;
   }
   &__fonts {
     display: grid;
