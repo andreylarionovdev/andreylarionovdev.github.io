@@ -1,13 +1,14 @@
 .label {
-    display: flex;
-    justify-content: space-between;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    &__title {
-        font-weight: bold;
-        color: $color-dark-100;
-    }
-    &__hint {
-        color: $color-dark-50;
-    }
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+
+  &__title {
+    font-weight: bold;
+    color: $color-dark-100;
+  }
+  &__hint {
+    color: $color-dark-50;
+  }
 }

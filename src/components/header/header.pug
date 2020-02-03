@@ -5,10 +5,12 @@ mixin header(options)
   - var { user, menuItems, menuButtons } = options || {}
 
   - var f = require('../../js/functions')
+  - var b = 'header'
+  - var js = 'js'
 
   nav.header
     .header__inner
-      i.header__nav-toggle.material-icons= 'menu'
+      i(class=f.bem({b, e: 'nav-toggle', js})).material-icons= 'menu'
       figure.header__logo
         +logo(true)
       ul.header__nav
@@ -27,11 +29,7 @@ mixin header(options)
             a.header__nav-link= user
         else
           each button, _ in menuButtons
-            li(class=f.bem({
-              b: 'header',
-              e: 'nav-item',
-              m: button.name
-            }))
+            li(class=f.bem({b: 'header', e: 'nav-item', m: button.name}))
               +button({
                 theme: button.theme,
                 caption: button.caption,

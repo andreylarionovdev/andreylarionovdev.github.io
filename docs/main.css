@@ -373,7 +373,8 @@
   font-size: 0.75rem;
   line-height: 1.25rem;
   font-family: Montserrat, sans-serif;
-  display: inline-block; }
+  display: inline-block;
+  cursor: pointer; }
   .radio-button__input {
     position: absolute;
     opacity: 0; }
@@ -401,7 +402,8 @@
     font-size: 0.875rem;
     color: rgba(31, 32, 65, 0.5); }
     .radio-button__label:after, .radio-button__label:before {
-      position: absolute; }
+      position: absolute;
+      cursor: pointer; }
     .radio-button__label:before {
       content: '';
       top: 0;
@@ -1178,7 +1180,7 @@
   .footer-menu__list {
     list-style: none;
     padding-left: 0;
-    margin: 18px 0; }
+    margin: 1.125rem 0; }
   .footer-menu__item {
     margin-bottom: 14px; }
   .footer-menu__link {

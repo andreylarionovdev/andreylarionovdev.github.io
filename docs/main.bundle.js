@@ -427,7 +427,7 @@ eval("/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {\n
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {\n  const className = 'header';\n  const classNav = `${className}__nav`;\n  const classNavActive = `${classNav}--active`;\n  const classToggleBtn = `${className}__nav-toggle`;\n\n  $(`.${classToggleBtn}`).on('click', function () {\n    const $header = $(this).closest(`.${className}`);\n    $header.find(`.${classNav}`).toggleClass(classNavActive)\n  });\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/components/header/header.js?");
+eval("/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {\n  $('.js-header__nav-toggle').on('click', function () {\n    const $header = $(this).closest('.js-header');\n    $header.find('.js-header__nav').toggleClass('header__nav--active')\n  });\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/components/header/header.js?");
 
 /***/ }),
 

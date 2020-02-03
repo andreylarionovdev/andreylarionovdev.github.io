@@ -1,5 +1,5 @@
 .font-sample {
-  $blockName: &;
+  $blockClass: &;
   display: flex;
 
   &__name {
@@ -17,24 +17,24 @@
   }
 
   &--text-header {
-    #{$blockName}__description {
+    #{$blockClass}__description {
       font-family: Quicksand, sans-serif;
     }
   }
 
   &--text-header-inside {
-    #{$blockName}__description {
+    #{$blockClass}__description {
       font-family: Quicksand, sans-serif;
       padding-right: 2rem;
     }
   }
 
   &--text-body {
-    #{$blockName}__name {
+    #{$blockClass}__name {
       text-transform: capitalize;
     }
 
-    #{$blockName}__description {
+    #{$blockClass}__description {
       padding-right: 4rem;
     }
   }

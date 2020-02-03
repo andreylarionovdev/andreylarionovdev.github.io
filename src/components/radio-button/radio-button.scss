@@ -4,6 +4,7 @@
   line-height: 1.25rem;
   font-family: Montserrat, sans-serif;
   display: inline-block;
+  cursor: pointer;
 
   &__input {
     position: absolute;
@@ -37,6 +38,7 @@
     &:after,
     &:before {
       position: absolute;
+      cursor: pointer;
     }
     &:before {
       content: '';

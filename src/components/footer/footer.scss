@@ -1,9 +1,9 @@
 @import '../../css/mixins';
 .footer {
-  $blockName: &;
+  $blockClass: &;
   min-height: inherit;
   background: white;
-  box-shadow: 0 0.625rem 1.25rem rgba(31, 32, 65, 0.05);
+  box-shadow: 0 0.625rem 1.25rem $color-dark-5;
   position: relative;
   &__row-divider {
     margin: 0;
@@ -113,24 +113,24 @@
     }
   }
   &--creative {
-    #{$blockName}__inner {
+    #{$blockClass}__inner {
       grid-template-columns: 1fr;
       grid-template-areas:
         'header'
         'social';
       grid-row-gap: 0;
     }
-    #{$blockName}__header {
+    #{$blockClass}__header {
       text-align: center;
       padding: 0 25%;
     }
-    #{$blockName}__social {
+    #{$blockClass}__social {
       justify-content: center;
     }
-    #{$blockName}__row-divider,
-    #{$blockName}__navbar,
-    #{$blockName}__subscribe,
-    #{$blockName}__copyright {
+    #{$blockClass}__row-divider,
+    #{$blockClass}__navbar,
+    #{$blockClass}__subscribe,
+    #{$blockClass}__copyright {
       display: none;
     }
   }

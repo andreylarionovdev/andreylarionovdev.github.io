@@ -1,11 +1,6 @@
 $(document).ready(function () {
-  const className = 'header';
-  const classNav = `${className}__nav`;
-  const classNavActive = `${classNav}--active`;
-  const classToggleBtn = `${className}__nav-toggle`;
-
-  $(`.${classToggleBtn}`).on('click', function () {
-    const $header = $(this).closest(`.${className}`);
-    $header.find(`.${classNav}`).toggleClass(classNavActive)
+  $('.js-header__nav-toggle').on('click', function () {
+    const $header = $(this).closest('.js-header');
+    $header.find('.js-header__nav').toggleClass('header__nav--active')
   });
 });

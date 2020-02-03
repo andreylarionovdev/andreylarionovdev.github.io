@@ -1,19 +1,8 @@
 include ../label/label
 
 mixin radio-button(options)
-  - const b = 'radio-button'
   - const { id, name, value, label, isChecked } = options || {}
 
-  div(class='radio-button')
-    input(
-      id=id
-      type='radio'
-      class=`${b}__input`
-      name=name
-      value=value
-      checked=isChecked
-    )
-    label(
-      for=id
-      class=`${b}__label`
-    )= label
+  .radio-button
+    input.radio-button__input(id=id type='radio' name=name value=value checked=isChecked)
+    label.radio-button__label(for=id)= label
