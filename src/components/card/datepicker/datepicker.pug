@@ -1,4 +1,5 @@
 mixin datepicker()
+  - var f = require('../../js/functions')
   .card.datepicker-card
     .datepicker.card.active
       nav.datepicker--nav
@@ -37,5 +38,13 @@ mixin datepicker()
                 .datepicker--cell.datepicker--cell-day= i
               - i++
             .datepicker--cell.datepicker--cell-day.-weekend-.-other-month-= '1'
-      a(class='datepicker--clear-btn')= 'Очистить'
-      a(class='datepicker--apply-btn')= 'Применить'
+      a(class=f.bem({
+        b: 'datepicker',
+        m: 'clear-btn',
+        js: 'js'
+      }))= 'Очистить'
+      a(class=f.bem({
+        b: 'datepicker',
+        m: 'apply-btn',
+        js: 'js'
+      }))= 'Применить'

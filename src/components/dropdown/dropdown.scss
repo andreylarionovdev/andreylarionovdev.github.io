@@ -1,5 +1,5 @@
 .dropdown {
-  $blockName: &;
+  $blockClass: &;
   position: relative;
   font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
@@ -30,7 +30,7 @@
     outline: none;
     z-index: -1;
   }
-  #{$blockName}__menu {
+  #{$blockClass}__menu {
     margin: 0;
     position: absolute;
     left: 0;
@@ -89,24 +89,24 @@
     line-height: 2.5rem;
   }
   &--expanded {
-    #{$blockName}__toggle {
+    #{$blockClass}__toggle {
       border: 1px solid $color-dark-50;
       border-bottom: none;
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0;
     }
-    #{$blockName}__menu {
+    #{$blockClass}__menu {
       display: block;
     }
   }
   &--edited {
-    #{$blockName}__footer-buttons {
+    #{$blockClass}__footer-buttons {
       display: flex;
       justify-content: space-between;
     }
   }
   &--empty {
-    #{$blockName}__clear-button {
+    #{$blockClass}__clear-button {
       visibility: hidden;
     }
   }

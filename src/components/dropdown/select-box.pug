@@ -7,53 +7,23 @@ mixin select-box(options)
   - var b = 'dropdown'
   - var js = 'js'
 
-  ul(class=f.bem({
-    b,
-    e: 'menu',
-    js
-  }) style={'z-index': zIndex})
+  ul(class=f.bem({b, e: 'menu', js}) style={'z-index': zIndex})
     each row in rows
-      li(class=f.bem({
-        b,
-        e: 'menu-item',
-        js
-      }))
+      li(class=f.bem({b, e: 'menu-item', js}))
         span.dropdown__item-name= row.text
         span.dropdown__count-buttons
-          span(data-op='-' class=f.bem({
-            b,
-            e: 'change-count-btn',
-            m: 'dec',
-            js
-          }))= '-'
-          span(class=f.bem({
-            b,
-            e: 'count',
-            js
-          }))= row.count
-          span(data-op='+' class=f.bem({
-            b,
-            e: 'change-count-btn',
-            m: 'inc',
-            js
-          }))= '+'
+          span(class=f.bem({b, e: 'change-count-btn', m: 'dec', js}) data-op='-')= '-'
+          span(class=f.bem({b, e: 'count', js}))= row.count
+          span(class=f.bem({b, e: 'change-count-btn', m: 'inc', js}) data-op='+')= '+'
     li.dropdown__footer-buttons
-      span(class=f.bem({
-        b,
-        e: 'clear-button',
-        js
-      }))
+      span(class=f.bem({b, e: 'clear-button', js}))
         +button({
           theme: 'textual',
           caption: 'очистить',
           isHovered: true,
           href: 'javascript:void(0)',
         })
-      span(class=f.bem({
-        b,
-        e: 'apply-button',
-        js
-      }))
+      span(class=f.bem({b, e: 'apply-button', js}))
         +button({
           theme: 'textual',
           caption: 'применить',

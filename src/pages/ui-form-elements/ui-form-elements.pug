@@ -3,7 +3,7 @@ extends ../base
 include ../../components/logo/logo
 include ../../components/input/input
 include ../../components/dropdown/dropdown
-include ../../components/dropdown-date-range/dropdown-date-range
+include ../../components/date-range/date-range
 include ../../components/radio-button/radio-button
 include ../../components/toggle-button/toggle-button
 include ../../components/label/label
@@ -70,8 +70,8 @@ block content
             placeholder: 'ДД.ММ.ГГГГ'
           })
         article.ui-form-elements__dropdown-group.ui-form-elements__dropdown-group--date-range
-          +dropdown-date-range({
-            id: 'dropdown-date-range-demo',
+          +date-range({
+            id: 'date-range-demo',
             fromLabel: 'date dropdown',
             from: 'ДД.ММ.ГГГГ',
             toLabel: 'date dropdown',

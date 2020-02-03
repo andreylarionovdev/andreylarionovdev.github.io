@@ -53,12 +53,12 @@ mixin room-thumb(options)
         span.room-thumb__number-sign= '№'
         span.room-thumb__number-value= roomNumber
         h3.room-thumb__number-feature.h3.h3--purple= feature
-      div.room-thumb__price-per-day
+      .room-thumb__price-per-day
         span.room-thumb__cost!= `${pricePerDay.toLocaleString('ru-RU')}₽`
         |&nbsp;
         span.room-thumb__date-unit= 'в сутки'
     footer.room-thumb__footer
-      div.room-thumb__rate
+      .room-thumb__rate
         +rate-button({
           id: `${roomNumber}__rate`,
           base: 5,

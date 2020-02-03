@@ -5,18 +5,18 @@ include ../../toggle-button/toggle-button
 mixin sign-up()
   form.card.sign-up
     h1.sign-up__title.h1= 'Регистрация аккаунта'
-    div.sign-up__input
+    .sign-up__input
       +input({
         id: 'first-name',
         placeholder: 'Имя'
       })
-    div.sign-up__input
+    .sign-up__input
       +input({
         id: 'last-name',
         placeholder: 'Фамилия'
       })
-    div.sign-up__gender
-      div.sign-up__radio-button
+    .sign-up__gender
+      .sign-up__radio-button
         +radio-button({
           id: 'g-male',
           name: 'gender',
@@ -24,55 +24,55 @@ mixin sign-up()
           label: 'Мужчина',
           isChecked: true
         })
-      div.sign-up__radio-button
+      .sign-up__radio-button
         +radio-button({
           id: 'g-female',
           name: 'gender',
           value: 'f',
           label: 'Женщина'
         })
-    div.sign-up__birthday
-      div.sign-up__label
+    .sign-up__birthday
+      .sign-up__label
         +label({
           label: 'Дата рождения'
         })
-      div.sign-up__input
+      .sign-up__input
         +input({
           id: 'sign-up__input-birthday',
           placeholder: 'ДД.ММ.ГГГГ'
         })
-    div.sign-up__email
-      div.sign-up__label
+    .sign-up__email
+      .sign-up__label
         +label({
           label: 'Данные для входа в сервис'
         })
-      div.sign-up__input
+      .sign-up__input
         +input({
           id: 'sign-up__input-email',
           placeholder: 'Email',
           type: 'email'
         })
-    div.sign-up__input
+    .sign-up__input
       +input({
         id: 'sign-up__input-password',
         placeholder: 'Пароль',
         type: 'password'
       })
-    div.sign-up__toggle
+    .sign-up__toggle
       +toggle-button({
         id: 'sign-up__toggle-promote',
         label: 'Получать спецпредложения'
       })
-    div.sign-up__pay-button
+    .sign-up__pay-button
       +button({
         theme: 'default',
         caption: 'Перейти к оплате',
         withArrow: true,
         isFluid: true
       })
-    div.sign-up__auth
+    .sign-up__auth
       p.sign-up__auth-hint= 'Уже есть аккаунт на Toxin'
-      div.sign-up__auth-button
+      .sign-up__auth-button
         +button({
           theme: 'transparent',
           caption: 'Войти',

@@ -1,5 +1,5 @@
 .room-thumb {
-  $parent: #{&};
+  $blockClass: &;
   border: none;
   &__carousel-inner {
     position: relative;
@@ -11,7 +11,7 @@
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
     &:hover {
-      #{$parent}__carousel-control {
+      #{$blockClass}__carousel-control {
         opacity: 1;
       }
     }
@@ -125,7 +125,7 @@
     line-height: 1.375rem;
   }
   &--focus {
-    #{$parent}__carousel-control {
+    #{$blockClass}__carousel-control {
       opacity: 1;
     }
   }

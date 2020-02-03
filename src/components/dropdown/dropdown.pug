@@ -24,20 +24,13 @@ mixin dropdown(options)
     - blockModifiers.push('empty')
 
   - var f = require('../../js/functions.js')
+  - var b = 'dropdown'
   - var js = 'js'
 
-  div(id=id class=f.bem({
-    b: 'dropdown',
-    m: blockModifiers,
-    js
-  }))
-    label(class=f.bem({
-      b: 'dropdown',
-      e: 'toggle',
-      js
-    }))
-      span.dropdown__text= value
+  div(id=id class=f.bem({b, m: blockModifiers, js}))
+    label(class=f.bem({b, e: 'toggle', js}))
+      span(class=f.bem({b, e: 'text', js}))= value
       i.material-icons= 'keyboard_arrow_down'
-      input.dropdown__data-input(type='text' value=value)
+      input(class=f.bem({b, e: 'data-input', js}) type='text' value=value)
     if rows.length > 0
       +select-box(options)

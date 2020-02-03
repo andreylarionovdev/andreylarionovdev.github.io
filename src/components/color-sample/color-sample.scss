@@ -1,5 +1,5 @@
 .color-sample {
-  $blockName: &;
+  $blockClass: &;
   $colorRectWidth: 4.375rem;
   font-family: Quicksand, sans-serif;
   display: grid;
@@ -34,43 +34,43 @@
   }
 
   &--dark-100 {
-    #{$blockName}__color {
+    #{$blockClass}__color {
       background-color: $color-dark-100;
     }
   }
 
   &--dark-75 {
-    #{$blockName}__color {
+    #{$blockClass}__color {
       background-color: $color-dark-75;
     }
   }
 
   &--dark-50 {
-    #{$blockName}__color {
+    #{$blockClass}__color {
       background-color: $color-dark-50;
     }
   }
 
   &--dark-25 {
-    #{$blockName}__color {
+    #{$blockClass}__color {
       background-color: $color-dark-25;
     }
   }
 
   &--dark-5 {
-    #{$blockName}__color {
+    #{$blockClass}__color {
       background-color: $color-dark-5;
     }
   }
 
   &--purple {
-    #{$blockName}__color {
+    #{$blockClass}__color {
       background-color: $color-purple;
     }
   }
 
   &--green {
-    #{$blockName}__color {
+    #{$blockClass}__color {
       background-color: $color-green;
     }
   }
