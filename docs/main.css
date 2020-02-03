@@ -35,11 +35,11 @@
 
 .site-menu {
   list-style: none; }
-  .site-menu--purple a {
+  .site-menu--purple .site-menu__link {
     color: #BC9CFF; }
-  .site-menu--green a {
+  .site-menu--green .site-menu__link {
     color: #6FCF97; }
-  .site-menu a:hover {
+  .site-menu__link:hover {
     color: #1F2041; }
 
 .logo {
@@ -416,48 +416,49 @@
 
 .toggle-button {
   font-size: 0.75rem;
-  font-family: Montserrat, sans-serif; }
-  .toggle-button__toggle {
-    min-height: 20px; }
+  font-family: Montserrat, sans-serif;
+  line-height: 1.25rem; }
   .toggle-button__input {
     position: absolute;
     opacity: 0; }
     .toggle-button__input:checked + .toggle-button__label:after {
       background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-      left: 23px; }
+      left: 1.5rem; }
     .toggle-button__input:checked + .toggle-button__label:before {
       border: 1px solid #BC9CFF; }
   .toggle-button__label {
-    display: block;
     position: relative;
-    padding-left: 50px;
+    padding-left: 3.125rem;
     font-style: normal;
     font-weight: normal;
     font-size: 0.875rem;
-    color: rgba(31, 32, 65, 0.75); }
+    color: rgba(31, 32, 65, 0.75);
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
     .toggle-button__label:after, .toggle-button__label:before {
+      cursor: pointer;
       position: absolute;
       top: 0;
       left: 0; }
     .toggle-button__label:after {
-      content: "";
-      top: 4px;
-      left: 4px;
-      width: 12px;
-      height: 12px;
-      border-radius: 6px;
+      content: '';
+      top: 0.25rem;
+      left: 0.25rem;
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 50%;
       display: block;
       background: rgba(31, 32, 65, 0.25); }
     .toggle-button__label:before {
-      content: "";
-      display: inline-block;
-      width: 40px;
-      height: 20px;
+      content: '';
+      display: inline;
+      width: 2.5rem;
+      height: 1.25rem;
       border: 1px solid rgba(31, 32, 65, 0.25);
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box;
-      border-radius: 10px; }
+      border-radius: 0.625rem; }
 
 .like-button {
   display: inline-grid;

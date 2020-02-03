@@ -1,17 +1,17 @@
 .site-menu {
+  $blockClass: &;
   list-style: none;
-  $a: #{&}__a;
   &--purple {
-    #{a} {
+    #{$blockClass}__link {
       color: $color-purple;
     }
   }
   &--green {
-    #{a} {
+    #{$blockClass}__link {
       color: $color-green;
     }
   }
-  #{a}:hover {
+  &__link:hover {
     color: $color-dark-100;
   }
 }

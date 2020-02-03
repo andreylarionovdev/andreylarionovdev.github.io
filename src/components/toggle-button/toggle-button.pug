@@ -1,16 +1,6 @@
 mixin toggle-button(options)
-  - const b = 'toggle-button'
-  - const { id, label, isChecked } = options || {}
+  - var { id, label, isChecked } = options || {}
 
-  div(class=b)
-    div(class=`${b}__toggle`)
-      input(
-        id=id
-        class=`${b}__input`
-        type='checkbox'
-        checked=isChecked
-      )
-      label(
-        for=id
-        class=`${b}__label`
-      )= label
+  .toggle-button
+    input.toggle-button__input(id=id type='checkbox' checked=isChecked)
+    label.toggle-button__label(for=id)= label
