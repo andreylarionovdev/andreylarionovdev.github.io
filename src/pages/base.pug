@@ -15,8 +15,8 @@ html(lang='en')
     meta(name='theme-color' content="#ffffff")
     title= title ? `Toxin booking | ${title}` : 'Toxin booking'
 
-  - const bodyClass = 'container'
-  - let classes = [bodyClass]
+  - var bodyClass = 'container'
+  - var classes = [bodyClass]
 
   if theme
     - classes.push(`${bodyClass}--${theme}`)

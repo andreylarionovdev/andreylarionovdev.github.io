@@ -1,11 +1,11 @@
 extends ../layouts/page
 
 block vars
-  - const title = 'Landing page'
+  - var title = 'Landing page'
 
 block main
   article.landing
-    div.landing__inner
+    .landing__inner
       section.landing__room-search
         +room-search
       aside.landing__hero-text.body

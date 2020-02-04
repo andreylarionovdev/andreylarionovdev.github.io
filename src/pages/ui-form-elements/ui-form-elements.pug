@@ -19,13 +19,13 @@ include ../../components/feature/feature
 include ../../components/feedback/feedback
 
 block vars
-  - const title = 'UI Kit - Form elements'
+  - var title = 'UI Kit - Form elements'
 block content
-  div.ui-form-elements
+  .ui-form-elements
     nav.container__logo
       +logo
     section.row.ui-form-elements__top
-      div.grid-column
+      .grid-column
         article.ui-form-elements__input-group
           .ui-form-elements__label
             +label({
@@ -97,8 +97,8 @@ block content
             withArrow: true,
             type: 'email'
           })
-      div.grid-column-gap
-      div.grid-column
+      .grid-column-gap
+      .grid-column
         article.ui-form-elements__checkbox-group
           +checkbox-list({
             label: 'checkbox buttons',
@@ -174,8 +174,8 @@ block content
             base: 5,
             rate: 5
           })
-      div.grid-column-gap
-      div.grid-column
+      .grid-column-gap
+      .grid-column
         article.ui-form-elements__range-slider
           +range-slider({
             name: 'range-slider',
@@ -238,7 +238,7 @@ block content
             pageRange: 1
           })
     section.row.ui-form-elements__dropdown-states
-      div.grid-column
+      .grid-column
         article.ui-form-elements__dropdown-group.ui-form-elements__dropdown-group--collapsed
           .ui-form-elements__label
             +label({
@@ -266,8 +266,8 @@ block content
               {count: 0, text: 'ванные комнаты', name: 'bathroom'}
             ]
           })
-      div.grid-column-gap
-      div.grid-column
+      .grid-column-gap
+      .grid-column
         article.ui-form-elements__dropdown-group.ui-form-elements__dropdown-group--with-apply-btn
           .ui-form-elements__label
             +label({
@@ -286,8 +286,8 @@ block content
               {count: 0, text: 'младенцы', name: 'baby'}
             ]
           })
-      div.grid-column-gap
-      div.grid-column
+      .grid-column-gap
+      .grid-column
         article.ui-form-elements__dropdown-group.ui-form-elements__dropdown-group--with-clear-btn
           .ui-form-elements__label
             +label({
@@ -305,7 +305,7 @@ block content
             ]
           })
     section.row.ui-form-elements__rich-lists.clearfix
-      div.grid-column
+      .grid-column
         article.ui-form-elements__checkbox-list-xp-group.ui-form-elements__checkbox-list-xp-group--collapsed
           +checkbox-list-xp({
             id: 'exp_check_list_collapsed',
@@ -327,8 +327,8 @@ block content
               {name: 'shampoo_2', label: 'Шампунь'}
             ]
           })
-      div.grid-column-gap
-      div.grid-column
+      .grid-column-gap
+      .grid-column
         article.ui-form-elements__rich-checkbox-group
           +checkbox-list({
             label: 'rich checkbox buttons',
@@ -345,8 +345,8 @@ block content
               }
             ]
           })
-      div.grid-column-gap
-      div.grid-column
+      .grid-column-gap
+      .grid-column
         article.ui-form-elements__bullet-list-group
           .ui-form-elements__label
             +label({
@@ -361,7 +361,7 @@ block content
             ]
           })
     section.row.ui-form-elements__bottom.clearfix
-      div.grid-column
+      .grid-column
         article.ui-form-elements__feature-group
           .ui-form-elements__feature
             +feature({
@@ -375,8 +375,8 @@ block content
               title: 'Удобство',
               hint: 'Окно в каждой из спален'
             })
-      div.grid-column-gap
-      div.grid-column
+      .grid-column-gap
+      .grid-column
         article.feedback-group.ui-form-elements__feedback-group
           .feedback-group__feedback
             +feedback({

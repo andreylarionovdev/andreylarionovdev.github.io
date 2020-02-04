@@ -3,8 +3,8 @@ extends ../layouts/auth
 include ../../components/card/sign-up/sign-up
 
 block vars
-  - const title = 'Registration'
+  - var title = 'Registration'
 
 block form
-  div.registration__form
+  .registration__form
     +sign-up

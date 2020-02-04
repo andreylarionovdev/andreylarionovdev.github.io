@@ -9,18 +9,18 @@ include ../../components/card/sign-in/sign-in
 include ../../components/card/sign-up/sign-up
 
 block vars
-  - const title = 'UI Kit - Cards'
-  - const theme = 'gray'
+  - var title = 'UI Kit - Cards'
+  - var theme = 'gray'
 block content
-  div.ui-cards
+  .ui-cards
     nav.container__logo
       +logo
-    div.grid-column
+    .grid-column
       article.ui-cards__card
         +room-search()
       article.ui-cards__card
         +sign-up()
-    div.grid-column
+    .grid-column
       article.ui-cards__card
         +room-book({
           roomNumber: 888,
@@ -31,7 +31,7 @@ block content
         })
       article.ui-cards__card
         +sign-in()
-    div.grid-column
+    .grid-column
       article.ui-cards__card
         +datepicker()
       article.ui-cards__card.ui-cards__card--room-thumb-vip

@@ -7,7 +7,7 @@ include ../../components/card/room-book/room-book
 include ../../components/votes-chart/votes-chart
 
 block vars
-  - const title = 'Room details'
+  - var title = 'Room details'
 
 block main
   article.room-details
@@ -15,8 +15,8 @@ block main
       img.room-details__feature-image(src=require('../../img/room-details-left.png'))
       img.room-details__feature-image(src=require('../../img/room-details-top.png'))
       img.room-details__feature-image(src=require('../../img/room-details-bottom.png'))
-    div.room-details__inner
-      div.room-details__main
+    .room-details__inner
+      .room-details__main
         section.room-details__info
           h2.h2= 'Сведения о номере'
           .room-details__features
@@ -43,7 +43,7 @@ block main
           .room-details__votes-chart
             +votes-chart('votes-chart')
         section.room-details__feedbacks
-          div.room-details__feedbacks-header
+          .room-details__feedbacks-header
             h2.room-details__feedbacks-title.h2= 'Отзывы посетителей номера'
             span.room-details__feedbacks-counter.body= '2 отзыва'
           .room-details__feedback
@@ -88,7 +88,7 @@ block main
           h2.room-details__cancel-title.h2= 'Отмена'
           p.room-details__cancel-text.body
             = 'Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.'
-      div.room-details__sidebar
+      .room-details__sidebar
         section.room-details__book-form
           +room-book({
             roomNumber: 888,

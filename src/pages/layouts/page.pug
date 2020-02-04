@@ -6,7 +6,7 @@ include ../../components/footer/footer
 include ../../components/card/room-search/room-search
 
 block content
-  - const href = '/change-me'
+  - var href = '/change-me'
 
     header.page__header
       +header({
@@ -49,7 +49,7 @@ block content
         ]
       })
 
-    div.page_main
+    .page_main
       block main
 
     footer.page__footer
