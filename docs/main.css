@@ -1194,40 +1194,57 @@
     text-decoration: none; }
 
 .votes-chart {
-  margin: 0; }
-  .votes-chart__chart, .votes-chart__labels {
-    display: block;
-    float: left; }
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
+  .votes-chart__chart {
+    margin-right: 1.875rem; }
   .votes-chart__labels {
+    padding: 0;
+    margin: 0;
     list-style: none;
     display: inline-block;
     font-size: 0.875rem;
     font-family: Montserrat, sans-serif;
     line-height: 24px;
-    color: rgba(31, 32, 65, 0.75);
-    margin-top: 27px; }
+    color: rgba(31, 32, 65, 0.75); }
   .votes-chart__label {
-    cursor: pointer; }
-    .votes-chart__label--perfect::before {
-      background: #FFE39C; }
-    .votes-chart__label--good::before {
-      background: #6FCF97; }
-    .votes-chart__label--satisfactorily::before {
-      background: #BC9CFF; }
-    .votes-chart__label--bad::before {
-      background: #919191; }
-    .votes-chart__label--focus {
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .votes-chart__label--perfect .votes-chart__bullet {
+      background: -webkit-gradient(linear, left top, left bottom, from(#FFE39C), to(#FFBA9C));
+      background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%); }
+    .votes-chart__label--good .votes-chart__bullet {
+      background: -webkit-gradient(linear, left top, left bottom, from(#6FCF97), to(#66D2EA));
+      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%); }
+    .votes-chart__label--satisfactorily .votes-chart__bullet {
+      background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
+    .votes-chart__label--bad .votes-chart__bullet {
+      background: -webkit-gradient(linear, left top, left bottom, from(#919191), to(#3D4975));
+      background: linear-gradient(180deg, #919191 0%, #3D4975 100%); }
+    .votes-chart__label--active {
       font-weight: bold; }
-  .votes-chart__label::before {
-    content: "";
-    font-weight: bold;
+      .votes-chart__label--active .votes-chart__bullet {
+        width: 0.75rem;
+        height: 0.75rem; }
+  .votes-chart__caption {
+    margin-left: 0.25rem; }
+  .votes-chart__bullet {
     display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    margin-left: -11px;
-    margin-right: 5px; }
-  .votes-chart__circle--focus {
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 50%; }
+  .votes-chart__circle--active {
     stroke-width: 6; }
   .votes-chart__count {
     font-family: Quicksand, sans-serif;

@@ -1,36 +1,27 @@
 $(document).ready(function () {
-  const blockName = 'votes-chart';
-  const classLabel = `${blockName}__label`;
-
-  $(`.${classLabel}`).on('click', function () {
+  $('.js-votes-chart__label').on('click', function () {
     const $label = $(this);
+    const $chart = $(this).closest('.js-votes-chart');
 
-    const classLabelFocus = `${classLabel}--focus`;
+    const classLabelActive = 'votes-chart__label--active';
 
-    $(`.${classLabel}`).removeClass(`${classLabelFocus}`);
-    $label.addClass(classLabelFocus);
+    $chart.find('.js-votes-chart__label').removeClass(classLabelActive);
+    $label.addClass(classLabelActive);
 
-    const classCircle = `${blockName}__circle`;
     const voteKey = $label.attr('data-vote-key');
-    const $circle = $(`.${classCircle}--${voteKey}`);
-    const classCircleFocus = `${classCircle}--focus`;
+    const classCircleActive = 'votes-chart__circle--active';
 
-    $(`.${classCircle}`).removeClass(classCircleFocus);
-    $circle.addClass(classCircleFocus);
+    $chart.find('.js-votes-chart__circle').removeClass(classCircleActive);
+    $chart.find(`.votes-chart__circle--${voteKey}`).addClass(classCircleActive);
 
     const count = parseInt($label.data('count'));
 
-    const classCountValue = `${blockName}__count-value`;
-    const countValue = $(`.${classCountValue}`);
+    $('.js-votes-chart__count-value').text(count);
 
-    countValue.text(count);
-
-    const classCount = `${blockName}__count`;
-    const classCountLabel = `${classCount}--${voteKey}`;
-
-    $(`.${classCount}`)
+    $('.js-votes-chart__count')
         .removeClass()
-        .addClass(classCount)
-        .addClass(classCountLabel);
+        .addClass('votes-chart__count')
+        .addClass('js-votes-chart__count')
+        .addClass(`votes-chart__count--${voteKey}`);
   });
 });

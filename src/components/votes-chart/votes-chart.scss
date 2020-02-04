@@ -1,49 +1,64 @@
 .votes-chart {
+  $blockClass: &;
   margin: 0;
-  &__chart,
-  &__labels {
-    display: block;
-    float: left;
+  display: flex;
+  align-items: flex-end;
+  &__chart {
+    margin-right: 1.875rem;
   }
   &__labels {
+    padding: 0;
+    margin: 0;
     list-style: none;
     display: inline-block;
     font-size: 0.875rem;
     font-family: Montserrat, sans-serif;
     line-height: 24px;
     color: $color-dark-75;
-    margin-top: 27px;
   }
   &__label {
     cursor: pointer;
-    &--perfect::before {
-      background: #FFE39C;
+    display: flex;
+    align-items: center;
+    &--perfect {
+      #{$blockClass}__bullet {
+        background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+      }
     }
-    &--good::before {
-      background: #6FCF97;
+    &--good {
+      #{$blockClass}__bullet {
+        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+      }
     }
-    &--satisfactorily::before {
-      background: #BC9CFF;
+    &--satisfactorily {
+      #{$blockClass}__bullet {
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      }
     }
-    &--bad::before {
-      background: #919191;
+    &--bad {
+      #{$blockClass}__bullet {
+        background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+      }
     }
-    &--focus {
+    &--active {
       font-weight: bold;
+      #{$blockClass}__bullet {
+        width: 0.75rem;
+        height: 0.75rem;
+      }
     }
   }
-  &__label::before {
-    content: "";
-    font-weight: bold;
+  &__caption {
+    margin-left: 0.25rem;
+  }
+  &__bullet {
     display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    margin-left: -11px;
-    margin-right: 5px;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 50%;
   }
   &__circle {
-    &--focus {
+    &--active {
       stroke-width: 6;
     }
   }

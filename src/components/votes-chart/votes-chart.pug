@@ -1,8 +1,6 @@
 mixin votes-chart(options)
-  - const b = 'votes-chart'
-
   -
-    const {
+    var {
       id,
       votes = [
         {
@@ -18,72 +16,70 @@ mixin votes-chart(options)
           count: 260
         },
       ],
-      colors = {
-        perfect: '#FFE39C',
-        good: '#6FCF97',
-        satisfactorily: '#BC9CFF',
-        bad: '#919191',
+      gradientMap = {
+        perfect: ['#FFE39C', '#FFBA9C'],
+        good: ['#6FCF97', '#66D2EA'],
+        satisfactorily: ['#BC9CFF', '#8BA4F9'],
+        bad: ['#919191', '#3D4975'],
       },
       voteLabels = {
         perfect: 'Великолепно',
         good: 'Хорошо',
         satisfactorily: 'Удовлетворительно',
         bad: 'Разочарован',
-      }
+      },
+      width = 122,
+      height = width,
+      strokeWidth = 4
     } = options || {}
 
-  - const width = 122
-  - const height = 122
-  - const cx = width / 2
-  - const cy = width / 2
-  - const radius = 55
-  - const strokeWidth = 4
-  - const circumreference = 2 * Math.PI * radius
+  - var cx = width / 2
+  - var cy = width / 2
+  - var radius = cx - strokeWidth
+  - var circumreference = 2 * Math.PI * radius
 
-  - const sortedValues = votes.sort((a, b) => (b.count - a.count))
-  - const total = sortedValues.reduce((acc, { count }) => acc + count, 0)
+  - var sortedValues = votes.sort((a, b) => (b.count - a.count))
+  - var total = sortedValues.reduce((acc, { count }) => acc + count, 0)
 
-  - let angleOffset = 90
-  figure(class=[b, 'clearfix'])
-    svg(class=`${b}__chart` height=height width=width viewBox=[0, 0, width, height].join(' '))
+  - var angleOffset = 90
+
+  - var f = require('../../js/functions')
+  - var b = 'votes-chart'
+  - var js = 'js'
+
+  figure.votes-chart.js-votes-chart
+    svg.votes-chart__chart(height=height width=width viewBox=[0, 0, width, height].join(' '))
+      defs
+        each grad, label in gradientMap
+          linearGradient(id=label)
+            stop(offset='0%' stop-color=grad[0])
+            stop(offset='100%' stop-color=grad[1])
       each item in sortedValues
-        - const key = item.label
-        - const strokeDashOffset = circumreference - (item.count / total) * circumreference
-        - const circleTransformValue = `rotate(${angleOffset}, ${cx}, ${cy})`
+        - var label = item.label
+        - var strokeDashOffset = circumreference - (item.count / total) * circumreference
+        - var circleTransformValue = `rotate(${angleOffset}, ${cx}, ${cy})`
         - angleOffset = (item.count / total) * 360 + angleOffset
         g
           circle(
-            class=[`${b}__circle`, `${b}__circle--${key}`]
+            class=f.bem({b, e: 'circle', m: label, js})
             cx=cx
             cy=cy
             r=radius
             fill='transparent'
-            stroke=colors[key]
+            stroke=`url(#${label})`
             stroke-width=strokeWidth
             stroke-dasharray=circumreference - 2
             stroke-dashoffset=strokeDashOffset
             transform=circleTransformValue
           )
-      g(class=`${b}__count`)
-        text(
-          class=`${b}__count-value`
-          x='50%'
-          y='50%'
-          text-anchor='middle'
-        )= total
-        text(
-          class=`${b}__count-unit`
-          x='50%'
-          y='65%'
-          text-anchor='middle'
-        )= 'голосов'
+      g(class=f.bem({b, e: 'count', js}))
+        text(class=f.bem({b, e: 'count-value', js}) x='50%' y='50%' text-anchor='middle')= total
+        text.votes-chart__count-unit(x='50%' y='65%' text-anchor='middle')= 'голосов'
 
-    ul(class=`${b}__labels`)
+    ul.votes-chart__labels
       each label, key in voteLabels
-        - const countSourceItem = sortedValues.find(obj => obj.label === key)
-        - const count = countSourceItem !== undefined ? countSourceItem.count : '0';
-        li(
-          class=[`${b}__label`, `${b}__label--${key}`]
-          data-vote-key=key
-          data-count=count
-        )= label
+        - var countSourceItem = sortedValues.find(obj => obj.label === key)
+        - var count = countSourceItem !== undefined ? countSourceItem.count : '0';
+        li(class=f.bem({b, e: 'label', m: key, js}) data-vote-key=key data-count=count)
+          span.votes-chart__bullet
+          span.votes-chart__caption= label
