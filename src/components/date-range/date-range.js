@@ -11,7 +11,7 @@ $(document).ready(function () {
       prevHtml: '<i class="material-icons">arrow_back</i>',
       nextHtml: '<i class="material-icons">arrow_forward</i>',
       onShow: function (inst) {
-        inst.$datepicker.addClass('card');
+        inst.$datepicker.addClass('card').css('position', 'absolute');
         inst.$datepicker.css('width', `${$(o).outerWidth()}px`);
         addActionButtons(inst.$datepicker);
       }
@@ -82,23 +82,26 @@ $(document).ready(function () {
     };
 
     const addActionButtons = function ($_datepicker) {
-      const $clearBtn = $('<a class="datepicker--clear-btn js-datepicker--clear-btn">Очистить</a>');
-      const $applyBtn = $('<a class="datepicker--apply-btn js-datepicker--apply-btn">Применить</a>');
-      if ($_datepicker.find('.js-datepicker--clear-btn').length === 0) {
+      const $clearBtn = $('<a class="datepicker__clear-btn js-datepicker__clear-btn">Очистить</a>');
+      const $applyBtn = $('<a class="datepicker__apply-btn js-datepicker__apply-btn">Применить</a>');
+      if ($_datepicker.find('.js-datepicker__clear-btn').length === 0) {
         $clearBtn.on('click', function () {
           $datepicker.clear();
           clearDropdown($dropdownFrom);
           clearDropdown($dropdownTo);
         });
-        $_datepicker.append($clearBtn);
       }
-      if ($_datepicker.find('.js-datepicker--apply-btn').length === 0) {
+      if ($_datepicker.find('.js-datepicker__apply-btn').length === 0) {
         $applyBtn.on('click', function () {
           $datepicker.selectDate($datepicker.selectedDates);
           updateDropdown($datepicker.selectedDates, [$dropdownFrom, $dropdownTo]);
           $datepicker.hide();
         });
-        $_datepicker.append($applyBtn);
+      }
+      if ($_datepicker.find('.js-datepicker__footer').length === 0) {
+        const $footer = $('<div class="datepicker__footer js-datepicker__footer"></div>');
+        $footer.append($clearBtn).append($applyBtn);
+        $_datepicker.append($footer);
       }
     };
   });

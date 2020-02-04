@@ -1,61 +1,43 @@
-@import 'config';
 @import 'navigation';
 @import 'cell';
 
 .datepicker {
-  font-family: $datepickerFontFamily, sans-serif;
-  font-size: $datepickerFontSize;
-  color: map_get($datepickerTextColor, common);
-  padding: 0.875rem 0.875rem 3rem 1rem;
-  position: absolute;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  padding: 0.875rem 1.125rem;
   display: none;
-  transition: opacity $datepickerTransitionSpeed $datepickerTransitionEase, transform $datepickerTransitionSpeed $datepickerTransitionEase, left 0s $datepickerTransitionSpeed;
-  z-index: $datepickerZIndex;
+  z-index: 100;
 
   &.active {
     display: block;
-    transform: translate(0);
-    transition: opacity $datepickerTransitionSpeed $datepickerTransitionEase, transform $datepickerTransitionSpeed $datepickerTransitionEase, left 0s 0s;
   }
-
   &--body {
     display: none;
-
     &.active {
       display: block;
     }
   }
-
   &--content {
-    box-sizing: content-box;
-    padding: $datepickerPadding;
+    padding: 1.5rem 0;
   }
-  &--clear-btn,
-  &--apply-btn {
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__clear-btn,
+  &__apply-btn {
     cursor: pointer;
     font-family: Montserrat, sans-serif;
     font-size: 0.75rem;
-    line-height: 15px;
     font-weight: bold;
     display: inline-block;
     text-transform: uppercase;
-    position: absolute;
-    bottom: 0;
-    padding: 18px;
   }
-
-  &--clear-btn {
-    left: 0;
+  &__clear-btn {
     color: $color-dark-50;
   }
-  &--apply-btn {
-    right: 0;
+  &__apply-btn {
     color: $color-purple;
-  }
-}
-
-.datepicker-card {
-  .datepicker {
-    position: static;
   }
 }

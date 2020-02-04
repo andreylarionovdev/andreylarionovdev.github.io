@@ -1,11 +1,9 @@
-@import 'config';
-
 .datepicker {
   &--nav {
     display: flex;
     justify-content: space-between;
-    min-height: $datepickerNavigationHeight;
-    margin: 0 -4px 21px -6px;
+    align-items: center;
+    line-height: 2rem;
   }
   &--nav-title,
   &--nav-action {
@@ -20,34 +18,12 @@
   &--nav-title {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.1875rem;
-    line-height: 24px;
     font-weight: bold;
     color: $color-dark-100;
     i {
-      color: $color-dark-100;
       font-family: Quicksand, sans-serif;
       font-style: normal;
-      padding-left: 5px;
-    }
-  }
-  &--nav-action {
-    width: $datepickerDayCellSize;
-    border-radius: $datepickerBorderRadius;
-    user-select: none;
-    &:hover {
-      background: map_get($datepickerBG, hover);
-    }
-    &.-disabled- {
-      visibility: hidden;
-    }
-  }
-
-  &--nav-title {
-    border-radius: $datepickerBorderRadius;
-    padding: 0 8px;
-    &.-disabled- {
-      cursor: default;
-      background: none;
+      padding-left: 0.3125rem;
     }
   }
 }
