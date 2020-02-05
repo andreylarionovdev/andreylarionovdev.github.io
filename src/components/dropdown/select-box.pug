@@ -12,9 +12,10 @@ mixin select-box(options)
       li(class=f.bem({b, e: 'menu-item', js}))
         span.dropdown__item-name= row.text
         span.dropdown__count-buttons
-          span(class=f.bem({b, e: 'change-count-btn', m: 'dec', js}) data-op='-')= '-'
+          - var decModifiers = row.count < 1 ? 'disabled': '';
+          span(class=f.bem({b, e: 'change-count-btn', m: decModifiers, js}) data-op='-')= '-'
           span(class=f.bem({b, e: 'count', js}))= row.count
-          span(class=f.bem({b, e: 'change-count-btn', m: 'inc', js}) data-op='+')= '+'
+          span(class=f.bem({b, e: 'change-count-btn', js}) data-op='+')= '+'
     li.dropdown__footer-buttons
       span(class=f.bem({b, e: 'clear-button', js}))
         +button({

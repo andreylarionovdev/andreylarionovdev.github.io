@@ -300,7 +300,9 @@
     border-radius: 0.9375rem;
     cursor: pointer;
     border: 1px solid rgba(31, 32, 65, 0.5); }
-    .dropdown__change-count-btn--dec {
+    .dropdown__change-count-btn--disabled {
+      cursor: default;
+      pointer-events: none;
       border: 1px solid rgba(31, 32, 65, 0.25); }
   .dropdown__footer-buttons {
     display: none;

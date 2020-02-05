@@ -14,7 +14,13 @@ $(document).ready(function () {
   const numberChangerOnClick = function () {
     const $li = $(this).closest('.js-dropdown__menu-item');
 
-    const operator = $(this).closest('.js-dropdown__change-count-btn').data('op');
+    const $btn = $(this).closest('.js-dropdown__change-count-btn');
+    const classBtnDisabled = 'dropdown__change-count-btn--disabled';
+    const operator = $btn.data('op');
+
+    if (operator === '+') {
+      $li.find('.js-dropdown__change-count-btn').removeClass(classBtnDisabled);
+    }
     const changeCount = {
       '+': x => x + 1,
       '-': x => x - 1
@@ -23,6 +29,9 @@ $(document).ready(function () {
     const $count = $li.find('.js-dropdown__count');
     const n = changeCount[operator](parseInt($count.text()));
 
+    if (n < 1) {
+      $btn.addClass(classBtnDisabled);
+    }
     if (n < 0) {
       return;
     }
