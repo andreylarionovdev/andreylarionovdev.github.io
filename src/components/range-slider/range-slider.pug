@@ -1,21 +1,15 @@
 include ../label/label
 
 mixin range-slider(options)
-  - const b = 'range-slider'
-  - const caption = options.caption || 'range slider'
-  - const { type, skin, min, max, from, to } = options
+  - const { label = 'range slider', value, name, min, max, from, to } = options
 
-  div(class=b)
-    +label({
-      label: caption
-    })
-    input(
-      class=`${b}__input`
+  .range-slider
+    +label({label: label})
+    input.range-slider__input.js-range-slider__input(
       type='text'
-      name=options.name
-      value=''
-      data-type=type
-      data-skin=skin
+      name=name
+      value=value
+      data-type='double'
       data-min=min
       data-max=max
       data-from=from

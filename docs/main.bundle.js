@@ -460,7 +460,7 @@ eval("/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {\n
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {\n  const className = 'range-slider';\n\n  const render = function (data) {\n    const $label = $(`.${className} .label__right`);\n    const range = data.from.toLocaleString('ru-RU') + '₽ - ' + data.to.toLocaleString('ru-RU') + '₽';\n\n    $label.text(range);\n  };\n\n  const $slider = $(`.${className}__input`);\n  $slider.ionRangeSlider({\n    hide_min_max: true,\n    hide_from_to: true,\n    onStart: render,\n    onChange: render\n  });\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/components/range-slider/range-slider.js?");
+eval("/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {\n  const render = function (data) {\n    const range = data.from.toLocaleString('ru-RU') + '₽ - ' + data.to.toLocaleString('ru-RU') + '₽';\n\n    $('.range-slider .label__hint').text(range);\n  };\n\n  const $slider = $('.js-range-slider__input');\n  $slider.ionRangeSlider({\n    hide_min_max: true,\n    hide_from_to: true,\n    onStart: render,\n    onChange: render\n  });\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/components/range-slider/range-slider.js?");
 
 /***/ }),
 
