@@ -62,7 +62,7 @@
     grid-area: nav;
     display: flex;
     justify-content: space-between;
-    padding: 0.3125rem 5.5rem 0 2.5rem;
+    padding: 0.3125rem 3.125rem 0 2.5rem;
     @media (max-width: $screen-xs-max) {
       padding: 0;
       flex-direction: column;

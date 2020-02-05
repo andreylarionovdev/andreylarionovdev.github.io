@@ -77,7 +77,7 @@
     width: $diam;
     height: $diam;
     line-height: $diam;
-    border-radius: $diam / 2;
+    border-radius: 50%;
     cursor: pointer;
     border: 1px solid $color-dark-50;
     &--disabled {
@@ -94,12 +94,12 @@
   &--expanded {
     #{$blockClass}__toggle {
       border: 1px solid $color-dark-50;
-      border-bottom: none;
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0;
     }
     #{$blockClass}__menu {
       display: block;
+      border-top: none;
     }
   }
   &--edited {
