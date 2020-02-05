@@ -1,15 +1,4 @@
 mixin paginator(options)
-  - const b = 'paginator'
-  -
-    const {
-      source = [],
-      pageSize = 12,
-      pageRange = 1
-    } = options
+  - var { source = [], pageSize = 12, pageRange = 1 } = options || {}
 
-  div(
-    class=b
-    data-source=source
-    data-page-size=pageSize
-    data-page-range=pageRange
-  )
+  .paginator(data-source=source data-page-size=pageSize data-page-range=pageRange)

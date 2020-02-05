@@ -8,6 +8,7 @@
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: minmax(9.5rem, 100%);
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
     &:hover {
@@ -71,7 +72,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 1.375rem 0 0.5rem 0;
+    padding: 1.25rem 0 0.625rem 0;
     margin: 0 1rem 0 1.25rem;
     border-bottom: 1px solid $color-dark-10;
   }
@@ -113,7 +114,7 @@
   &__footer {
     display: flex;
     justify-content: space-between;
-    padding: 0.75rem 0 1rem 0;
+    padding: 0.625rem 0 0.875rem 0;
     margin: 0 1.25rem 0 1.375rem;
   }
   &__feedback-counter {

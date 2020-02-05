@@ -54,7 +54,7 @@ mixin room-thumb(options)
         span.room-thumb__number-value= roomNumber
         h3.room-thumb__number-feature.h3.h3--purple= feature
       .room-thumb__price-per-day
-        span.room-thumb__cost!= `${pricePerDay.toLocaleString('ru-RU')}₽`
+        span.room-thumb__cost!= f.formatCurrency({value: pricePerDay})
         |&nbsp;
         span.room-thumb__date-unit= 'в сутки'
     footer.room-thumb__footer

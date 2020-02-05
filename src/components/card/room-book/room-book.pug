@@ -4,7 +4,7 @@ include ../../date-range/date-range
 
 mixin room-book(options)
   - var { roomNumber, pricePerDay, discount, fee, feature } = options || {}
-
+  - var f = require('../../js/functions');
   form.card.room-book
     header.room-book__header
       .room-book__number
@@ -13,7 +13,7 @@ mixin room-book(options)
         if feature
           h3.room-book__number-feature.h3.h3--purple= feature
       .room-book__price-per-day.body
-        span.room-book__cost= `${pricePerDay.toLocaleString('ru-RU')}₽`
+        span.room-book__cost!= f.formatCurrency({value: pricePerDay})
         |&nbsp;
         span.room-book__date-unit= 'в сутки'
 
@@ -42,11 +42,11 @@ mixin room-book(options)
     - const totalNetto = totalBruto - discount + fee
 
     .room-book__table-result
-      .grid-cell= `${pricePerDay.toLocaleString('ru-RU')}₽ x 4 суток`
+      .grid-cell!= `${f.formatCurrency({value: pricePerDay})} x 4 суток`
       .grid-cell.grid-cell--info
-      .grid-cell.grid-cell--sum= `${totalBruto.toLocaleString('ru-RU')}₽`
+      .grid-cell.grid-cell--sum!= f.formatCurrency({value: totalBruto})
 
-      .grid-cell= `Сбор за услуги: скидка ${discount.toLocaleString('ru-RU')}₽`
+      .grid-cell!= `Сбор за услуги: скидка ${f.formatCurrency({value: discount})}`
       .grid-cell.grid-cell--info
         i(title='change me').room-book__info-icon.material-icons= 'info_outline'
       .grid-cell.grid-cell--sum= '0₽'
@@ -54,12 +54,12 @@ mixin room-book(options)
       .grid-cell= 'Сбор за дополнительные услуги'
       .grid-cell.grid-cell--info
         i(title='change me').room-book__info-icon.material-icons= 'info_outline'
-      .grid-cell.grid-cell--sum= `${fee.toLocaleString('ru-RU')}₽`
+      .grid-cell.grid-cell--sum!= f.formatCurrency({value: fee})
 
     p.room-book__total-row
       span.room-book__total-header= 'Итого'
       span.room-book__total-line
-      span.room-book__total-sum= `${totalNetto.toLocaleString('ru-RU')}₽`
+      span.room-book__total-sum!= f.formatCurrency({value: totalNetto})
 
     footer.room-book__button
       +button({

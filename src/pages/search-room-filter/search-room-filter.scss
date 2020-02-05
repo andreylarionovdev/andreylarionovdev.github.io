@@ -3,7 +3,7 @@
   border-bottom: 1px solid $color-dark-25;
   &__inner {
     @include inner;
-    padding-top: 1.875rem;
+    padding: 1.875rem 0 1.75rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
@@ -55,10 +55,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(16.875rem, 1fr));
     grid-column-gap: 0.75rem;
-    grid-row-gap: 1.25rem;
+    grid-row-gap: 1.3125rem;
   }
   &__paginator {
-    margin: 2.6875rem auto 4.5rem;
+    margin: 2.5rem auto;
     grid-column: 1 / 4;
     text-align: center;
   }

@@ -24,3 +24,7 @@ export const bem = function ({b, e, m, js} = {}) {
 
   return classes;
 };
+
+export const formatCurrency = function({value, locale = 'ru-RU', sign = '₽'}) {
+  return `${value.toLocaleString(locale).replace(',', '&nbsp;')}${sign}`
+};

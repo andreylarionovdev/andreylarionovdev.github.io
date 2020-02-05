@@ -1,34 +1,36 @@
 .paginator {
   font-family: Montserrat, sans-serif;
+  display: inline-block;
   &__arrow-next,
   &__arrow-prev {
-    position: relative;
-    top: 7px;
     color: white;
   }
   &__ul {
     margin: 0;
     padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .paginator-page,
-  .paginator-ellipsis,
-  .paginator-next,
-  .paginator-prev {
-    width: 40px;
-    height: 40px;
-    display: inline-block;
+  &-page,
+  &-ellipsis,
+  &-next,
+  &-prev {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-flex;
     font-style: normal;
     font-size: 0.75rem;
-    line-height: 40px;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
     a {
       text-decoration: none;
       color: $color-dark-50;
     }
   }
-  .paginator-page {
+  &-page {
     &--active {
-      border-radius: 20px;
+      border-radius: 50%;
       font-weight: bold;
       background: $grad-purple;
       a {
@@ -36,20 +38,15 @@
       }
     }
   }
-  .paginator-next,
-  .paginator-prev {
+  &-next,
+  &-prev {
     border-radius: 20px;
     background: $grad-green;
-    a {
-      display: inline-block;
-      width: 100%;
-    }
   }
-  .paginator-nav {
+  &-nav {
     font-size: 0.875rem;
-    line-height: 24px;
-    padding-top: 7px;
-    padding-left: 6px;
+    padding: 0.625rem 0;
     color: $color-dark-75;
+    text-align: center;
   }
 }

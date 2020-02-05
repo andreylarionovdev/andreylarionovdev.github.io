@@ -1,11 +1,11 @@
 $(document).ready(function () {
-  const className = 'paginator';
-  $(`.${className}`).each(function (i, o) {
+  $('.paginator').each(function (i, o) {
     const $pager = $(o);
 
     const dataSource = $pager.data('source');
-    const pageSize = $pager.data('page-size');
-    const pageRange = $pager.data('page-range');
+    const pageSize = parseInt($pager.data('page-size'));
+    const pageRange = parseInt($pager.data('page-range'));
+    const total = dataSource.length > 100 ? '100+' : dataSource.length;
 
     $pager.pagination({
       dataSource: dataSource,
@@ -18,9 +18,14 @@ $(document).ready(function () {
       activeClassName: 'paginator-page--active',
       disableClassName: 'paginator-page--disabled',
       ulClassName: 'paginator__ul',
-      prevText: `<i class="material-icons ${className}__arrow-prev">arrow_back</i>`,
-      nextText: `<i class="material-icons ${className}__arrow-next">arrow_forward</i>`,
-      formatNavigator: `<%= currentPage %> &ndash; 12 из 100+ вариантов аренды`
+      prevText: `<i class="material-icons paginator__arrow-prev">arrow_back</i>`,
+      nextText: `<i class="material-icons paginator__arrow-next">arrow_forward</i>`,
+      formatNavigator: `<span class="js-paginator__from"><%= currentPage %></span> &ndash; 
+                        <span class="js-paginator__to">${pageSize}</span> из ${total} вариантов аренды`,
+      formatResult: function (data) {
+        $pager.find('.js-paginator__from').text(data[0] + 1);
+        $pager.find('.js-paginator__to').text(data[data.length - 1] + 1);
+      }
     });
   });
 });

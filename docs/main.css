@@ -660,53 +660,55 @@
     opacity: 0.5; }
 
 .paginator {
-  font-family: Montserrat, sans-serif; }
+  font-family: Montserrat, sans-serif;
+  display: inline-block; }
   .paginator__arrow-next, .paginator__arrow-prev {
-    position: relative;
-    top: 7px;
     color: white; }
   .paginator__ul {
     margin: 0;
-    padding: 0; }
-  .paginator .paginator-page,
-  .paginator .paginator-ellipsis,
-  .paginator .paginator-next,
-  .paginator .paginator-prev {
-    width: 40px;
-    height: 40px;
-    display: inline-block;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .paginator-page, .paginator-ellipsis, .paginator-next, .paginator-prev {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
     font-style: normal;
     font-size: 0.75rem;
-    line-height: 40px;
-    text-align: center; }
-    .paginator .paginator-page a,
-    .paginator .paginator-ellipsis a,
-    .paginator .paginator-next a,
-    .paginator .paginator-prev a {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .paginator-page a, .paginator-ellipsis a, .paginator-next a, .paginator-prev a {
       text-decoration: none;
       color: rgba(31, 32, 65, 0.5); }
-  .paginator .paginator-page--active {
-    border-radius: 20px;
+  .paginator-page--active {
+    border-radius: 50%;
     font-weight: bold;
     background: -webkit-gradient(linear, left top, left bottom, from(#BC9CFF), to(#8BA4F9));
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%); }
-    .paginator .paginator-page--active a {
+    .paginator-page--active a {
       color: white; }
-  .paginator .paginator-next,
-  .paginator .paginator-prev {
+  .paginator-next, .paginator-prev {
     border-radius: 20px;
     background: -webkit-gradient(linear, left top, left bottom, from(#6FCF97), to(#66D2EA));
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%); }
-    .paginator .paginator-next a,
-    .paginator .paginator-prev a {
-      display: inline-block;
-      width: 100%; }
-  .paginator .paginator-nav {
+  .paginator-nav {
     font-size: 0.875rem;
-    line-height: 24px;
-    padding-top: 7px;
-    padding-left: 6px;
-    color: rgba(31, 32, 65, 0.75); }
+    padding: 0.625rem 0;
+    color: rgba(31, 32, 65, 0.75);
+    text-align: center; }
 
 .checkbox-list__label {
   margin-bottom: 1rem; }
@@ -1536,6 +1538,7 @@
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: minmax(9.5rem, 100%);
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem; }
     .room-thumb__carousel-inner:hover .room-thumb__carousel-control {
@@ -1604,7 +1607,7 @@
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    padding: 1.375rem 0 0.5rem 0;
+    padding: 1.25rem 0 0.625rem 0;
     margin: 0 1rem 0 1.25rem;
     border-bottom: 1px solid rgba(31, 32, 65, 0.1); }
   .room-thumb__number {
@@ -1637,7 +1640,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 0.75rem 0 1rem 0;
+    padding: 0.625rem 0 0.875rem 0;
     margin: 0 1.25rem 0 1.375rem; }
   .room-thumb__feedback-counter {
     margin: 0;
@@ -1993,7 +1996,7 @@
   .search-room-filter__inner {
     margin: 0 auto;
     width: 95.5%;
-    padding-top: 1.875rem;
+    padding: 1.875rem 0 1.75rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr; }
     @media (min-width: 992px) {
@@ -2037,9 +2040,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(16.875rem, 1fr));
     grid-column-gap: 0.75rem;
-    grid-row-gap: 1.25rem; }
+    grid-row-gap: 1.3125rem; }
   .search-room-filter__paginator {
-    margin: 2.6875rem auto 4.5rem;
+    margin: 2.5rem auto;
     grid-column: 1 / 4;
     text-align: center; }
 
