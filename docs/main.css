@@ -701,7 +701,7 @@
     .paginator-page--active a {
       color: white; }
   .paginator-next, .paginator-prev {
-    border-radius: 20px;
+    border-radius: 50%;
     background: -webkit-gradient(linear, left top, left bottom, from(#6FCF97), to(#66D2EA));
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%); }
   .paginator-nav {
@@ -1133,7 +1133,7 @@
     display: inline-block;
     font-size: 0.875rem;
     font-family: Montserrat, sans-serif;
-    line-height: 24px;
+    line-height: 1.5rem;
     color: rgba(31, 32, 65, 0.75); }
   .votes-chart__label {
     cursor: pointer;
