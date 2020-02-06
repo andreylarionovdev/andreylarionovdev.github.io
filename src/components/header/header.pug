@@ -8,15 +8,15 @@ mixin header(options)
   - var b = 'header'
   - var js = 'js'
 
-  nav.header
+  nav.header.js-header
     .header__inner
       i(class=f.bem({b, e: 'nav-toggle', js})).material-icons= 'menu'
       figure.header__logo
         +logo(true)
-      ul.header__nav
+      ul(class=f.bem({b, e: 'nav', js}))
         each item, _ in menuItems
           li.header__nav-item
-            - var bemObj = {b: 'header', e: 'nav-link'}
+            - var bemObj = {b, e: 'nav-link'}
             if item.sub
               - bemObj.m = 'has-submenu'
             a(class=f.bem(bemObj) href=item.href)
