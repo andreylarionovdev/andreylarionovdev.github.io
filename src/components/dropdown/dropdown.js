@@ -1,20 +1,22 @@
-$(document).ready(function () {
+import $ from 'jquery';
+
+$(() => {
   const classExpanded = 'dropdown--expanded';
   const classEdited = 'dropdown--edited';
   const classEmpty = 'dropdown--empty';
 
-  $(`.js-dropdown__toggle`).on('click', function (e) {
+  $('.js-dropdown__toggle').on('click', (e) => {
     e.preventDefault();
-    const $dropdown = $(this).closest('.js-dropdown');
-    if ($dropdown.find(`.js-dropdown__menu`).length === 1) {
+    const $dropdown = $(e.currentTarget).closest('.js-dropdown');
+    if ($dropdown.find('.js-dropdown__menu').length === 1) {
       $dropdown.toggleClass(classExpanded);
     }
   });
 
-  const numberChangerOnClick = function () {
-    const $li = $(this).closest('.js-dropdown__menu-item');
+  function numberChangerOnClick(e) {
+    const $li = $(e.currentTarget).closest('.js-dropdown__menu-item');
 
-    const $btn = $(this).closest('.js-dropdown__change-count-btn');
+    const $btn = $(e.currentTarget).closest('.js-dropdown__change-count-btn');
     const classBtnDisabled = 'dropdown__change-count-btn--disabled';
     const operator = $btn.data('op');
 
@@ -22,12 +24,12 @@ $(document).ready(function () {
       $li.find('.js-dropdown__change-count-btn').removeClass(classBtnDisabled);
     }
     const changeCount = {
-      '+': x => x + 1,
-      '-': x => x - 1
+      '+': (x) => x + 1,
+      '-': (x) => x - 1,
     };
 
     const $count = $li.find('.js-dropdown__count');
-    const n = changeCount[operator](parseInt($count.text()));
+    const n = changeCount[operator](parseInt($count.text(), 10));
 
     if (n < 1) {
       $btn.addClass(classBtnDisabled);
@@ -38,24 +40,24 @@ $(document).ready(function () {
 
     $count.text(n);
 
-    const $dropdown = $(this).closest('.js-dropdown');
+    const $dropdown = $(e.currentTarget).closest('.js-dropdown');
 
     $dropdown
       .addClass(classEdited)
       .removeClass(classEmpty);
-  };
+  }
 
   $('.js-dropdown__change-count-btn').on('click', numberChangerOnClick);
 
-  $('.js-dropdown__clear-button').on('click', function () {
-    const $counts = $(this).closest('.js-dropdown').find('.js-dropdown__count');
-    $counts.each(function (i, o) {
+  $('.js-dropdown__clear-button').on('click', (e) => {
+    const $counts = $(e.currentTarget).closest('.js-dropdown').find('.js-dropdown__count');
+    $counts.each((i, o) => {
       $(o).text(0);
-    })
+    });
   });
 
-  $(`.js-dropdown__apply-button`).on('click', function () {
-    $(this).closest('.js-dropdown')
+  $('.js-dropdown__apply-button').on('click', (e) => {
+    $(e.currentTarget).closest('.js-dropdown')
       .removeClass(classEdited)
       .removeClass(classExpanded);
   });

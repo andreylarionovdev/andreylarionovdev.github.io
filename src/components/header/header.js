@@ -1,6 +1,8 @@
-$(document).ready(function () {
-  $('.js-header__nav-toggle').on('click', function () {
-    const $header = $(this).closest('.js-header');
-    $header.find('.js-header__nav').toggleClass('header__nav--active')
+import $ from 'jquery';
+
+$(() => {
+  $('.js-header__nav-toggle').on('click', (e) => {
+    const $header = $(e.currentTarget).closest('.js-header');
+    $header.find('.js-header__nav').toggleClass('header__nav--active');
   });
 });
