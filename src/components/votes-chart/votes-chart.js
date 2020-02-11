@@ -1,7 +1,9 @@
-$(document).ready(function () {
-  $('.js-votes-chart__label').on('click', function () {
-    const $label = $(this);
-    const $chart = $(this).closest('.js-votes-chart');
+import $ from 'jquery';
+
+$(() => {
+  $('.js-votes-chart__label').on('click', (e) => {
+    const $label = $(e.currentTarget);
+    const $chart = $label.closest('.js-votes-chart');
 
     const classLabelActive = 'votes-chart__label--active';
 
@@ -14,14 +16,14 @@ $(document).ready(function () {
     $chart.find('.js-votes-chart__circle').removeClass(classCircleActive);
     $chart.find(`.votes-chart__circle--${voteKey}`).addClass(classCircleActive);
 
-    const count = parseInt($label.data('count'));
+    const count = parseInt($label.data('count'), 10);
 
     $('.js-votes-chart__count-value').text(count);
 
     $('.js-votes-chart__count')
-        .removeClass()
-        .addClass('votes-chart__count')
-        .addClass('js-votes-chart__count')
-        .addClass(`votes-chart__count--${voteKey}`);
+      .removeClass()
+      .addClass('votes-chart__count')
+      .addClass('js-votes-chart__count')
+      .addClass(`votes-chart__count--${voteKey}`);
   });
 });
