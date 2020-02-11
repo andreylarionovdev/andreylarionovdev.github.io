@@ -7,24 +7,12 @@ const devMode = process.env.NODE_ENV !== 'production';
 
 const config = {
   entry: [
-    __dirname + '/src/app.js',
-    __dirname + '/src/css/app.scss'
+    `${__dirname}/src/app.js`,
+    `${__dirname}/src/css/app.scss`,
   ],
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, './docs'),
-  },
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        styles: {
-          name: 'styles',
-          test: /\.css$/,
-          chunks: 'all',
-          enforce: true,
-        },
-      },
-    },
   },
   module: {
     rules: [
@@ -32,8 +20,8 @@ const config = {
         test: /\.pug$/,
         loader: 'pug-loader',
         options: {
-          pretty: true
-        }
+          pretty: true,
+        },
       },
       {
         test: /\.(sa|sc|c)ss$/,
@@ -41,7 +29,7 @@ const config = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              hmr: process.env.NODE_ENV === 'development'
+              hmr: process.env.NODE_ENV === 'development',
             },
           },
           'css-loader',
@@ -50,14 +38,14 @@ const config = {
             loader: 'resolve-url-loader',
             options: {
               debug: true,
-              sourceMap: false
-            }
+              sourceMap: false,
+            },
           },
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: true
-            }
+              sourceMap: true,
+            },
           },
         ],
       },
@@ -68,9 +56,9 @@ const config = {
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
-            outputPath: 'fonts/'
-          }
-        }]
+            outputPath: 'fonts/',
+          },
+        }],
       },
       {
         test: /\.(png|gif|svg|jpe?g)$/,
@@ -82,10 +70,10 @@ const config = {
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
-            outputPath: 'img/'
-          }
-        }]
-      }
+            outputPath: 'img/',
+          },
+        }],
+      },
     ],
   },
   plugins: [
@@ -96,48 +84,49 @@ const config = {
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
-      'window.jQuery': 'jquery'
+      'window.jQuery': 'jquery',
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-        template: 'src/pages/index.pug'
+      template: 'src/pages/index.pug',
     }),
     new HtmlWebpackPlugin({
       filename: 'ui-colors-type.html',
-      template: 'src/pages/ui-colors-type/ui-colors-type.pug'
+      template: 'src/pages/ui-colors-type/ui-colors-type.pug',
     }),
     new HtmlWebpackPlugin({
       filename: 'ui-form-elements.html',
-      template: 'src/pages/ui-form-elements/ui-form-elements.pug'
+      template: 'src/pages/ui-form-elements/ui-form-elements.pug',
     }),
     new HtmlWebpackPlugin({
       filename: 'ui-cards.html',
-      template: 'src/pages/ui-cards/ui-cards.pug'
+      template: 'src/pages/ui-cards/ui-cards.pug',
     }),
     new HtmlWebpackPlugin({
       filename: 'ui-headers-footers.html',
-      template: 'src/pages/ui-headers-footers/ui-headers-footers.pug'
+      template: 'src/pages/ui-headers-footers/ui-headers-footers.pug',
     }),
     new HtmlWebpackPlugin({
       filename: 'landing.html',
-      template: 'src/pages/landing/landing.pug'
+      template: 'src/pages/landing/landing.pug',
     }),
     new HtmlWebpackPlugin({
       filename: 'search-room-filter.html',
-      template: 'src/pages/search-room-filter/search-room-filter.pug'
+      template: 'src/pages/search-room-filter/search-room-filter.pug',
     }),
     new HtmlWebpackPlugin({
       filename: 'room-details.html',
-      template: 'src/pages/room-details/room-details.pug'
+      template: 'src/pages/room-details/room-details.pug',
     }),
     new HtmlWebpackPlugin({
       filename: 'registration.html',
-      template: 'src/pages/registration/registration.pug'
+      template: 'src/pages/registration/registration.pug',
     }),
     new HtmlWebpackPlugin({
       filename: 'login.html',
-      template: 'src/pages/login/login.pug'
-    })
-  ]
+      template: 'src/pages/login/login.pug',
+    }),
+  ],
 };
+
 module.exports = config;

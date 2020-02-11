@@ -3,13 +3,19 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --watch --mode development",
-    "prod": "webpack --mode production"
+    "build": "webpack -p",
+    "watch": "webpack-dev-server --client-log-level silent"
   },
   "keywords": [],
   "author": "Andrey Larionov",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1"
+  },
+  "dependencies": {
     "air-datepicker": "^2.2.3",
     "autoprefixer": "^9.6.1",
     "babel-core": "^6.26.3",
@@ -22,7 +28,7 @@
     "jquery-datepicker": "^1.12.3",
     "material-design-icons": "^3.0.1",
     "mini-css-extract-plugin": "^0.7.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "paginationjs": "^2.1.4",
     "postcss-loader": "^3.0.0",
     "pug": "^2.0.4",
@@ -33,6 +39,5 @@
     "webpack": "^4.35.2",
     "webpack-cli": "^3.3.5",
     "webpack-dev-server": "^3.7.2"
-  },
-  "dependencies": {}
+  }
 }
