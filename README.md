@@ -6,7 +6,16 @@ Clone repository:
 ```$xslt
 git clone https://github.com/andreylarionovdev/toxin.git
 ```
-Install dependencies and build project from root directory:
+Install dependencies:
 ```$xslt
-npm i && npm run build
+cd toxin && npm i
 ```
+Build project:
+```$xslt
+npm run build
+```
+Start development server with hot-reloading:
+```$xslt
+npm run watch
+```
+
