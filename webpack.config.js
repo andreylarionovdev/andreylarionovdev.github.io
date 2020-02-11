@@ -11,7 +11,7 @@ const config = {
     `${__dirname}/src/css/app.scss`,
   ],
   output: {
-    filename: '[name].bundle.js',
+    filename: devMode ? '[name].js' : '[name].[hash].js',
     path: path.resolve(__dirname, './docs'),
   },
   module: {

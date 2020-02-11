@@ -1,9 +1,8 @@
-$(document).ready(function () {
-  const classExpanded = `checkbox-list-xp--expanded`;
+import $ from 'jquery';
 
-  $(`.js-checkbox-list-xp__toggle`).on('click', function () {
-    const $dropdown = $(this).closest(`.js-checkbox-list-xp`);
-
-    $dropdown.toggleClass(classExpanded);
+$(() => {
+  const classExpanded = 'checkbox-list-xp--expanded';
+  $('.js-checkbox-list-xp__toggle').on('click', (e) => {
+    $(e.currentTarget).closest('.js-checkbox-list-xp').toggleClass(classExpanded);
   });
 });

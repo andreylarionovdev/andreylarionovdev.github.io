@@ -1,24 +1,61 @@
-$(document).ready(function () {
+import $ from 'jquery';
 
-  $('.js-date-range').each(function (i, o) {
-    const $inputFrom = $(o).find(`.js-date-range__from input`);
+$(() => {
+  function clearDropdown($dropdown) {
+    const emptyValue = 'ДД.ММ.ГГГГ';
+    $dropdown.find('.dropdown__text').text(emptyValue);
+    $dropdown.find('.dropdown__input').val('');
+  }
 
-    const $datepicker = $inputFrom.datepicker({
-      range: true,
-      navTitles: {
-        days: 'MM <i>yyyy</i>'
-      },
-      prevHtml: '<i class="material-icons">arrow_back</i>',
-      nextHtml: '<i class="material-icons">arrow_forward</i>',
-      onShow: function (inst) {
-        inst.$datepicker.addClass('card').css('position', 'absolute');
-        inst.$datepicker.css('width', `${$(o).outerWidth()}px`);
-        addActionButtons(inst.$datepicker);
-      }
-    }).data('datepicker');
+  function updateDropdown(dates, dropdowns) {
+    if (dates.length === 0) return;
 
-    const $inputTo = $(o).find(`.js-date-range__to input`);
+    const ddFrom = `0${dates[0].getDate()}`.slice(-2);
+    const mmFrom = `0${dates[0].getMonth() + 1}`.slice(-2);
+    const yyyyFrom = dates[0].getFullYear();
 
+    const formatFrom = `${ddFrom}.${mmFrom}.${yyyyFrom}`;
+
+    dropdowns[0].find('.js-dropdown__text').text(formatFrom);
+    dropdowns[0].find('.js-dropdown__data-input').val(formatFrom);
+
+    if (dates.length > 1) {
+      const ddTo = `0${dates[1].getDate()}`.slice(-2);
+      const mmTo = `0${dates[1].getMonth() + 1}`.slice(-2);
+      const yyyyTo = dates[1].getFullYear();
+
+      const formatTo = `${ddTo}.${mmTo}.${yyyyTo}`;
+
+      dropdowns[1].find('.js-dropdown__text').text(formatTo);
+      dropdowns[1].find('.js-dropdown__input').val(formatTo);
+    }
+  }
+
+  function addActionButtons($dpApi, $dpElement, $dropdownFrom, $dropdownTo) {
+    const $clearBtn = $('<a class="datepicker__clear-btn js-datepicker__clear-btn">Очистить</a>');
+    const $applyBtn = $('<a class="datepicker__apply-btn js-datepicker__apply-btn">Применить</a>');
+    if ($dpElement.find('.js-datepicker__clear-btn').length === 0) {
+      $clearBtn.on('click', () => {
+        $dpApi.clear();
+        clearDropdown($dropdownFrom);
+        clearDropdown($dropdownTo);
+      });
+    }
+    if ($dpElement.find('.js-datepicker__apply-btn').length === 0) {
+      $applyBtn.on('click', () => {
+        // $dpApi.selectDate($dpApi.selectedDates);
+        updateDropdown($dpApi.selectedDates, [$dropdownFrom, $dropdownTo]);
+        $dpApi.hide();
+      });
+    }
+    if ($dpElement.find('.js-datepicker__footer').length === 0) {
+      const $footer = $('<div class="datepicker__footer js-datepicker__footer"></div>');
+      $footer.append($clearBtn).append($applyBtn);
+      $dpElement.append($footer);
+    }
+  }
+
+  function selectDates($dpApi, $inputFrom, $inputTo) {
     // Handle pre-selected date from input values
     const arrIsoFrom = $inputFrom.val().split('.');
     const arrIsoTo = $inputTo.val().split('.');
@@ -33,76 +70,53 @@ $(document).ready(function () {
     const initDates = [];
 
     // Add to array if is a valid date
-    if (dateFrom instanceof Date && !isNaN(dateFrom)) {
+    if (dateFrom instanceof Date && !Number.isNaN(dateFrom.getTime())) {
       initDates.push(dateFrom);
     }
-    if (dateTo instanceof Date && !isNaN(dateTo)) {
+    if (dateTo instanceof Date && !Number.isNaN(dateTo.getTime())) {
       initDates.push(dateTo);
     }
 
-    // Set initially dates from array of Date instances
     if (initDates.length > 0) {
-      $datepicker.selectDate(initDates);
+      $dpApi.selectDate(initDates);
     }
+  }
 
-    const $dropdownFrom = $(o).find('.js-date-range__from .js-date-range__dropdown');
-    const $dropdownTo = $(o).find('.js-date-range__to .js-date-range__dropdown');
-
-    $dropdownFrom.on('click', function () {
-      $datepicker.show();
+  function initEventListeners($dpApi, $dropdownFrom, $dropdownTo) {
+    $dropdownFrom.on('click', () => {
+      $dpApi.show();
     });
-    $dropdownTo.on('click', function () {
-      $datepicker.show();
+    $dropdownTo.on('click', () => {
+      $dpApi.show();
     });
+  }
 
-    const clearDropdown = function ($dropdown) {
-      const emptyValue = 'ДД.ММ.ГГГГ';
-      $dropdown.find('.dropdown__text').text(emptyValue);
-      $dropdown.find('.dropdown__input').val('');
-    };
+  function createDateRangeInstance($element) {
+    const $inputFrom = $element.find('.js-date-range__from input');
+    const $inputTo = $element.find('.js-date-range__to input');
 
-    const updateDropdown = function (dates, dropdowns) {
-      if (dates.length === 0) return;
+    const $dropdownFrom = $element.find('.js-date-range__from .js-date-range__dropdown');
+    const $dropdownTo = $element.find('.js-date-range__to .js-date-range__dropdown');
 
-      const from = ('0' + dates[0].getDate()).slice(-2) + '.'
-        + ('0' + (dates[0].getMonth() + 1)).slice(-2) + '.'
-        + dates[0].getFullYear();
+    const $datepickerApi = $inputFrom.datepicker({
+      range: true,
+      navTitles: {
+        days: 'MM <i>yyyy</i>',
+      },
+      prevHtml: '<i class="material-icons">arrow_back</i>',
+      nextHtml: '<i class="material-icons">arrow_forward</i>',
+      onShow(inst) {
+        inst.$datepicker.addClass('card').css('position', 'absolute');
+        inst.$datepicker.css('width', `${$element.outerWidth()}px`);
+        addActionButtons($datepickerApi, inst.$datepicker, $dropdownFrom, $dropdownTo);
+      },
+    }).data('datepicker');
 
-      dropdowns[0].find('.js-dropdown__text').text(from);
-      dropdowns[0].find('.js-dropdown__data-input').val(from);
+    selectDates($datepickerApi, $inputFrom, $inputTo);
+    initEventListeners($datepickerApi, $dropdownFrom, $dropdownFrom);
+  }
 
-      if (dates.length > 1) {
-        const to = ('0' + dates[1].getDate()).slice(-2) + '.'
-          + ('0' + (dates[1].getMonth() + 1)).slice(-2) + '.'
-          + dates[1].getFullYear();
-
-        dropdowns[1].find(`.js-dropdown__text`).text(to);
-        dropdowns[1].find(`.js-dropdown__input`).val(to);
-      }
-    };
-
-    const addActionButtons = function ($_datepicker) {
-      const $clearBtn = $('<a class="datepicker__clear-btn js-datepicker__clear-btn">Очистить</a>');
-      const $applyBtn = $('<a class="datepicker__apply-btn js-datepicker__apply-btn">Применить</a>');
-      if ($_datepicker.find('.js-datepicker__clear-btn').length === 0) {
-        $clearBtn.on('click', function () {
-          $datepicker.clear();
-          clearDropdown($dropdownFrom);
-          clearDropdown($dropdownTo);
-        });
-      }
-      if ($_datepicker.find('.js-datepicker__apply-btn').length === 0) {
-        $applyBtn.on('click', function () {
-          $datepicker.selectDate($datepicker.selectedDates);
-          updateDropdown($datepicker.selectedDates, [$dropdownFrom, $dropdownTo]);
-          $datepicker.hide();
-        });
-      }
-      if ($_datepicker.find('.js-datepicker__footer').length === 0) {
-        const $footer = $('<div class="datepicker__footer js-datepicker__footer"></div>');
-        $footer.append($clearBtn).append($applyBtn);
-        $_datepicker.append($footer);
-      }
-    };
+  $('.js-date-range').each((i, o) => {
+    createDateRangeInstance($(o));
   });
 });
