@@ -5,7 +5,7 @@ import '../node_modules/jquery-datepicker/jquery-datepicker';
 import '../node_modules/air-datepicker/dist/js/datepicker.min';
 
 // App
-import './img/favicons/favicons';
+import './favicons/favicons';
 import './components/range-slider/range-slider';
 import './components/paginator/paginator';
 import './components/dropdown/dropdown';

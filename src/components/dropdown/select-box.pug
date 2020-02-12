@@ -1,7 +1,7 @@
 include ../button/button
 
 mixin select-box(options)
-  - var { rows, zIndex } = options || {}
+  - var { rows, zIndex = 9 } = options || {}
 
   - var f = require('../../js/functions.js')
   - var b = 'dropdown'

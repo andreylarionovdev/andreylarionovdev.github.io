@@ -5,10 +5,10 @@
   width: 3rem;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url('../../img/logo.svg');
+  background-image: url('../../img/logo/logo.svg');
   &--with-text {
     height: 2.5rem;
     width: 6.625rem;
-    background-image: url('../../img/logo--with-text.svg');
+    background-image: url('../../img/logo/logo--with-text.svg');
   }
 }

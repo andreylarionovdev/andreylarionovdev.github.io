@@ -14,6 +14,9 @@ const config = {
     filename: devMode ? '[name].js' : '[name].[hash].js',
     path: path.resolve(__dirname, './docs'),
   },
+  devServer: {
+    open: true,
+  },
   module: {
     rules: [
       {
@@ -64,7 +67,7 @@ const config = {
         test: /\.(png|gif|svg|jpe?g)$/,
         exclude: [
           path.resolve(__dirname, './src/fonts/'),
-          path.resolve(__dirname, './src/img/favicons/'),
+          path.resolve(__dirname, './src/favicons/'),
         ],
         use: [{
           loader: 'file-loader',
