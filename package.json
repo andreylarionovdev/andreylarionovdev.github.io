@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -p",
+    "build": "rm -rf ./docs && webpack -p",
     "watch": "webpack-dev-server",
     "lint": "eslint src/"
   },
