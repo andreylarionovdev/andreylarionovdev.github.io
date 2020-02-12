@@ -4,7 +4,7 @@ include ../../date-range/date-range
 
 mixin room-book(options)
   - var { roomNumber, pricePerDay, discount, fee, feature } = options || {}
-  - var f = require('../../js/functions');
+  - var f = require('../../utils/functions');
   form.card.room-book
     header.room-book__header
       .room-book__number
