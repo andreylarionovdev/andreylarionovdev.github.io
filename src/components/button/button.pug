@@ -21,7 +21,7 @@ mixin button(options)
   if withArrow
     - blockModifiers.push('with-arrow')
 
-  - var f = require('../../js/functions')
+  - var f = require('../../utils/functions')
 
   a(class=f.bem({b: 'button', m: blockModifiers}) href=href)
     .button__inner
