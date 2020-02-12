@@ -10,7 +10,7 @@ Install dependencies:
 ```$xslt
 cd toxin && npm i
 ```
-## Build project:
+## Build project
 ```$xslt
 npm run build
 ```
@@ -19,7 +19,7 @@ Start server with hot-reloading:
 ```$xslt
 npm run watch
 ```
-To run linter:
+Run linter:
 ```$xslt
 npm run lint --silent
 ```
