@@ -2,7 +2,7 @@
 @import '../../utils/mixins';
 
 .ui-colors-type {
-  @include inner($mdMinWidth: 79.2%);
+  @include inner($lgWidth: 79.2%);
   margin-top: 9rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
