@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import 'ion-rangeslider';
 
 $(() => {
   function render(data) {

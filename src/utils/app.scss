@@ -1,0 +1,82 @@
+@import './config';
+@import './fonts';
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+input[type="password"],
+input[type="email"],
+input[type="text"] {
+  appearance: none;
+}
+
+html {
+  font-family: Quicksand, sans-serif;
+  font-size: 16px;
+  color: $color-dark-100;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  &__logo {
+    margin: 0;
+    position: absolute;
+    top: 1.875rem;
+    left: 1.875rem;
+  }
+  &--gray {
+    background-color: $color-gray;
+  }
+}
+
+.clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.body {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: $color-dark-75;
+}
+
+.h1 {
+  margin: 0;
+  font-family: Open Sans, sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.875rem;
+  color: $color-dark-100;
+}
+
+.h2 {
+  margin: 0;
+  font-family: Open Sans, sans-serif;
+  font-size: 1.1875rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  color: $color-dark-100;
+}
+
+.h3 {
+  margin: 0;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.75rem;
+  font-weight: bold;
+  line-height: 0.9375rem;
+  color: $color-dark-100;
+  text-transform: uppercase;
+  &--purple {
+    color: $color-purple;
+  }
+}

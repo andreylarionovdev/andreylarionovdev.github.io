@@ -1,4 +1,9 @@
-@import '../../css/mixins';
+@import '../../utils/config';
+@import '../../utils/mixins';
+
+@import '../logo/logo';
+@import '../button/button';
+
 .header {
   font-family: Montserrat, sans-serif;
   font-size: 0.875rem;

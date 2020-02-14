@@ -1,3 +1,6 @@
+@import '../../utils/config';
+@import '../checkbox/checkbox';
+
 .checkbox-list-xp {
   $blockClass: &;
   font-family: Montserrat, sans-serif;

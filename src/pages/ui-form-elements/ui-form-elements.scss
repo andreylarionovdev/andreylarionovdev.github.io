@@ -1,4 +1,6 @@
-@import '../../css/mixins';
+@import '../../utils/config';
+@import '../../utils/mixins';
+
 .ui-form-elements {
   @include inner;
   padding: 8.9375rem 0 8.25rem 0;

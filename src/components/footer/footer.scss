@@ -1,4 +1,10 @@
-@import '../../css/mixins';
+@import '../../utils/config';
+@import '../../utils/mixins';
+
+@import '../footer-menu/footer-menu';
+@import '../logo/logo';
+@import '../input/input';
+
 .footer {
   $blockClass: &;
   min-height: inherit;
@@ -119,10 +125,14 @@
         'header'
         'social';
       grid-row-gap: 0;
+      padding-bottom: 6.25rem;
     }
     #{$blockClass}__header {
       text-align: center;
       padding: 0 25%;
+      @media (max-width: $screen-xs-max) {
+        padding: 0;
+      }
     }
     #{$blockClass}__social {
       justify-content: center;

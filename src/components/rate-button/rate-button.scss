@@ -1,3 +1,5 @@
+@import '../../utils/config';
+
 .rate-button {
   $blockClass: &;
   display: inline-block;
@@ -5,7 +7,7 @@
   @mixin star($content: 'star') {
     color: $color-purple;
     content: $content;
-    font-family: "Material Icons";
+    font-family: 'Material Icons';
     font-size: 1.375rem;
   }
 

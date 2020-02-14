@@ -1,3 +1,12 @@
+@import '../../../utils/config';
+
+@import '../../button/button';
+@import '../../label/label';
+@import '../../dropdown/dropdown';
+@import '../../date-range/date-range';
+
+@import '../card';
+
 .room-book {
   padding: 2.375rem 1.875rem 1.875rem 1.8125rem;
   @media (max-width: $screen-xs-max) {

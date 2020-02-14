@@ -1,5 +1,9 @@
-@import 'navigation';
-@import 'cell';
+@import '../../../utils/config';
+
+@import '../card';
+
+@import './navigation';
+@import './cell';
 
 .datepicker {
   font-family: Montserrat, sans-serif;

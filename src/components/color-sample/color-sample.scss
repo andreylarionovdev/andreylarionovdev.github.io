@@ -1,3 +1,5 @@
+@import '../../utils/config';
+
 .color-sample {
   $blockClass: &;
   $colorRectWidth: 4.375rem;
@@ -26,7 +28,7 @@
   &__title {
     grid-area: title;
     font-weight: bold;
-    //padding-top: 0.625rem;
+    padding-top: 0.625rem;
   }
   &__hex {
     grid-area: hex;

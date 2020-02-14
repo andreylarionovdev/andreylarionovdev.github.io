@@ -1,3 +1,6 @@
+@import '../../utils/config';
+@import '../button/button';
+
 .dropdown {
   $blockClass: &;
   position: relative;

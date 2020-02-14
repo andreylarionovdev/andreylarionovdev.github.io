@@ -1,4 +1,6 @@
-@import '../../css/mixins';
+@import '../../utils/config';
+@import '../../utils/mixins';
+
 .ui-cards {
   @include inner;
   margin-top: 9.375rem;

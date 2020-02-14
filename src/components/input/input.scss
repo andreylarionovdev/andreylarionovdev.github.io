@@ -1,3 +1,5 @@
+@import '../../utils/config';
+
 .input {
   $blockClass: &;
   $lineHeight: 2.75rem;
@@ -12,6 +14,7 @@
     width: 100%;
     line-height: 2.625rem;
     border: 1px solid $color-dark-25;
+    transition: border .25s ease-in-out;
     border-radius: $borderRadius;
     font-size: 0.875rem;
     color: $color-dark-75;
@@ -29,6 +32,7 @@
   }
   &__submit-button {
     display: none;
+    transition: border .25s ease-in-out
   }
   &--hovered {
     #{$blockClass}__input {

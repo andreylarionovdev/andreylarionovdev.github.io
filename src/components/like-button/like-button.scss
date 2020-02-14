@@ -1,3 +1,5 @@
+@import '../../utils/config';
+
 .like-button {
   $blockName: &;
   display: inline-grid;
@@ -15,11 +17,12 @@
   user-select: none;
 
   &__count {
-    padding-right: 0.3125rem;
+    text-align: left;
   }
   &__heart {
     font-size: inherit;
-    padding-left: 0.3125rem;
+    text-align: center;
+    padding-right: 0.25rem;
   }
 
   &--favorite {

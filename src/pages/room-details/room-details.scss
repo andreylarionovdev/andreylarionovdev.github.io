@@ -1,4 +1,6 @@
-@import '../../css/mixins';
+@import '../../utils/config';
+@import '../../utils/mixins';
+
 .room-details {
   border-bottom: 1px solid $color-dark-25;
   &__inner {

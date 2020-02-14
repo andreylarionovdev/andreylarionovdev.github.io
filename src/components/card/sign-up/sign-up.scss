@@ -1,3 +1,13 @@
+@import '../../../utils/config';
+
+@import '../../button/button';
+@import '../../input/input';
+@import '../../label/label';
+@import '../../toggle-button/toggle-button';
+@import '../../radio-button/radio-button';
+
+@import '../card';
+
 .sign-up {
   padding: 2.4375rem 1.75rem 1.8125rem 1.8125rem;
   @media (max-width: $screen-xs-max) {

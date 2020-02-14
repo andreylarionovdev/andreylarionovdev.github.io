@@ -1,4 +1,6 @@
-@import '../../css/mixins';
+@import '../../utils/config';
+@import '../../utils/mixins';
+
 .landing {
   width: 100%;
   background-image: url(./img/landing.png);

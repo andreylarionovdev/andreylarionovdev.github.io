@@ -1,4 +1,6 @@
-@import '../../css/mixins';
+@import '../../utils/config';
+@import '../../utils/mixins';
+
 .ui-colors-type {
   @include inner($mdMinWidth: 79.2%);
   margin-top: 9rem;

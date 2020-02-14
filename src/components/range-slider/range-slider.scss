@@ -1,70 +1,78 @@
-.irs {
-  $irs-bar-top: 1.5rem;
-  position: relative;
-  display: block;
-  -webkit-touch-callout: none;
-  user-select: none;
-  font-size: 0.75rem;
-  font-family: Arial, sans-serif;
-  min-height: 2.25rem;
+@import '../../utils/config';
+@import '../label/label';
 
-  &-line {
+.range-slider {
+  .label__hint {
+    font-size: 0.8125rem;
+    line-height: 0.8125rem;
+  }
+  .irs {
+    $irs-bar-top: 1.5rem;
     position: relative;
     display: block;
-    overflow: hidden;
-    outline: none;
-    top: $irs-bar-top;
-    height: 0.375rem;
-    background-color: white;
-    border: 1px solid $color-dark-25;
-    border-radius: 3px;
-  }
-  
-  &-bar {
-    position: absolute;
-    display: block;
-    left: 0;
-    width: 0;
-    top: $irs-bar-top;
-    height: 0.375rem;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-  }
-  
-  $irs-handle-top: $irs-bar-top - 0.3125rem;
-  &-handle {
-    position: absolute;
-    display: block;
-    box-sizing: border-box;
-    cursor: pointer;
-    z-index: 1;
-    top: $irs-handle-top;
-    width: 1rem;
-    height: 1rem;
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-    border: 2px solid #FFFFFF;
-    border-radius: 50%;
-    &.type_last {
-      z-index: 2;
+    -webkit-touch-callout: none;
+    user-select: none;
+    font-size: 0.75rem;
+    font-family: Arial, sans-serif;
+    min-height: 2.25rem;
+
+    &-line {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      outline: none;
+      top: $irs-bar-top;
+      height: 0.375rem;
+      background-color: white;
+      border: 1px solid $color-dark-25;
+      border-radius: 3px;
+    }
+
+    &-bar {
+      position: absolute;
+      display: block;
+      left: 0;
+      width: 0;
+      top: $irs-bar-top;
+      height: 0.375rem;
+      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    }
+
+    $irs-handle-top: $irs-bar-top - 0.3125rem;
+    &-handle {
+      position: absolute;
+      display: block;
+      box-sizing: border-box;
+      cursor: pointer;
+      z-index: 1;
+      top: $irs-handle-top;
+      width: 1rem;
+      height: 1rem;
+      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+      border: 2px solid #FFFFFF;
+      border-radius: 50%;
+      &.type_last {
+        z-index: 2;
+      }
+    }
+
+    &-hidden-input {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      font-size: 0;
+      line-height: 0;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      outline: none;
+      z-index: -9999;
+      background: none;
+      border-style: solid;
+      border-color: transparent;
     }
   }
-  
-  &-hidden-input {
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    font-size: 0;
-    line-height: 0;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    outline: none;
-    z-index: -9999;
-    background: none;
-    border-style: solid;
-    border-color: transparent;
-  }
-
 }

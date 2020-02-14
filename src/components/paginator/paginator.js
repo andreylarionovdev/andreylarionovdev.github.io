@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import 'paginationjs';
 
 $(() => {
   $('.paginator').each((i, o) => {

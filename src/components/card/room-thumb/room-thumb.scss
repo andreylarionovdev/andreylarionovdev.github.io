@@ -1,3 +1,9 @@
+@import '../../../utils/config';
+
+@import '../../rate-button/rate-button';
+
+@import '../card';
+
 .room-thumb {
   $blockClass: &;
   border: none;
