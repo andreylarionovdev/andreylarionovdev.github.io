@@ -1,4 +1,4 @@
-@import './config';
+@import './vars';
 
 @mixin inner($lgWidth: 80.5%, $mdWidth: 95.5%) {
   margin: 0 auto;
