@@ -63,7 +63,8 @@ mixin footer(options)
           section.footer__nav-section
             +footer-menu({
               title: menu.title,
-              menuItems: menu.links
+              menuItems: menu.links,
+              center: menu.center
             })
       .footer__subscribe
         h3.footer__subscribe-title.h3!= rightTitle

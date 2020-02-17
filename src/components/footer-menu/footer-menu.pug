@@ -1,7 +1,13 @@
 mixin footer-menu(options)
-  - var { title, menuItems } = options || {}
+  - var { title, menuItems, center } = options || {}
+  - var blockModifiers = []
 
-  .footer-menu
+  if center === true
+    - blockModifiers.push('center');
+
+  - var f = require('../../utils/functions');
+
+  div(class=f.bem({b: 'footer-menu', m: blockModifiers}))
     h3.footer-menu__title.h3= title
     ul.footer-menu__list
       each item, _ in menuItems

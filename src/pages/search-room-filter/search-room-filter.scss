@@ -33,9 +33,11 @@
     font-family: Montserrat, sans-serif;
     color: $color-dark-50;
   }
-  &__rich-checkbox-group,
-  &__feature-dropdown-group {
+  &__rich-checkbox-group {
     margin-top: 1.75rem;
+  }
+  &__feature-dropdown-group {
+    margin-top: 1.5rem;
   }
   &__additional-checkbox-list-xp-group {
     margin-top: 1rem;
@@ -60,8 +62,9 @@
     grid-row-gap: 1.3125rem;
   }
   &__paginator {
-    margin: 2.5rem auto;
+    margin: 2.5625rem auto 2.375rem auto;
     grid-column: 1 / 4;
     text-align: center;
+    padding-right: 0.75rem;
   }
 }
