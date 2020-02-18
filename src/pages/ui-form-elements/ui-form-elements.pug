@@ -1,6 +1,5 @@
 extends ../layouts/base
 
-include ../../components/logo/logo
 include ../../components/input/input
 include ../../components/dropdown/dropdown
 include ../../components/date-range/date-range
@@ -20,10 +19,9 @@ include ../../components/feedback/feedback
 
 block vars
   - var title = 'UI Kit - Form elements'
+  - var logo = true
 block content
   .ui-form-elements
-    nav.container__logo
-      +logo
     section.row.ui-form-elements__top
       .grid-column
         article.ui-form-elements__input-group

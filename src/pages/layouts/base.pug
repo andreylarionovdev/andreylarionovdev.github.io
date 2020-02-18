@@ -1,3 +1,5 @@
+include ../../components/body/body
+
 block vars
 doctype html
 html(lang='en')
@@ -13,11 +15,5 @@ html(lang='en')
     meta(name='theme-color' content="#ffffff")
     title= title ? `Toxin booking | ${title}` : 'Toxin booking'
 
-  - var bodyClass = 'container'
-  - var classes = [bodyClass]
-
-  if theme
-    - classes.push(`${bodyClass}--${theme}`)
-
-  body(class=classes)
+  +body({ theme, logo, })
     block content

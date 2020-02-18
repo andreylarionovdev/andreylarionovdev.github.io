@@ -7,6 +7,7 @@ include ../../components/footer/footer
 block vars
   - var title = 'UI Kit - Headers & Footers'
   - var theme = 'gray'
+  - var logo = true
 block content
   - var user = 'Cosmin Negoita'
   -
@@ -41,8 +42,6 @@ block content
       }
     ]
   article.ui-headers-footers
-    nav.container__logo
-      +logo
     section.ui-section.ui-headers-footers__header
       +header({ menuItems, menuButtons })
     section.ui-section.ui-headers-footers__header.ui-headers-footers__header--signed

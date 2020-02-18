@@ -1,0 +1,16 @@
+include ../../components/logo/logo
+
+mixin body(options)
+  - var { theme, logo } = options || {}
+  - var blockModifiers = []
+
+  if theme
+    - blockModifiers.push(theme);
+
+  - var f = require('../../utils/functions')
+
+  body(class=f.bem({b: 'body', m: blockModifiers}))
+    if logo
+      nav.body__logo
+        +logo
+    block

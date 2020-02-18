@@ -23,18 +23,6 @@ body {
   min-width: 20rem;
 }
 
-.container {
-  &__logo {
-    margin: 0;
-    position: absolute;
-    top: 1.875rem;
-    left: 1.875rem;
-  }
-  &--gray {
-    background-color: $color-gray;
-  }
-}
-
 .clearfix {
   &:after {
     content: '';
@@ -43,14 +31,14 @@ body {
   }
 }
 
-.body {
-  font-family: Montserrat, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 0.875rem;
-  line-height: 1.5rem;
-  color: $color-dark-75;
-}
+//.body {
+//  font-family: Montserrat, sans-serif;
+//  font-style: normal;
+//  font-weight: normal;
+//  font-size: 0.875rem;
+//  line-height: 1.5rem;
+//  color: $color-dark-75;
+//}
 
 .h1 {
   margin: 0;

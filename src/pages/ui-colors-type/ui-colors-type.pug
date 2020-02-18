@@ -1,15 +1,13 @@
 extends ../layouts/base
 
-include ../../components/logo/logo
 include ../../components/color-sample/color-sample
 include ../../components/font-sample/font-sample
 
 block vars
   - var title = 'UI Kit - Colors & Type'
+  - var logo = true
 block content
   .ui-colors-type
-    nav.container__logo
-      +logo
     .ui-colors-type__colors
       +color-sample({
         color: 'dark-100',

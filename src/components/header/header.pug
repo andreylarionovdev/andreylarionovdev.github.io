@@ -8,8 +8,8 @@ mixin header(options)
   - var b = 'header'
   - var js = 'js'
 
-  nav.header.js-header
-    .header__inner
+  header.header.js-header
+    nav.header__inner
       i(class=f.bem({b, e: 'nav-toggle', js})).material-icons= 'menu'
       figure.header__logo
         +logo(true)

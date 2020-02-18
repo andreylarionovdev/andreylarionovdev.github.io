@@ -6,84 +6,82 @@ include ../../components/footer/footer
 block content
   - var href = '/change-me'
 
-    header.page__header
-      +header({
-        menuItems: [
-          {name: 'О нас', href},
-          {
-            name: 'Услуги',
-            sub: [
-              {name: 'Услуга 1', href},
-              {name: 'Услуга 2', href},
-              {name: 'Услуга 3', href}
-            ]
-          },
-          {name: 'Вакансии', href},
-          {name: 'Новости', href},
-          {
-            name: 'Соглашения',
-            sub: [
-              {name: 'Соглашение 1', href},
-              {name: 'Соглашение 2', href},
-              {name: 'Соглашение 3', href}
-            ]
-          }
-        ],
-        menuButtons: [
-          {
-            name: 'sign-in',
-            theme: 'transparent',
-            caption: 'Войти',
-            isSmall: true,
-            href: 'login.html'
-          },
-          {
-            name: 'sign-up',
-            theme: 'default',
-            caption: 'Зарегистрироваться',
-            isSmall: true,
-            href: 'registration.html'
-          }
-        ]
-      })
+    +header({
+      menuItems: [
+        {name: 'О нас', href},
+        {
+          name: 'Услуги',
+          sub: [
+            {name: 'Услуга 1', href},
+            {name: 'Услуга 2', href},
+            {name: 'Услуга 3', href}
+          ]
+        },
+        {name: 'Вакансии', href},
+        {name: 'Новости', href},
+        {
+          name: 'Соглашения',
+          sub: [
+            {name: 'Соглашение 1', href},
+            {name: 'Соглашение 2', href},
+            {name: 'Соглашение 3', href}
+          ]
+        }
+      ],
+      menuButtons: [
+        {
+          name: 'sign-in',
+          theme: 'transparent',
+          caption: 'Войти',
+          isSmall: true,
+          href: 'login.html'
+        },
+        {
+          name: 'sign-up',
+          theme: 'default',
+          caption: 'Зарегистрироваться',
+          isSmall: true,
+          href: 'registration.html'
+        }
+      ]
+    })
 
-    .page_main
+    main
       block main
 
-    footer.page__footer
-      +footer({
-        rightTitle: 'Подписка',
-        leftDescription: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
-        rightDescription: 'Получайте специальные предложения и новости сервиса',
-        rightPlaceholder: 'Email',
-        copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.',
-        menus: [
-          {
-            title: 'Навигация',
-            links: [
-              {text: 'О нас', href},
-              {text: 'Новости', href},
-              {text: 'Служба поддержки', href},
-              {text: 'Услуги', href}
-            ]
-          },
-          {
-            title: 'О нас',
-            links: [
-              {text: 'О сервисе', href},
-              {text: 'Наша команда', href},
-              {text: 'Вакансии', href},
-              {text: 'Инвесторы', href}
-            ],
-            center: true
-          },
-          {
-            title: 'Служба поддержки',
-            links: [
-              {text: 'Соглашения', href},
-              {text: 'Сообщества', href},
-              {text: 'Связь с нами', href}
-            ]
-          }
-        ]
-      })
+    +footer({
+      rightTitle: 'Подписка',
+      leftDescription: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
+      rightDescription: 'Получайте специальные предложения и новости сервиса',
+      rightPlaceholder: 'Email',
+      copyright: 'Copyright © 2018 Toxin отель. Все права зачищены.',
+      menus: [
+        {
+          title: 'Навигация',
+          links: [
+            {text: 'О нас', href},
+            {text: 'Новости', href},
+            {text: 'Служба поддержки', href},
+            {text: 'Услуги', href}
+          ]
+        },
+        {
+          title: 'О нас',
+          links: [
+            {text: 'О сервисе', href},
+            {text: 'Наша команда', href},
+            {text: 'Вакансии', href},
+            {text: 'Инвесторы', href}
+          ],
+          center: true
+        },
+        {
+          title: 'Служба поддержки',
+          links: [
+            {text: 'Соглашения', href},
+            {text: 'Сообщества', href},
+            {text: 'Связь с нами', href}
+          ]
+        }
+      ]
+    })

@@ -1,6 +1,5 @@
 extends ../layouts/base
 
-include ../../components/logo/logo
 include ../../components/card/room-book/room-book
 include ../../components/card/datepicker/datepicker
 include ../../components/card/room-search/room-search
@@ -11,10 +10,9 @@ include ../../components/card/sign-up/sign-up
 block vars
   - var title = 'UI Kit - Cards'
   - var theme = 'gray'
+  - var logo = true
 block content
   .ui-cards
-    nav.container__logo
-      +logo
     .grid-column
       article.ui-cards__card
         +room-search()

@@ -1,4 +1,6 @@
 import '../../utils/app.scss';
+
+import '../../components/body/body.scss';
 import '../../components/logo/logo.scss';
 import '../../components/card/room-search/room-search.scss';
 import '../../components/card/sign-up/sign-up.scss';
