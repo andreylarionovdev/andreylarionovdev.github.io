@@ -1,62 +1,11 @@
 extends ../layouts/base
 
-include ../../components/card/room-book/room-book
-include ../../components/card/datepicker/datepicker
-include ../../components/card/room-search/room-search
-include ../../components/card/room-thumb/room-thumb
-include ../../components/card/sign-in/sign-in
-include ../../components/card/sign-up/sign-up
+include ../../components/ui-cards/ui-cards
 
 block vars
   - var title = 'UI Kit - Cards'
   - var theme = 'gray'
   - var logo = true
+
 block content
-  .ui-cards
-    .grid-column
-      article.ui-cards__card
-        +room-search()
-      article.ui-cards__card
-        +sign-up()
-    .grid-column
-      article.ui-cards__card
-        +room-book({
-          roomNumber: 888,
-          pricePerDay: 9990,
-          discount: 2179,
-          fee: 300,
-          feature: 'люкс'
-        })
-      article.ui-cards__card
-        +sign-in()
-    .grid-column
-      article.ui-cards__card
-        +datepicker
-      article.ui-cards__card.ui-cards__card--room-thumb-vip
-        +room-thumb({
-          roomNumber: 888,
-          pricePerDay: 9990,
-          feedbackCounter: 145,
-          rate: 5,
-          images: [
-            {src: 'room-thumb-card-1.png', alt: 'Room 888'},
-            {src: 'room-thumb-card-1.png', alt: 'Room 888'},
-            {src: 'room-thumb-card-1.png', alt: 'Room 888'},
-            {src: 'room-thumb-card-1.png', alt: 'Room 888'},
-          ],
-          feature:'люкс',
-          focus: true
-        })
-      article.ui-cards__card.ui-cards__card--room-thumb
-        +room-thumb({
-          roomNumber: 840,
-          pricePerDay: 9900,
-          feedbackCounter: 65,
-          rate: 4,
-          images: [
-            {src: 'room-thumb-card-2.png', alt: 'Room 840'},
-            {src: 'room-thumb-card-2.png', alt: 'Room 840'},
-            {src: 'room-thumb-card-2.png', alt: 'Room 840'},
-            {src: 'room-thumb-card-2.png', alt: 'Room 840'},
-          ]
-        })
+  +ui-cards

@@ -1,0 +1,30 @@
+@import '../../utils/vars';
+@import '../../utils/mixins';
+
+@import '../color-sample/color-sample.scss';
+@import '../font-sample/font-sample.scss';
+
+.ui-colors-type {
+  @include inner($lgWidth: 79.2%);
+  margin-top: 9rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 15.75rem;
+  @media (max-width: $screen-md-max) {
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-row-gap: 3rem;
+  }
+  @media (max-width: $screen-xs-max) {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+
+  &__colors {
+    display: grid;
+    grid-row-gap: 1.25rem;
+  }
+  &__fonts {
+    display: grid;
+    grid-row-gap: 3.125rem;
+    grid-auto-rows: min-content;
+  }
+}

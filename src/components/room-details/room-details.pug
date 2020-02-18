@@ -1,0 +1,106 @@
+include ../feature/feature
+include ../feedback/feedback
+include ../bullet-list/bullet-list
+include ../card/room-book/room-book
+include ../votes-chart/votes-chart
+  
+mixin room-details
+  article.room-details
+    figure.room-details__feature-images
+      -
+        var featuredImages = [
+          './img/room-details-left.png',
+          './img/room-details-top.png',
+          './img/room-details-bottom.png',
+        ]
+      each image in featuredImages
+        img.room-details__feature-image(src=image)
+    .room-details__inner
+      .room-details__main
+        section.room-details__info
+          h2.room-details__info-title= 'Сведения о номере'
+          .room-details__features
+            -
+              var features = [
+                {
+                  icon: 'mood',
+                  title: 'Комфорт',
+                  hint: 'Шумопоглощающие стены'
+                },
+                {
+                  icon: 'location_city',
+                  title: 'Удобство',
+                  hint: 'Окно в каждой из спален'
+                },
+                {
+                  icon: 'whatshot',
+                  title: 'Уют',
+                  hint: 'Номер оснащен камином'
+                }
+              ]
+            each feature in features
+              article.room-details__feature
+                +feature(feature)
+        section.room-details__rate
+          h2.room-details__rate-title= 'Впечатления от номера'
+          .room-details__votes-chart
+            +votes-chart('votes-chart')
+        section.room-details__feedbacks
+          .room-details__feedbacks-header
+            h2.room-details__feedbacks-title= 'Отзывы посетителей номера'
+            span.room-details__feedbacks-counter= '2 отзыва'
+          -
+            var feedbacks = [
+              {
+                author: {
+                  name: 'Мурад Сарафанов',
+                  image: {
+                    src: './img/murad.png',
+                    alt: 'Фото автора'
+                  }
+                },
+                date: '5 дней назад',
+                text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И&nbsp;стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+                favoritesCount: 12,
+                isFavorite: true,
+              },
+              {
+                author: {
+                  name: 'Патрисия Стёклышкова',
+                  image: {
+                    src: './img/patricia.png',
+                    alt: 'Фото автора'
+                  }
+                },
+                date: 'Неделю назад',
+                text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',
+                favoritesCount: 2,
+              },
+            ]
+          each feedback in feedbacks
+            .room-details__feedback
+              +feedback(feedback)
+        section.room-details__rules
+          h2.room-details__rules-title= 'Правила'
+          .room-details__bullet-list
+            +bullet-list({
+              id: 'bullet-list',
+              items: [
+                {text: 'Нельзя с питомцами'},
+                {text: 'Без вечеринок и мероприятий'},
+                {text: 'Время прибытия &mdash; после 13:00, а выезд до 12:00'}
+              ]
+            })
+        section.room-details__cancel
+          h2.room-details__cancel-title= 'Отмена'
+          p.room-details__cancel-text
+            = 'Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.'
+      .room-details__sidebar
+        section.room-details__book-form
+          +room-book({
+            roomNumber: 888,
+            pricePerDay: 9990,
+            discount: 2179,
+            fee: 300,
+            feature: 'люкс'
+          })

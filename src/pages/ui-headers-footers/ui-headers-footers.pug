@@ -1,52 +1,11 @@
 extends ../layouts/base
 
-include ../../components/logo/logo
-include ../../components/header/header
-include ../../components/footer/footer
+include ../../components/ui-headers-footers/ui-headers-footers
 
 block vars
   - var title = 'UI Kit - Headers & Footers'
   - var theme = 'gray'
   - var logo = true
+
 block content
-  - var user = 'Cosmin Negoita'
-  -
-    const menuItems = [
-      {name: 'Home', href: '/change-me', active: true},
-      {name: 'About Us', href: '/change-me'},
-      {
-        name: 'Services',
-        sub: [
-          {name: 'One One', href: '/change-me'},
-          {name: 'Two Two', href: '/change-me'},
-          {name: 'Three', href: '/change-me'}
-        ]
-      },
-      {name: 'Careers', href: '/change-me'},
-      {name: 'News', href: '/change-me'},
-      {name: 'Documentation', href: '/change-me'}
-    ]
-  -
-    const menuButtons = [
-      {
-        name: 'sign-in',
-        theme: 'transparent',
-        caption: 'Login',
-        isSmall: true
-      },
-      {
-        name: 'sign-up',
-        theme: 'default',
-        caption: 'Register',
-        isSmall: true
-      }
-    ]
-  article.ui-headers-footers
-    section.ui-section.ui-headers-footers__header
-      +header({ menuItems, menuButtons })
-    section.ui-section.ui-headers-footers__header.ui-headers-footers__header--signed
-      +header({ user, menuItems, menuButtons })
-    section.ui-section.ui-headers-footers__footer
-      +footer
-    section.ui-section.ui-headers-footers__footer.ui-headers-footers__footer--creative
-      +footer({theme: 'creative'})
+  +ui-headers-footers

@@ -1,14 +1,9 @@
 extends ../layouts/page
 
-include ../../components/card/room-search/room-search
+include ../../components/landing/landing
 
 block vars
   - var title = 'Landing page'
 
 block main
-  article.landing
-    .landing__inner
-      section.landing__room-search
-        +room-search
-      aside.landing__hero-text
-        = 'Лучшие номера для вашей работы, отдыха и просто вдохновения'
+  +landing

@@ -1,10 +1,9 @@
 extends ../layouts/auth
 
-include ../../components/card/sign-up/sign-up
+include ../../components/registration/registration
 
 block vars
   - var title = 'Registration'
 
 block form
-  .registration__form
-    +sign-up
+  +registration

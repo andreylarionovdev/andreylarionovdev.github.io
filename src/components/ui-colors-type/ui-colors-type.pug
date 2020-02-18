@@ -1,0 +1,62 @@
+include ../color-sample/color-sample
+include ../font-sample/font-sample
+
+mixin ui-colors-type
+  .ui-colors-type
+    .ui-colors-type__colors
+      +color-sample({
+        color: 'dark-100',
+        title: 'Dark Shade 100%',
+        hex: '#1F2041'
+      })
+      +color-sample({
+        color: 'dark-75',
+        title: 'Dark Shade 75%',
+        hex: '#1F2041'
+      })
+      +color-sample({
+        color: 'dark-50',
+        title: 'Dark Shade 50%',
+        hex: '#1F2041'
+      })
+      +color-sample({
+        color: 'dark-25',
+        title: 'Dark Shade 25%',
+        hex: '#1F2041'
+      })
+      +color-sample({
+        color: 'dark-5',
+        title: 'Dark Shade 5%',
+        hex: '#1F2041'
+      })
+      +color-sample({
+        color: 'purple',
+        title: 'Purple',
+        hex: '#BC9CFF'
+      })
+      +color-sample({
+        color: 'green',
+        title: 'Green',
+        hex: '#6FCF97'
+      })
+    .ui-colors-type__fonts
+      +font-sample({
+        theme: 'text-header',
+        name: 'h1',
+        description: 'This one is the sub-section or widget title'
+      })
+      +font-sample({
+        theme: 'text-header-inside',
+        name: 'h2',
+        description: 'Next one is the item title inside widgets'
+      })
+      +font-sample({
+        theme: 'text-label',
+        name: 'h3',
+        description: 'This is a label or CTA text'
+      })
+      +font-sample({
+        theme: 'text-body',
+        name: 'body',
+        description: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'
+      })

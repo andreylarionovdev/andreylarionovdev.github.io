@@ -5,22 +5,22 @@ include ../../components/site-menu/site-menu
 block vars
   - var title = 'Main'
 block content
-    +site-menu({
-      theme: 'purple',
-      items: [
-        {text: 'Colors & Type', href: 'ui-colors-type.html'},
-        {text: 'Form elements', href: 'ui-form-elements.html'},
-        {text: 'Cards', href: 'ui-cards.html'},
-        {text: 'Headers & Footers', href: 'ui-headers-footers.html'}
-      ]
-    })
-    +site-menu({
-      theme: 'green',
-      items: [
-        {text: 'Landing page', href: 'landing.html'},
-        {text: 'Search room', href: 'search-room-filter.html'},
-        {text: 'Room details', href: 'room-details.html'},
-        {text: 'Registration', href: 'registration.html'},
-        {text: 'Sign in', href: 'login.html'}
-      ]
-    })
+  +site-menu({
+    theme: 'purple',
+    items: [
+      {text: 'Colors & Type', href: 'ui-colors-type.html'},
+      {text: 'Form elements', href: 'ui-form-elements.html'},
+      {text: 'Cards', href: 'ui-cards.html'},
+      {text: 'Headers & Footers', href: 'ui-headers-footers.html'}
+    ]
+  })
+  +site-menu({
+    theme: 'green',
+    items: [
+      {text: 'Landing page', href: 'landing.html'},
+      {text: 'Search room', href: 'search-room-filter.html'},
+      {text: 'Room details', href: 'room-details.html'},
+      {text: 'Registration', href: 'registration.html'},
+      {text: 'Sign in', href: 'login.html'}
+    ]
+  })

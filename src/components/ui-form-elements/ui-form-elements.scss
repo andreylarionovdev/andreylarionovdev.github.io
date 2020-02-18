@@ -1,0 +1,179 @@
+@import '../../utils/vars';
+@import '../../utils/mixins';
+
+@import '../label/label.scss';
+@import '../dropdown/dropdown.scss';
+@import '../range-slider/range-slider.scss';
+@import '../checkbox-list/checkbox-list.scss';
+@import '../checkbox-list-xp/checkbox-list-xp.scss';
+@import '../card/room-thumb/room-thumb.scss';
+@import '../paginator/paginator.scss';
+@import '../input/input.scss';
+@import '../date-range/date-range.scss';
+@import '../button/button.scss';
+@import '../radio-button/radio-button.scss';
+@import '../toggle-button/toggle-button.scss';
+@import '../like-button/like-button.scss';
+@import '../bullet-list/bullet-list.scss';
+@import '../feature/feature.scss';
+@import '../feedback/feedback.scss';
+
+.ui-form-elements {
+  @include inner;
+  padding: 8.9375rem 0 8.25rem 0;
+  font-family: Montserrat, sans-serif;
+
+  &__top {
+    margin-bottom: 5rem;
+    grid-template-columns: 27.63% 10.88% 27.63% 6.2176% 27.63%;
+  }
+
+  &__dropdown-states {
+    margin-bottom: 2.5625rem;
+    grid-template-columns: 22.95% 15.62% 27.61% 6.21% 27.61%;
+    .grid-column {
+      min-height: 16.625rem;
+    }
+  }
+
+  &__rich-lists {
+    grid-template-columns: 22.95% 15.62% 27.61% 6.21% 27.61%;
+  }
+
+  &__bottom {
+    grid-template-columns: 22.95% 15.62% 61.43%;
+  }
+
+  .row {
+    display: grid;
+    @media (max-width: $screen-md-max) {
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+      grid-gap: 2.5rem;
+    }
+    @media (max-width: $screen-xs-max) {
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+    .grid-column-gap {
+      @media (max-width: $screen-md-max) {
+        display: none;
+      }
+    }
+  }
+
+  // Custom padding/margin for groups
+  &__input-group {
+    margin-bottom: 1.25rem;
+    .label {
+      margin-bottom: 0.3125rem;
+    }
+    &--masked {
+      margin-bottom: 2.5rem;
+    }
+    &--with-submit {
+      padding-right: 3.375rem;
+    }
+  }
+  &__dropdown-group {
+    margin-bottom: 1.4375rem;
+    .label {
+      margin-bottom: 0.3125rem;
+    }
+    &--date-range,
+    &--date-filter {
+      margin-bottom: 2.5625rem;
+    }
+    &--date-filter {
+      padding-right: 3.375rem;
+    }
+    &--collapsed {
+      margin-bottom: 1.25rem;
+    }
+  }
+  &__checkbox-group {
+    margin-bottom: 2.5rem;
+    padding-right: 5rem;
+  }
+  &__radio-group {
+    margin-bottom: 2.625rem;
+    .label {
+      margin-bottom:0.875rem;
+    }
+    .radio-button {
+      margin-right: 1rem;
+    }
+  }
+  &__rate-button-group {
+    .label {
+      margin-bottom: 1.0625rem;
+    }
+    .rate-button {
+      margin-right: 1rem;
+    }
+  }
+  &__toggle-group {
+    margin-bottom: 2.8125rem;
+    .label {
+      margin-bottom: 1rem;
+    }
+    .toggle-button {
+      margin-bottom: 0.825rem;
+    }
+  }
+  &__like-button-group {
+    margin-bottom: 2.5rem;
+    .label {
+      margin-bottom: 1rem;
+    }
+    .like-button {
+      margin-right: 0.625rem;
+    }
+  }
+  &__range-slider {
+    margin-bottom: 2.375rem;
+    padding-right: 3.375rem;
+  }
+  &__button-group {
+    margin-bottom: 2.5rem;
+    .label {
+      margin-bottom: 1rem;
+    }
+    .row {
+      display: flex;
+      margin-bottom: 1.875rem;
+    }
+    .button {
+      margin-right: 1.25rem;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  &__paginator-group {
+    .label {
+      margin-bottom: 1rem;
+    }
+  }
+  &__rich-checkbox-group {
+    padding: 0.8125rem 3.5rem 0 0;
+  }
+  &__bullet-list-group {
+    padding: 0.8125rem 3.75rem 0 0;
+    .label {
+      margin-bottom: 0.8125rem;
+    }
+  }
+  &__checkbox-list-xp-group {
+    &--collapsed {
+      margin-bottom: 1.3125rem;
+    }
+    &--expanded {
+      margin-bottom: 0.6875rem;
+    }
+  }
+  &__feature {
+    border-bottom: 1px solid $color-dark-10;
+  }
+  &__feedback-group {
+    margin-top: 1.875rem;
+  }
+}

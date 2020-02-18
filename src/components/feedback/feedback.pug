@@ -7,7 +7,7 @@ mixin feedback(options)
     figure.feedback__author-picture-wrapper
       if author.image
         img.feedback__author-picture(
-          src=require(`./img/${author.image.src}`)
+          src=author.image.src
           alt=author.image.alt
         )
     div.feedback__header

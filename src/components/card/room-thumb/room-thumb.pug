@@ -29,7 +29,7 @@ mixin room-thumb(options)
         - var bemObj = {b, e: 'carousel-image'}
         if inx === 0
           - bemObj.m = 'active'
-        img(class=f.bem(bemObj) src=require(`./img/${image.src}`) alt=image.alt)
+        img(class=f.bem(bemObj) src=image.src alt=image.alt)
       div(class=f.bem({
         b,
         e: 'carousel-control',

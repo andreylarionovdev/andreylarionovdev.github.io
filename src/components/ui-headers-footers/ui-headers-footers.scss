@@ -1,0 +1,12 @@
+@import '../header/header.scss';
+@import '../footer/footer.scss';
+
+.ui-headers-footers {
+  margin-top: 9.375rem;
+  .ui-section {
+    margin-bottom: 2.5rem;
+  }
+  &__header {
+    min-height: 4.375rem;
+  }
+}
