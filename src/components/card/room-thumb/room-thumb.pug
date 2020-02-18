@@ -52,7 +52,7 @@ mixin room-thumb(options)
       a(href=href).room-thumb__number
         span.room-thumb__number-sign= '№'
         span.room-thumb__number-value= roomNumber
-        h3.room-thumb__number-feature.h3.h3--purple= feature
+        h3.room-thumb__number-feature= feature
       .room-thumb__price-per-day
         span.room-thumb__cost!= f.formatCurrency({value: pricePerDay})
         |&nbsp;

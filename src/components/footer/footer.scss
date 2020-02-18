@@ -55,14 +55,17 @@
       padding: 3rem 0.75rem;
     }
   }
-  &__logo {
-    margin: 0;
-  }
   &__header {
     grid-area: header;
     @media (max-width: $screen-xs-max) {
       text-align: center;
     }
+  }
+  &__logo {
+    margin: 0;
+  }
+  &__description {
+    @include primary-text;
   }
   &__navbar {
     grid-area: nav;
@@ -82,12 +85,17 @@
       text-align: center;
     }
   }
+  &__subscribe-title {
+    @include h3;
+  }
   &__subscribe-description {
+    @include primary-text;
     margin: 1rem 0 1.5rem 0;
   }
   &__copyright {
-    grid-area: copyright;
+    @include primary-text;
     line-height: 2.5rem;
+    grid-area: copyright;
     @media (max-width: $screen-xs-max) {
       text-align: center;
     }

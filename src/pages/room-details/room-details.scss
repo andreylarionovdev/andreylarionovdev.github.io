@@ -65,10 +65,14 @@
   &__info {
     grid-area: info;
   }
+  &__info-title {
+    @include h2;
+  }
   &__rate {
     grid-area: rate;
   }
   &__rate-title {
+    @include h2;
     margin-bottom: 1.25rem;
   }
   &__feedbacks {
@@ -76,11 +80,15 @@
     display: grid;
     grid-row-gap: 1.25rem;
   }
+  &__feedbacks-title {
+    @include h2;
+  }
   &__feedbacks-header {
     display: flex;
     justify-content: space-between;
   }
   &__feedbacks-counter {
+    @include primary-text;
     text-align: right;
     color: $color-dark-50;
   }
@@ -96,7 +104,11 @@
   }
   &__rules-title,
   &__cancel-title {
+    @include h2;
     margin-bottom: 1.0625rem;
+  }
+  &__cancel-text {
+    @include primary-text;
   }
   &__rules-title {
     padding-left: 1.25rem;

@@ -1,4 +1,5 @@
 @import '../../../utils/vars';
+@import '../../../utils/mixins';
 
 @import '../../rate-button/rate-button';
 
@@ -87,6 +88,10 @@
     display: inline-block;
     text-decoration: none;
     font-family: Quicksand, sans-serif;
+  }
+  &__number-feature {
+    @include h3;
+    color: $color-purple;
   }
   &__number-sign,
   &__number-value,

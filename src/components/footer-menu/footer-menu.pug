@@ -8,8 +8,8 @@ mixin footer-menu(options)
   - var f = require('../../utils/functions');
 
   div(class=f.bem({b: 'footer-menu', m: blockModifiers}))
-    h3.footer-menu__title.h3= title
+    h3.footer-menu__title= title
     ul.footer-menu__list
       each item, _ in menuItems
         li.footer-menu__item
-          a.footer-menu__link(href=item.href).body= item.text
+          a.footer-menu__link(href=item.href)= item.text

@@ -2,5 +2,5 @@ mixin label(options)
   - var { label, hint, _for } = options || {}
 
   label.label(for=_for)
-    h3.label__title.h3= label
+    h3.label__title= label
     span.label__hint= hint

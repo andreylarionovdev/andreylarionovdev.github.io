@@ -18,7 +18,7 @@ block main
     .room-details__inner
       .room-details__main
         section.room-details__info
-          h2.h2= 'Сведения о номере'
+          h2.room-details__info-title= 'Сведения о номере'
           .room-details__features
             article.room-details__feature
               +feature({
@@ -39,13 +39,13 @@ block main
                 hint: 'Номер оснащен камином'
               })
         section.room-details__rate
-          h2.room-details__rate-title.h2= 'Впечатления от номера'
+          h2.room-details__rate-title= 'Впечатления от номера'
           .room-details__votes-chart
             +votes-chart('votes-chart')
         section.room-details__feedbacks
           .room-details__feedbacks-header
-            h2.room-details__feedbacks-title.h2= 'Отзывы посетителей номера'
-            span.room-details__feedbacks-counter.body= '2 отзыва'
+            h2.room-details__feedbacks-title= 'Отзывы посетителей номера'
+            span.room-details__feedbacks-counter= '2 отзыва'
           .room-details__feedback
             +feedback({
               author: {
@@ -63,7 +63,7 @@ block main
           .room-details__feedback
             +feedback({
               author: {
-                name: 'Патриция Стёклышкова',
+                name: 'Патрисия Стёклышкова',
                 image: {
                   src: 'patricia.png',
                   alt: 'Фото автора'
@@ -74,7 +74,7 @@ block main
               favoritesCount: 2,
             })
         section.room-details__rules
-          h2.room-details__rules-title.h2= 'Правила'
+          h2.room-details__rules-title= 'Правила'
           .room-details__bullet-list
             +bullet-list({
               id: 'bullet-list',
@@ -85,8 +85,8 @@ block main
               ]
             })
         section.room-details__cancel
-          h2.room-details__cancel-title.h2= 'Отмена'
-          p.room-details__cancel-text.body
+          h2.room-details__cancel-title= 'Отмена'
+          p.room-details__cancel-text
             = 'Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.'
       .room-details__sidebar
         section.room-details__book-form

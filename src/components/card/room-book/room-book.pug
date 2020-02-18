@@ -11,8 +11,8 @@ mixin room-book(options)
         span.room-book__number-sign= '№'
         span.room-book__number-value= roomNumber
         if feature
-          h3.room-book__number-feature.h3.h3--purple= feature
-      .room-book__price-per-day.body
+          h3.room-book__number-feature= feature
+      .room-book__price-per-day
         span.room-book__cost!= f.formatCurrency({value: pricePerDay})
         |&nbsp;
         span.room-book__date-unit= 'в сутки'

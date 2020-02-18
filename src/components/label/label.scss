@@ -1,4 +1,5 @@
 @import '../../utils/vars';
+@import '../../utils/mixins';
 
 .label {
   display: flex;
@@ -7,8 +8,8 @@
   font-size: 0.75rem;
 
   &__title {
+    @include h3;
     font-weight: bold;
-    color: $color-dark-100;
   }
   &__hint {
     color: $color-dark-50;

@@ -1,7 +1,11 @@
 @import '../../utils/vars';
+@import '../../utils/mixins';
 
 .footer-menu {
   font-family: Montserrat, sans-serif;
+  &__title {
+    @include h3;
+  }
   &__list {
     list-style: none;
     padding-left: 0;
@@ -11,6 +15,7 @@
     margin-bottom: 0.875rem;
   }
   &__link {
+    @include primary-text;
     color: $color-dark-50;
     text-decoration: none;
   }

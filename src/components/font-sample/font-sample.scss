@@ -1,43 +1,67 @@
 @import '../../utils/vars';
+@import '../../utils/mixins';
 
 .font-sample {
   $blockClass: &;
-  display: flex;
-
-  &__name {
+  @mixin name {
     font-family: Montserrat, sans-serif;
+    color: $color-dark-25;
+    font-weight: normal;
+    text-transform: uppercase;
     text-align: right;
     width: 2.375rem;
-    font-weight: normal;
-    color: $color-dark-25;
-    text-transform: uppercase;
     margin-right: 1.875rem;
   }
-
-  &__description {
+  @mixin description {
     font-style: normal;
+    font-family: Quicksand, sans-serif;
   }
+  display: flex;
 
-  &--text-header {
+  &--h1 {
+    #{$blockClass}__name {
+      @include h1;
+      @include name;
+      padding-left: 0.5rem;
+    }
     #{$blockClass}__description {
-      font-family: Quicksand, sans-serif;
+      @include h1;
+      @include description;
     }
   }
-
-  &--text-header-inside {
+  &--h2 {
+    #{$blockClass}__name {
+      @include h2;
+      @include name;
+    }
     #{$blockClass}__description {
-      font-family: Quicksand, sans-serif;
+      @include h2;
+      @include description;
       padding-right: 2rem;
     }
   }
-
-  &--text-body {
+  &--h3 {
     #{$blockClass}__name {
+      @include h3;
+      @include name;
+    }
+    #{$blockClass}__description {
+      @include h3;
+      @include description;
+      font-family: Montserrat, sans-serif;
+    }
+  }
+  &--body {
+    #{$blockClass}__name {
+      @include primary-text;
+      @include name;
       text-transform: capitalize;
     }
-
     #{$blockClass}__description {
+      @include primary-text;
+      @include description;
       padding-right: 4rem;
+      font-family: Montserrat, sans-serif;
     }
   }
 }

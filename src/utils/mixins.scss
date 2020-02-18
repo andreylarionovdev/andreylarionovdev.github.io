@@ -8,3 +8,43 @@
     max-width: 72.5rem;
   }
 }
+
+@mixin primary-text {
+  font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.5rem;
+  color: $color-dark-75;
+}
+
+@mixin h1 {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1.875rem;
+  color: $color-dark-100;
+}
+
+@mixin h2 {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1875rem;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1.5rem;
+  color: $color-dark-100;
+}
+
+@mixin h3 {
+  margin: 0;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 0.9375rem;
+  color: $color-dark-100;
+  text-transform: uppercase;
+}

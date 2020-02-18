@@ -28,6 +28,7 @@
     }
   }
   &__hero-text {
+    @include primary-text;
     grid-column: 3 / 4;
     grid-row: 2 / 3;
     text-align: right;

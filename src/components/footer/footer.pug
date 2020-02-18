@@ -57,7 +57,7 @@ mixin footer(options)
       .footer__header
         figure.footer__logo
           +logo(true)
-        p.footer__description.body= leftDescription
+        p.footer__description= leftDescription
       nav.footer__navbar
         each menu, _ in menus
           section.footer__nav-section
@@ -67,8 +67,8 @@ mixin footer(options)
               center: menu.center
             })
       .footer__subscribe
-        h3.footer__subscribe-title.h3!= rightTitle
-        p.footer__subscribe-description.body= rightDescription
+        h3.footer__subscribe-title!= rightTitle
+        p.footer__subscribe-description= rightDescription
         .footer__subscribe-input
           +input({
             id: 'subscribe',
@@ -76,7 +76,7 @@ mixin footer(options)
             withArrow: true,
             type: 'email'
           })
-      p.footer__copyright.body= copyright
+      p.footer__copyright= copyright
       section.footer__social
         a.footer__social-link.footer__social-link--tw(href='/change-me')
         a.footer__social-link.footer__social-link--fb(href='/change-me')

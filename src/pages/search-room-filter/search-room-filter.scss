@@ -54,6 +54,9 @@
       grid-column: 1 / 5;
     }
   }
+  &__search-result-title {
+    @include h1;
+  }
   &__thumb-list {
     padding-top: 1.25rem;
     display: grid;
