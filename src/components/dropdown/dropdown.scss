@@ -19,6 +19,14 @@
     border: 1px solid $color-dark-25;
     border-radius: 0.25rem;
   }
+  &__arrow-btn {
+    cursor: pointer;
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: $color-dark-50;
+  }
   &__text {
     overflow: hidden;
     white-space: nowrap;
@@ -99,6 +107,9 @@
       border: 1px solid $color-dark-50;
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0;
+    }
+    #{$blockClass}__arrow-btn {
+      color: $color-dark-75;
     }
     #{$blockClass}__menu {
       display: block;

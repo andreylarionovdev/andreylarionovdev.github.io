@@ -117,7 +117,7 @@ mixin search-room-filter
           })
       section.search-room-filter__search-result
         h1.search-room-filter__search-result-title= 'Номера, которые мы для вас подобрали'
-        .search-room-filter__thumb-list
+        ul.search-room-filter__thumb-list
           -
             var searchResult = [
               {
@@ -245,7 +245,7 @@ mixin search-room-filter
               }
             ]
           each room, i in searchResult
-            .search-room-filter__room-thumb
+            li.search-room-filter__room-thumb
               +room-thumb({
                 roomNumber: room.number,
                 pricePerDay: room.pricePerDay,

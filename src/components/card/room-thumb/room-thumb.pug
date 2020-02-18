@@ -30,18 +30,18 @@ mixin room-thumb(options)
         if inx === 0
           - bemObj.m = 'active'
         img(class=f.bem(bemObj) src=image.src alt=image.alt)
-      div(class=f.bem({
+      button(class=f.bem({
         b,
         e: 'carousel-control',
         m: 'prev'
       }))
-        i.material-icons= 'keyboard_arrow_left'
-      div(class=f.bem({
+        span.material-icons= 'keyboard_arrow_left'
+      button(class=f.bem({
         b,
         e: 'carousel-control',
         m: 'next'
       }))
-        i.material-icons= 'keyboard_arrow_left'
+        span.material-icons= 'keyboard_arrow_left'
       ul.room-thumb__carousel-indicators
         each _, inx in images
           - var bemObj = {b, e: 'carousel-indicator'}
