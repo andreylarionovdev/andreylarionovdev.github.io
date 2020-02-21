@@ -1,6 +1,3 @@
-include ../label/label
-include ./select-box
-
 mixin dropdown(options)
   -
     var {
@@ -32,4 +29,26 @@ mixin dropdown(options)
       button.dropdown__arrow-btn.material-icons= 'keyboard_arrow_down'
       input(class=f.bem({b, e: 'data-input', js}) type='text' value=value)
     if rows.length > 0
-      +select-box(options)
+      ul(class=f.bem({b, e: 'menu', js}) style={'z-index': zIndex})
+        each row in rows
+          li(class=f.bem({b, e: 'menu-item', js}))
+            span.dropdown__item-name= row.text
+            span.dropdown__count-buttons
+              - var decModifiers = row.count < 1 ? 'disabled': '';
+              span(class=f.bem({b, e: 'change-count-btn', m: decModifiers, js}) data-op='-')= '-'
+              span(class=f.bem({b, e: 'count', js}))= row.count
+              span(class=f.bem({b, e: 'change-count-btn', js}) data-op='+')= '+'
+        li.dropdown__footer-buttons
+          span(class=f.bem({b, e: 'clear-button', js}))
+            +button({
+              theme: 'textual',
+              caption: 'очистить',
+              isHovered: true,
+              href: 'javascript:void(0)',
+            })
+          span(class=f.bem({b, e: 'apply-button', js}))
+            +button({
+              theme: 'textual',
+              caption: 'применить',
+              href: 'javascript:void(0)',
+            })
