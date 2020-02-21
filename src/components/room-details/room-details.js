@@ -1,5 +1,5 @@
 import '../feedback/feedback';
-import '../card/room-book/room-book';
+import '../room-book/room-book';
 import '../votes-chart/votes-chart';
 
 import './img/room-details-left.png';

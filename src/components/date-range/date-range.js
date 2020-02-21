@@ -107,7 +107,7 @@ $(() => {
       prevHtml: '<i class="material-icons">arrow_back</i>',
       nextHtml: '<i class="material-icons">arrow_forward</i>',
       onShow(inst) {
-        inst.$datepicker.addClass('card').css('position', 'absolute');
+        inst.$datepicker.css('position', 'absolute');
         inst.$datepicker.css('width', `${$element.outerWidth()}px`);
         addActionButtons($datepickerApi, inst.$datepicker, $dropdownFrom, $dropdownTo);
       },

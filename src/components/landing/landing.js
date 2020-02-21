@@ -1,1 +1,1 @@
-import '../card/room-search/room-search';
+import '../room-search/room-search';

@@ -1,9 +1,9 @@
-@import '../../../utils/vars';
-@import '../../../utils/mixins';
+@import '../../utils/vars';
+@import '../../utils/mixins';
 
-@import '../../button/button';
-@import '../../input/input';
-@import '../../label/label';
+@import '../button/button';
+@import '../input/input';
+@import '../label/label';
 
 .sign-in {
   @include card;

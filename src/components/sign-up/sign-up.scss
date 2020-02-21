@@ -1,11 +1,11 @@
-@import '../../../utils/vars';
-@import '../../../utils/mixins';
+@import '../../utils/vars';
+@import '../../utils/mixins';
 
-@import '../../button/button';
-@import '../../input/input';
-@import '../../label/label';
-@import '../../toggle-button/toggle-button';
-@import '../../radio-button/radio-button';
+@import '../button/button';
+@import '../input/input';
+@import '../label/label';
+@import '../toggle-button/toggle-button';
+@import '../radio-button/radio-button';
 
 .sign-up {
   @include card;

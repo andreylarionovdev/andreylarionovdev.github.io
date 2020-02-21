@@ -1,10 +1,10 @@
-@import '../../../utils/vars';
-@import '../../../utils/mixins';
+@import '../../utils/vars';
+@import '../../utils/mixins';
 
-@import '../../button/button';
-@import '../../label/label';
-@import '../../date-range/date-range';
-@import '../../dropdown/dropdown';
+@import '../button/button';
+@import '../label/label';
+@import '../date-range/date-range';
+@import '../dropdown/dropdown';
 
 .room-search {
   @include card;

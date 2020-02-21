@@ -1,5 +1,5 @@
 @import '../../utils/mixins';
-@import '../card/sign-up/sign-up.scss';
+@import '../sign-up/sign-up.scss';
 
 .registration {
   @include auth-page;
