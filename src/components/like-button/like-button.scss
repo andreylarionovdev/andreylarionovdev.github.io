@@ -11,7 +11,7 @@
   border-radius: 0.625rem;
   font-size: 0.625rem;
   font-style: normal;
-  border: 1px solid $color-dark-25;
+  border: 0.0625rem solid $color-dark-25;
   color: $color-dark-25;
   cursor: pointer;
   user-select: none;
@@ -26,7 +26,7 @@
   }
 
   &--favorite {
-    border: 1px solid $color-purple;
+    border: 0.0625rem solid $color-purple;
 
     #{$blockName}__count {
       color: $color-purple;

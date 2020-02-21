@@ -13,7 +13,7 @@
     font-family: Montserrat, sans-serif;
     width: 100%;
     line-height: 2.625rem;
-    border: 1px solid $color-dark-25;
+    border: 0.0625rem solid $color-dark-25;
     transition: border .25s ease-in-out;
     border-radius: $borderRadius;
     font-size: 0.875rem;
@@ -23,11 +23,11 @@
     &:focus,
     &:hover {
       outline: none;
-      border: 1px solid $color-dark-50;
+      border: 0.0625rem solid $color-dark-50;
     }
     &:focus + #{$blockClass}__submit-button,
     &:hover + #{$blockClass}__submit-button {
-      border: 1px solid $color-dark-50;
+      border: 0.0625rem solid $color-dark-50;
       border-left: none;
     }
   }
@@ -38,10 +38,10 @@
   &--hovered {
     #{$blockClass}__input {
       outline: none;
-      border: 1px solid $color-dark-50;
+      border: 0.0625rem solid $color-dark-50;
     }
     #{$blockClass}__submit-button {
-      border: 1px solid $color-dark-50;
+      border: 0.0625rem solid $color-dark-50;
       border-left: none;
     }
   }
@@ -62,7 +62,7 @@
       align-items: center;
       line-height: $lineHeight;
       width: $lineHeight + $borderRadius;
-      border: 1px solid $color-dark-25;
+      border: 0.0625rem solid $color-dark-25;
       border-left: none;
       border-top-right-radius: $borderRadius;
       border-bottom-right-radius: $borderRadius;

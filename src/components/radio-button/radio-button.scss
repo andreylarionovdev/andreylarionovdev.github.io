@@ -24,7 +24,7 @@
         background: $grad-purple;
       }
       &:before {
-        border: 1px solid $color-purple;
+        border: 0.0625rem solid $color-purple;
       }
     }
   }
@@ -49,7 +49,7 @@
       width: 1.25rem;
       height: 1.25rem;
       display: inline-block;
-      border: 1px solid $color-dark-25;
+      border: 0.0625rem solid $color-dark-25;
       border-radius: 0.625rem;
     }
   }

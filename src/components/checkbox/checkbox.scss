@@ -14,7 +14,7 @@
         margin: 0.375rem;
         width: 0.5rem;
         height: 0.375rem;
-        border: 2px solid $color-purple;
+        border: 0.125rem solid $color-purple;
         border-top: none;
         border-right: none;
         transform: rotate(-45deg);
@@ -46,7 +46,7 @@
       display: inline-block;
       width: 1.25rem;
       height: 1.25rem;
-      border: 1px solid $color-dark-25;
+      border: 0.0625rem solid $color-dark-25;
       border-radius: 0.25rem;
     }
   }

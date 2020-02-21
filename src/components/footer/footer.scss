@@ -20,7 +20,7 @@
     background-color: $color-dark-5;
     color: $color-dark-5;
     border: none;
-    height: 1px;
+    height: 0.0625rem;
     @media (max-width: $screen-xs-max) {
       display: none;
     }

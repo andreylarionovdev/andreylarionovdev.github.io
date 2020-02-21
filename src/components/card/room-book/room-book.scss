@@ -113,8 +113,8 @@
     margin-right: 0.3125rem;
   }
   &__total-line {
-    height: 1px;
-    border-bottom: 1px dotted $color-dark-25;
+    height: 0.0625rem;
+    border-bottom: 0.0625rem dotted $color-dark-25;
   }
   &__total-sum {
     font-family: Quicksand, sans-serif;

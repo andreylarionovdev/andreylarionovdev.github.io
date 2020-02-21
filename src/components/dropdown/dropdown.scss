@@ -16,7 +16,7 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    border: 1px solid $color-dark-25;
+    border: 0.0625rem solid $color-dark-25;
     border-radius: 0.25rem;
   }
   &__arrow-btn {
@@ -50,7 +50,7 @@
     width: 100%;
     padding: 0.3125rem 0.375rem 0 0.875rem;
     list-style: none;
-    border: 1px solid $color-dark-50;
+    border: 0.0625rem solid $color-dark-50;
     border-bottom-right-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
     box-shadow: 0 0.625rem 1.25rem $color-dark-5;
@@ -90,11 +90,11 @@
     line-height: $diam;
     border-radius: 50%;
     cursor: pointer;
-    border: 1px solid $color-dark-50;
+    border: 0.0625rem solid $color-dark-50;
     &--disabled {
       cursor: default;
       pointer-events: none;
-      border: 1px solid $color-dark-25;
+      border: 0.0625rem solid $color-dark-25;
     }
   }
   &__footer-buttons {
@@ -104,7 +104,7 @@
   }
   &--expanded {
     #{$blockClass}__toggle {
-      border: 1px solid $color-dark-50;
+      border: 0.0625rem solid $color-dark-50;
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0;
     }

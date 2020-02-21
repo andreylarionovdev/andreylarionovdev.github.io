@@ -8,7 +8,7 @@
 @import '../votes-chart/votes-chart.scss';
 
 .room-details {
-  border-bottom: 1px solid $color-dark-25;
+  border-bottom: 0.0625rem solid $color-dark-25;
   &__inner {
     padding: 4.375rem 0 3.9375rem 0;
     @include inner;
@@ -63,7 +63,7 @@
     }
   }
   &__feature {
-    border-bottom: 1px solid $color-dark-10;
+    border-bottom: 0.0625rem solid $color-dark-10;
     &:last-child {
       border-bottom: none;
     }
