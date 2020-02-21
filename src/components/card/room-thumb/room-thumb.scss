@@ -3,10 +3,10 @@
 
 @import '../../rate-button/rate-button';
 
-@import '../card';
-
 .room-thumb {
   $blockClass: &;
+
+  @include card;
   border: none;
   &__carousel-inner {
     position: relative;

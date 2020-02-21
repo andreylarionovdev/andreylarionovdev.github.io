@@ -7,9 +7,8 @@
 @import '../../toggle-button/toggle-button';
 @import '../../radio-button/radio-button';
 
-@import '../card';
-
 .sign-up {
+  @include card;
   padding: 2.4375rem 1.75rem 1.8125rem 1.8125rem;
   @media (max-width: $screen-xs-max) {
     padding: 2rem 1rem;

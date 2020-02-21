@@ -23,7 +23,7 @@ mixin room-thumb(options)
   div(class=f.bem({
     b,
     m: blockModifiers
-  })).card
+  }))
     figure.room-thumb__carousel-inner
       each image, inx in images
         - var bemObj = {b, e: 'carousel-image'}

@@ -4,7 +4,7 @@ include ../../button/button
 include ../../date-range/date-range
 
 mixin room-search()
-  form.card.room-search
+  form.room-search
     h1.room-search__title= 'Найдём номера под ваши пожелания'
     .room-search__date-range
       +date-range({id: `${b}__check-in-out`})
