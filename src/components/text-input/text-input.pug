@@ -1,4 +1,4 @@
-mixin input(options)
+mixin text-input(options)
   -
     var {
       id,
@@ -19,9 +19,9 @@ mixin input(options)
   - var f = require('../../utils/functions')
 
   div(class=f.bem({
-    b: 'input',
+    b: 'text-input',
     m: blockModifiers
   }))
-    input.input__input(id=id type=type placeholder=placeholder value=value)
-    button.input__submit-button
-      i.input__arrow.material-icons= 'arrow_forward'
+    input.text-input__input(id=id type=type placeholder=placeholder value=value)
+    button.text-input__submit-button
+      span.text-input__arrow.material-icons= 'arrow_forward'

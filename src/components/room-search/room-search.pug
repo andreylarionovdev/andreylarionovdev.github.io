@@ -1,13 +1,13 @@
 include ../label/label
 include ../dropdown/dropdown
 include ../button/button
-include ../date-range/date-range
+include ../datepicker-date-range/datepicker-date-range
 
 mixin room-search()
   form.room-search
     h1.room-search__title= 'Найдём номера под ваши пожелания'
-    .room-search__date-range
-      +date-range({id: `${b}__check-in-out`})
+    .room-search__datepicker-date-range
+      +datepicker-date-range({id: `${b}__check-in-out`})
     .room-search__guests
       .room-search__label
         +label({ label: 'Гости' })

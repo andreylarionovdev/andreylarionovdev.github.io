@@ -1,6 +1,6 @@
 include ../footer-menu/footer-menu
 include ../logo/logo
-include ../input/input
+include ../text-input/text-input
 
 mixin footer(options)
   -
@@ -70,7 +70,7 @@ mixin footer(options)
         h3.footer__subscribe-title!= rightTitle
         p.footer__subscribe-description= rightDescription
         .footer__subscribe-input
-          +input({
+          +text-input({
             id: 'subscribe',
             placeholder: rightPlaceholder,
             withArrow: true,

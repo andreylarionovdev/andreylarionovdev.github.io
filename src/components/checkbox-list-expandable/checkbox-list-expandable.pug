@@ -1,6 +1,6 @@
 include ../checkbox/checkbox
 
-mixin checkbox-list-xp(options)
+mixin checkbox-list-expandable(options)
   - var { id, label, isExpanded, items = [] } = options || {}
 
   - var blockModifiers = []
@@ -12,20 +12,20 @@ mixin checkbox-list-xp(options)
   - var js = 'js'
 
   div(id=id class=f.bem({
-    b: 'checkbox-list-xp',
+    b: 'checkbox-list-expandable',
     m: blockModifiers,
     js
   }))
     h3(class=f.bem({
-      b: 'checkbox-list-xp',
+      b: 'checkbox-list-expandable',
       e: 'toggle', 
       js
     }))
-      span.checkbox-list-xp__label= label
-      i.checkbox-list-xp__arrow.material-icons= 'keyboard_arrow_down'
-    ul.checkbox-list-xp__list
+      span.checkbox-list-expandable__label= label
+      i.checkbox-list-expandable__arrow.material-icons= 'keyboard_arrow_down'
+    ul.checkbox-list-expandable__list
       each item, index in items
-        li.checkbox-list-xp__li
+        li.checkbox-list-expandable__li
           +checkbox({
             id: `${id}-${item.name}`,
             label: item.label,

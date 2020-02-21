@@ -1,17 +1,17 @@
-include ../input/input
+include ../text-input/text-input
 include ../button/button
 
 mixin sign-in()
   form.sign-in
     h1.sign-in__title= 'Войти'
     .sign-in__input
-      +input({
+      +text-input({
         id: 'sign-in_email',
         placeholder: 'Email',
         type: 'email'
       })
     .sign-in__input
-      +input({
+      +text-input({
         id: 'sign-in_pass',
         placeholder: 'Пароль',
         type: 'password'

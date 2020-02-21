@@ -1,4 +1,4 @@
-include ../input/input
+include ../text-input/text-input
 include ../radio-button/radio-button
 include ../toggle-button/toggle-button
 include ../label/label
@@ -7,12 +7,12 @@ mixin sign-up()
   form.sign-up
     h1.sign-up__title= 'Регистрация аккаунта'
     .sign-up__input
-      +input({
+      +text-input({
         id: 'first-name',
         placeholder: 'Имя'
       })
     .sign-up__input
-      +input({
+      +text-input({
         id: 'last-name',
         placeholder: 'Фамилия'
       })
@@ -38,7 +38,7 @@ mixin sign-up()
           label: 'Дата рождения'
         })
       .sign-up__input
-        +input({
+        +text-input({
           id: 'sign-up__input-birthday',
           placeholder: 'ДД.ММ.ГГГГ'
         })
@@ -48,13 +48,13 @@ mixin sign-up()
           label: 'Данные для входа в сервис'
         })
       .sign-up__input
-        +input({
+        +text-input({
           id: 'sign-up__input-email',
           placeholder: 'Email',
           type: 'email'
         })
     .sign-up__input
-      +input({
+      +text-input({
         id: 'sign-up__input-password',
         placeholder: 'Пароль',
         type: 'password'

@@ -5,11 +5,11 @@
 @import '../dropdown/dropdown.scss';
 @import '../range-slider/range-slider.scss';
 @import '../checkbox-list/checkbox-list.scss';
-@import '../checkbox-list-xp/checkbox-list-xp.scss';
+@import '../checkbox-list-expandable/checkbox-list-expandable';
 @import '../room-thumb/room-thumb.scss';
 @import '../paginator/paginator.scss';
-@import '../input/input.scss';
-@import '../date-range/date-range.scss';
+@import '../text-input/text-input.scss';
+@import '../datepicker-date-range/datepicker-date-range.scss';
 @import '../button/button.scss';
 @import '../radio-button/radio-button.scss';
 @import '../toggle-button/toggle-button.scss';
@@ -78,7 +78,7 @@
     .label {
       margin-bottom: 0.3125rem;
     }
-    &--date-range,
+    &--datepicker-date-range,
     &--date-filter {
       margin-bottom: 2.5625rem;
     }
@@ -162,7 +162,7 @@
       margin-bottom: 0.8125rem;
     }
   }
-  &__checkbox-list-xp-group {
+  &__checkbox-list-expandable-group {
     &--collapsed {
       margin-bottom: 1.3125rem;
     }

@@ -1,6 +1,6 @@
 import '../feedback/feedback';
 import '../room-book/room-book';
-import '../votes-chart/votes-chart';
+import '../donut-chart/donut-chart';
 
 import './img/room-details-left.png';
 import './img/room-details-top.png';

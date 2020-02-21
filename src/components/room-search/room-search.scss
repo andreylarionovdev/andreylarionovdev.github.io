@@ -3,7 +3,7 @@
 
 @import '../button/button';
 @import '../label/label';
-@import '../date-range/date-range';
+@import '../datepicker-date-range/datepicker-date-range';
 @import '../dropdown/dropdown';
 
 .room-search {
@@ -16,7 +16,7 @@
     @include h1;
   }
   &__title,
-  &__date-range {
+  &__datepicker-date-range {
     margin-bottom: 1.25rem;
   }
   &__label {

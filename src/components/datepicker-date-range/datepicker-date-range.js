@@ -93,11 +93,11 @@ $(() => {
   }
 
   function createDateRangeInstance($element) {
-    const $inputFrom = $element.find('.js-date-range__from input');
-    const $inputTo = $element.find('.js-date-range__to input');
+    const $inputFrom = $element.find('.js-datepicker-date-range__from input');
+    const $inputTo = $element.find('.js-datepicker-date-range__to input');
 
-    const $dropdownFrom = $element.find('.js-date-range__from .js-date-range__dropdown');
-    const $dropdownTo = $element.find('.js-date-range__to .js-date-range__dropdown');
+    const $dropdownFrom = $element.find('.js-datepicker-date-range__from .js-datepicker-date-range__dropdown');
+    const $dropdownTo = $element.find('.js-datepicker-date-range__to .js-datepicker-date-range__dropdown');
 
     const $datepickerApi = $inputFrom.datepicker({
       range: true,
@@ -117,7 +117,7 @@ $(() => {
     initEventListeners($datepickerApi, $dropdownFrom, $dropdownFrom);
   }
 
-  $('.js-date-range').each((i, o) => {
+  $('.js-datepicker-date-range').each((i, o) => {
     createDateRangeInstance($(o));
   });
 });

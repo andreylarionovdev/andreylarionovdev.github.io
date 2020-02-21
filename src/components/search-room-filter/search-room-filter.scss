@@ -4,7 +4,7 @@
 @import '../dropdown/dropdown.scss';
 @import '../range-slider/range-slider.scss';
 @import '../checkbox-list/checkbox-list.scss';
-@import '../checkbox-list-xp/checkbox-list-xp.scss';
+@import '../checkbox-list-expandable/checkbox-list-expandable';
 @import '../room-thumb/room-thumb.scss';
 @import '../paginator/paginator.scss';
 
@@ -46,7 +46,7 @@
   &__feature-dropdown-group {
     margin-top: 1.5rem;
   }
-  &__additional-checkbox-list-xp-group {
+  &__additional-checkbox-list-expandable-group {
     margin-top: 1rem;
   }
   &__checkbox-group {

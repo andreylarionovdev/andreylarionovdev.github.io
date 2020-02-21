@@ -1,4 +1,4 @@
-mixin votes-chart(options)
+mixin donut-chart(options)
   -
     var {
       id,
@@ -44,11 +44,11 @@ mixin votes-chart(options)
   - var angleOffset = 90
 
   - var f = require('../../utils/functions')
-  - var b = 'votes-chart'
+  - var b = 'donut-chart'
   - var js = 'js'
 
-  figure.votes-chart.js-votes-chart
-    svg.votes-chart__chart(height=height width=width viewBox=[0, 0, width, height].join(' '))
+  figure.donut-chart.js-donut-chart
+    svg.donut-chart__chart(height=height width=width viewBox=[0, 0, width, height].join(' '))
       defs
         each grad, label in gradientMap
           linearGradient(id=label)
@@ -74,12 +74,12 @@ mixin votes-chart(options)
           )
       g(class=f.bem({b, e: 'count', js}))
         text(class=f.bem({b, e: 'count-value', js}) x='50%' y='50%' text-anchor='middle')= total
-        text.votes-chart__count-unit(x='50%' y='65%' text-anchor='middle')= 'голосов'
+        text.donut-chart__count-unit(x='50%' y='65%' text-anchor='middle')= 'голосов'
 
-    ul.votes-chart__labels
+    ul.donut-chart__labels
       each label, key in voteLabels
         - var countSourceItem = sortedValues.find(obj => obj.label === key)
         - var count = countSourceItem !== undefined ? countSourceItem.count : '0';
         li(class=f.bem({b, e: 'label', m: key, js}) data-vote-key=key data-count=count)
-          span.votes-chart__bullet
-          span.votes-chart__caption= label
+          span.donut-chart__bullet
+          span.donut-chart__caption= label

@@ -1,8 +1,8 @@
 import '../dropdown/dropdown';
 import '../range-slider/range-slider';
-import '../checkbox-list-xp/checkbox-list-xp';
+import '../checkbox-list-expandable/checkbox-list-expandable';
 import '../paginator/paginator';
-import '../date-range/date-range';
+import '../datepicker-date-range/datepicker-date-range';
 import '../like-button/like-button';
 import '../feedback/feedback';
 

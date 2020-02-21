@@ -1,7 +1,7 @@
 include ../range-slider/range-slider
 include ../label/label
 include ../checkbox-list/checkbox-list
-include ../checkbox-list-xp/checkbox-list-xp
+include ../checkbox-list-expandable/checkbox-list-expandable
 include ../room-thumb/room-thumb
 include ../paginator/paginator
 include ../dropdown/dropdown
@@ -100,8 +100,8 @@ mixin search-room-filter
                 {count: 0, text: 'ванные комнаты', name: 'bathroom'}
               ]
             })
-        .search-room-filter__additional-checkbox-list-xp-group
-          +checkbox-list-xp({
+        .search-room-filter__additional-checkbox-list-expandable-group
+          +checkbox-list-expandable({
             id: 'additional',
             label: 'Дополнительные удобства',
             items: [

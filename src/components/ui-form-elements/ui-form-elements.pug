@@ -1,6 +1,6 @@
-include ../input/input
+include ../text-input/text-input
 include ../dropdown/dropdown
-include ../date-range/date-range
+include ../datepicker-date-range/datepicker-date-range
 include ../radio-button/radio-button
 include ../toggle-button/toggle-button
 include ../label/label
@@ -10,7 +10,7 @@ include ../range-slider/range-slider
 include ../button/button
 include ../paginator/paginator
 include ../checkbox-list/checkbox-list
-include ../checkbox-list-xp/checkbox-list-xp
+include ../checkbox-list-expandable/checkbox-list-expandable
 include ../bullet-list/bullet-list
 include ../feature/feature
 include ../feedback/feedback
@@ -25,7 +25,7 @@ mixin ui-form-elements
               label: 'text field',
               hint: 'default'
             })
-          +input({
+          +text-input({
             id: 'input-email',
             placeholder: 'Email',
             type: 'email'
@@ -36,7 +36,7 @@ mixin ui-form-elements
               label: 'text field',
               hint: 'hover / focus'
             })
-          +input({
+          +text-input({
             id: 'input-focused-hovered',
             placeholder: 'Some text',
             value: 'This is pretty awesome',
@@ -58,13 +58,13 @@ mixin ui-form-elements
               label: 'masked text field',
               hint: 'default'
             })
-          +input({
+          +text-input({
             id: 'input-with-mask',
             placeholder: 'ДД.ММ.ГГГГ'
           })
-        article.ui-form-elements__dropdown-group.ui-form-elements__dropdown-group--date-range
-          +date-range({
-            id: 'date-range-demo',
+        article.ui-form-elements__dropdown-group.ui-form-elements__dropdown-group--datepicker-date-range
+          +datepicker-date-range({
+            id: 'datepicker-date-range-demo',
             fromLabel: 'date dropdown',
             from: 'ДД.ММ.ГГГГ',
             toLabel: 'date dropdown',
@@ -84,7 +84,7 @@ mixin ui-form-elements
             +label({
               label: 'subscription text field'
             })
-          +input({
+          +text-input({
             id: 'input-submit',
             placeholder: 'Email',
             withArrow: true,
@@ -297,13 +297,13 @@ mixin ui-form-elements
           })
     section.row.ui-form-elements__rich-lists
       .grid-column
-        article.ui-form-elements__checkbox-list-xp-group.ui-form-elements__checkbox-list-xp-group--collapsed
-          +checkbox-list-xp({
+        article.ui-form-elements__checkbox-list-expandable-group.ui-form-elements__checkbox-list-expandable-group--collapsed
+          +checkbox-list-expandable({
             id: 'exp_check_list_collapsed',
             label: 'Expandable checkbox list'
           })
-        article.ui-form-elements__checkbox-list-xp-group.ui-form-elements__checkbox-list-xp-group--expanded
-          +checkbox-list-xp({
+        article.ui-form-elements__checkbox-list-expandable-group.ui-form-elements__checkbox-list-expandable-group--expanded
+          +checkbox-list-expandable({
             id: 'exp_check_list_collapsed',
             label: 'Expandable checkbox list',
             isExpanded: true,
