@@ -1,0 +1,6 @@
+@import '../../utils/mixins';
+@import '../card/sign-in/sign-in.scss';
+
+.login {
+  @include auth-page;
+}

@@ -1,5 +1,7 @@
 include ../card/sign-up/sign-up
 
 mixin registration
-  .registration
-    +sign-up
+  article.registration
+    .registration__inner
+      section.registration__form
+        +sign-up

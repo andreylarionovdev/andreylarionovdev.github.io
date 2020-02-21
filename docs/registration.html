@@ -11,7 +11,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>Toxin booking | Registration</title>
-  <link href="registration.a17f43013d7ef8f0f8bb.css" rel="stylesheet"></head>
+  <link href="registration.8c7cabecd2881fe50eda.css" rel="stylesheet"></head>
   <body class="body">
     <header class="header js-header">
       <nav class="header__inner"><i class="header__nav-toggle js-header__nav-toggle material-icons">menu</i>
@@ -38,87 +38,85 @@
       </nav>
     </header>
     <main>
-      <article class="auth">
-        <div class="auth__inner">
-          <section class="auth__form">
-            <div class="registration">
-              <form class="card sign-up">
-                <h1 class="sign-up__title">Регистрация аккаунта</h1>
-                <div class="sign-up__input">
-                  <div class="input">
-                    <input class="input__input" id="first-name" type="text" placeholder="Имя">
-                    <button class="input__submit-button"><i class="input__arrow material-icons">arrow_forward</i></button>
+      <article class="registration">
+        <div class="registration__inner">
+          <section class="registration__form">
+            <form class="card sign-up">
+              <h1 class="sign-up__title">Регистрация аккаунта</h1>
+              <div class="sign-up__input">
+                <div class="input">
+                  <input class="input__input" id="first-name" type="text" placeholder="Имя">
+                  <button class="input__submit-button"><i class="input__arrow material-icons">arrow_forward</i></button>
+                </div>
+              </div>
+              <div class="sign-up__input">
+                <div class="input">
+                  <input class="input__input" id="last-name" type="text" placeholder="Фамилия">
+                  <button class="input__submit-button"><i class="input__arrow material-icons">arrow_forward</i></button>
+                </div>
+              </div>
+              <div class="sign-up__gender">
+                <div class="sign-up__radio-button">
+                  <div class="radio-button">
+                    <input class="radio-button__input" id="g-male" type="radio" name="gender" value="m" checked>
+                    <label class="radio-button__label" for="g-male">Мужчина</label>
                   </div>
+                </div>
+                <div class="sign-up__radio-button">
+                  <div class="radio-button">
+                    <input class="radio-button__input" id="g-female" type="radio" name="gender" value="f">
+                    <label class="radio-button__label" for="g-female">Женщина</label>
+                  </div>
+                </div>
+              </div>
+              <div class="sign-up__birthday">
+                <div class="sign-up__label">
+                  <label class="label">
+                    <h3 class="label__title">Дата рождения</h3><span class="label__hint"></span>
+                  </label>
                 </div>
                 <div class="sign-up__input">
                   <div class="input">
-                    <input class="input__input" id="last-name" type="text" placeholder="Фамилия">
+                    <input class="input__input" id="sign-up__input-birthday" type="text" placeholder="ДД.ММ.ГГГГ">
                     <button class="input__submit-button"><i class="input__arrow material-icons">arrow_forward</i></button>
                   </div>
                 </div>
-                <div class="sign-up__gender">
-                  <div class="sign-up__radio-button">
-                    <div class="radio-button">
-                      <input class="radio-button__input" id="g-male" type="radio" name="gender" value="m" checked>
-                      <label class="radio-button__label" for="g-male">Мужчина</label>
-                    </div>
-                  </div>
-                  <div class="sign-up__radio-button">
-                    <div class="radio-button">
-                      <input class="radio-button__input" id="g-female" type="radio" name="gender" value="f">
-                      <label class="radio-button__label" for="g-female">Женщина</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="sign-up__birthday">
-                  <div class="sign-up__label">
-                    <label class="label">
-                      <h3 class="label__title">Дата рождения</h3><span class="label__hint"></span>
-                    </label>
-                  </div>
-                  <div class="sign-up__input">
-                    <div class="input">
-                      <input class="input__input" id="sign-up__input-birthday" type="text" placeholder="ДД.ММ.ГГГГ">
-                      <button class="input__submit-button"><i class="input__arrow material-icons">arrow_forward</i></button>
-                    </div>
-                  </div>
-                </div>
-                <div class="sign-up__email">
-                  <div class="sign-up__label">
-                    <label class="label">
-                      <h3 class="label__title">Данные для входа в сервис</h3><span class="label__hint"></span>
-                    </label>
-                  </div>
-                  <div class="sign-up__input">
-                    <div class="input">
-                      <input class="input__input" id="sign-up__input-email" type="email" placeholder="Email">
-                      <button class="input__submit-button"><i class="input__arrow material-icons">arrow_forward</i></button>
-                    </div>
-                  </div>
+              </div>
+              <div class="sign-up__email">
+                <div class="sign-up__label">
+                  <label class="label">
+                    <h3 class="label__title">Данные для входа в сервис</h3><span class="label__hint"></span>
+                  </label>
                 </div>
                 <div class="sign-up__input">
                   <div class="input">
-                    <input class="input__input" id="sign-up__input-password" type="password" placeholder="Пароль">
+                    <input class="input__input" id="sign-up__input-email" type="email" placeholder="Email">
                     <button class="input__submit-button"><i class="input__arrow material-icons">arrow_forward</i></button>
                   </div>
                 </div>
-                <div class="sign-up__toggle">
-                  <div class="toggle-button">
-                    <input class="toggle-button__input" id="sign-up__toggle-promote" type="checkbox">
-                    <label class="toggle-button__label" for="sign-up__toggle-promote">Получать спецпредложения</label>
-                  </div>
+              </div>
+              <div class="sign-up__input">
+                <div class="input">
+                  <input class="input__input" id="sign-up__input-password" type="password" placeholder="Пароль">
+                  <button class="input__submit-button"><i class="input__arrow material-icons">arrow_forward</i></button>
                 </div>
-                <div class="sign-up__pay-button"><a class="button button--default button--fluid button--with-arrow" href="/change-me">
-                    <div class="button__inner"><span class="button__caption">Перейти к оплате</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
+              </div>
+              <div class="sign-up__toggle">
+                <div class="toggle-button">
+                  <input class="toggle-button__input" id="sign-up__toggle-promote" type="checkbox">
+                  <label class="toggle-button__label" for="sign-up__toggle-promote">Получать спецпредложения</label>
                 </div>
-                <div class="sign-up__auth">
-                  <p class="sign-up__auth-hint">Уже есть аккаунт на Toxin</p>
-                  <div class="sign-up__auth-button"><a class="button button--transparent button--fluid" href="login.html">
-                      <div class="button__inner"><span class="button__caption">Войти</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
-                  </div>
+              </div>
+              <div class="sign-up__pay-button"><a class="button button--default button--fluid button--with-arrow" href="/change-me">
+                  <div class="button__inner"><span class="button__caption">Перейти к оплате</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
+              </div>
+              <div class="sign-up__auth">
+                <p class="sign-up__auth-hint">Уже есть аккаунт на Toxin</p>
+                <div class="sign-up__auth-button"><a class="button button--transparent button--fluid" href="login.html">
+                    <div class="button__inner"><span class="button__caption">Войти</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
                 </div>
-              </form>
-            </div>
+              </div>
+            </form>
           </section>
         </div>
       </article>
@@ -179,5 +177,5 @@
         <section class="footer__social"><a class="footer__social-link footer__social-link--tw" href="/change-me"></a><a class="footer__social-link footer__social-link--fb" href="/change-me"></a><a class="footer__social-link footer__social-link--ig" href="/change-me"></a></section>
       </div>
     </footer>
-  <script type="text/javascript" src="registration.a17f43013d7ef8f0f8bb.js"></script></body>
+  <script type="text/javascript" src="registration.8c7cabecd2881fe50eda.js"></script></body>
 </html>

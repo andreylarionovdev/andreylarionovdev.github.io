@@ -1,9 +1,9 @@
-extends ../layouts/auth
+extends ../../layouts/page
 
-include ../../components/card/sign-in/sign-in
+include ../../components/login/login
 
 block vars
   - var title = 'Sign in'
 
-block form
-  +sign-in
+block main
+  +login

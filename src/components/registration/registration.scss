@@ -1,5 +1,9 @@
+@import '../../utils/mixins';
 @import '../card/sign-up/sign-up.scss';
 
 .registration {
-  padding: 1.875rem 0 1.625rem 0;
+  @include auth-page;
+  &__form {
+    padding: 1.875rem 0 1.625rem 0;
+  }
 }
