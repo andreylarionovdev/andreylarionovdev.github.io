@@ -6,7 +6,7 @@ include ../votes-chart/votes-chart
   
 mixin room-details
   article.room-details
-    figure.room-details__feature-images
+    figure.room-details__featured-images
       -
         var featuredImages = [
           './img/room-details-left.png',
@@ -14,7 +14,7 @@ mixin room-details
           './img/room-details-bottom.png',
         ]
       each image in featuredImages
-        img.room-details__feature-image(src=image)
+        img.room-details__featured-image(src=image)
     .room-details__inner
       .room-details__main
         section.room-details__info

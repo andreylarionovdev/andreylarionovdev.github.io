@@ -19,16 +19,17 @@
       grid-template-columns: 1fr;
     }
   }
-  &__feature-images {
+  &__featured-images {
     display: grid;
     width: 100%;
+    max-width: 90rem;
     margin: 0;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
       'a b'
       'a c';
   }
-  &__feature-image {
+  &__featured-image {
     margin: 0;
     width: 100%;
     object-fit: cover;
