@@ -53,7 +53,7 @@
     padding-right: 1.25rem;
   }
 
-  &__search-result {
+  &__thumbnail-list-wrapper {
     grid-column: 2 / 5;
     padding-left: 2.1875rem;
     @media (max-width: $screen-xs-max) {
@@ -61,13 +61,11 @@
       grid-column: 1 / 5;
     }
   }
-  &__search-result-title {
+  &__thumbnail-list-title {
     @include h1;
   }
-  &__thumb-list {
-    margin: 0;
+  &__thumbnail-list {
     padding: 1.25rem 0 0 0;
-    list-style-type: none;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(16.875rem, 1fr));
     grid-column-gap: 0.75rem;

@@ -64,13 +64,13 @@
   &__date-unit {
     font-size: 0.75rem;
   }
-  &__guests {
+  &__guests-dropdown-group {
     margin-top: 1.25rem;
   }
-  &__label {
+  &__guests-dropdown-label {
     margin-bottom: 0.3125rem;
   }
-  &__table-result {
+  &__result-grid {
     margin-top: 1.125rem;
     display: grid;
     grid-template-columns: 5fr 1fr 1fr;
@@ -80,13 +80,13 @@
     font-size: 0.875rem;
     color: $color-dark-75;
   }
-  .grid-cell {
+  &__result-grid-cell {
     padding-top: 0.1875rem;
-    &--info {
+    &--with-info-icon {
       padding: 0;
       color: $color-dark-25;
     }
-    &--sum {
+    &--with-sum {
       text-align: right;
     }
   }
@@ -102,8 +102,6 @@
   &__total-header,
   &__total-sum {
     display: inline-block;
-    padding: 0;
-    margin: 0;
     font-size: 1.1875rem;
     line-height: 1rem;
   }
@@ -121,7 +119,7 @@
     text-align: right;
     margin-left: 0.3125rem;
   }
-  &__button {
+  &__submit-button-group {
     margin-top: 1.5625rem;
   }
 }

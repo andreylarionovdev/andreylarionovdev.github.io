@@ -8,9 +8,8 @@
 
   @include card;
   border: none;
-  &__carousel-inner {
+  &__carousel {
     position: relative;
-    margin: 0;
     width: 100%;
     overflow: hidden;
     display: grid;
@@ -56,9 +55,6 @@
   }
   &__carousel-indicators {
     position: absolute;
-    padding: 0;
-    margin: 0;
-    list-style: none;
     right: 0.9375rem;
     bottom: 0.9375rem;
     z-index: 2;
@@ -131,14 +127,13 @@
     margin: 0 1.25rem 0 1.375rem;
   }
   &__feedback-counter {
-    margin: 0;
     text-align: right;
     font-family: Montserrat, sans-serif;
     font-size: 0.875rem;
     color: $color-dark-50;
     line-height: 1.375rem;
   }
-  &--focus {
+  &--focused {
     #{$blockClass}__carousel-control {
       opacity: 1;
     }

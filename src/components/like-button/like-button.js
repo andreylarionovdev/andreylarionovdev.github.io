@@ -15,6 +15,6 @@ $(() => {
     count = isFavorite ? count + 1 : count - 1;
 
     $counter.text(count);
-    $(e.currentTarget).find('.js-like-button__heart').text(iconName);
+    $(e.currentTarget).find('.js-like-button__icon').text(iconName);
   });
 });

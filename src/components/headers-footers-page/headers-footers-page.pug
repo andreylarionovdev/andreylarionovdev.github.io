@@ -36,11 +36,11 @@ mixin headers-footers-page
       }
     ]
   article.headers-footers-page
-    section.ui-section.headers-footers-page__header
+    section.headers-footers-page__header
       +header({menuItems, menuButtons})
-    section.ui-section.headers-footers-page__header.headers-footers-page__header--signed
+    section.headers-footers-page__header.headers-footers-page__header--signed
       +header({user, menuItems, menuButtons})
-    section.ui-section.headers-footers-page__footer
+    section.headers-footers-page__footer
       +footer
-    section.ui-section.headers-footers-page__footer.headers-footers-page__footer--creative
+    section.headers-footers-page__footer.headers-footers-page__footer--creative
       +footer({theme: 'creative'})

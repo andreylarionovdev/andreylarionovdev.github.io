@@ -36,7 +36,6 @@
     display: inline-block;
   }
   &__navigation {
-    list-style-type: none;
     display: none;
     @media (min-width: $screen-md-min) {
       display: flex;

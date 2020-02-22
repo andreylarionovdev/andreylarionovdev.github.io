@@ -64,7 +64,7 @@
     @include primary-text;
     margin: 0.875rem 0;
   }
-  &__navbar {
+  &__navigation {
     grid-area: nav;
     display: flex;
     justify-content: space-between;
@@ -75,17 +75,17 @@
       text-align: center;
     }
   }
-  &__subscribe {
+  &__subscribe-form {
     grid-area: subscribe;
     padding: 0.3125rem 0;
     @media (max-width: $screen-xs-max) {
       text-align: center;
     }
   }
-  &__subscribe-title {
+  &__subscribe-form-title {
     @include h3;
   }
-  &__subscribe-description {
+  &__subscribe-form-description {
     @include primary-text;
     margin: 1rem 0 1.5rem 0;
   }
@@ -98,7 +98,7 @@
       text-align: center;
     }
   }
-  &__social {
+  &__social-list {
     grid-area: social;
     display: flex;
     align-items: center;
@@ -107,9 +107,11 @@
       justify-content: center;
     }
   }
+  &__social-list-item {
+    margin: 0.875rem 0 0.875rem 1.25rem;
+  }
   &__social-link {
     display: inline-block;
-    margin: 0.875rem 0 0.875rem 1.25rem;
     width: 1.5rem;
     height: 1.5rem;
     background-position: center center;
@@ -140,12 +142,12 @@
         padding: 0;
       }
     }
-    #{$blockClass}__social {
+    #{$blockClass}__social-list {
       justify-content: center;
     }
-    #{$blockClass}__row-divider,
-    #{$blockClass}__navbar,
-    #{$blockClass}__subscribe,
+    #{$blockClass}__horizontal-divider,
+    #{$blockClass}__navigation,
+    #{$blockClass}__subscribe-form,
     #{$blockClass}__copyright {
       display: none;
     }

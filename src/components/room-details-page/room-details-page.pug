@@ -19,7 +19,6 @@ mixin room-details-page
       .room-details-page__main
         section.room-details-page__info
           h2.room-details-page__info-title= 'Сведения о номере'
-          .room-details-page__features
             -
               var features = [
                 {
@@ -38,9 +37,10 @@ mixin room-details-page
                   hint: 'Номер оснащен камином'
                 }
               ]
-            each feature in features
-              article.room-details-page__feature
-                +feature(feature)
+            ul.room-details-page__features-list
+              each feature in features
+                li.room-details-page__feature-item
+                  +feature(feature)
         section.room-details-page__rate
           h2.room-details-page__rate-title= 'Впечатления от номера'
           .room-details-page__donut-chart
@@ -77,9 +77,10 @@ mixin room-details-page
                 favoritesCount: 2,
               },
             ]
-          each feedback in feedbacks
-            .room-details-page__feedback
-              +feedback(feedback)
+          ul.room-details-page__feedbacks-list
+            each feedback in feedbacks
+              li.room-details-page__feedback-item
+                +feedback(feedback)
         section.room-details-page__rules
           h2.room-details-page__rules-title= 'Правила'
           .room-details-page__bullet-list

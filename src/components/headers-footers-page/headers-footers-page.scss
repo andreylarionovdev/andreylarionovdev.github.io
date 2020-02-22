@@ -3,7 +3,8 @@
 
 .headers-footers-page {
   margin-top: 9.375rem;
-  .ui-section {
+  &__header,
+  &__footer {
     margin-bottom: 2.5rem;
   }
   &__header {

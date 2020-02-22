@@ -58,18 +58,18 @@ mixin footer(options)
         figure.footer__logo
           +logo(true)
         p.footer__description= leftDescription
-      nav.footer__navbar
+      nav.footer__navigation
         each menu, _ in menus
-          section.footer__nav-section
+          section.footer__navigation-section
             +footer-menu({
               title: menu.title,
               menuItems: menu.links,
               center: menu.center
             })
-      .footer__subscribe
-        h3.footer__subscribe-title!= rightTitle
-        p.footer__subscribe-description= rightDescription
-        .footer__subscribe-input
+      form.footer__subscribe-form
+        h3.footer__subscribe-form-title!= rightTitle
+        p.footer__subscribe-form-description= rightDescription
+        .footer__subscribe-form-input-group
           +text-input({
             id: 'subscribe',
             placeholder: rightPlaceholder,
@@ -77,7 +77,10 @@ mixin footer(options)
             type: 'email'
           })
       p.footer__copyright= copyright
-      section.footer__social
-        a.footer__social-link.footer__social-link--tw(href='/change-me')
-        a.footer__social-link.footer__social-link--fb(href='/change-me')
-        a.footer__social-link.footer__social-link--ig(href='/change-me')
+      ul.footer__social-list
+        li.footer__social-list-item
+          a.footer__social-link.footer__social-link--tw(href='/change-me')
+        li.footer__social-list-item
+          a.footer__social-link.footer__social-link--fb(href='/change-me')
+        li.footer__social-list-item
+          a.footer__social-link.footer__social-link--ig(href='/change-me')

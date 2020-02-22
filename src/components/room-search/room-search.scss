@@ -16,13 +16,13 @@
     @include h1;
   }
   &__title,
-  &__datepicker-date-range {
+  &__datepicker-date-range-group {
     margin-bottom: 1.25rem;
   }
-  &__label {
+  &__guests-dropdown-label {
     margin-bottom: 0.3125rem;
   }
-  &__button {
+  &__submit-button-group {
     margin-top: 1.9375rem;
   }
 }

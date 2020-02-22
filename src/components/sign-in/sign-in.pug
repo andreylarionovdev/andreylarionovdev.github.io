@@ -4,19 +4,19 @@ include ../button/button
 mixin sign-in()
   form.sign-in
     h1.sign-in__title= 'Войти'
-    .sign-in__input
+    .sign-in__text-input
       +text-input({
         id: 'sign-in_email',
         placeholder: 'Email',
         type: 'email'
       })
-    .sign-in__input
+    .sign-in__text-input
       +text-input({
         id: 'sign-in_pass',
         placeholder: 'Пароль',
         type: 'password'
       })
-    .sign-in__login-button
+    .sign-in__sign-in-button-group
       +button({
         theme: 'default',
         caption: 'Войти',
@@ -24,9 +24,9 @@ mixin sign-in()
         isFluid: true,
         href: 'sign-in.html'
       })
-    .sign-in__create-account
-      p.sign-in__hint= 'Нет аккаунта на Toxin?'
-      .sign-in__create-button
+    .sign-in__sign-up-button-group
+      p.sign-in__sign-up-hint= 'Нет аккаунта на Toxin?'
+      .sign-in__sign-up-button
         +button({
           theme: 'transparent',
           caption: 'Создать',

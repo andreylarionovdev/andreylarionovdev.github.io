@@ -30,7 +30,6 @@
       'a c';
   }
   &__featured-image {
-    margin: 0;
     width: 100%;
     object-fit: cover;
     &:nth-child(1) {
@@ -63,7 +62,7 @@
       grid-template-columns: 1fr;
     }
   }
-  &__feature {
+  &__feature-item {
     border-bottom: 0.0625rem solid $color-dark-10;
     &:last-child {
       border-bottom: none;
@@ -84,8 +83,6 @@
   }
   &__feedbacks {
     grid-area: feed;
-    display: grid;
-    grid-row-gap: 1.25rem;
   }
   &__feedbacks-title {
     @include h2;
@@ -93,15 +90,19 @@
   &__feedbacks-header {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 1.25rem;
   }
   &__feedbacks-counter {
     @include primary-text;
     text-align: right;
     color: $color-dark-50;
   }
+  &__feedback-item {
+    margin-bottom: 1.25rem;
+  }
   &__rules,
   &__cancel {
-    padding: 1.25rem 1.25rem 0 0;
+    padding-right: 1.25rem;
   }
   &__rules {
     grid-area: rules;
