@@ -11,7 +11,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>Toxin booking | UI Kit - Form elements</title>
-  <link href="elements.35b194c36ecf6294e901.css" rel="stylesheet"></head>
+  <link href="elements.85f28f18d48b198b2d58.css" rel="stylesheet"></head>
   <body class="body">
     <nav class="body__logo"><a class="logo" href="./index.html"></a>
     </nav>
@@ -24,9 +24,9 @@
                 <h3 class="label__title">text field</h3><span class="label__hint">default</span>
               </label>
             </div>
-            <div class="input">
-              <input class="input__input" id="input-email" type="email" placeholder="Email">
-              <button class="input__submit-button"><i class="input__arrow material-icons">arrow_forward</i></button>
+            <div class="text-input">
+              <input class="text-input__input" id="input-email" type="email" placeholder="Email">
+              <button class="text-input__submit-button"><span class="text-input__arrow material-icons">arrow_forward</span></button>
             </div>
           </article>
           <article class="ui-form-elements__input-group ui-form-elements__input-group--hovered">
@@ -35,9 +35,9 @@
                 <h3 class="label__title">text field</h3><span class="label__hint">hover / focus</span>
               </label>
             </div>
-            <div class="input input--hovered">
-              <input class="input__input" id="input-focused-hovered" type="text" placeholder="Some text" value="This is pretty awesome">
-              <button class="input__submit-button"><i class="input__arrow material-icons">arrow_forward</i></button>
+            <div class="text-input text-input--hovered">
+              <input class="text-input__input" id="input-focused-hovered" type="text" placeholder="Some text" value="This is pretty awesome">
+              <button class="text-input__submit-button"><span class="text-input__arrow material-icons">arrow_forward</span></button>
             </div>
           </article>
           <article class="ui-form-elements__dropdown-group">
@@ -59,21 +59,21 @@
                 <h3 class="label__title">masked text field</h3><span class="label__hint">default</span>
               </label>
             </div>
-            <div class="input">
-              <input class="input__input" id="input-with-mask" type="text" placeholder="ДД.ММ.ГГГГ">
-              <button class="input__submit-button"><i class="input__arrow material-icons">arrow_forward</i></button>
+            <div class="text-input">
+              <input class="text-input__input" id="input-with-mask" type="text" placeholder="ДД.ММ.ГГГГ">
+              <button class="text-input__submit-button"><span class="text-input__arrow material-icons">arrow_forward</span></button>
             </div>
           </article>
-          <article class="ui-form-elements__dropdown-group ui-form-elements__dropdown-group--date-range">
-            <div class="date-range js-date-range">
-              <div class="date-range__from js-date-range__from">
-                <div class="date-range__label">
+          <article class="ui-form-elements__dropdown-group ui-form-elements__dropdown-group--datepicker-date-range">
+            <div class="datepicker-date-range js-datepicker-date-range">
+              <div class="datepicker-date-range__from js-datepicker-date-range__from">
+                <div class="datepicker-date-range__label">
                   <label class="label">
                     <h3 class="label__title">date dropdown</h3><span class="label__hint"></span>
                   </label>
                 </div>
-                <div class="date-range__dropdown js-date-range__dropdown">
-                  <div class="dropdown js-dropdown" id="date-range-demo__from-date">
+                <div class="datepicker-date-range__dropdown js-datepicker-date-range__dropdown">
+                  <div class="dropdown js-dropdown" id="datepicker-date-range-demo__from-date">
                     <label class="dropdown__toggle js-dropdown__toggle"><span class="dropdown__text js-dropdown__text">ДД.ММ.ГГГГ</span>
                       <button class="dropdown__arrow-btn material-icons">keyboard_arrow_down</button>
                       <input class="dropdown__data-input js-dropdown__data-input" type="text" value="ДД.ММ.ГГГГ">
@@ -81,14 +81,14 @@
                   </div>
                 </div>
               </div>
-              <div class="date-range__to js-date-range__to">
-                <div class="date-range__label">
+              <div class="datepicker-date-range__to js-datepicker-date-range__to">
+                <div class="datepicker-date-range__label">
                   <label class="label">
                     <h3 class="label__title">date dropdown</h3><span class="label__hint"></span>
                   </label>
                 </div>
-                <div class="date-range__dropdown js-date-range__dropdown">
-                  <div class="dropdown js-dropdown" id="date-range-demo__to-date">
+                <div class="datepicker-date-range__dropdown js-datepicker-date-range__dropdown">
+                  <div class="dropdown js-dropdown" id="datepicker-date-range-demo__to-date">
                     <label class="dropdown__toggle js-dropdown__toggle"><span class="dropdown__text js-dropdown__text">19.08.2019 </span>
                       <button class="dropdown__arrow-btn material-icons">keyboard_arrow_down</button>
                       <input class="dropdown__data-input js-dropdown__data-input" type="text" value="19.08.2019 ">
@@ -117,9 +117,9 @@
                 <h3 class="label__title">subscription text field</h3><span class="label__hint"></span>
               </label>
             </div>
-            <div class="input input--with-arrow">
-              <input class="input__input" id="input-submit" type="email" placeholder="Email">
-              <button class="input__submit-button"><i class="input__arrow material-icons">arrow_forward</i></button>
+            <div class="text-input text-input--with-arrow">
+              <input class="text-input__input" id="input-submit" type="email" placeholder="Email">
+              <button class="text-input__submit-button"><span class="text-input__arrow material-icons">arrow_forward</span></button>
             </div>
           </article>
         </div>
@@ -343,60 +343,60 @@
       </section>
       <section class="row ui-form-elements__rich-lists">
         <div class="grid-column">
-          <article class="ui-form-elements__checkbox-list-xp-group ui-form-elements__checkbox-list-xp-group--collapsed">
-            <div class="checkbox-list-xp js-checkbox-list-xp" id="exp_check_list_collapsed">
-              <h3 class="checkbox-list-xp__toggle js-checkbox-list-xp__toggle"><span class="checkbox-list-xp__label">Expandable checkbox list</span><i class="checkbox-list-xp__arrow material-icons">keyboard_arrow_down</i></h3>
-              <ul class="checkbox-list-xp__list">
+          <article class="ui-form-elements__checkbox-list-expandable-group ui-form-elements__checkbox-list-expandable-group--collapsed">
+            <div class="checkbox-list-expandable js-checkbox-list-expandable" id="exp_check_list_collapsed">
+              <h3 class="checkbox-list-expandable__toggle js-checkbox-list-expandable__toggle"><span class="checkbox-list-expandable__label">Expandable checkbox list</span><i class="checkbox-list-expandable__arrow material-icons">keyboard_arrow_down</i></h3>
+              <ul class="checkbox-list-expandable__list">
               </ul>
             </div>
           </article>
-          <article class="ui-form-elements__checkbox-list-xp-group ui-form-elements__checkbox-list-xp-group--expanded">
-            <div class="checkbox-list-xp checkbox-list-xp--expanded js-checkbox-list-xp" id="exp_check_list_collapsed">
-              <h3 class="checkbox-list-xp__toggle js-checkbox-list-xp__toggle"><span class="checkbox-list-xp__label">Expandable checkbox list</span><i class="checkbox-list-xp__arrow material-icons">keyboard_arrow_down</i></h3>
-              <ul class="checkbox-list-xp__list">
-                <li class="checkbox-list-xp__li">
+          <article class="ui-form-elements__checkbox-list-expandable-group ui-form-elements__checkbox-list-expandable-group--expanded">
+            <div class="checkbox-list-expandable checkbox-list-expandable--expanded js-checkbox-list-expandable" id="exp_check_list_collapsed">
+              <h3 class="checkbox-list-expandable__toggle js-checkbox-list-expandable__toggle"><span class="checkbox-list-expandable__label">Expandable checkbox list</span><i class="checkbox-list-expandable__arrow material-icons">keyboard_arrow_down</i></h3>
+              <ul class="checkbox-list-expandable__list">
+                <li class="checkbox-list-expandable__li">
                   <div class="checkbox">
                     <input class="checkbox__input" id="exp_check_list_collapsed-breakfast" type="checkbox">
                     <label class="checkbox__label" for="exp_check_list_collapsed-breakfast">Завтрак</label>
                   </div>
                 </li>
-                <li class="checkbox-list-xp__li">
+                <li class="checkbox-list-expandable__li">
                   <div class="checkbox">
                     <input class="checkbox__input" id="exp_check_list_collapsed-table" type="checkbox" checked>
                     <label class="checkbox__label" for="exp_check_list_collapsed-table">Письменный стол</label>
                   </div>
                 </li>
-                <li class="checkbox-list-xp__li">
+                <li class="checkbox-list-expandable__li">
                   <div class="checkbox">
                     <input class="checkbox__input" id="exp_check_list_collapsed-baby-chair-for-eat" type="checkbox" checked>
                     <label class="checkbox__label" for="exp_check_list_collapsed-baby-chair-for-eat">Стул для кормления</label>
                   </div>
                 </li>
-                <li class="checkbox-list-xp__li">
+                <li class="checkbox-list-expandable__li">
                   <div class="checkbox">
                     <input class="checkbox__input" id="exp_check_list_collapsed-baby-bed" type="checkbox" checked>
                     <label class="checkbox__label" for="exp_check_list_collapsed-baby-bed">Кроватка</label>
                   </div>
                 </li>
-                <li class="checkbox-list-xp__li">
+                <li class="checkbox-list-expandable__li">
                   <div class="checkbox">
                     <input class="checkbox__input" id="exp_check_list_collapsed-tv_1" type="checkbox">
                     <label class="checkbox__label" for="exp_check_list_collapsed-tv_1">Телевизор</label>
                   </div>
                 </li>
-                <li class="checkbox-list-xp__li">
+                <li class="checkbox-list-expandable__li">
                   <div class="checkbox">
                     <input class="checkbox__input" id="exp_check_list_collapsed-shampoo_1" type="checkbox">
                     <label class="checkbox__label" for="exp_check_list_collapsed-shampoo_1">Шампунь</label>
                   </div>
                 </li>
-                <li class="checkbox-list-xp__li">
+                <li class="checkbox-list-expandable__li">
                   <div class="checkbox">
                     <input class="checkbox__input" id="exp_check_list_collapsed-tv_2" type="checkbox">
                     <label class="checkbox__label" for="exp_check_list_collapsed-tv_2">Телевизор</label>
                   </div>
                 </li>
-                <li class="checkbox-list-xp__li">
+                <li class="checkbox-list-expandable__li">
                   <div class="checkbox">
                     <input class="checkbox__input" id="exp_check_list_collapsed-shampoo_2" type="checkbox">
                     <label class="checkbox__label" for="exp_check_list_collapsed-shampoo_2">Шампунь</label>
@@ -496,5 +496,5 @@
         </div>
       </section>
     </div>
-  <script type="text/javascript" src="elements.35b194c36ecf6294e901.js"></script></body>
+  <script type="text/javascript" src="elements.85f28f18d48b198b2d58.js"></script></body>
 </html>

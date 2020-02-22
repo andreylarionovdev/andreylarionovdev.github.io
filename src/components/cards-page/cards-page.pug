@@ -1,0 +1,56 @@
+include ../room-book/room-book
+include ../datepicker/datepicker
+include ../room-search/room-search
+include ../room-thumb/room-thumb
+include ../sign-in/sign-in
+include ../sign-up/sign-up
+  
+mixin cards-page
+  .cards-page
+    .grid-column
+      article.cards-page__card
+        +room-search()
+      article.cards-page__card
+        +sign-up()
+    .grid-column
+      article.cards-page__card
+        +room-book({
+          roomNumber: 888,
+          pricePerDay: 9990,
+          discount: 2179,
+          fee: 300,
+          feature: 'люкс'
+        })
+      article.cards-page__card
+        +sign-in()
+    .grid-column
+      article.cards-page__card
+        +datepicker
+      article.cards-page__card.cards-page__card--room-thumb-vip
+        +room-thumb({
+          roomNumber: 888,
+          pricePerDay: 9990,
+          feedbackCounter: 145,
+          rate: 5,
+          images: [
+            {src: './img/room-thumb-card-1.png', alt: 'Room 888'},
+            {src: './img/room-thumb-card-1.png', alt: 'Room 888'},
+            {src: './img/room-thumb-card-1.png', alt: 'Room 888'},
+            {src: './img/room-thumb-card-1.png', alt: 'Room 888'},
+          ],
+          feature: 'люкс',
+          focus: true
+        })
+      article.cards-page__card.cards-page__card--room-thumb
+        +room-thumb({
+          roomNumber: 840,
+          pricePerDay: 9900,
+          feedbackCounter: 65,
+          rate: 4,
+          images: [
+            {src: './img/room-thumb-card-2.png', alt: 'Room 840'},
+            {src: './img/room-thumb-card-2.png', alt: 'Room 840'},
+            {src: './img/room-thumb-card-2.png', alt: 'Room 840'},
+            {src: './img/room-thumb-card-2.png', alt: 'Room 840'},
+          ]
+        })

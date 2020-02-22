@@ -1,0 +1,106 @@
+include ../feature/feature
+include ../feedback/feedback
+include ../bullet-list/bullet-list
+include ../room-book/room-book
+include ../donut-chart/donut-chart
+  
+mixin room-details-page
+  article.room-details-page
+    figure.room-details-page__featured-images
+      -
+        var featuredImages = [
+          './img/room-details-left.png',
+          './img/room-details-top.png',
+          './img/room-details-bottom.png',
+        ]
+      each image in featuredImages
+        img.room-details-page__featured-image(src=image)
+    .room-details-page__inner
+      .room-details-page__main
+        section.room-details-page__info
+          h2.room-details-page__info-title= 'Сведения о номере'
+          .room-details-page__features
+            -
+              var features = [
+                {
+                  icon: 'mood',
+                  title: 'Комфорт',
+                  hint: 'Шумопоглощающие стены'
+                },
+                {
+                  icon: 'location_city',
+                  title: 'Удобство',
+                  hint: 'Окно в каждой из спален'
+                },
+                {
+                  icon: 'whatshot',
+                  title: 'Уют',
+                  hint: 'Номер оснащен камином'
+                }
+              ]
+            each feature in features
+              article.room-details-page__feature
+                +feature(feature)
+        section.room-details-page__rate
+          h2.room-details-page__rate-title= 'Впечатления от номера'
+          .room-details-page__donut-chart
+            +donut-chart('donut-chart')
+        section.room-details-page__feedbacks
+          .room-details-page__feedbacks-header
+            h2.room-details-page__feedbacks-title= 'Отзывы посетителей номера'
+            span.room-details-page__feedbacks-counter= '2 отзыва'
+          -
+            var feedbacks = [
+              {
+                author: {
+                  name: 'Мурад Сарафанов',
+                  image: {
+                    src: './img/murad.png',
+                    alt: 'Фото автора'
+                  }
+                },
+                date: '5 дней назад',
+                text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И&nbsp;стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+                favoritesCount: 12,
+                isFavorite: true,
+              },
+              {
+                author: {
+                  name: 'Патрисия Стёклышкова',
+                  image: {
+                    src: './img/patricia.png',
+                    alt: 'Фото автора'
+                  }
+                },
+                date: 'Неделю назад',
+                text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',
+                favoritesCount: 2,
+              },
+            ]
+          each feedback in feedbacks
+            .room-details-page__feedback
+              +feedback(feedback)
+        section.room-details-page__rules
+          h2.room-details-page__rules-title= 'Правила'
+          .room-details-page__bullet-list
+            +bullet-list({
+              id: 'bullet-list',
+              items: [
+                {text: 'Нельзя с питомцами'},
+                {text: 'Без вечеринок и мероприятий'},
+                {text: 'Время прибытия &mdash; после 13:00, а выезд до 12:00'}
+              ]
+            })
+        section.room-details-page__cancel
+          h2.room-details-page__cancel-title= 'Отмена'
+          p.room-details-page__cancel-text
+            = 'Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.'
+      .room-details-page__sidebar
+        section.room-details-page__book-form
+          +room-book({
+            roomNumber: 888,
+            pricePerDay: 9990,
+            discount: 2179,
+            fee: 300,
+            feature: 'люкс'
+          })

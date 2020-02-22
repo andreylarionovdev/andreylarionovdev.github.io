@@ -1,0 +1,9 @@
+@import '../../utils/mixins';
+@import '../sign-up/sign-up.scss';
+
+.sign-up-page {
+  @include auth-page;
+  &__form {
+    padding: 1.875rem 0 1.625rem 0;
+  }
+}

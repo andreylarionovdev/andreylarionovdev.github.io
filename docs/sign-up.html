@@ -10,8 +10,8 @@
     <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <title>Toxin booking | Landing page</title>
-  <link href="landing.85f28f18d48b198b2d58.css" rel="stylesheet"></head>
+    <title>Toxin booking | Registration</title>
+  <link href="registration.85f28f18d48b198b2d58.css" rel="stylesheet"></head>
   <body class="body">
     <header class="header js-header">
       <nav class="header__inner"><i class="header__nav-toggle js-header__nav-toggle material-icons">menu</i>
@@ -38,75 +38,86 @@
       </nav>
     </header>
     <main>
-      <article class="landing-page">
-        <div class="landing-page__inner">
-          <section class="landing-page__room-search">
-            <form class="room-search">
-              <h1 class="room-search__title">Найдём номера под ваши пожелания</h1>
-              <div class="room-search__datepicker-date-range">
-                <div class="datepicker-date-range js-datepicker-date-range">
-                  <div class="datepicker-date-range__from js-datepicker-date-range__from">
-                    <div class="datepicker-date-range__label">
-                      <label class="label">
-                        <h3 class="label__title">Прибытие</h3><span class="label__hint"></span>
-                      </label>
-                    </div>
-                    <div class="datepicker-date-range__dropdown js-datepicker-date-range__dropdown">
-                      <div class="dropdown js-dropdown" id="undefined__check-in-out__from-date">
-                        <label class="dropdown__toggle js-dropdown__toggle"><span class="dropdown__text js-dropdown__text">ДД.ММ.ГГГГ</span>
-                          <button class="dropdown__arrow-btn material-icons">keyboard_arrow_down</button>
-                          <input class="dropdown__data-input js-dropdown__data-input" type="text" value="ДД.ММ.ГГГГ">
-                        </label>
-                      </div>
-                    </div>
+      <article class="sign-up-page">
+        <div class="sign-up-page__inner">
+          <section class="sign-up-page__form">
+            <form class="sign-up">
+              <h1 class="sign-up__title">Регистрация аккаунта</h1>
+              <div class="sign-up__input">
+                <div class="text-input">
+                  <input class="text-input__input" id="first-name" type="text" placeholder="Имя">
+                  <button class="text-input__submit-button"><span class="text-input__arrow material-icons">arrow_forward</span></button>
+                </div>
+              </div>
+              <div class="sign-up__input">
+                <div class="text-input">
+                  <input class="text-input__input" id="last-name" type="text" placeholder="Фамилия">
+                  <button class="text-input__submit-button"><span class="text-input__arrow material-icons">arrow_forward</span></button>
+                </div>
+              </div>
+              <div class="sign-up__gender">
+                <div class="sign-up__radio-button">
+                  <div class="radio-button">
+                    <input class="radio-button__input" id="g-male" type="radio" name="gender" value="m" checked>
+                    <label class="radio-button__label" for="g-male">Мужчина</label>
                   </div>
-                  <div class="datepicker-date-range__to js-datepicker-date-range__to">
-                    <div class="datepicker-date-range__label">
-                      <label class="label">
-                        <h3 class="label__title">Выезд</h3><span class="label__hint"></span>
-                      </label>
-                    </div>
-                    <div class="datepicker-date-range__dropdown js-datepicker-date-range__dropdown">
-                      <div class="dropdown js-dropdown" id="undefined__check-in-out__to-date">
-                        <label class="dropdown__toggle js-dropdown__toggle"><span class="dropdown__text js-dropdown__text">ДД.ММ.ГГГГ</span>
-                          <button class="dropdown__arrow-btn material-icons">keyboard_arrow_down</button>
-                          <input class="dropdown__data-input js-dropdown__data-input" type="text" value="ДД.ММ.ГГГГ">
-                        </label>
-                      </div>
-                    </div>
+                </div>
+                <div class="sign-up__radio-button">
+                  <div class="radio-button">
+                    <input class="radio-button__input" id="g-female" type="radio" name="gender" value="f">
+                    <label class="radio-button__label" for="g-female">Женщина</label>
                   </div>
                 </div>
               </div>
-              <div class="room-search__guests">
-                <div class="room-search__label">
+              <div class="sign-up__birthday">
+                <div class="sign-up__label">
                   <label class="label">
-                    <h3 class="label__title">Гости</h3><span class="label__hint"></span>
+                    <h3 class="label__title">Дата рождения</h3><span class="label__hint"></span>
                   </label>
                 </div>
-                <div class="room-search__guests-dropdown">
-                  <div class="dropdown js-dropdown" id="guests">
-                    <label class="dropdown__toggle js-dropdown__toggle"><span class="dropdown__text js-dropdown__text">Сколько гостей</span>
-                      <button class="dropdown__arrow-btn material-icons">keyboard_arrow_down</button>
-                      <input class="dropdown__data-input js-dropdown__data-input" type="text" value="Сколько гостей">
-                    </label>
-                    <ul class="dropdown__menu js-dropdown__menu" style="z-index:9;">
-                      <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">взрослые</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn dropdown__change-count-btn--disabled js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">0</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
-                      <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">дети</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn dropdown__change-count-btn--disabled js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">0</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
-                      <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">младенцы</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn dropdown__change-count-btn--disabled js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">0</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
-                      <li class="dropdown__footer-buttons"><span class="dropdown__clear-button js-dropdown__clear-button"><a class="button button--textual button--hovered" href="javascript:void(0)">
-                            <div class="button__inner"><span class="button__caption">очистить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span><span class="dropdown__apply-button js-dropdown__apply-button"><a class="button button--textual" href="javascript:void(0)">
-                            <div class="button__inner"><span class="button__caption">применить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span></li>
-                    </ul>
+                <div class="sign-up__input">
+                  <div class="text-input">
+                    <input class="text-input__input" id="sign-up__input-birthday" type="text" placeholder="ДД.ММ.ГГГГ">
+                    <button class="text-input__submit-button"><span class="text-input__arrow material-icons">arrow_forward</span></button>
                   </div>
                 </div>
               </div>
-              <div class="room-search__button"><a class="button button--default button--fluid button--with-arrow" href="search-room-filter.html">
-                  <div class="button__inner"><span class="button__caption">Подобрать номер</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
+              <div class="sign-up__email">
+                <div class="sign-up__label">
+                  <label class="label">
+                    <h3 class="label__title">Данные для входа в сервис</h3><span class="label__hint"></span>
+                  </label>
+                </div>
+                <div class="sign-up__input">
+                  <div class="text-input">
+                    <input class="text-input__input" id="sign-up__input-email" type="email" placeholder="Email">
+                    <button class="text-input__submit-button"><span class="text-input__arrow material-icons">arrow_forward</span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="sign-up__input">
+                <div class="text-input">
+                  <input class="text-input__input" id="sign-up__input-password" type="password" placeholder="Пароль">
+                  <button class="text-input__submit-button"><span class="text-input__arrow material-icons">arrow_forward</span></button>
+                </div>
+              </div>
+              <div class="sign-up__toggle">
+                <div class="toggle-button">
+                  <input class="toggle-button__input" id="sign-up__toggle-promote" type="checkbox">
+                  <label class="toggle-button__label" for="sign-up__toggle-promote">Получать спецпредложения</label>
+                </div>
+              </div>
+              <div class="sign-up__pay-button"><a class="button button--default button--fluid button--with-arrow" href="/change-me">
+                  <div class="button__inner"><span class="button__caption">Перейти к оплате</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
+              </div>
+              <div class="sign-up__auth">
+                <p class="sign-up__auth-hint">Уже есть аккаунт на Toxin</p>
+                <div class="sign-up__auth-button"><a class="button button--transparent button--fluid" href="sign-in.html">
+                    <div class="button__inner"><span class="button__caption">Войти</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
+                </div>
               </div>
             </form>
           </section>
-          <aside class="landing-page__hero-text">Лучшие номера для вашей работы, отдыха и просто вдохновения
-          </aside>
         </div>
       </article>
     </main>
@@ -166,5 +177,5 @@
         <section class="footer__social"><a class="footer__social-link footer__social-link--tw" href="/change-me"></a><a class="footer__social-link footer__social-link--fb" href="/change-me"></a><a class="footer__social-link footer__social-link--ig" href="/change-me"></a></section>
       </div>
     </footer>
-  <script type="text/javascript" src="landing.85f28f18d48b198b2d58.js"></script></body>
+  <script type="text/javascript" src="registration.85f28f18d48b198b2d58.js"></script></body>
 </html>
