@@ -2,7 +2,7 @@ include ../logo/logo
 include ../header/header
 include ../footer/footer
   
-mixin ui-headers-footers
+mixin headers-footers-page
   - var user = 'Cosmin Negoita'
   -
     const menuItems = [
@@ -35,12 +35,12 @@ mixin ui-headers-footers
         isSmall: true
       }
     ]
-  article.ui-headers-footers
-    section.ui-section.ui-headers-footers__header
+  article.headers-footers-page
+    section.ui-section.headers-footers-page__header
       +header({menuItems, menuButtons})
-    section.ui-section.ui-headers-footers__header.ui-headers-footers__header--signed
+    section.ui-section.headers-footers-page__header.headers-footers-page__header--signed
       +header({user, menuItems, menuButtons})
-    section.ui-section.ui-headers-footers__footer
+    section.ui-section.headers-footers-page__footer
       +footer
-    section.ui-section.ui-headers-footers__footer.ui-headers-footers__footer--creative
+    section.ui-section.headers-footers-page__footer.headers-footers-page__footer--creative
       +footer({theme: 'creative'})

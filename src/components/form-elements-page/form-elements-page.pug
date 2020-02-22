@@ -15,12 +15,12 @@ include ../bullet-list/bullet-list
 include ../feature/feature
 include ../feedback/feedback
   
-mixin ui-form-elements
-  .ui-form-elements
-    section.row.ui-form-elements__top
+mixin form-elements-page
+  .form-elements-page
+    section.row.form-elements-page__top
       .grid-column
-        article.ui-form-elements__input-group
-          .ui-form-elements__label
+        article.form-elements-page__input-group
+          .form-elements-page__label
             +label({
               label: 'text field',
               hint: 'default'
@@ -30,8 +30,8 @@ mixin ui-form-elements
             placeholder: 'Email',
             type: 'email'
           })
-        article.ui-form-elements__input-group.ui-form-elements__input-group--hovered
-          .ui-form-elements__label
+        article.form-elements-page__input-group.form-elements-page__input-group--hovered
+          .form-elements-page__label
             +label({
               label: 'text field',
               hint: 'hover / focus'
@@ -42,8 +42,8 @@ mixin ui-form-elements
             value: 'This is pretty awesome',
             isHovered: true
           })
-        article.ui-form-elements__dropdown-group
-          .ui-form-elements__label
+        article.form-elements-page__dropdown-group
+          .form-elements-page__label
             +label({
               label: 'dropdown',
               hint: 'default'
@@ -52,8 +52,8 @@ mixin ui-form-elements
             id: 'default-dropdown',
             value: 'Сколько гостей'
           })
-        article.ui-form-elements__input-group.ui-form-elements__input-group--masked
-          .ui-form-elements__label
+        article.form-elements-page__input-group.form-elements-page__input-group--masked
+          .form-elements-page__label
             +label({
               label: 'masked text field',
               hint: 'default'
@@ -62,7 +62,7 @@ mixin ui-form-elements
             id: 'input-with-mask',
             placeholder: 'ДД.ММ.ГГГГ'
           })
-        article.ui-form-elements__dropdown-group.ui-form-elements__dropdown-group--datepicker-date-range
+        article.form-elements-page__dropdown-group.form-elements-page__dropdown-group--datepicker-date-range
           +datepicker-date-range({
             id: 'datepicker-date-range-demo',
             fromLabel: 'date dropdown',
@@ -70,8 +70,8 @@ mixin ui-form-elements
             toLabel: 'date dropdown',
             to: '19.08.2019 '
           })
-        article.ui-form-elements__dropdown-group.ui-form-elements__dropdown-group--date-filter
-          .ui-form-elements__label
+        article.form-elements-page__dropdown-group.form-elements-page__dropdown-group--date-filter
+          .form-elements-page__label
             +label({
               label: 'filter date dropdown'
             })
@@ -79,8 +79,8 @@ mixin ui-form-elements
             id: 'date-filter',
             value: '19 авг - 23 авг'
           })
-        article.ui-form-elements__input-group.ui-form-elements__input-group--with-submit
-          .ui-form-elements__label
+        article.form-elements-page__input-group.form-elements-page__input-group--with-submit
+          .form-elements-page__label
             +label({
               label: 'subscription text field'
             })
@@ -92,7 +92,7 @@ mixin ui-form-elements
           })
       .grid-column-gap
       .grid-column
-        article.ui-form-elements__checkbox-group
+        article.form-elements-page__checkbox-group
           +checkbox-list({
             label: 'checkbox buttons',
             items: [
@@ -112,7 +112,7 @@ mixin ui-form-elements
               }
             ]
           })
-        article.ui-form-elements__radio-group
+        article.form-elements-page__radio-group
           +label({
             label: 'radio buttons'
           })
@@ -129,7 +129,7 @@ mixin ui-form-elements
             value: 'female',
             label: 'Женщина'
           })
-        article.ui-form-elements__toggle-group
+        article.form-elements-page__toggle-group
           +label({
             label: 'toggle'
           })
@@ -142,7 +142,7 @@ mixin ui-form-elements
             id: 'second-toggle',
             label: 'Получать спецпредложения'
           })
-        article.ui-form-elements__like-button-group
+        article.form-elements-page__like-button-group
           +label({
             label: 'like button'
           })
@@ -153,7 +153,7 @@ mixin ui-form-elements
             count: 12,
             isFavorite: true
           })
-        article.ui-form-elements__rate-button-group
+        article.form-elements-page__rate-button-group
           +label({
             label: 'rate button'
           })
@@ -169,7 +169,7 @@ mixin ui-form-elements
           })
       .grid-column-gap
       .grid-column
-        article.ui-form-elements__range-slider
+        article.form-elements-page__range-slider
           +range-slider({
             name: 'range-slider',
             min: 0,
@@ -177,8 +177,8 @@ mixin ui-form-elements
             from: 5000,
             to: 10000,
           })
-        article.ui-form-elements__button-group
-          .ui-form-elements__label
+        article.form-elements-page__button-group
+          .form-elements-page__label
             +label({
               label: 'buttons'
             })
@@ -219,7 +219,7 @@ mixin ui-form-elements
               withArrow: true,
               isFluid: true
             })
-        article.ui-form-elements__paginator-group
+        article.form-elements-page__paginator-group
           +label({
             label: 'pagination'
           })
@@ -228,10 +228,10 @@ mixin ui-form-elements
             pageSize: 12,
             pageRange: 1
           })
-    section.row.ui-form-elements__dropdown-states
+    section.row.form-elements-page__dropdown-states
       .grid-column
-        article.ui-form-elements__dropdown-group.ui-form-elements__dropdown-group--collapsed
-          .ui-form-elements__label
+        article.form-elements-page__dropdown-group.form-elements-page__dropdown-group--collapsed
+          .form-elements-page__label
             +label({
               label: 'dropdown',
               hint: 'default'
@@ -240,8 +240,8 @@ mixin ui-form-elements
             id: 'dropdown-collapsed',
             value: '2 спальни, 2 кровати...'
           })
-        article.ui-form-elements__dropdown-group.ui-form-elements__dropdown-group--expanded
-          .ui-form-elements__label
+        article.form-elements-page__dropdown-group.form-elements-page__dropdown-group--expanded
+          .form-elements-page__label
             +label({
               label: 'dropdown',
               hint: 'expanded'
@@ -259,8 +259,8 @@ mixin ui-form-elements
           })
       .grid-column-gap
       .grid-column
-        article.ui-form-elements__dropdown-group.ui-form-elements__dropdown-group--with-apply-btn
-          .ui-form-elements__label
+        article.form-elements-page__dropdown-group.form-elements-page__dropdown-group--with-apply-btn
+          .form-elements-page__label
             +label({
               label: 'dropdown'
             })
@@ -279,8 +279,8 @@ mixin ui-form-elements
           })
       .grid-column-gap
       .grid-column
-        article.ui-form-elements__dropdown-group.ui-form-elements__dropdown-group--with-clear-btn
-          .ui-form-elements__label
+        article.form-elements-page__dropdown-group.form-elements-page__dropdown-group--with-clear-btn
+          .form-elements-page__label
             +label({
               label: 'dropdown'
             })
@@ -295,14 +295,14 @@ mixin ui-form-elements
               {count: 0, text: 'младенцы', name: 'baby'}
             ]
           })
-    section.row.ui-form-elements__rich-lists
+    section.row.form-elements-page__rich-lists
       .grid-column
-        article.ui-form-elements__checkbox-list-expandable-group.ui-form-elements__checkbox-list-expandable-group--collapsed
+        article.form-elements-page__checkbox-list-expandable-group.form-elements-page__checkbox-list-expandable-group--collapsed
           +checkbox-list-expandable({
             id: 'exp_check_list_collapsed',
             label: 'Expandable checkbox list'
           })
-        article.ui-form-elements__checkbox-list-expandable-group.ui-form-elements__checkbox-list-expandable-group--expanded
+        article.form-elements-page__checkbox-list-expandable-group.form-elements-page__checkbox-list-expandable-group--expanded
           +checkbox-list-expandable({
             id: 'exp_check_list_collapsed',
             label: 'Expandable checkbox list',
@@ -320,7 +320,7 @@ mixin ui-form-elements
           })
       .grid-column-gap
       .grid-column
-        article.ui-form-elements__rich-checkbox-group
+        article.form-elements-page__rich-checkbox-group
           +checkbox-list({
             label: 'rich checkbox buttons',
             items: [
@@ -338,8 +338,8 @@ mixin ui-form-elements
           })
       .grid-column-gap
       .grid-column
-        article.ui-form-elements__bullet-list-group
-          .ui-form-elements__label
+        article.form-elements-page__bullet-list-group
+          .form-elements-page__label
             +label({
               label: 'Bullet list'
             })
@@ -351,16 +351,16 @@ mixin ui-form-elements
               {text: 'Время прибытия &mdash; после 13:00, а выезд до 12:00'}
             ]
           })
-    section.row.ui-form-elements__bottom
+    section.row.form-elements-page__bottom
       .grid-column
-        article.ui-form-elements__feature-group
-          .ui-form-elements__feature
+        article.form-elements-page__feature-group
+          .form-elements-page__feature
             +feature({
               icon: 'mood',
               title: 'Комфорт',
               hint: 'Шумопоглощающие стены'
             })
-          .ui-form-elements__feature
+          .form-elements-page__feature
             +feature({
               icon: 'location_city',
               title: 'Удобство',
@@ -368,7 +368,7 @@ mixin ui-form-elements
             })
       .grid-column-gap
       .grid-column
-        article.feedback-group.ui-form-elements__feedback-group
+        article.feedback-group.form-elements-page__feedback-group
           .feedback-group__feedback
             +feedback({
               author: {

@@ -6,7 +6,7 @@
 @import '../range-slider/range-slider.scss';
 @import '../checkbox-list/checkbox-list.scss';
 @import '../checkbox-list-expandable/checkbox-list-expandable';
-@import '../room-thumb/room-thumb.scss';
+@import '../room-thumbnail/room-thumbnail.scss';
 @import '../paginator/paginator.scss';
 @import '../text-input/text-input.scss';
 @import '../datepicker-date-range/datepicker-date-range.scss';
@@ -18,7 +18,7 @@
 @import '../feature/feature.scss';
 @import '../feedback/feedback.scss';
 
-.ui-form-elements {
+.form-elements-page {
   @include inner;
   padding: 8.9375rem 0 8.25rem 0;
   font-family: Montserrat, sans-serif;

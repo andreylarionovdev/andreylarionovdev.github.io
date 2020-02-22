@@ -3,4 +3,4 @@ import '../../utils/app.scss';
 import '../../components/body/body.scss';
 import '../../components/logo/logo.scss';
 
-import '../../components/ui-colors-type/ui-colors-type.scss';
+import '../../components/colors-type-page/colors-type-page.scss';

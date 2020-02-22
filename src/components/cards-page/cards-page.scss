@@ -6,7 +6,7 @@
 @import '../room-book/room-book.scss';
 @import '../sign-in/sign-in.scss';
 @import '../datepicker/datepicker.scss';
-@import '../room-thumb/room-thumb.scss';
+@import '../room-thumbnail/room-thumbnail.scss';
 
 .cards-page {
   @include inner;
@@ -22,8 +22,8 @@
   }
   &__card {
     margin-bottom: 2.5rem;
-    &--room-thumb-vip,
-    &--room-thumb {
+    &--room-thumbnail-vip,
+    &--room-thumbnail {
       width: 16.875rem;
     }
   }

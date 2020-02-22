@@ -2,7 +2,7 @@ include ../range-slider/range-slider
 include ../label/label
 include ../checkbox-list/checkbox-list
 include ../checkbox-list-expandable/checkbox-list-expandable
-include ../room-thumb/room-thumb
+include ../room-thumbnail/room-thumbnail
 include ../paginator/paginator
 include ../dropdown/dropdown
 
@@ -245,8 +245,8 @@ mixin room-filter-page
               }
             ]
           each room, i in searchResult
-            li.room-filter-page__room-thumb
-              +room-thumb({
+            li.room-filter-page__room-thumbnail
+              +room-thumbnail({
                 roomNumber: room.number,
                 pricePerDay: room.pricePerDay,
                 feedbackCounter: room.feedbackCounter,

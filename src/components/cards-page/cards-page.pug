@@ -1,7 +1,7 @@
 include ../room-book/room-book
 include ../datepicker/datepicker
 include ../room-search/room-search
-include ../room-thumb/room-thumb
+include ../room-thumbnail/room-thumbnail
 include ../sign-in/sign-in
 include ../sign-up/sign-up
   
@@ -26,8 +26,8 @@ mixin cards-page
     .grid-column
       article.cards-page__card
         +datepicker
-      article.cards-page__card.cards-page__card--room-thumb-vip
-        +room-thumb({
+      article.cards-page__card.cards-page__card--room-thumbnail-vip
+        +room-thumbnail({
           roomNumber: 888,
           pricePerDay: 9990,
           feedbackCounter: 145,
@@ -41,8 +41,8 @@ mixin cards-page
           feature: 'люкс',
           focus: true
         })
-      article.cards-page__card.cards-page__card--room-thumb
-        +room-thumb({
+      article.cards-page__card.cards-page__card--room-thumbnail
+        +room-thumbnail({
           roomNumber: 840,
           pricePerDay: 9900,
           feedbackCounter: 65,

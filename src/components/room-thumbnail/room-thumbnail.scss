@@ -3,7 +3,7 @@
 
 @import '../rate-button/rate-button';
 
-.room-thumb {
+.room-thumbnail {
   $blockClass: &;
 
   @include card;

@@ -1,9 +1,9 @@
 include ../color-sample/color-sample
 include ../font-sample/font-sample
 
-mixin ui-colors-type
-  .ui-colors-type
-    .ui-colors-type__colors
+mixin colors-type-page
+  .colors-type-page
+    .colors-type-page__colors
       +color-sample({
         color: 'dark-100',
         title: 'Dark Shade 100%',
@@ -39,7 +39,7 @@ mixin ui-colors-type
         title: 'Green',
         hex: '#6FCF97'
       })
-    .ui-colors-type__fonts
+    .colors-type-page__fonts
       +font-sample({
         theme: 'text-header',
         name: 'h1',

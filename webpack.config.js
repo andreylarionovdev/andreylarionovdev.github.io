@@ -14,9 +14,9 @@ const config = {
     registration: './src/pages/sign-up/sign-up.js',
     filter: './src/pages/room-filter/room-filter.js',
     room: './src/pages/room-details/room-details.js',
-    colors: './src/pages/ui-colors-type/ui-colors-type.js',
-    headers: './src/pages/ui-headers-footers/ui-headers-footers.js',
-    elements: './src/pages/ui-form-elements/ui-form-elements.js',
+    colors: './src/pages/colors-type/colors-type.js',
+    headers: './src/pages/headers-footers/headers-footers.js',
+    elements: './src/pages/form-elements/form-elements.js',
     cards: './src/pages/cards/cards.js',
   },
   output: {
@@ -104,13 +104,13 @@ const config = {
       chunks: ['index'],
     }),
     new HtmlWebpackPlugin({
-      filename: 'ui-colors-type.html',
-      template: 'src/pages/ui-colors-type/ui-colors-type.pug',
+      filename: 'colors-type.html',
+      template: 'src/pages/colors-type/colors-type.pug',
       chunks: ['colors'],
     }),
     new HtmlWebpackPlugin({
-      filename: 'ui-form-elements.html',
-      template: 'src/pages/ui-form-elements/ui-form-elements.pug',
+      filename: 'form-elements.html',
+      template: 'src/pages/form-elements/form-elements.pug',
       chunks: ['elements'],
     }),
     new HtmlWebpackPlugin({
@@ -119,8 +119,8 @@ const config = {
       chunks: ['cards'],
     }),
     new HtmlWebpackPlugin({
-      filename: 'ui-headers-footers.html',
-      template: 'src/pages/ui-headers-footers/ui-headers-footers.pug',
+      filename: 'headers-footers.html',
+      template: 'src/pages/headers-footers/headers-footers.pug',
       chunks: ['headers'],
     }),
     new HtmlWebpackPlugin({

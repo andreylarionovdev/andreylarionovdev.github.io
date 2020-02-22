@@ -4,7 +4,7 @@
 @import '../color-sample/color-sample.scss';
 @import '../font-sample/font-sample.scss';
 
-.ui-colors-type {
+.colors-type-page {
   @include inner($lgWidth: 79.2%);
   margin-top: 9rem;
   display: grid;
