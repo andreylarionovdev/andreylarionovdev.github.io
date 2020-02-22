@@ -17,12 +17,12 @@ mixin datepicker-date-range(options)
     var js = 'js'
 
   div(class=f.bem({b, js}))
-    div(class=f.bem({b, e: 'from', js}))
+    div(class=f.bem({b, e: 'dropdown-group-from', js}))
       .datepicker-date-range__label
         +label({ label: fromLabel })
       div(class=f.bem({b, e: 'dropdown', js}))
         +dropdown({id: `${id}__from-date`, value: from})
-    div(class=f.bem({b, e: 'to', js}))
+    div(class=f.bem({b, e: 'dropdown-group-to', js}))
       .datepicker-date-range__label
         +label({ label: toLabel })
       div(class=f.bem({b, e: 'dropdown', js}))

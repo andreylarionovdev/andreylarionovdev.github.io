@@ -21,7 +21,6 @@
   }
   &__arrow-btn {
     cursor: pointer;
-    padding: 0;
     background: transparent;
     border: none;
     outline: none;
@@ -43,7 +42,6 @@
     z-index: -1;
   }
   #{$blockClass}__menu {
-    margin: 0;
     position: absolute;
     left: 0;
     display: none;
@@ -99,7 +97,6 @@
   }
   &__footer-buttons {
     display: none;
-    margin: 0;
     line-height: 2.5rem;
   }
   &--expanded {

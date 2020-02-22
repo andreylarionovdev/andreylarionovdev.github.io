@@ -10,26 +10,26 @@ mixin header(options)
 
   header.header.js-header
     nav.header__inner
-      i(class=f.bem({b, e: 'nav-toggle', js})).material-icons= 'menu'
+      i(class=f.bem({b, e: 'navigation-toggle', js})).material-icons= 'menu'
       figure.header__logo
         +logo(true)
-      ul(class=f.bem({b, e: 'nav', js}))
+      ul(class=f.bem({b, e: 'navigation', js}))
         each item, _ in menuItems
-          li.header__nav-item
-            - var bemObj = {b, e: 'nav-link'}
+          li.header__navigation-item
+            - var bemObj = {b, e: 'navigation-link'}
             if item.sub
-              - bemObj.m = 'has-submenu'
+              - bemObj.m = 'with-submenu'
             a(class=f.bem(bemObj) href=item.href)
               if item.active
                 b= item.name
               else
                 = item.name
         if user
-          li.header__nav-item.header__nav-item--account
-            a.header__nav-link= user
+          li.header__navigation-item.header__navigation-item--with-username
+            a.header__navigation-link= user
         else
           each button, _ in menuButtons
-            li(class=f.bem({b: 'header', e: 'nav-item', m: button.name}))
+            li(class=f.bem({b: 'header', e: 'navigation-item', m: `with-${button.name}`}))
               +button({
                 theme: button.theme,
                 caption: button.caption,

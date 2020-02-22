@@ -11,7 +11,7 @@
     font-size: 1.375rem;
   }
 
-  &__radio {
+  &__input {
     position: absolute;
     opacity: 0;
     &:checked ~ #{$blockClass}__label {

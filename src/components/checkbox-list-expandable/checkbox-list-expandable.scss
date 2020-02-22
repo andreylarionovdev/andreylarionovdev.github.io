@@ -8,7 +8,6 @@
   color: $color-dark-75;
   user-select: none;
   &__toggle {
-    margin: 0;
     padding: 0.5rem 0.625rem 0.75rem 0;
     display: flex;
     justify-content: space-between;
@@ -30,13 +29,11 @@
     transition: transform .1s ease-out;
   }
   #{$blockClass}__list {
-    margin: 0;
-    padding: 0;
     display: none;
     width: 100%;
     list-style: none;
   }
-  &__li {
+  &__item {
     padding-bottom: 0.625rem;
   }
   &--expanded {

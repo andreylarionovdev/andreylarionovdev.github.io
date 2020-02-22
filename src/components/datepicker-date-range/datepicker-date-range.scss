@@ -3,8 +3,8 @@
 .datepicker-date-range {
   display: flex;
   justify-content: space-between;
-  &__from,
-  &__to {
+  &__dropdown-group-from,
+  &__dropdown-group-to {
     width: 47%;
   }
   &__label {

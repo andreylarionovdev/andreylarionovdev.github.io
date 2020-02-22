@@ -52,14 +52,13 @@
   }
 
   &__hint {
-    margin: 0;
     font-size: 0.75rem;
     line-height: 1rem;
     padding: 0.1875rem 0.25rem 0 1.875rem;
     color: $color-dark-50;
   }
 
-  &--has-hint {
+  &--with-hint {
     #{$blockClass}__label {
       font-weight: bold;
       color: $color-dark-75;

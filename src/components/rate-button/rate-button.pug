@@ -4,6 +4,6 @@ mixin rate-button(options)
   .rate-button(id=id)
     - var n = base
     while n > 0
-      input.rate-button__radio(id=id + n type='radio' name=name value=n checked=(n === rate))
+      input.rate-button__input(id=id + n type='radio' name=name value=n checked=(n === rate))
       label.rate-button__label(for=id + n)= n
       - n = n - 1

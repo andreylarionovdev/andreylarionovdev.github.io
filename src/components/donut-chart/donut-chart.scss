@@ -2,15 +2,12 @@
 
 .donut-chart {
   $blockClass: &;
-  margin: 0;
   display: flex;
   align-items: flex-end;
   &__chart {
     margin-right: 1.875rem;
   }
   &__labels {
-    padding: 0;
-    margin: 0;
     list-style: none;
     display: inline-block;
     font-size: 0.875rem;

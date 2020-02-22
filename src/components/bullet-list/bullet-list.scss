@@ -1,13 +1,11 @@
 @import '../../utils/vars';
 
 .bullet-list {
-  margin: 0;
-  padding: 0;
   list-style-type: none;
   font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
   color: $color-dark-75;
-  &__li {
+  &__item {
     position: relative;
   }
   &__marker-wrapper {

@@ -3,6 +3,11 @@
 .site-menu {
   $blockClass: &;
   list-style: none;
+  line-height: 3rem;
+  padding: 1rem;
+  &__link:hover {
+    color: $color-dark-100;
+  }
   &--purple {
     #{$blockClass}__link {
       color: $color-purple;
@@ -12,8 +17,5 @@
     #{$blockClass}__link {
       color: $color-green;
     }
-  }
-  &__link:hover {
-    color: $color-dark-100;
   }
 }

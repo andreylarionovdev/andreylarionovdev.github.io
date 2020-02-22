@@ -15,7 +15,6 @@
   grid-gap: 0.625rem;
   &__author-picture-wrapper {
     grid-area: pic;
-    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -28,11 +27,6 @@
   }
   &__header {
     grid-area: header;
-  }
-  &__author-name,
-  &__date,
-  &__text {
-    margin: 0;
   }
   &__author-name {
     line-height: 1.5rem;

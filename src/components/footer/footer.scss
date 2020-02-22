@@ -11,8 +11,7 @@
   background: white;
   box-shadow: 0 0.625rem 1.25rem $color-dark-5;
   position: relative;
-  &__row-divider {
-    margin: 0;
+  &__horizontal-divider {
     position: absolute;
     left: 0;
     right: 0;
@@ -61,11 +60,9 @@
       text-align: center;
     }
   }
-  &__logo {
-    margin: 0;
-  }
   &__description {
     @include primary-text;
+    margin: 0.875rem 0;
   }
   &__navbar {
     grid-area: nav;
@@ -94,6 +91,7 @@
   }
   &__copyright {
     @include primary-text;
+    margin: 0.875rem 0;
     line-height: 2.5rem;
     grid-area: copyright;
     @media (max-width: $screen-xs-max) {
