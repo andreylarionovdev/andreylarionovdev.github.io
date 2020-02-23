@@ -11,7 +11,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>Toxin booking | UI Kit - Form elements</title>
-  <link href="elements.fe91396496c080cc6ca6.css" rel="stylesheet"></head>
+  <link href="elements.2e82aaab09e8d79d5e32.css" rel="stylesheet"></head>
   <body class="body">
     <nav class="body__logo"><a class="logo" href="./index.html"></a>
     </nav>
@@ -183,7 +183,9 @@
           <article class="form-elements-page__like-button-group">
             <label class="label">
               <h3 class="label__title">like button</h3><span class="label__hint"></span>
-            </label><i class="like-button js-like-button"><i class="like-button__icon js-like-button__icon material-icons">favorite_border</i><span class="like-button__count js-like-button__count">2</span></i><i class="like-button like-button--favorite js-like-button"><i class="like-button__icon js-like-button__icon material-icons">favorite</i><span class="like-button__count js-like-button__count">12</span></i>
+            </label>
+            <button class="like-button js-like-button"><span class="like-button__icon js-like-button__icon material-icons">favorite_border</span><span class="like-button__count js-like-button__count">2</span></button>
+            <button class="like-button like-button--favorite js-like-button"><span class="like-button__icon js-like-button__icon material-icons">favorite</span><span class="like-button__count js-like-button__count">12</span></button>
           </article>
           <article class="form-elements-page__rate-button-group">
             <label class="label">
@@ -231,20 +233,34 @@
                 <h3 class="label__title">buttons</h3><span class="label__hint"></span>
               </label>
             </div>
-            <div class="row"><a class="button button--default" href="/change-me">
-                <div class="button__inner"><span class="button__caption">click me</span><i class="button__arrow material-icons">arrow_forward</i></div></a><a class="button button--default button--hovered" href="/change-me">
-                <div class="button__inner"><span class="button__caption">click me</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
+            <div class="row">
+              <button class="button button--default" type="button">
+                <div class="button__inner"><span class="button__caption">click me</span><span class="button__arrow material-icons">arrow_forward</span></div>
+              </button>
+              <button class="button button--default button--hovered" type="button">
+                <div class="button__inner"><span class="button__caption">click me</span><span class="button__arrow material-icons">arrow_forward</span></div>
+              </button>
             </div>
-            <div class="row"><a class="button button--transparent" href="/change-me">
-                <div class="button__inner"><span class="button__caption">click me</span><i class="button__arrow material-icons">arrow_forward</i></div></a><a class="button button--transparent button--hovered" href="/change-me">
-                <div class="button__inner"><span class="button__caption">click me</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
+            <div class="row">
+              <button class="button button--transparent" type="button">
+                <div class="button__inner"><span class="button__caption">click me</span><span class="button__arrow material-icons">arrow_forward</span></div>
+              </button>
+              <button class="button button--transparent button--hovered" type="button">
+                <div class="button__inner"><span class="button__caption">click me</span><span class="button__arrow material-icons">arrow_forward</span></div>
+              </button>
             </div>
-            <div class="row"><a class="button button--textual" href="/change-me">
-                <div class="button__inner"><span class="button__caption">click me</span><i class="button__arrow material-icons">arrow_forward</i></div></a><a class="button button--textual button--hovered" href="/change-me">
-                <div class="button__inner"><span class="button__caption">click me</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
+            <div class="row">
+              <button class="button button--textual" type="button">
+                <div class="button__inner"><span class="button__caption">click me</span><span class="button__arrow material-icons">arrow_forward</span></div>
+              </button>
+              <button class="button button--textual button--hovered" type="button">
+                <div class="button__inner"><span class="button__caption">click me</span><span class="button__arrow material-icons">arrow_forward</span></div>
+              </button>
             </div>
-            <div class="row"><a class="button button--default button--fluid button--with-arrow" href="/change-me">
-                <div class="button__inner"><span class="button__caption">перейти к оплате</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
+            <div class="row">
+              <button class="button button--default button--fluid button--with-arrow" type="button">
+                <div class="button__inner"><span class="button__caption">перейти к оплате</span><span class="button__arrow material-icons">arrow_forward</span></div>
+              </button>
             </div>
           </article>
           <article class="form-elements-page__paginator-group">
@@ -285,9 +301,13 @@
                 <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">спальни</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">2</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
                 <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">кровати</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">2</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
                 <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">ванные комнаты</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn dropdown__change-count-btn--disabled js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">0</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
-                <li class="dropdown__footer-buttons"><span class="dropdown__clear-button js-dropdown__clear-button"><a class="button button--textual button--hovered" href="javascript:void(0)">
-                      <div class="button__inner"><span class="button__caption">очистить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span><span class="dropdown__apply-button js-dropdown__apply-button"><a class="button button--textual" href="javascript:void(0)">
-                      <div class="button__inner"><span class="button__caption">применить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span></li>
+                <li class="dropdown__footer-buttons"><span class="dropdown__clear-button js-dropdown__clear-button">
+                    <button class="button button--textual button--hovered" type="button">
+                      <div class="button__inner"><span class="button__caption">очистить</span><span class="button__arrow material-icons">arrow_forward</span></div>
+                    </button></span><span class="dropdown__apply-button js-dropdown__apply-button">
+                    <button class="button button--textual" type="button">
+                      <div class="button__inner"><span class="button__caption">применить</span><span class="button__arrow material-icons">arrow_forward</span></div>
+                    </button></span></li>
               </ul>
             </div>
           </article>
@@ -309,9 +329,13 @@
                 <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">взрослые</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn dropdown__change-count-btn--disabled js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">0</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
                 <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">дети</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn dropdown__change-count-btn--disabled js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">0</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
                 <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">младенцы</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn dropdown__change-count-btn--disabled js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">0</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
-                <li class="dropdown__footer-buttons"><span class="dropdown__clear-button js-dropdown__clear-button"><a class="button button--textual button--hovered" href="javascript:void(0)">
-                      <div class="button__inner"><span class="button__caption">очистить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span><span class="dropdown__apply-button js-dropdown__apply-button"><a class="button button--textual" href="javascript:void(0)">
-                      <div class="button__inner"><span class="button__caption">применить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span></li>
+                <li class="dropdown__footer-buttons"><span class="dropdown__clear-button js-dropdown__clear-button">
+                    <button class="button button--textual button--hovered" type="button">
+                      <div class="button__inner"><span class="button__caption">очистить</span><span class="button__arrow material-icons">arrow_forward</span></div>
+                    </button></span><span class="dropdown__apply-button js-dropdown__apply-button">
+                    <button class="button button--textual" type="button">
+                      <div class="button__inner"><span class="button__caption">применить</span><span class="button__arrow material-icons">arrow_forward</span></div>
+                    </button></span></li>
               </ul>
             </div>
           </article>
@@ -333,9 +357,13 @@
                 <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">взрослые</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">2</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
                 <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">дети</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">1</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
                 <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">младенцы</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn dropdown__change-count-btn--disabled js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">0</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
-                <li class="dropdown__footer-buttons"><span class="dropdown__clear-button js-dropdown__clear-button"><a class="button button--textual button--hovered" href="javascript:void(0)">
-                      <div class="button__inner"><span class="button__caption">очистить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span><span class="dropdown__apply-button js-dropdown__apply-button"><a class="button button--textual" href="javascript:void(0)">
-                      <div class="button__inner"><span class="button__caption">применить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span></li>
+                <li class="dropdown__footer-buttons"><span class="dropdown__clear-button js-dropdown__clear-button">
+                    <button class="button button--textual button--hovered" type="button">
+                      <div class="button__inner"><span class="button__caption">очистить</span><span class="button__arrow material-icons">arrow_forward</span></div>
+                    </button></span><span class="dropdown__apply-button js-dropdown__apply-button">
+                    <button class="button button--textual" type="button">
+                      <div class="button__inner"><span class="button__caption">применить</span><span class="button__arrow material-icons">arrow_forward</span></div>
+                    </button></span></li>
               </ul>
             </div>
           </article>
@@ -487,7 +515,8 @@
                   <p class="feedback__author-name">Мурад Сарафанов</p>
                   <p class="feedback__date">5 дней назад</p>
                 </div>
-                <div class="feedback__like-button"><i class="like-button like-button--favorite js-like-button"><i class="like-button__icon js-like-button__icon material-icons">favorite</i><span class="like-button__count js-like-button__count">12</span></i>
+                <div class="feedback__like-button">
+                  <button class="like-button like-button--favorite js-like-button"><span class="like-button__icon js-like-button__icon material-icons">favorite</span><span class="like-button__count js-like-button__count">12</span></button>
                 </div>
                 <p class="feedback__text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И&nbsp;стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
               </div>
@@ -496,5 +525,5 @@
         </div>
       </section>
     </div>
-  <script type="text/javascript" src="elements.fe91396496c080cc6ca6.js"></script></body>
+  <script type="text/javascript" src="elements.2e82aaab09e8d79d5e32.js"></script></body>
 </html>

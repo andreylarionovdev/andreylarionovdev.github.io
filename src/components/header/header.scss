@@ -25,6 +25,8 @@
     @media (min-width: $screen-md-min) {
       display: none;
     }
+    border: none;
+    background: transparent;
     cursor: pointer;
     position: absolute;
     right: 0.625rem;

@@ -10,7 +10,7 @@ mixin header(options)
 
   header.header.js-header
     nav.header__inner
-      i(class=f.bem({b, e: 'navigation-toggle', js})).material-icons= 'menu'
+      button(class=f.bem({b, e: 'navigation-toggle', js})).material-icons= 'menu'
       figure.header__logo
         +logo(true)
       ul(class=f.bem({b, e: 'navigation', js}))

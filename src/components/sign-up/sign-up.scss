@@ -35,10 +35,10 @@
   &__text-input-label {
     margin-bottom: 0.3125rem;
   }
-  &__pay-button-group {
+  &__submit-button-group {
     margin-top: 1.5625rem;
   }
-  &__auth-button-group {
+  &__sign-in-button-group {
     margin-top: 1.8125rem;
     display: flex;
     justify-content: space-between;
@@ -47,7 +47,7 @@
       flex-direction: column;
     }
   }
-  &__auth-hint {
+  &__sign-in-hint {
     font-size: 0.875rem;
     font-family: Montserrat, sans-serif;
     color: black;
@@ -57,7 +57,7 @@
       width: 100%;
     }
   }
-  &__auth-button {
+  &__sign-in-button {
     width: 31%;
     @media (max-width: $screen-xs-max) {
       width: 100%;

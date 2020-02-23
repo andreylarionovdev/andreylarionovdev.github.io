@@ -3,8 +3,10 @@ include ../radio-button/radio-button
 include ../toggle-button/toggle-button
 include ../label/label
 
-mixin sign-up()
-  form.sign-up
+mixin sign-up(options)
+  - var { method='POST', action='/'} = options || {}
+
+  form.sign-up(method=method action=action)
     h1.sign-up__title= 'Регистрация аккаунта'
     .sign-up__text-input
       +text-input({
@@ -66,16 +68,17 @@ mixin sign-up()
         id: 'sign-up__toggle-promote',
         label: 'Получать спецпредложения'
       })
-    .sign-up__pay-button-group
+    .sign-up__submit-button-group
       +button({
         theme: 'default',
+        type: 'submit',
         caption: 'Перейти к оплате',
         withArrow: true,
         isFluid: true
       })
-    .sign-up__auth-button-group
-      p.sign-up__auth-hint= 'Уже есть аккаунт на Toxin'
-      .sign-up__auth-button
+    .sign-up__sign-in-button-group
+      p.sign-up__sign-in-hint= 'Уже есть аккаунт на Toxin'
+      .sign-up__sign-in-button
         +button({
           theme: 'transparent',
           caption: 'Войти',

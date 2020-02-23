@@ -1,6 +1,6 @@
 @import './vars';
 
-@mixin inner($lgWidth: 80.5%, $mdWidth: 95.5%) {
+@mixin inner($lgWidth: 80.6%, $mdWidth: 95.5%) {
   margin: 0 auto;
   width: $mdWidth;
   @media (min-width: $screen-md-min) {

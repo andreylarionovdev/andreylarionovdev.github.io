@@ -11,8 +11,7 @@
   grid-template-areas:
     'pic header'
     'like text';
-  grid-template-columns: $picture-width auto;
-  grid-gap: 0.625rem;
+  grid-gap: 0.5625rem;
   &__author-picture-wrapper {
     grid-area: pic;
     display: flex;
@@ -38,6 +37,7 @@
   &__like-button {
     grid-area: like;
     text-align: center;
+    padding-top: 0.0625rem;
   }
   &__text {
     grid-area: text;

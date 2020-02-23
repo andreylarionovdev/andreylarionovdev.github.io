@@ -3,9 +3,9 @@ include ../dropdown/dropdown
 include ../datepicker-date-range/datepicker-date-range
 
 mixin room-book(options)
-  - var { roomNumber, pricePerDay, discount, fee, feature } = options || {}
+  - var { roomNumber, pricePerDay, discount, fee, feature, method='POST', action='/' } = options || {}
   - var f = require('../../utils/functions');
-  form.room-book
+  form.room-book(method=method action=action)
     header.room-book__header
       .room-book__number
         span.room-book__number-sign= '№'
@@ -53,7 +53,7 @@ mixin room-book(options)
 
       .room-book__result-grid-cell= 'Сбор за дополнительные услуги'
       .room-book__result-grid-cell.room-book__result-grid-cell--with-info-icon
-        i(title='change me').room-book__info-icon.material-icons= 'info_outline'
+        span(title='change me').room-book__info-icon.material-icons= 'info_outline'
       .room-book__result-grid-cell.room-book__result-grid-cell--with-sum!= f.formatCurrency({value: fee})
 
     p.room-book__total-row
@@ -64,6 +64,7 @@ mixin room-book(options)
     footer.room-book__submit-button-group
       +button({
         theme: 'default',
+        type: 'submit',
         caption: 'Забронировать',
         withArrow: true,
         isFluid: true,

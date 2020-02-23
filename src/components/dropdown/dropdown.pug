@@ -42,13 +42,13 @@ mixin dropdown(options)
           span(class=f.bem({b, e: 'clear-button', js}))
             +button({
               theme: 'textual',
+              type: 'button',
               caption: 'очистить',
               isHovered: true,
-              href: 'javascript:void(0)',
             })
           span(class=f.bem({b, e: 'apply-button', js}))
             +button({
               theme: 'textual',
+              type: 'button',
               caption: 'применить',
-              href: 'javascript:void(0)',
             })

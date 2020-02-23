@@ -9,11 +9,14 @@
   font-weight: bold;
   text-transform: uppercase;
   line-height: 2.5rem;
+  border: none;
+  outline: none;
   border-radius: 1.375rem;
   user-select: none;
   padding: 0.125rem;
   background: $grad-purple;
   transition: opacity .15s ease-in-out;
+  cursor: pointer;
   &__inner {
     background: white;
     display: grid;
@@ -52,7 +55,6 @@
     padding: 0;
     line-height: 1rem;
     display: inline;
-    border: none;
     background: none;
     color: $color-purple;
     #{$blockClass}__inner {

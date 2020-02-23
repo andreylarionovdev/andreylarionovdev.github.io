@@ -11,10 +11,11 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>Toxin booking | Registration</title>
-  <link href="registration.fe91396496c080cc6ca6.css" rel="stylesheet"></head>
+  <link href="registration.2e82aaab09e8d79d5e32.css" rel="stylesheet"></head>
   <body class="body">
     <header class="header js-header">
-      <nav class="header__inner"><i class="header__navigation-toggle js-header__navigation-toggle material-icons">menu</i>
+      <nav class="header__inner">
+        <button class="header__navigation-toggle js-header__navigation-toggle material-icons">menu</button>
         <figure class="header__logo"><a class="logo logo--with-text" href="./index.html"></a>
         </figure>
         <ul class="header__navigation js-header__navigation">
@@ -28,11 +29,15 @@
           </li>
           <li class="header__navigation-item"><a class="header__navigation-link header__navigation-link--with-submenu">Соглашения</a>
           </li>
-          <li class="header__navigation-item header__navigation-item--with-sign-in-btn"><a class="button button--transparent button--small" href="sign-in.html">
-              <div class="button__inner"><span class="button__caption">Войти</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
+          <li class="header__navigation-item header__navigation-item--with-sign-in-btn">
+            <a class="button button--transparent button--small" href="sign-in.html">
+              <div class="button__inner"><span class="button__caption">Войти</span><span class="button__arrow material-icons">arrow_forward</span></div>
+            </a>
           </li>
-          <li class="header__navigation-item header__navigation-item--with-sign-up-btn"><a class="button button--default button--small" href="sign-up.html">
-              <div class="button__inner"><span class="button__caption">Зарегистрироваться</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
+          <li class="header__navigation-item header__navigation-item--with-sign-up-btn">
+            <a class="button button--default button--small" href="sign-up.html">
+              <div class="button__inner"><span class="button__caption">Зарегистрироваться</span><span class="button__arrow material-icons">arrow_forward</span></div>
+            </a>
           </li>
         </ul>
       </nav>
@@ -41,7 +46,7 @@
       <article class="sign-up-page">
         <div class="sign-up-page__inner">
           <section class="sign-up-page__form">
-            <form class="sign-up">
+            <form class="sign-up" method="POST" action="/">
               <h1 class="sign-up__title">Регистрация аккаунта</h1>
               <div class="sign-up__text-input">
                 <div class="text-input">
@@ -107,13 +112,17 @@
                   <label class="toggle-button__label" for="sign-up__toggle-promote">Получать спецпредложения</label>
                 </div>
               </div>
-              <div class="sign-up__pay-button-group"><a class="button button--default button--fluid button--with-arrow" href="/change-me">
-                  <div class="button__inner"><span class="button__caption">Перейти к оплате</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
+              <div class="sign-up__submit-button-group">
+                <button class="button button--default button--fluid button--with-arrow" type="submit">
+                  <div class="button__inner"><span class="button__caption">Перейти к оплате</span><span class="button__arrow material-icons">arrow_forward</span></div>
+                </button>
               </div>
-              <div class="sign-up__auth-button-group">
-                <p class="sign-up__auth-hint">Уже есть аккаунт на Toxin</p>
-                <div class="sign-up__auth-button"><a class="button button--transparent button--fluid" href="sign-in.html">
-                    <div class="button__inner"><span class="button__caption">Войти</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
+              <div class="sign-up__sign-in-button-group">
+                <p class="sign-up__sign-in-hint">Уже есть аккаунт на Toxin</p>
+                <div class="sign-up__sign-in-button">
+                  <a class="button button--transparent button--fluid" href="sign-in.html">
+                    <div class="button__inner"><span class="button__caption">Войти</span><span class="button__arrow material-icons">arrow_forward</span></div>
+                  </a>
                 </div>
               </div>
             </form>
@@ -163,7 +172,7 @@
             </div>
           </section>
         </nav>
-        <form class="footer__subscribe-form">
+        <form class="footer__subscribe-form" method="POST" action="/">
           <h3 class="footer__subscribe-form-title">Подписка</h3>
           <p class="footer__subscribe-form-description">Получайте специальные предложения и новости сервиса</p>
           <div class="footer__subscribe-form-input-group">
@@ -181,5 +190,5 @@
         </ul>
       </div>
     </footer>
-  <script type="text/javascript" src="registration.fe91396496c080cc6ca6.js"></script></body>
+  <script type="text/javascript" src="registration.2e82aaab09e8d79d5e32.js"></script></body>
 </html>

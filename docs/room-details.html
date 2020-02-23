@@ -11,10 +11,11 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>Toxin booking | Room details</title>
-  <link href="room.fe91396496c080cc6ca6.css" rel="stylesheet"></head>
+  <link href="room.2e82aaab09e8d79d5e32.css" rel="stylesheet"></head>
   <body class="body">
     <header class="header js-header">
-      <nav class="header__inner"><i class="header__navigation-toggle js-header__navigation-toggle material-icons">menu</i>
+      <nav class="header__inner">
+        <button class="header__navigation-toggle js-header__navigation-toggle material-icons">menu</button>
         <figure class="header__logo"><a class="logo logo--with-text" href="./index.html"></a>
         </figure>
         <ul class="header__navigation js-header__navigation">
@@ -28,11 +29,15 @@
           </li>
           <li class="header__navigation-item"><a class="header__navigation-link header__navigation-link--with-submenu">Соглашения</a>
           </li>
-          <li class="header__navigation-item header__navigation-item--with-sign-in-btn"><a class="button button--transparent button--small" href="sign-in.html">
-              <div class="button__inner"><span class="button__caption">Войти</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
+          <li class="header__navigation-item header__navigation-item--with-sign-in-btn">
+            <a class="button button--transparent button--small" href="sign-in.html">
+              <div class="button__inner"><span class="button__caption">Войти</span><span class="button__arrow material-icons">arrow_forward</span></div>
+            </a>
           </li>
-          <li class="header__navigation-item header__navigation-item--with-sign-up-btn"><a class="button button--default button--small" href="sign-up.html">
-              <div class="button__inner"><span class="button__caption">Зарегистрироваться</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
+          <li class="header__navigation-item header__navigation-item--with-sign-up-btn">
+            <a class="button button--default button--small" href="sign-up.html">
+              <div class="button__inner"><span class="button__caption">Зарегистрироваться</span><span class="button__arrow material-icons">arrow_forward</span></div>
+            </a>
           </li>
         </ul>
       </nav>
@@ -126,7 +131,8 @@
                       <p class="feedback__author-name">Мурад Сарафанов</p>
                       <p class="feedback__date">5 дней назад</p>
                     </div>
-                    <div class="feedback__like-button"><i class="like-button like-button--favorite js-like-button"><i class="like-button__icon js-like-button__icon material-icons">favorite</i><span class="like-button__count js-like-button__count">12</span></i>
+                    <div class="feedback__like-button">
+                      <button class="like-button like-button--favorite js-like-button"><span class="like-button__icon js-like-button__icon material-icons">favorite</span><span class="like-button__count js-like-button__count">12</span></button>
                     </div>
                     <p class="feedback__text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И&nbsp;стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
                   </div>
@@ -139,7 +145,8 @@
                       <p class="feedback__author-name">Патрисия Стёклышкова</p>
                       <p class="feedback__date">Неделю назад</p>
                     </div>
-                    <div class="feedback__like-button"><i class="like-button js-like-button"><i class="like-button__icon js-like-button__icon material-icons">favorite_border</i><span class="like-button__count js-like-button__count">2</span></i>
+                    <div class="feedback__like-button">
+                      <button class="like-button js-like-button"><span class="like-button__icon js-like-button__icon material-icons">favorite_border</span><span class="like-button__count js-like-button__count">2</span></button>
                     </div>
                     <p class="feedback__text">Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент</p>
                   </div>
@@ -173,7 +180,7 @@
           </div>
           <div class="room-details-page__sidebar">
             <section class="room-details-page__book-form">
-              <form class="room-book">
+              <form class="room-book" method="POST" action="/">
                 <header class="room-book__header">
                   <div class="room-book__number"><span class="room-book__number-sign">№</span><span class="room-book__number-value">888</span>
                     <h3 class="room-book__number-feature">люкс</h3>
@@ -230,9 +237,13 @@
                         <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">взрослые</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">2</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
                         <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">дети</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">1</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
                         <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">младенцы</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn dropdown__change-count-btn--disabled js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">0</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
-                        <li class="dropdown__footer-buttons"><span class="dropdown__clear-button js-dropdown__clear-button"><a class="button button--textual button--hovered" href="javascript:void(0)">
-                              <div class="button__inner"><span class="button__caption">очистить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span><span class="dropdown__apply-button js-dropdown__apply-button"><a class="button button--textual" href="javascript:void(0)">
-                              <div class="button__inner"><span class="button__caption">применить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span></li>
+                        <li class="dropdown__footer-buttons"><span class="dropdown__clear-button js-dropdown__clear-button">
+                            <button class="button button--textual button--hovered" type="button">
+                              <div class="button__inner"><span class="button__caption">очистить</span><span class="button__arrow material-icons">arrow_forward</span></div>
+                            </button></span><span class="dropdown__apply-button js-dropdown__apply-button">
+                            <button class="button button--textual" type="button">
+                              <div class="button__inner"><span class="button__caption">применить</span><span class="button__arrow material-icons">arrow_forward</span></div>
+                            </button></span></li>
                       </ul>
                     </div>
                   </div>
@@ -245,12 +256,14 @@
                   <div class="room-book__result-grid-cell room-book__result-grid-cell--with-info-icon"><span class="room-book__info-icon material-icons" title="change me">info_outline</span></div>
                   <div class="room-book__result-grid-cell room-book__result-grid-cell--with-sum">0₽</div>
                   <div class="room-book__result-grid-cell">Сбор за дополнительные услуги</div>
-                  <div class="room-book__result-grid-cell room-book__result-grid-cell--with-info-icon"><i class="room-book__info-icon material-icons" title="change me">info_outline</i></div>
+                  <div class="room-book__result-grid-cell room-book__result-grid-cell--with-info-icon"><span class="room-book__info-icon material-icons" title="change me">info_outline</span></div>
                   <div class="room-book__result-grid-cell room-book__result-grid-cell--with-sum">300₽</div>
                 </div>
                 <p class="room-book__total-row"><span class="room-book__total-header">Итого</span><span class="room-book__total-line"></span><span class="room-book__total-sum">38&nbsp;081₽</span></p>
-                <footer class="room-book__submit-button-group"><a class="button button--default button--fluid button--with-arrow" href="/change-me">
-                    <div class="button__inner"><span class="button__caption">Забронировать</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
+                <footer class="room-book__submit-button-group">
+                  <button class="button button--default button--fluid button--with-arrow" type="submit">
+                    <div class="button__inner"><span class="button__caption">Забронировать</span><span class="button__arrow material-icons">arrow_forward</span></div>
+                  </button>
                 </footer>
               </form>
             </section>
@@ -300,7 +313,7 @@
             </div>
           </section>
         </nav>
-        <form class="footer__subscribe-form">
+        <form class="footer__subscribe-form" method="POST" action="/">
           <h3 class="footer__subscribe-form-title">Подписка</h3>
           <p class="footer__subscribe-form-description">Получайте специальные предложения и новости сервиса</p>
           <div class="footer__subscribe-form-input-group">
@@ -318,5 +331,5 @@
         </ul>
       </div>
     </footer>
-  <script type="text/javascript" src="room.fe91396496c080cc6ca6.js"></script></body>
+  <script type="text/javascript" src="room.2e82aaab09e8d79d5e32.js"></script></body>
 </html>

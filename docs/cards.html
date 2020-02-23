@@ -11,7 +11,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>Toxin booking | UI Kit - Cards</title>
-  <link href="cards.fe91396496c080cc6ca6.css" rel="stylesheet"></head>
+  <link href="cards.2e82aaab09e8d79d5e32.css" rel="stylesheet"></head>
   <body class="body body--gray">
     <nav class="body__logo"><a class="logo" href="./index.html"></a>
     </nav>
@@ -70,20 +70,26 @@
                     <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">взрослые</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn dropdown__change-count-btn--disabled js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">0</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
                     <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">дети</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn dropdown__change-count-btn--disabled js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">0</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
                     <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">младенцы</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn dropdown__change-count-btn--disabled js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">0</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
-                    <li class="dropdown__footer-buttons"><span class="dropdown__clear-button js-dropdown__clear-button"><a class="button button--textual button--hovered" href="javascript:void(0)">
-                          <div class="button__inner"><span class="button__caption">очистить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span><span class="dropdown__apply-button js-dropdown__apply-button"><a class="button button--textual" href="javascript:void(0)">
-                          <div class="button__inner"><span class="button__caption">применить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span></li>
+                    <li class="dropdown__footer-buttons"><span class="dropdown__clear-button js-dropdown__clear-button">
+                        <button class="button button--textual button--hovered" type="button">
+                          <div class="button__inner"><span class="button__caption">очистить</span><span class="button__arrow material-icons">arrow_forward</span></div>
+                        </button></span><span class="dropdown__apply-button js-dropdown__apply-button">
+                        <button class="button button--textual" type="button">
+                          <div class="button__inner"><span class="button__caption">применить</span><span class="button__arrow material-icons">arrow_forward</span></div>
+                        </button></span></li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="room-search__submit-button-group"><a class="button button--default button--fluid button--with-arrow" href="search-room-filter.html">
-                <div class="button__inner"><span class="button__caption">Подобрать номер</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
+            <div class="room-search__submit-button-group">
+              <a class="button button--default button--fluid button--with-arrow" href="room-filter.html">
+                <div class="button__inner"><span class="button__caption">Подобрать номер</span><span class="button__arrow material-icons">arrow_forward</span></div>
+              </a>
             </div>
           </form>
         </article>
         <article class="cards-page__card">
-          <form class="sign-up">
+          <form class="sign-up" method="POST" action="/">
             <h1 class="sign-up__title">Регистрация аккаунта</h1>
             <div class="sign-up__text-input">
               <div class="text-input">
@@ -149,13 +155,17 @@
                 <label class="toggle-button__label" for="sign-up__toggle-promote">Получать спецпредложения</label>
               </div>
             </div>
-            <div class="sign-up__pay-button-group"><a class="button button--default button--fluid button--with-arrow" href="/change-me">
-                <div class="button__inner"><span class="button__caption">Перейти к оплате</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
+            <div class="sign-up__submit-button-group">
+              <button class="button button--default button--fluid button--with-arrow" type="submit">
+                <div class="button__inner"><span class="button__caption">Перейти к оплате</span><span class="button__arrow material-icons">arrow_forward</span></div>
+              </button>
             </div>
-            <div class="sign-up__auth-button-group">
-              <p class="sign-up__auth-hint">Уже есть аккаунт на Toxin</p>
-              <div class="sign-up__auth-button"><a class="button button--transparent button--fluid" href="sign-in.html">
-                  <div class="button__inner"><span class="button__caption">Войти</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
+            <div class="sign-up__sign-in-button-group">
+              <p class="sign-up__sign-in-hint">Уже есть аккаунт на Toxin</p>
+              <div class="sign-up__sign-in-button">
+                <a class="button button--transparent button--fluid" href="sign-in.html">
+                  <div class="button__inner"><span class="button__caption">Войти</span><span class="button__arrow material-icons">arrow_forward</span></div>
+                </a>
               </div>
             </div>
           </form>
@@ -163,7 +173,7 @@
       </div>
       <div class="grid-column">
         <article class="cards-page__card">
-          <form class="room-book">
+          <form class="room-book" method="POST" action="/">
             <header class="room-book__header">
               <div class="room-book__number"><span class="room-book__number-sign">№</span><span class="room-book__number-value">888</span>
                 <h3 class="room-book__number-feature">люкс</h3>
@@ -220,9 +230,13 @@
                     <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">взрослые</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">2</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
                     <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">дети</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">1</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
                     <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">младенцы</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn dropdown__change-count-btn--disabled js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">0</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
-                    <li class="dropdown__footer-buttons"><span class="dropdown__clear-button js-dropdown__clear-button"><a class="button button--textual button--hovered" href="javascript:void(0)">
-                          <div class="button__inner"><span class="button__caption">очистить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span><span class="dropdown__apply-button js-dropdown__apply-button"><a class="button button--textual" href="javascript:void(0)">
-                          <div class="button__inner"><span class="button__caption">применить</span><i class="button__arrow material-icons">arrow_forward</i></div></a></span></li>
+                    <li class="dropdown__footer-buttons"><span class="dropdown__clear-button js-dropdown__clear-button">
+                        <button class="button button--textual button--hovered" type="button">
+                          <div class="button__inner"><span class="button__caption">очистить</span><span class="button__arrow material-icons">arrow_forward</span></div>
+                        </button></span><span class="dropdown__apply-button js-dropdown__apply-button">
+                        <button class="button button--textual" type="button">
+                          <div class="button__inner"><span class="button__caption">применить</span><span class="button__arrow material-icons">arrow_forward</span></div>
+                        </button></span></li>
                   </ul>
                 </div>
               </div>
@@ -235,17 +249,19 @@
               <div class="room-book__result-grid-cell room-book__result-grid-cell--with-info-icon"><span class="room-book__info-icon material-icons" title="change me">info_outline</span></div>
               <div class="room-book__result-grid-cell room-book__result-grid-cell--with-sum">0₽</div>
               <div class="room-book__result-grid-cell">Сбор за дополнительные услуги</div>
-              <div class="room-book__result-grid-cell room-book__result-grid-cell--with-info-icon"><i class="room-book__info-icon material-icons" title="change me">info_outline</i></div>
+              <div class="room-book__result-grid-cell room-book__result-grid-cell--with-info-icon"><span class="room-book__info-icon material-icons" title="change me">info_outline</span></div>
               <div class="room-book__result-grid-cell room-book__result-grid-cell--with-sum">300₽</div>
             </div>
             <p class="room-book__total-row"><span class="room-book__total-header">Итого</span><span class="room-book__total-line"></span><span class="room-book__total-sum">38&nbsp;081₽</span></p>
-            <footer class="room-book__submit-button-group"><a class="button button--default button--fluid button--with-arrow" href="/change-me">
-                <div class="button__inner"><span class="button__caption">Забронировать</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
+            <footer class="room-book__submit-button-group">
+              <button class="button button--default button--fluid button--with-arrow" type="submit">
+                <div class="button__inner"><span class="button__caption">Забронировать</span><span class="button__arrow material-icons">arrow_forward</span></div>
+              </button>
             </footer>
           </form>
         </article>
         <article class="cards-page__card">
-          <form class="sign-in">
+          <form class="sign-in" method="POST" action="/">
             <h1 class="sign-in__title">Войти</h1>
             <div class="sign-in__text-input">
               <div class="text-input">
@@ -259,13 +275,17 @@
                 <button class="text-input__submit-button"><span class="text-input__arrow material-icons">arrow_forward</span></button>
               </div>
             </div>
-            <div class="sign-in__sign-in-button-group"><a class="button button--default button--fluid button--with-arrow" href="sign-in.html">
-                <div class="button__inner"><span class="button__caption">Войти</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
+            <div class="sign-in__submit-button-group">
+              <button class="button button--default button--fluid button--with-arrow" type="submit">
+                <div class="button__inner"><span class="button__caption">Войти</span><span class="button__arrow material-icons">arrow_forward</span></div>
+              </button>
             </div>
             <div class="sign-in__sign-up-button-group">
               <p class="sign-in__sign-up-hint">Нет аккаунта на Toxin?</p>
-              <div class="sign-in__sign-up-button"><a class="button button--transparent button--fluid" href="sign-up.html">
-                  <div class="button__inner"><span class="button__caption">Создать</span><i class="button__arrow material-icons">arrow_forward</i></div></a>
+              <div class="sign-in__sign-up-button">
+                <a class="button button--transparent button--fluid" href="sign-up.html">
+                  <div class="button__inner"><span class="button__caption">Создать</span><span class="button__arrow material-icons">arrow_forward</span></div>
+                </a>
               </div>
             </div>
           </form>
@@ -405,5 +425,5 @@
         </article>
       </div>
     </div>
-  <script type="text/javascript" src="cards.fe91396496c080cc6ca6.js"></script></body>
+  <script type="text/javascript" src="cards.2e82aaab09e8d79d5e32.js"></script></body>
 </html>

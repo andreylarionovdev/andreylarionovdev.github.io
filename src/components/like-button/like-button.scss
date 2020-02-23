@@ -2,36 +2,34 @@
 
 .like-button {
   $blockName: &;
-  display: inline-grid;
-  grid-auto-flow: column;
-  grid-template-columns: 1.25rem auto;
-  min-width: 2.5rem;
+  display: inline-flex;
   align-items: center;
-  line-height: 1.125rem;
+  min-width: 2.5rem;
   border-radius: 0.625rem;
-  font-size: 0.625rem;
-  font-style: normal;
   border: 0.0625rem solid $color-dark-25;
   color: $color-dark-25;
   cursor: pointer;
   user-select: none;
+  appearance: none;
+  outline: none;
 
+  &__count,
+  &__icon {
+    line-height: 1.125rem;
+    font-size: 0.625rem;
+  }
   &__count {
-    text-align: left;
+    padding: 0 0.3125rem;
   }
   &__icon {
-    font-size: inherit;
-    text-align: center;
-    padding-right: 0.25rem;
+    padding-left: 0.25rem;
   }
 
   &--favorite {
     border: 0.0625rem solid $color-purple;
-
     #{$blockName}__count {
       color: $color-purple;
     }
-
     #{$blockName}__icon {
       color: $color-purple;
     }

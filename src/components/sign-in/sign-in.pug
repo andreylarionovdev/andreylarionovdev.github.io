@@ -1,8 +1,10 @@
 include ../text-input/text-input
 include ../button/button
 
-mixin sign-in()
-  form.sign-in
+mixin sign-in(options)
+  - var { method='POST', action='/'} = options || {}
+
+  form.sign-in(method=method action=action)
     h1.sign-in__title= 'Войти'
     .sign-in__text-input
       +text-input({
@@ -16,13 +18,13 @@ mixin sign-in()
         placeholder: 'Пароль',
         type: 'password'
       })
-    .sign-in__sign-in-button-group
+    .sign-in__submit-button-group
       +button({
         theme: 'default',
+        type: 'submit',
         caption: 'Войти',
         withArrow: true,
         isFluid: true,
-        href: 'sign-in.html'
       })
     .sign-in__sign-up-button-group
       p.sign-in__sign-up-hint= 'Нет аккаунта на Toxin?'

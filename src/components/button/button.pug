@@ -3,7 +3,8 @@ mixin button(options)
     var {
       theme,
       caption,
-      href = '/change-me',
+      type,
+      href,
       isHovered,
       isFluid,
       isSmall,
@@ -23,7 +24,13 @@ mixin button(options)
 
   - var f = require('../../utils/functions')
 
-  a(class=f.bem({b: 'button', m: blockModifiers}) href=href)
+  - var isButton = ['button', 'submit'].includes(type)
+  - var tag = 'a'
+
+  if isButton
+    - tag = 'button'
+
+  #{tag}(class=f.bem({b: 'button', m: blockModifiers}) type=(type || false) href=(href || false))
     .button__inner
       span.button__caption= caption
-      i.button__arrow.material-icons= 'arrow_forward'
+      span.button__arrow.material-icons= 'arrow_forward'

@@ -10,6 +10,6 @@ mixin like-button(options)
   - var b = 'like-button'
   - var js = 'js'
 
-  i(class=f.bem({b, m: blockModifiers,js}))
-    i(class=f.bem({b, e: 'icon',js})).material-icons= isFavorite ? 'favorite' : 'favorite_border'
+  button(class=f.bem({b, m: blockModifiers,js}))
+    span(class=f.bem({b, e: 'icon',js})).material-icons= isFavorite ? 'favorite' : 'favorite_border'
     span(class=f.bem({b, e: 'count', js}))= count
