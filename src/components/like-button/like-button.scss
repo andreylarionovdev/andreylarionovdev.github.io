@@ -1,17 +1,15 @@
 @import '../../utils/vars';
+@import '../../utils/mixins';
 
 .like-button {
   $blockName: &;
+  @include reset-button;
   display: inline-flex;
   align-items: center;
   min-width: 2.5rem;
   border-radius: 0.625rem;
   border: 0.0625rem solid $color-dark-25;
   color: $color-dark-25;
-  cursor: pointer;
-  user-select: none;
-  appearance: none;
-  outline: none;
 
   &__count,
   &__icon {

@@ -33,8 +33,8 @@ $(() => {
   }
 
   function addActionButtons($dpApi, $dpElement, $dropdownFrom, $dropdownTo) {
-    const $clearBtn = $('<a class="datepicker__clear-btn js-datepicker__clear-btn">Очистить</a>');
-    const $applyBtn = $('<a class="datepicker__apply-btn js-datepicker__apply-btn">Применить</a>');
+    const $clearBtn = $('<button class="datepicker__clear-btn js-datepicker__clear-btn">Очистить</button>');
+    const $applyBtn = $('<button class="datepicker__apply-btn js-datepicker__apply-btn">Применить</button>');
     if ($dpElement.find('.js-datepicker__clear-btn').length === 0) {
       $clearBtn.on('click', () => {
         $dpApi.clear();

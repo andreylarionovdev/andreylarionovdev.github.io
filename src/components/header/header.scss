@@ -25,9 +25,7 @@
     @media (min-width: $screen-md-min) {
       display: none;
     }
-    border: none;
-    background: transparent;
-    cursor: pointer;
+    @include reset-button;
     position: absolute;
     right: 0.625rem;
     font-size: 3rem;

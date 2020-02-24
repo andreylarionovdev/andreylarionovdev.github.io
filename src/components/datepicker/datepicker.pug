@@ -1,11 +1,11 @@
 mixin datepicker()
   .datepicker.active
     nav.datepicker--nav
-      .datepicker--nav-action
-        i.material-icons= 'arrow_back'
+      button.datepicker--nav-action
+        span.material-icons= 'arrow_back'
       .datepicker--nav-title!= 'Август<i>2019</i>'
-      .datepicker--nav-action
-        i.material-icons= 'arrow_forward'
+      button.datepicker--nav-action
+        span.material-icons= 'arrow_forward'
     .datepicker--content
       .datepicker--days.datepicker--body.active
         .datepicker--days-names
@@ -38,12 +38,12 @@ mixin datepicker()
           .datepicker--cell.datepicker--cell-day.-weekend-.-other-month-= '1'
     .datepicker__footer
       - var f = require('../../utils/functions')
-      a(class=f.bem({
+      button(class=f.bem({
         b: 'datepicker',
         e: 'clear-btn',
         js: 'js'
       }))= 'Очистить'
-      a(class=f.bem({
+      button(class=f.bem({
         b: 'datepicker',
         e: 'apply-btn',
         js: 'js'

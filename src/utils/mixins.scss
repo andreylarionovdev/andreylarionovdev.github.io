@@ -40,6 +40,15 @@
   background-color: white;
 }
 
+@mixin reset-button {
+  outline: none;
+  border: none;
+  appearance: none;
+  user-select: none;
+  background: transparent;
+  cursor: pointer;
+}
+
 @mixin primary-text {
   font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
