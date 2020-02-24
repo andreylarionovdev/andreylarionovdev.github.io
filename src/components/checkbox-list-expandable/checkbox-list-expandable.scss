@@ -26,6 +26,7 @@
   }
   #{$blockClass}__arrow {
     @include reset-button;
+    @include reset-outline(text-shadow);
     display: inline-block;
     transition: transform .1s ease-out;
   }
@@ -39,6 +40,9 @@
   &--expanded {
     #{$blockClass}__arrow {
       transform: rotate(180deg);
+      &:focus {
+        text-shadow: 0 -0.3125rem 0.3125rem $color-dark-25;
+      }
     }
     #{$blockClass}__list {
       display: inline-block;

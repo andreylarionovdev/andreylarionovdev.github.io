@@ -20,10 +20,8 @@
     border-radius: 0.25rem;
   }
   &__arrow-btn {
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    outline: none;
+    @include reset-button;
+    @include reset-outline(text-shadow);
     color: $color-dark-50;
   }
   &__text {

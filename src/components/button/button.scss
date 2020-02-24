@@ -4,6 +4,7 @@
 .button {
   $blockClass: &;
   @include reset-button;
+  @include reset-outline;
   display: inline-grid;
   text-decoration: none;
   font-family: Montserrat, sans-serif;
@@ -15,7 +16,7 @@
   user-select: none;
   padding: 0.125rem;
   background: $grad-purple;
-  transition: opacity .15s ease-in-out;
+  transition: all .25s ease-in-out;
   &__inner {
     background: white;
     display: grid;
@@ -51,6 +52,7 @@
     color: $color-purple;
   }
   &--textual {
+    @include reset-outline(text-shadow);
     padding: 0;
     line-height: 1rem;
     display: inline;
@@ -64,6 +66,9 @@
     &:hover,
     &#{$blockClass}--hovered {
       color: $color-dark-100;
+    }
+    &:focus {
+      box-shadow: none;
     }
   }
   &--with-arrow {

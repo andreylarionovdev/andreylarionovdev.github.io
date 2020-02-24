@@ -4,6 +4,7 @@
 .like-button {
   $blockName: &;
   @include reset-button;
+  @include reset-outline;
   display: inline-flex;
   align-items: center;
   min-width: 2.5rem;

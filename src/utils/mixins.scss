@@ -40,8 +40,15 @@
   background-color: white;
 }
 
+@mixin reset-outline($property: box-shadow) {
+  transition: #{$property} .25s ease-in-out;
+  &:focus {
+    outline: none;
+    #{$property}: 0 0.3125rem 0.3125rem $color-dark-25;
+  }
+}
+
 @mixin reset-button {
-  outline: none;
   border: none;
   appearance: none;
   user-select: none;

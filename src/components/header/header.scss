@@ -26,6 +26,7 @@
       display: none;
     }
     @include reset-button;
+    @include reset-outline(text-shadow);
     position: absolute;
     right: 0.625rem;
     font-size: 3rem;
