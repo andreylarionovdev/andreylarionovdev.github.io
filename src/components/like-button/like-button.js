@@ -1,20 +1,34 @@
 import $ from 'jquery';
 
-$(() => {
-  const classFavorite = 'like-button--favorite';
+const LikeButton = function LikeButton() {
+  this.init();
+};
 
-  $('.js-like-button').on('click', (e) => {
-    $(e.currentTarget).toggleClass(classFavorite);
+LikeButton.prototype.init = function init() {
+  this.classFavorite = 'like-button--favorite';
+  this.selectorButton = '.js-like-button';
+  this.selectorCount = '.js-like-button__count';
+  this.selectorIcon = '.js-like-button__icon';
 
-    const $counter = $(e.currentTarget).find('.js-like-button__count');
+  this.addEventListeners();
+};
 
-    const isFavorite = $(e.currentTarget).hasClass(classFavorite);
+LikeButton.prototype.addEventListeners = function addEventListeners() {
+  $(this.selectorButton).on('click', this.handleButtonClick.bind(this));
+};
 
-    let count = parseInt($counter.text(), 10);
-    const iconName = isFavorite ? 'favorite' : 'favorite_border';
-    count = isFavorite ? count + 1 : count - 1;
+LikeButton.prototype.handleButtonClick = function handleButtonClick(e) {
+  e.preventDefault();
 
-    $counter.text(count);
-    $(e.currentTarget).find('.js-like-button__icon').text(iconName);
-  });
-});
+  $(e.currentTarget).toggleClass(this.classFavorite);
+
+  const $counter = $(e.currentTarget).find(this.selectorCount);
+  const isFavorite = $(e.currentTarget).hasClass(this.classFavorite);
+
+  const count = parseInt($counter.text(), 10);
+  $counter.text(isFavorite ? count + 1 : count - 1);
+
+  $(e.currentTarget).find(this.selectorIcon).text(isFavorite ? 'favorite' : 'favorite_border');
+};
+
+$(() => new LikeButton());

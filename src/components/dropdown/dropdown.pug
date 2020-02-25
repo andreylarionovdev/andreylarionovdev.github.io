@@ -26,7 +26,7 @@ mixin dropdown(options)
   div(id=id class=f.bem({b, m: blockModifiers, js}))
     label(class=f.bem({b, e: 'toggle', js}))
       span(class=f.bem({b, e: 'text', js}))= value
-      button.dropdown__arrow-btn.material-icons= 'keyboard_arrow_down'
+      button.dropdown__arrow-button.material-icons= 'keyboard_arrow_down'
       input(class=f.bem({b, e: 'data-input', js}) type='text' value=value)
     if rows.length > 0
       ul(class=f.bem({b, e: 'menu', js}) style={'z-index': zIndex})

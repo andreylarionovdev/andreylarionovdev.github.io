@@ -19,7 +19,7 @@
     border: 0.0625rem solid $color-dark-25;
     border-radius: 0.25rem;
   }
-  &__arrow-btn {
+  &__arrow-button {
     @include reset-button;
     @include reset-outline(text-shadow);
     color: $color-dark-50;
@@ -102,7 +102,7 @@
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0;
     }
-    #{$blockClass}__arrow-btn {
+    #{$blockClass}__arrow-button {
       color: $color-dark-75;
     }
     #{$blockClass}__menu {

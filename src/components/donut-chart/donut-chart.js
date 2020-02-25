@@ -1,29 +1,47 @@
 import $ from 'jquery';
 
-$(() => {
-  $('.js-donut-chart__label').on('click', (e) => {
-    const $label = $(e.currentTarget);
-    const $chart = $label.closest('.js-donut-chart');
+const DonutChart = function DonutChart() {
+  this.init();
+};
 
-    const classLabelActive = 'donut-chart__label--active';
+DonutChart.prototype.init = function init() {
+  this.classLabelActive = 'donut-chart__label--active';
+  this.classCircleActive = 'donut-chart__circle--active';
 
-    $chart.find('.js-donut-chart__label').removeClass(classLabelActive);
-    $label.addClass(classLabelActive);
+  this.selectorLabel = '.js-donut-chart__label';
+  this.selectorDonutChart = '.js-donut-chart';
+  this.selectorCircle = '.js-donut-chart__circle';
+  this.selectorCount = '.js-donut-chart__count';
+  this.selectorCountValue = '.js-donut-chart__count-value';
 
-    const voteKey = $label.attr('data-vote-key');
-    const classCircleActive = 'donut-chart__circle--active';
+  this.addEventListeners();
+};
 
-    $chart.find('.js-donut-chart__circle').removeClass(classCircleActive);
-    $chart.find(`.donut-chart__circle--${voteKey}`).addClass(classCircleActive);
+DonutChart.prototype.addEventListeners = function addEventListeners() {
+  $(this.selectorLabel).on('click', this.handleLabelClick.bind(this));
+};
 
-    const count = parseInt($label.data('count'), 10);
+DonutChart.prototype.handleLabelClick = function handleLabelClick(e) {
+  const $label = $(e.currentTarget);
+  const $chart = $label.closest(this.selectorDonutChart);
 
-    $('.js-donut-chart__count-value').text(count);
+  $chart.find(this.selectorLabel).removeClass(this.classLabelActive);
+  $label.addClass(this.classLabelActive);
 
-    $('.js-donut-chart__count')
-      .removeClass()
-      .addClass('donut-chart__count')
-      .addClass('js-donut-chart__count')
-      .addClass(`donut-chart__count--${voteKey}`);
-  });
-});
+  const voteKey = $label.attr('data-vote-key');
+
+  $chart.find(this.selectorCircle).removeClass(this.classCircleActive);
+  $chart.find(`.donut-chart__circle--${voteKey}`).addClass(this.classCircleActive);
+
+  const count = parseInt($label.data('count'), 10);
+
+  $(this.selectorCountValue).text(count);
+
+  $(this.selectorCount)
+    .removeClass()
+    .addClass('donut-chart__count')
+    .addClass('js-donut-chart__count')
+    .addClass(`donut-chart__count--${voteKey}`);
+};
+
+$(() => new DonutChart());
