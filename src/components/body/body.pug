@@ -1,13 +1,13 @@
 include ../../components/logo/logo
 
 mixin body(options)
-  - var { theme, logo } = options || {}
-  - var blockModifiers = []
+  - const { theme, logo } = options || {};
+  - const blockModifiers = [];
 
   if theme
     - blockModifiers.push(theme);
 
-  - var f = require('../../utils/functions')
+  - const f = require('../../utils/functions');
 
   body(class=f.bem({b: 'body', m: blockModifiers}))
     if logo

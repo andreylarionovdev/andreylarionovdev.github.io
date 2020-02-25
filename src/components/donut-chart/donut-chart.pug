@@ -1,6 +1,6 @@
 mixin donut-chart(options)
   -
-    var {
+    const {
       id,
       votes = [
         {
@@ -30,22 +30,22 @@ mixin donut-chart(options)
       },
       width = 122,
       height = width,
-      strokeWidth = 4
-    } = options || {}
+      strokeWidth = 4,
+    } = options || {};
 
-  - var cx = width / 2
-  - var cy = width / 2
-  - var radius = cx - strokeWidth
-  - var circumreference = 2 * Math.PI * radius
+  - const cx = width / 2;
+  - const cy = width / 2;
+  - const radius = cx - strokeWidth;
+  - const circumreference = 2 * Math.PI * radius;
 
-  - var sortedValues = votes.sort((a, b) => (b.count - a.count))
-  - var total = sortedValues.reduce((acc, { count }) => acc + count, 0)
+  - const sortedValues = votes.sort((a, b) => (b.count - a.count));
+  - const total = sortedValues.reduce((acc, { count }) => acc + count, 0);
 
-  - var angleOffset = 90
+  - let angleOffset = 90;
 
-  - var f = require('../../utils/functions')
-  - var b = 'donut-chart'
-  - var js = 'js'
+  - const f = require('../../utils/functions');
+  - const b = 'donut-chart';
+  - const js = 'js';
 
   figure.donut-chart.js-donut-chart
     svg.donut-chart__chart(height=height width=width viewBox=[0, 0, width, height].join(' '))
@@ -55,10 +55,10 @@ mixin donut-chart(options)
             stop(offset='0%' stop-color=grad[0])
             stop(offset='100%' stop-color=grad[1])
       each item in sortedValues
-        - var label = item.label
-        - var strokeDashOffset = circumreference - (item.count / total) * circumreference
-        - var circleTransformValue = `rotate(${angleOffset}, ${cx}, ${cy})`
-        - angleOffset = (item.count / total) * 360 + angleOffset
+        - const label = item.label;
+        - const strokeDashOffset = circumreference - (item.count / total) * circumreference;
+        - const circleTransformValue = `rotate(${angleOffset}, ${cx}, ${cy})`;
+        - angleOffset = (item.count / total) * 360 + angleOffset;
         g
           circle(
             class=f.bem({b, e: 'circle', m: label, js})
@@ -78,8 +78,8 @@ mixin donut-chart(options)
 
     ul.donut-chart__labels
       each label, key in voteLabels
-        - var countSourceItem = sortedValues.find(obj => obj.label === key)
-        - var count = countSourceItem !== undefined ? countSourceItem.count : '0';
+        - const countSourceItem = sortedValues.find(obj => obj.label === key);
+        - const count = countSourceItem !== undefined ? countSourceItem.count : '0';
         li(class=f.bem({b, e: 'label', m: key, js}) data-vote-key=key data-count=count)
           span.donut-chart__bullet
           span.donut-chart__caption= label

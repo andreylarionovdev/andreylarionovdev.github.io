@@ -1,5 +1,5 @@
 mixin label(options)
-  - var { label, hint, _for } = options || {}
+  - const { label, hint, _for } = options || {};
 
   label.label(for=_for)
     h3.label__title= label

@@ -1,12 +1,12 @@
 mixin checkbox(options)
-  - var { id, label, hint, isChecked } = options || {}
+  - const { id, label, hint, isChecked } = options || {};
 
-  - var blockModifiers = []
+  - const blockModifiers = [];
 
   if hint
-    - blockModifiers.push('with-hint')
+    - blockModifiers.push('with-hint');
 
-  - var f = require('../../utils/functions')
+  - const f = require('../../utils/functions');
 
   div(class=f.bem({
     b: 'checkbox',

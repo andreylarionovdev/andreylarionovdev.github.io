@@ -1,15 +1,15 @@
 include ../checkbox/checkbox
 
 mixin checkbox-list-expandable(options)
-  - var { id, label, isExpanded, items = [] } = options || {}
+  - const { id, label, isExpanded, items = [] } = options || {};
 
-  - var blockModifiers = []
+  - const blockModifiers = [];
 
   if isExpanded
-    - blockModifiers.push('expanded')
+    - blockModifiers.push('expanded');
 
-  - var f = require('../../utils/functions')
-  - var js = 'js'
+  - const f = require('../../utils/functions');
+  - const js = 'js';
 
   div(id=id class=f.bem({
     b: 'checkbox-list-expandable',

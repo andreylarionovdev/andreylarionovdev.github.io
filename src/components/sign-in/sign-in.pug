@@ -2,7 +2,7 @@ include ../text-input/text-input
 include ../button/button
 
 mixin sign-in(options)
-  - var { method='POST', action='/'} = options || {}
+  - const { method='POST', action='/'} = options || {};
 
   form.sign-in(method=method action=action)
     h1.sign-in__title= 'Войти'
@@ -10,13 +10,13 @@ mixin sign-in(options)
       +text-input({
         id: 'sign-in_email',
         placeholder: 'Email',
-        type: 'email'
+        type: 'email',
       })
     .sign-in__text-input
       +text-input({
         id: 'sign-in_pass',
         placeholder: 'Пароль',
-        type: 'password'
+        type: 'password',
       })
     .sign-in__submit-button-group
       +button({
@@ -33,5 +33,5 @@ mixin sign-in(options)
           theme: 'transparent',
           caption: 'Создать',
           isFluid: true,
-          href: 'sign-up.html'
+          href: 'sign-up.html',
         })

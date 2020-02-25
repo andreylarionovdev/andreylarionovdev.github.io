@@ -1,9 +1,9 @@
 mixin rate-button(options)
-  - var { id, base, rate, name = id } = options || {}
+  - const { id, base, rate, name = id } = options || {};
 
   .rate-button(id=id)
-    - var n = base
+    - let n = base;
     while n > 0
       input.rate-button__input(id=id + n type='radio' name=name value=n checked=(n === rate))
       label.rate-button__label(for=id + n)= n
-      - n = n - 1
+      - n = n - 1;

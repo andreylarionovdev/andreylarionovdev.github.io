@@ -8,11 +8,11 @@ mixin room-details-page
   article.room-details-page
     figure.room-details-page__featured-images
       -
-        var featuredImages = [
+        const featuredImages = [
           './img/room-details-left.png',
           './img/room-details-top.png',
           './img/room-details-bottom.png',
-        ]
+        ];
       each image in featuredImages
         img.room-details-page__featured-image(src=image)
     .room-details-page__inner
@@ -24,17 +24,17 @@ mixin room-details-page
                 {
                   icon: 'mood',
                   title: 'Комфорт',
-                  hint: 'Шумопоглощающие стены'
+                  hint: 'Шумопоглощающие стены',
                 },
                 {
                   icon: 'location_city',
                   title: 'Удобство',
-                  hint: 'Окно в каждой из спален'
+                  hint: 'Окно в каждой из спален',
                 },
                 {
                   icon: 'whatshot',
                   title: 'Уют',
-                  hint: 'Номер оснащен камином'
+                  hint: 'Номер оснащен камином',
                 }
               ]
             ul.room-details-page__features-list
@@ -50,7 +50,7 @@ mixin room-details-page
             h2.room-details-page__feedbacks-title= 'Отзывы посетителей номера'
             span.room-details-page__feedbacks-counter= '2 отзыва'
           -
-            var feedbacks = [
+            const feedbacks = [
               {
                 author: {
                   name: 'Мурад Сарафанов',
@@ -89,8 +89,8 @@ mixin room-details-page
               items: [
                 {text: 'Нельзя с питомцами'},
                 {text: 'Без вечеринок и мероприятий'},
-                {text: 'Время прибытия &mdash; после 13:00, а выезд до 12:00'}
-              ]
+                {text: 'Время прибытия &mdash; после 13:00, а выезд до 12:00'},
+              ],
             })
         section.room-details-page__cancel
           h2.room-details-page__cancel-title= 'Отмена'
@@ -103,5 +103,5 @@ mixin room-details-page
             pricePerDay: 9990,
             discount: 2179,
             fee: 300,
-            feature: 'люкс'
+            feature: 'люкс',
           })

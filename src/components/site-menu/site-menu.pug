@@ -1,5 +1,5 @@
 mixin site-menu(options)
-  - var { theme, items } = options || {}
+  - const { theme, items } = options || {};
 
   ul.site-menu(class=`site-menu--${theme}`)
     each link in items

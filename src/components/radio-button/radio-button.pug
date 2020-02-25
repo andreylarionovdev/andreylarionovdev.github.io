@@ -1,5 +1,5 @@
 mixin radio-button(options)
-  - var { id, name, value, label, isChecked } = options || {}
+  - const { id, name, value, label, isChecked } = options || {};
 
   .radio-button
     input.radio-button__input(id=id type='radio' name=name value=value checked=isChecked)

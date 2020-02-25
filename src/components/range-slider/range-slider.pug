@@ -1,7 +1,7 @@
 include ../label/label
 
 mixin range-slider(options)
-  - const { label = 'range slider', value, name, min, max, from, to } = options
+  - const { label = 'range slider', value, name, min, max, from, to } = options || {};
 
   .range-slider.js-range-slider
     +label({label: label})

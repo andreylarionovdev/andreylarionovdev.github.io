@@ -1,26 +1,26 @@
 mixin text-input(options)
   -
-    var {
+    const {
       id,
       type = 'text',
       placeholder,
       value,
       withArrow,
-      isHovered
-    } = options || {}
+      isHovered,
+    } = options || {};
 
-  - var blockModifiers = []
+  - const blockModifiers = [];
 
   if withArrow
-    - blockModifiers.push('with-arrow')
+    - blockModifiers.push('with-arrow');
   if isHovered
-    - blockModifiers.push('hovered')
+    - blockModifiers.push('hovered');
 
-  - var f = require('../../utils/functions')
+  - const f = require('../../utils/functions')
 
   div(class=f.bem({
     b: 'text-input',
-    m: blockModifiers
+    m: blockModifiers,
   }))
     input.text-input__input(id=id type=type placeholder=placeholder value=value)
     button.text-input__submit-button

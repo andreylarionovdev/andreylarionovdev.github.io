@@ -3,7 +3,7 @@ include ../header/header
 include ../footer/footer
   
 mixin headers-footers-page
-  - var user = 'Cosmin Negoita'
+  - const user = 'Cosmin Negoita';
   -
     const menuItems = [
       {name: 'Home', href: '/change-me', active: true},
@@ -19,7 +19,7 @@ mixin headers-footers-page
       {name: 'Careers', href: '/change-me'},
       {name: 'News', href: '/change-me'},
       {name: 'Documentation', href: '/change-me'}
-    ]
+    ];
   -
     const menuButtons = [
       {
@@ -34,7 +34,7 @@ mixin headers-footers-page
         caption: 'Register',
         isSmall: true
       }
-    ]
+    ];
   article.headers-footers-page
     section.headers-footers-page__header
       +header({menuItems, menuButtons})

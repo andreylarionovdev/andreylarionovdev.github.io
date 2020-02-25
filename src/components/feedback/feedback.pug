@@ -1,19 +1,16 @@
 include ../like-button/like-button
 
 mixin feedback(options)
-  - var { author, date, text, favoritesCount, isFavorite } = options || {}
+  - const { author, date, text, favoritesCount, isFavorite } = options || {};
 
-  div.feedback
+  .feedback
     figure.feedback__author-picture-wrapper
       if author.image
-        img.feedback__author-picture(
-          src=author.image.src
-          alt=author.image.alt
-        )
-    div.feedback__header
+        img.feedback__author-picture(src=author.image.src alt=author.image.alt)
+    .feedback__header
       p.feedback__author-name= author.name
       p.feedback__date= date
-    div.feedback__like-button
+    .feedback__like-button
       +like-button({
         count: favoritesCount,
         isFavorite

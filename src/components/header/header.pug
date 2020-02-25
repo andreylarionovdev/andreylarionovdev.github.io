@@ -2,11 +2,11 @@ include ../logo/logo
 include ../button/button
 
 mixin header(options)
-  - var { user, menuItems, menuButtons } = options || {}
+  - const { user, menuItems, menuButtons } = options || {};
 
-  - var f = require('../../utils/functions')
-  - var b = 'header'
-  - var js = 'js'
+  - const f = require('../../utils/functions');
+  - const b = 'header';
+  - const js = 'js';
 
   header.header.js-header
     nav.header__inner
@@ -16,7 +16,7 @@ mixin header(options)
       ul(class=f.bem({b, e: 'navigation', js}))
         each item, _ in menuItems
           li.header__navigation-item
-            - var bemObj = {b, e: 'navigation-link'}
+            - const bemObj = {b, e: 'navigation-link'}
             if item.sub
               - bemObj.m = 'with-submenu'
             a(class=f.bem(bemObj) href=item.href)
@@ -34,5 +34,5 @@ mixin header(options)
                 theme: button.theme,
                 caption: button.caption,
                 isSmall: button.isSmall,
-                href: button.href
+                href: button.href,
               })

@@ -3,18 +3,18 @@ include ../dropdown/dropdown
 
 mixin datepicker-date-range(options)
   -
-    var mask = 'ДД.ММ.ГГГГ'
-    var {
+    const mask = 'ДД.ММ.ГГГГ'
+    const {
       id,
       fromLabel = 'Прибытие',
       from = mask,
       toLabel = 'Выезд',
-      to = mask
+      to = mask,
     } = options || {}
 
-    var f = require('../../utils/functions')
-    var b = 'datepicker-date-range'
-    var js = 'js'
+    const f = require('../../utils/functions')
+    const b = 'datepicker-date-range'
+    const js = 'js'
 
   div(class=f.bem({b, js}))
     div(class=f.bem({b, e: 'dropdown-group-from', js}))

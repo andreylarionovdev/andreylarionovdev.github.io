@@ -3,8 +3,8 @@ include ../dropdown/dropdown
 include ../datepicker-date-range/datepicker-date-range
 
 mixin room-book(options)
-  - var { roomNumber, pricePerDay, discount, fee, feature, method='POST', action='/' } = options || {}
-  - var f = require('../../utils/functions');
+  - const { roomNumber, pricePerDay, discount, fee, feature, method='POST', action='/' } = options || {};
+  - const f = require('../../utils/functions');
   form.room-book(method=method action=action)
     header.room-book__header
       .room-book__number
@@ -21,7 +21,7 @@ mixin room-book(options)
       +datepicker-date-range({
         id: 'room-book__check-in-out',
         from: '19.08.2019',
-        to: '23.08.2019'
+        to: '23.08.2019',
       })
 
     .room-book__guests-dropdown-group
@@ -34,12 +34,12 @@ mixin room-book(options)
           rows: [
             {count: 2, text: 'взрослые', name: 'adult'},
             {count: 1, text: 'дети', name: 'kids'},
-            {count: 0, text: 'младенцы', name: 'baby'}
-          ]
+            {count: 0, text: 'младенцы', name: 'baby'},
+          ],
         })
 
-    - const totalBruto = pricePerDay * 4
-    - const totalNetto = totalBruto - discount + fee
+    - const totalBruto = pricePerDay * 4;
+    - const totalNetto = totalBruto - discount + fee;
 
     .room-book__result-grid
       .room-book__result-grid-cell!= `${f.formatCurrency({value: pricePerDay})} x 4 суток`

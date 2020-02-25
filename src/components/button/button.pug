@@ -1,6 +1,6 @@
 mixin button(options)
   -
-    var {
+    const {
       theme,
       caption,
       type,
@@ -8,27 +8,27 @@ mixin button(options)
       isHovered,
       isFluid,
       isSmall,
-      withArrow
-    } = options || {}
+      withArrow,
+    } = options || {};
 
-  - var blockModifiers = [theme]
+  - const blockModifiers = [theme];
 
   if isHovered
-    - blockModifiers.push('hovered')
+    - blockModifiers.push('hovered');
   if isFluid
-    - blockModifiers.push('fluid')
+    - blockModifiers.push('fluid');
   if isSmall
-    - blockModifiers.push('small')
+    - blockModifiers.push('small');
   if withArrow
-    - blockModifiers.push('with-arrow')
+    - blockModifiers.push('with-arrow');
 
-  - var f = require('../../utils/functions')
+  - const f = require('../../utils/functions');
 
-  - var isButton = ['button', 'submit'].includes(type)
-  - var tag = 'a'
+  - const isButton = ['button', 'submit'].includes(type);
+  - let tag = 'a';
 
   if isButton
-    - tag = 'button'
+    - tag = 'button';
 
   #{tag}(class=f.bem({b: 'button', m: blockModifiers}) type=type href=href)
     .button__inner

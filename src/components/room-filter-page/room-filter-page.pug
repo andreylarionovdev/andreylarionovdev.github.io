@@ -14,18 +14,18 @@ mixin room-filter-page
           .room-filter-page__sidebar-label
             +label({
               label: 'Даты пребывания в отеле',
-              _for: 'date-dropdown'
+              _for: 'date-dropdown',
             })
           .room-filter-page__date-dropdown
             +dropdown({
               id: 'date-dropdown',
-              value: '19 авг. - 23 авг.'
+              value: '19 авг. - 23 авг.',
             })
         .room-filter-page__guests-dropdown-group
           .room-filter-page__sidebar-label
             +label({
               label: 'Гости',
-              _for: 'guests-dropdown'
+              _for: 'guests-dropdown',
             })
           .room-filter-page__guests-dropdown
             +dropdown({
@@ -34,8 +34,8 @@ mixin room-filter-page
               rows: [
                 {count: 2, text: 'взрослые', name: 'adult'},
                 {count: 0, text: 'дети', name: 'kids'},
-                {count: 1, text: 'младенцы', name: 'baby'}
-              ]
+                {count: 1, text: 'младенцы', name: 'baby'},
+              ],
             })
         .room-filter-page__price-slider-group
           +range-slider({
@@ -54,18 +54,18 @@ mixin room-filter-page
             items: [
               {
                 id: 'smoke-allowed',
-                label: 'Можно курить'
+                label: 'Можно курить',
               },
               {
                 id: 'pets-allowed',
                 label: 'Можно с питомцами',
-                isChecked: true
+                isChecked: true,
               },
               {
                 id: 'guests-allowed',
                 label: 'Можно пригласить гостей (до 10 человек)',
-                isChecked: true
-              }
+                isChecked: true,
+              },
             ]
           })
         .room-filter-page__rich-checkbox-group
@@ -75,20 +75,20 @@ mixin room-filter-page
               {
                 id: 'wide-hall-checkbox',
                 label: 'Широкий коридор',
-                hint: 'Ширина коридоров в номере не&nbsp;менее 91 см.'
+                hint: 'Ширина коридоров в номере не&nbsp;менее 91 см.',
               },
               {
                 id: 'disable-assistant-checkbox',
                 label: 'Помощник для инвалидов',
-                hint: 'На 1 этаже вас встретит специалист и проводит до номера.'
+                hint: 'На 1 этаже вас встретит специалист и проводит до номера.',
               }
-            ]
+            ],
           })
         .room-filter-page__feature-dropdown-group
           .room-filter-page__sidebar-label
             +label({
               label: 'Удобства номера',
-              _for: 'feature-dropdown'
+              _for: 'feature-dropdown',
             })
           .room-filter-page__feature-dropdown
             +dropdown({
@@ -97,8 +97,8 @@ mixin room-filter-page
               rows: [
                 {count: 2, text: 'спальни', name: 'bedroom'},
                 {count: 2, text: 'кровати', name: 'bed'},
-                {count: 0, text: 'ванные комнаты', name: 'bathroom'}
-              ]
+                {count: 0, text: 'ванные комнаты', name: 'bathroom'},
+              ],
             })
         .room-filter-page__additional-checkbox-list-expandable-group
           +checkbox-list-expandable({
@@ -112,14 +112,14 @@ mixin room-filter-page
               {name: 'tv_1', label: 'Телевизор'},
               {name: 'shampoo_1', label: 'Шампунь'},
               {name: 'tv_2', label: 'Телевизор'},
-              {name: 'shampoo_2', label: 'Шампунь'}
-            ]
+              {name: 'shampoo_2', label: 'Шампунь'},
+            ],
           })
       section.room-filter-page__thumbnail-list-wrapper
         h1.room-filter-page__thumbnail-list-title= 'Номера, которые мы для вас подобрали'
         ul.room-filter-page__thumbnail-list
           -
-            var searchResult = [
+            const searchResult = [
               {
                 number: 888,
                 pricePerDay: 9990,
@@ -130,7 +130,7 @@ mixin room-filter-page
                   src: './img/room-thumb-1.png'
                 }),
                 feature: 'люкс',
-                focus: true
+                focus: true,
               },
               {
                 number: 840,
@@ -139,8 +139,8 @@ mixin room-filter-page
                 rate: 4,
                 images: new Array(4).fill({
                   alt: 'Room 840',
-                  src: './img/room-thumb-2.png'
-                })
+                  src: './img/room-thumb-2.png',
+                }),
               },
               {
                 number: 980,
@@ -149,9 +149,9 @@ mixin room-filter-page
                 rate: 3,
                 images: new Array(4).fill({
                   alt: 'Room 980',
-                  src: './img/room-thumb-3.png'
+                  src: './img/room-thumb-3.png',
                 }),
-                feature: 'люкс'
+                feature: 'люкс',
               },
               {
                 number: 856,
@@ -160,8 +160,8 @@ mixin room-filter-page
                 rate: 5,
                 images: new Array(4).fill({
                   alt: 'Room 856',
-                  src: './img/room-thumb-4.png'
-                })
+                  src: './img/room-thumb-4.png',
+                }),
               },
               {
                 number: 740,
@@ -170,8 +170,8 @@ mixin room-filter-page
                 rate: 4,
                 images: new Array(4).fill({
                   alt: 'Room 740',
-                  src: './img/room-thumb-5.png'
-                })
+                  src: './img/room-thumb-5.png',
+                }),
               },
               {
                 number: 982,
@@ -180,8 +180,8 @@ mixin room-filter-page
                 rate: 3,
                 images: new Array(4).fill({
                   alt: 'Room 982',
-                  src: './img/room-thumb-6.png'
-                })
+                  src: './img/room-thumb-6.png',
+                }),
               },
               {
                 number: 678,
@@ -190,8 +190,8 @@ mixin room-filter-page
                 rate: 5,
                 images: new Array(4).fill({
                   alt: 'Room 678',
-                  src: './img/room-thumb-7.png'
-                })
+                  src: './img/room-thumb-7.png',
+                }),
               },
               {
                 number: 450,
@@ -200,8 +200,8 @@ mixin room-filter-page
                 rate: 4,
                 images: new Array(4).fill({
                   alt: 'Room 450',
-                  src: './img/room-thumb-8.png'
-                })
+                  src: './img/room-thumb-8.png',
+                }),
               },
               {
                 number: 350,
@@ -210,8 +210,8 @@ mixin room-filter-page
                 rate: 3,
                 images: new Array(4).fill({
                   alt: 'Room 350',
-                  src: './img/room-thumb-9.png'
-                })
+                  src: './img/room-thumb-9.png',
+                }),
               },
               {
                 number: 666,
@@ -220,8 +220,8 @@ mixin room-filter-page
                 rate: 5,
                 images: new Array(4).fill({
                   alt: 'Room 666',
-                  src: './img/room-thumb-10.png'
-                })
+                  src: './img/room-thumb-10.png',
+                }),
               },
               {
                 number: 444,
@@ -230,8 +230,8 @@ mixin room-filter-page
                 rate: 3,
                 images: new Array(4).fill({
                   alt: 'Room 444',
-                  src: './img/room-thumb-11.png'
-                })
+                  src: './img/room-thumb-11.png',
+                }),
               },
               {
                 number: 352,
@@ -240,8 +240,8 @@ mixin room-filter-page
                 rate: 3,
                 images: new Array(4).fill({
                   alt: 'Room 352',
-                  src: './img/room-thumb-12.png'
-                })
+                  src: './img/room-thumb-12.png',
+                }),
               }
             ]
           each room, i in searchResult
@@ -254,11 +254,11 @@ mixin room-filter-page
                 images: room.images,
                 feature: room.feature,
                 focus: room.focus,
-                href: 'room-details.html'
+                href: 'room-details.html',
               })
         section.room-filter-page__paginator
           +paginator({
             source: JSON.stringify([...Array(180).keys()]),
             pageSize: 12,
-            pageRange: 1
+            pageRange: 1,
           })

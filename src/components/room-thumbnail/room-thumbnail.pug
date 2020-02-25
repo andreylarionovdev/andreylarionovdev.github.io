@@ -2,7 +2,7 @@ include ../rate-button/rate-button
 
 mixin room-thumbnail(options)
   -
-    var {
+    const {
       roomNumber,
       href='change-me',
       pricePerDay,
@@ -10,41 +10,41 @@ mixin room-thumbnail(options)
       rate,
       images,
       feature,
-      focus
-    } = options || {}
+      focus,
+    } = options || {};
 
-    var blockModifiers = []
-    var f = require('../../utils/functions')
-    var b = 'room-thumbnail'
+    const blockModifiers = [];
+    const f = require('../../utils/functions');
+    const b = 'room-thumbnail';
 
   if focus
-    - blockModifiers.push('focused')
+    - blockModifiers.push('focused');
 
   div(class=f.bem({
     b,
-    m: blockModifiers
+    m: blockModifiers,
   }))
     figure.room-thumbnail__carousel
       each image, inx in images
-        - var bemObj = {b, e: 'carousel-image'}
+        - const bemObj = {b, e: 'carousel-image'}
         if inx === 0
           - bemObj.m = 'active'
         img(class=f.bem(bemObj) src=image.src alt=image.alt)
       button(class=f.bem({
         b,
         e: 'carousel-control',
-        m: 'prev'
+        m: 'prev',
       }))
         span.material-icons= 'keyboard_arrow_left'
       button(class=f.bem({
         b,
         e: 'carousel-control',
-        m: 'next'
+        m: 'next',
       }))
         span.material-icons= 'keyboard_arrow_left'
       ul.room-thumbnail__carousel-indicators
         each _, inx in images
-          - var bemObj = {b, e: 'carousel-indicator'}
+          - const bemObj = {b, e: 'carousel-indicator'};
           if inx === 0
             - bemObj.m = 'active'
           li(class=f.bem(bemObj))
@@ -62,7 +62,7 @@ mixin room-thumbnail(options)
         +rate-button({
           id: `${roomNumber}__rate`,
           base: 5,
-          rate
+          rate,
         })
       p.room-thumbnail__feedback-counter
         b= feedbackCounter

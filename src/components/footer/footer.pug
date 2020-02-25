@@ -4,7 +4,7 @@ include ../text-input/text-input
 
 mixin footer(options)
   -
-    var {
+    const {
       theme,
       menus = [
         {
@@ -38,19 +38,19 @@ mixin footer(options)
       rightDescription = 'Receive our latest news and promotions in your inbox!',
       rightTitle = 'Subscribe&nbsp;to&nbsp;our&nbsp;newsletter',
       rightPlaceholder = 'Your email address',
-      copyright = 'Copyright © 2018 Toxin UI Kit. All rights reserved.'
-    } = options || {}
+      copyright = 'Copyright © 2018 Toxin UI Kit. All rights reserved.',
+    } = options || {};
 
-  - var blockModifiers = []
+  - const blockModifiers = [];
 
   if theme
-    - blockModifiers.push(theme)
+    - blockModifiers.push(theme);
 
-  - var f = require('../../utils/functions')
+  - const f = require('../../utils/functions');
 
   footer(class=f.bem({
     b: 'footer',
-    m: blockModifiers
+    m: blockModifiers,
   }))
     hr.footer__horizontal-divider
     .footer__inner
@@ -64,7 +64,7 @@ mixin footer(options)
             +footer-menu({
               title: menu.title,
               menuItems: menu.links,
-              center: menu.center
+              center: menu.center,
             })
       form.footer__subscribe-form(method='POST' action='/')
         h3.footer__subscribe-form-title!= rightTitle
@@ -74,7 +74,7 @@ mixin footer(options)
             id: 'subscribe',
             placeholder: rightPlaceholder,
             withArrow: true,
-            type: 'email'
+            type: 'email',
           })
       p.footer__copyright= copyright
       ul.footer__social-list

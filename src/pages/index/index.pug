@@ -3,7 +3,7 @@ extends ../../layouts/base
 include ../../components/site-menu/site-menu
 
 block vars
-  - var title = 'Main'
+  - const title = 'Main';
 block content
   +site-menu({
     theme: 'purple',
@@ -11,8 +11,8 @@ block content
       {text: 'Colors & Type', href: 'colors-type.html'},
       {text: 'Form elements', href: 'form-elements.html'},
       {text: 'Cards', href: 'cards.html'},
-      {text: 'Headers & Footers', href: 'headers-footers.html'}
-    ]
+      {text: 'Headers & Footers', href: 'headers-footers.html'},
+    ],
   })
   +site-menu({
     theme: 'green',
@@ -21,6 +21,6 @@ block content
       {text: 'Search room', href: 'room-filter.html'},
       {text: 'Room details', href: 'room-details.html'},
       {text: 'Registration', href: 'sign-up.html'},
-      {text: 'Sign in', href: 'sign-in.html'}
-    ]
+      {text: 'Sign in', href: 'sign-in.html'},
+    ],
   })

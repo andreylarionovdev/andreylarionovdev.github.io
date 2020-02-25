@@ -1,5 +1,5 @@
 mixin toggle-button(options)
-  - var { id, label, isChecked } = options || {}
+  - const { id, label, isChecked } = options || {};
 
   .toggle-button
     input.toggle-button__input(id=id type='checkbox' checked=isChecked)
