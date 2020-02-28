@@ -22,8 +22,8 @@ DatepickerDateRange.prototype.init = function init() {
   this.selectorInputTo = '.js-datepicker-date-range__dropdown-group-to input';
   this.$inputTo = null;
 
-  this.selectorClearButton = '.js-datepicker__clear-button';
-  this.selectorApplyButton = '.js-datepicker__apply-button';
+  this.selectorClearButton = '[data-action="clear"]';
+  this.selectorApplyButton = '[data-action="apply"]';
 
   $(this.selectorDatepickerDateRange).each((i, o) => {
     this.initInstance($(o));
@@ -125,8 +125,8 @@ DatepickerDateRange.prototype.update = function update() {
 };
 
 DatepickerDateRange.prototype.addButtons = function addButtons($dpElement) {
-  const $clearBtn = $('<button class="datepicker__clear-button js-datepicker__clear-button">Очистить</button>');
-  const $applyBtn = $('<button class="datepicker__apply-button js-datepicker__apply-button">Применить</button>');
+  const $clearBtn = this.createButton('clear', 'Очистить', true);
+  const $applyBtn = this.createButton('apply', 'Применить');
   if ($dpElement.find(this.selectorClearButton).length === 0) {
     $clearBtn.on('click', this.handleClearButtonClick.bind(this));
   }
@@ -138,6 +138,16 @@ DatepickerDateRange.prototype.addButtons = function addButtons($dpElement) {
     $footer.append($clearBtn).append($applyBtn);
     $dpElement.append($footer);
   }
+};
+
+DatepickerDateRange.prototype.createButton = function createButton(action, caption, hovered) {
+  const hoveredClass = hovered ? 'button_hovered' : '';
+  const template = `<button class="button button_theme_textual ${hoveredClass}" type="button" data-action="${action}">
+                      <div class="button__inner">
+                        <span class="button__caption">${caption}</span>
+                      </div>
+                    </button>`;
+  return $(template);
 };
 
 DatepickerDateRange.prototype.handleClearButtonClick = function handleClearButtonClick() {

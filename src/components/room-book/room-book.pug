@@ -4,7 +4,9 @@ include ../datepicker-date-range/datepicker-date-range
 
 mixin room-book(options)
   - const { roomNumber, pricePerDay, discount, fee, feature, method='POST', action='/' } = options || {};
+
   - const f = require('../../utils/functions');
+
   form.room-book(method=method action=action)
     header.room-book__header
       .room-book__number
@@ -43,18 +45,18 @@ mixin room-book(options)
 
     .room-book__result-grid
       .room-book__result-grid-cell!= `${f.formatCurrency({value: pricePerDay})} x 4 суток`
-      .room-book__result-grid-cell.room-book__result-grid-cell--with-info-icon
-      .room-book__result-grid-cell.room-book__result-grid-cell--with-sum!= f.formatCurrency({value: totalBruto})
+      .room-book__result-grid-cell.room-book__result-grid-cell_content_with-info-icon
+      .room-book__result-grid-cell.room-book__result-grid-cell_content_with-sum!= f.formatCurrency({value: totalBruto})
 
       .room-book__result-grid-cell!= `Сбор за услуги: скидка ${f.formatCurrency({value: discount})}`
-      .room-book__result-grid-cell.room-book__result-grid-cell--with-info-icon
+      .room-book__result-grid-cell.room-book__result-grid-cell_content_with-info-icon
         span(title='change me').room-book__info-icon.material-icons= 'info_outline'
-      .room-book__result-grid-cell.room-book__result-grid-cell--with-sum= '0₽'
+      .room-book__result-grid-cell.room-book__result-grid-cell_content_with-sum= '0₽'
 
       .room-book__result-grid-cell= 'Сбор за дополнительные услуги'
-      .room-book__result-grid-cell.room-book__result-grid-cell--with-info-icon
+      .room-book__result-grid-cell.room-book__result-grid-cell_content_with-info-icon
         span(title='change me').room-book__info-icon.material-icons= 'info_outline'
-      .room-book__result-grid-cell.room-book__result-grid-cell--with-sum!= f.formatCurrency({value: fee})
+      .room-book__result-grid-cell.room-book__result-grid-cell_content_with-sum!= f.formatCurrency({value: fee})
 
     p.room-book__total-row
       span.room-book__total-header= 'Итого'
@@ -63,9 +65,8 @@ mixin room-book(options)
 
     footer.room-book__submit-button-group
       +button({
-        theme: 'default',
+        theme: 'with-arrow',
         type: 'submit',
         caption: 'Забронировать',
-        withArrow: true,
         isFluid: true,
       })

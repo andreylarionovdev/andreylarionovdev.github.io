@@ -7,8 +7,8 @@ const Paginator = function Paginator() {
 
 Paginator.prototype.init = function init() {
   this.classPrefix = 'paginator';
-  this.activeClassName = 'paginator-page--active';
-  this.disableClassName = 'paginator-page--disabled';
+  this.activeClassName = 'paginator-page_active';
+  this.disableClassName = 'paginator-page_disabled';
   this.ulClassName = 'paginator__ul';
 
   this.selectorPaginator = '.js-paginator';

@@ -29,7 +29,7 @@
     display: none;
     width: 100%;
     z-index: 0;
-    &--active {
+    &_active {
       display: block;
     }
   }
@@ -46,10 +46,12 @@
     opacity: 0;
     transition: opacity .25s ease-in-out;
     z-index: 1;
-    &--next {
-      grid-column: 3 / 4;
-      grid-row: 1 / 1;
-      transform: matrix(-1, 0, 0, 1, 0, 0);
+    &_type {
+      &_next {
+        grid-column: 3 / 4;
+        grid-row: 1 / 1;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+      }
     }
   }
   &__carousel-indicators {
@@ -68,7 +70,7 @@
     border-radius: 0.25rem;
     border: 0.0625rem solid white;
     box-shadow: 0 0.3125rem 0.3125rem rgba(31, 32, 65, 0.3);
-    &--active {
+    &_active {
       background-color: white;
     }
   }
@@ -132,7 +134,7 @@
     color: $color-dark-50;
     line-height: 1.375rem;
   }
-  &--focused {
+  &_focused {
     #{$blockClass}__carousel-control {
       opacity: 1;
     }

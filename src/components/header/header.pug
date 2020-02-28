@@ -18,21 +18,24 @@ mixin header(options)
           li.header__navigation-item
             - const bemObj = {b, e: 'navigation-link'}
             if item.sub
-              - bemObj.m = 'with-submenu'
+              - bemObj.m = [{ theme: 'with-submenu' }]
             a(class=f.bem(bemObj) href=item.href)
               if item.active
                 b= item.name
               else
                 = item.name
-        if user
-          li.header__navigation-item.header__navigation-item--with-username
-            a.header__navigation-link= user
-        else
-          each button, _ in menuButtons
-            li(class=f.bem({b: 'header', e: 'navigation-item', m: `with-${button.name}`}))
-              +button({
-                theme: button.theme,
-                caption: button.caption,
-                isSmall: button.isSmall,
-                href: button.href,
-              })
+        li.header__navigation-item
+          if user
+            ul.header__user-navigation_authenticated
+              li.header__navigation-item
+                a.header__navigation-link= user
+          else
+            ul.header__user-navigation
+              each button, _ in menuButtons
+                li.header__navigation-item
+                  +button({
+                    theme: button.theme,
+                    caption: button.caption,
+                    size: button.size,
+                    href: button.href,
+                  })

@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Toxin website meta description">
+    <meta name="keywords" content="Toxin website meta keywords">
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
@@ -11,33 +13,37 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>Toxin booking | Landing page</title>
-  <link href="landing.ec196209dc48e455eb58.css" rel="stylesheet"></head>
+  <link href="landing.f7428cdf0636d6dcee8c.css" rel="stylesheet"></head>
   <body class="body">
     <header class="header js-header">
       <nav class="header__inner">
         <button class="header__navigation-toggle js-header__navigation-toggle material-icons">menu</button>
-        <figure class="header__logo"><a class="logo logo--with-text" href="./index.html"></a>
+        <figure class="header__logo"><a class="logo logo_with-text" href="./index.html"></a>
         </figure>
         <ul class="header__navigation js-header__navigation">
           <li class="header__navigation-item"><a class="header__navigation-link" href="/change-me">О нас</a>
           </li>
-          <li class="header__navigation-item"><a class="header__navigation-link header__navigation-link--with-submenu">Услуги</a>
+          <li class="header__navigation-item"><a class="header__navigation-link header__navigation-link_theme_with-submenu">Услуги</a>
           </li>
           <li class="header__navigation-item"><a class="header__navigation-link" href="/change-me">Вакансии</a>
           </li>
           <li class="header__navigation-item"><a class="header__navigation-link" href="/change-me">Новости</a>
           </li>
-          <li class="header__navigation-item"><a class="header__navigation-link header__navigation-link--with-submenu">Соглашения</a>
+          <li class="header__navigation-item"><a class="header__navigation-link header__navigation-link_theme_with-submenu">Соглашения</a>
           </li>
-          <li class="header__navigation-item header__navigation-item--with-sign-in-btn">
-            <a class="button button--transparent button--small" href="sign-in.html">
-              <div class="button__inner"><span class="button__caption">Войти</span><span class="button__arrow material-icons">arrow_forward</span></div>
-            </a>
-          </li>
-          <li class="header__navigation-item header__navigation-item--with-sign-up-btn">
-            <a class="button button--default button--small" href="sign-up.html">
-              <div class="button__inner"><span class="button__caption">Зарегистрироваться</span><span class="button__arrow material-icons">arrow_forward</span></div>
-            </a>
+          <li class="header__navigation-item">
+            <ul class="header__user-navigation">
+              <li class="header__navigation-item">
+                <a class="button button_theme_transparent button_size_small" href="sign-in.html">
+                  <div class="button__inner"><span class="button__caption">Войти</span><span class="button__arrow material-icons">arrow_forward</span></div>
+                </a>
+              </li>
+              <li class="header__navigation-item">
+                <a class="button button_theme_default button_size_small" href="sign-up.html">
+                  <div class="button__inner"><span class="button__caption">Зарегистрироваться</span><span class="button__arrow material-icons">arrow_forward</span></div>
+                </a>
+              </li>
+            </ul>
           </li>
         </ul>
       </nav>
@@ -57,7 +63,7 @@
                       </label>
                     </div>
                     <div class="datepicker-date-range__dropdown js-datepicker-date-range__dropdown">
-                      <div class="dropdown js-dropdown" id="undefined__check-in-out__from-date">
+                      <div class="dropdown js-dropdown" id="room-search__check-in-out__from-date">
                         <label class="dropdown__toggle js-dropdown__toggle"><span class="dropdown__text js-dropdown__text">ДД.ММ.ГГГГ</span>
                           <button class="dropdown__arrow-button material-icons">keyboard_arrow_down</button>
                           <input class="dropdown__data-input js-dropdown__data-input" type="text" value="ДД.ММ.ГГГГ">
@@ -72,7 +78,7 @@
                       </label>
                     </div>
                     <div class="datepicker-date-range__dropdown js-datepicker-date-range__dropdown">
-                      <div class="dropdown js-dropdown" id="undefined__check-in-out__to-date">
+                      <div class="dropdown js-dropdown" id="room-search__check-in-out__to-date">
                         <label class="dropdown__toggle js-dropdown__toggle"><span class="dropdown__text js-dropdown__text">ДД.ММ.ГГГГ</span>
                           <button class="dropdown__arrow-button material-icons">keyboard_arrow_down</button>
                           <input class="dropdown__data-input js-dropdown__data-input" type="text" value="ДД.ММ.ГГГГ">
@@ -95,14 +101,14 @@
                       <input class="dropdown__data-input js-dropdown__data-input" type="text" value="Сколько гостей">
                     </label>
                     <ul class="dropdown__menu js-dropdown__menu" style="z-index:9;">
-                      <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">взрослые</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn dropdown__change-count-btn--disabled js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">0</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
-                      <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">дети</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn dropdown__change-count-btn--disabled js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">0</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
-                      <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">младенцы</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn dropdown__change-count-btn--disabled js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">0</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
+                      <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">взрослые</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn dropdown__change-count-btn_disabled js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">0</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
+                      <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">дети</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn dropdown__change-count-btn_disabled js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">0</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
+                      <li class="dropdown__menu-item js-dropdown__menu-item"><span class="dropdown__item-name">младенцы</span><span class="dropdown__count-buttons"><span class="dropdown__change-count-btn dropdown__change-count-btn_disabled js-dropdown__change-count-btn" data-op="-">-</span><span class="dropdown__count js-dropdown__count">0</span><span class="dropdown__change-count-btn js-dropdown__change-count-btn" data-op="+">+</span></span></li>
                       <li class="dropdown__footer-buttons"><span class="dropdown__clear-button js-dropdown__clear-button">
-                          <button class="button button--textual button--hovered" type="button">
+                          <button class="button button_theme_textual button_hovered" type="button">
                             <div class="button__inner"><span class="button__caption">очистить</span><span class="button__arrow material-icons">arrow_forward</span></div>
                           </button></span><span class="dropdown__apply-button js-dropdown__apply-button">
-                          <button class="button button--textual" type="button">
+                          <button class="button button_theme_textual" type="button">
                             <div class="button__inner"><span class="button__caption">применить</span><span class="button__arrow material-icons">arrow_forward</span></div>
                           </button></span></li>
                     </ul>
@@ -110,7 +116,7 @@
                 </div>
               </div>
               <div class="room-search__submit-button-group">
-                <a class="button button--default button--fluid button--with-arrow" href="room-filter.html">
+                <a class="button button_theme_with-arrow button_fluid" href="room-filter.html">
                   <div class="button__inner"><span class="button__caption">Подобрать номер</span><span class="button__arrow material-icons">arrow_forward</span></div>
                 </a>
               </div>
@@ -125,7 +131,7 @@
       <hr class="footer__horizontal-divider">
       <div class="footer__inner">
         <div class="footer__header">
-          <figure class="footer__logo"><a class="logo logo--with-text" href="./index.html"></a>
+          <figure class="footer__logo"><a class="logo logo_with-text" href="./index.html"></a>
           </figure>
           <p class="footer__description">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
         </div>
@@ -142,7 +148,7 @@
             </div>
           </section>
           <section class="footer__navigation-section">
-            <div class="footer-menu footer-menu--center">
+            <div class="footer-menu footer-menu_middle">
               <h3 class="footer-menu__title">О нас</h3>
               <ul class="footer-menu__list">
                 <li class="footer-menu__item"><a class="footer-menu__link" href="/change-me">О сервисе</a></li>
@@ -167,7 +173,7 @@
           <h3 class="footer__subscribe-form-title">Подписка</h3>
           <p class="footer__subscribe-form-description">Получайте специальные предложения и новости сервиса</p>
           <div class="footer__subscribe-form-input-group">
-            <div class="text-input text-input--with-arrow">
+            <div class="text-input text-input_theme_with-button">
               <input class="text-input__input" id="subscribe" type="email" placeholder="Email">
               <button class="text-input__submit-button"><span class="text-input__arrow material-icons">arrow_forward</span></button>
             </div>
@@ -175,11 +181,11 @@
         </form>
         <p class="footer__copyright">Copyright © 2018 Toxin отель. Все права зачищены.</p>
         <ul class="footer__social-list">
-          <li class="footer__social-list-item"><a class="footer__social-link footer__social-link--tw" href="/change-me"></a></li>
-          <li class="footer__social-list-item"><a class="footer__social-link footer__social-link--fb" href="/change-me"></a></li>
-          <li class="footer__social-list-item"><a class="footer__social-link footer__social-link--ig" href="/change-me"></a></li>
+          <li class="footer__social-list-item"><a class="footer__social-link footer__social-link_theme_tw" href="/change-me"></a></li>
+          <li class="footer__social-list-item"><a class="footer__social-link footer__social-link_theme_fb" href="/change-me"></a></li>
+          <li class="footer__social-list-item"><a class="footer__social-link footer__social-link_theme_ig" href="/change-me"></a></li>
         </ul>
       </div>
     </footer>
-  <script type="text/javascript" src="landing.ec196209dc48e455eb58.js"></script></body>
+  <script type="text/javascript" src="landing.f7428cdf0636d6dcee8c.js"></script></body>
 </html>

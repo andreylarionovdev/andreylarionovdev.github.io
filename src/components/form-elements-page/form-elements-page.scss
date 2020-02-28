@@ -19,32 +19,13 @@
 @import '../feedback/feedback.scss';
 
 .form-elements-page {
+  $blockClass: &;
   @include inner;
   padding: 8.9375rem 0 8.25rem 0;
   font-family: Montserrat, sans-serif;
 
-  &__top {
-    margin-bottom: 5rem;
-    grid-template-columns: 27.63% 10.88% 27.63% 6.2176% 27.63%;
-  }
-
-  &__dropdown-states {
-    margin-bottom: 2.5625rem;
-    grid-template-columns: 22.95% 15.62% 27.61% 6.21% 27.61%;
-    .grid-column {
-      min-height: 16.625rem;
-    }
-  }
-
-  &__rich-lists {
-    grid-template-columns: 22.95% 15.62% 27.61% 6.21% 27.61%;
-  }
-
-  &__bottom {
-    grid-template-columns: 22.95% 15.62% 61.43%;
-  }
-
-  .row {
+  &__section,
+  &__row {
     display: grid;
     @media (max-width: $screen-md-max) {
       grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
@@ -53,10 +34,29 @@
     @media (max-width: $screen-xs-max) {
       grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
     }
-    .grid-column-gap {
-      @media (max-width: $screen-md-max) {
-        display: none;
-      }
+  }
+
+  &__section {
+    &:first-child {
+      margin-bottom: 5rem;
+      grid-template-columns: 27.63% 10.88% 27.63% 6.2176% 27.63%;
+    }
+    &:nth-child(2) {
+      margin-bottom: 2.5625rem;
+      grid-template-columns: 22.95% 15.62% 27.61% 6.21% 27.61%;
+      min-height: 16.625rem;
+    }
+    &:nth-child(3) {
+      grid-template-columns: 22.95% 15.62% 27.61% 6.21% 27.61%;
+    }
+    &:nth-child(4) {
+      grid-template-columns: 22.95% 15.62% 61.43%;
+    }
+  }
+
+  &__section-column-gap {
+    @media (max-width: $screen-md-max) {
+      display: none;
     }
   }
 
@@ -66,11 +66,13 @@
     .label {
       margin-bottom: 0.3125rem;
     }
-    &--masked {
-      margin-bottom: 2.5rem;
-    }
-    &--with-submit {
-      padding-right: 3.375rem;
+    &_theme {
+      &_with-mask {
+        margin-bottom: 2.5rem;
+      }
+      &_with-submit {
+        padding-right: 3.375rem;
+      }
     }
   }
   &__dropdown-group {
@@ -78,14 +80,16 @@
     .label {
       margin-bottom: 0.3125rem;
     }
-    &--datepicker-date-range,
-    &--date-filter {
-      margin-bottom: 2.5625rem;
+    &_theme {
+      &_datepicker-date-range,
+      &_date-filter {
+        margin-bottom: 2.5625rem;
+      }
+      &_date-filter {
+        padding-right: 3.375rem;
+      }
     }
-    &--date-filter {
-      padding-right: 3.375rem;
-    }
-    &--collapsed {
+    &_collapsed {
       margin-bottom: 1.25rem;
     }
   }
@@ -137,7 +141,7 @@
     .label {
       margin-bottom: 1rem;
     }
-    .row {
+    #{$blockClass}__row {
       display: flex;
       margin-bottom: 1.875rem;
     }
@@ -163,10 +167,8 @@
     }
   }
   &__checkbox-list-expandable-group {
-    &--collapsed {
-      margin-bottom: 1.3125rem;
-    }
-    &--expanded {
+    margin-bottom: 1.3125rem;
+    &_expanded {
       margin-bottom: 0.6875rem;
     }
   }

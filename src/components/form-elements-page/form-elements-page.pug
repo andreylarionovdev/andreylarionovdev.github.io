@@ -17,52 +17,48 @@ include ../feedback/feedback
   
 mixin form-elements-page
   .form-elements-page
-    section.row.form-elements-page__top
-      .grid-column
-        article.form-elements-page__input-group
-          .form-elements-page__label
-            +label({
-              label: 'text field',
-              hint: 'default'
-            })
+    section.form-elements-page__section
+      .form-elements-page__section-column
+        .form-elements-page__input-group
+          +label({
+            label: 'text field',
+            hint: 'default'
+          })
           +text-input({
             id: 'input-email',
             placeholder: 'Email',
             type: 'email'
           })
-        article.form-elements-page__input-group.form-elements-page__input-group--hovered
-          .form-elements-page__label
-            +label({
-              label: 'text field',
-              hint: 'hover / focus'
-            })
+        .form-elements-page__input-group.form-elements-page__input-group_hovered
+          +label({
+            label: 'text field',
+            hint: 'hover / focus'
+          })
           +text-input({
             id: 'input-focused-hovered',
             placeholder: 'Some text',
             value: 'This is pretty awesome',
             isHovered: true
           })
-        article.form-elements-page__dropdown-group
-          .form-elements-page__label
-            +label({
-              label: 'dropdown',
-              hint: 'default'
-            })
+        .form-elements-page__dropdown-group
+          +label({
+            label: 'dropdown',
+            hint: 'default'
+          })
           +dropdown({
             id: 'default-dropdown',
             value: 'Сколько гостей'
           })
-        article.form-elements-page__input-group.form-elements-page__input-group--masked
-          .form-elements-page__label
-            +label({
-              label: 'masked text field',
-              hint: 'default'
-            })
+        .form-elements-page__input-group.form-elements-page__input-group_theme_with-mask
+          +label({
+            label: 'masked text field',
+            hint: 'default'
+          })
           +text-input({
             id: 'input-with-mask',
             placeholder: 'ДД.ММ.ГГГГ'
           })
-        article.form-elements-page__dropdown-group.form-elements-page__dropdown-group--datepicker-date-range
+        .form-elements-page__dropdown-group.form-elements-page__dropdown-group_theme_datepicker-date-range
           +datepicker-date-range({
             id: 'datepicker-date-range-demo',
             fromLabel: 'date dropdown',
@@ -70,49 +66,47 @@ mixin form-elements-page
             toLabel: 'date dropdown',
             to: '19.08.2019 '
           })
-        article.form-elements-page__dropdown-group.form-elements-page__dropdown-group--date-filter
-          .form-elements-page__label
-            +label({
-              label: 'filter date dropdown'
-            })
+        .form-elements-page__dropdown-group.form-elements-page__dropdown-group_theme_date-filter
+          +label({
+            label: 'filter date dropdown'
+          })
           +dropdown({
             id: 'date-filter',
             value: '19 авг - 23 авг'
           })
-        article.form-elements-page__input-group.form-elements-page__input-group--with-submit
-          .form-elements-page__label
-            +label({
-              label: 'subscription text field'
-            })
+        .form-elements-page__input-group.form-elements-page__input-group_theme_with-submit
+          +label({
+            label: 'subscription text field'
+          })
           +text-input({
             id: 'input-submit',
             placeholder: 'Email',
-            withArrow: true,
+            theme: 'with-button',
             type: 'email'
           })
-      .grid-column-gap
-      .grid-column
-        article.form-elements-page__checkbox-group
+      .form-elements-page__section-column-gap
+      .form-elements-page__section-column
+        .form-elements-page__checkbox-group
           +checkbox-list({
             label: 'checkbox buttons',
             items: [
               {
                 id: 'smoke-allowed',
-                label: 'Можно курить'
+                label: 'Можно курить',
               },
               {
                 id: 'pets-allowed',
                 label: 'Можно с питомцами',
-                isChecked: true
+                isChecked: true,
               },
               {
                 id: 'guests-allowed',
                 label: 'Можно пригласить гостей (до 10 человек)',
-                isChecked: true
+                isChecked: true,
               }
             ]
           })
-        article.form-elements-page__radio-group
+        .form-elements-page__radio-group
           +label({
             label: 'radio buttons'
           })
@@ -129,7 +123,7 @@ mixin form-elements-page
             value: 'female',
             label: 'Женщина'
           })
-        article.form-elements-page__toggle-group
+        .form-elements-page__toggle-group
           +label({
             label: 'toggle'
           })
@@ -142,7 +136,7 @@ mixin form-elements-page
             id: 'second-toggle',
             label: 'Получать спецпредложения'
           })
-        article.form-elements-page__like-button-group
+        .form-elements-page__like-button-group
           +label({
             label: 'like button'
           })
@@ -153,7 +147,7 @@ mixin form-elements-page
             count: 12,
             isFavorite: true
           })
-        article.form-elements-page__rate-button-group
+        .form-elements-page__rate-button-group
           +label({
             label: 'rate button'
           })
@@ -167,9 +161,9 @@ mixin form-elements-page
             base: 5,
             rate: 5
           })
-      .grid-column-gap
-      .grid-column
-        article.form-elements-page__range-slider
+      .form-elements-page__section-column-gap
+      .form-elements-page__section-column
+        .form-elements-page__range-slider
           +range-slider({
             name: 'range-slider',
             min: 0,
@@ -177,12 +171,11 @@ mixin form-elements-page
             from: 5000,
             to: 10000,
           })
-        article.form-elements-page__button-group
-          .form-elements-page__label
-            +label({
-              label: 'buttons'
-            })
-          .row
+        .form-elements-page__button-group
+          +label({
+            label: 'buttons'
+          })
+          .form-elements-page__row
             +button({
               theme: 'default',
               type: 'button',
@@ -194,7 +187,7 @@ mixin form-elements-page
               caption: 'click me',
               isHovered: true
             })
-          .row
+          .form-elements-page__row
             +button({
               theme: 'transparent',
               type: 'button',
@@ -206,7 +199,7 @@ mixin form-elements-page
               caption: 'click me',
               isHovered: true
             })
-          .row
+          .form-elements-page__row
             +button({
               theme: 'textual',
               type: 'button',
@@ -218,15 +211,14 @@ mixin form-elements-page
               caption: 'click me',
               isHovered: true
             })
-          .row
+          .form-elements-page__row
             +button({
-              theme: 'default',
+              theme: 'with-arrow',
               type: 'button',
               caption: 'перейти к оплате',
-              withArrow: true,
-              isFluid: true
+              isFluid: true,
             })
-        article.form-elements-page__paginator-group
+        .form-elements-page__paginator-group
           +label({
             label: 'pagination'
           })
@@ -235,24 +227,22 @@ mixin form-elements-page
             pageSize: 12,
             pageRange: 1
           })
-    section.row.form-elements-page__dropdown-states
-      .grid-column
-        article.form-elements-page__dropdown-group.form-elements-page__dropdown-group--collapsed
-          .form-elements-page__label
-            +label({
-              label: 'dropdown',
-              hint: 'default'
-            })
+    section.form-elements-page__section
+      .form-elements-page__section-column
+        .form-elements-page__dropdown-group.form-elements-page__dropdown-group_collapsed
+          +label({
+            label: 'dropdown',
+            hint: 'default'
+          })
           +dropdown({
             id: 'dropdown-collapsed',
             value: '2 спальни, 2 кровати...'
           })
-        article.form-elements-page__dropdown-group.form-elements-page__dropdown-group--expanded
-          .form-elements-page__label
-            +label({
-              label: 'dropdown',
-              hint: 'expanded'
-            })
+        .form-elements-page__dropdown-group.form-elements-page__dropdown-group
+          +label({
+            label: 'dropdown',
+            hint: 'expanded'
+          })
           +dropdown({
             id: 'dropdown-expanded',
             isExpanded: true,
@@ -264,13 +254,12 @@ mixin form-elements-page
               {count: 0, text: 'ванные комнаты', name: 'bathroom'}
             ]
           })
-      .grid-column-gap
-      .grid-column
-        article.form-elements-page__dropdown-group.form-elements-page__dropdown-group--with-apply-btn
-          .form-elements-page__label
-            +label({
-              label: 'dropdown'
-            })
+      .form-elements-page__section-column-gap
+      .form-elements-page__section-column
+        .form-elements-page__dropdown-group.form-elements-page__dropdown-group_theme_with-apply-btn
+          +label({
+            label: 'dropdown'
+          })
           +dropdown({
             id: 'dropdown-expanded',
             isExpanded: true,
@@ -284,13 +273,12 @@ mixin form-elements-page
               {count: 0, text: 'младенцы', name: 'baby'}
             ]
           })
-      .grid-column-gap
-      .grid-column
-        article.form-elements-page__dropdown-group.form-elements-page__dropdown-group--with-clear-btn
-          .form-elements-page__label
-            +label({
-              label: 'dropdown'
-            })
+      .form-elements-page__section-column-gap
+      .form-elements-page__section-column
+        .form-elements-page__dropdown-group.form-elements-page__dropdown-group_theme_with-clear-btn
+          +label({
+            label: 'dropdown'
+          })
           +dropdown({
             id: 'dropdown-expanded',
             isExpanded: true,
@@ -302,14 +290,14 @@ mixin form-elements-page
               {count: 0, text: 'младенцы', name: 'baby'}
             ]
           })
-    section.row.form-elements-page__rich-lists
-      .grid-column
-        article.form-elements-page__checkbox-list-expandable-group.form-elements-page__checkbox-list-expandable-group--collapsed
+    section.form-elements-page__section
+      .form-elements-page__section-column
+        .form-elements-page__checkbox-list-expandable-group.form-elements-page__checkbox-list-expandable-group
           +checkbox-list-expandable({
             id: 'exp_check_list_collapsed',
             label: 'Expandable checkbox list'
           })
-        article.form-elements-page__checkbox-list-expandable-group.form-elements-page__checkbox-list-expandable-group--expanded
+        .form-elements-page__checkbox-list-expandable-group.form-elements-page__checkbox-list-expandable-group_expanded
           +checkbox-list-expandable({
             id: 'exp_check_list_collapsed',
             label: 'Expandable checkbox list',
@@ -325,27 +313,29 @@ mixin form-elements-page
               {name: 'shampoo_2', label: 'Шампунь'}
             ]
           })
-      .grid-column-gap
-      .grid-column
-        article.form-elements-page__rich-checkbox-group
+      .form-elements-page__section-column-gap
+      .form-elements-page__section-column
+        .form-elements-page__rich-checkbox-group
           +checkbox-list({
             label: 'rich checkbox buttons',
             items: [
               {
                 id: 'wide-hall-checkbox',
                 label: 'Широкий коридор',
-                hint: 'Ширина коридоров в номере не&nbsp;менее 91 см.'
+                theme: 'rich',
+                hint: 'Ширина коридоров в номере не&nbsp;менее 91 см.',
               },
               {
                 id: 'disable-assistant-checkbox',
                 label: 'Помощник для инвалидов',
-                hint: 'На 1 этаже вас встретит специалист и проводит до номера.'
+                theme: 'rich',
+                hint: 'На 1 этаже вас встретит специалист и проводит до номера.',
               }
             ]
           })
-      .grid-column-gap
-      .grid-column
-        article.form-elements-page__bullet-list-group
+      .form-elements-page__section-column-gap
+      .form-elements-page__section-column
+        .form-elements-page__bullet-list-group
           .form-elements-page__label
             +label({
               label: 'Bullet list'
@@ -358,9 +348,9 @@ mixin form-elements-page
               {text: 'Время прибытия &mdash; после 13:00, а выезд до 12:00'}
             ]
           })
-    section.row.form-elements-page__bottom
-      .grid-column
-        article.form-elements-page__feature-group
+    section.form-elements-page__section
+      .form-elements-page__section-column
+        .form-elements-page__feature-group
           .form-elements-page__feature
             +feature({
               icon: 'mood',
@@ -373,9 +363,9 @@ mixin form-elements-page
               title: 'Удобство',
               hint: 'Окно в каждой из спален'
             })
-      .grid-column-gap
-      .grid-column
-        article.feedback-group.form-elements-page__feedback-group
+      .form-elements-page__section-column-gap
+      .form-elements-page__section-column
+        .feedback-group.form-elements-page__feedback-group
           .feedback-group__feedback
             +feedback({
               author: {

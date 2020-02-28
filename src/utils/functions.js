@@ -1,31 +1,46 @@
-const bem = ({
-  b, e, m, js,
-} = {}) => {
-  const classes = [];
-  let cls = b;
+const bem = function bem(options) {
+  const {
+    b,
+    e,
+    m,
+    js,
+  } = options || {};
+
   const isElement = b && e;
 
-  if (isElement) {
-    cls = `${b}__${e}`;
+  const baseClass = isElement ? `${b}__${e}` : b;
+
+  const classes = [];
+
+  classes.push(baseClass);
+
+  if (m && Array.isArray(m)) {
+    const modifiersClasses = m.map((modifier) => {
+      if (typeof modifier === 'object') {
+        const modifierName = Object.keys(modifier)[0];
+        const modifierValue = modifier[modifierName];
+
+        return modifierValue ? `${baseClass}_${modifierName}_${modifierValue}` : '';
+      }
+
+      return `${baseClass}_${modifier}`;
+    });
+
+    classes.push(...modifiersClasses);
   }
 
-  classes.push(cls);
-
-  if (m) {
-    if (Array.isArray(m)) {
-      m.map((_m) => classes.push(`${cls}--${_m}`));
-    } else {
-      classes.push(`${cls}--${m}`);
-    }
-  }
   if (js) {
-    classes.push(`${js}-${cls}`);
+    classes.push(`${js}-${baseClass}`);
   }
 
   return classes;
 };
 
-const formatCurrency = ({ value, locale = 'ru-RU', sign = '₽' }) => `${value.toLocaleString(locale).replace(',', '&nbsp;')}${sign}`;
+const formatCurrency = function formatCurrency(options) {
+  const { value, locale = 'ru-RU', sign = '₽' } = options || {};
+
+  return `${value.toLocaleString(locale).replace(',', '&nbsp;')}${sign}`;
+};
 
 export {
   bem,

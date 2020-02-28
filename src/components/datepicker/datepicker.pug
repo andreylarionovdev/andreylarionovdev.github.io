@@ -37,14 +37,20 @@ mixin datepicker()
             - i++
           .datepicker--cell.datepicker--cell-day.-weekend-.-other-month-= '1'
     .datepicker__footer
-      - const f = require('../../utils/functions')
-      button(class=f.bem({
-        b: 'datepicker',
-        e: 'clear-btn',
-        js: 'js'
-      }))= 'Очистить'
-      button(class=f.bem({
-        b: 'datepicker',
-        e: 'apply-btn',
-        js: 'js'
-      }))= 'Применить'
+      +button({
+        theme: 'textual',
+        caption: 'Очистить',
+        type: 'button',
+        isHovered: true,
+        attr: {
+          'data-action': 'clear',
+        }
+      })
+      +button({
+        theme: 'textual',
+        caption: 'Применить',
+        type: 'button',
+        attr: {
+          'data-action': 'apply',
+        }
+      })

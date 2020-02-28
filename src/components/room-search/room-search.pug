@@ -7,7 +7,7 @@ mixin room-search()
   form.room-search
     h1.room-search__title= 'Найдём номера под ваши пожелания'
     .room-search__datepicker-date-range-group
-      +datepicker-date-range({id: `${b}__check-in-out`})
+      +datepicker-date-range({id: 'room-search__check-in-out'})
     .room-search__guests-dropdown-group
       .room-search__guests-dropdown-label
         +label({ label: 'Гости' })
@@ -23,9 +23,8 @@ mixin room-search()
         })
     .room-search__submit-button-group
       +button({
-        theme: 'default',
+        theme: 'with-arrow',
         caption: 'Подобрать номер',
         href: 'room-filter.html',
-        withArrow: true,
         isFluid: true,
       })

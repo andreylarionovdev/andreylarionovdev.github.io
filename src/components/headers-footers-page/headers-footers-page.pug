@@ -26,21 +26,21 @@ mixin headers-footers-page
         name: 'sign-in-btn',
         theme: 'transparent',
         caption: 'Login',
-        isSmall: true
+        size: 'small',
       },
       {
         name: 'sign-up-btn',
         theme: 'default',
         caption: 'Register',
-        isSmall: true
+        size: 'small',
       }
     ];
   article.headers-footers-page
     section.headers-footers-page__header
       +header({menuItems, menuButtons})
-    section.headers-footers-page__header.headers-footers-page__header--signed
+    section.headers-footers-page__header.headers-footers-page__header
       +header({user, menuItems, menuButtons})
     section.headers-footers-page__footer
       +footer
-    section.headers-footers-page__footer.headers-footers-page__footer--creative
+    section.headers-footers-page__footer.headers-footers-page__footer
       +footer({theme: 'creative'})

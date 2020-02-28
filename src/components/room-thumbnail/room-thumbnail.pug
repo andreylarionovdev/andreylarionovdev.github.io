@@ -13,40 +13,33 @@ mixin room-thumbnail(options)
       focus,
     } = options || {};
 
-    const blockModifiers = [];
+    const blockModifiers = focus ? ['focused'] : [];
+
     const f = require('../../utils/functions');
     const b = 'room-thumbnail';
 
-  if focus
-    - blockModifiers.push('focused');
-
-  div(class=f.bem({
-    b,
-    m: blockModifiers,
-  }))
+  div(class=f.bem({b, m: blockModifiers}))
     figure.room-thumbnail__carousel
       each image, inx in images
         - const bemObj = {b, e: 'carousel-image'}
-        if inx === 0
-          - bemObj.m = 'active'
+        - bemObj.m = inx === 0 ? ['active'] : [];
         img(class=f.bem(bemObj) src=image.src alt=image.alt)
       button(class=f.bem({
         b,
         e: 'carousel-control',
-        m: 'prev',
+        m: [{ type: 'prev' }],
       }))
         span.material-icons= 'keyboard_arrow_left'
       button(class=f.bem({
         b,
         e: 'carousel-control',
-        m: 'next',
+        m: [{ type: 'next' }],
       }))
         span.material-icons= 'keyboard_arrow_left'
       ul.room-thumbnail__carousel-indicators
         each _, inx in images
           - const bemObj = {b, e: 'carousel-indicator'};
-          if inx === 0
-            - bemObj.m = 'active'
+          - bemObj.m = inx === 0 ? ['active'] : [];
           li(class=f.bem(bemObj))
     header.room-thumbnail__header
       a(href=href).room-thumbnail__number

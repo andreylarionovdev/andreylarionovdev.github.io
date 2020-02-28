@@ -5,7 +5,7 @@ const Header = function Header() {
 };
 
 Header.prototype.init = function init() {
-  this.classNavigationActive = 'header__navigation--active';
+  this.classNavigationActive = 'header__navigation_active';
 
   this.selectorHeader = '.js-header';
   this.selectorNavigation = '.js-header__navigation';

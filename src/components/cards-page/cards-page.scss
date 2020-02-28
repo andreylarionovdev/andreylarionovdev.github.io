@@ -22,9 +22,10 @@
   }
   &__card {
     margin-bottom: 2.5rem;
-    &--room-thumbnail-vip,
-    &--room-thumbnail {
-      width: 16.875rem;
+    &_type {
+      &_room-thumbnail {
+        width: 16.875rem;
+      }
     }
   }
 }

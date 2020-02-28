@@ -5,10 +5,10 @@ const Dropdown = function Dropdown() {
 };
 
 Dropdown.prototype.init = function init() {
-  this.classExpanded = 'dropdown--expanded';
-  this.classEdited = 'dropdown--edited';
-  this.classEmpty = 'dropdown--empty';
-  this.classChangeCountButtonDisabled = 'dropdown__change-count-btn--disabled';
+  this.classExpanded = 'dropdown_expanded';
+  this.classEdited = 'dropdown_edited';
+  this.classEmpty = 'dropdown_empty';
+  this.classChangeCountButtonDisabled = 'dropdown__change-count-btn_disabled';
 
   this.selectorDropdown = '.js-dropdown';
   this.selectorToggle = '.js-dropdown__toggle';

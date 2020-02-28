@@ -82,12 +82,14 @@
   }
   &__result-grid-cell {
     padding-top: 0.1875rem;
-    &--with-info-icon {
-      padding: 0;
-      color: $color-dark-25;
-    }
-    &--with-sum {
-      text-align: right;
+    &_content {
+      &_with-info-icon {
+        padding: 0;
+        color: $color-dark-25;
+      }
+      &_with-sum {
+        text-align: right;
+      }
     }
   }
   &__info-icon {

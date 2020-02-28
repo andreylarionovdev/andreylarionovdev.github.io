@@ -70,10 +70,9 @@ mixin sign-up(options)
       })
     .sign-up__submit-button-group
       +button({
-        theme: 'default',
+        theme: 'with-arrow',
         type: 'submit',
         caption: 'Перейти к оплате',
-        withArrow: true,
         isFluid: true,
       })
     .sign-up__sign-in-button-group
@@ -82,6 +81,6 @@ mixin sign-up(options)
         +button({
           theme: 'transparent',
           caption: 'Войти',
-          isFluid: true,
           href: 'sign-in.html',
+          isFluid: true,
         })

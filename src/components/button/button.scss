@@ -33,54 +33,60 @@
     display: none;
     text-align: right;
   }
-  &--small {
-    line-height: 1.875rem;
-    #{$blockClass}__inner {
-      padding: 0 1.125rem;
+  &_theme {
+    &_default,
+    &_with-arrow {
+      color: white;
+      #{$blockClass}__inner {
+        background: $grad-purple;
+      }
     }
-  }
-  &--fluid {
-    width: 100%;
-  }
-  &--default {
-    color: white;
-    #{$blockClass}__inner {
-      background: $grad-purple;
+    &_with-arrow {
+      #{$blockClass}__arrow {
+        display: inline-block;
+      }
+      #{$blockClass}__inner {
+        padding: 0 0.5rem;
+      }
     }
-  }
-  &--transparent {
-    color: $color-purple;
-  }
-  &--textual {
-    @include reset-outline(text-shadow);
-    padding: 0;
-    line-height: 1rem;
-    display: inline;
-    background: none;
-    color: $color-purple;
-    #{$blockClass}__inner {
+    &_transparent {
+      color: $color-purple;
+    }
+    &_textual {
+      @include reset-outline(text-shadow);
+      padding: 0;
+      line-height: 1rem;
       display: inline;
       background: none;
-      padding: 0;
-    }
-    &:hover,
-    &#{$blockClass}--hovered {
-      color: $color-dark-100;
-    }
-    &:focus {
-      box-shadow: none;
-    }
-  }
-  &--with-arrow {
-    #{$blockClass}__arrow {
-      display: inline-block;
-    }
-    #{$blockClass}__inner {
-      padding: 0 0.5rem;
+      color: $color-purple;
+      #{$blockClass}__inner {
+        display: inline;
+        background: none;
+        padding: 0;
+      }
+      &:hover,
+      &#{$blockClass}_hovered {
+        color: $color-dark-100;
+      }
+      &:focus {
+        box-shadow: none;
+      }
     }
   }
+  &_size {
+    &_small {
+      line-height: 1.875rem;
+      #{$blockClass}__inner {
+        padding: 0 1.125rem;
+      }
+    }
+  }
+  &_fluid {
+    width: 100%;
+  }
+
   &:hover,
-  &--hovered {
+  &_hovered {
     opacity: 0.5;
   }
 }

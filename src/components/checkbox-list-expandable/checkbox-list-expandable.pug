@@ -3,24 +3,14 @@ include ../checkbox/checkbox
 mixin checkbox-list-expandable(options)
   - const { id, label, isExpanded, items = [] } = options || {};
 
-  - const blockModifiers = [];
-
-  if isExpanded
-    - blockModifiers.push('expanded');
+  - const blockModifiers = isExpanded ? ['expanded'] : [];
 
   - const f = require('../../utils/functions');
+  - const b = 'checkbox-list-expandable';
   - const js = 'js';
 
-  div(id=id class=f.bem({
-    b: 'checkbox-list-expandable',
-    m: blockModifiers,
-    js
-  }))
-    h3(class=f.bem({
-      b: 'checkbox-list-expandable',
-      e: 'toggle', 
-      js
-    }))
+  div(id=id class=f.bem({ b, m: blockModifiers, js }))
+    h3(class=f.bem({ b, e: 'toggle', js }))
       span.checkbox-list-expandable__label= label
       button.checkbox-list-expandable__arrow.material-icons= 'keyboard_arrow_down'
     ul.checkbox-list-expandable__list

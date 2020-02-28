@@ -6,7 +6,9 @@
     top: 1.875rem;
     left: 1.875rem;
   }
-  &--gray {
-    background-color: $color-gray;
+  &_theme {
+    &_gray {
+      background-color: $color-gray;
+    }
   }
 }

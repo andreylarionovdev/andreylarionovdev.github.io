@@ -2,14 +2,9 @@ include ../../components/logo/logo
 
 mixin body(options)
   - const { theme, logo } = options || {};
-  - const blockModifiers = [];
-
-  if theme
-    - blockModifiers.push(theme);
-
   - const f = require('../../utils/functions');
 
-  body(class=f.bem({b: 'body', m: blockModifiers}))
+  body(class=f.bem({ b: 'body', m: [{ theme }] }))
     if logo
       nav.body__logo
         +logo

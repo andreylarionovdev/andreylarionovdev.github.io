@@ -86,7 +86,7 @@
     border-radius: 50%;
     cursor: pointer;
     border: 0.0625rem solid $color-dark-50;
-    &--disabled {
+    &_disabled {
       cursor: default;
       pointer-events: none;
       border: 0.0625rem solid $color-dark-25;
@@ -96,7 +96,7 @@
     display: none;
     line-height: 2.5rem;
   }
-  &--expanded {
+  &_expanded {
     #{$blockClass}__toggle {
       border: 0.0625rem solid $color-dark-50;
       border-bottom-right-radius: 0;
@@ -110,13 +110,13 @@
       border-top: none;
     }
   }
-  &--edited {
+  &_edited {
     #{$blockClass}__footer-buttons {
       display: flex;
       justify-content: space-between;
     }
   }
-  &--empty {
+  &_empty {
     #{$blockClass}__clear-button {
       visibility: hidden;
     }

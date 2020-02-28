@@ -5,6 +5,7 @@
 @import '../button/button';
 
 .header {
+  $blockClass: &;
   font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
   color: $color-dark-50;
@@ -36,33 +37,47 @@
     font-size: 0;
     display: inline-block;
   }
-  &__navigation {
+  &__navigation,
+  &__user-navigation {
     display: none;
     @media (min-width: $screen-md-min) {
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
     }
-    &--active {
+    &_active {
       display: block;
+      #{$blockClass}__user-navigation {
+        display: block;
+      }
     }
   }
   &__navigation-item {
     text-align: center;
     margin: 1rem auto;
     @media (min-width: $screen-md-min) {
-      margin: 0;
+      margin: 0 0 0 1.3125rem;
       display: flex;
       align-items: center;
-      &--with-sign-up-btn {
+      &_theme {
+        &_auth-button {
+          margin-left: 1.25rem;
+        }
+      }
+    }
+  }
+  &__user-navigation {
+    #{$blockClass}__navigation-item {
+      margin-left: 0;
+      & + #{$blockClass}__navigation-item {
         margin-left: 1.25rem;
       }
-      &--with-sign-in-btn {
-        margin-left: 1.25rem;
-      }
-      &--with-username {
-        margin-left: 1.875rem;
-        border-left: 0.0625rem solid $color-dark-10;
+    }
+    &_authenticated {
+      border-left: 0.0625rem solid $color-dark-10;
+      #{$blockClass}__navigation-item {
+        margin-left: 2rem;
+        line-height: 2rem;
       }
     }
   }
@@ -72,19 +87,18 @@
     &:hover {
       color: $color-dark-100;
     }
-    &--with-submenu {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      &:after {
-        content: 'keyboard_arrow_down';
-        font-family: 'Material Icons';
-        font-size: 1.5rem;
-        height: 1.25rem;
+    &_theme {
+      &_with-submenu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:after {
+          content: 'keyboard_arrow_down';
+          font-family: 'Material Icons';
+          font-size: 1.5rem;
+          height: 1.25rem;
+        }
       }
-    }
-    @media (min-width: $screen-md-min) {
-      margin-left: 1.3125rem;
     }
   }
 }

@@ -18,27 +18,29 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    &--perfect {
-      #{$blockClass}__bullet {
-        background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+    &_grade {
+      &_perfect {
+        #{$blockClass}__bullet {
+          background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+        }
+      }
+      &_good {
+        #{$blockClass}__bullet {
+          background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+        }
+      }
+      &_satisfactorily {
+        #{$blockClass}__bullet {
+          background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        }
+      }
+      &_bad {
+        #{$blockClass}__bullet {
+          background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+        }
       }
     }
-    &--good {
-      #{$blockClass}__bullet {
-        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-      }
-    }
-    &--satisfactorily {
-      #{$blockClass}__bullet {
-        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-      }
-    }
-    &--bad {
-      #{$blockClass}__bullet {
-        background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
-      }
-    }
-    &--active {
+    &_active {
       font-weight: bold;
       #{$blockClass}__bullet {
         width: 0.75rem;
@@ -56,7 +58,7 @@
     border-radius: 50%;
   }
   &__circle {
-    &--active {
+    &_active {
       stroke-width: 6;
     }
   }
@@ -70,18 +72,19 @@
     }
 
     @include svg-color($color-dark-25);
-
-    &--perfect {
-      @include svg-color(#FFE39C);
-    }
-    &--good {
-      @include svg-color(#6FCF97);
-    }
-    &--satisfactorily {
-      @include svg-color(#BC9CFF);
-    }
-    &--bad {
-      @include svg-color(#919191);
+    &_grade {
+      &_perfect {
+        @include svg-color(#FFE39C);
+      }
+      &_good {
+        @include svg-color(#6FCF97);
+      }
+      &_satisfactorily {
+        @include svg-color(#BC9CFF);
+      }
+      &_bad {
+        @include svg-color(#919191);
+      }
     }
   }
   &__count-value {

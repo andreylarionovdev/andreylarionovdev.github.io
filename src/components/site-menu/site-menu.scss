@@ -7,14 +7,16 @@
   &__link:hover {
     color: $color-dark-100;
   }
-  &--purple {
-    #{$blockClass}__link {
-      color: $color-purple;
+  &_theme {
+    &_purple {
+      #{$blockClass}__link {
+        color: $color-purple;
+      }
     }
-  }
-  &--green {
-    #{$blockClass}__link {
-      color: $color-green;
+    &_green {
+      #{$blockClass}__link {
+        color: $color-green;
+      }
     }
   }
 }

@@ -41,17 +41,9 @@ mixin footer(options)
       copyright = 'Copyright © 2018 Toxin UI Kit. All rights reserved.',
     } = options || {};
 
-  - const blockModifiers = [];
-
-  if theme
-    - blockModifiers.push(theme);
-
   - const f = require('../../utils/functions');
 
-  footer(class=f.bem({
-    b: 'footer',
-    m: blockModifiers,
-  }))
+  footer(class=f.bem({ b: 'footer', m: [ {theme }] }))
     hr.footer__horizontal-divider
     .footer__inner
       .footer__header
@@ -64,7 +56,7 @@ mixin footer(options)
             +footer-menu({
               title: menu.title,
               menuItems: menu.links,
-              center: menu.center,
+              isMiddle: menu.isMiddle,
             })
       form.footer__subscribe-form(method='POST' action='/')
         h3.footer__subscribe-form-title!= rightTitle
@@ -73,14 +65,14 @@ mixin footer(options)
           +text-input({
             id: 'subscribe',
             placeholder: rightPlaceholder,
-            withArrow: true,
+            theme: 'with-button',
             type: 'email',
           })
       p.footer__copyright= copyright
       ul.footer__social-list
         li.footer__social-list-item
-          a.footer__social-link.footer__social-link--tw(href='/change-me')
+          a.footer__social-link.footer__social-link_theme_tw(href='/change-me')
         li.footer__social-list-item
-          a.footer__social-link.footer__social-link--fb(href='/change-me')
+          a.footer__social-link.footer__social-link_theme_fb(href='/change-me')
         li.footer__social-list-item
-          a.footer__social-link.footer__social-link--ig(href='/change-me')
+          a.footer__social-link.footer__social-link_theme_ig(href='/change-me')

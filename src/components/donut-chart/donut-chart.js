@@ -5,8 +5,8 @@ const DonutChart = function DonutChart() {
 };
 
 DonutChart.prototype.init = function init() {
-  this.classLabelActive = 'donut-chart__label--active';
-  this.classCircleActive = 'donut-chart__circle--active';
+  this.classLabelActive = 'donut-chart__label_active';
+  this.classCircleActive = 'donut-chart__circle_active';
 
   this.selectorLabel = '.js-donut-chart__label';
   this.selectorDonutChart = '.js-donut-chart';
@@ -28,10 +28,10 @@ DonutChart.prototype.handleLabelClick = function handleLabelClick(e) {
   $chart.find(this.selectorLabel).removeClass(this.classLabelActive);
   $label.addClass(this.classLabelActive);
 
-  const voteKey = $label.attr('data-vote-key');
+  const grade = $label.attr('data-grade');
 
   $chart.find(this.selectorCircle).removeClass(this.classCircleActive);
-  $chart.find(`.donut-chart__circle--${voteKey}`).addClass(this.classCircleActive);
+  $chart.find(`.donut-chart__circle_grade_${grade}`).addClass(this.classCircleActive);
 
   const count = parseInt($label.data('count'), 10);
 
@@ -41,7 +41,7 @@ DonutChart.prototype.handleLabelClick = function handleLabelClick(e) {
     .removeClass()
     .addClass('donut-chart__count')
     .addClass('js-donut-chart__count')
-    .addClass(`donut-chart__count--${voteKey}`);
+    .addClass(`donut-chart__count_grade_${grade}`);
 };
 
 $(() => new DonutChart());

@@ -1,7 +1,7 @@
 mixin site-menu(options)
   - const { theme, items } = options || {};
 
-  ul.site-menu(class=`site-menu--${theme}`)
+  ul.site-menu(class=`site-menu_theme_${theme}`)
     each link in items
       li.site-menu__item
         h2.site-menu__title

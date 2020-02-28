@@ -55,18 +55,17 @@ mixin donut-chart(options)
             stop(offset='0%' stop-color=grad[0])
             stop(offset='100%' stop-color=grad[1])
       each item in sortedValues
-        - const label = item.label;
         - const strokeDashOffset = circumreference - (item.count / total) * circumreference;
         - const circleTransformValue = `rotate(${angleOffset}, ${cx}, ${cy})`;
         - angleOffset = (item.count / total) * 360 + angleOffset;
         g
           circle(
-            class=f.bem({b, e: 'circle', m: label, js})
+            class=f.bem({b, e: 'circle', m: [{ grade: item.label }], js})
             cx=cx
             cy=cy
             r=radius
             fill='transparent'
-            stroke=`url(#${label})`
+            stroke=`url(#${item.label})`
             stroke-width=strokeWidth
             stroke-dasharray=circumreference - 2
             stroke-dashoffset=strokeDashOffset
@@ -77,9 +76,9 @@ mixin donut-chart(options)
         text.donut-chart__count-unit(x='50%' y='65%' text-anchor='middle')= 'голосов'
 
     ul.donut-chart__labels
-      each label, key in voteLabels
-        - const countSourceItem = sortedValues.find(obj => obj.label === key);
+      each label, grade in voteLabels
+        - const countSourceItem = sortedValues.find(obj => obj.label === grade);
         - const count = countSourceItem !== undefined ? countSourceItem.count : '0';
-        li(class=f.bem({b, e: 'label', m: key, js}) data-vote-key=key data-count=count)
+        li(class=f.bem({b, e: 'label', m: [{ grade }], js}) data-grade=grade data-count=count)
           span.donut-chart__bullet
           span.donut-chart__caption= label

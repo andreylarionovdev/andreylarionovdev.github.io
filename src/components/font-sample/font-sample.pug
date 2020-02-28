@@ -1,6 +1,6 @@
 mixin font-sample(options)
-  - const { theme, name, description } = options;
+  - const { name, description } = options;
 
-  article(class=['font-sample', `font-sample--${theme}`, `font-sample--${name}`])
+  article(class=['font-sample', `font-sample_name_${name}`])
     abbr.font-sample__name= name
     dfn.font-sample__description= description

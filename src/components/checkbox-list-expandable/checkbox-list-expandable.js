@@ -5,7 +5,7 @@ const CheckboxListExpandable = function CheckboxListExpandable() {
 };
 
 CheckboxListExpandable.prototype.init = function init() {
-  this.classExpanded = 'checkbox-list-expandable--expanded';
+  this.classExpanded = 'checkbox-list-expandable_expanded';
 
   this.selectorToggle = '.js-checkbox-list-expandable__toggle';
   this.selectorCheckboxExpandableList = '.js-checkbox-list-expandable';

@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Toxin website meta description">
+    <meta name="keywords" content="Toxin website meta keywords">
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
@@ -11,8 +13,8 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>Toxin booking | UI Kit - Headers &amp; Footers</title>
-  <link href="headers.ec196209dc48e455eb58.css" rel="stylesheet"></head>
-  <body class="body body--gray">
+  <link href="headers.f7428cdf0636d6dcee8c.css" rel="stylesheet"></head>
+  <body class="body body_theme_gray">
     <nav class="body__logo"><a class="logo" href="./index.html"></a>
     </nav>
     <article class="headers-footers-page">
@@ -20,14 +22,14 @@
         <header class="header js-header">
           <nav class="header__inner">
             <button class="header__navigation-toggle js-header__navigation-toggle material-icons">menu</button>
-            <figure class="header__logo"><a class="logo logo--with-text" href="./index.html"></a>
+            <figure class="header__logo"><a class="logo logo_with-text" href="./index.html"></a>
             </figure>
             <ul class="header__navigation js-header__navigation">
               <li class="header__navigation-item"><a class="header__navigation-link" href="/change-me"><b>Home</b></a>
               </li>
               <li class="header__navigation-item"><a class="header__navigation-link" href="/change-me">About Us</a>
               </li>
-              <li class="header__navigation-item"><a class="header__navigation-link header__navigation-link--with-submenu">Services</a>
+              <li class="header__navigation-item"><a class="header__navigation-link header__navigation-link_theme_with-submenu">Services</a>
               </li>
               <li class="header__navigation-item"><a class="header__navigation-link" href="/change-me">Careers</a>
               </li>
@@ -35,32 +37,36 @@
               </li>
               <li class="header__navigation-item"><a class="header__navigation-link" href="/change-me">Documentation</a>
               </li>
-              <li class="header__navigation-item header__navigation-item--with-sign-in-btn">
-                <a class="button button--transparent button--small">
-                  <div class="button__inner"><span class="button__caption">Login</span><span class="button__arrow material-icons">arrow_forward</span></div>
-                </a>
-              </li>
-              <li class="header__navigation-item header__navigation-item--with-sign-up-btn">
-                <a class="button button--default button--small">
-                  <div class="button__inner"><span class="button__caption">Register</span><span class="button__arrow material-icons">arrow_forward</span></div>
-                </a>
+              <li class="header__navigation-item">
+                <ul class="header__user-navigation">
+                  <li class="header__navigation-item">
+                    <a class="button button_theme_transparent button_size_small">
+                      <div class="button__inner"><span class="button__caption">Login</span><span class="button__arrow material-icons">arrow_forward</span></div>
+                    </a>
+                  </li>
+                  <li class="header__navigation-item">
+                    <a class="button button_theme_default button_size_small">
+                      <div class="button__inner"><span class="button__caption">Register</span><span class="button__arrow material-icons">arrow_forward</span></div>
+                    </a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </nav>
         </header>
       </section>
-      <section class="headers-footers-page__header headers-footers-page__header--signed">
+      <section class="headers-footers-page__header headers-footers-page__header">
         <header class="header js-header">
           <nav class="header__inner">
             <button class="header__navigation-toggle js-header__navigation-toggle material-icons">menu</button>
-            <figure class="header__logo"><a class="logo logo--with-text" href="./index.html"></a>
+            <figure class="header__logo"><a class="logo logo_with-text" href="./index.html"></a>
             </figure>
             <ul class="header__navigation js-header__navigation">
               <li class="header__navigation-item"><a class="header__navigation-link" href="/change-me"><b>Home</b></a>
               </li>
               <li class="header__navigation-item"><a class="header__navigation-link" href="/change-me">About Us</a>
               </li>
-              <li class="header__navigation-item"><a class="header__navigation-link header__navigation-link--with-submenu">Services</a>
+              <li class="header__navigation-item"><a class="header__navigation-link header__navigation-link_theme_with-submenu">Services</a>
               </li>
               <li class="header__navigation-item"><a class="header__navigation-link" href="/change-me">Careers</a>
               </li>
@@ -68,7 +74,11 @@
               </li>
               <li class="header__navigation-item"><a class="header__navigation-link" href="/change-me">Documentation</a>
               </li>
-              <li class="header__navigation-item header__navigation-item--with-username"><a class="header__navigation-link">Cosmin Negoita</a></li>
+              <li class="header__navigation-item">
+                <ul class="header__user-navigation_authenticated">
+                  <li class="header__navigation-item"><a class="header__navigation-link">Cosmin Negoita</a></li>
+                </ul>
+              </li>
             </ul>
           </nav>
         </header>
@@ -78,7 +88,7 @@
           <hr class="footer__horizontal-divider">
           <div class="footer__inner">
             <div class="footer__header">
-              <figure class="footer__logo"><a class="logo logo--with-text" href="./index.html"></a>
+              <figure class="footer__logo"><a class="logo logo_with-text" href="./index.html"></a>
               </figure>
               <p class="footer__description">Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.</p>
             </div>
@@ -120,7 +130,7 @@
               <h3 class="footer__subscribe-form-title">Subscribe&nbsp;to&nbsp;our&nbsp;newsletter</h3>
               <p class="footer__subscribe-form-description">Receive our latest news and promotions in your inbox!</p>
               <div class="footer__subscribe-form-input-group">
-                <div class="text-input text-input--with-arrow">
+                <div class="text-input text-input_theme_with-button">
                   <input class="text-input__input" id="subscribe" type="email" placeholder="Your email address">
                   <button class="text-input__submit-button"><span class="text-input__arrow material-icons">arrow_forward</span></button>
                 </div>
@@ -128,19 +138,19 @@
             </form>
             <p class="footer__copyright">Copyright © 2018 Toxin UI Kit. All rights reserved.</p>
             <ul class="footer__social-list">
-              <li class="footer__social-list-item"><a class="footer__social-link footer__social-link--tw" href="/change-me"></a></li>
-              <li class="footer__social-list-item"><a class="footer__social-link footer__social-link--fb" href="/change-me"></a></li>
-              <li class="footer__social-list-item"><a class="footer__social-link footer__social-link--ig" href="/change-me"></a></li>
+              <li class="footer__social-list-item"><a class="footer__social-link footer__social-link_theme_tw" href="/change-me"></a></li>
+              <li class="footer__social-list-item"><a class="footer__social-link footer__social-link_theme_fb" href="/change-me"></a></li>
+              <li class="footer__social-list-item"><a class="footer__social-link footer__social-link_theme_ig" href="/change-me"></a></li>
             </ul>
           </div>
         </footer>
       </section>
-      <section class="headers-footers-page__footer headers-footers-page__footer--creative">
-        <footer class="footer footer--creative">
+      <section class="headers-footers-page__footer headers-footers-page__footer">
+        <footer class="footer footer_theme_creative">
           <hr class="footer__horizontal-divider">
           <div class="footer__inner">
             <div class="footer__header">
-              <figure class="footer__logo"><a class="logo logo--with-text" href="./index.html"></a>
+              <figure class="footer__logo"><a class="logo logo_with-text" href="./index.html"></a>
               </figure>
               <p class="footer__description">Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.</p>
             </div>
@@ -182,7 +192,7 @@
               <h3 class="footer__subscribe-form-title">Subscribe&nbsp;to&nbsp;our&nbsp;newsletter</h3>
               <p class="footer__subscribe-form-description">Receive our latest news and promotions in your inbox!</p>
               <div class="footer__subscribe-form-input-group">
-                <div class="text-input text-input--with-arrow">
+                <div class="text-input text-input_theme_with-button">
                   <input class="text-input__input" id="subscribe" type="email" placeholder="Your email address">
                   <button class="text-input__submit-button"><span class="text-input__arrow material-icons">arrow_forward</span></button>
                 </div>
@@ -190,13 +200,13 @@
             </form>
             <p class="footer__copyright">Copyright © 2018 Toxin UI Kit. All rights reserved.</p>
             <ul class="footer__social-list">
-              <li class="footer__social-list-item"><a class="footer__social-link footer__social-link--tw" href="/change-me"></a></li>
-              <li class="footer__social-list-item"><a class="footer__social-link footer__social-link--fb" href="/change-me"></a></li>
-              <li class="footer__social-list-item"><a class="footer__social-link footer__social-link--ig" href="/change-me"></a></li>
+              <li class="footer__social-list-item"><a class="footer__social-link footer__social-link_theme_tw" href="/change-me"></a></li>
+              <li class="footer__social-list-item"><a class="footer__social-link footer__social-link_theme_fb" href="/change-me"></a></li>
+              <li class="footer__social-list-item"><a class="footer__social-link footer__social-link_theme_ig" href="/change-me"></a></li>
             </ul>
           </div>
         </footer>
       </section>
     </article>
-  <script type="text/javascript" src="headers.ec196209dc48e455eb58.js"></script></body>
+  <script type="text/javascript" src="headers.f7428cdf0636d6dcee8c.js"></script></body>
 </html>

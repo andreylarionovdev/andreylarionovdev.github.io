@@ -3,16 +3,14 @@ mixin text-input(options)
     const {
       id,
       type = 'text',
+      theme,
       placeholder,
       value,
-      withArrow,
       isHovered,
     } = options || {};
 
-  - const blockModifiers = [];
+  - const blockModifiers = [{ theme }];
 
-  if withArrow
-    - blockModifiers.push('with-arrow');
   if isHovered
     - blockModifiers.push('hovered');
 

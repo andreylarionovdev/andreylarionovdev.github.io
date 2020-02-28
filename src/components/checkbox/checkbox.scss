@@ -59,10 +59,12 @@
     color: $color-dark-50;
   }
 
-  &--with-hint {
-    #{$blockClass}__label {
-      font-weight: bold;
-      color: $color-dark-75;
+  &_theme {
+    &_rich {
+      #{$blockClass}__label {
+        font-weight: bold;
+        color: $color-dark-75;
+      }
     }
   }
 }

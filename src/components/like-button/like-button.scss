@@ -24,7 +24,7 @@
     padding-left: 0.25rem;
   }
 
-  &--favorite {
+  &_favorite {
     border: 0.0625rem solid $color-purple;
     #{$blockName}__count {
       color: $color-purple;
