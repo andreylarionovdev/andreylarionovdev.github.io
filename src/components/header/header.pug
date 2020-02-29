@@ -11,7 +11,7 @@ mixin header(options)
   header.header.js-header
     nav.header__inner
       button(class=f.bem({b, e: 'navigation-toggle', js})).material-icons= 'menu'
-      figure.header__logo
+      .header__logo
         +logo(true)
       ul(class=f.bem({b, e: 'navigation', js}))
         each item, _ in menuItems

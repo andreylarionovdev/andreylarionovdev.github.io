@@ -7,7 +7,7 @@ include ../paginator/paginator
 include ../dropdown/dropdown
 
 mixin room-filter-page
-  article.room-filter-page
+  .room-filter-page
     .room-filter-page__inner
       section.room-filter-page__sidebar
         .room-filter-page__date-dropdown-group
@@ -53,16 +53,19 @@ mixin room-filter-page
             label: 'checkbox buttons',
             items: [
               {
-                id: 'smoke-allowed',
+                id: 'smoke-allowed-checkbox',
+                name: 'smoke-allowed',
                 label: 'Можно курить',
               },
               {
-                id: 'pets-allowed',
+                id: 'pets-allowed-checkbox',
+                name: 'pets-allowed',
                 label: 'Можно с питомцами',
                 isChecked: true,
               },
               {
-                id: 'guests-allowed',
+                id: 'guests-allowed-checkbox',
+                name: 'guests-allowed',
                 label: 'Можно пригласить гостей (до 10 человек)',
                 isChecked: true,
               },
@@ -74,12 +77,14 @@ mixin room-filter-page
             items: [
               {
                 id: 'wide-hall-checkbox',
+                name: 'wide-hall',
                 label: 'Широкий коридор',
                 hint: 'Ширина коридоров в номере не&nbsp;менее 91 см.',
                 theme: 'rich',
               },
               {
                 id: 'disable-assistant-checkbox',
+                id: 'disable-assistant',
                 label: 'Помощник для инвалидов',
                 hint: 'На 1 этаже вас встретит специалист и проводит до номера.',
                 theme: 'rich',

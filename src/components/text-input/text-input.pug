@@ -20,6 +20,6 @@ mixin text-input(options)
     b: 'text-input',
     m: blockModifiers,
   }))
-    input.text-input__input(id=id type=type placeholder=placeholder value=value)
-    button.text-input__submit-button
+    input.text-input__input(id=id name=(name || id) type=type placeholder=placeholder value=value)
+    button.text-input__submit-button(type='submit')
       span.text-input__arrow.material-icons= 'arrow_forward'

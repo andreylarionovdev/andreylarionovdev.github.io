@@ -75,21 +75,26 @@
     font-size: 0.75rem;
     font-weight: bold;
   }
-  &__change-count-btn {
+  &__change-count-button {
+    @include reset-button;
+    @include reset-outline;
     $diam: 1.875rem;
     display: inline-block;
-    font-size: 1.125rem;
+    font-size: 1rem;
+    color: $color-dark-50;
     text-align: center;
     width: $diam;
     height: $diam;
-    line-height: $diam;
     border-radius: 50%;
     cursor: pointer;
-    border: 0.0625rem solid $color-dark-50;
+    border: 0.0625rem solid $color-dark-25;
+    &[data-operator='+'] {
+      padding-bottom: 0.1875rem;
+    }
     &_disabled {
       cursor: default;
       pointer-events: none;
-      border: 0.0625rem solid $color-dark-25;
+      opacity: 0.5;
     }
   }
   &__footer-buttons {

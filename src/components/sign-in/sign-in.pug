@@ -8,13 +8,15 @@ mixin sign-in(options)
     h1.sign-in__title= 'Войти'
     .sign-in__text-input
       +text-input({
-        id: 'sign-in_email',
+        id: 'sign-in_email-input',
+        name: 'email',
         placeholder: 'Email',
         type: 'email',
       })
     .sign-in__text-input
       +text-input({
-        id: 'sign-in_pass',
+        id: 'sign-in_password-input',
+        name: 'password',
         placeholder: 'Пароль',
         type: 'password',
       })

@@ -10,62 +10,68 @@ mixin sign-up(options)
     h1.sign-up__title= 'Регистрация аккаунта'
     .sign-up__text-input
       +text-input({
-        id: 'first-name',
+        id: 'sign-up_first-name-input',
+        name: 'first-name',
         placeholder: 'Имя',
       })
     .sign-up__text-input
       +text-input({
-        id: 'last-name',
+        id: 'sign-up_last-name-input',
+        name: 'last-name',
         placeholder: 'Фамилия',
       })
     .sign-up__gender-button-group
       .sign-up__gender-radio-button
         +radio-button({
-          id: 'g-male',
+          id: 'radio-button-gender-male',
           name: 'gender',
-          value: 'm',
+          value: 'male',
           label: 'Мужчина',
           isChecked: true,
         })
       .sign-up__gender-radio-button
         +radio-button({
-          id: 'g-female',
+          id: 'radio-button-gender-female',
           name: 'gender',
-          value: 'f',
+          value: 'female',
           label: 'Женщина',
         })
     .sign-up__birthday-group
       .sign-up__text-input-label
         +label({
           label: 'Дата рождения',
-          _for: 'sign-up__text-input-birthday',
+          _for: 'sign-up__input-birthday',
         })
       .sign-up__text-input
         +text-input({
-          id: 'sign-up__text-input-birthday',
+          id: 'sign-up__input-birthday',
+          name: 'birthday',
           placeholder: 'ДД.ММ.ГГГГ',
         })
     .sign-up__email-group
       .sign-up__text-input-label
         +label({
           label: 'Данные для входа в сервис',
-          _for: 'sign-up__text-input-email',
+          _for: 'sign-up__input-email',
         })
       .sign-up__text-input
         +text-input({
-          id: 'sign-up__text-input-email',
+          id: 'sign-up__input-email',
+          name: 'email',
           placeholder: 'Email',
           type: 'email',
         })
     .sign-up__text-input
       +text-input({
-        id: 'sign-up__text-input-password',
+        id: 'sign-up__input-password',
+        name: 'password',
         placeholder: 'Пароль',
         type: 'password',
       })
     .sign-up__toggle-button-group
       +toggle-button({
-        id: 'sign-up__toggle-promote',
+        id: 'sign-up__toggle-promo',
+        name: 'send-me-promo',
         label: 'Получать спецпредложения',
       })
     .sign-up__submit-button-group

@@ -12,12 +12,13 @@ mixin checkbox-list-expandable(options)
   div(id=id class=f.bem({ b, m: blockModifiers, js }))
     h3(class=f.bem({ b, e: 'toggle', js }))
       span.checkbox-list-expandable__label= label
-      button.checkbox-list-expandable__arrow.material-icons= 'keyboard_arrow_down'
+      button.checkbox-list-expandable__arrow.material-icons(type='button')= 'keyboard_arrow_down'
     ul.checkbox-list-expandable__list
       each item, index in items
         li.checkbox-list-expandable__item
           +checkbox({
-            id: `${id}-${item.name}`,
+            id: `${id}_${item.name}-checkbox`,
             label: item.label,
-            isChecked: item.isChecked
+            isChecked: item.isChecked,
+            name: item.name,
           })

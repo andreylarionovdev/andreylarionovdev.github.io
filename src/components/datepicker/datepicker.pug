@@ -1,10 +1,10 @@
 mixin datepicker()
   .datepicker.active
     nav.datepicker--nav
-      button.datepicker--nav-action
+      button.datepicker--nav-action(type='button')
         span.material-icons= 'arrow_back'
       .datepicker--nav-title!= 'Август<i>2019</i>'
-      button.datepicker--nav-action
+      button.datepicker--nav-action(type='button')
         span.material-icons= 'arrow_forward'
     .datepicker--content
       .datepicker--days.datepicker--body.active

@@ -1,6 +1,7 @@
 extends base
 
 include ../components/header/header
+include ../components/main/main
 include ../components/footer/footer
 
 block content
@@ -46,7 +47,7 @@ block content
       ]
     })
 
-    main
+    +main
       block main
 
     +footer({
