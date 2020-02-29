@@ -7,6 +7,7 @@
   $borderRadius: 0.25rem;
 
   display: flex;
+  position: relative;
   line-height: $lineHeight;
   font-size: 0.75rem;
 
@@ -19,57 +20,29 @@
     border-radius: $borderRadius;
     font-size: 0.875rem;
     color: $color-dark-75;
-    padding: 0 0.875rem;
+    padding: 0 2.375rem 0 0.875rem;
     appearance: none;
     &:focus,
     &:hover {
       outline: none;
       border: 0.0625rem solid $color-dark-50;
     }
-    &:focus + #{$blockClass}__submit-button,
-    &:hover + #{$blockClass}__submit-button {
-      border: 0.0625rem solid $color-dark-50;
-      border-left: none;
-    }
   }
   &__submit-button {
-    display: none;
-    transition: border .25s ease-in-out
+    @include reset-button;
+    @include reset-outline(text-shadow);
+    display: flex;
+    height: 100%;
+    align-items: center;
+    position: absolute;
+    right: 0.625rem;
+    background: transparent;
+    color: $color-purple;
   }
   &_hovered {
     #{$blockClass}__input {
       outline: none;
       border: 0.0625rem solid $color-dark-50;
-    }
-    #{$blockClass}__submit-button {
-      border: 0.0625rem solid $color-dark-50;
-      border-left: none;
-    }
-  }
-  &_theme {
-    &_with-button {
-      #{$blockClass}__input {
-        display: inline-block;
-        border-right: none;
-        border-bottom-right-radius: 0;
-        border-top-right-radius: 0;
-      }
-      #{$blockClass}__submit-button {
-        @include reset-button;
-        @include reset-outline(text-shadow);
-        padding: 0;
-        background: white;
-        color: $color-purple;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        line-height: $lineHeight;
-        width: $lineHeight + $borderRadius;
-        border: 0.0625rem solid $color-dark-25;
-        border-left: none;
-        border-top-right-radius: $borderRadius;
-        border-bottom-right-radius: $borderRadius;
-      }
     }
   }
   ::placeholder {

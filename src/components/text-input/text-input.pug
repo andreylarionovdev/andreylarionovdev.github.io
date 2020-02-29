@@ -3,23 +3,18 @@ mixin text-input(options)
     const {
       id,
       type = 'text',
-      theme,
       placeholder,
       value,
+      withButton,
       isHovered,
     } = options || {};
 
-  - const blockModifiers = [{ theme }];
-
-  if isHovered
-    - blockModifiers.push('hovered');
+  - const blockModifiers = isHovered ? ['hovered'] : [];
 
   - const f = require('../../utils/functions')
 
-  div(class=f.bem({
-    b: 'text-input',
-    m: blockModifiers,
-  }))
+  span(class=f.bem({ b: 'text-input', m: blockModifiers }))
     input.text-input__input(id=id name=(name || id) type=type placeholder=placeholder value=value)
-    button.text-input__submit-button(type='submit')
-      span.text-input__arrow.material-icons= 'arrow_forward'
+    if withButton
+      button.text-input__submit-button(type='submit')
+        span.text-input__arrow.material-icons= 'arrow_forward'
