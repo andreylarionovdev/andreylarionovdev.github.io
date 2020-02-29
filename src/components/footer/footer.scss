@@ -1,7 +1,6 @@
 @import '../../utils/vars';
 @import '../../utils/mixins';
 
-@import '../footer-menu/footer-menu';
 @import '../logo/logo';
 @import '../text-input/text-input';
 
@@ -73,6 +72,30 @@
       padding: 0;
       flex-direction: column;
       text-align: center;
+    }
+  }
+  &__navigation-section {
+    font-family: Montserrat, sans-serif;
+    &:nth-child(2) {
+      padding-right: 2.25rem;
+    }
+  }
+  &__navigation-section-title {
+    @include h3;
+  }
+  &__navigation-section-list {
+    padding-left: 0;
+    margin: 1.125rem 0;
+  }
+  &__navigation-section-item {
+    margin-bottom: 0.875rem;
+  }
+  &__navigation-section-link {
+    @include primary-text;
+    color: $color-dark-50;
+    text-decoration: none;
+    &:hover {
+      color: $color-dark-100;
     }
   }
   &__subscribe-form {

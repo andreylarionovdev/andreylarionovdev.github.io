@@ -1,4 +1,3 @@
-include ../footer-menu/footer-menu
 include ../logo/logo
 include ../text-input/text-input
 
@@ -53,11 +52,11 @@ mixin footer(options)
       nav.footer__navigation
         each menu, _ in menus
           section.footer__navigation-section
-            +footer-menu({
-              title: menu.title,
-              menuItems: menu.links,
-              isMiddle: menu.isMiddle,
-            })
+            h3.footer__navigation-section-title= menu.title
+            ul.footer__navigation-section-list
+              each item, _ in menu.links
+                li.footer__navigation-section-item
+                  a.footer__navigation-section-link(href=item.href)= item.text
       form.footer__subscribe-form(method='POST' action='/')
         h3.footer__subscribe-form-title!= rightTitle
         p.footer__subscribe-form-description= rightDescription
