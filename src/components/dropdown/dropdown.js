@@ -11,7 +11,7 @@ Dropdown.prototype.init = function init() {
   this.classChangeCountButtonDisabled = 'dropdown__change-count-button_disabled';
 
   this.selectorDropdown = '.js-dropdown';
-  this.selectorToggle = '.js-dropdown__toggle';
+  this.selectorToggleButton = '.js-dropdown__toggle-button';
   this.selectorMenu = '.js-dropdown__menu';
   this.selectorMenuItem = '.js-dropdown__menu-item';
   this.selectorChangeCountButton = '.js-dropdown__change-count-button';
@@ -23,13 +23,13 @@ Dropdown.prototype.init = function init() {
 };
 
 Dropdown.prototype.addEventListeners = function addEventListeners() {
-  $(this.selectorToggle).on('click', this.handleToggleClick.bind(this));
+  $(this.selectorToggleButton).on('click', this.handleToggleButtonClick.bind(this));
   $(this.selectorChangeCountButton).on('click', this.handleChangeCountButtonClick.bind(this));
   $(this.selectorClearButton).on('click', this.handleClearButtonClick.bind(this));
   $(this.selectorApplyButton).on('click', this.handleApplyButtonClick.bind(this));
 };
 
-Dropdown.prototype.handleToggleClick = function handleToggleClick(e) {
+Dropdown.prototype.handleToggleButtonClick = function handleDropdownClick(e) {
   e.preventDefault();
 
   const $dropdown = $(e.currentTarget).closest(this.selectorDropdown);

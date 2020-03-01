@@ -8,28 +8,27 @@
   font-size: 0.875rem;
   color: $color-dark-75;
   user-select: none;
-  &__toggle {
-    position: relative;
-    padding: 0 0.625rem 0 0.875rem;
+  &__selection {
     line-height: 2.625rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
+    padding: 0 2.375rem 0 0.875rem;
     border: 0.0625rem solid $color-dark-25;
     border-radius: 0.25rem;
-  }
-  &__arrow-button {
-    @include reset-button;
-    @include reset-outline(text-shadow);
-    color: $color-dark-50;
-  }
-  &__text {
+    cursor: pointer;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
-  &__data-input {
+  &__toggle-button {
+    @include reset-button;
+    @include reset-outline(text-shadow);
+    color: $color-dark-50;
+    position: absolute;
+    right: 0.6875rem;
+    top: 0;
+    padding-top: 0.0625rem;
+    height: 100%;
+  }
+  &__input {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -102,12 +101,12 @@
     line-height: 2.5rem;
   }
   &_expanded {
-    #{$blockClass}__toggle {
+    #{$blockClass}__selection {
       border: 0.0625rem solid $color-dark-50;
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0;
     }
-    #{$blockClass}__arrow-button {
+    #{$blockClass}__toggle-button {
       color: $color-dark-75;
     }
     #{$blockClass}__menu {

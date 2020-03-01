@@ -24,10 +24,9 @@ mixin dropdown(options)
   - const js = 'js';
 
   div(id=id class=f.bem({b, m: blockModifiers, js}))
-    label(class=f.bem({b, e: 'toggle', js}))
-      span(class=f.bem({b, e: 'text', js}))= value
-      button.dropdown__arrow-button.material-icons(type='button')= 'keyboard_arrow_down'
-      input(class=f.bem({b, e: 'data-input', js}) type='text' value=value)
+    input(class=f.bem({b, e: 'input', js}) type='text' value=value)
+    div(class=f.bem({b, e: 'selection', js}))= value
+    button.dropdown__toggle-button.js-dropdown__toggle-button.material-icons(type='button')= 'keyboard_arrow_down'
     if rows.length > 0
       ul(class=f.bem({b, e: 'menu', js}) style={'z-index': zIndex})
         each row in rows

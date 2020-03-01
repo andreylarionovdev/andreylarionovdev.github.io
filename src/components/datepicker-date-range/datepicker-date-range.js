@@ -92,9 +92,9 @@ DatepickerDateRange.prototype.setDates = function setDates() {
 };
 
 DatepickerDateRange.prototype.clear = function clear() {
-  this.$dropdownFrom.find('.dropdown__text').text(this.emptyValue);
+  this.$dropdownFrom.find('.dropdown__selection').text(this.emptyValue);
   this.$dropdownFrom.find('.dropdown__input').val('');
-  this.$dropdownTo.find('.dropdown__text').text(this.emptyValue);
+  this.$dropdownTo.find('.dropdown__selection').text(this.emptyValue);
   this.$dropdownTo.find('.dropdown__input').val('');
 };
 
@@ -109,8 +109,8 @@ DatepickerDateRange.prototype.update = function update() {
 
   const formatFrom = `${ddFrom}.${mmFrom}.${yyyyFrom}`;
 
-  this.$dropdownFrom.find('.js-dropdown__text').text(formatFrom);
-  this.$dropdownFrom.find('.js-dropdown__data-input').val(formatFrom);
+  this.$dropdownFrom.find('.js-dropdown__selection').text(formatFrom);
+  this.$dropdownFrom.find('.js-dropdown__input').val(formatFrom);
 
   if (dates.length > 1) {
     const ddTo = `0${dates[1].getDate()}`.slice(-2);
@@ -119,7 +119,7 @@ DatepickerDateRange.prototype.update = function update() {
 
     const formatTo = `${ddTo}.${mmTo}.${yyyyTo}`;
 
-    this.$dropdownTo.find('.js-dropdown__text').text(formatTo);
+    this.$dropdownTo.find('.js-dropdown__selection').text(formatTo);
     this.$dropdownTo.find('.js-dropdown__input').val(formatTo);
   }
 };
