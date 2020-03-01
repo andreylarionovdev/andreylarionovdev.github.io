@@ -9,12 +9,12 @@ mixin room-details-page
     figure.room-details-page__featured-images
       -
         const featuredImages = [
-          './img/room-details-left.png',
-          './img/room-details-top.png',
-          './img/room-details-bottom.png',
+          { src: './img/room-details-left.png', alt: 'Primary Image' },
+          { src: './img/room-details-top.png', alt: 'Secondary Image' },
+          { src: './img/room-details-bottom.png', alt: 'Secondary Image' },
         ];
       each image in featuredImages
-        img.room-details-page__featured-image(src=image)
+        img.room-details-page__featured-image(src=image.src alt=image.alt)
     .room-details-page__inner-wrapper
       .room-details-page__main
         section.room-details-page__info
@@ -37,10 +37,10 @@ mixin room-details-page
                   hint: 'Номер оснащен камином',
                 }
               ]
-            ul.room-details-page__features-list
-              each feature in features
-                li.room-details-page__feature-item
-                  +feature(feature)
+          ul.room-details-page__features-list
+            each feature in features
+              li.room-details-page__feature-item
+                +feature(feature)
         section.room-details-page__rate
           h2.room-details-page__rate-title= 'Впечатления от номера'
           .room-details-page__donut-chart
