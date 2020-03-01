@@ -14,7 +14,6 @@ mixin room-filter-page
           .room-filter-page__sidebar-label
             +label({
               label: 'Даты пребывания в отеле',
-              _for: 'date-dropdown',
             })
           .room-filter-page__date-dropdown
             +dropdown({
@@ -25,7 +24,6 @@ mixin room-filter-page
           .room-filter-page__sidebar-label
             +label({
               label: 'Гости',
-              _for: 'guests-dropdown',
             })
           .room-filter-page__guests-dropdown
             +dropdown({
@@ -95,7 +93,6 @@ mixin room-filter-page
           .room-filter-page__sidebar-label
             +label({
               label: 'Удобства номера',
-              _for: 'feature-dropdown',
             })
           .room-filter-page__feature-dropdown
             +dropdown({

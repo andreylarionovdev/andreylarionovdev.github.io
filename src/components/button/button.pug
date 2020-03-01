@@ -23,6 +23,6 @@ mixin button(options)
   - const tag = isButton ? 'button' : 'a';
 
   #{tag}(class=f.bem({ b: 'button', m: blockModifiers }) type=type href=href)&attributes(attr)
-    .button__inner-wrapper
+    span.button__inner-wrapper
       span.button__caption= caption
       span.button__arrow.material-icons= 'arrow_forward'
