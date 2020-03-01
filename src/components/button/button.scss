@@ -17,7 +17,7 @@
   padding: 0.125rem;
   background: $grad-purple;
   transition: all .25s ease-in-out;
-  &__inner {
+  &__inner-wrapper {
     background: white;
     display: grid;
     border-radius: 1.375rem;
@@ -37,7 +37,7 @@
     &_default,
     &_with-arrow {
       color: white;
-      #{$blockClass}__inner {
+      #{$blockClass}__inner-wrapper {
         background: $grad-purple;
       }
     }
@@ -45,7 +45,7 @@
       #{$blockClass}__arrow {
         display: inline-block;
       }
-      #{$blockClass}__inner {
+      #{$blockClass}__inner-wrapper {
         padding: 0 0.5rem;
       }
     }
@@ -59,7 +59,7 @@
       display: inline;
       background: none;
       color: $color-purple;
-      #{$blockClass}__inner {
+      #{$blockClass}__inner-wrapper {
         display: inline;
         background: none;
         padding: 0;
@@ -76,7 +76,7 @@
   &_size {
     &_small {
       line-height: 1.875rem;
-      #{$blockClass}__inner {
+      #{$blockClass}__inner-wrapper {
         padding: 0 1.125rem;
       }
     }

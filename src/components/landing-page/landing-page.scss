@@ -10,8 +10,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $color-green;
-  &__inner {
-    @include inner;
+  &__inner-wrapper {
+    @include inner-wrapper;
     padding: 4.3125rem 0 0.75rem 0;
     display: grid;
     grid-template-rows: 23.375rem 23.375rem;

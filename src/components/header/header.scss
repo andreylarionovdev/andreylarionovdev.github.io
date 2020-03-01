@@ -11,8 +11,8 @@
   color: $color-dark-50;
   background: white;
   box-shadow: 0 0.625rem 1.25rem $color-dark-5;
-  &__inner {
-    @include inner;
+  &__inner-wrapper {
+    @include inner-wrapper;
     padding: 0.75rem 0;
     min-height: inherit;
     @media (min-width: $screen-md-min) {

@@ -9,7 +9,7 @@ mixin header(options)
   - const js = 'js';
 
   header.header.js-header
-    nav.header__inner
+    nav.header__inner-wrapper
       button(class=f.bem({b, e: 'navigation-toggle', js})).material-icons= 'menu'
       .header__logo
         +logo(true)

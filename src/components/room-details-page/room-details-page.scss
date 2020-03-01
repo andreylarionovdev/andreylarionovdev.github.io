@@ -9,9 +9,9 @@
 
 .room-details-page {
   border-bottom: 0.0625rem solid $color-dark-25;
-  &__inner {
+  &__inner-wrapper {
     padding: 4.375rem 0 3.9375rem 0;
-    @include inner;
+    @include inner-wrapper;
     display: grid;
     grid-template-columns: 1.868fr 1fr;
     grid-column-gap: 4.375rem;

@@ -143,7 +143,7 @@ DatepickerDateRange.prototype.addButtons = function addButtons($dpElement) {
 DatepickerDateRange.prototype.createButton = function createButton(action, caption, hovered) {
   const hoveredClass = hovered ? 'button_hovered' : '';
   const template = `<button class="button button_theme_textual ${hoveredClass}" type="button" data-action="${action}">
-                      <div class="button__inner">
+                      <div class="button__inner-wrapper">
                         <span class="button__caption">${caption}</span>
                       </div>
                     </button>`;

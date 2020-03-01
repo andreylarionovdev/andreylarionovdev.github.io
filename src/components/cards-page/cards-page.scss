@@ -9,7 +9,7 @@
 @import '../room-thumbnail/room-thumbnail.scss';
 
 .cards-page {
-  @include inner;
+  @include inner-wrapper;
   margin-top: 9.375rem;
   display: grid;
   grid-template-columns: 1.1875fr 1.1875fr 1fr;

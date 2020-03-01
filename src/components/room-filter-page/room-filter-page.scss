@@ -10,8 +10,8 @@
 
 .room-filter-page {
   border-bottom: 0.0625rem solid $color-dark-25;
-  &__inner {
-    @include inner;
+  &__inner-wrapper {
+    @include inner-wrapper;
     padding: 1.875rem 0 1.75rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;

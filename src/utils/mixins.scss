@@ -1,6 +1,6 @@
 @import './vars';
 
-@mixin inner($lgWidth: 80.6%, $mdWidth: 95.5%) {
+@mixin inner-wrapper($lgWidth: 80.6%, $mdWidth: 95.5%) {
   margin: 0 auto;
   width: $mdWidth;
   @media (min-width: $screen-md-min) {
@@ -18,8 +18,8 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  &__inner {
-    @include inner;
+  &__inner-wrapper {
+    @include inner-wrapper;
     min-height: 42.75rem;
     display: flex;
     justify-content: center;

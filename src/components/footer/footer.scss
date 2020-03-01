@@ -23,8 +23,8 @@
       display: none;
     }
   }
-  &__inner {
-    @include inner;
+  &__inner-wrapper {
+    @include inner-wrapper;
     padding-top: 6.25rem;
     position: relative;
     height: 100%;
@@ -153,7 +153,7 @@
   }
   &_theme {
     &_creative {
-      #{$blockClass}__inner {
+      #{$blockClass}__inner-wrapper {
         grid-template-columns: 1fr;
         grid-template-areas:
           'header'

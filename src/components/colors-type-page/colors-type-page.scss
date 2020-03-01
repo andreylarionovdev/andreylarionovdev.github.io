@@ -5,7 +5,7 @@
 @import '../font-sample/font-sample.scss';
 
 .colors-type-page {
-  @include inner($lgWidth: 79.2%);
+  @include inner-wrapper($lgWidth: 79.2%);
   margin-top: 9rem;
   display: grid;
   grid-template-columns: 1fr 1fr;

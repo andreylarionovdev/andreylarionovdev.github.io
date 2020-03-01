@@ -20,7 +20,7 @@
 
 .form-elements-page {
   $blockClass: &;
-  @include inner;
+  @include inner-wrapper;
   padding: 8.9375rem 0 8.25rem 0;
   font-family: Montserrat, sans-serif;
 
