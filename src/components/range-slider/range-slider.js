@@ -1,19 +1,15 @@
 import $ from 'jquery';
 import 'ion-rangeslider';
 
-const RangeSlider = function RangeSlider() {
-  this.init();
+const RangeSlider = function RangeSlider($element) {
+  this.init($element);
 };
 
-RangeSlider.prototype.init = function init() {
-  this.selectorRangeSlider = '.js-range-slider__input';
-  this.selectorRangeSliderHint = '.js-range-slider .label__hint';
+RangeSlider.prototype.init = function init($element) {
+  this.$element = $element;
+  this.selectorRangeSlider = '.js-range-slider';
 
-  $(this.selectorRangeSlider).each((i, o) => this.initIonRangeSliderInstance($(o)));
-};
-
-RangeSlider.prototype.initIonRangeSliderInstance = function initIonRangeSliderInstance($element) {
-  $element.ionRangeSlider({
+  this.$element.ionRangeSlider({
     hide_min_max: true,
     hide_from_to: true,
     onStart: this.render.bind(this),
@@ -23,7 +19,7 @@ RangeSlider.prototype.initIonRangeSliderInstance = function initIonRangeSliderIn
 
 RangeSlider.prototype.render = function render(data) {
   const range = `${data.from.toLocaleString('ru-RU')}₽ - ${data.to.toLocaleString('ru-RU')}₽`;
-  $(this.selectorRangeSliderHint).text(range);
+  this.$element.closest(this.selectorRangeSlider).find('.label__hint').text(range);
 };
 
-$(() => new RangeSlider());
+$(() => $('.js-range-slider__input').each((i, o) => new RangeSlider($(o))));

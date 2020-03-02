@@ -1,36 +1,21 @@
 import $ from 'jquery';
 import 'air-datepicker';
 
-const DatepickerDateRange = function DatepickerDateRange() {
-  this.init();
+const DatepickerDateRange = function DatepickerDateRange($element) {
+  this.init($element);
 };
 
-DatepickerDateRange.prototype.init = function init() {
+DatepickerDateRange.prototype.init = function init($element) {
   this.emptyValue = 'ДД.ММ.ГГГГ';
 
-  this.selectorDatepickerDateRange = '.js-datepicker-date-range';
-
   this.selectorDropdownFrom = '.js-datepicker-date-range__dropdown-group-from .js-datepicker-date-range__dropdown';
-  this.$dropdownFrom = null;
-
   this.selectorInputFrom = '.js-datepicker-date-range__dropdown-group-from input';
-  this.$inputFrom = null;
-
   this.selectorDropdownTo = '.js-datepicker-date-range__dropdown-group-to .js-datepicker-date-range__dropdown';
-  this.$dropdownTo = null;
-
   this.selectorInputTo = '.js-datepicker-date-range__dropdown-group-to input';
-  this.$inputTo = null;
 
   this.selectorClearButton = '[data-action="clear"]';
   this.selectorApplyButton = '[data-action="apply"]';
 
-  $(this.selectorDatepickerDateRange).each((i, o) => {
-    this.initInstance($(o));
-  });
-};
-
-DatepickerDateRange.prototype.initInstance = function initInstance($element) {
   this.$inputFrom = $element.find(this.selectorInputFrom);
   this.$inputTo = $element.find(this.selectorInputTo);
 
@@ -160,4 +145,4 @@ DatepickerDateRange.prototype.handleApplyButtonClick = function handleApplyButto
   this.update();
 };
 
-$(() => new DatepickerDateRange());
+$(() => $('.js-datepicker-date-range').each((i, o) => new DatepickerDateRange($(o))));

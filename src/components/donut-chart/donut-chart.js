@@ -8,8 +8,8 @@ DonutChart.prototype.init = function init() {
   this.classLabelActive = 'donut-chart__label_active';
   this.classCircleActive = 'donut-chart__circle_active';
 
-  this.selectorLabel = '.js-donut-chart__label';
   this.selectorDonutChart = '.js-donut-chart';
+  this.selectorLabel = '.js-donut-chart__label';
   this.selectorCircle = '.js-donut-chart__circle';
   this.selectorCount = '.js-donut-chart__count';
   this.selectorCountValue = '.js-donut-chart__count-value';
