@@ -316,20 +316,22 @@ mixin form-elements-page
       .form-elements-page__section-column-gap
       .form-elements-page__section-column
         .form-elements-page__rich-checkbox-group
+          - const theme = 'rich';
           +checkbox-list({
             label: 'rich checkbox buttons',
+            theme,
             items: [
               {
                 id: 'wide-hall-checkbox',
                 label: 'Широкий коридор',
-                theme: 'rich',
                 hint: 'Ширина коридоров в номере не&nbsp;менее 91 см.',
+                theme,
               },
               {
                 id: 'disable-assistant-checkbox',
                 label: 'Помощник для инвалидов',
-                theme: 'rich',
                 hint: 'На 1 этаже вас встретит специалист и проводит до номера.',
+                theme,
               }
             ]
           })

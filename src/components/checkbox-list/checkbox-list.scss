@@ -2,10 +2,18 @@
 @import '../label/label';
 
 .checkbox-list {
+  $blockClass: &;
   &__label {
     margin-bottom: 1rem;
   }
   &__checkbox {
     margin-bottom: 0.625rem;
+  }
+  &_theme {
+    &_rich {
+      #{$blockClass}__checkbox {
+        margin-bottom: 0.5rem;
+      }
+    }
   }
 }

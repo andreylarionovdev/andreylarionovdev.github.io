@@ -70,7 +70,9 @@ mixin room-filter-page
             ]
           })
         .room-filter-page__rich-checkbox-group
+          - const theme = 'rich';
           +checkbox-list({
+            theme,
             label: 'Доступность',
             items: [
               {
@@ -78,14 +80,14 @@ mixin room-filter-page
                 name: 'wide-hall',
                 label: 'Широкий коридор',
                 hint: 'Ширина коридоров в номере не&nbsp;менее 91 см.',
-                theme: 'rich',
+                theme,
               },
               {
                 id: 'disable-assistant-checkbox',
                 id: 'disable-assistant',
                 label: 'Помощник для инвалидов',
                 hint: 'На 1 этаже вас встретит специалист и проводит до номера.',
-                theme: 'rich',
+                theme,
               }
             ],
           })
