@@ -24,5 +24,5 @@ mixin button(options)
 
   #{tag}(class=f.bem({ b: 'button', m: blockModifiers }) type=type href=href)&attributes(attr)
     span.button__inner-wrapper
-      span.button__caption= caption
+      span.button__caption!= caption
       span.button__arrow.material-icons= 'arrow_forward'

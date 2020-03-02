@@ -110,11 +110,11 @@
   }
   &__subscribe-form-description {
     @include primary-text;
-    margin: 1rem 0 1.5rem 0;
+    margin: 1.125rem 0 1.4375rem 0;
   }
   &__copyright {
     @include primary-text;
-    margin: 0.875rem 0;
+    margin: 0.9375rem 0;
     line-height: 2.5rem;
     grid-area: copyright;
     @media (max-width: $screen-xs-max) {
@@ -131,7 +131,7 @@
     }
   }
   &__social-list-item {
-    margin: 0.875rem 0 0.875rem 1.25rem;
+    margin: 1.25rem 0 1rem 1.25rem;
   }
   &__social-link {
     display: inline-block;
