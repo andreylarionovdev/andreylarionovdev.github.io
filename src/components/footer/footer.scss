@@ -67,7 +67,7 @@
     grid-area: nav;
     display: flex;
     justify-content: space-between;
-    padding: 0.3125rem 3.125rem 0 2.5rem;
+    padding: 0.3125rem 3.1875rem 0 2.5rem;
     @media (max-width: $screen-xs-max) {
       padding: 0;
       flex-direction: column;
@@ -78,6 +78,9 @@
     font-family: Montserrat, sans-serif;
     &:nth-child(2) {
       padding-right: 2.25rem;
+      @media (max-width: $screen-xs-max) {
+        padding: 0;
+      }
     }
   }
   &__navigation-section-title {
@@ -100,7 +103,7 @@
   }
   &__subscribe-form {
     grid-area: subscribe;
-    padding: 0.3125rem 0;
+    padding: 0.3125rem 0 0 0.0625rem;
     @media (max-width: $screen-xs-max) {
       text-align: center;
     }
