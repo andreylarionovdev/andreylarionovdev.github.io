@@ -14,7 +14,7 @@
     @include inner-wrapper;
     padding: 4.3125rem 0 0.75rem 0;
     display: grid;
-    grid-template-rows: 23.375rem 23.375rem;
+    grid-template-rows: auto 23.375rem;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 0.625rem;
     align-items: flex-end;

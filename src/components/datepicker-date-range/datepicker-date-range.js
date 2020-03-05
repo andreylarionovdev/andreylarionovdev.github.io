@@ -42,6 +42,9 @@ DatepickerDateRange.prototype.initDatepicker = function initDatepicker($element)
       inst.$datepicker.css('position', 'absolute');
       inst.$datepicker.css('width', `${$element.outerWidth()}px`);
       that.addButtons(inst.$datepicker);
+
+      const pixelPerfectTop = parseInt(inst.$datepicker.css('top'), 10) - 6; // ;)
+      inst.$datepicker.css('top', `${pixelPerfectTop}px`);
     },
   }).data('datepicker');
 };

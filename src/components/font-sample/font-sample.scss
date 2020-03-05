@@ -24,6 +24,7 @@
         @include h1;
         @include name;
         padding-left: 0.5rem;
+        margin-right: 1.9375rem;
       }
       #{$blockClass}__description {
         @include h1;
@@ -45,6 +46,7 @@
       #{$blockClass}__name {
         @include h3;
         @include name;
+        margin-right: 1.8125rem;
       }
       #{$blockClass}__description {
         @include h3;

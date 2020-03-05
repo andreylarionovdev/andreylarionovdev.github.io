@@ -14,8 +14,8 @@
   }
   &__title {
     @include h1;
+    margin-bottom: 1.4375rem;
   }
-  &__title,
   &__datepicker-date-range-group {
     margin-bottom: 1.25rem;
   }

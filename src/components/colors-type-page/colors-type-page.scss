@@ -6,7 +6,7 @@
 
 .colors-type-page {
   @include inner-wrapper($lgWidth: 79.2%);
-  margin-top: 9rem;
+  margin-top: 9.0625rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 15.75rem;
