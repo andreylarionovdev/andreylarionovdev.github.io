@@ -5,17 +5,21 @@
 @import '../font-sample/font-sample.scss';
 
 .colors-type-page {
-  @include inner-wrapper($lgWidth: 79.2%);
-  margin-top: 9.0625rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 15.75rem;
-  @media (max-width: $screen-md-max) {
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-    grid-row-gap: 3rem;
+  &__nav {
+    @include ui-kit-navigation($marginBottom: 2.3125rem);
   }
-  @media (max-width: $screen-xs-max) {
-    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  &__main {
+    @include inner-wrapper($lgWidth: 79.2%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 15.75rem;
+    @media (max-width: $screen-md-max) {
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+      grid-row-gap: 3rem;
+    }
+    @media (max-width: $screen-xs-max) {
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
   }
 
   &__colors {

@@ -36,11 +36,13 @@ mixin headers-footers-page
       }
     ];
   article.headers-footers-page
+    nav.headers-footers-page__nav
+      +logo
     section.headers-footers-page__header
       +header({menuItems, menuButtons})
-    section.headers-footers-page__header.headers-footers-page__header
+    section.headers-footers-page__header
       +header({user, menuItems, menuButtons})
     section.headers-footers-page__footer
       +footer
-    section.headers-footers-page__footer.headers-footers-page__footer
+    section.headers-footers-page__footer
       +footer({theme: 'creative'})

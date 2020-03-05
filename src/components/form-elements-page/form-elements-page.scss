@@ -20,37 +20,46 @@
 
 .form-elements-page {
   $blockClass: &;
-  @include inner-wrapper;
-  padding: 8.9375rem 0 8.25rem 0;
-  font-family: Montserrat, sans-serif;
 
-  &__section,
-  &__row {
-    display: grid;
-    @media (max-width: $screen-md-max) {
-      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-      grid-gap: 2.5rem;
-    }
-    @media (max-width: $screen-xs-max) {
-      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-    }
+  &__nav {
+    @include ui-kit-navigation($marginBottom: 2.1875rem);
   }
 
+  &__main {
+    @include inner-wrapper;
+    font-family: Montserrat, sans-serif;
+  }
+
+
   &__section {
+    display: grid;
+    @mixin section-media-query($column-count: 3) {
+      @media (max-width: $screen-md-max) {
+        grid-template-columns: repeat($column-count, 1fr);
+        grid-gap: 2.5rem;
+      }
+      @media (max-width: $screen-xs-max) {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+      }
+    }
     &:first-child {
       margin-bottom: 5rem;
       grid-template-columns: 27.63% 10.88% 27.63% 6.2176% 27.63%;
+      @include section-media-query;
     }
     &:nth-child(2) {
       margin-bottom: 2.5625rem;
       grid-template-columns: 22.95% 15.62% 27.61% 6.21% 27.61%;
       min-height: 16.625rem;
+      @include section-media-query;
     }
     &:nth-child(3) {
       grid-template-columns: 22.95% 15.62% 27.61% 6.21% 27.61%;
+      @include section-media-query;
     }
     &:nth-child(4) {
       grid-template-columns: 22.95% 15.62% 61.43%;
+      @include section-media-query(1);
     }
   }
 
@@ -60,7 +69,6 @@
     }
   }
 
-  // Custom padding/margin for groups
   &__input-group {
     margin-bottom: 1.25rem;
     .label {

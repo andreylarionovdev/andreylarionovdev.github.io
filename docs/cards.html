@@ -13,393 +13,395 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>Toxin booking | UI Kit - Cards</title>
-  <link href="cards.c0da22b543107dabf13a.css" rel="stylesheet"></head>
+  <link href="cards.608d925eddca50243885.css" rel="stylesheet"></head>
   <body class="body body_theme_gray">
-    <nav class="body__logo"><a class="logo" href="./index.html"></a>
-    </nav>
     <div class="cards-page">
-      <div class="cards-page__grid-column">
-        <article class="cards-page__card">
-          <form class="room-search">
-            <h1 class="room-search__title">Найдём номера под ваши пожелания</h1>
-            <div class="room-search__datepicker-date-range-group">
-              <div class="datepicker-date-range js-datepicker-date-range">
-                <div class="datepicker-date-range__dropdown-group-from js-datepicker-date-range__dropdown-group-from">
-                  <div class="datepicker-date-range__label">
-                    <label class="label"><span class="label__title">Прибытие</span><span class="label__hint"></span></label>
+      <nav class="cards-page__nav"><a class="logo" href="./index.html"></a>
+      </nav>
+      <div class="cards-page__main">
+        <div class="cards-page__grid-column">
+          <article class="cards-page__card">
+            <form class="room-search">
+              <h1 class="room-search__title">Найдём номера под ваши пожелания</h1>
+              <div class="room-search__datepicker-date-range-group">
+                <div class="datepicker-date-range js-datepicker-date-range">
+                  <div class="datepicker-date-range__dropdown-group-from js-datepicker-date-range__dropdown-group-from">
+                    <div class="datepicker-date-range__label">
+                      <label class="label"><span class="label__title">Прибытие</span><span class="label__hint"></span></label>
+                    </div>
+                    <div class="datepicker-date-range__dropdown js-datepicker-date-range__dropdown">
+                      <div class="dropdown js-dropdown" id="room-search__check-in-out__from-date">
+                        <input class="dropdown__input js-dropdown__input" type="text" value="ДД.ММ.ГГГГ">
+                        <div class="dropdown__selection js-dropdown__selection">ДД.ММ.ГГГГ</div>
+                        <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
+                      </div>
+                    </div>
                   </div>
-                  <div class="datepicker-date-range__dropdown js-datepicker-date-range__dropdown">
-                    <div class="dropdown js-dropdown" id="room-search__check-in-out__from-date">
-                      <input class="dropdown__input js-dropdown__input" type="text" value="ДД.ММ.ГГГГ">
-                      <div class="dropdown__selection js-dropdown__selection">ДД.ММ.ГГГГ</div>
-                      <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
+                  <div class="datepicker-date-range__dropdown-group-to js-datepicker-date-range__dropdown-group-to">
+                    <div class="datepicker-date-range__label">
+                      <label class="label"><span class="label__title">Выезд</span><span class="label__hint"></span></label>
+                    </div>
+                    <div class="datepicker-date-range__dropdown js-datepicker-date-range__dropdown">
+                      <div class="dropdown js-dropdown" id="room-search__check-in-out__to-date">
+                        <input class="dropdown__input js-dropdown__input" type="text" value="ДД.ММ.ГГГГ">
+                        <div class="dropdown__selection js-dropdown__selection">ДД.ММ.ГГГГ</div>
+                        <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="datepicker-date-range__dropdown-group-to js-datepicker-date-range__dropdown-group-to">
-                  <div class="datepicker-date-range__label">
-                    <label class="label"><span class="label__title">Выезд</span><span class="label__hint"></span></label>
+              </div>
+              <div class="room-search__guests-dropdown-group">
+                <div class="room-search__guests-dropdown-label">
+                  <label class="label"><span class="label__title">Гости</span><span class="label__hint"></span></label>
+                </div>
+                <div class="room-search__guests-dropdown">
+                  <div class="dropdown js-dropdown" id="guests">
+                    <input class="dropdown__input js-dropdown__input" type="text" value="Сколько гостей">
+                    <div class="dropdown__selection js-dropdown__selection">Сколько гостей</div>
+                    <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
+                    <ul class="dropdown__menu js-dropdown__menu" style="z-index:9;">
+                      <li class="dropdown__menu-item js-dropdown__menu-item">
+                        <div class="dropdown__item-name">взрослые</div>
+                        <div class="dropdown__count-buttons">
+                          <button class="dropdown__change-count-button dropdown__change-count-button_disabled js-dropdown__change-count-button" type="button" data-operator="-">-</button><span class="dropdown__count js-dropdown__count">0</span>
+                          <button class="dropdown__change-count-button js-dropdown__change-count-button" type="button" data-operator="+">+</button>
+                        </div>
+                      </li>
+                      <li class="dropdown__menu-item js-dropdown__menu-item">
+                        <div class="dropdown__item-name">дети</div>
+                        <div class="dropdown__count-buttons">
+                          <button class="dropdown__change-count-button dropdown__change-count-button_disabled js-dropdown__change-count-button" type="button" data-operator="-">-</button><span class="dropdown__count js-dropdown__count">0</span>
+                          <button class="dropdown__change-count-button js-dropdown__change-count-button" type="button" data-operator="+">+</button>
+                        </div>
+                      </li>
+                      <li class="dropdown__menu-item js-dropdown__menu-item">
+                        <div class="dropdown__item-name">младенцы</div>
+                        <div class="dropdown__count-buttons">
+                          <button class="dropdown__change-count-button dropdown__change-count-button_disabled js-dropdown__change-count-button" type="button" data-operator="-">-</button><span class="dropdown__count js-dropdown__count">0</span>
+                          <button class="dropdown__change-count-button js-dropdown__change-count-button" type="button" data-operator="+">+</button>
+                        </div>
+                      </li>
+                      <li class="dropdown__footer-buttons"><span class="dropdown__clear-button js-dropdown__clear-button">
+                          <button class="button button_theme_textual button_hovered" type="button"><span class="button__inner-wrapper"><span class="button__caption">очистить</span><span class="button__arrow material-icons">arrow_forward</span></span></button></span><span class="dropdown__apply-button js-dropdown__apply-button">
+                          <button class="button button_theme_textual" type="button"><span class="button__inner-wrapper"><span class="button__caption">применить</span><span class="button__arrow material-icons">arrow_forward</span></span></button></span></li>
+                    </ul>
                   </div>
-                  <div class="datepicker-date-range__dropdown js-datepicker-date-range__dropdown">
-                    <div class="dropdown js-dropdown" id="room-search__check-in-out__to-date">
-                      <input class="dropdown__input js-dropdown__input" type="text" value="ДД.ММ.ГГГГ">
-                      <div class="dropdown__selection js-dropdown__selection">ДД.ММ.ГГГГ</div>
-                      <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
-                    </div>
-                  </div>
                 </div>
               </div>
-            </div>
-            <div class="room-search__guests-dropdown-group">
-              <div class="room-search__guests-dropdown-label">
-                <label class="label"><span class="label__title">Гости</span><span class="label__hint"></span></label>
+              <div class="room-search__submit-button-group">
+                <a class="button button_theme_with-arrow button_fluid" href="room-filter.html"><span class="button__inner-wrapper"><span class="button__caption">Подобрать номер&nbsp;</span><span class="button__arrow material-icons">arrow_forward</span></span></a>
               </div>
-              <div class="room-search__guests-dropdown">
-                <div class="dropdown js-dropdown" id="guests">
-                  <input class="dropdown__input js-dropdown__input" type="text" value="Сколько гостей">
-                  <div class="dropdown__selection js-dropdown__selection">Сколько гостей</div>
-                  <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
-                  <ul class="dropdown__menu js-dropdown__menu" style="z-index:9;">
-                    <li class="dropdown__menu-item js-dropdown__menu-item">
-                      <div class="dropdown__item-name">взрослые</div>
-                      <div class="dropdown__count-buttons">
-                        <button class="dropdown__change-count-button dropdown__change-count-button_disabled js-dropdown__change-count-button" type="button" data-operator="-">-</button><span class="dropdown__count js-dropdown__count">0</span>
-                        <button class="dropdown__change-count-button js-dropdown__change-count-button" type="button" data-operator="+">+</button>
-                      </div>
-                    </li>
-                    <li class="dropdown__menu-item js-dropdown__menu-item">
-                      <div class="dropdown__item-name">дети</div>
-                      <div class="dropdown__count-buttons">
-                        <button class="dropdown__change-count-button dropdown__change-count-button_disabled js-dropdown__change-count-button" type="button" data-operator="-">-</button><span class="dropdown__count js-dropdown__count">0</span>
-                        <button class="dropdown__change-count-button js-dropdown__change-count-button" type="button" data-operator="+">+</button>
-                      </div>
-                    </li>
-                    <li class="dropdown__menu-item js-dropdown__menu-item">
-                      <div class="dropdown__item-name">младенцы</div>
-                      <div class="dropdown__count-buttons">
-                        <button class="dropdown__change-count-button dropdown__change-count-button_disabled js-dropdown__change-count-button" type="button" data-operator="-">-</button><span class="dropdown__count js-dropdown__count">0</span>
-                        <button class="dropdown__change-count-button js-dropdown__change-count-button" type="button" data-operator="+">+</button>
-                      </div>
-                    </li>
-                    <li class="dropdown__footer-buttons"><span class="dropdown__clear-button js-dropdown__clear-button">
-                        <button class="button button_theme_textual button_hovered" type="button"><span class="button__inner-wrapper"><span class="button__caption">очистить</span><span class="button__arrow material-icons">arrow_forward</span></span></button></span><span class="dropdown__apply-button js-dropdown__apply-button">
-                        <button class="button button_theme_textual" type="button"><span class="button__inner-wrapper"><span class="button__caption">применить</span><span class="button__arrow material-icons">arrow_forward</span></span></button></span></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="room-search__submit-button-group">
-              <a class="button button_theme_with-arrow button_fluid" href="room-filter.html"><span class="button__inner-wrapper"><span class="button__caption">Подобрать номер&nbsp;</span><span class="button__arrow material-icons">arrow_forward</span></span></a>
-            </div>
-          </form>
-        </article>
-        <article class="cards-page__card">
-          <form class="sign-up" method="POST" action="/">
-            <h1 class="sign-up__title">Регистрация аккаунта</h1>
-            <div class="sign-up__text-input"><span class="text-input">
-                <input class="text-input__input" id="sign-up_first-name-input" name="sign-up_first-name-input" type="text" placeholder="Имя"></span>
-            </div>
-            <div class="sign-up__text-input"><span class="text-input">
-                <input class="text-input__input" id="sign-up_last-name-input" name="sign-up_last-name-input" type="text" placeholder="Фамилия"></span>
-            </div>
-            <div class="sign-up__gender-button-group">
-              <div class="sign-up__gender-radio-button">
-                <div class="radio-button">
-                  <input class="radio-button__input" id="radio-button-gender-male" type="radio" name="gender" value="male" checked>
-                  <label class="radio-button__label" for="radio-button-gender-male">Мужчина</label>
-                </div>
-              </div>
-              <div class="sign-up__gender-radio-button">
-                <div class="radio-button">
-                  <input class="radio-button__input" id="radio-button-gender-female" type="radio" name="gender" value="female">
-                  <label class="radio-button__label" for="radio-button-gender-female">Женщина</label>
-                </div>
-              </div>
-            </div>
-            <div class="sign-up__birthday-group">
-              <div class="sign-up__text-input-label">
-                <label class="label" for="sign-up__input-birthday"><span class="label__title">Дата рождения</span><span class="label__hint"></span></label>
+            </form>
+          </article>
+          <article class="cards-page__card">
+            <form class="sign-up" method="POST" action="/">
+              <h1 class="sign-up__title">Регистрация аккаунта</h1>
+              <div class="sign-up__text-input"><span class="text-input">
+                  <input class="text-input__input" id="sign-up_first-name-input" name="sign-up_first-name-input" type="text" placeholder="Имя"></span>
               </div>
               <div class="sign-up__text-input"><span class="text-input">
-                  <input class="text-input__input" id="sign-up__input-birthday" name="sign-up__input-birthday" type="text" placeholder="ДД.ММ.ГГГГ"></span>
+                  <input class="text-input__input" id="sign-up_last-name-input" name="sign-up_last-name-input" type="text" placeholder="Фамилия"></span>
               </div>
-            </div>
-            <div class="sign-up__email-group">
-              <div class="sign-up__text-input-label">
-                <label class="label" for="sign-up__input-email"><span class="label__title">Данные для входа в сервис</span><span class="label__hint"></span></label>
+              <div class="sign-up__gender-button-group">
+                <div class="sign-up__gender-radio-button">
+                  <div class="radio-button">
+                    <input class="radio-button__input" id="radio-button-gender-male" type="radio" name="gender" value="male" checked>
+                    <label class="radio-button__label" for="radio-button-gender-male">Мужчина</label>
+                  </div>
+                </div>
+                <div class="sign-up__gender-radio-button">
+                  <div class="radio-button">
+                    <input class="radio-button__input" id="radio-button-gender-female" type="radio" name="gender" value="female">
+                    <label class="radio-button__label" for="radio-button-gender-female">Женщина</label>
+                  </div>
+                </div>
+              </div>
+              <div class="sign-up__birthday-group">
+                <div class="sign-up__text-input-label">
+                  <label class="label" for="sign-up__input-birthday"><span class="label__title">Дата рождения</span><span class="label__hint"></span></label>
+                </div>
+                <div class="sign-up__text-input"><span class="text-input">
+                    <input class="text-input__input" id="sign-up__input-birthday" name="sign-up__input-birthday" type="text" placeholder="ДД.ММ.ГГГГ"></span>
+                </div>
+              </div>
+              <div class="sign-up__email-group">
+                <div class="sign-up__text-input-label">
+                  <label class="label" for="sign-up__input-email"><span class="label__title">Данные для входа в сервис</span><span class="label__hint"></span></label>
+                </div>
+                <div class="sign-up__text-input"><span class="text-input">
+                    <input class="text-input__input" id="sign-up__input-email" name="sign-up__input-email" type="email" placeholder="Email"></span>
+                </div>
               </div>
               <div class="sign-up__text-input"><span class="text-input">
-                  <input class="text-input__input" id="sign-up__input-email" name="sign-up__input-email" type="email" placeholder="Email"></span>
+                  <input class="text-input__input" id="sign-up__input-password" name="sign-up__input-password" type="password" placeholder="Пароль"></span>
               </div>
-            </div>
-            <div class="sign-up__text-input"><span class="text-input">
-                <input class="text-input__input" id="sign-up__input-password" name="sign-up__input-password" type="password" placeholder="Пароль"></span>
-            </div>
-            <div class="sign-up__toggle-button-group">
-              <div class="toggle-button">
-                <input class="toggle-button__input" id="sign-up__toggle-promo" name="send-me-promo" type="checkbox">
-                <label class="toggle-button__label" for="sign-up__toggle-promo">Получать спецпредложения</label>
+              <div class="sign-up__toggle-button-group">
+                <div class="toggle-button">
+                  <input class="toggle-button__input" id="sign-up__toggle-promo" name="send-me-promo" type="checkbox">
+                  <label class="toggle-button__label" for="sign-up__toggle-promo">Получать спецпредложения</label>
+                </div>
               </div>
-            </div>
-            <div class="sign-up__submit-button-group">
-              <button class="button button_theme_with-arrow button_fluid" type="submit"><span class="button__inner-wrapper"><span class="button__caption">Перейти к оплате</span><span class="button__arrow material-icons">arrow_forward</span></span></button>
-            </div>
-            <div class="sign-up__sign-in-button-group">
-              <p class="sign-up__sign-in-hint">Уже есть аккаунт на Toxin</p>
-              <div class="sign-up__sign-in-button">
-                <a class="button button_theme_transparent button_fluid" href="sign-in.html"><span class="button__inner-wrapper"><span class="button__caption">Войти</span><span class="button__arrow material-icons">arrow_forward</span></span></a>
+              <div class="sign-up__submit-button-group">
+                <button class="button button_theme_with-arrow button_fluid" type="submit"><span class="button__inner-wrapper"><span class="button__caption">Перейти к оплате</span><span class="button__arrow material-icons">arrow_forward</span></span></button>
               </div>
-            </div>
-          </form>
-        </article>
-      </div>
-      <div class="cards-page__grid-column">
-        <article class="cards-page__card">
-          <form class="room-book" method="POST" action="/">
-            <header class="room-book__header">
-              <div class="room-book__number"><span class="room-book__number-sign">№</span><span class="room-book__number-value">888</span>
-                <h3 class="room-book__number-feature">люкс</h3>
+              <div class="sign-up__sign-in-button-group">
+                <p class="sign-up__sign-in-hint">Уже есть аккаунт на Toxin</p>
+                <div class="sign-up__sign-in-button">
+                  <a class="button button_theme_transparent button_fluid" href="sign-in.html"><span class="button__inner-wrapper"><span class="button__caption">Войти</span><span class="button__arrow material-icons">arrow_forward</span></span></a>
+                </div>
               </div>
-              <div class="room-book__price-per-day"><span class="room-book__cost">9&nbsp;990₽</span>&nbsp;<span class="room-book__date-unit">в сутки</span></div>
-            </header>
-            <div class="room-book__datepicker-date-range-group">
-              <div class="datepicker-date-range js-datepicker-date-range">
-                <div class="datepicker-date-range__dropdown-group-from js-datepicker-date-range__dropdown-group-from">
-                  <div class="datepicker-date-range__label">
-                    <label class="label"><span class="label__title">Прибытие</span><span class="label__hint"></span></label>
+            </form>
+          </article>
+        </div>
+        <div class="cards-page__grid-column">
+          <article class="cards-page__card">
+            <form class="room-book" method="POST" action="/">
+              <header class="room-book__header">
+                <div class="room-book__number"><span class="room-book__number-sign">№</span><span class="room-book__number-value">888</span>
+                  <h3 class="room-book__number-feature">люкс</h3>
+                </div>
+                <div class="room-book__price-per-day"><span class="room-book__cost">9&nbsp;990₽</span>&nbsp;<span class="room-book__date-unit">в сутки</span></div>
+              </header>
+              <div class="room-book__datepicker-date-range-group">
+                <div class="datepicker-date-range js-datepicker-date-range">
+                  <div class="datepicker-date-range__dropdown-group-from js-datepicker-date-range__dropdown-group-from">
+                    <div class="datepicker-date-range__label">
+                      <label class="label"><span class="label__title">Прибытие</span><span class="label__hint"></span></label>
+                    </div>
+                    <div class="datepicker-date-range__dropdown js-datepicker-date-range__dropdown">
+                      <div class="dropdown js-dropdown" id="room-book__check-in-out__from-date">
+                        <input class="dropdown__input js-dropdown__input" type="text" value="19.08.2019">
+                        <div class="dropdown__selection js-dropdown__selection">19.08.2019</div>
+                        <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
+                      </div>
+                    </div>
                   </div>
-                  <div class="datepicker-date-range__dropdown js-datepicker-date-range__dropdown">
-                    <div class="dropdown js-dropdown" id="room-book__check-in-out__from-date">
-                      <input class="dropdown__input js-dropdown__input" type="text" value="19.08.2019">
-                      <div class="dropdown__selection js-dropdown__selection">19.08.2019</div>
-                      <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
+                  <div class="datepicker-date-range__dropdown-group-to js-datepicker-date-range__dropdown-group-to">
+                    <div class="datepicker-date-range__label">
+                      <label class="label"><span class="label__title">Выезд</span><span class="label__hint"></span></label>
+                    </div>
+                    <div class="datepicker-date-range__dropdown js-datepicker-date-range__dropdown">
+                      <div class="dropdown js-dropdown" id="room-book__check-in-out__to-date">
+                        <input class="dropdown__input js-dropdown__input" type="text" value="23.08.2019">
+                        <div class="dropdown__selection js-dropdown__selection">23.08.2019</div>
+                        <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="datepicker-date-range__dropdown-group-to js-datepicker-date-range__dropdown-group-to">
-                  <div class="datepicker-date-range__label">
-                    <label class="label"><span class="label__title">Выезд</span><span class="label__hint"></span></label>
+              </div>
+              <div class="room-book__guests-dropdown-group">
+                <div class="room-book__guests-dropdown-label">
+                  <label class="label"><span class="label__title">Гости</span><span class="label__hint"></span></label>
+                </div>
+                <div class="room-book__guests-dropdown">
+                  <div class="dropdown js-dropdown" id="room-book__from-date">
+                    <input class="dropdown__input js-dropdown__input" type="text" value="3 гостя">
+                    <div class="dropdown__selection js-dropdown__selection">3 гостя</div>
+                    <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
+                    <ul class="dropdown__menu js-dropdown__menu" style="z-index:9;">
+                      <li class="dropdown__menu-item js-dropdown__menu-item">
+                        <div class="dropdown__item-name">взрослые</div>
+                        <div class="dropdown__count-buttons">
+                          <button class="dropdown__change-count-button js-dropdown__change-count-button" type="button" data-operator="-">-</button><span class="dropdown__count js-dropdown__count">2</span>
+                          <button class="dropdown__change-count-button js-dropdown__change-count-button" type="button" data-operator="+">+</button>
+                        </div>
+                      </li>
+                      <li class="dropdown__menu-item js-dropdown__menu-item">
+                        <div class="dropdown__item-name">дети</div>
+                        <div class="dropdown__count-buttons">
+                          <button class="dropdown__change-count-button js-dropdown__change-count-button" type="button" data-operator="-">-</button><span class="dropdown__count js-dropdown__count">1</span>
+                          <button class="dropdown__change-count-button js-dropdown__change-count-button" type="button" data-operator="+">+</button>
+                        </div>
+                      </li>
+                      <li class="dropdown__menu-item js-dropdown__menu-item">
+                        <div class="dropdown__item-name">младенцы</div>
+                        <div class="dropdown__count-buttons">
+                          <button class="dropdown__change-count-button dropdown__change-count-button_disabled js-dropdown__change-count-button" type="button" data-operator="-">-</button><span class="dropdown__count js-dropdown__count">0</span>
+                          <button class="dropdown__change-count-button js-dropdown__change-count-button" type="button" data-operator="+">+</button>
+                        </div>
+                      </li>
+                      <li class="dropdown__footer-buttons"><span class="dropdown__clear-button js-dropdown__clear-button">
+                          <button class="button button_theme_textual button_hovered" type="button"><span class="button__inner-wrapper"><span class="button__caption">очистить</span><span class="button__arrow material-icons">arrow_forward</span></span></button></span><span class="dropdown__apply-button js-dropdown__apply-button">
+                          <button class="button button_theme_textual" type="button"><span class="button__inner-wrapper"><span class="button__caption">применить</span><span class="button__arrow material-icons">arrow_forward</span></span></button></span></li>
+                    </ul>
                   </div>
-                  <div class="datepicker-date-range__dropdown js-datepicker-date-range__dropdown">
-                    <div class="dropdown js-dropdown" id="room-book__check-in-out__to-date">
-                      <input class="dropdown__input js-dropdown__input" type="text" value="23.08.2019">
-                      <div class="dropdown__selection js-dropdown__selection">23.08.2019</div>
-                      <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
-                    </div>
+                </div>
+              </div>
+              <div class="room-book__result-grid">
+                <div class="room-book__result-grid-cell">9&nbsp;990₽ x 4 суток</div>
+                <div class="room-book__result-grid-cell room-book__result-grid-cell_content_with-info-icon"></div>
+                <div class="room-book__result-grid-cell room-book__result-grid-cell_content_with-sum">39&nbsp;960₽</div>
+                <div class="room-book__result-grid-cell">Сбор за услуги: скидка 2&nbsp;179₽</div>
+                <div class="room-book__result-grid-cell room-book__result-grid-cell_content_with-info-icon"><span class="room-book__info-icon material-icons" title="change me">info_outline</span></div>
+                <div class="room-book__result-grid-cell room-book__result-grid-cell_content_with-sum">0₽</div>
+                <div class="room-book__result-grid-cell">Сбор за дополнительные услуги</div>
+                <div class="room-book__result-grid-cell room-book__result-grid-cell_content_with-info-icon"><span class="room-book__info-icon material-icons" title="change me">info_outline</span></div>
+                <div class="room-book__result-grid-cell room-book__result-grid-cell_content_with-sum">300₽</div>
+              </div>
+              <p class="room-book__total-row"><span class="room-book__total-header">Итого</span><span class="room-book__total-line"></span><span class="room-book__total-sum">38&nbsp;081₽</span></p>
+              <footer class="room-book__submit-button-group">
+                <button class="button button_theme_with-arrow button_fluid" type="submit"><span class="button__inner-wrapper"><span class="button__caption">Забронировать</span><span class="button__arrow material-icons">arrow_forward</span></span></button>
+              </footer>
+            </form>
+          </article>
+          <article class="cards-page__card">
+            <form class="sign-in" method="POST" action="/">
+              <h1 class="sign-in__title">Войти</h1>
+              <div class="sign-in__text-input"><span class="text-input">
+                  <input class="text-input__input" id="sign-in_email-input" name="sign-in_email-input" type="email" placeholder="Email"></span>
+              </div>
+              <div class="sign-in__text-input"><span class="text-input">
+                  <input class="text-input__input" id="sign-in_password-input" name="sign-in_password-input" type="password" placeholder="Пароль"></span>
+              </div>
+              <div class="sign-in__submit-button-group">
+                <button class="button button_theme_with-arrow button_fluid" type="submit"><span class="button__inner-wrapper"><span class="button__caption">Войти</span><span class="button__arrow material-icons">arrow_forward</span></span></button>
+              </div>
+              <div class="sign-in__sign-up-button-group">
+                <p class="sign-in__sign-up-hint">Нет аккаунта на Toxin?</p>
+                <div class="sign-in__sign-up-button">
+                  <a class="button button_theme_transparent" href="sign-up.html"><span class="button__inner-wrapper"><span class="button__caption">Создать</span><span class="button__arrow material-icons">arrow_forward</span></span></a>
+                </div>
+              </div>
+            </form>
+          </article>
+        </div>
+        <div class="cards-page__grid-column">
+          <article class="cards-page__card">
+            <div class="datepicker active">
+              <nav class="datepicker--nav">
+                <button class="datepicker--nav-action" type="button"><span class="material-icons">arrow_back</span></button>
+                <div class="datepicker--nav-title">Август<i>2019</i></div>
+                <button class="datepicker--nav-action" type="button"><span class="material-icons">arrow_forward</span></button>
+              </nav>
+              <div class="datepicker--content">
+                <div class="datepicker--days datepicker--body active">
+                  <div class="datepicker--days-names">
+                    <div class="datepicker--day-name">Пн</div>
+                    <div class="datepicker--day-name">Вт</div>
+                    <div class="datepicker--day-name">Ср</div>
+                    <div class="datepicker--day-name">Чт</div>
+                    <div class="datepicker--day-name">Пт</div>
+                    <div class="datepicker--day-name -weekend-">Сб</div>
+                    <div class="datepicker--day-name -weekend-">Вс</div>
+                  </div>
+                  <div class="datepicker--cells datepicker--cells-days">
+                    <div class="datepicker--cell datepicker--cell-day -other-month-">29</div>
+                    <div class="datepicker--cell datepicker--cell-day -other-month-">30</div>
+                    <div class="datepicker--cell datepicker--cell-day -other-month-">31</div>
+                    <div class="datepicker--cell datepicker--cell-day">1</div>
+                    <div class="datepicker--cell datepicker--cell-day">2</div>
+                    <div class="datepicker--cell datepicker--cell-day">3</div>
+                    <div class="datepicker--cell datepicker--cell-day">4</div>
+                    <div class="datepicker--cell datepicker--cell-day">5</div>
+                    <div class="datepicker--cell datepicker--cell-day">6</div>
+                    <div class="datepicker--cell datepicker--cell-day">7</div>
+                    <div class="datepicker--cell datepicker--cell-day -current-">8</div>
+                    <div class="datepicker--cell datepicker--cell-day">9</div>
+                    <div class="datepicker--cell datepicker--cell-day">10</div>
+                    <div class="datepicker--cell datepicker--cell-day">11</div>
+                    <div class="datepicker--cell datepicker--cell-day">12</div>
+                    <div class="datepicker--cell datepicker--cell-day">13</div>
+                    <div class="datepicker--cell datepicker--cell-day">14</div>
+                    <div class="datepicker--cell datepicker--cell-day">15</div>
+                    <div class="datepicker--cell datepicker--cell-day">16</div>
+                    <div class="datepicker--cell datepicker--cell-day">17</div>
+                    <div class="datepicker--cell datepicker--cell-day">18</div>
+                    <div class="datepicker--cell datepicker--cell-day -range-from- -selected-">19</div>
+                    <div class="datepicker--cell datepicker--cell-day -in-range-">20</div>
+                    <div class="datepicker--cell datepicker--cell-day -in-range-">21</div>
+                    <div class="datepicker--cell datepicker--cell-day -in-range-">22</div>
+                    <div class="datepicker--cell datepicker--cell-day -range-to- -selected-">23</div>
+                    <div class="datepicker--cell datepicker--cell-day">24</div>
+                    <div class="datepicker--cell datepicker--cell-day">25</div>
+                    <div class="datepicker--cell datepicker--cell-day">26</div>
+                    <div class="datepicker--cell datepicker--cell-day">27</div>
+                    <div class="datepicker--cell datepicker--cell-day">28</div>
+                    <div class="datepicker--cell datepicker--cell-day">29</div>
+                    <div class="datepicker--cell datepicker--cell-day">30</div>
+                    <div class="datepicker--cell datepicker--cell-day">31</div>
+                    <div class="datepicker--cell datepicker--cell-day -weekend- -other-month-">1</div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="room-book__guests-dropdown-group">
-              <div class="room-book__guests-dropdown-label">
-                <label class="label"><span class="label__title">Гости</span><span class="label__hint"></span></label>
+              <div class="datepicker__footer">
+                <button class="button button_theme_textual button_hovered" type="button" data-action="clear"><span class="button__inner-wrapper"><span class="button__caption">Очистить</span><span class="button__arrow material-icons">arrow_forward</span></span></button>
+                <button class="button button_theme_textual" type="button" data-action="apply"><span class="button__inner-wrapper"><span class="button__caption">Применить</span><span class="button__arrow material-icons">arrow_forward</span></span></button>
               </div>
-              <div class="room-book__guests-dropdown">
-                <div class="dropdown js-dropdown" id="room-book__from-date">
-                  <input class="dropdown__input js-dropdown__input" type="text" value="3 гостя">
-                  <div class="dropdown__selection js-dropdown__selection">3 гостя</div>
-                  <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
-                  <ul class="dropdown__menu js-dropdown__menu" style="z-index:9;">
-                    <li class="dropdown__menu-item js-dropdown__menu-item">
-                      <div class="dropdown__item-name">взрослые</div>
-                      <div class="dropdown__count-buttons">
-                        <button class="dropdown__change-count-button js-dropdown__change-count-button" type="button" data-operator="-">-</button><span class="dropdown__count js-dropdown__count">2</span>
-                        <button class="dropdown__change-count-button js-dropdown__change-count-button" type="button" data-operator="+">+</button>
-                      </div>
-                    </li>
-                    <li class="dropdown__menu-item js-dropdown__menu-item">
-                      <div class="dropdown__item-name">дети</div>
-                      <div class="dropdown__count-buttons">
-                        <button class="dropdown__change-count-button js-dropdown__change-count-button" type="button" data-operator="-">-</button><span class="dropdown__count js-dropdown__count">1</span>
-                        <button class="dropdown__change-count-button js-dropdown__change-count-button" type="button" data-operator="+">+</button>
-                      </div>
-                    </li>
-                    <li class="dropdown__menu-item js-dropdown__menu-item">
-                      <div class="dropdown__item-name">младенцы</div>
-                      <div class="dropdown__count-buttons">
-                        <button class="dropdown__change-count-button dropdown__change-count-button_disabled js-dropdown__change-count-button" type="button" data-operator="-">-</button><span class="dropdown__count js-dropdown__count">0</span>
-                        <button class="dropdown__change-count-button js-dropdown__change-count-button" type="button" data-operator="+">+</button>
-                      </div>
-                    </li>
-                    <li class="dropdown__footer-buttons"><span class="dropdown__clear-button js-dropdown__clear-button">
-                        <button class="button button_theme_textual button_hovered" type="button"><span class="button__inner-wrapper"><span class="button__caption">очистить</span><span class="button__arrow material-icons">arrow_forward</span></span></button></span><span class="dropdown__apply-button js-dropdown__apply-button">
-                        <button class="button button_theme_textual" type="button"><span class="button__inner-wrapper"><span class="button__caption">применить</span><span class="button__arrow material-icons">arrow_forward</span></span></button></span></li>
-                  </ul>
+            </div>
+          </article>
+          <article class="cards-page__card cards-page__card_type_room-thumbnail">
+            <div class="room-thumbnail room-thumbnail_focused">
+              <figure class="room-thumbnail__carousel"><img class="room-thumbnail__carousel-image room-thumbnail__carousel-image_active" src="./img/room-thumb-card-1.png" alt="Room 888"><img class="room-thumbnail__carousel-image" src="./img/room-thumb-card-1.png" alt="Room 888"><img class="room-thumbnail__carousel-image" src="./img/room-thumb-card-1.png" alt="Room 888"><img class="room-thumbnail__carousel-image" src="./img/room-thumb-card-1.png" alt="Room 888">
+                <button class="room-thumbnail__carousel-control room-thumbnail__carousel-control_type_prev"><span class="material-icons">keyboard_arrow_left</span></button>
+                <button class="room-thumbnail__carousel-control room-thumbnail__carousel-control_type_next"><span class="material-icons">keyboard_arrow_left</span></button>
+                <ul class="room-thumbnail__carousel-indicators">
+                  <li class="room-thumbnail__carousel-indicator room-thumbnail__carousel-indicator_active"></li>
+                  <li class="room-thumbnail__carousel-indicator"></li>
+                  <li class="room-thumbnail__carousel-indicator"></li>
+                  <li class="room-thumbnail__carousel-indicator"></li>
+                </ul>
+              </figure>
+              <header class="room-thumbnail__header"><a class="room-thumbnail__number" href="change-me"><span class="room-thumbnail__number-sign">№</span><span class="room-thumbnail__number-value">888</span>
+                  <h3 class="room-thumbnail__number-feature">люкс</h3></a>
+                <div class="room-thumbnail__price-per-day"><span class="room-thumbnail__cost">9&nbsp;990₽</span>&nbsp;<span class="room-thumbnail__date-unit">в сутки</span></div>
+              </header>
+              <footer class="room-thumbnail__footer">
+                <div class="room-thumbnail__rate">
+                  <div class="rate-button" id="888__rate">
+                    <input class="rate-button__input" id="888__rate5" type="radio" name="888__rate" value="5" checked>
+                    <label class="rate-button__label" for="888__rate5">5</label>
+                    <input class="rate-button__input" id="888__rate4" type="radio" name="888__rate" value="4">
+                    <label class="rate-button__label" for="888__rate4">4</label>
+                    <input class="rate-button__input" id="888__rate3" type="radio" name="888__rate" value="3">
+                    <label class="rate-button__label" for="888__rate3">3</label>
+                    <input class="rate-button__input" id="888__rate2" type="radio" name="888__rate" value="2">
+                    <label class="rate-button__label" for="888__rate2">2</label>
+                    <input class="rate-button__input" id="888__rate1" type="radio" name="888__rate" value="1">
+                    <label class="rate-button__label" for="888__rate1">1</label>
+                  </div>
                 </div>
-              </div>
+                <p class="room-thumbnail__feedback-counter"><b>145</b>&nbsp;<span>Отзывов</span></p>
+              </footer>
             </div>
-            <div class="room-book__result-grid">
-              <div class="room-book__result-grid-cell">9&nbsp;990₽ x 4 суток</div>
-              <div class="room-book__result-grid-cell room-book__result-grid-cell_content_with-info-icon"></div>
-              <div class="room-book__result-grid-cell room-book__result-grid-cell_content_with-sum">39&nbsp;960₽</div>
-              <div class="room-book__result-grid-cell">Сбор за услуги: скидка 2&nbsp;179₽</div>
-              <div class="room-book__result-grid-cell room-book__result-grid-cell_content_with-info-icon"><span class="room-book__info-icon material-icons" title="change me">info_outline</span></div>
-              <div class="room-book__result-grid-cell room-book__result-grid-cell_content_with-sum">0₽</div>
-              <div class="room-book__result-grid-cell">Сбор за дополнительные услуги</div>
-              <div class="room-book__result-grid-cell room-book__result-grid-cell_content_with-info-icon"><span class="room-book__info-icon material-icons" title="change me">info_outline</span></div>
-              <div class="room-book__result-grid-cell room-book__result-grid-cell_content_with-sum">300₽</div>
-            </div>
-            <p class="room-book__total-row"><span class="room-book__total-header">Итого</span><span class="room-book__total-line"></span><span class="room-book__total-sum">38&nbsp;081₽</span></p>
-            <footer class="room-book__submit-button-group">
-              <button class="button button_theme_with-arrow button_fluid" type="submit"><span class="button__inner-wrapper"><span class="button__caption">Забронировать</span><span class="button__arrow material-icons">arrow_forward</span></span></button>
-            </footer>
-          </form>
-        </article>
-        <article class="cards-page__card">
-          <form class="sign-in" method="POST" action="/">
-            <h1 class="sign-in__title">Войти</h1>
-            <div class="sign-in__text-input"><span class="text-input">
-                <input class="text-input__input" id="sign-in_email-input" name="sign-in_email-input" type="email" placeholder="Email"></span>
-            </div>
-            <div class="sign-in__text-input"><span class="text-input">
-                <input class="text-input__input" id="sign-in_password-input" name="sign-in_password-input" type="password" placeholder="Пароль"></span>
-            </div>
-            <div class="sign-in__submit-button-group">
-              <button class="button button_theme_with-arrow button_fluid" type="submit"><span class="button__inner-wrapper"><span class="button__caption">Войти</span><span class="button__arrow material-icons">arrow_forward</span></span></button>
-            </div>
-            <div class="sign-in__sign-up-button-group">
-              <p class="sign-in__sign-up-hint">Нет аккаунта на Toxin?</p>
-              <div class="sign-in__sign-up-button">
-                <a class="button button_theme_transparent" href="sign-up.html"><span class="button__inner-wrapper"><span class="button__caption">Создать</span><span class="button__arrow material-icons">arrow_forward</span></span></a>
-              </div>
-            </div>
-          </form>
-        </article>
-      </div>
-      <div class="cards-page__grid-column">
-        <article class="cards-page__card">
-          <div class="datepicker active">
-            <nav class="datepicker--nav">
-              <button class="datepicker--nav-action" type="button"><span class="material-icons">arrow_back</span></button>
-              <div class="datepicker--nav-title">Август<i>2019</i></div>
-              <button class="datepicker--nav-action" type="button"><span class="material-icons">arrow_forward</span></button>
-            </nav>
-            <div class="datepicker--content">
-              <div class="datepicker--days datepicker--body active">
-                <div class="datepicker--days-names">
-                  <div class="datepicker--day-name">Пн</div>
-                  <div class="datepicker--day-name">Вт</div>
-                  <div class="datepicker--day-name">Ср</div>
-                  <div class="datepicker--day-name">Чт</div>
-                  <div class="datepicker--day-name">Пт</div>
-                  <div class="datepicker--day-name -weekend-">Сб</div>
-                  <div class="datepicker--day-name -weekend-">Вс</div>
+          </article>
+          <article class="cards-page__card cards-page__card_type_room-thumbnail">
+            <div class="room-thumbnail">
+              <figure class="room-thumbnail__carousel"><img class="room-thumbnail__carousel-image room-thumbnail__carousel-image_active" src="./img/room-thumb-card-2.png" alt="Room 840"><img class="room-thumbnail__carousel-image" src="./img/room-thumb-card-2.png" alt="Room 840"><img class="room-thumbnail__carousel-image" src="./img/room-thumb-card-2.png" alt="Room 840"><img class="room-thumbnail__carousel-image" src="./img/room-thumb-card-2.png" alt="Room 840">
+                <button class="room-thumbnail__carousel-control room-thumbnail__carousel-control_type_prev"><span class="material-icons">keyboard_arrow_left</span></button>
+                <button class="room-thumbnail__carousel-control room-thumbnail__carousel-control_type_next"><span class="material-icons">keyboard_arrow_left</span></button>
+                <ul class="room-thumbnail__carousel-indicators">
+                  <li class="room-thumbnail__carousel-indicator room-thumbnail__carousel-indicator_active"></li>
+                  <li class="room-thumbnail__carousel-indicator"></li>
+                  <li class="room-thumbnail__carousel-indicator"></li>
+                  <li class="room-thumbnail__carousel-indicator"></li>
+                </ul>
+              </figure>
+              <header class="room-thumbnail__header"><a class="room-thumbnail__number" href="change-me"><span class="room-thumbnail__number-sign">№</span><span class="room-thumbnail__number-value">840</span></a>
+                <div class="room-thumbnail__price-per-day"><span class="room-thumbnail__cost">9&nbsp;900₽</span>&nbsp;<span class="room-thumbnail__date-unit">в сутки</span></div>
+              </header>
+              <footer class="room-thumbnail__footer">
+                <div class="room-thumbnail__rate">
+                  <div class="rate-button" id="840__rate">
+                    <input class="rate-button__input" id="840__rate5" type="radio" name="840__rate" value="5">
+                    <label class="rate-button__label" for="840__rate5">5</label>
+                    <input class="rate-button__input" id="840__rate4" type="radio" name="840__rate" value="4" checked>
+                    <label class="rate-button__label" for="840__rate4">4</label>
+                    <input class="rate-button__input" id="840__rate3" type="radio" name="840__rate" value="3">
+                    <label class="rate-button__label" for="840__rate3">3</label>
+                    <input class="rate-button__input" id="840__rate2" type="radio" name="840__rate" value="2">
+                    <label class="rate-button__label" for="840__rate2">2</label>
+                    <input class="rate-button__input" id="840__rate1" type="radio" name="840__rate" value="1">
+                    <label class="rate-button__label" for="840__rate1">1</label>
+                  </div>
                 </div>
-                <div class="datepicker--cells datepicker--cells-days">
-                  <div class="datepicker--cell datepicker--cell-day -other-month-">29</div>
-                  <div class="datepicker--cell datepicker--cell-day -other-month-">30</div>
-                  <div class="datepicker--cell datepicker--cell-day -other-month-">31</div>
-                  <div class="datepicker--cell datepicker--cell-day">1</div>
-                  <div class="datepicker--cell datepicker--cell-day">2</div>
-                  <div class="datepicker--cell datepicker--cell-day">3</div>
-                  <div class="datepicker--cell datepicker--cell-day">4</div>
-                  <div class="datepicker--cell datepicker--cell-day">5</div>
-                  <div class="datepicker--cell datepicker--cell-day">6</div>
-                  <div class="datepicker--cell datepicker--cell-day">7</div>
-                  <div class="datepicker--cell datepicker--cell-day -current-">8</div>
-                  <div class="datepicker--cell datepicker--cell-day">9</div>
-                  <div class="datepicker--cell datepicker--cell-day">10</div>
-                  <div class="datepicker--cell datepicker--cell-day">11</div>
-                  <div class="datepicker--cell datepicker--cell-day">12</div>
-                  <div class="datepicker--cell datepicker--cell-day">13</div>
-                  <div class="datepicker--cell datepicker--cell-day">14</div>
-                  <div class="datepicker--cell datepicker--cell-day">15</div>
-                  <div class="datepicker--cell datepicker--cell-day">16</div>
-                  <div class="datepicker--cell datepicker--cell-day">17</div>
-                  <div class="datepicker--cell datepicker--cell-day">18</div>
-                  <div class="datepicker--cell datepicker--cell-day -range-from- -selected-">19</div>
-                  <div class="datepicker--cell datepicker--cell-day -in-range-">20</div>
-                  <div class="datepicker--cell datepicker--cell-day -in-range-">21</div>
-                  <div class="datepicker--cell datepicker--cell-day -in-range-">22</div>
-                  <div class="datepicker--cell datepicker--cell-day -range-to- -selected-">23</div>
-                  <div class="datepicker--cell datepicker--cell-day">24</div>
-                  <div class="datepicker--cell datepicker--cell-day">25</div>
-                  <div class="datepicker--cell datepicker--cell-day">26</div>
-                  <div class="datepicker--cell datepicker--cell-day">27</div>
-                  <div class="datepicker--cell datepicker--cell-day">28</div>
-                  <div class="datepicker--cell datepicker--cell-day">29</div>
-                  <div class="datepicker--cell datepicker--cell-day">30</div>
-                  <div class="datepicker--cell datepicker--cell-day">31</div>
-                  <div class="datepicker--cell datepicker--cell-day -weekend- -other-month-">1</div>
-                </div>
-              </div>
+                <p class="room-thumbnail__feedback-counter"><b>65</b>&nbsp;<span>Отзывов</span></p>
+              </footer>
             </div>
-            <div class="datepicker__footer">
-              <button class="button button_theme_textual button_hovered" type="button" data-action="clear"><span class="button__inner-wrapper"><span class="button__caption">Очистить</span><span class="button__arrow material-icons">arrow_forward</span></span></button>
-              <button class="button button_theme_textual" type="button" data-action="apply"><span class="button__inner-wrapper"><span class="button__caption">Применить</span><span class="button__arrow material-icons">arrow_forward</span></span></button>
-            </div>
-          </div>
-        </article>
-        <article class="cards-page__card cards-page__card_type_room-thumbnail">
-          <div class="room-thumbnail room-thumbnail_focused">
-            <figure class="room-thumbnail__carousel"><img class="room-thumbnail__carousel-image room-thumbnail__carousel-image_active" src="./img/room-thumb-card-1.png" alt="Room 888"><img class="room-thumbnail__carousel-image" src="./img/room-thumb-card-1.png" alt="Room 888"><img class="room-thumbnail__carousel-image" src="./img/room-thumb-card-1.png" alt="Room 888"><img class="room-thumbnail__carousel-image" src="./img/room-thumb-card-1.png" alt="Room 888">
-              <button class="room-thumbnail__carousel-control room-thumbnail__carousel-control_type_prev"><span class="material-icons">keyboard_arrow_left</span></button>
-              <button class="room-thumbnail__carousel-control room-thumbnail__carousel-control_type_next"><span class="material-icons">keyboard_arrow_left</span></button>
-              <ul class="room-thumbnail__carousel-indicators">
-                <li class="room-thumbnail__carousel-indicator room-thumbnail__carousel-indicator_active"></li>
-                <li class="room-thumbnail__carousel-indicator"></li>
-                <li class="room-thumbnail__carousel-indicator"></li>
-                <li class="room-thumbnail__carousel-indicator"></li>
-              </ul>
-            </figure>
-            <header class="room-thumbnail__header"><a class="room-thumbnail__number" href="change-me"><span class="room-thumbnail__number-sign">№</span><span class="room-thumbnail__number-value">888</span>
-                <h3 class="room-thumbnail__number-feature">люкс</h3></a>
-              <div class="room-thumbnail__price-per-day"><span class="room-thumbnail__cost">9&nbsp;990₽</span>&nbsp;<span class="room-thumbnail__date-unit">в сутки</span></div>
-            </header>
-            <footer class="room-thumbnail__footer">
-              <div class="room-thumbnail__rate">
-                <div class="rate-button" id="888__rate">
-                  <input class="rate-button__input" id="888__rate5" type="radio" name="888__rate" value="5" checked>
-                  <label class="rate-button__label" for="888__rate5">5</label>
-                  <input class="rate-button__input" id="888__rate4" type="radio" name="888__rate" value="4">
-                  <label class="rate-button__label" for="888__rate4">4</label>
-                  <input class="rate-button__input" id="888__rate3" type="radio" name="888__rate" value="3">
-                  <label class="rate-button__label" for="888__rate3">3</label>
-                  <input class="rate-button__input" id="888__rate2" type="radio" name="888__rate" value="2">
-                  <label class="rate-button__label" for="888__rate2">2</label>
-                  <input class="rate-button__input" id="888__rate1" type="radio" name="888__rate" value="1">
-                  <label class="rate-button__label" for="888__rate1">1</label>
-                </div>
-              </div>
-              <p class="room-thumbnail__feedback-counter"><b>145</b>&nbsp;<span>Отзывов</span></p>
-            </footer>
-          </div>
-        </article>
-        <article class="cards-page__card cards-page__card_type_room-thumbnail">
-          <div class="room-thumbnail">
-            <figure class="room-thumbnail__carousel"><img class="room-thumbnail__carousel-image room-thumbnail__carousel-image_active" src="./img/room-thumb-card-2.png" alt="Room 840"><img class="room-thumbnail__carousel-image" src="./img/room-thumb-card-2.png" alt="Room 840"><img class="room-thumbnail__carousel-image" src="./img/room-thumb-card-2.png" alt="Room 840"><img class="room-thumbnail__carousel-image" src="./img/room-thumb-card-2.png" alt="Room 840">
-              <button class="room-thumbnail__carousel-control room-thumbnail__carousel-control_type_prev"><span class="material-icons">keyboard_arrow_left</span></button>
-              <button class="room-thumbnail__carousel-control room-thumbnail__carousel-control_type_next"><span class="material-icons">keyboard_arrow_left</span></button>
-              <ul class="room-thumbnail__carousel-indicators">
-                <li class="room-thumbnail__carousel-indicator room-thumbnail__carousel-indicator_active"></li>
-                <li class="room-thumbnail__carousel-indicator"></li>
-                <li class="room-thumbnail__carousel-indicator"></li>
-                <li class="room-thumbnail__carousel-indicator"></li>
-              </ul>
-            </figure>
-            <header class="room-thumbnail__header"><a class="room-thumbnail__number" href="change-me"><span class="room-thumbnail__number-sign">№</span><span class="room-thumbnail__number-value">840</span></a>
-              <div class="room-thumbnail__price-per-day"><span class="room-thumbnail__cost">9&nbsp;900₽</span>&nbsp;<span class="room-thumbnail__date-unit">в сутки</span></div>
-            </header>
-            <footer class="room-thumbnail__footer">
-              <div class="room-thumbnail__rate">
-                <div class="rate-button" id="840__rate">
-                  <input class="rate-button__input" id="840__rate5" type="radio" name="840__rate" value="5">
-                  <label class="rate-button__label" for="840__rate5">5</label>
-                  <input class="rate-button__input" id="840__rate4" type="radio" name="840__rate" value="4" checked>
-                  <label class="rate-button__label" for="840__rate4">4</label>
-                  <input class="rate-button__input" id="840__rate3" type="radio" name="840__rate" value="3">
-                  <label class="rate-button__label" for="840__rate3">3</label>
-                  <input class="rate-button__input" id="840__rate2" type="radio" name="840__rate" value="2">
-                  <label class="rate-button__label" for="840__rate2">2</label>
-                  <input class="rate-button__input" id="840__rate1" type="radio" name="840__rate" value="1">
-                  <label class="rate-button__label" for="840__rate1">1</label>
-                </div>
-              </div>
-              <p class="room-thumbnail__feedback-counter"><b>65</b>&nbsp;<span>Отзывов</span></p>
-            </footer>
-          </div>
-        </article>
+          </article>
+        </div>
       </div>
     </div>
-  <script type="text/javascript" src="cards.c0da22b543107dabf13a.js"></script></body>
+  <script type="text/javascript" src="cards.608d925eddca50243885.js"></script></body>
 </html>

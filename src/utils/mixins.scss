@@ -1,12 +1,19 @@
 @import './vars';
 
-@mixin inner-wrapper($lgWidth: 80.6%, $mdWidth: 95.5%) {
+@mixin inner-wrapper($lgWidth: 80.6%, $mdWidth: 95.5%, $maxWidth: 72.5rem) {
   margin: 0 auto;
   width: $mdWidth;
   @media (min-width: $screen-md-min) {
     width: $lgWidth;
-    max-width: 72.5rem;
+    max-width: $maxWidth;
   }
+}
+
+@mixin ui-kit-navigation($marginBottom) {
+  @include inner-wrapper($lgWidth: 95.8%, $mdWidth: 95.8%, $maxWidth: 86.25rem);
+  display: flex;
+  padding: 1.875rem 0;
+  margin-bottom: $marginBottom;
 }
 
 @mixin auth-page {

@@ -9,16 +9,20 @@
 @import '../room-thumbnail/room-thumbnail.scss';
 
 .cards-page {
-  @include inner-wrapper;
-  margin-top: 9.375rem;
-  display: grid;
-  grid-template-columns: 1.1875fr 1.1875fr 1fr;
-  grid-column-gap: 2.5rem;
-  @media (max-width: $screen-md-max) {
-    grid-template-columns: repeat(auto-fill, minmax(23.75rem, 1fr));
+  &__nav {
+    @include ui-kit-navigation($marginBottom: 2.6875rem);
   }
-  @media (max-width: $screen-xs-max) {
-    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  &__main {
+    @include inner-wrapper;
+    display: grid;
+    grid-template-columns: 1.1875fr 1.1875fr 1fr;
+    grid-column-gap: 2.5rem;
+    @media (max-width: $screen-md-max) {
+      grid-template-columns: repeat(auto-fill, minmax(23.75rem, 1fr));
+    }
+    @media (max-width: $screen-xs-max) {
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
   }
   &__card {
     margin-bottom: 2.5rem;

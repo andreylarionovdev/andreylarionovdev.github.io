@@ -1,8 +1,11 @@
+@import '../../utils/mixins';
 @import '../header/header.scss';
 @import '../footer/footer.scss';
 
 .headers-footers-page {
-  margin-top: 9.375rem;
+  &__nav {
+    @include ui-kit-navigation($marginBottom: 2.625rem);
+  }
   &__header,
   &__footer {
     margin-bottom: 2.5rem;

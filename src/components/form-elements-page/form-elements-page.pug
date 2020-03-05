@@ -1,3 +1,4 @@
+include ../logo/logo
 include ../text-input/text-input
 include ../dropdown/dropdown
 include ../datepicker-date-range/datepicker-date-range
@@ -14,371 +15,374 @@ include ../checkbox-list-expandable/checkbox-list-expandable
 include ../bullet-list/bullet-list
 include ../feature/feature
 include ../feedback/feedback
-  
+
 mixin form-elements-page
   .form-elements-page
-    section.form-elements-page__section
-      .form-elements-page__section-column
-        .form-elements-page__input-group
-          +label({
-            label: 'text field',
-            hint: 'default'
-          })
-          +text-input({
-            id: 'input-email',
-            placeholder: 'Email',
-            type: 'email'
-          })
-        .form-elements-page__input-group.form-elements-page__input-group_hovered
-          +label({
-            label: 'text field',
-            hint: 'hover / focus'
-          })
-          +text-input({
-            id: 'input-focused-hovered',
-            placeholder: 'Some text',
-            value: 'This is pretty awesome',
-            isHovered: true
-          })
-        .form-elements-page__dropdown-group
-          +label({
-            label: 'dropdown',
-            hint: 'default'
-          })
-          +dropdown({
-            id: 'default-dropdown',
-            value: 'Сколько гостей'
-          })
-        .form-elements-page__input-group.form-elements-page__input-group_theme_with-mask
-          +label({
-            label: 'masked text field',
-            hint: 'default'
-          })
-          +text-input({
-            id: 'input-with-mask',
-            placeholder: 'ДД.ММ.ГГГГ'
-          })
-        .form-elements-page__dropdown-group.form-elements-page__dropdown-group_theme_datepicker-date-range
-          +datepicker-date-range({
-            id: 'datepicker-date-range-demo',
-            fromLabel: 'date dropdown',
-            from: 'ДД.ММ.ГГГГ',
-            toLabel: 'date dropdown',
-            to: '19.08.2019 '
-          })
-        .form-elements-page__dropdown-group.form-elements-page__dropdown-group_theme_date-filter
-          +label({
-            label: 'filter date dropdown'
-          })
-          +dropdown({
-            id: 'date-filter',
-            value: '19 авг - 23 авг'
-          })
-        .form-elements-page__input-group.form-elements-page__input-group_theme_with-submit
-          +label({
-            label: 'subscription text field'
-          })
-          +text-input({
-            id: 'input-submit',
-            placeholder: 'Email',
-            withButton: true,
-            type: 'email'
-          })
-      .form-elements-page__section-column-gap
-      .form-elements-page__section-column
-        .form-elements-page__checkbox-group
-          +checkbox-list({
-            label: 'checkbox buttons',
-            items: [
-              {
-                id: 'smoke-allowed',
-                label: 'Можно курить',
-              },
-              {
-                id: 'pets-allowed',
-                label: 'Можно с питомцами',
-                isChecked: true,
-              },
-              {
-                id: 'guests-allowed',
-                label: 'Можно пригласить гостей (до 10 человек)',
-                isChecked: true,
-              }
-            ]
-          })
-        .form-elements-page__radio-group
-          +label({
-            label: 'radio buttons'
-          })
-          +radio-button({
-            id: 'radio-male',
-            name: 'gender',
-            value: 'male',
-            label: 'Мужчина',
-            isChecked: true
-          })
-          +radio-button({
-            id: 'radio-female',
-            name: 'gender',
-            value: 'female',
-            label: 'Женщина'
-          })
-        .form-elements-page__toggle-group
-          +label({
-            label: 'toggle'
-          })
-          +toggle-button({
-            id: 'first-toggle',
-            label: 'Получать спецпредложения',
-            isChecked: true
-          })
-          +toggle-button({
-            id: 'second-toggle',
-            label: 'Получать спецпредложения'
-          })
-        .form-elements-page__like-button-group
-          +label({
-            label: 'like button'
-          })
-          +like-button({
-            count: 2
-          })
-          +like-button({
-            count: 12,
-            isFavorite: true
-          })
-        .form-elements-page__rate-button-group
-          +label({
-            label: 'rate button'
-          })
-          +rate-button({
-            id: 'rate-first',
-            base: 5,
-            rate: 4
-          })
-          +rate-button({
-            id: 'rate-second',
-            base: 5,
-            rate: 5
-          })
-      .form-elements-page__section-column-gap
-      .form-elements-page__section-column
-        .form-elements-page__range-slider
-          +range-slider({
-            name: 'range-slider',
-            min: 0,
-            max: 16000,
-            from: 5000,
-            to: 10000,
-          })
-        .form-elements-page__button-group
-          +label({
-            label: 'buttons'
-          })
-          .form-elements-page__row
-            +button({
-              theme: 'default',
-              type: 'button',
-              caption: 'click me'
-            })
-            +button({
-              theme: 'default',
-              type: 'button',
-              caption: 'click me',
-              isHovered: true
-            })
-          .form-elements-page__row
-            +button({
-              theme: 'transparent',
-              type: 'button',
-              caption: 'click me'
-            })
-            +button({
-              theme: 'transparent',
-              type: 'button',
-              caption: 'click me',
-              isHovered: true
-            })
-          .form-elements-page__row
-            +button({
-              theme: 'textual',
-              type: 'button',
-              caption: 'click me'
-            })
-            +button({
-              theme: 'textual',
-              type: 'button',
-              caption: 'click me',
-              isHovered: true
-            })
-          .form-elements-page__row
-            +button({
-              theme: 'with-arrow',
-              type: 'button',
-              caption: 'перейти к оплате',
-              isFluid: true,
-            })
-        .form-elements-page__paginator-group
-          +label({
-            label: 'pagination'
-          })
-          +paginator({
-            source: JSON.stringify([...Array(180).keys()]),
-            pageSize: 12,
-            pageRange: 1
-          })
-    section.form-elements-page__section
-      .form-elements-page__section-column
-        .form-elements-page__dropdown-group.form-elements-page__dropdown-group_collapsed
-          +label({
-            label: 'dropdown',
-            hint: 'default'
-          })
-          +dropdown({
-            id: 'dropdown-collapsed',
-            value: '2 спальни, 2 кровати...'
-          })
-        .form-elements-page__dropdown-group.form-elements-page__dropdown-group
-          +label({
-            label: 'dropdown',
-            hint: 'expanded'
-          })
-          +dropdown({
-            id: 'dropdown-expanded',
-            isExpanded: true,
-            value: '2 спальни, 2 кровати...',
-            zIndex: 999,
-            rows: [
-              {count: 2, text: 'спальни', name: 'bedroom'},
-              {count: 2, text: 'кровати', name: 'bed'},
-              {count: 0, text: 'ванные комнаты', name: 'bathroom'}
-            ]
-          })
-      .form-elements-page__section-column-gap
-      .form-elements-page__section-column
-        .form-elements-page__dropdown-group.form-elements-page__dropdown-group_theme_with-apply-btn
-          +label({
-            label: 'dropdown'
-          })
-          +dropdown({
-            id: 'dropdown-expanded',
-            isExpanded: true,
-            isEdited: true,
-            isEmpty: true,
-            zIndex: 99,
-            value: 'Сколько гостей',
-            rows: [
-              {count: 0, text: 'взрослые', name: 'adult'},
-              {count: 0, text: 'дети', name: 'kids'},
-              {count: 0, text: 'младенцы', name: 'baby'}
-            ]
-          })
-      .form-elements-page__section-column-gap
-      .form-elements-page__section-column
-        .form-elements-page__dropdown-group.form-elements-page__dropdown-group_theme_with-clear-btn
-          +label({
-            label: 'dropdown'
-          })
-          +dropdown({
-            id: 'dropdown-expanded',
-            isExpanded: true,
-            isEdited: true,
-            value: '3 гостя',
-            rows: [
-              {count: 2, text: 'взрослые', name: 'adult'},
-              {count: 1, text: 'дети', name: 'kids'},
-              {count: 0, text: 'младенцы', name: 'baby'}
-            ]
-          })
-    section.form-elements-page__section
-      .form-elements-page__section-column
-        .form-elements-page__checkbox-list-expandable-group.form-elements-page__checkbox-list-expandable-group
-          +checkbox-list-expandable({
-            id: 'exp_check_list_collapsed',
-            label: 'Expandable checkbox list'
-          })
-        .form-elements-page__checkbox-list-expandable-group.form-elements-page__checkbox-list-expandable-group_expanded
-          +checkbox-list-expandable({
-            id: 'exp_check_list_collapsed',
-            label: 'Expandable checkbox list',
-            isExpanded: true,
-            items: [
-              {name: 'breakfast', label: 'Завтрак'},
-              {name: 'table', label: 'Письменный стол', isChecked: true},
-              {name: 'baby-chair-for-eat', label: 'Стул для кормления', isChecked: true},
-              {name: 'baby-bed', label: 'Кроватка', isChecked: true},
-              {name: 'tv_1', label: 'Телевизор'},
-              {name: 'shampoo_1', label: 'Шампунь'},
-              {name: 'tv_2', label: 'Телевизор'},
-              {name: 'shampoo_2', label: 'Шампунь'}
-            ]
-          })
-      .form-elements-page__section-column-gap
-      .form-elements-page__section-column
-        .form-elements-page__rich-checkbox-group
-          - const theme = 'rich';
-          +checkbox-list({
-            label: 'rich checkbox buttons',
-            theme,
-            items: [
-              {
-                id: 'wide-hall-checkbox',
-                label: 'Широкий коридор',
-                hint: 'Ширина коридоров в номере не&nbsp;менее 91 см.',
-                theme,
-              },
-              {
-                id: 'disable-assistant-checkbox',
-                label: 'Помощник для инвалидов',
-                hint: 'На 1 этаже вас встретит специалист и проводит до номера.',
-                theme,
-              }
-            ]
-          })
-      .form-elements-page__section-column-gap
-      .form-elements-page__section-column
-        .form-elements-page__bullet-list-group
-          .form-elements-page__label
+    nav.form-elements-page__nav
+      +logo
+    .form-elements-page__main
+      section.form-elements-page__section
+        .form-elements-page__section-column
+          .form-elements-page__input-group
             +label({
-              label: 'Bullet list'
+              label: 'text field',
+              hint: 'default'
             })
-          +bullet-list({
-            id: 'bullet-list',
-            items: [
-              {text: 'Нельзя с питомцами'},
-              {text: 'Без вечеринок и мероприятий'},
-              {text: 'Время прибытия &mdash; после 13:00, а выезд до 12:00'}
-            ]
-          })
-    section.form-elements-page__section
-      .form-elements-page__section-column
-        .form-elements-page__feature-group
-          .form-elements-page__feature
-            +feature({
-              icon: 'mood',
-              title: 'Комфорт',
-              hint: 'Шумопоглощающие стены'
+            +text-input({
+              id: 'input-email',
+              placeholder: 'Email',
+              type: 'email'
             })
-          .form-elements-page__feature
-            +feature({
-              icon: 'location_city',
-              title: 'Удобство',
-              hint: 'Окно в каждой из спален'
+          .form-elements-page__input-group.form-elements-page__input-group_hovered
+            +label({
+              label: 'text field',
+              hint: 'hover / focus'
             })
-      .form-elements-page__section-column-gap
-      .form-elements-page__section-column
-        .feedback-group.form-elements-page__feedback-group
-          .feedback-group__feedback
-            +feedback({
-              author: {
-                name: 'Мурад Сарафанов',
-                image: {
-                  src: './img/murad.png',
-                  alt: 'Фото автора'
+            +text-input({
+              id: 'input-focused-hovered',
+              placeholder: 'Some text',
+              value: 'This is pretty awesome',
+              isHovered: true
+            })
+          .form-elements-page__dropdown-group
+            +label({
+              label: 'dropdown',
+              hint: 'default'
+            })
+            +dropdown({
+              id: 'default-dropdown',
+              value: 'Сколько гостей'
+            })
+          .form-elements-page__input-group.form-elements-page__input-group_theme_with-mask
+            +label({
+              label: 'masked text field',
+              hint: 'default'
+            })
+            +text-input({
+              id: 'input-with-mask',
+              placeholder: 'ДД.ММ.ГГГГ'
+            })
+          .form-elements-page__dropdown-group.form-elements-page__dropdown-group_theme_datepicker-date-range
+            +datepicker-date-range({
+              id: 'datepicker-date-range-demo',
+              fromLabel: 'date dropdown',
+              from: 'ДД.ММ.ГГГГ',
+              toLabel: 'date dropdown',
+              to: '19.08.2019 '
+            })
+          .form-elements-page__dropdown-group.form-elements-page__dropdown-group_theme_date-filter
+            +label({
+              label: 'filter date dropdown'
+            })
+            +dropdown({
+              id: 'date-filter',
+              value: '19 авг - 23 авг'
+            })
+          .form-elements-page__input-group.form-elements-page__input-group_theme_with-submit
+            +label({
+              label: 'subscription text field'
+            })
+            +text-input({
+              id: 'input-submit',
+              placeholder: 'Email',
+              withButton: true,
+              type: 'email'
+            })
+        .form-elements-page__section-column-gap
+        .form-elements-page__section-column
+          .form-elements-page__checkbox-group
+            +checkbox-list({
+              label: 'checkbox buttons',
+              items: [
+                {
+                  id: 'smoke-allowed',
+                  label: 'Можно курить',
+                },
+                {
+                  id: 'pets-allowed',
+                  label: 'Можно с питомцами',
+                  isChecked: true,
+                },
+                {
+                  id: 'guests-allowed',
+                  label: 'Можно пригласить гостей (до 10 человек)',
+                  isChecked: true,
                 }
-              },
-              date: '5 дней назад',
-              text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И&nbsp;стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
-              favoritesCount: 12,
-              isFavorite: true,
+              ]
             })
+          .form-elements-page__radio-group
+            +label({
+              label: 'radio buttons'
+            })
+            +radio-button({
+              id: 'radio-male',
+              name: 'gender',
+              value: 'male',
+              label: 'Мужчина',
+              isChecked: true
+            })
+            +radio-button({
+              id: 'radio-female',
+              name: 'gender',
+              value: 'female',
+              label: 'Женщина'
+            })
+          .form-elements-page__toggle-group
+            +label({
+              label: 'toggle'
+            })
+            +toggle-button({
+              id: 'first-toggle',
+              label: 'Получать спецпредложения',
+              isChecked: true
+            })
+            +toggle-button({
+              id: 'second-toggle',
+              label: 'Получать спецпредложения'
+            })
+          .form-elements-page__like-button-group
+            +label({
+              label: 'like button'
+            })
+            +like-button({
+              count: 2
+            })
+            +like-button({
+              count: 12,
+              isFavorite: true
+            })
+          .form-elements-page__rate-button-group
+            +label({
+              label: 'rate button'
+            })
+            +rate-button({
+              id: 'rate-first',
+              base: 5,
+              rate: 4
+            })
+            +rate-button({
+              id: 'rate-second',
+              base: 5,
+              rate: 5
+            })
+        .form-elements-page__section-column-gap
+        .form-elements-page__section-column
+          .form-elements-page__range-slider
+            +range-slider({
+              name: 'range-slider',
+              min: 0,
+              max: 16000,
+              from: 5000,
+              to: 10000,
+            })
+          .form-elements-page__button-group
+            +label({
+              label: 'buttons'
+            })
+            .form-elements-page__row
+              +button({
+                theme: 'default',
+                type: 'button',
+                caption: 'click me'
+              })
+              +button({
+                theme: 'default',
+                type: 'button',
+                caption: 'click me',
+                isHovered: true
+              })
+            .form-elements-page__row
+              +button({
+                theme: 'transparent',
+                type: 'button',
+                caption: 'click me'
+              })
+              +button({
+                theme: 'transparent',
+                type: 'button',
+                caption: 'click me',
+                isHovered: true
+              })
+            .form-elements-page__row
+              +button({
+                theme: 'textual',
+                type: 'button',
+                caption: 'click me'
+              })
+              +button({
+                theme: 'textual',
+                type: 'button',
+                caption: 'click me',
+                isHovered: true
+              })
+            .form-elements-page__row
+              +button({
+                theme: 'with-arrow',
+                type: 'button',
+                caption: 'перейти к оплате',
+                isFluid: true,
+              })
+          .form-elements-page__paginator-group
+            +label({
+              label: 'pagination'
+            })
+            +paginator({
+              source: JSON.stringify([...Array(180).keys()]),
+              pageSize: 12,
+              pageRange: 1
+            })
+      section.form-elements-page__section
+        .form-elements-page__section-column
+          .form-elements-page__dropdown-group.form-elements-page__dropdown-group_collapsed
+            +label({
+              label: 'dropdown',
+              hint: 'default'
+            })
+            +dropdown({
+              id: 'dropdown-collapsed',
+              value: '2 спальни, 2 кровати...'
+            })
+          .form-elements-page__dropdown-group.form-elements-page__dropdown-group
+            +label({
+              label: 'dropdown',
+              hint: 'expanded'
+            })
+            +dropdown({
+              id: 'dropdown-expanded',
+              isExpanded: true,
+              value: '2 спальни, 2 кровати...',
+              zIndex: 999,
+              rows: [
+                {count: 2, text: 'спальни', name: 'bedroom'},
+                {count: 2, text: 'кровати', name: 'bed'},
+                {count: 0, text: 'ванные комнаты', name: 'bathroom'}
+              ]
+            })
+        .form-elements-page__section-column-gap
+        .form-elements-page__section-column
+          .form-elements-page__dropdown-group.form-elements-page__dropdown-group_theme_with-apply-btn
+            +label({
+              label: 'dropdown'
+            })
+            +dropdown({
+              id: 'dropdown-expanded',
+              isExpanded: true,
+              isEdited: true,
+              isEmpty: true,
+              zIndex: 99,
+              value: 'Сколько гостей',
+              rows: [
+                {count: 0, text: 'взрослые', name: 'adult'},
+                {count: 0, text: 'дети', name: 'kids'},
+                {count: 0, text: 'младенцы', name: 'baby'}
+              ]
+            })
+        .form-elements-page__section-column-gap
+        .form-elements-page__section-column
+          .form-elements-page__dropdown-group.form-elements-page__dropdown-group_theme_with-clear-btn
+            +label({
+              label: 'dropdown'
+            })
+            +dropdown({
+              id: 'dropdown-expanded',
+              isExpanded: true,
+              isEdited: true,
+              value: '3 гостя',
+              rows: [
+                {count: 2, text: 'взрослые', name: 'adult'},
+                {count: 1, text: 'дети', name: 'kids'},
+                {count: 0, text: 'младенцы', name: 'baby'}
+              ]
+            })
+      section.form-elements-page__section
+        .form-elements-page__section-column
+          .form-elements-page__checkbox-list-expandable-group.form-elements-page__checkbox-list-expandable-group
+            +checkbox-list-expandable({
+              id: 'exp_check_list_collapsed',
+              label: 'Expandable checkbox list'
+            })
+          .form-elements-page__checkbox-list-expandable-group.form-elements-page__checkbox-list-expandable-group_expanded
+            +checkbox-list-expandable({
+              id: 'exp_check_list_collapsed',
+              label: 'Expandable checkbox list',
+              isExpanded: true,
+              items: [
+                {name: 'breakfast', label: 'Завтрак'},
+                {name: 'table', label: 'Письменный стол', isChecked: true},
+                {name: 'baby-chair-for-eat', label: 'Стул для кормления', isChecked: true},
+                {name: 'baby-bed', label: 'Кроватка', isChecked: true},
+                {name: 'tv_1', label: 'Телевизор'},
+                {name: 'shampoo_1', label: 'Шампунь'},
+                {name: 'tv_2', label: 'Телевизор'},
+                {name: 'shampoo_2', label: 'Шампунь'}
+              ]
+            })
+        .form-elements-page__section-column-gap
+        .form-elements-page__section-column
+          .form-elements-page__rich-checkbox-group
+            - const theme = 'rich';
+            +checkbox-list({
+              label: 'rich checkbox buttons',
+              theme,
+              items: [
+                {
+                  id: 'wide-hall-checkbox',
+                  label: 'Широкий коридор',
+                  hint: 'Ширина коридоров в номере не&nbsp;менее 91 см.',
+                  theme,
+                },
+                {
+                  id: 'disable-assistant-checkbox',
+                  label: 'Помощник для инвалидов',
+                  hint: 'На 1 этаже вас встретит специалист и проводит до номера.',
+                  theme,
+                }
+              ]
+            })
+        .form-elements-page__section-column-gap
+        .form-elements-page__section-column
+          .form-elements-page__bullet-list-group
+            .form-elements-page__label
+              +label({
+                label: 'Bullet list'
+              })
+            +bullet-list({
+              id: 'bullet-list',
+              items: [
+                {text: 'Нельзя с питомцами'},
+                {text: 'Без вечеринок и мероприятий'},
+                {text: 'Время прибытия &mdash; после 13:00, а выезд до 12:00'}
+              ]
+            })
+      section.form-elements-page__section
+        .form-elements-page__section-column
+          .form-elements-page__feature-group
+            .form-elements-page__feature
+              +feature({
+                icon: 'mood',
+                title: 'Комфорт',
+                hint: 'Шумопоглощающие стены'
+              })
+            .form-elements-page__feature
+              +feature({
+                icon: 'location_city',
+                title: 'Удобство',
+                hint: 'Окно в каждой из спален'
+              })
+        .form-elements-page__section-column-gap
+        .form-elements-page__section-column
+          .feedback-group.form-elements-page__feedback-group
+            .feedback-group__feedback
+              +feedback({
+                author: {
+                  name: 'Мурад Сарафанов',
+                  image: {
+                    src: './img/murad.png',
+                    alt: 'Фото автора'
+                  }
+                },
+                date: '5 дней назад',
+                text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И&nbsp;стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+                favoritesCount: 12,
+                isFavorite: true,
+              })

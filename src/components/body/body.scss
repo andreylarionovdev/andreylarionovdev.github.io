@@ -1,11 +1,6 @@
 @import '../../utils/vars';
 
 .body {
-  &__logo {
-    position: absolute;
-    top: 1.875rem;
-    left: 1.875rem;
-  }
   &_theme {
     &_gray {
       background-color: $color-gray;
