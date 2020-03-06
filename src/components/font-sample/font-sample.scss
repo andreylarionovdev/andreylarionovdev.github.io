@@ -35,11 +35,11 @@
       #{$blockClass}__name {
         @include h2;
         @include name;
+        padding-left: 0.625rem;
       }
       #{$blockClass}__description {
         @include h2;
         @include description;
-        padding-right: 2rem;
       }
     }
     &_h3 {
@@ -63,7 +63,7 @@
       #{$blockClass}__description {
         @include primary-text;
         @include description;
-        padding-right: 4rem;
+        padding-right: 2rem;
         font-family: Montserrat, sans-serif;
       }
     }
