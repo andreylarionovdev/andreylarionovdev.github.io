@@ -9,7 +9,7 @@ include ../like-button/like-button
 include ../rate-button/rate-button
 include ../range-slider/range-slider
 include ../button/button
-include ../paginator/paginator
+include ../pagination/pagination
 include ../checkbox-list/checkbox-list
 include ../checkbox-list-expandable/checkbox-list-expandable
 include ../bullet-list/bullet-list
@@ -222,11 +222,11 @@ mixin form-elements-page
                 caption: 'перейти к оплате',
                 isFluid: true,
               })
-          .form-elements-page__paginator-group
+          .form-elements-page__pagination-group
             +label({
               label: 'pagination'
             })
-            +paginator({
+            +pagination({
               source: JSON.stringify([...Array(180).keys()]),
               pageSize: 12,
               pageRange: 1

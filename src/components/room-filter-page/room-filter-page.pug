@@ -3,7 +3,7 @@ include ../label/label
 include ../checkbox-list/checkbox-list
 include ../checkbox-list-expandable/checkbox-list-expandable
 include ../room-thumbnail/room-thumbnail
-include ../paginator/paginator
+include ../pagination/pagination
 include ../dropdown/dropdown
 
 mixin room-filter-page
@@ -262,8 +262,8 @@ mixin room-filter-page
                 focus: room.focus,
                 href: 'room-details.html',
               })
-        section.room-filter-page__paginator
-          +paginator({
+        section.room-filter-page__pagination
+          +pagination({
             source: JSON.stringify([...Array(180).keys()]),
             pageSize: 12,
             pageRange: 1,

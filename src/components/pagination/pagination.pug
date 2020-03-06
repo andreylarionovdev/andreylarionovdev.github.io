@@ -1,0 +1,4 @@
+mixin pagination(options)
+  - const { source = [], pageSize = 12, pageRange = 1 } = options || {};
+
+  .pagination.js-pagination(data-source=source data-page-size=pageSize data-page-range=pageRange)

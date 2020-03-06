@@ -3,7 +3,7 @@ import '../../utils/app.scss';
 import '../dropdown/dropdown';
 import '../range-slider/range-slider';
 import '../checkbox-list-expandable/checkbox-list-expandable';
-import '../paginator/paginator';
+import '../pagination/pagination';
 
 import './img/room-thumb-1.png';
 import './img/room-thumb-2.png';
