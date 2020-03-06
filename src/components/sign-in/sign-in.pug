@@ -20,7 +20,7 @@ mixin sign-in(options)
         placeholder: 'Пароль',
         type: 'password',
       })
-    .sign-in__submit-button-group
+    .sign-in__button
       +button({
         theme: 'with-arrow',
         type: 'submit',
@@ -29,7 +29,7 @@ mixin sign-in(options)
       })
     .sign-in__sign-up-button-group
       p.sign-in__sign-up-hint= 'Нет аккаунта на Toxin?'
-      .sign-in__sign-up-button
+      .sign-in__button.sign-in__button_type_sign-up
         +button({
           theme: 'transparent',
           caption: 'Создать',

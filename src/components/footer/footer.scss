@@ -31,20 +31,20 @@
     display: grid;
     grid-template-columns: 1fr 2.45fr 1fr;
     grid-template-areas:
-      'header nav subscribe'
+      'about nav subscribe'
       'copyright copyright social';
     grid-row-gap: 5rem;
     @media (max-width: $screen-sm-max) {
       grid-template-columns: 1fr 1fr;
       grid-template-areas:
-        'header subscribe'
+        'about subscribe'
         'nav nav'
         'copyright social';
     }
     @media (max-width: $screen-xs-max) {
       grid-template-columns: 1fr;
       grid-template-areas:
-        'header'
+        'about'
         'subscribe'
         'nav'
         'copyright'
@@ -53,8 +53,8 @@
       padding: 3rem 0.75rem;
     }
   }
-  &__header {
-    grid-area: header;
+  &__about-us {
+    grid-area: about;
     @media (max-width: $screen-xs-max) {
       text-align: center;
     }
@@ -159,12 +159,12 @@
       #{$blockClass}__inner-wrapper {
         grid-template-columns: 1fr;
         grid-template-areas:
-          'header'
+          'about'
           'social';
         grid-row-gap: 0;
         padding-bottom: 6.875rem;
       }
-      #{$blockClass}__header {
+      #{$blockClass}__about-us {
         text-align: center;
         padding: 0 25%;
         @media (max-width: $screen-xs-max) {

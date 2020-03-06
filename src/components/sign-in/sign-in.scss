@@ -18,8 +18,17 @@
   &__text-input {
     margin-bottom: 0.625rem;
   }
-  &__submit-button-group {
+  &__button {
     margin-top: 1.25rem;
+    &_type {
+      &_sign-up {
+        margin-top: 0;
+        width: 31%;
+        @media (max-width: $screen-xs-max) {
+          width: 100%;
+        }
+      }
+    }
   }
   &__sign-up-button-group {
     margin-top: 1.75rem;
@@ -37,12 +46,6 @@
     line-height: 2.75rem;
     @media (max-width: $screen-xs-max) {
       text-align: center;
-      width: 100%;
-    }
-  }
-  &__sign-up-button {
-    width: 31%;
-    @media (max-width: $screen-xs-max) {
       width: 100%;
     }
   }

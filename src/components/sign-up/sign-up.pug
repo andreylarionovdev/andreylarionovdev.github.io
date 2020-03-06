@@ -20,8 +20,8 @@ mixin sign-up(options)
         name: 'last-name',
         placeholder: 'Фамилия',
       })
-    .sign-up__gender-button-group
-      .sign-up__gender-radio-button
+    .sign-up__gender-group
+      .sign-up__radio-button
         +radio-button({
           id: 'radio-button-gender-male',
           name: 'gender',
@@ -29,7 +29,7 @@ mixin sign-up(options)
           label: 'Мужчина',
           isChecked: true,
         })
-      .sign-up__gender-radio-button
+      .sign-up__radio-button
         +radio-button({
           id: 'radio-button-gender-female',
           name: 'gender',
@@ -37,7 +37,7 @@ mixin sign-up(options)
           label: 'Женщина',
         })
     .sign-up__birthday-group
-      .sign-up__text-input-label
+      .sign-up__label
         +label({
           label: 'Дата рождения',
           _for: 'sign-up__input-birthday',
@@ -49,7 +49,7 @@ mixin sign-up(options)
           placeholder: 'ДД.ММ.ГГГГ',
         })
     .sign-up__email-group
-      .sign-up__text-input-label
+      .sign-up__label
         +label({
           label: 'Данные для входа в сервис',
           _for: 'sign-up__input-email',
@@ -68,13 +68,13 @@ mixin sign-up(options)
         placeholder: 'Пароль',
         type: 'password',
       })
-    .sign-up__toggle-button-group
+    .sign-up__toggle-button
       +toggle-button({
         id: 'sign-up__toggle-promo',
         name: 'send-me-promo',
         label: 'Получать спецпредложения',
       })
-    .sign-up__submit-button-group
+    .sign-up__button
       +button({
         theme: 'with-arrow',
         type: 'submit',
@@ -83,7 +83,7 @@ mixin sign-up(options)
       })
     .sign-up__sign-in-button-group
       p.sign-up__sign-in-hint= 'Уже есть аккаунт на Toxin'
-      .sign-up__sign-in-button
+      .sign-up__button.sign-up__button_type_sign-in
         +button({
           theme: 'transparent',
           caption: 'Войти',

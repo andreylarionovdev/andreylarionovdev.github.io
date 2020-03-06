@@ -23,7 +23,7 @@ mixin form-elements-page
     .form-elements-page__main
       section.form-elements-page__section
         .form-elements-page__section-column
-          .form-elements-page__input-group
+          .form-elements-page__text-input-group
             +label({
               label: 'text field',
               hint: 'default'
@@ -33,7 +33,7 @@ mixin form-elements-page
               placeholder: 'Email',
               type: 'email'
             })
-          .form-elements-page__input-group.form-elements-page__input-group_hovered
+          .form-elements-page__text-input-group.form-elements-page__text-input-group_hovered
             +label({
               label: 'text field',
               hint: 'hover / focus'
@@ -44,7 +44,7 @@ mixin form-elements-page
               value: 'This is pretty awesome',
               isHovered: true
             })
-          .form-elements-page__dropdown-group
+          .form-elements-page__dropdown
             +label({
               label: 'dropdown',
               hint: 'default'
@@ -53,7 +53,7 @@ mixin form-elements-page
               id: 'default-dropdown',
               value: 'Сколько гостей'
             })
-          .form-elements-page__input-group.form-elements-page__input-group_theme_with-mask
+          .form-elements-page__text-input-group.form-elements-page__text-input-group_theme_with-mask
             +label({
               label: 'masked text field',
               hint: 'default'
@@ -62,7 +62,7 @@ mixin form-elements-page
               id: 'input-with-mask',
               placeholder: 'ДД.ММ.ГГГГ'
             })
-          .form-elements-page__dropdown-group.form-elements-page__dropdown-group_theme_datepicker-date-range
+          .form-elements-page__dropdown.form-elements-page__dropdown_theme_datepicker-date-range
             +datepicker-date-range({
               id: 'datepicker-date-range-demo',
               fromLabel: 'date dropdown',
@@ -70,7 +70,7 @@ mixin form-elements-page
               toLabel: 'date dropdown',
               to: '19.08.2019 '
             })
-          .form-elements-page__dropdown-group.form-elements-page__dropdown-group_theme_date-filter
+          .form-elements-page__dropdown.form-elements-page__dropdown_theme_date-filter
             +label({
               label: 'filter date dropdown'
             })
@@ -78,7 +78,7 @@ mixin form-elements-page
               id: 'date-filter',
               value: '19 авг - 23 авг'
             })
-          .form-elements-page__input-group.form-elements-page__input-group_theme_with-submit
+          .form-elements-page__text-input-group.form-elements-page__text-input-group_theme_with-submit
             +label({
               label: 'subscription text field'
             })
@@ -90,7 +90,7 @@ mixin form-elements-page
             })
         .form-elements-page__section-column-gap
         .form-elements-page__section-column
-          .form-elements-page__checkbox-group
+          .form-elements-page__checkbox-list
             +checkbox-list({
               label: 'checkbox buttons',
               items: [
@@ -233,7 +233,7 @@ mixin form-elements-page
             })
       section.form-elements-page__section
         .form-elements-page__section-column
-          .form-elements-page__dropdown-group.form-elements-page__dropdown-group_collapsed
+          .form-elements-page__dropdown.form-elements-page__dropdown_collapsed
             +label({
               label: 'dropdown',
               hint: 'default'
@@ -242,7 +242,7 @@ mixin form-elements-page
               id: 'dropdown-collapsed',
               value: '2 спальни, 2 кровати...'
             })
-          .form-elements-page__dropdown-group.form-elements-page__dropdown-group
+          .form-elements-page__dropdown.form-elements-page__dropdown
             +label({
               label: 'dropdown',
               hint: 'expanded'
@@ -260,7 +260,7 @@ mixin form-elements-page
             })
         .form-elements-page__section-column-gap
         .form-elements-page__section-column
-          .form-elements-page__dropdown-group.form-elements-page__dropdown-group_theme_with-apply-btn
+          .form-elements-page__dropdown.form-elements-page__dropdown_theme_with-apply-btn
             +label({
               label: 'dropdown'
             })
@@ -279,7 +279,7 @@ mixin form-elements-page
             })
         .form-elements-page__section-column-gap
         .form-elements-page__section-column
-          .form-elements-page__dropdown-group.form-elements-page__dropdown-group_theme_with-clear-btn
+          .form-elements-page__dropdown.form-elements-page__dropdown_theme_with-clear-btn
             +label({
               label: 'dropdown'
             })
@@ -296,12 +296,12 @@ mixin form-elements-page
             })
       section.form-elements-page__section
         .form-elements-page__section-column
-          .form-elements-page__checkbox-list-expandable-group.form-elements-page__checkbox-list-expandable-group
+          .form-elements-page__checkbox-list-expandable.form-elements-page__checkbox-list-expandable
             +checkbox-list-expandable({
               id: 'exp_check_list_collapsed',
               label: 'Expandable checkbox list'
             })
-          .form-elements-page__checkbox-list-expandable-group.form-elements-page__checkbox-list-expandable-group_expanded
+          .form-elements-page__checkbox-list-expandable.form-elements-page__checkbox-list-expandable_expanded
             +checkbox-list-expandable({
               id: 'exp_check_list_collapsed',
               label: 'Expandable checkbox list',
@@ -319,8 +319,8 @@ mixin form-elements-page
             })
         .form-elements-page__section-column-gap
         .form-elements-page__section-column
-          .form-elements-page__rich-checkbox-group
-            - const theme = 'rich';
+          - const theme = 'rich';
+          .form-elements-page__checkbox-list.form-elements-page__checkbox-list_theme_rich
             +checkbox-list({
               label: 'rich checkbox buttons',
               theme,

@@ -45,7 +45,7 @@ mixin footer(options)
   footer(class=f.bem({ b: 'footer', m: [ {theme }] }))
     hr.footer__horizontal-divider
     .footer__inner-wrapper
-      .footer__header
+      .footer__about-us
         .footer__logo
           +logo(true)
         p.footer__description= leftDescription
@@ -60,7 +60,7 @@ mixin footer(options)
       form.footer__subscribe-form(method='POST' action='/')
         h3.footer__subscribe-form-title!= rightTitle
         p.footer__subscribe-form-description= rightDescription
-        .footer__subscribe-form-input-group
+        .footer__text-input
           +text-input({
             id: 'email-text-input',
             name: 'email',

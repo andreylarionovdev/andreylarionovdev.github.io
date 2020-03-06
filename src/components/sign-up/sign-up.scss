@@ -23,20 +23,29 @@
   &__text-input {
     margin-bottom: 0.5625rem;
   }
-  &__gender-button-group {
+  &__gender-group {
     display: flex;
     margin-bottom: 1.5rem;
   }
-  &__gender-radio-button {
+  &__radio-button {
     display: inline-block;
     float: left;
     margin-right: 1.25rem;
   }
-  &__text-input-label {
+  &__label {
     margin-bottom: 0.3125rem;
   }
-  &__submit-button-group {
+  &__button {
     margin-top: 1.5625rem;
+    &_type {
+      &_sign-in {
+        margin-top: 0;
+        width: 31%;
+        @media (max-width: $screen-xs-max) {
+          width: 100%;
+        }
+      }
+    }
   }
   &__sign-in-button-group {
     margin-top: 1.8125rem;
@@ -54,12 +63,6 @@
     line-height: 2.75rem;
     @media (max-width: $screen-xs-max) {
       text-align: center;
-      width: 100%;
-    }
-  }
-  &__sign-in-button {
-    width: 31%;
-    @media (max-width: $screen-xs-max) {
       width: 100%;
     }
   }

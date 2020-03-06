@@ -6,12 +6,12 @@ include ../datepicker-date-range/datepicker-date-range
 mixin room-search()
   form.room-search
     h1.room-search__title= 'Найдём номера под ваши пожелания'
-    .room-search__datepicker-date-range-group
+    .room-search__datepicker-date-range
       +datepicker-date-range({id: 'room-search__check-in-out'})
     .room-search__guests-dropdown-group
-      .room-search__guests-dropdown-label
+      .room-search__label
         +label({ label: 'Гости' })
-      .room-search__guests-dropdown
+      .room-search__dropdown
         +dropdown({
           id: 'guests',
           value: 'Сколько гостей',
@@ -21,7 +21,7 @@ mixin room-search()
             {count: 0, text: 'младенцы', name: 'baby'},
           ],
         })
-    .room-search__submit-button-group
+    .room-search__button
       +button({
         theme: 'with-arrow',
         caption: 'Подобрать номер&nbsp;',

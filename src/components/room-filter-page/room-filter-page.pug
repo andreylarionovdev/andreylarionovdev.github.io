@@ -11,21 +11,21 @@ mixin room-filter-page
     .room-filter-page__inner-wrapper
       section.room-filter-page__sidebar
         .room-filter-page__date-dropdown-group
-          .room-filter-page__sidebar-label
+          .room-filter-page__label
             +label({
               label: 'Даты пребывания в отеле',
             })
-          .room-filter-page__date-dropdown
+          .room-filter-page__dropdown
             +dropdown({
               id: 'date-dropdown',
               value: '19 авг. - 23 авг.',
             })
         .room-filter-page__guests-dropdown-group
-          .room-filter-page__sidebar-label
+          .room-filter-page__label
             +label({
               label: 'Гости',
             })
-          .room-filter-page__guests-dropdown
+          .room-filter-page__dropdown
             +dropdown({
               id: 'guests-dropdown',
               value: '3 гостя, 1 младенец',
@@ -35,7 +35,7 @@ mixin room-filter-page
                 {count: 1, text: 'младенцы', name: 'baby'},
               ],
             })
-        .room-filter-page__price-slider-group
+        .room-filter-page__range-slider
           +range-slider({
             label: 'Диапазон цены',
             name: 'price-slider',
@@ -44,9 +44,9 @@ mixin room-filter-page
             from: 5000,
             to: 10000,
           })
-          p.room-filter-page__price-slider-hint
+          p.room-filter-page__range-slider-hint
             = 'Стоимость за сутки пребывания в номере'
-        .room-filter-page__checkbox-group
+        .room-filter-page__checkbox-list
           +checkbox-list({
             label: 'checkbox buttons',
             items: [
@@ -69,8 +69,8 @@ mixin room-filter-page
               },
             ]
           })
-        .room-filter-page__rich-checkbox-group
-          - const theme = 'rich';
+        - const theme = 'rich';
+        .room-filter-page__checkbox-list_theme_rich
           +checkbox-list({
             theme,
             label: 'Доступность',
@@ -92,11 +92,11 @@ mixin room-filter-page
             ],
           })
         .room-filter-page__feature-dropdown-group
-          .room-filter-page__sidebar-label
+          .room-filter-page__label
             +label({
               label: 'Удобства номера',
             })
-          .room-filter-page__feature-dropdown
+          .room-filter-page__dropdown
             +dropdown({
               id: 'feature-dropdown',
               value: '2 спальни, 2 кровати...',
@@ -106,7 +106,7 @@ mixin room-filter-page
                 {count: 0, text: 'ванные комнаты', name: 'bathroom'},
               ],
             })
-        .room-filter-page__additional-checkbox-list-expandable-group
+        .room-filter-page__checkbox-list-expandable
           +checkbox-list-expandable({
             id: 'additional',
             label: 'Дополнительные удобства',

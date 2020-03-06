@@ -19,7 +19,7 @@
     grid-column-gap: 0.625rem;
     align-items: flex-end;
   }
-  &__room-search-form {
+  &__room-search {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     @media (max-width: $screen-sm-max) {
