@@ -113,7 +113,7 @@ DatepickerDateRange.prototype.update = function update() {
 };
 
 DatepickerDateRange.prototype.addButtons = function addButtons($dpElement) {
-  const $clearBtn = this.createButton('clear', 'Очистить', true);
+  const $clearBtn = this.createButton('clear', 'Очистить');
   const $applyBtn = this.createButton('apply', 'Применить');
   if ($dpElement.find(this.selectorClearButton).length === 0) {
     $clearBtn.on('click', this.handleClearButtonClick.bind(this));
@@ -128,9 +128,9 @@ DatepickerDateRange.prototype.addButtons = function addButtons($dpElement) {
   }
 };
 
-DatepickerDateRange.prototype.createButton = function createButton(action, caption, hovered) {
-  const hoveredClass = hovered ? 'button_hovered' : '';
-  const template = `<button class="button button_theme_textual ${hoveredClass}" type="button" data-action="${action}">
+DatepickerDateRange.prototype.createButton = function createButton(action, caption) {
+  const clearClass = action === 'clear' ? 'button_color_gray' : '';
+  const template = `<button class="button button_theme_textual ${clearClass}" type="button" data-action="${action}">
                       <div class="button__inner-wrapper">
                         <span class="button__caption">${caption}</span>
                       </div>

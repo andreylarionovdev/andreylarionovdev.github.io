@@ -33,6 +33,10 @@
     display: none;
     text-align: right;
   }
+  &:hover,
+  &_hovered {
+    opacity: 0.5;
+  }
   &_theme {
     &_default,
     &_with-arrow {
@@ -64,8 +68,8 @@
         background: none;
         padding: 0;
       }
-      &:hover,
-      &#{$blockClass}_hovered {
+      &:hover {
+        opacity: 1;
         color: $color-dark-100;
       }
       &:focus {
@@ -81,12 +85,12 @@
       }
     }
   }
+  &_color {
+    &_gray {
+      color: $color-dark-50;
+    }
+  }
   &_fluid {
     width: 100%;
-  }
-
-  &:hover,
-  &_hovered {
-    opacity: 0.5;
   }
 }

@@ -3,6 +3,7 @@ mixin button(options)
     const {
       theme,
       size,
+      color,
       caption,
       type,
       href,
@@ -11,7 +12,7 @@ mixin button(options)
       attr,
     } = options || {};
 
-  - const blockModifiers = [{ theme }, { size }];
+  - const blockModifiers = [{ theme }, { size }, { color }];
 
   if isHovered
     - blockModifiers.push('hovered');
