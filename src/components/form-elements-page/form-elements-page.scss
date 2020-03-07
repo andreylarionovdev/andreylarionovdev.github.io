@@ -12,7 +12,7 @@
 @import '../datepicker-date-range/datepicker-date-range.scss';
 @import '../button/button.scss';
 @import '../radio-button/radio-button.scss';
-@import '../toggle-button/toggle-button.scss';
+@import '../checkbox/checkbox.scss';
 @import '../like-button/like-button.scss';
 @import '../bullet-list/bullet-list.scss';
 @import '../feature/feature.scss';
@@ -132,7 +132,7 @@
     .label {
       margin-bottom: 0.875rem;
     }
-    .toggle-button {
+    .checkbox {
       margin-bottom: 0.825rem;
     }
   }

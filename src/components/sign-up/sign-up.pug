@@ -1,6 +1,6 @@
 include ../text-input/text-input
 include ../radio-button/radio-button
-include ../toggle-button/toggle-button
+include ../checkbox/checkbox
 include ../label/label
 
 mixin sign-up(options)
@@ -68,9 +68,10 @@ mixin sign-up(options)
         placeholder: 'Пароль',
         type: 'password',
       })
-    .sign-up__toggle-button
-      +toggle-button({
+    .sign-up__checkbox
+      +checkbox({
         id: 'sign-up__toggle-promo',
+        theme: 'toggle',
         name: 'send-me-promo',
         label: 'Получать спецпредложения',
       })

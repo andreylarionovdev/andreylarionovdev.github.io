@@ -3,7 +3,7 @@ include ../text-input/text-input
 include ../dropdown/dropdown
 include ../datepicker-date-range/datepicker-date-range
 include ../radio-button/radio-button
-include ../toggle-button/toggle-button
+include ../checkbox/checkbox
 include ../label/label
 include ../like-button/like-button
 include ../rate-button/rate-button
@@ -131,13 +131,15 @@ mixin form-elements-page
             +label({
               label: 'toggle'
             })
-            +toggle-button({
+            +checkbox({
               id: 'first-toggle',
+              theme: 'toggle',
               label: 'Получать спецпредложения',
               isChecked: true
             })
-            +toggle-button({
+            +checkbox({
               id: 'second-toggle',
+              theme: 'toggle',
               label: 'Получать спецпредложения'
             })
           .form-elements-page__like-button-group
