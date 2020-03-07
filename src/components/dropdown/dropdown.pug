@@ -3,7 +3,6 @@ mixin dropdown(options)
     const {
       id,
       value = 'Выберите',
-      zIndex = 9,
       rows = [],
       isExpanded,
       isEdited,
@@ -28,7 +27,7 @@ mixin dropdown(options)
     div(class=f.bem({b, e: 'selection', js}))= value
     button.dropdown__toggle-button.js-dropdown__toggle-button.material-icons(type='button')= 'keyboard_arrow_down'
     if rows.length > 0
-      ul(class=f.bem({b, e: 'menu', js}) style={'z-index': zIndex})
+      ul(class=f.bem({b, e: 'menu', js}))
         each row in rows
           li(class=f.bem({b, e: 'menu-item', js}))
             .dropdown__item-name= row.text
