@@ -4,7 +4,6 @@
 @import '../label/label.scss';
 @import '../dropdown/dropdown.scss';
 @import '../range-slider/range-slider.scss';
-@import '../checkbox-list/checkbox-list.scss';
 @import '../checkbox-list-expandable/checkbox-list-expandable';
 @import '../room-thumbnail/room-thumbnail.scss';
 @import '../pagination/pagination.scss';
@@ -101,12 +100,21 @@
       margin-bottom: 1.25rem;
     }
   }
-  &__checkbox-list {
+  &__checkbox {
+    margin-bottom: 0.625rem;
+  }
+  &__checkbox-list-group {
     margin-bottom: 2.5rem;
     padding-right: 5rem;
+    .label {
+      margin-bottom: 1rem;
+    }
     &_theme {
       &_rich {
         padding: 0.8125rem 3.5rem 0 0;
+        #{$blockClass}__checkbox {
+          margin-bottom: 0.4375rem;
+        }
       }
     }
   }
