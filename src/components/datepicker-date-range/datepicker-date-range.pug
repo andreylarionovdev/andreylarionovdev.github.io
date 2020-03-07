@@ -21,9 +21,9 @@ mixin datepicker-date-range(options)
       .datepicker-date-range__label
         +label({ label: fromLabel })
       div(class=f.bem({b, e: 'dropdown', js}))
-        +dropdown({id: `${id}__from-date`, value: from})
+        +dropdown({ value: from })
     div(class=f.bem({b, e: 'dropdown-group-to', js}))
       .datepicker-date-range__label
         +label({ label: toLabel })
       div(class=f.bem({b, e: 'dropdown', js}))
-        +dropdown({id: `${id}__to-date`, value: to})
+        +dropdown({ value: to })

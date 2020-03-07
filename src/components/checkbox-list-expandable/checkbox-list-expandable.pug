@@ -16,9 +16,4 @@ mixin checkbox-list-expandable(options)
     ul.checkbox-list-expandable__list
       each item, index in items
         li.checkbox-list-expandable__item
-          +checkbox({
-            id: `${id}_${item.name}-checkbox`,
-            label: item.label,
-            isChecked: item.isChecked,
-            name: item.name,
-          })
+          +checkbox(item)

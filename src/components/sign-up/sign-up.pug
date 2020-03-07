@@ -10,13 +10,11 @@ mixin sign-up(options)
     h1.sign-up__title= 'Регистрация аккаунта'
     .sign-up__text-input
       +text-input({
-        id: 'sign-up_first-name-input',
         name: 'first-name',
         placeholder: 'Имя',
       })
     .sign-up__text-input
       +text-input({
-        id: 'sign-up_last-name-input',
         name: 'last-name',
         placeholder: 'Фамилия',
       })
@@ -63,7 +61,6 @@ mixin sign-up(options)
         })
     .sign-up__text-input
       +text-input({
-        id: 'sign-up__input-password',
         name: 'password',
         placeholder: 'Пароль',
         type: 'password',

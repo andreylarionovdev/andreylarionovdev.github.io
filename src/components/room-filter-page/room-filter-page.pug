@@ -17,7 +17,6 @@ mixin room-filter-page
             })
           .room-filter-page__dropdown
             +dropdown({
-              id: 'date-dropdown',
               value: '19 авг. - 23 авг.',
             })
         .room-filter-page__guests-dropdown-group
@@ -27,7 +26,6 @@ mixin room-filter-page
             })
           .room-filter-page__dropdown
             +dropdown({
-              id: 'guests-dropdown',
               value: '3 гостя, 1 младенец',
               rows: [
                 {count: 2, text: 'взрослые', name: 'adult'},
@@ -98,7 +96,6 @@ mixin room-filter-page
             })
           .room-filter-page__dropdown
             +dropdown({
-              id: 'feature-dropdown',
               value: '2 спальни, 2 кровати...',
               rows: [
                 {count: 2, text: 'спальни', name: 'bedroom'},
@@ -108,17 +105,16 @@ mixin room-filter-page
             })
         .room-filter-page__checkbox-list-expandable
           +checkbox-list-expandable({
-            id: 'additional',
             label: 'Дополнительные удобства',
             items: [
-              {name: 'breakfast', label: 'Завтрак'},
-              {name: 'table', label: 'Письменный стол', isChecked: true},
-              {name: 'baby-chair-for-eat', label: 'Стул для кормления', isChecked: true},
-              {name: 'baby-bed', label: 'Кроватка', isChecked: true},
-              {name: 'tv_1', label: 'Телевизор'},
-              {name: 'shampoo_1', label: 'Шампунь'},
-              {name: 'tv_2', label: 'Телевизор'},
-              {name: 'shampoo_2', label: 'Шампунь'},
+              {id: 'breakfast-checkbox', label: 'Завтрак'},
+              {id: 'table-checkbox', label: 'Письменный стол', isChecked: true},
+              {id: 'baby-chair-for-eat-checkbox', label: 'Стул для кормления', isChecked: true},
+              {id: 'baby-bed-checkbox', label: 'Кроватка', isChecked: true},
+              {id: 'tv-1-checkbox', label: 'Телевизор'},
+              {id: 'shampoo-1-checkbox', label: 'Шампунь'},
+              {id: 'tv-2-checkbox', label: 'Телевизор'},
+              {id: 'shampoo-2-checkbox', label: 'Шампунь'},
             ],
           })
       section.room-filter-page__thumbnail-list-wrapper

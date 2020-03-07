@@ -26,7 +26,8 @@ mixin form-elements-page
           .form-elements-page__text-input-group
             +label({
               label: 'text field',
-              hint: 'default'
+              hint: 'default',
+              _for: 'input-email'
             })
             +text-input({
               id: 'input-email',
@@ -36,7 +37,8 @@ mixin form-elements-page
           .form-elements-page__text-input-group.form-elements-page__text-input-group_hovered
             +label({
               label: 'text field',
-              hint: 'hover / focus'
+              hint: 'hover / focus',
+              _for: 'input-focused-hovered'
             })
             +text-input({
               id: 'input-focused-hovered',
@@ -50,13 +52,13 @@ mixin form-elements-page
               hint: 'default'
             })
             +dropdown({
-              id: 'default-dropdown',
               value: 'Сколько гостей'
             })
           .form-elements-page__text-input-group.form-elements-page__text-input-group_theme_with-mask
             +label({
               label: 'masked text field',
-              hint: 'default'
+              hint: 'default',
+              _for: 'input-with-mask',
             })
             +text-input({
               id: 'input-with-mask',
@@ -75,12 +77,12 @@ mixin form-elements-page
               label: 'filter date dropdown'
             })
             +dropdown({
-              id: 'date-filter',
               value: '19 авг - 23 авг'
             })
           .form-elements-page__text-input-group.form-elements-page__text-input-group_theme_with-submit
             +label({
-              label: 'subscription text field'
+              label: 'subscription text field',
+              _for: 'input-submit',
             })
             +text-input({
               id: 'input-submit',
@@ -241,7 +243,6 @@ mixin form-elements-page
               hint: 'default'
             })
             +dropdown({
-              id: 'dropdown-collapsed',
               value: '2 спальни, 2 кровати...'
             })
           .form-elements-page__dropdown.form-elements-page__dropdown
@@ -250,7 +251,6 @@ mixin form-elements-page
               hint: 'expanded'
             })
             +dropdown({
-              id: 'dropdown-expanded',
               isExpanded: true,
               value: '2 спальни, 2 кровати...',
               zIndex: 999,
@@ -267,7 +267,6 @@ mixin form-elements-page
               label: 'dropdown'
             })
             +dropdown({
-              id: 'dropdown-expanded',
               isExpanded: true,
               isEdited: true,
               isEmpty: true,
@@ -286,7 +285,6 @@ mixin form-elements-page
               label: 'dropdown'
             })
             +dropdown({
-              id: 'dropdown-expanded',
               isExpanded: true,
               isEdited: true,
               value: '3 гостя',
@@ -300,23 +298,21 @@ mixin form-elements-page
         .form-elements-page__section-column
           .form-elements-page__checkbox-list-expandable.form-elements-page__checkbox-list-expandable
             +checkbox-list-expandable({
-              id: 'exp_check_list_collapsed',
               label: 'Expandable checkbox list'
             })
           .form-elements-page__checkbox-list-expandable.form-elements-page__checkbox-list-expandable_expanded
             +checkbox-list-expandable({
-              id: 'exp_check_list_collapsed',
               label: 'Expandable checkbox list',
               isExpanded: true,
               items: [
-                {name: 'breakfast', label: 'Завтрак'},
-                {name: 'table', label: 'Письменный стол', isChecked: true},
-                {name: 'baby-chair-for-eat', label: 'Стул для кормления', isChecked: true},
-                {name: 'baby-bed', label: 'Кроватка', isChecked: true},
-                {name: 'tv_1', label: 'Телевизор'},
-                {name: 'shampoo_1', label: 'Шампунь'},
-                {name: 'tv_2', label: 'Телевизор'},
-                {name: 'shampoo_2', label: 'Шампунь'}
+                {id: 'breakfast-checkbox', label: 'Завтрак'},
+                {id: 'table-checkbox', label: 'Письменный стол', isChecked: true},
+                {id: 'baby-chair-for-eat-checkbox', label: 'Стул для кормления', isChecked: true},
+                {id: 'baby-bed-checkbox', label: 'Кроватка', isChecked: true},
+                {id: 'tv-1-checkbox', label: 'Телевизор'},
+                {id: 'shampoo-1-checkbox', label: 'Шампунь'},
+                {id: 'tv-2-checkbox', label: 'Телевизор'},
+                {id: 'shampoo-2-checkbox', label: 'Шампунь'}
               ]
             })
         .form-elements-page__section-column-gap
@@ -349,7 +345,6 @@ mixin form-elements-page
                 label: 'Bullet list'
               })
             +bullet-list({
-              id: 'bullet-list',
               items: [
                 {text: 'Нельзя с питомцами'},
                 {text: 'Без вечеринок и мероприятий'},
