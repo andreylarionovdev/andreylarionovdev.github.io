@@ -98,8 +98,9 @@
     }
   }
   &__footer-buttons {
-    display: none;
+    display: flex;
     line-height: 2.5rem;
+    justify-content: space-between;
   }
   &_expanded {
     #{$blockClass}__selection {
@@ -115,10 +116,9 @@
       border-top: none;
     }
   }
-  &_edited {
+  &_with-hidden-buttons {
     #{$blockClass}__footer-buttons {
-      display: flex;
-      justify-content: space-between;
+      display: none;
     }
   }
   &_empty {

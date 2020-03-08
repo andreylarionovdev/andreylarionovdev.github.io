@@ -33,18 +33,17 @@ DatepickerDateRange.prototype.initDatepicker = function initDatepicker($element)
 
   this.$datepickerApi = this.$inputFrom.datepicker({
     range: true,
+    minDate: new Date(),
+    offset: 6,
     navTitles: {
       days: 'MM <i>yyyy</i>',
     },
-    prevHtml: '<i class="material-icons">arrow_back</i>',
-    nextHtml: '<i class="material-icons">arrow_forward</i>',
+    prevHtml: '<span class="material-icons">arrow_back</span>',
+    nextHtml: '<span class="material-icons">arrow_forward</span>',
     onShow(inst) {
       inst.$datepicker.css('position', 'absolute');
       inst.$datepicker.css('width', `${$element.outerWidth()}px`);
       that.addButtons(inst.$datepicker);
-
-      const pixelPerfectTop = parseInt(inst.$datepicker.css('top'), 10) - 6; // ;)
-      inst.$datepicker.css('top', `${pixelPerfectTop}px`);
     },
   }).data('datepicker');
 };

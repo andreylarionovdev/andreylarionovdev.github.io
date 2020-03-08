@@ -17,16 +17,6 @@
     justify-content: space-between;
     align-items: center;
   }
-  //&__clear-button,
-  //&__apply-button {
-  //  @include reset-button;
-  //  @include reset-outline(text-shadow);
-  //  font-family: Montserrat, sans-serif;
-  //  font-size: 0.75rem;
-  //  font-weight: bold;
-  //  display: inline-block;
-  //  text-transform: uppercase;
-  //}
   &__clear-button {
     color: $color-dark-50;
   }
@@ -183,7 +173,8 @@
   }
   &--cell-day {
     width: (100/7)#{'%'};
-    &.-other-month- {
+    &.-other-month-,
+    &.-disabled- {
       color: $color-dark-25;
       &:hover {
         color: white;

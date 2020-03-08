@@ -1,12 +1,12 @@
 mixin dropdown(options)
   -
     const {
-      id,
       value = 'Выберите',
       rows = [],
       isExpanded,
       isEdited,
       isEmpty,
+      withHiddenButtons,
     } = options || {};
 
   - const blockModifiers = [];
@@ -17,12 +17,14 @@ mixin dropdown(options)
     - blockModifiers.push('edited');
   if isEmpty
     - blockModifiers.push('empty');
+  if withHiddenButtons
+    - blockModifiers.push('with-hidden-buttons');
 
   - const f = require('../../utils/functions.js');
   - const b = 'dropdown';
   - const js = 'js';
 
-  div(id=id class=f.bem({b, m: blockModifiers, js}))
+  div(class=f.bem({b, m: blockModifiers, js}))
     input(class=f.bem({b, e: 'input', js}) type='text' value=value)
     div(class=f.bem({b, e: 'selection', js}))= value
     button.dropdown__toggle-button.js-dropdown__toggle-button.material-icons(type='button')= 'keyboard_arrow_down'

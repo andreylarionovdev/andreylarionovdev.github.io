@@ -252,6 +252,7 @@ mixin form-elements-page
             })
             +dropdown({
               isExpanded: true,
+              withHiddenButtons: true,
               value: '2 спальни, 2 кровати...',
               rows: [
                 {count: 2, text: 'спальни', name: 'bedroom'},
@@ -267,7 +268,6 @@ mixin form-elements-page
             })
             +dropdown({
               isExpanded: true,
-              isEdited: true,
               isEmpty: true,
               value: 'Сколько гостей',
               rows: [
@@ -284,7 +284,6 @@ mixin form-elements-page
             })
             +dropdown({
               isExpanded: true,
-              isEdited: true,
               value: '3 гостя',
               rows: [
                 {count: 2, text: 'взрослые', name: 'adult'},
