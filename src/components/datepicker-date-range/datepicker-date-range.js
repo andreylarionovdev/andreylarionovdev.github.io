@@ -12,6 +12,7 @@ DatepickerDateRange.prototype.init = function init($element) {
   this.selectorInputFrom = '.js-datepicker-date-range__dropdown-group-from input';
   this.selectorDropdownTo = '.js-datepicker-date-range__dropdown-group-to .js-datepicker-date-range__dropdown';
   this.selectorInputTo = '.js-datepicker-date-range__dropdown-group-to input';
+  this.selectorToggleButton = '.js-dropdown__toggle-button';
 
   this.selectorClearButton = '[data-action="clear"]';
   this.selectorApplyButton = '[data-action="apply"]';
@@ -49,8 +50,8 @@ DatepickerDateRange.prototype.initDatepicker = function initDatepicker($element)
 };
 
 DatepickerDateRange.prototype.addEventListeners = function addEventListeners() {
-  this.$dropdownFrom.on('click', this.handleDropdownClick.bind(this));
-  this.$dropdownTo.on('click', this.handleDropdownClick.bind(this));
+  this.$dropdownFrom.find(this.selectorToggleButton).on('click', this.handleDropdownClick.bind(this));
+  this.$dropdownTo.find(this.selectorToggleButton).on('click', this.handleDropdownClick.bind(this));
 };
 
 DatepickerDateRange.prototype.handleDropdownClick = function handleDropdownClick() {
