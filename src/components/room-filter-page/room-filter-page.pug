@@ -26,11 +26,11 @@ mixin room-filter-page
             })
           .room-filter-page__dropdown
             +dropdown({
-              value: '3 гостя, 1 младенец',
+              type: 'guest',
               rows: [
-                {count: 2, text: 'взрослые', name: 'adult'},
-                {count: 0, text: 'дети', name: 'kids'},
-                {count: 1, text: 'младенцы', name: 'baby'},
+                {count: 2, text: 'взрослые'},
+                {count: 0, text: 'дети'},
+                {count: 1, text: 'младенцы'},
               ],
             })
         .room-filter-page__range-slider
@@ -96,11 +96,11 @@ mixin room-filter-page
             })
           .room-filter-page__dropdown
             +dropdown({
-              value: '2 спальни, 2 кровати...',
+              type: 'room',
               rows: [
-                {count: 2, text: 'спальни', name: 'bedroom'},
-                {count: 2, text: 'кровати', name: 'bed'},
-                {count: 0, text: 'ванные комнаты', name: 'bathroom'},
+                {count: 2, text: 'спальни'},
+                {count: 2, text: 'кровати'},
+                {count: 0, text: 'ванные комнаты'},
               ],
             })
         .room-filter-page__checkbox-list-expandable

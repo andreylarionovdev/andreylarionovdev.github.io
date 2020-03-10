@@ -52,6 +52,7 @@ mixin form-elements-page
               hint: 'default'
             })
             +dropdown({
+              type: 'guest',
               value: 'Сколько гостей'
             })
           .form-elements-page__text-input-group.form-elements-page__text-input-group_theme_with-mask
@@ -243,7 +244,8 @@ mixin form-elements-page
               hint: 'default'
             })
             +dropdown({
-              value: '2 спальни, 2 кровати...'
+              type: 'room',
+              value: '2 спальни, 2 кровати'
             })
           .form-elements-page__dropdown.form-elements-page__dropdown
             +label({
@@ -251,13 +253,13 @@ mixin form-elements-page
               hint: 'expanded'
             })
             +dropdown({
+              type: 'room',
               isExpanded: true,
               withHiddenButtons: true,
-              value: '2 спальни, 2 кровати...',
               rows: [
-                {count: 2, text: 'спальни', name: 'bedroom'},
-                {count: 2, text: 'кровати', name: 'bed'},
-                {count: 0, text: 'ванные комнаты', name: 'bathroom'}
+                {count: 2, text: 'спальни', },
+                {count: 2, text: 'кровати', },
+                {count: 0, text: 'ванные комнаты', }
               ]
             })
         .form-elements-page__section-column-gap
@@ -267,13 +269,13 @@ mixin form-elements-page
               label: 'dropdown'
             })
             +dropdown({
+              type: 'guest',
               isExpanded: true,
               isEmpty: true,
-              value: 'Сколько гостей',
               rows: [
-                {count: 0, text: 'взрослые', name: 'adult'},
-                {count: 0, text: 'дети', name: 'kids'},
-                {count: 0, text: 'младенцы', name: 'baby'}
+                {count: 0, text: 'взрослые', },
+                {count: 0, text: 'дети', },
+                {count: 0, text: 'младенцы', }
               ]
             })
         .form-elements-page__section-column-gap
@@ -283,12 +285,12 @@ mixin form-elements-page
               label: 'dropdown'
             })
             +dropdown({
+              type: 'guest',
               isExpanded: true,
-              value: '3 гостя',
               rows: [
-                {count: 2, text: 'взрослые', name: 'adult'},
-                {count: 1, text: 'дети', name: 'kids'},
-                {count: 0, text: 'младенцы', name: 'baby'}
+                {count: 2, text: 'взрослые', },
+                {count: 1, text: 'дети', },
+                {count: 0, text: 'младенцы', }
               ]
             })
       section.form-elements-page__section

@@ -31,11 +31,11 @@ mixin room-book(options)
         +label({ label: 'Гости' })
       .room-book__dropdown
         +dropdown({
-          value: '3 гостя',
+          type: 'guest',
           rows: [
-            {count: 2, text: 'взрослые', name: 'adult'},
-            {count: 1, text: 'дети', name: 'kids'},
-            {count: 0, text: 'младенцы', name: 'baby'},
+            {count: 2, text: 'взрослые'},
+            {count: 1, text: 'дети'},
+            {count: 0, text: 'младенцы'},
           ],
         })
 
