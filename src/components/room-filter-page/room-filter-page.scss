@@ -3,12 +3,12 @@
 
 @import '../dropdown/dropdown.scss';
 @import '../range-slider/range-slider.scss';
-@import '../checkbox-list/checkbox-list.scss';
 @import '../checkbox-list-expandable/checkbox-list-expandable';
 @import '../room-thumbnail/room-thumbnail.scss';
 @import '../pagination/pagination.scss';
 
 .room-filter-page {
+  $blockClass: &;
   border-bottom: 0.0625rem solid $color-dark-25;
   &__inner-wrapper {
     @include inner-wrapper;
@@ -26,21 +26,35 @@
   }
   &__label {
     margin-bottom: 0.3125rem;
+    &_for {
+      &_checkbox {
+        margin-bottom: 1rem;
+      }
+    }
   }
   &__guests-dropdown-group {
     margin-top: 1.3152rem;
   }
+
   &__range-slider,
-  &__checkbox-list {
+  &__checkbox-list-group {
     margin-top: 1.875rem;
   }
-  &__checkbox-list {
+
+  &__checkbox-list-group {
     padding-right: 1.25rem;
     &_theme {
       &_rich {
+        padding-right: 0;
         margin-top: 1.75rem;
+        #{$blockClass}__checkbox {
+          margin-bottom: 0.4375rem;
+        }
       }
     }
+  }
+  &__checkbox {
+    margin-bottom: 0.625rem;
   }
   &__range-slider-hint {
     margin-top: 0.375rem;

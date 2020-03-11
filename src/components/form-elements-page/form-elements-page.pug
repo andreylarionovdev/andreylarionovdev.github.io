@@ -10,7 +10,6 @@ include ../rate-button/rate-button
 include ../range-slider/range-slider
 include ../button/button
 include ../pagination/pagination
-include ../checkbox-list/checkbox-list
 include ../checkbox-list-expandable/checkbox-list-expandable
 include ../bullet-list/bullet-list
 include ../feature/feature
@@ -93,26 +92,29 @@ mixin form-elements-page
             })
         .form-elements-page__section-column-gap
         .form-elements-page__section-column
-          .form-elements-page__checkbox-list
-            +checkbox-list({
-              label: 'checkbox buttons',
-              items: [
-                {
+          .form-elements-page__checkbox-list-group
+            +label({
+              label: 'checkbox buttons'
+            })
+            ul.form-elements-page__checkbox-list
+              li.form-elements-page__checkbox
+                +checkbox({
                   id: 'smoke-allowed',
                   label: 'Можно курить',
-                },
-                {
+                })
+              li.form-elements-page__checkbox
+                +checkbox({
                   id: 'pets-allowed',
                   label: 'Можно с питомцами',
                   isChecked: true,
-                },
-                {
+                })
+              li.form-elements-page__checkbox
+                +checkbox({
                   id: 'guests-allowed',
                   label: 'Можно пригласить гостей (до 10 человек)',
                   isChecked: true,
-                }
-              ]
-            })
+                })
+
           .form-elements-page__radio-group
             +label({
               label: 'radio buttons'
@@ -316,26 +318,25 @@ mixin form-elements-page
             })
         .form-elements-page__section-column-gap
         .form-elements-page__section-column
-          - const theme = 'rich';
-          .form-elements-page__checkbox-list.form-elements-page__checkbox-list_theme_rich
-            +checkbox-list({
-              label: 'rich checkbox buttons',
-              theme,
-              items: [
-                {
+          .form-elements-page__checkbox-list-group.form-elements-page__checkbox-list-group_theme_rich
+            +label({
+              label: 'rich checkbox buttons'
+            })
+            ul.form-elements-page__checkbox-list
+              li.form-elements-page__checkbox
+                +checkbox({
                   id: 'wide-hall-checkbox',
                   label: 'Широкий коридор',
                   hint: 'Ширина коридоров в номере не&nbsp;менее 91 см.',
-                  theme,
-                },
-                {
+                  theme: 'rich',
+                })
+              li.form-elements-page__checkbox
+                +checkbox({
                   id: 'disable-assistant-checkbox',
                   label: 'Помощник для инвалидов',
                   hint: 'На 1 этаже вас встретит специалист и проводит до номера.',
-                  theme,
-                }
-              ]
-            })
+                  theme: 'rich',
+                })
         .form-elements-page__section-column-gap
         .form-elements-page__section-column
           .form-elements-page__bullet-list-group
