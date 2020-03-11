@@ -12,7 +12,7 @@
   background-color: $color-green;
   &__inner-wrapper {
     @include inner-wrapper;
-    padding: 4.3125rem 0 0.75rem 0;
+    padding: 4.375rem 0 0.75rem 0;
     display: grid;
     grid-template-rows: auto 23.375rem;
     grid-template-columns: 1fr 1fr 1fr;

@@ -8,16 +8,16 @@
 
 .room-search {
   @include card;
-  padding: 2.4375rem 1.75rem 1.8125rem 1.8125rem;
+  padding: 2.4375rem 1.8125rem 1.8125rem 1.8125rem;
   @media (max-width: $screen-xs-max) {
     padding: 2rem 1rem;
   }
   &__title {
     @include h1;
-    margin-bottom: 1.4375rem;
+    margin-bottom: 1.25rem;
   }
   &__datepicker-date-range {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.3125rem;
   }
   &__label {
     margin-bottom: 0.3125rem;

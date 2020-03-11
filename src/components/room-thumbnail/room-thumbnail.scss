@@ -79,7 +79,7 @@
     justify-content: space-between;
     align-items: flex-end;
     padding: 1.25rem 0 0.625rem 0;
-    margin: 0 1rem 0 1.25rem;
+    margin: 0 1.0625rem 0 1.25rem;
     border-bottom: 0.0625rem solid $color-dark-10;
   }
   &__number {
@@ -106,7 +106,7 @@
   }
   &__number-value {
     font-size: 1.1875rem;
-    padding-left: 0.3125rem;
+    padding-left: 0.25rem;
     color: $color-dark-100;
   }
   &__price-per-day {
@@ -124,7 +124,7 @@
   &__footer {
     display: flex;
     justify-content: space-between;
-    padding: 0.625rem 0 0.875rem 0;
+    padding: 0.5625rem 0 0.9375rem 0;
     margin: 0 1.25rem 0 1.375rem;
   }
   &__feedback-counter {

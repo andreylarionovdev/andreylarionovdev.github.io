@@ -8,7 +8,7 @@
 
 .room-book {
   @include card;
-  padding: 2.375rem 1.875rem 1.875rem 1.8125rem;
+  padding: 2.4375rem 1.8125rem 1.8125rem;
   @media (max-width: $screen-xs-max) {
     padding: 2rem 1rem;
   }
@@ -71,6 +71,7 @@
     margin-bottom: 0.3125rem;
   }
   &__result-grid {
+    padding-left: 0.0625rem;
     margin-top: 1.125rem;
     display: grid;
     grid-template-columns: 5fr 1fr 1fr;

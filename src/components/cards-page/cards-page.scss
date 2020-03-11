@@ -10,7 +10,7 @@
 
 .cards-page {
   &__nav {
-    @include ui-kit-navigation($marginBottom: 2.6875rem);
+    @include ui-kit-navigation($marginBottom: 2.625rem);
   }
   &__main {
     @include inner-wrapper;
