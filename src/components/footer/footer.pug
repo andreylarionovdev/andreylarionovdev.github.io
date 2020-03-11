@@ -43,35 +43,37 @@ mixin footer(options)
   - const f = require('../../utils/functions');
 
   footer(class=f.bem({ b: 'footer', m: [ {theme }] }))
-    hr.footer__horizontal-divider
-    .footer__inner-wrapper
-      .footer__about-us
-        .footer__logo
-          +logo(true)
-        p.footer__description= leftDescription
-      nav.footer__navigation
-        each menu, _ in menus
-          section.footer__navigation-section
-            h3.footer__navigation-section-title= menu.title
-            ul.footer__navigation-section-list
-              each item, _ in menu.links
-                li.footer__navigation-section-item
-                  a.footer__navigation-section-link(href=item.href)= item.text
-      form.footer__subscribe-form(method='POST' action='/')
-        h3.footer__subscribe-form-title!= rightTitle
-        p.footer__subscribe-form-description= rightDescription
-        .footer__text-input
-          +text-input({
-            name: 'email',
-            placeholder: rightPlaceholder,
-            withButton: true,
-            type: 'email',
-          })
-      p.footer__copyright= copyright
-      ul.footer__social-list
-        li.footer__social-list-item
-          a.footer__social-link.footer__social-link_theme_tw(href='/change-me' target='_blank' rel='noopener noreferrer')
-        li.footer__social-list-item
-          a.footer__social-link.footer__social-link_theme_fb(href='/change-me' target='_blank' rel='noopener noreferrer')
-        li.footer__social-list-item
-          a.footer__social-link.footer__social-link_theme_ig(href='/change-me' target='_blank' rel='noopener noreferrer')
+    .footer__main-area
+      .footer__main-area-inner-wrapper
+        .footer__about-us
+          .footer__logo
+            +logo(true)
+          p.footer__description= leftDescription
+        nav.footer__navigation
+          each menu, _ in menus
+            section.footer__navigation-section
+              h3.footer__navigation-section-title= menu.title
+              ul.footer__navigation-section-list
+                each item, _ in menu.links
+                  li.footer__navigation-section-item
+                    a.footer__navigation-section-link(href=item.href)= item.text
+        form.footer__subscribe-form(method='POST' action='/')
+          h3.footer__subscribe-form-title!= rightTitle
+          p.footer__subscribe-form-description= rightDescription
+          .footer__text-input
+            +text-input({
+              name: 'email',
+              placeholder: rightPlaceholder,
+              withButton: true,
+              type: 'email',
+            })
+    .footer__bottom-area
+      .footer__bottom-area-inner-wrapper
+        p.footer__copyright= copyright
+        ul.footer__social-list
+          li.footer__social-list-item
+            a.footer__social-link.footer__social-link_theme_tw(href='/change-me' target='_blank' rel='noopener noreferrer')
+          li.footer__social-list-item
+            a.footer__social-link.footer__social-link_theme_fb(href='/change-me' target='_blank' rel='noopener noreferrer')
+          li.footer__social-list-item
+            a.footer__social-link.footer__social-link_theme_ig(href='/change-me' target='_blank' rel='noopener noreferrer')

@@ -9,48 +9,35 @@
   min-height: inherit;
   background: white;
   box-shadow: 0 0.625rem 1.25rem $color-dark-5;
-  position: relative;
-  &__horizontal-divider {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 4.375rem;
-    background-color: $color-dark-5;
-    color: $color-dark-5;
-    border: none;
-    height: 0.0625rem;
+  &__main-area {
+    border-bottom: 0.0625rem solid $color-dark-5;
     @media (max-width: $screen-xs-max) {
-      display: none;
+      border-bottom: none;
     }
   }
-  &__inner-wrapper {
+  &__main-area-inner-wrapper {
     @include inner-wrapper;
-    padding-top: 6.25rem;
-    position: relative;
+    padding: 6.25rem 0 4.875rem 0;
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 2.45fr 1fr;
     grid-template-areas:
-      'about nav subscribe'
-      'copyright copyright social';
+      'about nav subscribe';
     grid-row-gap: 5rem;
     @media (max-width: $screen-sm-max) {
       grid-template-columns: 1fr 1fr;
       grid-template-areas:
         'about subscribe'
-        'nav nav'
-        'copyright social';
+        'nav nav';
     }
     @media (max-width: $screen-xs-max) {
       grid-template-columns: 1fr;
       grid-template-areas:
         'about'
         'subscribe'
-        'nav'
-        'copyright'
-        'social';
-      grid-row-gap: 1rem;
-      padding: 3rem 0.75rem;
+        'nav';
+      padding: 3rem 0 0 0;
+      grid-row-gap: 3rem;
     }
   }
   &__about-us {
@@ -81,6 +68,9 @@
       @media (max-width: $screen-xs-max) {
         padding: 0;
       }
+    }
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: 2rem;
     }
   }
   &__navigation-section-title {
@@ -115,9 +105,22 @@
     @include primary-text;
     margin: 1.125rem 0 1.4375rem 0;
   }
+  &__bottom-area-inner-wrapper {
+    @include inner-wrapper;
+    min-height: 4.375rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 'copyright social';
+    align-items: center;
+    @media (max-width: $screen-xs-max) {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        'copyright'
+        'social';
+    }
+  }
   &__copyright {
     @include primary-text;
-    line-height: 4.375rem;
     grid-area: copyright;
     @media (max-width: $screen-xs-max) {
       text-align: center;
@@ -126,14 +129,14 @@
   &__social-list {
     grid-area: social;
     display: flex;
-    align-items: center;
     justify-content: flex-end;
+    padding-top: 0.25rem;
     @media (max-width: $screen-xs-max) {
+      line-height: 4.375rem;
       justify-content: center;
     }
   }
   &__social-list-item {
-    max-height: 1.5rem;
     margin: 0 0 0 1.25rem;
   }
   &__social-link {
@@ -156,13 +159,13 @@
   }
   &_theme {
     &_creative {
-      #{$blockClass}__inner-wrapper {
+      #{$blockClass}__main-area {
+        border-bottom: none;
+      }
+      #{$blockClass}__main-area-inner-wrapper {
         grid-template-columns: 1fr;
-        grid-template-areas:
-          'about'
-          'social';
-        grid-row-gap: 0;
-        padding-bottom: 6.875rem;
+        grid-template-areas: 'about';
+        padding-bottom: 0;
       }
       #{$blockClass}__about-us {
         text-align: center;
@@ -171,11 +174,15 @@
           padding: 0;
         }
       }
+      #{$blockClass}__bottom-area-inner-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'social';
+        align-items: flex-start;
+      }
       #{$blockClass}__social-list {
         justify-content: center;
         padding: 0.75rem 1.125rem 0 0;
       }
-      #{$blockClass}__horizontal-divider,
       #{$blockClass}__navigation,
       #{$blockClass}__subscribe-form,
       #{$blockClass}__copyright {
