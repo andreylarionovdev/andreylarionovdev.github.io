@@ -53,6 +53,7 @@
   &__navigation {
     grid-area: nav;
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
     padding: 0.3125rem 3.1875rem 0 2.5rem;
     @media (max-width: $screen-xs-max) {

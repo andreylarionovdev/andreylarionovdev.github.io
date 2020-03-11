@@ -42,7 +42,7 @@
     display: none;
     @media (min-width: $screen-md-min) {
       display: flex;
-      flex-direction: row;
+      flex-flow: row wrap;
       justify-content: flex-end;
     }
     &_active {
@@ -89,6 +89,7 @@
     }
     &_theme {
       &_with-submenu {
+        cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
