@@ -3,7 +3,12 @@ extends ../../layouts/page
 include ../../components/room-filter-page/room-filter-page
 
 block vars
-  - const title = 'Search room/Filter';
+  - const title = 'Результаты поиска';
+  -
+    const metaDescription = `Смотреть результаты поиска и выбрать оптимальный вариант
+                             при помощи удобного фильтра по дате пребывания, количеству гостей, цене,
+                             доступности и удобствам.`;
+  - const metaKeywords = 'результаты поиска номеров, фильтр поиска, искать номер, выбрать номер';
 
 block main
   +room-filter-page

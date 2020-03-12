@@ -3,7 +3,11 @@ extends ../../layouts/page
 include ../../components/room-details-page/room-details-page
 
 block vars
-  - const title = 'Room details';
+  - const title = 'Номер 888 Люкс - Отзывы, фото и цены.';
+  -
+    const metaDescription = `Номер 888 Люкс: Читать объективные отзывы и смотреть фотографии реальных путешественников.
+                             Смотреть цены и выбрать лучшее предложение для своего проживания`;
+  - const metaKeywords = 'смотреть цены, читать отзывы, номер люкс, бронировать номер'
 
 block main
   +room-details-page

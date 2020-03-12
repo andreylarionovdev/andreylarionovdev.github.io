@@ -3,7 +3,10 @@ extends ../../layouts/page
 include ../../components/sign-up-page/sign-up-page
 
 block vars
-  - const title = 'Registration';
+  - const title = 'Регистрация';
+  -
+    const metaDescription = 'Зарегистрироваться на официальном сайте отеля Toxin.'
+  - const metaKeywords = 'регистрация, зарегистрироваться, создать учетную запись';
 
 block main
   +sign-up-page
