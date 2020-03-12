@@ -15,8 +15,12 @@
     display: grid;
     grid-template-columns: 1.868fr 1fr;
     grid-column-gap: 4.375rem;
+    @media (max-width: $screen-md-max) {
+      grid-column-gap: 2rem;
+    }
     @media (max-width: $screen-xs-max) {
       grid-template-columns: 1fr;
+      grid-row-gap: 2rem;
     }
   }
   &__featured-images {
@@ -52,6 +56,9 @@
       'info rate'
       'feed feed'
       'rules cancel';
+    @media (max-width: $screen-md-max) {
+      grid-column: span 2;
+    }
     @media (max-width: $screen-xs-max) {
       grid-template-areas:
         'info'
@@ -60,6 +67,7 @@
         'rules'
         'cancel';
       grid-template-columns: 1fr;
+      grid-row-gap: 3rem;
     }
   }
   &__feature-item {
@@ -128,10 +136,14 @@
       padding-left: 0;
     }
   }
-  &__main,
   &__sidebar {
-    @media (max-width: $screen-sm-max) {
+    max-width: 23.75rem;
+    @media (max-width: $screen-md-max) {
       grid-column: span 2;
+      margin-left: auto;
+    }
+    @media (max-width: $screen-xs-max) {
+      margin: 0 auto;
     }
   }
 }

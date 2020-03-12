@@ -34,9 +34,6 @@
   }
   &__form {
     width: 23.75rem;
-    @media (max-width: $screen-xs-max) {
-      width: 100%;
-    }
   }
 }
 

@@ -15,11 +15,12 @@
     padding: 4.375rem 0 0.75rem 0;
     display: grid;
     grid-template-rows: auto 23.375rem;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: auto 1fr 1fr;
     grid-column-gap: 0.625rem;
     align-items: flex-end;
   }
   &__room-search {
+    max-width: 23.75rem;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     @media (max-width: $screen-sm-max) {
@@ -27,6 +28,7 @@
     }
     @media (max-width: $screen-xs-max) {
       grid-column: 1 / 4;
+      margin: 0 auto;
     }
   }
   &__hero-text {
