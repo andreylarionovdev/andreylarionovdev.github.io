@@ -27,14 +27,13 @@ mixin dropdown(options)
   - const b = 'dropdown';
   - const js = 'js';
 
-  div(class=f.bem({b, m: blockModifiers, js}))&attributes({ 'data-type': type } )
-    input(class=f.bem({b, e: 'input', js}) type='text' value=value)
-    div(class=f.bem({b, e: 'selection', js}))= value
+  div(class=f.bem({ b, m: blockModifiers, js }))&attributes({ 'data-type': type })
+    input(class=f.bem({ b, e: 'input', js }) type='text' value=value readonly)
     button.dropdown__toggle-button.js-dropdown__toggle-button.material-icons(type='button')= 'keyboard_arrow_down'
     if allowedTypes.includes(type) && rows.length > 0
       ul(class=f.bem({b, e: 'menu', js}))
         each row in rows
-          li(class=f.bem({b, e: 'menu-item', js}))
+          li(class=f.bem({ b, e: 'menu-item', js }))
             .dropdown__item-name= row.text
             .dropdown__count-buttons
               - const decButtonModifiers = row.count < 1 ? ['disabled'] : [];
@@ -42,14 +41,14 @@ mixin dropdown(options)
               span(class=f.bem({b, e: 'count', js}))= row.count
               button.js-dropdown__change-count-button_type_inc(class=f.bem({b, e: 'change-count-button', js}) type='button' data-operator='+')= '+'
         li.dropdown__footer-buttons
-          span(class=f.bem({b, e: 'clear-button', js}))
+          span(class=f.bem({ b, e: 'clear-button', js }))
             +button({
               theme: 'textual',
               color: 'gray',
               type: 'button',
               caption: 'очистить',
             })
-          span(class=f.bem({b, e: 'apply-button', js}))
+          span(class=f.bem({ b, e: 'apply-button', js }))
             +button({
               theme: 'textual',
               type: 'button',

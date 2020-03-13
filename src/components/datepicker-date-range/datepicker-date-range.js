@@ -23,6 +23,8 @@ DatepickerDateRange.prototype.init = function init($element) {
   this.$dropdownFrom = $element.find(this.selectorDropdownFrom);
   this.$dropdownTo = $element.find(this.selectorDropdownTo);
 
+  this.currentInputValues = [];
+
   this.initDatepicker($element);
 
   this.setDates();
@@ -31,7 +33,6 @@ DatepickerDateRange.prototype.init = function init($element) {
 
 DatepickerDateRange.prototype.initDatepicker = function initDatepicker($element) {
   const that = this;
-
   this.$datepickerApi = this.$inputFrom.datepicker({
     range: true,
     minDate: new Date(),
@@ -46,6 +47,11 @@ DatepickerDateRange.prototype.initDatepicker = function initDatepicker($element)
       inst.$datepicker.css('width', `${$element.outerWidth()}px`);
       that.addButtons(inst.$datepicker);
     },
+    onSelect() {
+      // We shouldn't change input values immediately
+      that.$inputFrom.val(that.currentInputValues[0]);
+      that.$inputTo.val(that.currentInputValues[1]);
+    },
   }).data('datepicker');
 };
 
@@ -59,6 +65,9 @@ DatepickerDateRange.prototype.handleDropdownClick = function handleDropdownClick
 };
 
 DatepickerDateRange.prototype.setDates = function setDates() {
+  this.currentInputValues[0] = this.$inputFrom.val();
+  this.currentInputValues[1] = this.$inputTo.val();
+
   const arrIsoFrom = this.$inputFrom.val().split('.');
   const arrIsoTo = this.$inputTo.val().split('.');
 
@@ -80,10 +89,9 @@ DatepickerDateRange.prototype.setDates = function setDates() {
 };
 
 DatepickerDateRange.prototype.clear = function clear() {
-  this.$dropdownFrom.find('.dropdown__selection').text(this.emptyValue);
-  this.$dropdownFrom.find('.dropdown__input').val('');
-  this.$dropdownTo.find('.dropdown__selection').text(this.emptyValue);
-  this.$dropdownTo.find('.dropdown__input').val('');
+  this.$dropdownFrom.find('.dropdown__input').val(this.emptyValue);
+  this.$dropdownTo.find('.dropdown__input').val(this.emptyValue);
+  this.currentInputValues = [this.emptyValue, this.emptyValue];
 };
 
 DatepickerDateRange.prototype.update = function update() {
@@ -97,8 +105,8 @@ DatepickerDateRange.prototype.update = function update() {
 
   const formatFrom = `${ddFrom}.${mmFrom}.${yyyyFrom}`;
 
-  this.$dropdownFrom.find('.js-dropdown__selection').text(formatFrom);
   this.$dropdownFrom.find('.js-dropdown__input').val(formatFrom);
+  this.currentInputValues[0] = formatFrom;
 
   if (dates.length > 1) {
     const ddTo = `0${dates[1].getDate()}`.slice(-2);
@@ -107,8 +115,8 @@ DatepickerDateRange.prototype.update = function update() {
 
     const formatTo = `${ddTo}.${mmTo}.${yyyyTo}`;
 
-    this.$dropdownTo.find('.js-dropdown__selection').text(formatTo);
     this.$dropdownTo.find('.js-dropdown__input').val(formatTo);
+    this.currentInputValues[1] = formatTo;
   }
 };
 

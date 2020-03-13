@@ -8,34 +8,26 @@
   font-size: 0.875rem;
   color: $color-dark-75;
   user-select: none;
-  &__selection {
+  &__input {
+    outline: none;
+    font-family: Montserrat, sans-serif;
+    font-size: 0.875rem;
+    color: $color-dark-75;
+    width: 100%;
     line-height: 2.625rem;
     padding: 0 2.375rem 0 0.875rem;
     border: 0.0625rem solid $color-dark-25;
     border-radius: 0.25rem;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
   }
   &__toggle-button {
     @include reset-button;
     @include reset-outline(text-shadow);
     color: $color-dark-50;
     position: absolute;
-    right: 0.6875rem;
-    top: 0;
     padding-top: 0.0625rem;
+    top: 0;
+    right: 0.6875rem;
     height: 100%;
-  }
-  &__input {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    border: none;
-    outline: none;
-    z-index: -1;
   }
   #{$blockClass}__menu {
     position: absolute;
@@ -102,7 +94,7 @@
     justify-content: space-between;
   }
   &_expanded {
-    #{$blockClass}__selection {
+    #{$blockClass}__input {
       border: 0.0625rem solid $color-dark-50;
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0;

@@ -24,7 +24,7 @@ Dropdown.prototype.init = function init($element) {
   this.selectorCount = '.js-dropdown__count';
 
   this.$toggleButton = this.$element.find('.js-dropdown__toggle-button');
-  this.$selection = this.$element.find('.js-dropdown__selection');
+  this.$input = this.$element.find('.js-dropdown__input');
   this.$changeCountButton = this.$element.find(this.selectorChangeCountButton);
   this.$clearButton = this.$element.find('.js-dropdown__clear-button');
   this.$applyButton = this.$element.find('.js-dropdown__apply-button');
@@ -77,7 +77,7 @@ Dropdown.prototype.addEventListeners = function addEventListeners() {
   this.$applyButton.on('click', this.handleApplyButtonClick.bind(this));
 };
 
-Dropdown.prototype.handleToggleButtonClick = function handleDropdownClick(e) {
+Dropdown.prototype.handleToggleButtonClick = function handleToggleButtonClick(e) {
   e.preventDefault();
 
   if (this.$element.find(this.selectorMenu).length === 1) {
@@ -161,7 +161,7 @@ Dropdown.prototype.updateValue = function updateValue() {
     return `${count} ${wordForm}`;
   });
 
-  this.$selection.text(this.buildValue(countsWithCategories));
+  this.$input.val(this.buildValue(countsWithCategories));
 };
 
 Dropdown.prototype.updateView = function updateView() {
