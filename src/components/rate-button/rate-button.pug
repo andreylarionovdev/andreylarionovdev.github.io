@@ -1,9 +1,7 @@
 mixin rate-button(options)
-  - const { id, base, rate, name = id } = options || {};
+  - const { base, rate } = options || {};
 
-  .rate-button(id=id)
-    - let n = base;
-    while n > 0
-      input.rate-button__input(id=id + n type='radio' name=name value=n checked=(n === rate))
-      label.rate-button__label(for=id + n)= n
-      - n = n - 1;
+  .rate-button
+    - for(let i = 0; i < base; i++)
+      - const starContent = i >= rate ? 'star_bordered' : 'star';
+      span.rate-button__star.material-icons= starContent

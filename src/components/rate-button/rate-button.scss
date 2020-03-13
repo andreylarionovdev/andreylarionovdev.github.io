@@ -4,44 +4,12 @@
   $blockClass: &;
   display: inline-block;
 
-  @mixin star($content: 'star') {
+  &__star {
+    cursor: default;
+    user-select: none;
     color: $color-purple;
-    content: $content;
     font-family: 'Material Icons';
     font-size: 1.375rem;
-  }
-
-  &__input {
-    position: absolute;
-    opacity: 0;
-    &:checked ~ #{$blockClass}__label {
-      &:before {
-        @include star;
-      }
-    }
-  }
-  &__label {
-    float: right;
-    overflow: hidden;
     width: 1.5rem;
-    white-space: nowrap;
-    cursor: pointer;
-    font-size: 0;
-    &:before {
-      @include star('star_bordered');
-    }
   }
-  &:not(:checked) {
-    #{$blockClass}__label {
-      &:hover {
-        &:before {
-          @include star;
-        }
-        & ~ #{$blockClass}__label:before {
-          @include star;
-        }
-      }
-    }
-  }
-
 }
