@@ -8,6 +8,7 @@ mixin dropdown(options)
       isEdited,
       isEmpty,
       withHiddenButtons,
+      hasZIndexPriority,
     } = options || {};
 
   - const allowedTypes = ['guest', 'room'];
@@ -22,6 +23,8 @@ mixin dropdown(options)
     - blockModifiers.push('empty');
   if withHiddenButtons
     - blockModifiers.push('with-hidden-buttons');
+  if hasZIndexPriority
+    - blockModifiers.push('with-z-index-priority')
 
   - const f = require('../../utils/functions.js');
   - const b = 'dropdown';

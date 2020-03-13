@@ -247,7 +247,12 @@ mixin form-elements-page
             })
             +dropdown({
               type: 'room',
-              value: '2 спальни, 2 кровати'
+              rows: [
+                {count: 2, text: 'спальни',},
+                {count: 2, text: 'кровати',},
+                {count: 0, text: 'ванные комнаты',}
+              ],
+              hasZIndexPriority: true,
             })
           .form-elements-page__dropdown.form-elements-page__dropdown
             +label({

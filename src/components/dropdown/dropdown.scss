@@ -29,7 +29,8 @@
     right: 0.6875rem;
     height: 100%;
   }
-  #{$blockClass}__menu {
+  $zIndex: 9;
+  &__menu {
     position: absolute;
     left: 0;
     display: none;
@@ -40,7 +41,7 @@
     border-bottom-left-radius: 0.25rem;
     box-shadow: 0 0.625rem 1.25rem $color-dark-5;
     background-color: white;
-    z-index: 9;
+    z-index: $zIndex;
   }
   &__menu-item {
     display: flex;
@@ -110,6 +111,11 @@
   &_with-hidden-buttons {
     #{$blockClass}__footer-buttons {
       display: none;
+    }
+  }
+  &_with-z-index-priority {
+    #{$blockClass}__menu {
+      z-index: $zIndex + 1;
     }
   }
   &_empty {
