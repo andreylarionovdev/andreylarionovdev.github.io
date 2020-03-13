@@ -50,6 +50,9 @@
     @include reset-button;
     @include reset-outline(text-shadow);
     color: $color-purple;
+    &.-disabled- {
+      visibility: hidden;
+    }
   }
   &--nav-title {
     font-family: 'Open Sans', sans-serif;
@@ -72,11 +75,15 @@
     position: relative;
     align-items: center;
     justify-content: center;
-    line-height: 2.5rem;
     font-size: 0.75rem;
     border-radius: 50%;
     z-index: 1;
     color: $color-dark-50;
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 100%;
+    }
 
     &.-focus- {
       background: $grad-purple;
