@@ -1,7 +1,7 @@
 {
   "name": "toxin-booking",
   "version": "0.0.1",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "build": "rm -rf ./docs && webpack -p",
     "watch": "webpack-dev-server",
@@ -14,7 +14,8 @@
     "eslint": "^6.1.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.20.1"
+    "eslint-plugin-import": "^2.20.1",
+    "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
     "air-datepicker": "^2.2.3",
@@ -38,10 +39,12 @@
     "sass-loader": "^8.0.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.35.2",
-    "webpack-cli": "^3.3.5",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-cli": "^3.3.5"
   },
-  "browserslist": ["> 1%", "last 2 versions"],
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
   "postcss": {
     "plugins": {
       "autoprefixer": {}
