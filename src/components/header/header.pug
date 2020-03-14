@@ -2,13 +2,15 @@ include ../logo/logo
 include ../button/button
 
 mixin header(options)
-  - const { user, menuItems, menuButtons } = options || {};
+  - const { theme, user, menuItems, menuButtons } = options || {};
 
   - const f = require('../../utils/functions');
   - const b = 'header';
   - const js = 'js';
 
-  header.header.js-header
+  - const classTheme = theme ? `${b}_theme_${theme}` : '';
+
+  header.header.js-header(class=classTheme)
     nav.header__inner-wrapper
       button(class=f.bem({b, e: 'navigation-toggle', js})).material-icons= 'menu'
       .header__logo

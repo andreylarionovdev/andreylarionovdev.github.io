@@ -190,5 +190,32 @@
         display: none;
       }
     }
+    &_ui-kit {
+      #{$blockClass}__navigation-section {
+        font-family: Montserrat, sans-serif;
+        &:nth-child(2) {
+          padding-right: 0;
+        }
+        &:nth-child(3) {
+          padding-right: 2.25rem;
+          @media (max-width: $screen-xs-max) {
+            padding-right: 0;
+          }
+        }
+        @media (max-width: $screen-xs-max) {
+          margin-bottom: 2rem;
+        }
+      }
+      #{$blockClass}__subscribe-form-title {
+        letter-spacing: -0.32px;
+      }
+      #{$blockClass}__subscribe-form-description {
+        letter-spacing: -0.16px;
+      }
+      #{$blockClass}__copyright,
+      #{$blockClass}__description {
+        letter-spacing: -0.08px;
+      }
+    }
   }
 }

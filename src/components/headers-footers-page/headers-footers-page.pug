@@ -3,6 +3,7 @@ include ../header/header
 include ../footer/footer
   
 mixin headers-footers-page
+  - const theme = 'ui-kit';
   - const user = 'Cosmin Negoita';
   -
     const menuItems = [
@@ -39,10 +40,10 @@ mixin headers-footers-page
     nav.headers-footers-page__nav
       +logo
     section.headers-footers-page__header
-      +header({menuItems, menuButtons})
+      +header({theme, menuItems, menuButtons})
     section.headers-footers-page__header
-      +header({user, menuItems, menuButtons})
+      +header({theme, user, menuItems, menuButtons})
     section.headers-footers-page__footer
-      +footer
+      +footer({ theme })
     section.headers-footers-page__footer
       +footer({theme: 'creative'})

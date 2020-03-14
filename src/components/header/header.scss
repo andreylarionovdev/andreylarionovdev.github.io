@@ -59,11 +59,6 @@
       margin: 0 0 0 1.3125rem;
       display: flex;
       align-items: center;
-      &_theme {
-        &_auth-button {
-          margin-left: 1.25rem;
-        }
-      }
     }
   }
   &__user-navigation {
@@ -98,6 +93,32 @@
           font-family: 'Material Icons';
           font-size: 1.5rem;
           height: 1.25rem;
+        }
+      }
+    }
+  }
+  &_theme {
+    &_ui-kit {
+      @media (min-width: $screen-md-min) {
+        #{$blockClass}__navigation-item {
+          margin-left: 1.875rem;
+          &:nth-child(4) {
+            margin-left: 1rem;
+          }
+        }
+
+        #{$blockClass}__user-navigation {
+          #{$blockClass}__navigation-item {
+            margin-left: 0;
+            & + #{$blockClass}__navigation-item {
+              margin-left: 1.25rem;
+            }
+          }
+          &_authenticated {
+            #{$blockClass}__navigation-item {
+              margin-left: 2rem;
+            }
+          }
         }
       }
     }
