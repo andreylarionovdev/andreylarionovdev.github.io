@@ -8,7 +8,7 @@
 @import '../room-thumbnail/room-thumbnail.scss';
 @import '../pagination/pagination.scss';
 @import '../text-input/text-input.scss';
-@import '../datepicker-date-range/datepicker-date-range.scss';
+@import '../datepicker-range/datepicker-range';
 @import '../button/button.scss';
 @import '../radio-button/radio-button.scss';
 @import '../checkbox/checkbox.scss';
@@ -88,11 +88,11 @@
       margin-bottom: 0.3125rem;
     }
     &_theme {
-      &_datepicker-date-range,
-      &_date-filter {
+      &_datepicker-range {
         margin-bottom: 2.5625rem;
       }
       &_date-filter {
+        margin-bottom: 2.5625rem;
         padding-right: 3.375rem;
       }
     }

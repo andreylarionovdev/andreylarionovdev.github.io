@@ -1,7 +1,7 @@
 include ../logo/logo
 include ../text-input/text-input
 include ../dropdown/dropdown
-include ../datepicker-date-range/datepicker-date-range
+include ../datepicker-range/datepicker-range
 include ../radio-button/radio-button
 include ../checkbox/checkbox
 include ../label/label
@@ -64,9 +64,9 @@ mixin form-elements-page
               id: 'input-with-mask',
               placeholder: 'ДД.ММ.ГГГГ'
             })
-          .form-elements-page__dropdown.form-elements-page__dropdown_theme_datepicker-date-range
-            +datepicker-date-range({
-              id: 'datepicker-date-range-demo',
+          .form-elements-page__dropdown.form-elements-page__dropdown_theme_datepicker-range
+            +datepicker-range({
+              id: 'datepicker-range-demo',
               fromLabel: 'date dropdown',
               from: 'ДД.ММ.ГГГГ',
               toLabel: 'date dropdown',

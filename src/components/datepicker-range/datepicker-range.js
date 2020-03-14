@@ -1,17 +1,17 @@
 import $ from 'jquery';
 import 'air-datepicker';
 
-const DatepickerDateRange = function DatepickerDateRange($element) {
+const DatepickerRange = function DatepickerDateRange($element) {
   this.init($element);
 };
 
-DatepickerDateRange.prototype.init = function init($element) {
+DatepickerRange.prototype.init = function init($element) {
   this.emptyValue = 'ДД.ММ.ГГГГ';
 
-  this.selectorDropdownFrom = '.js-datepicker-date-range__dropdown-group-from .js-datepicker-date-range__dropdown';
-  this.selectorInputFrom = '.js-datepicker-date-range__dropdown-group-from input';
-  this.selectorDropdownTo = '.js-datepicker-date-range__dropdown-group-to .js-datepicker-date-range__dropdown';
-  this.selectorInputTo = '.js-datepicker-date-range__dropdown-group-to input';
+  this.selectorDropdownFrom = '.js-datepicker-range__dropdown-group-from .js-datepicker-range__dropdown';
+  this.selectorInputFrom = '.js-datepicker-range__dropdown-group-from input';
+  this.selectorDropdownTo = '.js-datepicker-range__dropdown-group-to .js-datepicker-range__dropdown';
+  this.selectorInputTo = '.js-datepicker-range__dropdown-group-to input';
   this.selectorToggleButton = '.js-dropdown__toggle-button';
 
   this.selectorClearButton = '[data-action="clear"]';
@@ -23,28 +23,33 @@ DatepickerDateRange.prototype.init = function init($element) {
   this.$dropdownFrom = $element.find(this.selectorDropdownFrom);
   this.$dropdownTo = $element.find(this.selectorDropdownTo);
 
+  this.$datepickerContainer = $element.find('.js-datepicker-range__datepicker-container');
+
   this.currentInputValues = [];
+  this.isInline = $element.hasClass('js-datepicker-range_theme_inline');
 
   this.initDatepicker($element);
 
   this.setDates();
   this.addEventListeners();
+
+  if (this.isInline) {
+    this.$datepickerApi.show();
+  }
 };
 
-DatepickerDateRange.prototype.initDatepicker = function initDatepicker($element) {
+DatepickerRange.prototype.initDatepicker = function initDatepicker() {
   const that = this;
-  this.$datepickerApi = this.$inputFrom.datepicker({
+  this.$datepickerApi = this.$datepickerContainer.datepicker({
     range: true,
     minDate: new Date(),
-    offset: 6,
+    disableNavWhenOutOfRange: !this.isInline,
     navTitles: {
       days: 'MM <i>yyyy</i>',
     },
     prevHtml: '<span class="material-icons">arrow_back</span>',
     nextHtml: '<span class="material-icons">arrow_forward</span>',
     onShow(inst) {
-      inst.$datepicker.css('position', 'absolute');
-      inst.$datepicker.css('width', `${$element.outerWidth()}px`);
       that.addButtons(inst.$datepicker);
     },
     onSelect() {
@@ -55,16 +60,21 @@ DatepickerDateRange.prototype.initDatepicker = function initDatepicker($element)
   }).data('datepicker');
 };
 
-DatepickerDateRange.prototype.addEventListeners = function addEventListeners() {
-  this.$dropdownFrom.find(this.selectorToggleButton).on('click', this.handleDropdownClick.bind(this));
-  this.$dropdownTo.find(this.selectorToggleButton).on('click', this.handleDropdownClick.bind(this));
+DatepickerRange.prototype.addEventListeners = function addEventListeners() {
+  this.$dropdownFrom.find(this.selectorToggleButton).on('click', this.handleToggleButtonClick.bind(this));
+  this.$dropdownTo.find(this.selectorToggleButton).on('click', this.handleToggleButtonClick.bind(this));
 };
 
-DatepickerDateRange.prototype.handleDropdownClick = function handleDropdownClick() {
-  this.$datepickerApi.show();
+DatepickerRange.prototype.handleToggleButtonClick = function handleToggleButtonClick() {
+  const isVisible = this.$datepickerApi.$el.find('.datepicker').is(':visible');
+  if (isVisible) {
+    this.$datepickerApi.hide();
+  } else {
+    this.$datepickerApi.show();
+  }
 };
 
-DatepickerDateRange.prototype.setDates = function setDates() {
+DatepickerRange.prototype.setDates = function setDates() {
   this.currentInputValues[0] = this.$inputFrom.val();
   this.currentInputValues[1] = this.$inputTo.val();
 
@@ -88,13 +98,13 @@ DatepickerDateRange.prototype.setDates = function setDates() {
   }
 };
 
-DatepickerDateRange.prototype.clear = function clear() {
+DatepickerRange.prototype.clear = function clear() {
   this.$dropdownFrom.find('.dropdown__input').val(this.emptyValue);
   this.$dropdownTo.find('.dropdown__input').val(this.emptyValue);
   this.currentInputValues = [this.emptyValue, this.emptyValue];
 };
 
-DatepickerDateRange.prototype.update = function update() {
+DatepickerRange.prototype.update = function update() {
   const dates = this.$datepickerApi.selectedDates;
 
   if (dates.length === 0) return;
@@ -120,7 +130,7 @@ DatepickerDateRange.prototype.update = function update() {
   }
 };
 
-DatepickerDateRange.prototype.addButtons = function addButtons($dpElement) {
+DatepickerRange.prototype.addButtons = function addButtons($dpElement) {
   const $clearBtn = this.createButton('clear', 'Очистить');
   const $applyBtn = this.createButton('apply', 'Применить');
   if ($dpElement.find(this.selectorClearButton).length === 0) {
@@ -136,7 +146,7 @@ DatepickerDateRange.prototype.addButtons = function addButtons($dpElement) {
   }
 };
 
-DatepickerDateRange.prototype.createButton = function createButton(action, caption) {
+DatepickerRange.prototype.createButton = function createButton(action, caption) {
   const clearClass = action === 'clear' ? 'button_color_gray' : '';
   const template = `<button class="button button_theme_textual ${clearClass}" type="button" data-action="${action}">
                       <div class="button__inner-wrapper">
@@ -146,14 +156,18 @@ DatepickerDateRange.prototype.createButton = function createButton(action, capti
   return $(template);
 };
 
-DatepickerDateRange.prototype.handleClearButtonClick = function handleClearButtonClick() {
+DatepickerRange.prototype.handleClearButtonClick = function handleClearButtonClick() {
+  if (this.isInline) return;
+
   this.$datepickerApi.clear();
   this.clear();
 };
 
-DatepickerDateRange.prototype.handleApplyButtonClick = function handleApplyButtonClick() {
+DatepickerRange.prototype.handleApplyButtonClick = function handleApplyButtonClick() {
+  if (this.isInline) return;
+
   this.$datepickerApi.hide();
   this.update();
 };
 
-$(() => $('.js-datepicker-date-range').each((i, o) => new DatepickerDateRange($(o))));
+$(() => $('.js-datepicker-range').each((i, o) => new DatepickerRange($(o))));

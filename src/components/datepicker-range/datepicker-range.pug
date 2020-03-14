@@ -1,0 +1,33 @@
+include ../label/label
+include ../dropdown/dropdown
+
+mixin datepicker-range(options)
+  -
+    const mask = 'ДД.ММ.ГГГГ'
+    const {
+      theme,
+      fromLabel = 'Прибытие',
+      from = mask,
+      toLabel = 'Выезд',
+      to = mask,
+    } = options || {}
+
+    const f = require('../../utils/functions');
+    const b = 'datepicker-range';
+    const js = 'js';
+
+    const jsClassTheme = theme ? `${js}-${b}_theme_${theme}` : '';
+
+  div(class=f.bem({b, m:[{ theme }], js}) class=jsClassTheme)
+    div(class=f.bem({b, e: 'dropdowns-group', js}))
+      div(class=f.bem({b, e: 'dropdown-group-from', js}))
+        .datepicker-range__label
+          +label({ label: fromLabel })
+        div(class=f.bem({b, e: 'dropdown', js}))
+          +dropdown({ value: from })
+      div(class=f.bem({b, e: 'dropdown-group-to', js}))
+        .datepicker-range__label
+          +label({ label: toLabel })
+        div(class=f.bem({b, e: 'dropdown', js}))
+          +dropdown({ value: to })
+    div(class=f.bem({b, e: 'datepicker-container', js}))

@@ -1,0 +1,251 @@
+@import '../../utils/vars';
+@import '../../utils/mixins';
+
+.datepicker-range {
+  $blockClass: &;
+  &__dropdowns-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(7.8125rem, 1fr));
+    grid-column-gap: 1.25rem;
+    grid-row-gap: 0.625rem;
+    margin-bottom: 0.375rem;
+  }
+  &__label {
+    margin-bottom: 0.3125rem;
+  }
+  &__datepicker-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .datepicker {
+    @include card;
+    font-family: Montserrat, sans-serif;
+    font-size: 0.875rem;
+    padding: 0.9375rem 1.125rem 1.125rem 1.25rem;
+    display: none;
+    z-index: 100;
+
+    &.active {
+      display: block;
+    }
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__clear-button {
+      color: $color-dark-50;
+    }
+    &__apply-button {
+      color: $color-purple;
+    }
+
+    &--body {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+    &--content {
+      padding: 1.625rem 0 1.25rem 0;
+    }
+    &--nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      line-height: 2rem;
+    }
+    &--nav-title,
+    &--nav-action {
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+    }
+    &--nav-action {
+      @include reset-button;
+      @include reset-outline(text-shadow);
+      color: $color-purple;
+      &.-disabled- {
+        visibility: hidden;
+      }
+    }
+    &--nav-title {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.1875rem;
+      font-weight: bold;
+      color: $color-dark-100;
+      i {
+        font-family: Quicksand, sans-serif;
+        font-style: normal;
+        padding-left: 0.3125rem;
+      }
+    }
+    &--cells {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &--cell {
+      cursor: pointer;
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      border-radius: 50%;
+      z-index: 1;
+      color: $color-dark-50;
+      &:before {
+        content: '';
+        display: block;
+        padding-top: 100%;
+      }
+
+      &.-focus- {
+        background: $grad-purple;
+        color: white;
+        font-weight: bold;
+        &.-range-from-,
+        &.-range-to- {
+          background: $grad-purple;
+        }
+        &.-in-range- {
+          background: $grad-purple-25;
+          color: white;
+        }
+      }
+      &.-current- {
+        color: white;
+        font-weight: bold;
+        background: $grad-green;
+        &.-focus- {
+          color: $grad-purple;
+        }
+        &.-in-range- {
+          color: $grad-purple-25;
+        }
+      }
+      &.-in-range- {
+        border-radius: 0;
+        background: $grad-purple-25;
+        color: $color-dark-50;
+        &.-focus- {
+          background-color: $grad-purple-25;
+        }
+      }
+      &.-range-from- {
+        border-radius: 50%;
+        background: $grad-purple;
+        font-weight: bold;
+        color: white;
+        &:after {
+          position: absolute;
+          content: '';
+          width: 50%;
+          height: 100%;
+          background: $grad-purple-25;
+          right: 0;
+          z-index: -1;
+        }
+      }
+      &.-range-to- {
+        border-radius: 50%;
+        background: $grad-purple;
+        font-weight: bold;
+        color: white;
+        &:before {
+          position: absolute;
+          content: '';
+          width: 50%;
+          height: 100%;
+          background: $grad-purple-25;
+          left: 0;
+          z-index: -1;
+        }
+      }
+      &.-range-from-.-range-to- {
+        border-radius: 50%;
+        background-color: $grad-purple;
+        font-weight: bold;
+      }
+      &.-selected- {
+        color: white;
+        background: $grad-purple;
+
+        &.-focus- {
+          background: $grad-purple;
+        }
+      }
+    }
+
+    &--days-names {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &--day-name {
+      color: $color-purple;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      text-align: center;
+      text-transform: capitalize;
+      font-size: 0.75rem;
+      line-height: 2.5rem;
+      font-weight: bold;
+    }
+    &--cell-day {
+      width: (100/7)#{'%'};
+      &.-other-month-,
+      &.-disabled- {
+        color: $color-dark-25;
+        &:hover {
+          color: white;
+        }
+        &.-selected- {
+          color: white;
+          background: $grad-purple;
+          &.-focus- {
+            background: $grad-purple;
+          }
+        }
+        &.-in-range- {
+          background-color: $grad-purple-25;
+          color: $color-dark-50;
+          &.-focus- {
+            background-color: $grad-purple;
+          }
+        }
+      }
+    }
+    &--cells-years,
+    &--years,
+    &--cells-months {
+      height: 10rem;
+    }
+    &--cell-month {
+      width: 33.33%;
+      height: 25%;
+    }
+    &--cell-year {
+      width: 25%;
+      height: 33.33%;
+    }
+  }
+  .datepicker-inline {
+    position: absolute;
+    z-index: 11;
+  }
+
+  &_theme {
+    &_inline {
+      #{$blockClass}__dropdowns-group {
+        display: none;
+      }
+      .datepicker-inline {
+        position: static;
+      }
+    }
+  }
+}
