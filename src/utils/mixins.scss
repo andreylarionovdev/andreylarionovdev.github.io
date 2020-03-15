@@ -3,7 +3,7 @@
 @mixin inner-wrapper($lgWidth: 80.6%, $mdWidth: 95.5%, $maxWidth: 72.5rem) {
   margin: 0 auto;
   width: $mdWidth;
-  @media (min-width: $screen-md-min) {
+  @media (min-width: $screen-lg-min) {
     width: $lgWidth;
     max-width: $maxWidth;
   }

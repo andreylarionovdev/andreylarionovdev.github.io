@@ -66,6 +66,9 @@
       margin-left: 0;
       & + #{$blockClass}__navigation-item {
         margin-left: 1.25rem;
+        @media (max-width: $screen-xs-max) {
+          margin-left: 0;
+        }
       }
     }
     &_authenticated {

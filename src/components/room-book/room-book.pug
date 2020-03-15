@@ -5,7 +5,7 @@ include ../datepicker-range/datepicker-range
 mixin room-book(options)
   - const { roomNumber, pricePerDay, discount, fee, feature, method='POST', action='/' } = options || {};
 
-  - const f = require('../../utils/functions');
+  - const formatCurrency = require('../../utils/helpers').formatCurrency;
 
   form.room-book(method=method action=action)
     header.room-book__header
@@ -15,7 +15,7 @@ mixin room-book(options)
         if feature
           h3.room-book__number-feature= feature
       .room-book__price-per-day
-        span.room-book__cost!= f.formatCurrency({value: pricePerDay})
+        span.room-book__cost!= formatCurrency({value: pricePerDay})
         |&nbsp;
         span.room-book__date-unit= 'в сутки'
 
@@ -43,11 +43,11 @@ mixin room-book(options)
     - const totalNetto = totalBruto - discount + fee;
 
     .room-book__result-grid
-      .room-book__result-grid-cell!= `${f.formatCurrency({value: pricePerDay})} x 4 суток`
+      .room-book__result-grid-cell!= `${formatCurrency({value: pricePerDay})} x 4 суток`
       .room-book__result-grid-cell.room-book__result-grid-cell_content_with-info-icon
-      .room-book__result-grid-cell.room-book__result-grid-cell_content_with-sum!= f.formatCurrency({value: totalBruto})
+      .room-book__result-grid-cell.room-book__result-grid-cell_content_with-sum!= formatCurrency({value: totalBruto})
 
-      .room-book__result-grid-cell!= `Сбор за услуги: скидка ${f.formatCurrency({value: discount})}`
+      .room-book__result-grid-cell!= `Сбор за услуги: скидка ${formatCurrency({value: discount})}`
       .room-book__result-grid-cell.room-book__result-grid-cell_content_with-info-icon
         span(title='change me').room-book__info-icon.material-icons= 'info_outline'
       .room-book__result-grid-cell.room-book__result-grid-cell_content_with-sum= '0₽'
@@ -55,12 +55,12 @@ mixin room-book(options)
       .room-book__result-grid-cell= 'Сбор за дополнительные услуги'
       .room-book__result-grid-cell.room-book__result-grid-cell_content_with-info-icon
         span(title='change me').room-book__info-icon.material-icons= 'info_outline'
-      .room-book__result-grid-cell.room-book__result-grid-cell_content_with-sum!= f.formatCurrency({value: fee})
+      .room-book__result-grid-cell.room-book__result-grid-cell_content_with-sum!= formatCurrency({value: fee})
 
     p.room-book__total-row
       span.room-book__total-header= 'Итого'
       span.room-book__total-line
-      span.room-book__total-sum!= f.formatCurrency({value: totalNetto})
+      span.room-book__total-sum!= formatCurrency({value: totalNetto})
 
     footer.room-book__button
       +button({

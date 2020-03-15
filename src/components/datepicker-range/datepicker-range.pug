@@ -12,22 +12,22 @@ mixin datepicker-range(options)
       to = mask,
     } = options || {}
 
-    const f = require('../../utils/functions');
-    const b = 'datepicker-range';
-    const js = 'js';
+    const createBemClasses = require('../../utils/helpers').createBemClasses;
+    const blockName = 'datepicker-range';
+    const jsPrefix = 'js';
 
-    const jsClassTheme = theme ? `${js}-${b}_theme_${theme}` : '';
+    const jsClassTheme = theme ? `${jsPrefix}-${blockName}_theme_${theme}` : '';
 
-  div(class=f.bem({b, m:[{ theme }], js}) class=jsClassTheme)
-    div(class=f.bem({b, e: 'dropdowns-group', js}))
-      div(class=f.bem({b, e: 'dropdown-group-from', js}))
+  div(class=createBemClasses({ blockName, modifiers: [{ theme }], jsPrefix }) class=jsClassTheme)
+    div(class=createBemClasses({ blockName, elementName: 'dropdowns-group', jsPrefix }))
+      div(class=createBemClasses({ blockName, elementName: 'dropdown-group-from', jsPrefix }))
         .datepicker-range__label
           +label({ label: fromLabel })
-        div(class=f.bem({b, e: 'dropdown', js}))
+        div(class=createBemClasses({ blockName, elementName: 'dropdown', jsPrefix }))
           +dropdown({ value: from })
-      div(class=f.bem({b, e: 'dropdown-group-to', js}))
+      div(class=createBemClasses({ blockName, elementName: 'dropdown-group-to', jsPrefix }))
         .datepicker-range__label
           +label({ label: toLabel })
-        div(class=f.bem({b, e: 'dropdown', js}))
+        div(class=createBemClasses({ blockName, elementName: 'dropdown', jsPrefix }))
           +dropdown({ value: to })
-    div(class=f.bem({b, e: 'datepicker-container', js}))
+    div(class=createBemClasses({ blockName, elementName: 'datepicker-container', jsPrefix }))

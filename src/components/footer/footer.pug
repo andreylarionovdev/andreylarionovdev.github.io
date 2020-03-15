@@ -40,9 +40,9 @@ mixin footer(options)
       copyright = 'Copyright © 2018 Toxin UI Kit. All rights reserved.',
     } = options || {};
 
-  - const f = require('../../utils/functions');
+  - const createBemClasses = require('../../utils/helpers').createBemClasses;
 
-  footer(class=f.bem({ b: 'footer', m: [ {theme }] }))
+  footer(class=createBemClasses({ blockName: 'footer', modifiers: [ {theme }] }))
     .footer__main-area
       .footer__main-area-inner-wrapper
         .footer__about-us

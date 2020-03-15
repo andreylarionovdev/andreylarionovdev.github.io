@@ -19,11 +19,11 @@ mixin button(options)
   if isFluid
     - blockModifiers.push('fluid');
 
-  - const f = require('../../utils/functions');
+  - const createBemClasses = require('../../utils/helpers').createBemClasses;
   - const isButton = ['button', 'submit'].includes(type);
   - const tag = isButton ? 'button' : 'a';
 
-  #{tag}(class=f.bem({ b: 'button', m: blockModifiers }) type=type href=href)&attributes(attr)
+  #{tag}(class=createBemClasses({ blockName: 'button', modifiers: blockModifiers }) type=type href=href)&attributes(attr)
     span.button__inner-wrapper
       span.button__caption!= caption
       span.button__arrow.material-icons= 'arrow_forward'

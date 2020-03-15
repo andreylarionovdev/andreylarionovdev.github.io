@@ -26,32 +26,32 @@ mixin dropdown(options)
   if hasZIndexPriority
     - blockModifiers.push('with-z-index-priority')
 
-  - const f = require('../../utils/functions.js');
-  - const b = 'dropdown';
-  - const js = 'js';
+  - const createBemClasses = require('../../utils/helpers.js').createBemClasses;
+  - const blockName = 'dropdown';
+  - const jsPrefix = 'js';
 
-  div(class=f.bem({ b, m: blockModifiers, js }))&attributes({ 'data-type': type })
-    input(class=f.bem({ b, e: 'input', js }) type='text' value=value readonly)
+  div(class=createBemClasses({ blockName, modifiers: blockModifiers, jsPrefix }))&attributes({ 'data-type': type })
+    input(class=createBemClasses({ blockName, elementName: 'input', jsPrefix }) type='text' value=value readonly)
     button.dropdown__toggle-button.js-dropdown__toggle-button.material-icons(type='button')= 'keyboard_arrow_down'
     if allowedTypes.includes(type) && rows.length > 0
-      ul(class=f.bem({b, e: 'menu', js}))
+      ul(class=createBemClasses({ blockName, elementName: 'menu', jsPrefix }))
         each row in rows
-          li(class=f.bem({ b, e: 'menu-item', js }))
+          li(class=createBemClasses({ blockName, elementName: 'menu-item', jsPrefix }))
             .dropdown__item-name= row.text
             .dropdown__count-buttons
               - const decButtonModifiers = row.count < 1 ? ['disabled'] : [];
-              button.js-dropdown__change-count-button_type_dec(class=f.bem({b, e: 'change-count-button', m: decButtonModifiers, js}) type='button' data-operator='-')= '-'
-              span(class=f.bem({b, e: 'count', js}))= row.count
-              button.js-dropdown__change-count-button_type_inc(class=f.bem({b, e: 'change-count-button', js}) type='button' data-operator='+')= '+'
+              button.js-dropdown__change-count-button_type_dec(class=createBemClasses({ blockName, elementName: 'change-count-button', m: decButtonModifiers, jsPrefix }) type='button' data-operator='-')= '-'
+              span(class=createBemClasses({ blockName, elementName: 'count', jsPrefix }))= row.count
+              button.js-dropdown__change-count-button_type_inc(class=createBemClasses({ blockName, elementName: 'change-count-button', jsPrefix }) type='button' data-operator='+')= '+'
         li.dropdown__footer-buttons
-          span(class=f.bem({ b, e: 'clear-button', js }))
+          span(class=createBemClasses({ blockName, elementName: 'clear-button', jsPrefix }))
             +button({
               theme: 'textual',
               color: 'gray',
               type: 'button',
               caption: 'очистить',
             })
-          span(class=f.bem({ b, e: 'apply-button', js }))
+          span(class=createBemClasses({ blockName, elementName: 'apply-button', jsPrefix }))
             +button({
               theme: 'textual',
               type: 'button',

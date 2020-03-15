@@ -2,7 +2,7 @@ include ../../components/logo/logo
 
 mixin body(options)
   - const { theme } = options || {};
-  - const f = require('../../utils/functions');
+  - const createBemClasses = require('../../utils/helpers').createBemClasses;
 
-  body(class=f.bem({ b: 'body', m: [{ theme }] }))
+  body(class=createBemClasses({ blockName: 'body', modifiers: [{ theme }] }))
     block

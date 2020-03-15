@@ -5,12 +5,12 @@ mixin checkbox-list-expandable(options)
 
   - const blockModifiers = isExpanded ? ['expanded'] : [];
 
-  - const f = require('../../utils/functions');
-  - const b = 'checkbox-list-expandable';
-  - const js = 'js';
+  - const createBemClasses = require('../../utils/helpers').createBemClasses;
+  - const blockName = 'checkbox-list-expandable';
+  - const jsPrefix = 'js';
 
-  div(id=id class=f.bem({ b, m: blockModifiers, js }))
-    h3(class=f.bem({ b, e: 'toggle', js }))
+  div(id=id class=createBemClasses({ blockName, modifiers: blockModifiers, jsPrefix }))
+    h3(class=createBemClasses({ blockName, elementName: 'toggle', jsPrefix }))
       span.checkbox-list-expandable__label= label
       button.checkbox-list-expandable__arrow.material-icons(type='button')= 'keyboard_arrow_down'
     ul.checkbox-list-expandable__list

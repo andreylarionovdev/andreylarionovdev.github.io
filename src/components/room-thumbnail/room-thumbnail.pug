@@ -15,32 +15,28 @@ mixin room-thumbnail(options)
 
     const blockModifiers = focus ? ['focused'] : [];
 
-    const f = require('../../utils/functions');
-    const b = 'room-thumbnail';
+    const helpers = require('../../utils/helpers');
 
-  div(class=f.bem({b, m: blockModifiers}))
+    const createBemClasses = helpers.createBemClasses;
+    const formatCurrency = helpers.formatCurrency;
+
+    const blockName = 'room-thumbnail';
+
+  div(class=createBemClasses({ blockName, modifiers: blockModifiers}))
     figure.room-thumbnail__carousel
       each image, inx in images
-        - const bemObj = {b, e: 'carousel-image'}
-        - bemObj.m = inx === 0 ? ['active'] : [];
-        img(class=f.bem(bemObj) src=image.src alt=image.alt)
-      button(class=f.bem({
-        b,
-        e: 'carousel-control',
-        m: [{ type: 'prev' }],
-      }))
+        - const bemObj = { blockName, elementName: 'carousel-image'}
+        - bemObj.modifiers = inx === 0 ? ['active'] : [];
+        img(class=createBemClasses(bemObj) src=image.src alt=image.alt)
+      button(class=createBemClasses({ blockName, elementName: 'carousel-control', modifiers: [{ type: 'prev' }] }))
         span.material-icons= 'keyboard_arrow_left'
-      button(class=f.bem({
-        b,
-        e: 'carousel-control',
-        m: [{ type: 'next' }],
-      }))
+      button(class=createBemClasses({ blockName, elementName: 'carousel-control', modifiers: [{ type: 'next' }] }))
         span.material-icons= 'keyboard_arrow_left'
       ul.room-thumbnail__carousel-indicators
         each _, inx in images
-          - const bemObj = {b, e: 'carousel-indicator'};
-          - bemObj.m = inx === 0 ? ['active'] : [];
-          li(class=f.bem(bemObj))
+          - const bemObj = { blockName, elementName: 'carousel-indicator'};
+          - bemObj.modifiers = inx === 0 ? ['active'] : [];
+          li(class=createBemClasses(bemObj))
     header.room-thumbnail__header
       a(href=href).room-thumbnail__number
         span.room-thumbnail__number-sign= '№'
@@ -48,7 +44,7 @@ mixin room-thumbnail(options)
         if feature
           h3.room-thumbnail__number-feature= feature
       .room-thumbnail__price-per-day
-        span.room-thumbnail__cost!= f.formatCurrency({value: pricePerDay})
+        span.room-thumbnail__cost!= formatCurrency({value: pricePerDay})
         |&nbsp;
         span.room-thumbnail__date-unit= 'в сутки'
     footer.room-thumbnail__footer

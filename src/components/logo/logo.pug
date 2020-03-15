@@ -1,7 +1,7 @@
 mixin logo(withText)
   - const blockModifiers = withText ? ['with-text'] : [];
 
-  - const f = require('../../utils/functions')
-  - const b = 'logo'
+  - const createBemClasses = require('../../utils/helpers').createBemClasses
+  - const blockName = 'logo'
 
-  a(class=f.bem({b, m: blockModifiers}) href='./index.html')
+  a(class=createBemClasses({ blockName, modifiers: blockModifiers}) href='./index.html')

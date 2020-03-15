@@ -1,21 +1,21 @@
-const bem = function bem(options) {
+const createBemClasses = function createBemClasses(options) {
   const {
-    b,
-    e,
-    m,
-    js,
+    blockName,
+    elementName,
+    modifiers,
+    jsPrefix,
   } = options || {};
 
-  const isElement = b && e;
+  const isElement = blockName && elementName;
 
-  const baseClass = isElement ? `${b}__${e}` : b;
+  const baseClass = isElement ? `${blockName}__${elementName}` : blockName;
 
   const classes = [];
 
   classes.push(baseClass);
 
-  if (m && Array.isArray(m)) {
-    const modifiersClasses = m.map((modifier) => {
+  if (modifiers && Array.isArray(modifiers)) {
+    const modifiersClasses = modifiers.map((modifier) => {
       if (typeof modifier === 'object') {
         const modifierName = Object.keys(modifier)[0];
         const modifierValue = modifier[modifierName];
@@ -29,8 +29,8 @@ const bem = function bem(options) {
     classes.push(...modifiersClasses);
   }
 
-  if (js) {
-    classes.push(`${js}-${baseClass}`);
+  if (jsPrefix) {
+    classes.push(`${jsPrefix}-${baseClass}`);
   }
 
   return classes;
@@ -43,6 +43,6 @@ const formatCurrency = function formatCurrency(options) {
 };
 
 export {
-  bem,
+  createBemClasses,
   formatCurrency,
 };

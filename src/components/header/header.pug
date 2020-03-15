@@ -4,24 +4,24 @@ include ../button/button
 mixin header(options)
   - const { theme, user, menuItems, menuButtons } = options || {};
 
-  - const f = require('../../utils/functions');
-  - const b = 'header';
-  - const js = 'js';
+  - const createBemClasses = require('../../utils/helpers').createBemClasses;
+  - const blockName = 'header';
+  - const jsPrefix = 'js';
 
-  - const classTheme = theme ? `${b}_theme_${theme}` : '';
+  - const classTheme = theme ? `${blockName}_theme_${theme}` : '';
 
   header.header.js-header(class=classTheme)
     nav.header__inner-wrapper
-      button(class=f.bem({b, e: 'navigation-toggle', js})).material-icons= 'menu'
+      button(class=createBemClasses({ blockName, elementName: 'navigation-toggle', jsPrefix })).material-icons= 'menu'
       .header__logo
         +logo(true)
-      ul(class=f.bem({b, e: 'navigation', js}))
+      ul(class=createBemClasses({ blockName, elementName: 'navigation', jsPrefix }))
         each item, _ in menuItems
           li.header__navigation-item
-            - const bemObj = {b, e: 'navigation-link'}
+            - const bemObj = { blockName, elementName: 'navigation-link'}
             if item.sub
-              - bemObj.m = [{ theme: 'with-submenu' }]
-            a(class=f.bem(bemObj) href=item.href)
+              - bemObj.modifiers = [{ theme: 'with-submenu' }]
+            a(class=createBemClasses(bemObj) href=item.href)
               if item.active
                 b= item.name
               else

@@ -3,10 +3,10 @@ mixin like-button(options)
 
   - const blockModifiers = isFavorite ? ['favorite'] : [];
 
-  - const f = require('../../utils/functions');
-  - const b = 'like-button';
-  - const js = 'js';
+  - const createBemClasses = require('../../utils/helpers').createBemClasses;
+  - const blockName = 'like-button';
+  - const jsPrefix = 'js';
 
-  button(class=f.bem({b, m: blockModifiers, js}) type='button')
-    span(class=f.bem({b, e: 'icon',js})).material-icons= isFavorite ? 'favorite' : 'favorite_border'
-    span(class=f.bem({b, e: 'count', js}))= count
+  button(class=createBemClasses({ blockName, modifiers: blockModifiers, jsPrefix }) type='button')
+    span(class=createBemClasses({ blockName, elementName: 'icon', jsPrefix })).material-icons= isFavorite ? 'favorite' : 'favorite_border'
+    span(class=createBemClasses({ blockName, elementName: 'count', jsPrefix }))= count
