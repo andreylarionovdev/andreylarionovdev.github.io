@@ -96,7 +96,7 @@
       border-radius: 50%;
       z-index: 1;
       color: $color-dark-50;
-      &:before {
+      &:after {
         content: '';
         display: block;
         padding-top: 100%;
@@ -196,7 +196,7 @@
       font-weight: bold;
     }
     &--cell-day {
-      width: (100/7)#{'%'};
+      width: 14.285714285714286%;
       &.-other-month-,
       &.-disabled- {
         color: $color-dark-25;
