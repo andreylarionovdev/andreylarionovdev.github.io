@@ -40,7 +40,7 @@ mixin dropdown(options)
             .dropdown__item-name= row.text
             .dropdown__count-buttons
               - const decButtonModifiers = row.count < 1 ? ['disabled'] : [];
-              button.js-dropdown__change-count-button_type_dec(class=createBemClasses({ blockName, elementName: 'change-count-button', m: decButtonModifiers, jsPrefix }) type='button' data-operator='-')= '-'
+              button.js-dropdown__change-count-button_type_dec(class=createBemClasses({ blockName, elementName: 'change-count-button', modifiers: decButtonModifiers, jsPrefix }) type='button' data-operator='-')= '-'
               span(class=createBemClasses({ blockName, elementName: 'count', jsPrefix }))= row.count
               button.js-dropdown__change-count-button_type_inc(class=createBemClasses({ blockName, elementName: 'change-count-button', jsPrefix }) type='button' data-operator='+')= '+'
         li.dropdown__footer-buttons
