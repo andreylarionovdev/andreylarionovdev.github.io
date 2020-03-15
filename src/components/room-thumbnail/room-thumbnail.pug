@@ -1,4 +1,4 @@
-include ../rate-button/rate-button
+include ../rate-bar/rate-bar
 
 mixin room-thumbnail(options)
   -
@@ -53,7 +53,7 @@ mixin room-thumbnail(options)
         span.room-thumbnail__date-unit= 'в сутки'
     footer.room-thumbnail__footer
       .room-thumbnail__rate
-        +rate-button({
+        +rate-bar({
           id: `${roomNumber}__rate`,
           base: 5,
           rate,

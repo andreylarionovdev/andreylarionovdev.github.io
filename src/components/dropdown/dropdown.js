@@ -68,6 +68,7 @@ Dropdown.prototype.initState = function initType() {
   this.state = stateTemplates[this.type];
 
   this.updateState();
+  this.updateView();
 };
 
 Dropdown.prototype.addEventListeners = function addEventListeners() {
@@ -117,6 +118,7 @@ Dropdown.prototype.handleChangeCountButtonClick = function handleChangeCountButt
   this.$element.removeClass(`${this.classEmpty} ${this.classHiddenButtons}`);
 
   this.updateState();
+  this.updateView();
 };
 
 Dropdown.prototype.handleClearButtonClick = function handleClearButtonClick(e) {

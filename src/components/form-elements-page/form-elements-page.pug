@@ -6,7 +6,7 @@ include ../radio-button/radio-button
 include ../checkbox/checkbox
 include ../label/label
 include ../like-button/like-button
-include ../rate-button/rate-button
+include ../rate-bar/rate-bar
 include ../range-slider/range-slider
 include ../button/button
 include ../pagination/pagination
@@ -158,16 +158,16 @@ mixin form-elements-page
               count: 12,
               isFavorite: true
             })
-          .form-elements-page__rate-button-group
+          .form-elements-page__rate-bar-group
             +label({
               label: 'rate button'
             })
-            +rate-button({
+            +rate-bar({
               id: 'rate-first',
               base: 5,
               rate: 4
             })
-            +rate-button({
+            +rate-bar({
               id: 'rate-second',
               base: 5,
               rate: 5

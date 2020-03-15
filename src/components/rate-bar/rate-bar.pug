@@ -1,7 +1,7 @@
-mixin rate-button(options)
+mixin rate-bar(options)
   - const { base, rate } = options || {};
 
-  .rate-button
+  .rate-bar
     - for(let i = 0; i < base; i++)
       - const starContent = i >= rate ? 'star_bordered' : 'star';
-      span.rate-button__star.material-icons= starContent
+      span.rate-bar__star.material-icons= starContent
