@@ -125,10 +125,11 @@
         border-radius: 0;
         background: $grad-purple-25;
         color: $color-dark-50;
-        &.-focus- {
-          background-color: $grad-purple-25;
+        &.-disabled- {
+          background: transparent;
         }
       }
+      &.-in-range-.-current-,
       &.-range-from- {
         border-radius: 50%;
         background: $grad-purple;
@@ -142,6 +143,16 @@
           background: $grad-purple-25;
           right: 0;
           z-index: -1;
+        }
+        &.-disabled- {
+          font-weight: normal;
+          background: transparent;
+          &.-focus- {
+            color: $color-dark-25;
+          }
+          &:after {
+            content: none;
+          }
         }
       }
       &.-range-to- {
@@ -205,13 +216,6 @@
             background: $grad-purple;
           }
         }
-        &.-in-range- {
-          background-color: $grad-purple-25;
-          color: $color-dark-50;
-          &.-focus- {
-            background-color: $grad-purple;
-          }
-        }
       }
       &:after {
         content: '';
@@ -229,9 +233,15 @@
       height: 25%;
       &.-range-from-,
       &.-range-to-,
+      &.-range-from-.-range-to-,
       &.-current-,
       &.-focus- {
         border-radius: 0.25rem;
+      }
+      &.-disabled- {
+        font-weight: normal;
+        background: transparent;
+        color: $color-dark-25;
       }
     }
     &--cell-year {
@@ -239,9 +249,16 @@
       height: 33.33%;
       &.-range-from-,
       &.-range-to-,
+      &.-range-from-.-range-to-,
       &.-current-,
+      &.-selected,
       &.-focus- {
         border-radius: 0.25rem;
+      }
+      &.-disabled- {
+        font-weight: normal;
+        background: transparent;
+        color: $color-dark-25;
       }
     }
   }
