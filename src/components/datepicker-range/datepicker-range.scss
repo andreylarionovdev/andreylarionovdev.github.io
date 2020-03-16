@@ -203,8 +203,7 @@
     }
     &--cell-day {
       width: 14.285714285714286%;
-      &.-other-month-,
-      &.-disabled- {
+      &.-other-month- {
         color: $color-dark-25;
         &:hover {
           color: white;
@@ -215,6 +214,16 @@
           &.-focus- {
             background: $grad-purple;
           }
+        }
+      }
+      &.-disabled-,
+      &.-disabled-.-other-month- {
+        color: $color-dark-25;
+        font-weight: normal;
+        background: transparent;
+        cursor: default;
+        &:before {
+          content: none;
         }
       }
       &:after {
