@@ -1,6 +1,7 @@
 mixin dropdown(options)
   -
     const {
+      id,
       type,
       value,
       rows = [],
@@ -31,7 +32,7 @@ mixin dropdown(options)
   - const jsPrefix = 'js';
 
   div(class=createBemClasses({ blockName, modifiers: blockModifiers, jsPrefix }))&attributes({ 'data-type': type })
-    input(class=createBemClasses({ blockName, elementName: 'input', jsPrefix }) type='text' value=value readonly)
+    input(id=id class=createBemClasses({ blockName, elementName: 'input', jsPrefix }) type='text' value=value readonly)
     button.dropdown__toggle-button.js-dropdown__toggle-button.material-icons(type='button')= 'keyboard_arrow_down'
     if allowedTypes.includes(type) && rows.length > 0
       ul(class=createBemClasses({ blockName, elementName: 'menu', jsPrefix }))

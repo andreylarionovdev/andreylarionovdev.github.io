@@ -23,16 +23,20 @@
   &__text-input {
     margin-bottom: 0.5625rem;
   }
-  &__gender-group {
-    display: flex;
-    margin-bottom: 1.5625rem;
-  }
   &__radio-button {
     display: inline-block;
     float: left;
     margin-right: 1.25rem;
   }
-  &__label {
+  &__gender-group {
+    display: flex;
+    margin-bottom: 1.5625rem;
+  }
+  &__credentials-group {
+    border: none;
+  }
+  &__label,
+  &__legend {
     margin-bottom: 0.3125rem;
   }
   &__button {

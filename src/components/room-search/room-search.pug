@@ -7,12 +7,13 @@ mixin room-search()
   form.room-search
     h1.room-search__title= 'Найдём номера под ваши пожелания'
     .room-search__datepicker-range
-      +datepicker-range({id: 'room-search__check-in-out'})
+      +datepicker-range({id: 'room-search-datepicker'})
     .room-search__guests-dropdown-group
       .room-search__label
-        +label({ label: 'Гости' })
+        +label({ label: 'Гости', _for: 'room-search-guests' })
       .room-search__dropdown
         +dropdown({
+          id: 'room-search-guests',
           type: 'guest',
           rows: [
             {count: 0, text: 'взрослые'},

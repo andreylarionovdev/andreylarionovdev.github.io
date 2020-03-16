@@ -1,6 +1,9 @@
 mixin label(options)
   - const { label, hint, _for } = options || {};
 
-  label.label(for=_for)
+  - const tag = _for ? 'label' : 'p';
+
+  #{tag}.label(for=_for)
     span.label__title= label
-    span.label__hint= hint
+    if hint
+      span.label__hint= hint

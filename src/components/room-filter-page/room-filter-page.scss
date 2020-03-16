@@ -26,11 +26,9 @@
   }
   &__label {
     margin-bottom: 0.3125rem;
-    &_for {
-      &_checkbox {
-        margin-bottom: 1rem;
-      }
-    }
+  }
+  &__legend {
+    margin-bottom: 1rem;
   }
   &__guests-dropdown-group {
     margin-top: 1.3152rem;
@@ -42,11 +40,12 @@
   }
 
   &__checkbox-list-group {
+    border: none;
     padding-right: 1.25rem;
     &_theme {
       &_rich {
         padding-right: 0;
-        margin-top: 1.75rem;
+        margin-top: 1.125rem;
         #{$blockClass}__checkbox {
           margin-bottom: 0.4375rem;
         }
@@ -63,7 +62,7 @@
     color: $color-dark-50;
   }
   &__feature-dropdown-group {
-    margin-top: 1.6875rem;
+    margin-top: 1.25rem;
   }
   &__checkbox-list-expandable {
     margin-top: 1rem;

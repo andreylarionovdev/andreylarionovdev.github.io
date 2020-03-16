@@ -46,11 +46,10 @@ mixin sign-up(options)
           name: 'birthday',
           placeholder: 'ДД.ММ.ГГГГ',
         })
-    .sign-up__email-group
-      .sign-up__label
+    fieldset.sign-up__credentials-group
+      legend.sign-up__legend
         +label({
           label: 'Данные для входа в сервис',
-          _for: 'sign-up__input-email',
         })
       .sign-up__text-input
         +text-input({
@@ -59,12 +58,12 @@ mixin sign-up(options)
           placeholder: 'Email',
           type: 'email',
         })
-    .sign-up__text-input
-      +text-input({
-        name: 'password',
-        placeholder: 'Пароль',
-        type: 'password',
-      })
+      .sign-up__text-input
+        +text-input({
+          name: 'password',
+          placeholder: 'Пароль',
+          type: 'password',
+        })
     .sign-up__checkbox
       +checkbox({
         id: 'sign-up__toggle-promo',

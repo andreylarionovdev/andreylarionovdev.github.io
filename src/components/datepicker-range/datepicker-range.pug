@@ -5,6 +5,7 @@ mixin datepicker-range(options)
   -
     const mask = 'ДД.ММ.ГГГГ'
     const {
+      id='datepicker-range',
       theme,
       fromLabel = 'Прибытие',
       from = mask,
@@ -20,14 +21,16 @@ mixin datepicker-range(options)
 
   div(class=createBemClasses({ blockName, modifiers: [{ theme }], jsPrefix }) class=jsClassTheme)
     div(class=createBemClasses({ blockName, elementName: 'dropdowns-group', jsPrefix }))
+      - const fromInputId = `${id}__from-input`;
       div(class=createBemClasses({ blockName, elementName: 'dropdown-group-from', jsPrefix }))
         .datepicker-range__label
-          +label({ label: fromLabel })
+          +label({ label: fromLabel, _for: fromInputId})
         div(class=createBemClasses({ blockName, elementName: 'dropdown', jsPrefix }))
-          +dropdown({ value: from })
+          +dropdown({ id: fromInputId, value: from })
+      - const toInputId = `${id}__to-input`;
       div(class=createBemClasses({ blockName, elementName: 'dropdown-group-to', jsPrefix }))
         .datepicker-range__label
-          +label({ label: toLabel })
+          +label({ label: toLabel, _for: toInputId })
         div(class=createBemClasses({ blockName, elementName: 'dropdown', jsPrefix }))
-          +dropdown({ value: to })
+          +dropdown({ id: toInputId, value: to })
     div(class=createBemClasses({ blockName, elementName: 'datepicker-container', jsPrefix }))

@@ -21,16 +21,17 @@ mixin room-book(options)
 
     .room-book__datepicker-range
       +datepicker-range({
-        id: 'room-book__check-in-out',
+        id: 'room-book-datepicker',
         from: '19.08.2019',
         to: '23.08.2019',
       })
 
     .room-book__guests-dropdown-group
       .room-book__label
-        +label({ label: 'Гости' })
+        +label({ label: 'Гости', _for: 'room-book-guests' })
       .room-book__dropdown
         +dropdown({
+          id: 'room-book-guests',
           type: 'guest',
           rows: [
             {count: 2, text: 'взрослые'},

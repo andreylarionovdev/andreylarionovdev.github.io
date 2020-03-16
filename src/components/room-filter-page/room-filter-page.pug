@@ -9,117 +9,120 @@ mixin room-filter-page
   .room-filter-page
     .room-filter-page__inner-wrapper
       section.room-filter-page__sidebar
-        .room-filter-page__date-dropdown-group
-          .room-filter-page__label
-            +label({
-              label: 'Даты пребывания в отеле',
+        form.room-filter-page__form
+          .room-filter-page__date-dropdown-group
+            .room-filter-page__label
+              +label({
+                label: 'Даты пребывания в отеле',
+                _for: 'dates-dropdown',
+              })
+            .room-filter-page__dropdown
+              +dropdown({
+                id: 'dates-dropdown',
+                value: '19 авг. - 23 авг.',
+              })
+          .room-filter-page__guests-dropdown-group
+            .room-filter-page__label
+              +label({
+                label: 'Гости',
+                _for: 'guests-dropdown',
+              })
+            .room-filter-page__dropdown
+              +dropdown({
+                id: 'guests-dropdown',
+                type: 'guest',
+                rows: [
+                  {count: 2, text: 'взрослые'},
+                  {count: 0, text: 'дети'},
+                  {count: 1, text: 'младенцы'},
+                ],
+              })
+          .room-filter-page__range-slider
+            +range-slider({
+              label: 'Диапазон цены',
+              name: 'price-slider',
+              min: 0,
+              max: 16000,
+              from: 5000,
+              to: 10000,
             })
-          .room-filter-page__dropdown
-            +dropdown({
-              value: '19 авг. - 23 авг.',
-            })
-        .room-filter-page__guests-dropdown-group
-          .room-filter-page__label
-            +label({
-              label: 'Гости',
-            })
-          .room-filter-page__dropdown
-            +dropdown({
-              type: 'guest',
-              rows: [
-                {count: 2, text: 'взрослые'},
-                {count: 0, text: 'дети'},
-                {count: 1, text: 'младенцы'},
+            p.room-filter-page__range-slider-hint
+              = 'Стоимость за сутки пребывания в номере'
+          fieldset.room-filter-page__checkbox-list-group
+            legend.room-filter-page__legend
+              +label({ label: 'checkbox buttons' })
+            ul.room-filter-page__checkbox-list
+              li.room-filter-page__checkbox
+                +checkbox({
+                  id: 'smoke-allowed-checkbox',
+                  name: 'smoke-allowed',
+                  label: 'Можно курить',
+                })
+              li.room-filter-page__checkbox
+                +checkbox({
+                  id: 'pets-allowed-checkbox',
+                  name: 'pets-allowed',
+                  label: 'Можно с питомцами',
+                  isChecked: true,
+                })
+              li.room-filter-page__checkbox
+                +checkbox({
+                  id: 'guests-allowed-checkbox',
+                  name: 'guests-allowed',
+                  label: 'Можно пригласить гостей (до 10 человек)',
+                  isChecked: true,
+                })
+          - const theme = 'rich';
+          fieldset.room-filter-page__checkbox-list-group.room-filter-page__checkbox-list-group_theme_rich
+            legend.room-filter-page__legend
+              +label({ label: 'Доступность' })
+            ul.form-elements-page__checkbox-list
+              li.room-filter-page__checkbox
+                +checkbox({
+                  id: 'wide-hall-checkbox',
+                  name: 'wide-hall',
+                  label: 'Широкий коридор',
+                  hint: 'Ширина коридоров в номере не&nbsp;менее 91 см.',
+                  theme: 'rich',
+                })
+              li.room-filter-page__checkbox
+                +checkbox({
+                  id: 'disable-assistant-checkbox',
+                  id: 'disable-assistant',
+                  label: 'Помощник для инвалидов',
+                  hint: 'На 1 этаже вас встретит специалист и проводит до номера.',
+                  theme: 'rich',
+                })
+          .room-filter-page__feature-dropdown-group
+            .room-filter-page__label
+              +label({
+                label: 'Удобства номера',
+                _for: 'rooms-features',
+              })
+            .room-filter-page__dropdown
+              +dropdown({
+                id: 'rooms-features',
+                type: 'room',
+                rows: [
+                  {count: 2, text: 'спальни'},
+                  {count: 2, text: 'кровати'},
+                  {count: 0, text: 'ванные комнаты'},
+                ],
+              })
+          .room-filter-page__checkbox-list-expandable
+            +checkbox-list-expandable({
+              label: 'Дополнительные удобства',
+              items: [
+                {id: 'breakfast-checkbox', label: 'Завтрак'},
+                {id: 'table-checkbox', label: 'Письменный стол', isChecked: true},
+                {id: 'baby-chair-for-eat-checkbox', label: 'Стул для кормления', isChecked: true},
+                {id: 'baby-bed-checkbox', label: 'Кроватка', isChecked: true},
+                {id: 'tv-1-checkbox', label: 'Телевизор'},
+                {id: 'shampoo-1-checkbox', label: 'Шампунь'},
+                {id: 'tv-2-checkbox', label: 'Телевизор'},
+                {id: 'shampoo-2-checkbox', label: 'Шампунь'},
               ],
             })
-        .room-filter-page__range-slider
-          +range-slider({
-            label: 'Диапазон цены',
-            name: 'price-slider',
-            min: 0,
-            max: 16000,
-            from: 5000,
-            to: 10000,
-          })
-          p.room-filter-page__range-slider-hint
-            = 'Стоимость за сутки пребывания в номере'
-        .room-filter-page__checkbox-list-group
-          .room-filter-page__label_for_checkbox
-            +label({
-              label: 'checkbox buttons',
-            })
-          ul.room-filter-page__checkbox-list
-            li.room-filter-page__checkbox
-              +checkbox({
-                id: 'smoke-allowed-checkbox',
-                name: 'smoke-allowed',
-                label: 'Можно курить',
-              })
-            li.room-filter-page__checkbox
-              +checkbox({
-                id: 'pets-allowed-checkbox',
-                name: 'pets-allowed',
-                label: 'Можно с питомцами',
-                isChecked: true,
-              })
-            li.room-filter-page__checkbox
-              +checkbox({
-                id: 'guests-allowed-checkbox',
-                name: 'guests-allowed',
-                label: 'Можно пригласить гостей (до 10 человек)',
-                isChecked: true,
-              })
-        - const theme = 'rich';
-        .room-filter-page__checkbox-list-group.room-filter-page__checkbox-list-group_theme_rich
-          .room-filter-page__label_for_checkbox
-            +label({
-              label: 'Доступность',
-            })
-          ul.form-elements-page__checkbox-list
-            li.room-filter-page__checkbox
-              +checkbox({
-                id: 'wide-hall-checkbox',
-                name: 'wide-hall',
-                label: 'Широкий коридор',
-                hint: 'Ширина коридоров в номере не&nbsp;менее 91 см.',
-                theme: 'rich',
-              })
-            li.room-filter-page__checkbox
-              +checkbox({
-                id: 'disable-assistant-checkbox',
-                id: 'disable-assistant',
-                label: 'Помощник для инвалидов',
-                hint: 'На 1 этаже вас встретит специалист и проводит до номера.',
-                theme: 'rich',
-              })
-        .room-filter-page__feature-dropdown-group
-          .room-filter-page__label
-            +label({
-              label: 'Удобства номера',
-            })
-          .room-filter-page__dropdown
-            +dropdown({
-              type: 'room',
-              rows: [
-                {count: 2, text: 'спальни'},
-                {count: 2, text: 'кровати'},
-                {count: 0, text: 'ванные комнаты'},
-              ],
-            })
-        .room-filter-page__checkbox-list-expandable
-          +checkbox-list-expandable({
-            label: 'Дополнительные удобства',
-            items: [
-              {id: 'breakfast-checkbox', label: 'Завтрак'},
-              {id: 'table-checkbox', label: 'Письменный стол', isChecked: true},
-              {id: 'baby-chair-for-eat-checkbox', label: 'Стул для кормления', isChecked: true},
-              {id: 'baby-bed-checkbox', label: 'Кроватка', isChecked: true},
-              {id: 'tv-1-checkbox', label: 'Телевизор'},
-              {id: 'shampoo-1-checkbox', label: 'Шампунь'},
-              {id: 'tv-2-checkbox', label: 'Телевизор'},
-              {id: 'shampoo-2-checkbox', label: 'Шампунь'},
-            ],
-          })
       section.room-filter-page__thumbnail-list-wrapper
         h1.room-filter-page__thumbnail-list-title= 'Номера, которые мы для вас подобрали'
         ul.room-filter-page__thumbnail-list
