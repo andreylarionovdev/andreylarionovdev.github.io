@@ -25,11 +25,18 @@
         border-color: $color-purple;
       }
     }
+    &:focus + #{$blockClass}__label {
+      &:before {
+        transition: box-shadow .25s ease-in-out;
+        box-shadow: 0 0.3125rem 0.3125rem $color-dark-25;
+      }
+    }
   }
 
   &__label {
     position: relative;
     display: inline-block;
+    cursor: pointer;
     padding-left: 1.875rem;
     color: $color-dark-50;
     &:after,
