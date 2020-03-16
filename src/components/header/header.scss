@@ -80,6 +80,7 @@
     }
   }
   &__navigation-link {
+    @include reset-outline(text-shadow);
     text-decoration: none;
     color: $color-dark-50;
     &:hover {

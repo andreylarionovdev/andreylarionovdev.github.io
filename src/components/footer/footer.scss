@@ -86,6 +86,7 @@
   }
   &__navigation-section-link {
     @include primary-text;
+    @include reset-outline(text-shadow);
     color: $color-dark-50;
     text-decoration: none;
     &:hover {

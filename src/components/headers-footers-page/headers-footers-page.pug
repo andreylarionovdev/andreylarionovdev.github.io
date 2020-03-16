@@ -6,20 +6,22 @@ mixin headers-footers-page
   - const theme = 'ui-kit';
   - const user = 'Cosmin Negoita';
   -
+    const href = '/change-me';
     const menuItems = [
-      {name: 'Home', href: '/change-me', active: true},
-      {name: 'About Us', href: '/change-me'},
+      {name: 'Home', href, active: true},
+      {name: 'About Us', href},
       {
         name: 'Services',
         sub: [
-          {name: 'One One', href: '/change-me'},
-          {name: 'Two Two', href: '/change-me'},
-          {name: 'Three', href: '/change-me'}
-        ]
+          {name: 'One One', href},
+          {name: 'Two Two', href},
+          {name: 'Three', href}
+        ],
+        href,
       },
-      {name: 'Careers', href: '/change-me'},
-      {name: 'News', href: '/change-me'},
-      {name: 'Documentation', href: '/change-me'}
+      {name: 'Careers', href},
+      {name: 'News', href},
+      {name: 'Documentation', href}
     ];
   -
     const menuButtons = [
@@ -28,12 +30,14 @@ mixin headers-footers-page
         theme: 'transparent',
         caption: 'Login',
         size: 'small',
+        href: 'sign-in.html',
       },
       {
         name: 'sign-up-btn',
         theme: 'default',
         caption: 'Register',
         size: 'small',
+        href: 'sign-up.html',
       }
     ];
   article.headers-footers-page
