@@ -23,7 +23,7 @@
     &_type {
       &_sign-up {
         margin-top: 0;
-        width: 31%;
+        min-width: 31%;
         @media (max-width: $screen-xs-max) {
           width: 100%;
           text-align: center;
@@ -44,10 +44,10 @@
     font-size: 0.875rem;
     font-family: Montserrat, sans-serif;
     color: black;
-    line-height: 2.75rem;
     @media (max-width: $screen-xs-max) {
       text-align: center;
       width: 100%;
+      margin-bottom: 1rem;
     }
   }
 }

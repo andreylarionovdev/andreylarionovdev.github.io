@@ -40,11 +40,11 @@
     margin-bottom: 0.3125rem;
   }
   &__button {
-    margin-top: 1.5625rem;
+    margin-top: 1.5rem;
     &_type {
       &_sign-in {
         margin-top: 0;
-        width: 31%;
+        min-width: 31%;
         @media (max-width: $screen-xs-max) {
           width: 100%;
         }
@@ -64,10 +64,10 @@
     font-size: 0.875rem;
     font-family: Montserrat, sans-serif;
     color: black;
-    line-height: 2.75rem;
     @media (max-width: $screen-xs-max) {
       text-align: center;
       width: 100%;
+      margin-bottom: 1rem;
     }
   }
 }
