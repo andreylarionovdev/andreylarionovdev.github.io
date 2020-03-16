@@ -96,11 +96,6 @@
       border-radius: 50%;
       z-index: 1;
       color: $color-dark-50;
-      &:after {
-        content: '';
-        display: block;
-        padding-top: 100%;
-      }
 
       &.-focus- {
         background: $grad-purple;
@@ -218,6 +213,11 @@
           }
         }
       }
+      &:after {
+        content: '';
+        display: block;
+        padding-top: 100%;
+      }
     }
     &--cells-years,
     &--years,
@@ -227,10 +227,22 @@
     &--cell-month {
       width: 33.33%;
       height: 25%;
+      &.-range-from-,
+      &.-range-to-,
+      &.-current-,
+      &.-focus- {
+        border-radius: 0.25rem;
+      }
     }
     &--cell-year {
       width: 25%;
       height: 33.33%;
+      &.-range-from-,
+      &.-range-to-,
+      &.-current-,
+      &.-focus- {
+        border-radius: 0.25rem;
+      }
     }
   }
   .datepicker-inline {
