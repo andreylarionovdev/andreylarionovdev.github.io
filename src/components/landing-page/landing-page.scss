@@ -18,6 +18,10 @@
     grid-template-columns: auto 1fr 1fr;
     grid-column-gap: 0.625rem;
     align-items: flex-end;
+    @media (max-width: $screen-xs-max) {
+      grid-template-rows: auto auto;
+      padding: 3rem 0;
+    }
   }
   &__room-search {
     max-width: 23.75rem;
@@ -39,7 +43,7 @@
     padding: 0 0 0.5rem 4.5rem;
     margin-right: -0.3125rem;
     @media (max-width: $screen-xs-max) {
-      grid-column: 1 / 4;
+      display: none;
     }
   }
 }
