@@ -5,10 +5,11 @@
   display: flex;
   align-items: flex-end;
   &__chart {
-    margin-right: 1.875rem;
+    margin-right: 1.8125rem;
   }
   &__labels {
     display: inline-block;
+    max-width: 10.5rem;
     font-size: 0.875rem;
     font-family: Montserrat, sans-serif;
     line-height: 1.5rem;
@@ -49,12 +50,13 @@
     }
   }
   &__caption {
-    margin-left: 0.25rem;
+    margin-left: 0.3125rem;
+    word-break: break-word;
   }
   &__bullet {
     display: inline-block;
-    width: 0.625rem;
-    height: 0.625rem;
+    min-width: 0.625rem;
+    min-height: 0.625rem;
     border-radius: 50%;
   }
   &__circle {

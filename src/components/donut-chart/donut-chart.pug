@@ -62,8 +62,8 @@ mixin donut-chart(options)
             transform=circleTransformValue
           )
       g(class=createBemClasses({ blockName, elementName: 'count', jsPrefix }))
-        text(class=createBemClasses({ blockName, elementName: 'count-value', jsPrefix }) x='50%' y='50%' text-anchor='middle')= total
-        text.donut-chart__count-unit(x='50%' y='65%' text-anchor='middle')= 'голосов'
+        text(class=createBemClasses({ blockName, elementName: 'count-value', jsPrefix }) x='50%' y='48%' text-anchor='middle')= total
+        text.donut-chart__count-unit(x='50%' y='63%' text-anchor='middle')= 'голосов'
 
     ul.donut-chart__labels
       each label, grade in voteLabels
