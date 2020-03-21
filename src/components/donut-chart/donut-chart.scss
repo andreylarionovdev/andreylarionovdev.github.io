@@ -64,28 +64,9 @@
   }
   &__count {
     font-family: Quicksand, sans-serif;
-
-    @mixin svg-color($color) {
-      color: $color;
-      fill: $color;
-      stroke: $color;
-    }
-
-    @include svg-color($color-dark-25);
-    &_grade {
-      &_perfect {
-        @include svg-color(#FFE39C);
-      }
-      &_good {
-        @include svg-color(#6FCF97);
-      }
-      &_satisfactorily {
-        @include svg-color(#BC9CFF);
-      }
-      &_bad {
-        @include svg-color(#919191);
-      }
-    }
+    color: $color-purple;
+    fill: $color-purple;
+    stroke: $color-purple;
   }
   &__count-value {
     font-size: 1.5rem;
