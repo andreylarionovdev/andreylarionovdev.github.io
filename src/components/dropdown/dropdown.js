@@ -38,6 +38,7 @@ Dropdown.prototype.parseProperties = function parseProperties() {
 
   if ([GUEST_TYPE, ROOM_TYPE].includes(this.type)) {
     this.initState();
+    this.updateState();
     this.updateValue();
     this.updateView();
   }
@@ -66,9 +67,6 @@ Dropdown.prototype.initState = function initType() {
   };
 
   this.state = stateTemplates[this.type];
-
-  this.updateState();
-  this.updateView();
 };
 
 Dropdown.prototype.addEventListeners = function addEventListeners() {

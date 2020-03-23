@@ -95,6 +95,17 @@
         margin-bottom: 2.5625rem;
         padding-right: 3.375rem;
       }
+      &_expanded {
+        @media (max-width: $screen-xs-max) {
+          min-height: 9rem;
+        }
+      }
+      &_with-apply-btn,
+      &_with-clear-btn {
+        @media (max-width: $screen-xs-max) {
+          min-height: 11rem;
+        }
+      }
     }
     &_collapsed {
       margin-bottom: 1.25rem;
