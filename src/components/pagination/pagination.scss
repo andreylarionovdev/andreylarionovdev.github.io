@@ -29,6 +29,7 @@
     }
   }
   &-page {
+    cursor: pointer;
     &_active {
       border-radius: 50%;
       font-weight: bold;

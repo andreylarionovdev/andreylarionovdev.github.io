@@ -130,6 +130,7 @@ mixin room-filter-page
             const searchResult = [
               {
                 number: 888,
+                href: 'room-details.html',
                 pricePerDay: 9990,
                 feedbackCounter: 145,
                 rate: 5,
@@ -262,7 +263,7 @@ mixin room-filter-page
                 images: room.images,
                 feature: room.feature,
                 focus: room.focus,
-                href: 'room-details.html',
+                href: room.href || '/change-me',
               })
         section.room-filter-page__pagination
           +pagination({
