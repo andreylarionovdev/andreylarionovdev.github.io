@@ -76,6 +76,17 @@
       #{$blockClass}__navigation-item {
         margin-left: 2rem;
         line-height: 2rem;
+        @media (max-width: $screen-xs-max) {
+          margin-left: 0;
+        }
+      }
+      #{$blockClass}__navigation-link {
+        @media (max-width: $screen-xs-max) {
+          font-weight: bold;
+        }
+      }
+      @media (max-width: $screen-xs-max) {
+        border-left: none;
       }
     }
   }
