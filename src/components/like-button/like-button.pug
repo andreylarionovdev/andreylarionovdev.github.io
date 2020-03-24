@@ -8,5 +8,6 @@ mixin like-button(options)
   - const jsPrefix = 'js';
 
   button(class=createBemClasses({ blockName, modifiers: blockModifiers, jsPrefix }) type='button')
-    span(class=createBemClasses({ blockName, elementName: 'icon', jsPrefix })).material-icons= isFavorite ? 'favorite' : 'favorite_border'
-    span(class=createBemClasses({ blockName, elementName: 'count', jsPrefix }))= count
+    span.like-button__inner-wrapper
+      span(class=createBemClasses({ blockName, elementName: 'icon', jsPrefix })).material-icons= isFavorite ? 'favorite' : 'favorite_border'
+      span(class=createBemClasses({ blockName, elementName: 'count', jsPrefix }))= count

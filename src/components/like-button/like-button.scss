@@ -5,12 +5,19 @@
   $blockName: &;
   @include reset-button;
   @include reset-outline;
-  display: inline-flex;
-  align-items: center;
   min-width: 2.5rem;
   border-radius: 0.625rem;
-  border: 0.0625rem solid $color-dark-25;
+  background: $color-dark-25;
   color: $color-dark-25;
+  padding: 0.0625rem;
+
+  &__inner-wrapper {
+    border-radius: 0.625rem;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+  }
 
   &__count,
   &__icon {
@@ -25,7 +32,7 @@
   }
 
   &_favorite {
-    border: 0.0625rem solid $color-purple;
+    background: $grad-purple;
     #{$blockName}__count {
       color: $color-purple;
     }
