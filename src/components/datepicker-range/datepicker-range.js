@@ -43,7 +43,6 @@ DatepickerRange.prototype.initDatepicker = function initDatepicker() {
   this.$datepickerApi = this.$datepickerContainer.datepicker({
     range: true,
     minDate: new Date(),
-    disableNavWhenOutOfRange: !this.isInline,
     navTitles: {
       days: 'MM <i>yyyy</i>',
     },
