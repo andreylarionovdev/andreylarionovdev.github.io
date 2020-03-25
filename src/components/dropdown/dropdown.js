@@ -116,6 +116,9 @@ Dropdown.prototype.handleChangeCountButtonClick = function handleChangeCountButt
   this.$element.removeClass(`${this.classEmpty} ${this.classHiddenButtons}`);
 
   this.updateState();
+  if (this.type === ROOM_TYPE) {
+    this.updateValue();
+  }
   this.updateView();
 };
 

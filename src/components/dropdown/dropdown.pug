@@ -44,17 +44,18 @@ mixin dropdown(options)
               button.js-dropdown__change-count-button_type_dec(class=createBemClasses({ blockName, elementName: 'change-count-button', modifiers: decButtonModifiers, jsPrefix }) type='button' data-operator='-')= '-'
               span(class=createBemClasses({ blockName, elementName: 'count', jsPrefix }))= row.count
               button.js-dropdown__change-count-button_type_inc(class=createBemClasses({ blockName, elementName: 'change-count-button', jsPrefix }) type='button' data-operator='+')= '+'
-        li.dropdown__footer-buttons
-          span(class=createBemClasses({ blockName, elementName: 'clear-button', jsPrefix }))
-            +button({
-              theme: 'textual',
-              color: 'gray',
-              type: 'button',
-              caption: 'очистить',
-            })
-          span(class=createBemClasses({ blockName, elementName: 'apply-button', jsPrefix }))
-            +button({
-              theme: 'textual',
-              type: 'button',
-              caption: 'применить',
-            })
+        if type === 'guest'
+          li.dropdown__footer-buttons
+            span(class=createBemClasses({ blockName, elementName: 'clear-button', jsPrefix }))
+              +button({
+                theme: 'textual',
+                color: 'gray',
+                type: 'button',
+                caption: 'очистить',
+              })
+            span(class=createBemClasses({ blockName, elementName: 'apply-button', jsPrefix }))
+              +button({
+                theme: 'textual',
+                type: 'button',
+                caption: 'применить',
+              })
