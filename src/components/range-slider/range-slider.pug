@@ -4,7 +4,7 @@ mixin range-slider(options)
   - const { label = 'range slider', value, name, min, max, from, to } = options || {};
 
   .range-slider.js-range-slider
-    +label({ label })
+    +label({ label, hint: '0' })
     input.range-slider__input.js-range-slider__input(
       type='text'
       name=name
