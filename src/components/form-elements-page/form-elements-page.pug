@@ -262,7 +262,6 @@ mixin form-elements-page
             +dropdown({
               type: 'room',
               isExpanded: true,
-              withHiddenButtons: true,
               rows: [
                 {count: 2, text: 'спальни', },
                 {count: 2, text: 'кровати', },
@@ -271,14 +270,13 @@ mixin form-elements-page
             })
         .form-elements-page__section-column-gap
         .form-elements-page__section-column
-          .form-elements-page__dropdown.form-elements-page__dropdown_theme_with-apply-btn
+          .form-elements-page__dropdown.form-elements-page__dropdown_theme_empty
             +label({
               label: 'dropdown'
             })
             +dropdown({
               type: 'guest',
               isExpanded: true,
-              isEmpty: true,
               rows: [
                 {count: 0, text: 'взрослые', },
                 {count: 0, text: 'дети', },
@@ -287,7 +285,7 @@ mixin form-elements-page
             })
         .form-elements-page__section-column-gap
         .form-elements-page__section-column
-          .form-elements-page__dropdown.form-elements-page__dropdown_theme_with-clear-btn
+          .form-elements-page__dropdown.form-elements-page__dropdown_theme_filled
             +label({
               label: 'dropdown'
             })

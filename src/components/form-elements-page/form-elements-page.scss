@@ -100,8 +100,8 @@
           min-height: 9rem;
         }
       }
-      &_with-apply-btn,
-      &_with-clear-btn {
+      &_empty,
+      &_filled {
         @media (max-width: $screen-xs-max) {
           min-height: 11rem;
         }

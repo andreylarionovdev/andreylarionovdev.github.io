@@ -6,9 +6,6 @@ mixin dropdown(options)
       value,
       rows = [],
       isExpanded,
-      isEdited,
-      isEmpty,
-      withHiddenButtons,
       hasZIndexPriority,
     } = options || {};
 
@@ -18,12 +15,6 @@ mixin dropdown(options)
 
   if isExpanded
     - blockModifiers.push('expanded');
-  if isEdited
-    - blockModifiers.push('edited');
-  if isEmpty
-    - blockModifiers.push('empty');
-  if withHiddenButtons
-    - blockModifiers.push('with-hidden-buttons');
   if hasZIndexPriority
     - blockModifiers.push('with-z-index-priority')
 
