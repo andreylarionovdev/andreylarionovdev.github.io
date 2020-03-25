@@ -42,7 +42,7 @@ mixin footer(options)
 
   - const createBemClasses = require('../../utils/helpers').createBemClasses;
 
-  footer(class=createBemClasses({ blockName: 'footer', modifiers: [ {theme }] }))
+  footer(class=createBemClasses({ blockName: 'footer', modifiers: [ {theme }], jsPrefix: 'js' }))
     .footer__main-area
       .footer__main-area-inner-wrapper
         .footer__about-us

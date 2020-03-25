@@ -15,7 +15,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>Официальный сайт отеля Toxin | Результаты поиска</title>
-  <link href="filter.db458906652e517346c1.css" rel="stylesheet"></head>
+  <link href="filter.e0bd95af17042a5603b1.css" rel="stylesheet"></head>
   <body class="body">
     <header class="header js-header">
       <nav class="header__inner-wrapper">
@@ -50,7 +50,10 @@
       <div class="room-filter-page">
         <div class="room-filter-page__inner-wrapper">
           <section class="room-filter-page__sidebar">
-            <form class="room-filter-page__form">
+            <div class="room-filter-page__show-filter-button js-room-filter-page__show-filter-button">
+              <button class="button button_theme_transparent button_fluid" type="button"><span class="button__inner-wrapper"><span class="button__caption">Фильтр</span><span class="button__arrow material-icons">arrow_forward</span></span></button>
+            </div>
+            <form class="room-filter-page__form js-room-filter-page__form">
               <div class="room-filter-page__date-dropdown-group">
                 <div class="room-filter-page__label">
                   <label class="label" for="dates-dropdown"><span class="label__title">Даты пребывания в отеле</span>
@@ -253,9 +256,17 @@
                   </ul>
                 </div>
               </div>
+              <div class="room-filter-page__footer-filter-buttons js-room-filter-page__footer-filter-buttons">
+                <div class="room-filter-page__clear-filter-button js-room-filter-page__clear-filter-button">
+                  <button class="button button_theme_transparent button_fluid" type="button"><span class="button__inner-wrapper"><span class="button__caption">Сбросить</span><span class="button__arrow material-icons">arrow_forward</span></span></button>
+                </div>
+                <div class="room-filter-page__apply-filter-button js-room-filter-page__apply-filter-button">
+                  <button class="button button_theme_default button_fluid" type="button"><span class="button__inner-wrapper"><span class="button__caption">Применить</span><span class="button__arrow material-icons">arrow_forward</span></span></button>
+                </div>
+              </div>
             </form>
           </section>
-          <section class="room-filter-page__thumbnail-list-wrapper">
+          <section class="room-filter-page__thumbnail-list-wrapper js-room-filter-page__thumbnail-list-wrapper">
             <h1 class="room-filter-page__thumbnail-list-title">Номера, которые мы для вас подобрали</h1>
             <ul class="room-filter-page__thumbnail-list">
               <li class="room-filter-page__room-thumbnail">
@@ -556,7 +567,7 @@
         </div>
       </div>
     </main>
-    <footer class="footer">
+    <footer class="footer js-footer">
       <div class="footer__main-area">
         <div class="footer__main-area-inner-wrapper">
           <div class="footer__about-us">
@@ -613,5 +624,5 @@
         </div>
       </div>
     </footer>
-  <script type="text/javascript" src="filter.db458906652e517346c1.js"></script></body>
+  <script type="text/javascript" src="filter.e0bd95af17042a5603b1.js"></script></body>
 </html>

@@ -4,12 +4,20 @@ include ../checkbox-list-expandable/checkbox-list-expandable
 include ../room-thumbnail/room-thumbnail
 include ../pagination/pagination
 include ../dropdown/dropdown
+include ../button/button
 
 mixin room-filter-page
   .room-filter-page
     .room-filter-page__inner-wrapper
       section.room-filter-page__sidebar
-        form.room-filter-page__form
+        .room-filter-page__show-filter-button.js-room-filter-page__show-filter-button
+          +button({
+            theme: 'transparent',
+            caption: 'Фильтр',
+            type: 'button',
+            isFluid: true,
+          })
+        form.room-filter-page__form.js-room-filter-page__form
           .room-filter-page__date-dropdown-group
             .room-filter-page__label
               +label({
@@ -123,7 +131,22 @@ mixin room-filter-page
                 {id: 'shampoo-2-checkbox', label: 'Шампунь'},
               ],
             })
-      section.room-filter-page__thumbnail-list-wrapper
+          .room-filter-page__footer-filter-buttons.js-room-filter-page__footer-filter-buttons
+            .room-filter-page__clear-filter-button.js-room-filter-page__clear-filter-button
+              +button({
+                theme: 'transparent',
+                caption: 'Сбросить',
+                type: 'button',
+                isFluid: true,
+              })
+            .room-filter-page__apply-filter-button.js-room-filter-page__apply-filter-button
+              +button({
+                theme: 'default',
+                caption: 'Применить',
+                type: 'button',
+                isFluid: true,
+              })
+      section.room-filter-page__thumbnail-list-wrapper.js-room-filter-page__thumbnail-list-wrapper
         h1.room-filter-page__thumbnail-list-title= 'Номера, которые мы для вас подобрали'
         ul.room-filter-page__thumbnail-list
           -

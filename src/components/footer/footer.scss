@@ -219,4 +219,9 @@
       }
     }
   }
+  @media (max-width: $screen-filter-xs-max) {
+    &_hidden {
+      display: none;
+    }
+  }
 }
