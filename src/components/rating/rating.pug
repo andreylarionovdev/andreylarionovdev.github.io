@@ -1,7 +1,7 @@
-mixin rate-bar(options)
+mixin rating(options)
   - const { base, rate } = options || {};
 
-  .rate-bar
+  .rating
     - for(let i = 0; i < base; i++)
       - const starContent = i >= rate ? 'star_bordered' : 'star';
-      span.rate-bar__star.material-icons= starContent
+      span.rating__star.material-icons= starContent
