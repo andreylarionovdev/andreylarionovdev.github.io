@@ -28,7 +28,7 @@ mixin header(options)
                 = item.name
         li.header__navigation-item
           if user
-            ul.header__user-navigation_authenticated
+            ul.header__user-navigation.header__user-navigation_authenticated
               li.header__navigation-item
                 a.header__navigation-link= user
           else
