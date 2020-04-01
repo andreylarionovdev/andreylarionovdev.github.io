@@ -21,6 +21,7 @@
     @media (max-width: $screen-xs-max) {
       grid-template-columns: 1fr;
       grid-row-gap: 2rem;
+      padding-top: 3rem;
     }
   }
   &__featured-images {
@@ -70,7 +71,9 @@
   &__feature-item {
     border-bottom: 0.0625rem solid $color-dark-10;
     &:last-child {
-      border-bottom: none;
+      @media (min-width: $screen-sm-min) {
+        border-bottom: none;
+      }
     }
   }
   &__info {
