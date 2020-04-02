@@ -39,6 +39,7 @@
   }
   &__navigation,
   &__user-navigation {
+    list-style: none;
     display: none;
     @media (min-width: $screen-md-min) {
       display: flex;
@@ -66,7 +67,7 @@
       margin-left: 0;
       & + #{$blockClass}__navigation-item {
         margin-left: 1.25rem;
-        @media (max-width: $screen-md-max) {
+        @media (max-width: $screen-sm-max) {
           margin-left: 0;
         }
       }
@@ -76,20 +77,20 @@
       #{$blockClass}__navigation-item {
         margin-left: 2rem;
         line-height: 2rem;
-        @media (max-width: $screen-md-max) {
+        @media (max-width: $screen-sm-max) {
           margin-left: 0;
         }
       }
       #{$blockClass}__navigation-link {
-        @media (max-width: $screen-md-max) {
+        @media (max-width: $screen-sm-max) {
           font-weight: bold;
         }
       }
-      @media (max-width: $screen-md-max) {
+      @media (max-width: $screen-sm-max) {
         border-left: none;
       }
     }
-    @media (max-width: $screen-md-max) {
+    @media (max-width: $screen-sm-max) {
       border-top: 0.0625rem solid $color-primary-10;
     }
   }
