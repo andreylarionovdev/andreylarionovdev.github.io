@@ -6,7 +6,7 @@
   $blockClass: &;
   font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
-  color: $color-dark-75;
+  color: $color-primary-75;
   user-select: none;
   &__toggle {
     padding: 0.5rem 0.625rem 0.75rem 0;
@@ -19,7 +19,7 @@
     font-size: 0.75rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: $color-dark-100;
+    color: $color-primary-100;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -27,7 +27,7 @@
   &__arrow {
     @include reset-button;
     @include reset-outline(text-shadow);
-    color: $color-dark-50;
+    color: $color-primary-50;
     display: inline-block;
     transition: transform .1s ease-out;
   }
@@ -43,7 +43,7 @@
     #{$blockClass}__arrow {
       transform: rotate(180deg);
       &:focus {
-        text-shadow: 0 -0.3125rem 0.3125rem $color-dark-25;
+        text-shadow: 0 -0.3125rem 0.3125rem $color-primary-25;
       }
     }
     #{$blockClass}__list {

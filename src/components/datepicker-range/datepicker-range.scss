@@ -35,7 +35,7 @@
       align-items: center;
     }
     &__clear-button {
-      color: $color-dark-50;
+      color: $color-primary-50;
     }
     &__apply-button {
       color: $color-purple;
@@ -75,7 +75,7 @@
       font-family: 'Open Sans', sans-serif;
       font-size: 1.1875rem;
       font-weight: bold;
-      color: $color-dark-100;
+      color: $color-primary-100;
       i {
         font-family: Quicksand, sans-serif;
         font-style: normal;
@@ -95,7 +95,7 @@
       font-size: 0.75rem;
       border-radius: 50%;
       z-index: 1;
-      color: $color-dark-50;
+      color: $color-primary-50;
 
       &.-focus- {
         background: $grad-purple;
@@ -124,7 +124,7 @@
       &.-in-range- {
         border-radius: 0;
         background: $grad-purple-25;
-        color: $color-dark-50;
+        color: $color-primary-50;
         &.-disabled- {
           background: transparent;
         }
@@ -148,7 +148,7 @@
           font-weight: normal;
           background: transparent;
           &.-focus- {
-            color: $color-dark-25;
+            color: $color-primary-25;
           }
           &:after {
             content: none;
@@ -204,7 +204,7 @@
     &--cell-day {
       width: 14.285714285714286%;
       &.-other-month- {
-        color: $color-dark-25;
+        color: $color-primary-25;
         &:hover {
           color: white;
         }
@@ -218,7 +218,7 @@
       }
       &.-disabled-,
       &.-disabled-.-other-month- {
-        color: $color-dark-25;
+        color: $color-primary-25;
         font-weight: normal;
         background: transparent;
         cursor: default;
@@ -250,7 +250,7 @@
       &.-disabled- {
         font-weight: normal;
         background: transparent;
-        color: $color-dark-25;
+        color: $color-primary-25;
       }
     }
     &--cell-year {
@@ -267,7 +267,7 @@
       &.-disabled- {
         font-weight: normal;
         background: transparent;
-        color: $color-dark-25;
+        color: $color-primary-25;
       }
     }
   }

@@ -25,7 +25,7 @@
     align-items: center;
     a {
       text-decoration: none;
-      color: $color-dark-50;
+      color: $color-primary-50;
     }
   }
   &-page {
@@ -47,7 +47,7 @@
   &-nav {
     font-size: 0.875rem;
     padding: 0.625rem 0;
-    color: $color-dark-75;
+    color: $color-primary-75;
     text-align: center;
   }
 }

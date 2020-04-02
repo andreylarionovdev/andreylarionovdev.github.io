@@ -11,7 +11,7 @@
     position: absolute;
     opacity: 0;
     &:checked + #{$blockClass}__label {
-      color: $color-dark-75;
+      color: $color-primary-75;
       &:after {
         content: '';
         top: 0.25rem;
@@ -29,7 +29,7 @@
     &:focus + #{$blockClass}__label {
       &:before {
         transition: box-shadow .25s ease-in-out;
-        box-shadow: 0 0.3125rem 0.3125rem $color-dark-25;
+        box-shadow: 0 0.3125rem 0.3125rem $color-primary-25;
       }
     }
   }
@@ -42,7 +42,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 0.875rem;
-    color: $color-dark-50;
+    color: $color-primary-50;
     &:after,
     &:before {
       position: absolute;
@@ -55,7 +55,7 @@
       width: 1.25rem;
       height: 1.25rem;
       display: inline-block;
-      border: 0.0625rem solid $color-dark-25;
+      border: 0.0625rem solid $color-primary-25;
       border-radius: 0.625rem;
     }
   }

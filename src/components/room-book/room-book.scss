@@ -44,7 +44,7 @@
   &__number-value {
     font-size: 1.5rem;
     padding-left: 0.25rem;
-    color: $color-dark-100;
+    color: $color-primary-100;
   }
   &__feature {
     color: $color-purple;
@@ -56,7 +56,7 @@
   &__cost,
   &__date-unit {
     display: inline-block;
-    color: $color-dark-50;
+    color: $color-primary-50;
   }
   &__cost {
     font-weight: bold;
@@ -78,14 +78,14 @@
     grid-row-gap: 0.5rem;
     font-family: Montserrat, sans-serif;
     font-size: 0.875rem;
-    color: $color-dark-75;
+    color: $color-primary-75;
   }
   &__result-grid-cell {
     padding: 0.1875rem 0;
     &_content {
       &_with-info-icon {
         padding: 0;
-        color: $color-dark-25;
+        color: $color-primary-25;
       }
       &_with-sum {
         text-align: right;
@@ -113,7 +113,7 @@
   }
   &__total-line {
     height: 0.0625rem;
-    border-bottom: 0.0625rem dotted $color-dark-25;
+    border-bottom: 0.0625rem dotted $color-primary-25;
   }
   &__total-sum {
     font-family: Quicksand, sans-serif;

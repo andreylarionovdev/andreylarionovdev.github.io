@@ -4,7 +4,7 @@
   font-family: Montserrat, sans-serif;
   list-style: none;
   font-size: 0.875rem;
-  color: $color-dark-75;
+  color: $color-primary-75;
   &__item {
     position: relative;
   }
@@ -21,7 +21,7 @@
     width: 0.625rem;
     height: 0.625rem;
     border-radius: 0.3125rem;
-    background-color: $color-dark-25;
+    background-color: $color-primary-25;
   }
   &__text {
     line-height: 1.5rem;

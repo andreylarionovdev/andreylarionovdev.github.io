@@ -48,7 +48,7 @@
   transition: #{$property} .25s ease-in-out;
   &:focus {
     outline: none;
-    #{$property}: 0 0.3125rem 0.3125rem $color-dark-25;
+    #{$property}: 0 0.3125rem 0.3125rem $color-primary-25;
   }
 }
 
@@ -66,7 +66,7 @@
   font-style: normal;
   font-weight: normal;
   line-height: 1.5rem;
-  color: $color-dark-75;
+  color: $color-primary-75;
 }
 
 @mixin h1 {
@@ -76,7 +76,7 @@
   font-style: normal;
   font-weight: bold;
   line-height: 1.875rem;
-  color: $color-dark-100;
+  color: $color-primary-100;
 }
 
 @mixin h2 {
@@ -86,7 +86,7 @@
   font-style: normal;
   font-weight: bold;
   line-height: 1.5rem;
-  color: $color-dark-100;
+  color: $color-primary-100;
 }
 
 @mixin h3 {
@@ -96,6 +96,6 @@
   font-style: normal;
   font-weight: bold;
   line-height: 0.9375rem;
-  color: $color-dark-100;
+  color: $color-primary-100;
   text-transform: uppercase;
 }

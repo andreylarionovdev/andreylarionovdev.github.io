@@ -8,9 +8,9 @@
   $blockClass: &;
   font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
-  color: $color-dark-50;
+  color: $color-primary-50;
   background: white;
-  box-shadow: 0 0.625rem 1.25rem $color-dark-5;
+  box-shadow: 0 0.625rem 1.25rem $color-primary-5;
   &__inner-wrapper {
     @include inner-wrapper;
     padding: 0.75rem 0;
@@ -31,7 +31,7 @@
     position: absolute;
     right: 0.625rem;
     font-size: 3rem;
-    color: $color-dark-50;
+    color: $color-primary-50;
   }
   &__logo {
     font-size: 0;
@@ -72,7 +72,7 @@
       }
     }
     &_authenticated {
-      border-left: 0.0625rem solid $color-dark-10;
+      border-left: 0.0625rem solid $color-primary-10;
       #{$blockClass}__navigation-item {
         margin-left: 2rem;
         line-height: 2rem;
@@ -90,15 +90,15 @@
       }
     }
     @media (max-width: $screen-md-max) {
-      border-top: 0.0625rem solid $color-dark-10;
+      border-top: 0.0625rem solid $color-primary-10;
     }
   }
   &__navigation-link {
     @include reset-outline(text-shadow);
     text-decoration: none;
-    color: $color-dark-50;
+    color: $color-primary-50;
     &:hover {
-      color: $color-dark-100;
+      color: $color-primary-100;
     }
     &_theme {
       &_with-submenu {

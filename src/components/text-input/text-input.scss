@@ -15,17 +15,17 @@
     font-family: Montserrat, sans-serif;
     width: 100%;
     line-height: 2.625rem;
-    border: 0.0625rem solid $color-dark-25;
+    border: 0.0625rem solid $color-primary-25;
     transition: border .25s ease-in-out;
     border-radius: $borderRadius;
     font-size: 0.875rem;
-    color: $color-dark-75;
+    color: $color-primary-75;
     padding: 0 2.375rem 0 0.875rem;
     appearance: none;
     &:focus,
     &:hover {
       outline: none;
-      border: 0.0625rem solid $color-dark-50;
+      border: 0.0625rem solid $color-primary-50;
     }
   }
   &__submit-button {
@@ -42,11 +42,11 @@
   &_hovered {
     #{$blockClass}__input {
       outline: none;
-      border: 0.0625rem solid $color-dark-50;
+      border: 0.0625rem solid $color-primary-50;
     }
   }
   ::placeholder {
     font-family: Montserrat, sans-serif;
-    color: $color-dark-50;
+    color: $color-primary-50;
   }
 }
