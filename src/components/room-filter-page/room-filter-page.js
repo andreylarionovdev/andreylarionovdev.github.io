@@ -1,7 +1,5 @@
 import $ from 'jquery';
 
-import '../../utils/app.scss';
-
 import '../dropdown/dropdown';
 import '../range-slider/range-slider';
 import '../checkbox-list-expandable/checkbox-list-expandable';
