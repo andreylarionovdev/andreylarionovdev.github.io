@@ -3,7 +3,17 @@ include ../dropdown/dropdown
 include ../datepicker-range/datepicker-range
 
 mixin room-book(options)
-  - const { roomNumber, pricePerDay, discount, fee, feature, method='POST', action='/' } = options || {};
+  -
+    const {
+      roomNumber = 888,
+      daysCount = 4,
+      pricePerDay = 9990,
+      discount = 2179,
+      fee = 300,
+      feature = 'люкс',
+      method='POST',
+      action='/'
+    } = options || {};
 
   - const formatCurrency = require('../../utils/helpers').formatCurrency;
 
@@ -38,13 +48,13 @@ mixin room-book(options)
           ],
         })
 
-    - const totalBruto = pricePerDay * 4;
-    - const totalNetto = totalBruto - discount + fee;
+    - const totalBrutto = pricePerDay * daysCount;
+    - const totalNetto = totalBrutto - discount + fee;
 
     .room-book__result-grid
-      .room-book__result-grid-cell!= `${formatCurrency({value: pricePerDay})} x 4 суток`
+      .room-book__result-grid-cell!= `${formatCurrency({value: pricePerDay})} x ${daysCount} суток`
       .room-book__result-grid-cell.room-book__result-grid-cell_content_with-info-icon
-      .room-book__result-grid-cell.room-book__result-grid-cell_content_with-sum!= formatCurrency({value: totalBruto})
+      .room-book__result-grid-cell.room-book__result-grid-cell_content_with-sum!= formatCurrency({value: totalBrutto})
 
       .room-book__result-grid-cell!= `Сбор за услуги: скидка ${formatCurrency({value: discount})}`
       .room-book__result-grid-cell.room-book__result-grid-cell_content_with-info-icon
