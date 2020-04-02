@@ -94,17 +94,17 @@
       color: $color-primary-100;
     }
   }
-  &__subscribe-form {
+  &__subscription-form {
     grid-area: subscribe;
     padding: 0.3125rem 0 0 0.0625rem;
     @media (max-width: $screen-xs-max) {
       text-align: center;
     }
   }
-  &__subscribe-form-title {
+  &__subscription-form-title {
     @include h3;
   }
-  &__subscribe-form-description {
+  &__subscription-form-description {
     @include primary-text;
     margin: 1.125rem 0 1.4375rem 0;
   }
@@ -188,7 +188,7 @@
         padding: 0.75rem 1.125rem 0 0;
       }
       #{$blockClass}__navigation,
-      #{$blockClass}__subscribe-form,
+      #{$blockClass}__subscription-form,
       #{$blockClass}__copyright {
         display: none;
       }
@@ -209,10 +209,10 @@
           margin-bottom: 2rem;
         }
       }
-      #{$blockClass}__subscribe-form-title {
+      #{$blockClass}__subscription-form-title {
         letter-spacing: -0.02rem;
       }
-      #{$blockClass}__subscribe-form-description {
+      #{$blockClass}__subscription-form-description {
         letter-spacing: -0.01rem;
       }
       #{$blockClass}__copyright,
