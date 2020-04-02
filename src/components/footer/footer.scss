@@ -78,6 +78,7 @@
     @include h3;
   }
   &__navigation-section-list {
+    list-style: none;
     padding-left: 0;
     margin: 1.125rem 0;
   }
@@ -129,6 +130,7 @@
     }
   }
   &__social-list {
+    list-style: none;
     grid-area: social;
     display: flex;
     justify-content: flex-end;

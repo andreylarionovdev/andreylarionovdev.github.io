@@ -24,15 +24,16 @@
     white-space: nowrap;
     text-overflow: ellipsis;
   }
-  #{$blockClass}__arrow {
+  &__arrow {
     @include reset-button;
     @include reset-outline(text-shadow);
     color: $color-dark-50;
     display: inline-block;
     transition: transform .1s ease-out;
   }
-  #{$blockClass}__list {
+  &__list {
     display: none;
+    list-style: none;
     width: 100%;
   }
   &__item {

@@ -196,6 +196,9 @@
       margin-bottom: 0.8125rem;
     }
   }
+  &__checkbox-list {
+    list-style: none;
+  }
   &__checkbox-list-expandable {
     margin-bottom: 1.3125rem;
     &_expanded {
