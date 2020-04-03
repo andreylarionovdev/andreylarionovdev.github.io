@@ -44,7 +44,7 @@ mixin footer(options)
 
   footer(class=createBemClasses({ blockName: 'footer', modifiers: [ {theme }], jsPrefix: 'js' }))
     .footer__main-area
-      .footer__main-area-inner-wrapper
+      .footer__inner-wrapper
         .footer__about-us
           .footer__logo
             +logo(true)
@@ -68,7 +68,7 @@ mixin footer(options)
               type: 'email',
             })
     .footer__bottom-area
-      .footer__bottom-area-inner-wrapper
+      .footer__inner-wrapper
         p.footer__copyright= copyright
         ul.footer__social-list
           li.footer__social-list-item
