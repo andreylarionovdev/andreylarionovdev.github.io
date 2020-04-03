@@ -12,9 +12,9 @@ mixin header(options)
 
   header.header.js-header(class=classTheme)
     nav.header__inner-wrapper
-      button(class=createBemClasses({ blockName, elementName: 'navigation-toggle', jsPrefix }) type='button').material-icons= 'menu'
       .header__logo
         +logo(true)
+      button(class=createBemClasses({ blockName, elementName: 'navigation-toggle', jsPrefix }) type='button').material-icons= 'menu'
       ul(class=createBemClasses({ blockName, elementName: 'navigation', jsPrefix }))
         each item, _ in menuItems
           li.header__navigation-item

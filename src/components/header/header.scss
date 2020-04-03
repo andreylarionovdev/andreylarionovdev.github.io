@@ -13,13 +13,14 @@
   box-shadow: 0 0.625rem 1.25rem $color-primary-5;
   &__inner-wrapper {
     @include inner-wrapper;
-    padding: 0.75rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    padding: 0.6875rem 0;
     min-height: inherit;
     @media (min-width: $screen-md-min) {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.9375rem 0 0.9375rem 0;
+      padding: 0.9375rem 0;
     }
   }
   &__navigation-toggle {
@@ -28,8 +29,6 @@
     }
     @include reset-button;
     @include reset-outline(text-shadow);
-    position: absolute;
-    right: 0.625rem;
     font-size: 3rem;
     color: $color-primary-50;
   }
@@ -47,6 +46,7 @@
       justify-content: flex-end;
     }
     &_active {
+      width: 100%;
       display: block;
       #{$blockClass}__user-navigation {
         display: block;
