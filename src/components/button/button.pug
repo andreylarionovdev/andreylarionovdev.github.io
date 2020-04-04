@@ -8,7 +8,6 @@ mixin button(options)
       type,
       href,
       isHovered,
-      isFluid,
       attr,
     } = options || {};
 
@@ -16,8 +15,6 @@ mixin button(options)
 
   if isHovered
     - blockModifiers.push('hovered');
-  if isFluid
-    - blockModifiers.push('fluid');
 
   - const createBemClasses = require('../../utils/helpers').createBemClasses;
   - const isButton = ['button', 'submit'].includes(type);

@@ -82,13 +82,13 @@
         padding: 0.4375rem 1.125rem 0.5rem;
       }
     }
+    &_fluid {
+      width: 100%;
+    }
   }
   &_color {
     &_gray {
       color: $color-primary-50;
     }
-  }
-  &_fluid {
-    width: 100%;
   }
 }

@@ -15,7 +15,7 @@ mixin room-filter-page
             theme: 'transparent',
             caption: 'Фильтр',
             type: 'button',
-            isFluid: true,
+            size: 'fluid',
           })
         form.room-filter-page__form.js-room-filter-page__form
           .room-filter-page__date-dropdown-group
@@ -137,14 +137,14 @@ mixin room-filter-page
                 theme: 'transparent',
                 caption: 'Сбросить',
                 type: 'button',
-                isFluid: true,
+                size: 'fluid',
               })
             .room-filter-page__apply-filter-button.js-room-filter-page__apply-filter-button
               +button({
                 theme: 'default',
                 caption: 'Применить',
                 type: 'button',
-                isFluid: true,
+                size: 'fluid',
               })
       section.room-filter-page__thumbnail-list-wrapper.js-room-filter-page__thumbnail-list-wrapper
         h1.room-filter-page__thumbnail-list-title= 'Номера, которые мы для вас подобрали'
