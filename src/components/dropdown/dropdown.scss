@@ -8,7 +8,7 @@
   font-size: 0.875rem;
   color: $color-primary-75;
   user-select: none;
-  &__input {
+  &__text-input {
     @include reset-outline;
     font-family: Montserrat, sans-serif;
     font-size: 0.875rem;
@@ -67,7 +67,7 @@
     font-size: 0.75rem;
     font-weight: bold;
   }
-  &__change-count-button {
+  &__count-button {
     @include reset-button;
     @include reset-outline;
     $diam: 1.875rem;
@@ -95,7 +95,7 @@
     justify-content: space-between;
   }
   &_expanded {
-    #{$blockClass}__input {
+    #{$blockClass}__text-input {
       border: 0.0625rem solid $color-primary-50;
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0;

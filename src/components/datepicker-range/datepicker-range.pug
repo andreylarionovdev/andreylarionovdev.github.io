@@ -20,15 +20,15 @@ mixin datepicker-range(options)
     const jsClassTheme = theme ? `${jsPrefix}-${blockName}_theme_${theme}` : '';
 
   div(class=createBemClasses({ blockName, modifiers: [{ theme }], jsPrefix }) class=jsClassTheme)
-    div(class=createBemClasses({ blockName, elementName: 'dropdowns-group', jsPrefix }))
+    div(class=createBemClasses({ blockName, elementName: 'row', jsPrefix }))
       - const fromInputId = `${id}__from-input`;
-      div(class=createBemClasses({ blockName, elementName: 'dropdown-group-from', jsPrefix }))
+      div(class=createBemClasses({ blockName, elementName: 'dropdown-group', jsPrefix }))
         .datepicker-range__label
           +label({ label: fromLabel, _for: fromInputId})
         div(class=createBemClasses({ blockName, elementName: 'dropdown', jsPrefix }))
           +dropdown({ id: fromInputId, value: from })
       - const toInputId = `${id}__to-input`;
-      div(class=createBemClasses({ blockName, elementName: 'dropdown-group-to', jsPrefix }))
+      div(class=createBemClasses({ blockName, elementName: 'dropdown-group', jsPrefix }))
         .datepicker-range__label
           +label({ label: toLabel, _for: toInputId })
         div(class=createBemClasses({ blockName, elementName: 'dropdown', jsPrefix }))

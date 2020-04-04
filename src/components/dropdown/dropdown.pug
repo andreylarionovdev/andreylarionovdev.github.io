@@ -23,7 +23,7 @@ mixin dropdown(options)
   - const jsPrefix = 'js';
 
   div(class=createBemClasses({ blockName, modifiers: blockModifiers, jsPrefix }))&attributes({ 'data-type': type })
-    input(id=id class=createBemClasses({ blockName, elementName: 'input', jsPrefix }) type='text' value=value readonly)
+    input(id=id class=createBemClasses({ blockName, elementName: 'text-input', jsPrefix }) type='text' value=value readonly)
     button.dropdown__toggle-button.js-dropdown__toggle-button.material-icons(type='button')= 'keyboard_arrow_down'
     if allowedTypes.includes(type) && rows.length > 0
       ul(class=createBemClasses({ blockName, elementName: 'menu', jsPrefix }))
@@ -32,9 +32,9 @@ mixin dropdown(options)
             .dropdown__item-name= row.text
             .dropdown__count-buttons
               - const decButtonModifiers = row.count < 1 ? ['disabled'] : [];
-              button.js-dropdown__change-count-button_type_dec(class=createBemClasses({ blockName, elementName: 'change-count-button', modifiers: decButtonModifiers, jsPrefix }) type='button' data-operator='-')= '-'
+              button.js-dropdown__count-button_type_dec(class=createBemClasses({ blockName, elementName: 'count-button', modifiers: decButtonModifiers, jsPrefix }) type='button' data-operator='-')= '-'
               span(class=createBemClasses({ blockName, elementName: 'count', jsPrefix }))= row.count
-              button.js-dropdown__change-count-button_type_inc(class=createBemClasses({ blockName, elementName: 'change-count-button', jsPrefix }) type='button' data-operator='+')= '+'
+              button.js-dropdown__count-button_type_inc(class=createBemClasses({ blockName, elementName: 'count-button', jsPrefix }) type='button' data-operator='+')= '+'
         if type === 'guest'
           li.dropdown__footer-buttons
             span(class=createBemClasses({ blockName, elementName: 'clear-button', jsPrefix }))

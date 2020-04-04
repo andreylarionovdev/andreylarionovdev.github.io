@@ -3,7 +3,7 @@
 
 .datepicker-range {
   $blockClass: &;
-  &__dropdowns-group {
+  &__row {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
     grid-column-gap: 1.25rem;
@@ -278,7 +278,7 @@
 
   &_theme {
     &_inline {
-      #{$blockClass}__dropdowns-group {
+      #{$blockClass}__row {
         display: none;
       }
       .datepicker-inline {

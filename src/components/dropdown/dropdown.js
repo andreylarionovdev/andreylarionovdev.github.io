@@ -15,17 +15,17 @@ Dropdown.prototype.init = function init($element) {
   this.classExpanded = 'dropdown_expanded';
   this.classEmpty = 'dropdown_empty';
   this.classHiddenButtons = 'dropdown_with-hidden-buttons';
-  this.classChangeCountButtonDisabled = 'dropdown__change-count-button_disabled';
+  this.classCountButtonDisabled = 'dropdown__count-button_disabled';
 
   this.selectorMenu = '.js-dropdown__menu';
   this.selectorMenuItem = '.js-dropdown__menu-item';
-  this.selectorChangeCountButton = '.js-dropdown__change-count-button';
-  this.selectorDecCountButton = '.js-dropdown__change-count-button_type_dec';
+  this.selectorCountButton = '.js-dropdown__count-button';
+  this.selectorDecCountButton = '.js-dropdown__count-button_type_dec';
   this.selectorCount = '.js-dropdown__count';
 
   this.$toggleButton = this.$element.find('.js-dropdown__toggle-button');
-  this.$input = this.$element.find('.js-dropdown__input');
-  this.$changeCountButton = this.$element.find(this.selectorChangeCountButton);
+  this.$input = this.$element.find('.js-dropdown__text-input');
+  this.$changeCountButton = this.$element.find(this.selectorCountButton);
   this.$clearButton = this.$element.find('.js-dropdown__clear-button');
   this.$applyButton = this.$element.find('.js-dropdown__apply-button');
 
@@ -87,13 +87,13 @@ Dropdown.prototype.handleToggleButtonClick = function handleToggleButtonClick(e)
 Dropdown.prototype.handleChangeCountButtonClick = function handleChangeCountButtonClick(e) {
   e.preventDefault();
 
-  const $button = $(e.currentTarget).closest(this.selectorChangeCountButton);
+  const $button = $(e.currentTarget).closest(this.selectorCountButton);
   const operator = $button.data('operator');
 
   const $li = $(e.currentTarget).closest(this.selectorMenuItem);
 
   if (operator === '+') {
-    $li.find(this.selectorChangeCountButton).removeClass(this.classChangeCountButtonDisabled);
+    $li.find(this.selectorCountButton).removeClass(this.classCountButtonDisabled);
   }
   const changeCount = {
     '+': (x) => x + 1,
@@ -104,7 +104,7 @@ Dropdown.prototype.handleChangeCountButtonClick = function handleChangeCountButt
   const n = changeCount[operator](parseInt($count.text(), 10));
 
   if (n === COUNT_MIN_VALUE) {
-    $button.addClass(this.classChangeCountButtonDisabled);
+    $button.addClass(this.classCountButtonDisabled);
   }
 
   if (n < COUNT_MIN_VALUE) {
@@ -130,7 +130,7 @@ Dropdown.prototype.handleClearButtonClick = function handleClearButtonClick(e) {
 
   const $decButtons = this.$element.find(this.selectorDecCountButton);
   $decButtons.each((i, o) => {
-    $(o).addClass(this.classChangeCountButtonDisabled);
+    $(o).addClass(this.classCountButtonDisabled);
   });
 
   this.updateState();
