@@ -3,7 +3,7 @@ const createBemClasses = function createBemClasses(options) {
     blockName = '',
     elementName = '',
     modifiers = [],
-    jsPrefix = 'js',
+    jsPrefix = false,
   } = options || {};
 
   const isElement = blockName !== '' && elementName !== '';
