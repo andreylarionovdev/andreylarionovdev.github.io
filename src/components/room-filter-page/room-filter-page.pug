@@ -20,24 +20,14 @@ mixin room-filter-page
         form.room-filter-page__form.js-room-filter-page__form
           .room-filter-page__date-dropdown-group
             .room-filter-page__label
-              +label({
-                label: 'Даты пребывания в отеле',
-                _for: 'dates-dropdown',
-              })
+              +label({ label: 'Даты пребывания в отеле' })
             .room-filter-page__dropdown
-              +dropdown({
-                id: 'dates-dropdown',
-                value: '19 авг. - 23 авг.',
-              })
+              +dropdown({ value: '19 авг. - 23 авг.' })
           .room-filter-page__guests-dropdown-group
             .room-filter-page__label
-              +label({
-                label: 'Гости',
-                _for: 'guests-dropdown',
-              })
+              +label({ label: 'Гости' })
             .room-filter-page__dropdown
               +dropdown({
-                id: 'guests-dropdown',
                 type: 'guest',
                 rows: [
                   {count: 2, text: 'взрослые'},
@@ -103,13 +93,9 @@ mixin room-filter-page
                 })
           .room-filter-page__feature-dropdown-group
             .room-filter-page__label
-              +label({
-                label: 'Удобства номера',
-                _for: 'rooms-features',
-              })
+              +label({ label: 'Удобства номера' })
             .room-filter-page__dropdown
               +dropdown({
-                id: 'rooms-features',
                 type: 'room',
                 rows: [
                   {count: 2, text: 'спальни'},

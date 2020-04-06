@@ -36,10 +36,9 @@ mixin room-book(options)
 
     .room-book__guests-dropdown-group
       .room-book__label
-        +label({ label: 'Гости', _for: 'room-book-guests' })
+        +label({ label: 'Гости' })
       .room-book__dropdown
         +dropdown({
-          id: 'room-book-guests',
           type: 'guest',
           rows: [
             {count: 2, text: 'взрослые'},

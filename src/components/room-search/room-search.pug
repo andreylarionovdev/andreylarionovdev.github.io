@@ -10,10 +10,9 @@ mixin room-search()
       +datepicker-range({id: 'room-search-datepicker'})
     .room-search__guests-dropdown-group
       .room-search__label
-        +label({ label: 'Гости', _for: 'room-search-guests' })
+        +label({ label: 'Гости' })
       .room-search__dropdown
         +dropdown({
-          id: 'room-search-guests',
           type: 'guest',
           rows: [
             {count: 0, text: 'взрослые'},
