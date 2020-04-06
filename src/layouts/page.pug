@@ -1,7 +1,6 @@
 extends base
 
 include ../components/header/header
-include ../components/main/main
 include ../components/footer/footer
 
 block content
@@ -49,8 +48,7 @@ block content
       ]
     })
 
-    +main
-      block main
+    block main
 
     +footer({
       rightTitle: 'Подписка',
