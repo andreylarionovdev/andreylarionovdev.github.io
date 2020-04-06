@@ -94,6 +94,11 @@
     line-height: 2.5rem;
     justify-content: space-between;
   }
+  &__clear-button {
+    &_hidden {
+      visibility: hidden;
+    }
+  }
   &_expanded {
     #{$blockClass}__text-input {
       border: 0.0625rem solid $color-primary-50;
@@ -108,19 +113,9 @@
       border-top: none;
     }
   }
-  &_with-hidden-buttons {
-    #{$blockClass}__footer-buttons {
-      display: none;
-    }
-  }
   &_with-z-index-priority {
     #{$blockClass}__menu {
       z-index: $zIndex + 1;
-    }
-  }
-  &_empty {
-    #{$blockClass}__clear-button {
-      visibility: hidden;
     }
   }
 }

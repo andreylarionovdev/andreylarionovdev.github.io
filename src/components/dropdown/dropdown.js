@@ -13,8 +13,7 @@ Dropdown.prototype.init = function init($element) {
   this.$element = $element;
 
   this.classExpanded = 'dropdown_expanded';
-  this.classEmpty = 'dropdown_empty';
-  this.classHiddenButtons = 'dropdown_with-hidden-buttons';
+  this.classClearButtonHidden = 'dropdown__clear-button_hidden';
   this.classCountButtonDisabled = 'dropdown__count-button_disabled';
 
   this.selectorMenu = '.js-dropdown__menu';
@@ -113,7 +112,7 @@ Dropdown.prototype.handleChangeCountButtonClick = function handleChangeCountButt
 
   $count.text(n);
 
-  this.$element.removeClass(`${this.classEmpty} ${this.classHiddenButtons}`);
+  this.$clearButton.removeClass(this.classClearButtonHidden);
 
   this.updateState();
   if (this.type === ROOM_TYPE) {
@@ -169,7 +168,7 @@ Dropdown.prototype.updateValue = function updateValue() {
 
 Dropdown.prototype.updateView = function updateView() {
   if (this.state.total === 0) {
-    this.$element.addClass(this.classEmpty);
+    this.$clearButton.addClass(this.classClearButtonHidden);
   }
 };
 
