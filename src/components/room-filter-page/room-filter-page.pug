@@ -47,8 +47,7 @@ mixin room-filter-page
             p.room-filter-page__range-slider-hint
               = 'Стоимость за сутки пребывания в номере'
           fieldset.room-filter-page__checkbox-list-group
-            legend.room-filter-page__legend
-              +label({ label: 'checkbox buttons' })
+            legend.room-filter-page__legend= 'checkbox buttons'
             ul.room-filter-page__checkbox-list
               li.room-filter-page__checkbox
                 +checkbox({
@@ -72,8 +71,7 @@ mixin room-filter-page
                 })
           - const theme = 'rich';
           fieldset.room-filter-page__checkbox-list-group.room-filter-page__checkbox-list-group_theme_rich
-            legend.room-filter-page__legend
-              +label({ label: 'Доступность' })
+            legend.room-filter-page__legend= 'Доступность'
             ul.room-filter-page__checkbox-list
               li.room-filter-page__checkbox
                 +checkbox({

@@ -35,6 +35,9 @@
   &__credentials-group {
     border: none;
   }
+  &__legend {
+    @include h3;
+  }
   &__label,
   &__legend {
     margin-bottom: 0.3125rem;

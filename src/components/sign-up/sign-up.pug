@@ -47,10 +47,7 @@ mixin sign-up(options)
           placeholder: 'ДД.ММ.ГГГГ',
         })
     fieldset.sign-up__credentials-group
-      legend.sign-up__legend
-        +label({
-          label: 'Данные для входа в сервис',
-        })
+      legend.sign-up__legend= 'Данные для входа в сервис'
       .sign-up__text-input
         +text-input({
           id: 'sign-up__input-email',
