@@ -4,7 +4,6 @@
 .checkbox {
   $blockClass: &;
   font-size: 0.875rem;
-  font-family: Montserrat, sans-serif;
   line-height: 1.25rem;
 
   &__input {
@@ -69,7 +68,6 @@
   &_theme {
     &_toggle {
       font-size: 0.75rem;
-      font-family: Montserrat, sans-serif;
       line-height: 1.25rem;
 
       #{$blockClass}__input {
