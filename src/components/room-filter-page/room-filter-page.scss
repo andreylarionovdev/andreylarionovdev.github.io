@@ -45,6 +45,7 @@
         display: block;
         #{$blockClass}__footer-filter-buttons {
           display: grid;
+          z-index: 2;
           grid-template-columns: 1fr 1fr;
           grid-column-gap: 2rem;
           padding: 0 0.75rem;

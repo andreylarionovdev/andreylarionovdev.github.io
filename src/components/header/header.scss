@@ -6,6 +6,8 @@
 
 .header {
   $blockClass: &;
+  position: relative;
+  z-index: 3;
   font-size: 0.875rem;
   color: $color-primary-50;
   background: white;
