@@ -4,6 +4,7 @@
   display: inline-block;
   &__arrow-next,
   &__arrow-prev {
+    margin: 0.125rem 0 0 0.0625rem;
     color: white;
   }
   &__ul {
