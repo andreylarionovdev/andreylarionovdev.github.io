@@ -3,7 +3,7 @@
 
 .datepicker-range {
   $blockClass: &;
-  &__row {
+  &__group {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
     grid-column-gap: 1.25rem;
