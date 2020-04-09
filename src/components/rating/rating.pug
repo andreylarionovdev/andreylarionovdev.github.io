@@ -3,5 +3,5 @@ mixin rating(options)
 
   .rating
     - for(let i = 0; i < base; i++)
-      - const starContent = i >= rate ? 'star_bordered' : 'star';
-      span.rating__star.material-icons= starContent
+      - const classBordered = i >= rate ? 'rating__star_bordered' : '';
+      span.rating__star(class=classBordered)
