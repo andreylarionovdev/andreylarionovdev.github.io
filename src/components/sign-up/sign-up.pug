@@ -4,10 +4,17 @@ include ../checkbox/checkbox
 include ../label/label
 
 mixin sign-up(options)
-  - const { method='POST', action='/'} = options || {};
+  -
+    const {
+      header = 'Регистрация аккаунта',
+      headerTag = 'h1',
+      method = 'POST',
+      action = '/'
+    } = options || {};
 
   form.sign-up(method=method action=action)
-    h1.sign-up__title= 'Регистрация аккаунта'
+    header.sign-up__header
+      #{headerTag}.sign-up__title= header
     .sign-up__text-input
       +text-input({
         name: 'first-name',

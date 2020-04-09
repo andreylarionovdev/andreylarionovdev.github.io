@@ -3,9 +3,16 @@ include ../dropdown/dropdown
 include ../button/button
 include ../datepicker-range/datepicker-range
 
-mixin room-search()
+mixin room-search(options)
+  -
+    const {
+      header = 'Найдём номера под ваши пожелания',
+      headerTag = 'h1'
+    } = options || {};
+
   form.room-search
-    h1.room-search__title= 'Найдём номера под ваши пожелания'
+    header.room-search__header
+      #{headerTag}.room-search__title= header
     .room-search__datepicker-range
       +datepicker-range({id: 'room-search-datepicker'})
     .room-search__guests-dropdown-group

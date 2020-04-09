@@ -2,10 +2,17 @@ include ../text-input/text-input
 include ../button/button
 
 mixin sign-in(options)
-  - const { method='POST', action='/'} = options || {};
+  -
+    const {
+      header = 'Войти',
+      headerTag = 'h1',
+      method = 'POST',
+      action = '/'
+    } = options || {};
 
   form.sign-in(method=method action=action)
-    h1.sign-in__title= 'Войти'
+    header.sign-in__header
+      #{headerTag}.sign-in__title= header
     .sign-in__text-input
       +text-input({
         name: 'email',
