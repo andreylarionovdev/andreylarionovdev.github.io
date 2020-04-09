@@ -30,14 +30,15 @@
   }
   &__submit-button {
     @include reset-button;
-    @include reset-outline(text-shadow);
-    display: flex;
-    height: 100%;
-    align-items: center;
     position: absolute;
-    right: 0.625rem;
-    background: transparent;
-    color: $color-purple;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0.8125rem;
+    width: 1.125rem;
+    height: 1.125rem;
+    background-image: url('./img/arrow-forward.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
   }
   &_hovered {
     #{$blockClass}__field {
