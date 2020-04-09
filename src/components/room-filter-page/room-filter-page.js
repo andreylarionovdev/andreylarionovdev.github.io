@@ -33,7 +33,7 @@ RoomFilterPage.prototype.init = function init() {
   this.$applyFilterButton = $('.js-room-filter-page__apply-filter-button');
 
   this.$filterForm = $('.js-room-filter-page__form');
-  this.$thumbnailsWrapper = $('.js-room-filter-page__thumbnail-list-wrapper');
+  this.$thumbnailsWrapper = $('.js-room-filter-page__search-result');
   this.$footer = $('.js-footer');
 
   this.addEventListeners();

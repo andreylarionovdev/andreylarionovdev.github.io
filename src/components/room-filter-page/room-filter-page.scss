@@ -16,7 +16,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-  &__sidebar {
+  &__filter {
     grid-column: 1 / 2;
     padding-right: 1.5rem;
     @media (max-width: $screen-filter-xs-max) {
@@ -34,7 +34,7 @@
       }
     }
   }
-  &__footer-filter-buttons {
+  &__form-footer {
     display: none;
   }
   &__form {
@@ -43,7 +43,7 @@
       display: none;
       &_visible {
         display: block;
-        #{$blockClass}__footer-filter-buttons {
+        #{$blockClass}__form-footer {
           display: grid;
           z-index: 2;
           grid-template-columns: 1fr 1fr;
@@ -108,7 +108,7 @@
   &__checkbox-list-expandable {
     margin: 1rem 0 4rem 0;
   }
-  &__thumbnail-list-wrapper {
+  &__search-result {
     grid-column: 2 / 5;
     padding-left: 2.1875rem;
     @media (max-width: $screen-filter-xs-max) {

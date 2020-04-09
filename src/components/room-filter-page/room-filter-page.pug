@@ -9,7 +9,7 @@ include ../button/button
 mixin room-filter-page
   main.room-filter-page
     .room-filter-page__inner-wrapper
-      section.room-filter-page__sidebar
+      section.room-filter-page__filter
         .room-filter-page__show-filter-button.js-room-filter-page__show-filter-button
           +button({
             theme: 'transparent',
@@ -83,8 +83,7 @@ mixin room-filter-page
                 })
               li.room-filter-page__checkbox
                 +checkbox({
-                  id: 'disable-assistant-checkbox',
-                  id: 'disable-assistant',
+                  id: 'assistant',
                   label: 'Помощник для инвалидов',
                   hint: 'На 1 этаже вас встретит специалист и проводит до номера.',
                   theme: 'rich',
@@ -115,7 +114,7 @@ mixin room-filter-page
                 {id: 'shampoo-2-checkbox', label: 'Шампунь'},
               ],
             })
-          .room-filter-page__footer-filter-buttons.js-room-filter-page__footer-filter-buttons
+          .room-filter-page__form-footer.js-room-filter-page__form-footer
             .room-filter-page__clear-filter-button.js-room-filter-page__clear-filter-button
               +button({
                 theme: 'transparent',
@@ -130,7 +129,7 @@ mixin room-filter-page
                 type: 'submit',
                 size: 'fluid',
               })
-      section.room-filter-page__thumbnail-list-wrapper.js-room-filter-page__thumbnail-list-wrapper
+      section.room-filter-page__search-result.js-room-filter-page__search-result
         h1.room-filter-page__thumbnail-list-title= 'Номера, которые мы для вас подобрали'
         ul.room-filter-page__thumbnail-list
           -
