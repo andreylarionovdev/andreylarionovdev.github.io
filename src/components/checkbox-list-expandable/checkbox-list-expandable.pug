@@ -10,7 +10,7 @@ mixin checkbox-list-expandable(options)
   - const jsPrefix = 'js';
 
   div(id=id class=createBemClasses({ blockName, modifiers: blockModifiers, jsPrefix }))
-    h3(class=createBemClasses({ blockName, elementName: 'toggle', jsPrefix }))
+    p(class=createBemClasses({ blockName, elementName: 'toggle', jsPrefix }))
       span.checkbox-list-expandable__label= label
       button.checkbox-list-expandable__arrow.material-icons(type='button')= 'keyboard_arrow_down'
     ul.checkbox-list-expandable__list

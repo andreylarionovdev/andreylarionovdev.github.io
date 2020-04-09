@@ -52,13 +52,15 @@ mixin footer(options)
         nav.footer__navigation
           each menu, _ in menus
             section.footer__navigation-section
-              h3.footer__navigation-section-title= menu.title
+              header.footer__section-header
+                p.footer__navigation-section-title= menu.title
               ul.footer__navigation-section-list
                 each item, _ in menu.links
                   li.footer__navigation-section-item
                     a.footer__navigation-section-link(href=item.href)= item.text
         form.footer__subscription-form(method='POST' action='/')
-          h3.footer__subscription-form-title!= rightTitle
+          header.footer__section-header
+            p.footer__subscription-form-title!= rightTitle
           p.footer__subscription-form-description= rightDescription
           .footer__text-input
             +text-input({

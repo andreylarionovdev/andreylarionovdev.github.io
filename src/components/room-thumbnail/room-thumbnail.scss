@@ -106,8 +106,11 @@
   }
   &__number-value {
     font-size: 1.1875rem;
-    padding-left: 0.25rem;
+    margin-left: 0.25rem;
     color: $color-primary-100;
+  }
+  &__number-feature {
+    margin-left: 0.3125rem;
   }
   &__price-per-day {
     color: $color-primary-50;

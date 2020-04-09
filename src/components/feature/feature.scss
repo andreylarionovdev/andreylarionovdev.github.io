@@ -15,10 +15,11 @@
     display: block;
     color: $color-primary-75;
     font-size: 0.875rem;
+    font-weight: normal;
     line-height: 1.5rem;
     padding-left: 3.625rem;
   }
-  &__hint {
-    font-weight: normal;
+  &__title {
+    font-weight: bold;
   }
 }

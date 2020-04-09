@@ -42,7 +42,7 @@ mixin room-thumbnail(options)
         span.room-thumbnail__number-sign= '№'
         span.room-thumbnail__number-value= roomNumber
         if feature
-          h3.room-thumbnail__number-feature= feature
+          span.room-thumbnail__number-feature= feature
       .room-thumbnail__price-per-day
         span.room-thumbnail__cost!= formatCurrency({value: pricePerDay})
         |&nbsp;

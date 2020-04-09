@@ -27,6 +27,7 @@
   &__number-feature {
     @include h3;
     color: $color-purple;
+    margin-left: 0.3125rem;
   }
   &__number-sign,
   &__number-value,
@@ -43,7 +44,7 @@
   }
   &__number-value {
     font-size: 1.5rem;
-    padding-left: 0.25rem;
+    margin-left: 0.25rem;
     color: $color-primary-100;
   }
   &__feature {

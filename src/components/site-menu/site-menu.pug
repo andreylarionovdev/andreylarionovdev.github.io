@@ -4,5 +4,4 @@ mixin site-menu(options)
   ul.site-menu(class=`site-menu_theme_${theme}`)
     each link in items
       li.site-menu__item
-        h2.site-menu__title
-          a.site-menu__link(href=link.href)= link.text
+        a.site-menu__link(href=link.href)= link.text

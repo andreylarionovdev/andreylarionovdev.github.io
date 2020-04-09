@@ -8,9 +8,10 @@
 @import '../donut-chart/donut-chart';
 
 .room-details-page {
+  $blockClass: &;
   border-bottom: 0.0625rem solid $color-primary-25;
   &__inner-wrapper {
-    padding: 4.3125rem 0 3.8125rem 0;
+    padding: 4.375rem 0 3.8125rem 0;
     @include inner-wrapper;
     display: grid;
     grid-template-columns: 1.868fr 1fr;
@@ -68,6 +69,14 @@
       grid-row-gap: 3rem;
     }
   }
+  &__section-header {
+    #{$blockClass}__title {
+      @include h2;
+    }
+  }
+  &__info {
+    grid-area: info;
+  }
   &__features-list {
     list-style: none;
   }
@@ -79,36 +88,26 @@
       }
     }
   }
-  &__info {
-    grid-area: info;
-  }
-  &__info-title {
-    @include h2;
-  }
   &__rate {
     grid-area: rate;
-  }
-  &__rate-title {
-    @include h2;
-    margin-bottom: 1.3125rem;
+    #{$blockClass}__title {
+      margin-bottom: 1.3125rem;
+    }
   }
   &__feedbacks {
     grid-area: feed;
     padding-top: 0.0625rem;
-  }
-  &__feedbacks-title {
-    @include h2;
-  }
-  &__feedbacks-header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-  }
-  &__feedbacks-counter {
-    @include primary-text;
-    line-height: 1.75rem;
-    text-align: right;
-    color: $color-primary-50;
+    #{$blockClass}__section-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+    #{$blockClass}__counter {
+      @include primary-text;
+      line-height: 1.75rem;
+      text-align: right;
+      color: $color-primary-50;
+    }
   }
   &__feedbacks-list {
     list-style: none;
@@ -122,26 +121,24 @@
   &__rules,
   &__cancel {
     padding-right: 1.25rem;
+    #{$blockClass}__title {
+      margin-bottom: 1.0625rem;
+    }
   }
   &__rules {
     grid-area: rules;
+    #{$blockClass}__title {
+      padding-left: 1.25rem;
+      @media (max-width: $screen-xs-max) {
+        padding-left: 0;
+      }
+    }
   }
   &__cancel {
     grid-area: cancel;
   }
-  &__rules-title,
-  &__cancel-title {
-    @include h2;
-    margin-bottom: 1.0625rem;
-  }
   &__cancel-text {
     @include primary-text;
-  }
-  &__rules-title {
-    padding-left: 1.25rem;
-    @media (max-width: $screen-xs-max) {
-      padding-left: 0;
-    }
   }
   &__sidebar {
     max-width: 23.75rem;

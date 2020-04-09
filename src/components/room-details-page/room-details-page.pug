@@ -18,37 +18,39 @@ mixin room-details-page
     .room-details-page__inner-wrapper
       .room-details-page__main
         section.room-details-page__info
-          h2.room-details-page__info-title= 'Сведения о номере'
-            -
-              var features = [
-                {
-                  icon: 'mood',
-                  title: 'Комфорт',
-                  hint: 'Шумопоглощающие стены',
-                },
-                {
-                  icon: 'location_city',
-                  title: 'Удобство',
-                  hint: 'Окно в каждой из спален',
-                },
-                {
-                  icon: 'whatshot',
-                  title: 'Уют',
-                  hint: 'Номер оснащён камином',
-                }
-              ]
+          header.room-details-page__section-header
+            p.room-details-page__title= 'Сведения о номере'
+          -
+            var features = [
+              {
+                icon: 'mood',
+                title: 'Комфорт',
+                hint: 'Шумопоглощающие стены',
+              },
+              {
+                icon: 'location_city',
+                title: 'Удобство',
+                hint: 'Окно в каждой из спален',
+              },
+              {
+                icon: 'whatshot',
+                title: 'Уют',
+                hint: 'Номер оснащён камином',
+              }
+            ]
           ul.room-details-page__features-list
             each feature in features
               li.room-details-page__feature-item
                 +feature(feature)
         section.room-details-page__rate
-          h2.room-details-page__rate-title= 'Впечатления от номера'
+          header.room-details-page__section-header
+            p.room-details-page__title= 'Впечатления от номера'
           .room-details-page__donut-chart
             +donut-chart('donut-chart')
         section.room-details-page__feedbacks
-          .room-details-page__feedbacks-header
-            h2.room-details-page__feedbacks-title= 'Отзывы посетителей номера'
-            span.room-details-page__feedbacks-counter= '2 отзыва'
+          header.room-details-page__section-header
+            p.room-details-page__title= 'Отзывы посетителей номера'
+            p.room-details-page__counter= '2 отзыва'
           -
             const feedbacks = [
               {
@@ -82,7 +84,8 @@ mixin room-details-page
               li.room-details-page__feedback-item
                 +feedback(feedback)
         section.room-details-page__rules
-          h2.room-details-page__rules-title= 'Правила'
+          header.room-details-page__section-header
+            p.room-details-page__title= 'Правила'
           .room-details-page__bullet-list
             +bullet-list({
               items: [
@@ -92,7 +95,8 @@ mixin room-details-page
               ],
             })
         section.room-details-page__cancel
-          h2.room-details-page__cancel-title= 'Отмена'
+          header.room-details-page__section-header
+            p.room-details-page__title= 'Отмена'
           p.room-details-page__cancel-text
             = 'Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.'
       .room-details-page__sidebar
