@@ -13,7 +13,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>Официальный сайт отеля Toxin | UI Kit - Form elements</title>
-  <link href="elements.2025f65694a277246136.css" rel="stylesheet"></head>
+  <link href="elements.3e0361be5be7683c33ba.css" rel="stylesheet"></head>
   <body class="body">
     <div class="form-elements-page">
       <nav class="form-elements-page__nav"><a class="logo" href="./index.html"></a>
@@ -46,8 +46,8 @@
             </div>
             <div class="form-elements-page__dropdown form-elements-page__dropdown_theme_datepicker-range">
               <div class="datepicker-range js-datepicker-range">
-                <div class="datepicker-range__row js-datepicker-range__row">
-                  <div class="datepicker-range__dropdown-group js-datepicker-range__dropdown-group">
+                <div class="datepicker-range__group js-datepicker-range__group">
+                  <div class="datepicker-range__item js-datepicker-range__item">
                     <div class="datepicker-range__label">
                       <label class="label"><span class="label__title">date dropdown</span>
                       </label>
@@ -59,7 +59,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="datepicker-range__dropdown-group js-datepicker-range__dropdown-group">
+                  <div class="datepicker-range__item js-datepicker-range__item">
                     <div class="datepicker-range__label">
                       <label class="label"><span class="label__title">date dropdown</span>
                       </label>
@@ -87,7 +87,7 @@
               <label class="label" for="input-submit"><span class="label__title">subscription text field</span>
               </label><span class="text-input">
                 <input class="text-input__field" id="input-submit" name="input-submit" type="email" placeholder="Email">
-                <button class="text-input__submit-button" type="submit"><span class="text-input__arrow material-icons">arrow_forward</span></button></span>
+                <button class="text-input__submit-button" type="submit"></button></span>
             </div>
           </div>
           <div class="form-elements-page__section-column-gap"></div>
@@ -149,9 +149,9 @@
             <div class="form-elements-page__rating-group">
               <label class="label"><span class="label__title">rate button</span>
               </label>
-              <div class="rating"><span class="rating__star material-icons">star</span><span class="rating__star material-icons">star</span><span class="rating__star material-icons">star</span><span class="rating__star material-icons">star</span><span class="rating__star material-icons">star_bordered</span>
+              <div class="rating"><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star rating__star_bordered"></span>
               </div>
-              <div class="rating"><span class="rating__star material-icons">star</span><span class="rating__star material-icons">star</span><span class="rating__star material-icons">star</span><span class="rating__star material-icons">star</span><span class="rating__star material-icons">star</span>
+              <div class="rating"><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span>
               </div>
             </div>
           </div>
@@ -334,18 +334,18 @@
           <div class="form-elements-page__section-column">
             <div class="form-elements-page__checkbox-list-expandable form-elements-page__checkbox-list-expandable">
               <div class="checkbox-list-expandable js-checkbox-list-expandable">
-                <h3 class="checkbox-list-expandable__toggle js-checkbox-list-expandable__toggle"><span class="checkbox-list-expandable__label">Expandable checkbox list</span>
-                  <button class="checkbox-list-expandable__arrow material-icons" type="button">keyboard_arrow_down</button>
-                </h3>
+                <p class="checkbox-list-expandable__group"><span class="checkbox-list-expandable__label">Expandable checkbox list</span>
+                  <button class="checkbox-list-expandable__toggle-button js-checkbox-list-expandable__toggle-button material-icons" type="button">keyboard_arrow_down</button>
+                </p>
                 <ul class="checkbox-list-expandable__list">
                 </ul>
               </div>
             </div>
             <div class="form-elements-page__checkbox-list-expandable form-elements-page__checkbox-list-expandable_expanded">
               <div class="checkbox-list-expandable checkbox-list-expandable_expanded js-checkbox-list-expandable">
-                <h3 class="checkbox-list-expandable__toggle js-checkbox-list-expandable__toggle"><span class="checkbox-list-expandable__label">Expandable checkbox list</span>
-                  <button class="checkbox-list-expandable__arrow material-icons" type="button">keyboard_arrow_down</button>
-                </h3>
+                <p class="checkbox-list-expandable__group"><span class="checkbox-list-expandable__label">Expandable checkbox list</span>
+                  <button class="checkbox-list-expandable__toggle-button js-checkbox-list-expandable__toggle-button material-icons" type="button">keyboard_arrow_down</button>
+                </p>
                 <ul class="checkbox-list-expandable__list">
                   <li class="checkbox-list-expandable__item">
                     <div class="checkbox">
@@ -414,8 +414,8 @@
                 </li>
                 <li class="form-elements-page__checkbox">
                   <div class="checkbox checkbox_theme_rich">
-                    <input class="checkbox__input" id="disable-assistant-checkbox" name="disable-assistant-checkbox" type="checkbox">
-                    <label class="checkbox__label" for="disable-assistant-checkbox">Помощник для инвалидов</label>
+                    <input class="checkbox__input" id="assistant-checkbox" name="assistant-checkbox" type="checkbox">
+                    <label class="checkbox__label" for="assistant-checkbox">Помощник для инвалидов</label>
                     <p class="checkbox__hint">На 1 этаже вас встретит специалист и проводит до номера.</p>
                   </div>
                 </li>
@@ -451,13 +451,13 @@
             <div class="form-elements-page__feature-group">
               <div class="form-elements-page__feature">
                 <div class="feature"><span class="material-icons feature__icon">mood</span>
-                  <h3 class="feature__title">Комфорт</h3>
+                  <p class="feature__title">Комфорт</p>
                   <p class="feature__hint">Шумопоглощающие стены</p>
                 </div>
               </div>
               <div class="form-elements-page__feature">
                 <div class="feature"><span class="material-icons feature__icon">location_city</span>
-                  <h3 class="feature__title">Удобство</h3>
+                  <p class="feature__title">Удобство</p>
                   <p class="feature__hint">Окно в каждой из спален</p>
                 </div>
               </div>
@@ -485,5 +485,5 @@
         </section>
       </div>
     </div>
-  <script type="text/javascript" src="elements.2025f65694a277246136.js"></script></body>
+  <script type="text/javascript" src="elements.3e0361be5be7683c33ba.js"></script></body>
 </html>
