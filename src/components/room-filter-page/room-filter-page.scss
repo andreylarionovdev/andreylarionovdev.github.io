@@ -45,7 +45,7 @@
         display: block;
         #{$blockClass}__form-footer {
           display: grid;
-          z-index: 2;
+          z-index: 10;
           grid-template-columns: 1fr 1fr;
           grid-column-gap: 2rem;
           padding: 0 0.75rem;
