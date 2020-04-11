@@ -56,7 +56,7 @@ Dropdown.prototype.initState = function initType() {
     },
     [ROOM_TYPE]: {
       total: 0,
-      emptyValue: 'Сколько комнат',
+      emptyValue: 'Выбрать',
       categories: [
         { count: 0, wordForms: ['спальня', ...new Array(3).fill('спальни'), 'спален'] },
         { count: 0, wordForms: ['кровать', ...new Array(3).fill('кровати'), 'кроватей'] },
