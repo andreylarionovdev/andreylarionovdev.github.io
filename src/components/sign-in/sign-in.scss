@@ -49,4 +49,21 @@
       margin-bottom: 1rem;
     }
   }
+
+  &__sign-up-hint,
+  &__button_type_sign-up {
+    word-break: break-word;
+  }
+  &__button_type_sign-up {
+    max-width: 38%;
+    @media (max-width: $screen-xs-max) {
+      max-width: 100%;
+    }
+  }
+  &__sign-up-hint {
+    max-width: 60%;
+    @media (max-width: $screen-xs-max) {
+      max-width: 100%;
+    }
+  }
 }
