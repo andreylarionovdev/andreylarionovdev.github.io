@@ -17,6 +17,9 @@
     position: relative;
     width: 100%;
   }
+  &__item {
+    word-break: break-word;
+  }
 
   .datepicker {
     @include card;
