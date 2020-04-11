@@ -27,6 +27,7 @@
       grid-row-gap: 5rem;
       @media (max-width: $screen-sm-max) {
         grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1rem;
         grid-template-areas:
           'about subscribe'
           'nav nav';
