@@ -27,6 +27,8 @@
     display: inline-block;
     float: left;
     margin-right: 1.25rem;
+    max-width: 48%;
+    word-break: break-word;
   }
   &__gender-group {
     display: flex;
