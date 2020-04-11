@@ -29,7 +29,7 @@
     grid-column-start: 2;
   }
   &__arrow {
-    display: none;
+    display: inline-block;
     text-align: right;
   }
   &:hover,
@@ -45,9 +45,6 @@
       }
     }
     &_with-arrow {
-      #{$blockClass}__arrow {
-        display: inline-block;
-      }
       #{$blockClass}__inner-wrapper {
         padding: 0.5rem;
       }
