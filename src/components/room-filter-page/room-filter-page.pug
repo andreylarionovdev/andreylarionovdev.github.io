@@ -10,7 +10,7 @@ mixin room-filter-page
   main.room-filter-page
     .room-filter-page__inner-wrapper
       section.room-filter-page__filter
-        .room-filter-page__show-filter-button.js-room-filter-page__show-filter-button
+        .room-filter-page__button.room-filter-page__button_type_show-filter.js-room-filter-page__button_type_show-filter
           +button({
             theme: 'transparent',
             caption: 'Фильтр',
@@ -113,14 +113,14 @@ mixin room-filter-page
               ],
             })
           .room-filter-page__form-footer.js-room-filter-page__form-footer
-            .room-filter-page__clear-filter-button.js-room-filter-page__clear-filter-button
+            .room-filter-page__button.room-filter-page__button_type_clear.js-room-filter-page__button_type_clear
               +button({
                 theme: 'transparent',
                 caption: 'Сбросить',
                 type: 'reset',
                 size: 'fluid',
               })
-            .room-filter-page__apply-filter-button.js-room-filter-page__apply-filter-button
+            .room-filter-page__button.room-filter-page__button_type_apply.js-room-filter-page__button_type_apply
               +button({
                 theme: 'default',
                 caption: 'Применить',

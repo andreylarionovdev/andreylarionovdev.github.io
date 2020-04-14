@@ -28,9 +28,9 @@ RoomFilterPage.prototype.init = function init() {
   this.classHiddenThumbnails = 'room-filter-page__thumbnail-list-wrapper_hidden';
   this.classHiddenFooter = 'footer_hidden';
 
-  this.$showFilterButton = $('.js-room-filter-page__show-filter-button');
-  this.$clearFilterButton = $('.js-room-filter-page__clear-filter-button');
-  this.$applyFilterButton = $('.js-room-filter-page__apply-filter-button');
+  this.$showFilterButton = $('.js-room-filter-page__button_type_show-filter');
+  this.$clearFilterButton = $('.js-room-filter-page__button_type_clear');
+  this.$applyFilterButton = $('.js-room-filter-page__button_type_apply');
 
   this.$filterForm = $('.js-room-filter-page__form');
   this.$thumbnailsWrapper = $('.js-room-filter-page__search-result');

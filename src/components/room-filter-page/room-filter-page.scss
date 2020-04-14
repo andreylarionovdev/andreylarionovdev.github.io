@@ -24,13 +24,18 @@
       grid-column: 1 / 5;
     }
   }
-  &__show-filter-button {
-    display: none;
-    margin-bottom: 1.5rem;
-    @media (max-width: $screen-filter-xs-max) {
-      display: block;
-      &_hidden {
+  &__button {
+    word-break: break-word;
+    &_type {
+      &_show-filter {
         display: none;
+        margin-bottom: 1.5rem;
+        @media (max-width: $screen-filter-xs-max) {
+          display: block;
+          &_hidden {
+            display: none;
+          }
+        }
       }
     }
   }
