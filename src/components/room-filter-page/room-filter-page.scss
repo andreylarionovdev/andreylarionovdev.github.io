@@ -17,11 +17,12 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   &__filter {
-    grid-column: 1 / 2;
-    padding-right: 1.5rem;
-    @media (max-width: $screen-filter-xs-max) {
-      padding: 0;
-      grid-column: 1 / 5;
+    padding: 0;
+    grid-column: 1 / 5;
+    @media (min-width: $screen-filter-sm-min) {
+      grid-column: 1 / 2;
+      padding-right: 1.5rem;
+      max-width: 18.125rem;
     }
   }
   &__button {
