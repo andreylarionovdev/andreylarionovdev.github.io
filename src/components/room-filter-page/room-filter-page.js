@@ -23,9 +23,9 @@ const RoomFilterPage = function RoomFilterPage() {
 };
 
 RoomFilterPage.prototype.init = function init() {
-  this.classHiddenShowFilterButton = 'room-filter-page__show-filter-button_hidden';
+  this.classHiddenShowFilterButton = 'room-filter-page__button_type_show-filter_hidden';
   this.classVisibleFilter = 'room-filter-page__form_visible';
-  this.classHiddenThumbnails = 'room-filter-page__thumbnail-list-wrapper_hidden';
+  this.classHiddenThumbnails = 'room-filter-page__search-result_hidden';
   this.classHiddenFooter = 'footer_hidden';
 
   this.$showFilterButton = $('.js-room-filter-page__button_type_show-filter');
@@ -63,7 +63,7 @@ RoomFilterPage.prototype.handleApplyFilterButtonClick = function handleClearFilt
 RoomFilterPage.prototype.toggleFilter = function toggleFilter() {
   this.$showFilterButton.toggleClass(this.classHiddenShowFilterButton);
   this.$filterForm.toggleClass(this.classVisibleFilter);
-  this.$thumbnailsWrapper.toggleClass(this.classHiddenThumbnails);
+  // this.$thumbnailsWrapper.toggleClass(this.classHiddenThumbnails);
   this.$footer.toggleClass(this.classHiddenFooter);
 };
 
