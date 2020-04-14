@@ -19,7 +19,9 @@ Header.prototype.addEventListeners = function addEventListeners() {
 };
 
 Header.prototype.handleNavigationToggleClick = function handleNavigationToggleClick(e) {
-  const $header = $(e.currentTarget).closest(this.selectorHeader);
+  const $button = $(e.currentTarget);
+  $button.text((_, text) => (text === 'menu' ? 'close' : 'menu'));
+  const $header = $button.closest(this.selectorHeader);
   $header.find(this.selectorNavigation).toggleClass(this.classNavigationActive);
 };
 
