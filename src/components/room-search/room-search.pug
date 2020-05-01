@@ -6,6 +6,7 @@ include ../datepicker-range/datepicker-range
 mixin room-search(options)
   -
     const {
+      name='room-search',
       header = 'Найдём номера под ваши пожелания',
       headerTag = 'h1'
     } = options || {};
@@ -20,6 +21,7 @@ mixin room-search(options)
         +label({ label: 'Гости' })
       .room-search__dropdown
         +dropdown({
+          name: `${name}-guest-input`,
           type: 'guest',
           rows: [
             {count: 0, text: 'взрослые'},

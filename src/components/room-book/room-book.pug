@@ -5,6 +5,7 @@ include ../datepicker-range/datepicker-range
 mixin room-book(options)
   -
     const {
+      name='room-book',
       roomNumber = 888,
       daysCount = 4,
       pricePerDay = 9990,
@@ -39,6 +40,7 @@ mixin room-book(options)
         +label({ label: 'Гости' })
       .room-book__dropdown
         +dropdown({
+          name: `${name}-guest-input`,
           type: 'guest',
           rows: [
             {count: 2, text: 'взрослые'},

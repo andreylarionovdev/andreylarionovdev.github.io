@@ -25,10 +25,10 @@ mixin datepicker-range(options)
         .datepicker-range__label
           +label({ label: fromLabel })
         div(class=createBemClasses({ blockName, elementName: 'dropdown', jsPrefix }))
-          +dropdown({ value: from })
+          +dropdown({ name: `${id}_from`, value: from })
       div(class=createBemClasses({ blockName, elementName: 'item', jsPrefix }))
         .datepicker-range__label
           +label({ label: toLabel })
         div(class=createBemClasses({ blockName, elementName: 'dropdown', jsPrefix }))
-          +dropdown({ value: to })
+          +dropdown({ name: `${id}_to`, value: to })
     div(class=createBemClasses({ blockName, elementName: 'datepicker-container', jsPrefix }))

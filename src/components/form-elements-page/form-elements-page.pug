@@ -51,6 +51,7 @@ mixin form-elements-page
               hint: 'default'
             })
             +dropdown({
+              name: 'guests-default',
               type: 'guest',
               value: 'Сколько гостей'
             })
@@ -77,6 +78,7 @@ mixin form-elements-page
               label: 'filter date dropdown'
             })
             +dropdown({
+              name: 'date-filter',
               value: '19 авг - 23 авг'
             })
           .form-elements-page__text-input-group.form-elements-page__text-input-group_theme_with-submit
@@ -246,6 +248,7 @@ mixin form-elements-page
               hint: 'default'
             })
             +dropdown({
+              name: 'guests-collapsed',
               type: 'room',
               rows: [
                 {count: 2, text: 'спальни',},
@@ -260,6 +263,7 @@ mixin form-elements-page
               hint: 'expanded'
             })
             +dropdown({
+              name: 'guests-expanded',
               type: 'room',
               isExpanded: true,
               rows: [
@@ -275,6 +279,7 @@ mixin form-elements-page
               label: 'dropdown'
             })
             +dropdown({
+              name: 'guests-empty',
               type: 'guest',
               isExpanded: true,
               rows: [
@@ -290,6 +295,7 @@ mixin form-elements-page
               label: 'dropdown'
             })
             +dropdown({
+              name: 'guests-filled',
               type: 'guest',
               isExpanded: true,
               rows: [
