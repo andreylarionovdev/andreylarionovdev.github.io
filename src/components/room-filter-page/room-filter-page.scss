@@ -15,6 +15,9 @@
     padding: 1.875rem 0 1.75rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    @media (max-width: $screen-filter-xs-max) {
+      padding-bottom: 0;
+    }
   }
   &__filter {
     padding: 0;
