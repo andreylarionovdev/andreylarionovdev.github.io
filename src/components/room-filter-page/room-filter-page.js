@@ -63,7 +63,7 @@ RoomFilterPage.prototype.handleApplyFilterButtonClick = function handleClearFilt
 RoomFilterPage.prototype.toggleFilter = function toggleFilter() {
   this.$showFilterButton.toggleClass(this.classHiddenShowFilterButton);
   this.$filterForm.toggleClass(this.classVisibleFilter);
-  // this.$thumbnailsWrapper.toggleClass(this.classHiddenThumbnails);
+  this.$thumbnailsWrapper.toggleClass(this.classHiddenThumbnails);
   this.$footer.toggleClass(this.classHiddenFooter);
 };
 
