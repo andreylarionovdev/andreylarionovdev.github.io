@@ -146,11 +146,12 @@
     }
   }
   &__toggle-group {
-    margin-bottom: 2.8125rem;
+    margin-bottom: 2rem;
     .label {
       margin-bottom: 0.875rem;
     }
     .checkbox {
+      display: inline-block;
       margin-bottom: 0.825rem;
     }
   }

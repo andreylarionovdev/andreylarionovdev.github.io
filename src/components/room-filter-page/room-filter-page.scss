@@ -83,11 +83,11 @@
   }
 
   &__range-slider,
-  &__checkbox-list-group {
+  &__checkboxes-group {
     margin-top: 1.875rem;
   }
 
-  &__checkbox-list-group {
+  &__checkboxes-group {
     border: none;
     padding-right: 1.25rem;
     &_theme {
@@ -99,9 +99,6 @@
         }
       }
     }
-  }
-  &__checkbox-list {
-    list-style: none;
   }
   &__checkbox {
     margin-bottom: 0.625rem;

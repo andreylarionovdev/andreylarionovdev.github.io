@@ -46,48 +46,46 @@ mixin room-filter-page
             })
             p.room-filter-page__range-slider-hint
               = 'Стоимость за сутки пребывания в номере'
-          fieldset.room-filter-page__checkbox-list-group
+          fieldset.room-filter-page__checkboxes-group
             legend.room-filter-page__legend= 'checkbox buttons'
-            ul.room-filter-page__checkbox-list
-              li.room-filter-page__checkbox
-                +checkbox({
-                  id: 'smoke-allowed-checkbox',
-                  name: 'smoke-allowed',
-                  label: 'Можно курить',
-                })
-              li.room-filter-page__checkbox
-                +checkbox({
-                  id: 'pets-allowed-checkbox',
-                  name: 'pets-allowed',
-                  label: 'Можно с питомцами',
-                  isChecked: true,
-                })
-              li.room-filter-page__checkbox
-                +checkbox({
-                  id: 'guests-allowed-checkbox',
-                  name: 'guests-allowed',
-                  label: 'Можно пригласить гостей (до 10 человек)',
-                  isChecked: true,
-                })
+            p(class="room-filter-page__checkbox")
+              +checkbox({
+                id: 'smoke-allowed-checkbox',
+                name: 'smoke-allowed',
+                label: 'Можно курить',
+              })
+            p.room-filter-page__checkbox
+              +checkbox({
+                id: 'pets-allowed-checkbox',
+                name: 'pets-allowed',
+                label: 'Можно с питомцами',
+                isChecked: true,
+              })
+            p.room-filter-page__checkbox
+              +checkbox({
+                id: 'guests-allowed-checkbox',
+                name: 'guests-allowed',
+                label: 'Можно пригласить гостей (до 10 человек)',
+                isChecked: true,
+              })
           - const theme = 'rich';
-          fieldset.room-filter-page__checkbox-list-group.room-filter-page__checkbox-list-group_theme_rich
+          fieldset.room-filter-page__checkboxes-group.room-filter-page__checkboxes-group_theme_rich
             legend.room-filter-page__legend= 'Доступность'
-            ul.room-filter-page__checkbox-list
-              li.room-filter-page__checkbox
-                +checkbox({
-                  id: 'wide-hall-checkbox',
-                  name: 'wide-hall',
-                  label: 'Широкий коридор',
-                  hint: 'Ширина коридоров в номере не&nbsp;менее 91 см.',
-                  theme: 'rich',
-                })
-              li.room-filter-page__checkbox
-                +checkbox({
-                  id: 'assistant',
-                  label: 'Помощник для инвалидов',
-                  hint: 'На 1 этаже вас встретит специалист и проводит до номера.',
-                  theme: 'rich',
-                })
+            p.room-filter-page__checkbox
+              +checkbox({
+                id: 'wide-hall-checkbox',
+                name: 'wide-hall',
+                label: 'Широкий коридор',
+                hint: 'Ширина коридоров в номере не&nbsp;менее 91 см.',
+                theme: 'rich',
+              })
+            p.room-filter-page__checkbox
+              +checkbox({
+                id: 'assistant',
+                label: 'Помощник для инвалидов',
+                hint: 'На 1 этаже вас встретит специалист и проводит до номера.',
+                theme: 'rich',
+              })
           .room-filter-page__feature-dropdown-group
             .room-filter-page__label
               +label({ label: 'Удобства номера' })
