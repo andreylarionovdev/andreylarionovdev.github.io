@@ -1,6 +1,14 @@
 @import '../../utils/vars';
 
 .body {
+  display: flex;
+  flex-direction: column;
+  &__content {
+    flex: 1 0 auto;
+  }
+  &__footer {
+    flex-shrink: 0;
+  }
   &_theme {
     &_gray {
       background-color: $color-gray;
