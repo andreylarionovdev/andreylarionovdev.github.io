@@ -32,11 +32,11 @@ mixin room-thumbnail(options)
         span.material-icons= 'keyboard_arrow_left'
       button(class=createBemClasses({ blockName, elementName: 'carousel-control', modifiers: [{ type: 'next' }] }))
         span.material-icons= 'keyboard_arrow_left'
-      ul.room-thumbnail__carousel-indicators
+      div.room-thumbnail__carousel-indicators
         each _, inx in images
           - const bemObj = { blockName, elementName: 'carousel-indicator'};
           - bemObj.modifiers = inx === 0 ? ['active'] : [];
-          li(class=createBemClasses(bemObj))
+          button(class=createBemClasses(bemObj))
     header.room-thumbnail__header
       a(href=href).room-thumbnail__number
         span.room-thumbnail__number-sign= '№'

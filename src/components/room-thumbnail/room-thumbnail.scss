@@ -61,6 +61,7 @@
     z-index: 2;
   }
   &__carousel-indicator {
+    @include reset-button;
     cursor: pointer;
     display: inline-block;
     float: left;
