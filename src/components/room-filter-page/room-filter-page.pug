@@ -130,7 +130,7 @@ mixin room-filter-page
                 size: 'fluid',
               })
       section.room-filter-page__search-result.js-room-filter-page__search-result
-        h1.room-filter-page__thumbnail-list-title= 'Номера, которые мы для вас подобрали'
+        h1.room-filter-page__title= 'Номера, которые мы для вас подобрали'
         ul.room-filter-page__thumbnail-list
           -
             const searchResult = [
@@ -260,7 +260,7 @@ mixin room-filter-page
               }
             ]
           each room, i in searchResult
-            li.room-filter-page__room-thumbnail
+            li.room-filter-page__thumbnail-list-item
               +room-thumbnail({
                 roomNumber: room.number,
                 pricePerDay: room.pricePerDay,
