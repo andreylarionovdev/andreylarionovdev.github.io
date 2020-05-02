@@ -28,15 +28,15 @@ mixin room-thumbnail(options)
         - const bemObj = { blockName, elementName: 'carousel-image'}
         - bemObj.modifiers = inx === 0 ? ['active'] : [];
         img(class=createBemClasses(bemObj) src=image.src alt=image.alt)
-      button(class=createBemClasses({ blockName, elementName: 'carousel-control', modifiers: [{ type: 'prev' }] }))
+      button(type='button' class=createBemClasses({ blockName, elementName: 'carousel-control', modifiers: [{ type: 'prev' }] }))
         span.material-icons= 'keyboard_arrow_left'
-      button(class=createBemClasses({ blockName, elementName: 'carousel-control', modifiers: [{ type: 'next' }] }))
+      button(type='button' class=createBemClasses({ blockName, elementName: 'carousel-control', modifiers: [{ type: 'next' }] }))
         span.material-icons= 'keyboard_arrow_left'
       div.room-thumbnail__carousel-indicators
         each _, inx in images
           - const bemObj = { blockName, elementName: 'carousel-indicator'};
           - bemObj.modifiers = inx === 0 ? ['active'] : [];
-          button(class=createBemClasses(bemObj))
+          button(type='button' class=createBemClasses(bemObj))
     header.room-thumbnail__header
       a(href=href).room-thumbnail__number
         span.room-thumbnail__number-sign= '№'
