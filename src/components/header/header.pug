@@ -26,18 +26,17 @@ mixin header(options)
                 b= item.name
               else
                 = item.name
-        li.header__navigation-item
-          if user
-            ul.header__user-navigation.header__user-navigation_authenticated
-              li.header__navigation-item
-                a.header__navigation-link= user
-          else
-            ul.header__user-navigation
-              each button, _ in menuButtons
-                li.header__navigation-item
-                  +button({
-                    theme: button.theme,
-                    caption: button.caption,
-                    size: button.size,
-                    href: button.href,
-                  })
+      if user
+        ul.header__user-navigation.js-header__user-navigation.header__user-navigation_authenticated
+          li.header__navigation-item
+            a.header__navigation-link= user
+      else
+        ul.header__user-navigation.js-header__user-navigation
+          each button, _ in menuButtons
+            li.header__navigation-item
+              +button({
+                theme: button.theme,
+                caption: button.caption,
+                size: button.size,
+                href: button.href,
+              })

@@ -9,6 +9,7 @@ Header.prototype.init = function init() {
 
   this.selectorHeader = '.js-header';
   this.selectorNavigation = '.js-header__navigation';
+  this.selectorUserNavigation = '.js-header__user-navigation';
   this.selectorNavigationToggle = '.js-header__navigation-toggle';
 
   this.addEventListeners();
@@ -23,6 +24,7 @@ Header.prototype.handleNavigationToggleClick = function handleNavigationToggleCl
   $button.text((_, text) => (text === 'menu' ? 'close' : 'menu'));
   const $header = $button.closest(this.selectorHeader);
   $header.find(this.selectorNavigation).toggleClass(this.classNavigationActive);
+  $header.find(this.selectorUserNavigation).toggleClass(this.classNavigationActive);
 };
 
 $(() => new Header());

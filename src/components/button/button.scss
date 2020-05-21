@@ -27,6 +27,9 @@
   }
   &__caption {
     grid-column-start: 2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   &__arrow {
     display: inline-block;

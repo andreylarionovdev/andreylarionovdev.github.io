@@ -16,7 +16,7 @@
     @include inner-wrapper;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     flex-flow: row wrap;
     padding: 0.6875rem 0;
     min-height: inherit;
@@ -36,6 +36,7 @@
   &__logo {
     font-size: 0;
     display: inline-block;
+    margin-right: auto;
   }
   &__navigation,
   &__user-navigation {
@@ -64,6 +65,9 @@
     }
   }
   &__user-navigation {
+    max-width: 32%;
+    margin-left: 1.8%;
+    white-space: nowrap;
     #{$blockClass}__navigation-item {
       margin-left: 0;
       & + #{$blockClass}__navigation-item {
@@ -73,25 +77,39 @@
         }
       }
     }
+    @media (min-width: $screen-md-min) {
+      display: grid;
+      grid-template-columns: auto auto;
+    }
     &_authenticated {
       border-left: 0.0625rem solid $color-primary-10;
       #{$blockClass}__navigation-item {
-        margin-left: 2rem;
+        width: 100%;
+        padding-left: 2rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
         line-height: 2rem;
         @media (max-width: $screen-sm-max) {
-          margin-left: 0;
+          padding-left: 0;
         }
       }
       #{$blockClass}__navigation-link {
+        overflow: hidden;
+        text-overflow: ellipsis;
         @media (max-width: $screen-sm-max) {
           font-weight: bold;
         }
+      }
+      @media (min-width: $screen-md-min) {
+        display: block;
       }
       @media (max-width: $screen-sm-max) {
         border-left: none;
       }
     }
     @media (max-width: $screen-sm-max) {
+      max-width: 100%;
+      margin-left: 0;
       border-top: 0.0625rem solid $color-primary-10;
     }
   }
@@ -128,15 +146,12 @@
         }
 
         #{$blockClass}__user-navigation {
+          max-width: 27.3%;
+          margin-left: 2.4%;
           #{$blockClass}__navigation-item {
             margin-left: 0;
             & + #{$blockClass}__navigation-item {
               margin-left: 1.25rem;
-            }
-          }
-          &_authenticated {
-            #{$blockClass}__navigation-item {
-              margin-left: 2rem;
             }
           }
         }
