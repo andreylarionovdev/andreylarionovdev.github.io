@@ -101,12 +101,18 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 1rem;
+      @media (max-width: $screen-xs-max) {
+        flex-direction: column;
+      }
     }
     #{$blockClass}__counter {
       @include primary-text;
       line-height: 1.75rem;
       text-align: right;
       color: $color-primary-50;
+      @media (max-width: $screen-xs-max) {
+        text-align: left;
+      }
     }
   }
   &__feedbacks-list {
@@ -116,6 +122,9 @@
     margin-bottom: 1.375rem;
     &:last-child {
       margin-bottom: 1.25rem;
+      @media (max-width: $screen-xs-max) {
+        margin-bottom: 0;
+      }
     }
   }
   &__rules,
@@ -144,10 +153,10 @@
     max-width: 23.75rem;
     @media (max-width: $screen-md-max) {
       grid-column: span 2;
-      margin-left: auto;
+      margin-top: 2rem;
     }
     @media (max-width: $screen-xs-max) {
-      margin: 0 auto;
+      margin: 1rem auto;
     }
   }
 }

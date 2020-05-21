@@ -49,5 +49,8 @@
     padding: 0.625rem 0;
     color: $color-primary-75;
     text-align: center;
+    @media (max-width: $screen-filter-xs-max) {
+      padding-bottom: 0;
+    }
   }
 }

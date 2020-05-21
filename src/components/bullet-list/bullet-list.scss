@@ -25,5 +25,10 @@
   &__text {
     line-height: 1.5rem;
     margin: 0.5rem 0 0.625rem 1.25rem;
+    &:last-child {
+      @media (max-width: $screen-xs-max) {
+        margin-bottom: 0;
+      }
+    }
   }
 }

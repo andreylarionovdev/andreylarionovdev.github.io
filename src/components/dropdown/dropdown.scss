@@ -79,9 +79,6 @@
     border-radius: 50%;
     cursor: pointer;
     border: 0.0625rem solid $color-primary-25;
-    &[data-operator='+'] {
-      padding-bottom: 0.1875rem;
-    }
     &_disabled {
       cursor: default;
       pointer-events: none;

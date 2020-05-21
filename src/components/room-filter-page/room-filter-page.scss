@@ -57,7 +57,7 @@
           z-index: 10;
           grid-template-columns: 1fr 1fr;
           grid-column-gap: 2rem;
-          padding: 0 0.75rem;
+          padding: 0.75rem;
           position: fixed;
           left: 0;
           right: 0;
@@ -141,5 +141,8 @@
     grid-column: 1 / 4;
     text-align: center;
     padding-right: 0.875rem;
+    @media (max-width: $screen-filter-xs-max) {
+      padding-right: 0;
+    }
   }
 }
