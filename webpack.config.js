@@ -12,7 +12,7 @@ const config = {
     landing: './src/pages/landing/landing.js',
     login: './src/pages/sign-in/sign-in.js',
     registration: './src/pages/sign-up/sign-up.js',
-    filter: './src/pages/room-filter/room-filter.js',
+    search: './src/pages/search/search.js',
     room: './src/pages/room-details/room-details.js',
     colors: './src/pages/colors-type/colors-type.js',
     headers: './src/pages/headers-footers/headers-footers.js',
@@ -132,9 +132,9 @@ const config = {
       chunks: ['landing'],
     }),
     new HtmlWebpackPlugin({
-      filename: 'room-filter.html',
-      template: 'src/pages/room-filter/room-filter.pug',
-      chunks: ['filter'],
+      filename: 'search.html',
+      template: 'src/pages/search/search.pug',
+      chunks: ['search'],
     }),
     new HtmlWebpackPlugin({
       filename: 'room-details.html',

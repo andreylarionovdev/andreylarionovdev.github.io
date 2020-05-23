@@ -10,10 +10,10 @@ mixin room-thumbnail(options)
       rate,
       images,
       feature,
-      focus,
+      hover,
     } = options || {};
 
-    const blockModifiers = focus ? ['focused'] : [];
+    const blockModifiers = hover ? ['hovered'] : [];
 
     const helpers = require('../../utils/helpers');
 

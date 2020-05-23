@@ -7,7 +7,7 @@
 @import '../room-thumbnail/room-thumbnail.scss';
 @import '../pagination/pagination.scss';
 
-.room-filter-page {
+.search-page {
   $blockClass: &;
   border-bottom: 0.0625rem solid $color-primary-25;
   &__inner-wrapper {
@@ -28,7 +28,7 @@
       max-width: 18.125rem;
     }
   }
-  &__button {
+  &__button-group {
     word-break: break-word;
     &_type {
       &_show-filter {
@@ -36,10 +36,12 @@
         margin-bottom: 1.5rem;
         @media (max-width: $screen-filter-xs-max) {
           display: block;
-          &_hidden {
-            display: none;
-          }
         }
+      }
+    }
+    &_hidden {
+      @media (max-width: $screen-filter-xs-max) {
+        display: none;
       }
     }
   }

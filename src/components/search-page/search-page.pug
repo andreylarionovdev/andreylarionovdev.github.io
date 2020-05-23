@@ -6,29 +6,29 @@ include ../pagination/pagination
 include ../dropdown/dropdown
 include ../button/button
 
-mixin room-filter-page
-  main.room-filter-page
-    .room-filter-page__inner-wrapper
-      section.room-filter-page__filter
-        .room-filter-page__button.room-filter-page__button_type_show-filter.js-room-filter-page__button_type_show-filter
+mixin search-page
+  main.search-page
+    .search-page__inner-wrapper
+      section.search-page__filter
+        .search-page__button-group.search-page__button-group_type_show-filter.js-search-page__button-group_type_show-filter
           +button({
             theme: 'transparent',
             caption: 'Фильтр',
             type: 'button',
             size: 'fluid',
           })
-        form.room-filter-page__form.js-room-filter-page__form
-          .room-filter-page__date-dropdown
-            .room-filter-page__label
+        form.search-page__form.js-search-page__form
+          .search-page__date-dropdown
+            .search-page__label
               +label({ label: 'Даты пребывания в отеле' })
-            .room-filter-page__dropdown
+            .search-page__dropdown
               +dropdown({
                 name: 'date-input',
                 value: '19 авг. - 23 авг.' })
-          .room-filter-page__guests-dropdown
-            .room-filter-page__label
+          .search-page__guests-dropdown
+            .search-page__label
               +label({ label: 'Гости' })
-            .room-filter-page__dropdown
+            .search-page__dropdown
               +dropdown({
                 name: 'guests-input',
                 type: 'guests',
@@ -38,7 +38,7 @@ mixin room-filter-page
                   {count: 1, text: 'младенцы'},
                 ],
               })
-          .room-filter-page__range-slider
+          .search-page__range-slider
             +range-slider({
               label: 'Диапазон цены',
               name: 'price-slider',
@@ -48,22 +48,22 @@ mixin room-filter-page
               from: 5000,
               to: 10000,
             })
-          fieldset.room-filter-page__checkboxes
-            legend.room-filter-page__legend= 'checkbox buttons'
-            p(class="room-filter-page__checkbox")
+          fieldset.search-page__checkboxes
+            legend.search-page__legend= 'checkbox buttons'
+            p(class="search-page__checkbox")
               +checkbox({
                 id: 'smoke-allowed-checkbox',
                 name: 'smoke-allowed',
                 label: 'Можно курить',
               })
-            p.room-filter-page__checkbox
+            p.search-page__checkbox
               +checkbox({
                 id: 'pets-allowed-checkbox',
                 name: 'pets-allowed',
                 label: 'Можно с питомцами',
                 isChecked: true,
               })
-            p.room-filter-page__checkbox
+            p.search-page__checkbox
               +checkbox({
                 id: 'guests-allowed-checkbox',
                 name: 'guests-allowed',
@@ -71,9 +71,9 @@ mixin room-filter-page
                 isChecked: true,
               })
           - const theme = 'rich';
-          fieldset.room-filter-page__checkboxes.room-filter-page__checkboxes_theme_rich
-            legend.room-filter-page__legend= 'Доступность'
-            p.room-filter-page__checkbox
+          fieldset.search-page__checkboxes.search-page__checkboxes_theme_rich
+            legend.search-page__legend= 'Доступность'
+            p.search-page__checkbox
               +checkbox({
                 id: 'wide-hall-checkbox',
                 name: 'wide-hall',
@@ -81,17 +81,17 @@ mixin room-filter-page
                 hint: 'Ширина коридоров в номере не&nbsp;менее 91 см.',
                 theme: 'rich',
               })
-            p.room-filter-page__checkbox
+            p.search-page__checkbox
               +checkbox({
                 id: 'assistant',
                 label: 'Помощник для инвалидов',
                 hint: 'На 1 этаже вас встретит специалист и проводит до номера.',
                 theme: 'rich',
               })
-          .room-filter-page__feature-dropdown
-            .room-filter-page__label
+          .search-page__feature-dropdown
+            .search-page__label
               +label({ label: 'Удобства номера' })
-            .room-filter-page__dropdown
+            .search-page__dropdown
               +dropdown({
                 name: 'room-input',
                 type: 'rooms',
@@ -101,7 +101,7 @@ mixin room-filter-page
                   {count: 0, text: 'ванные комнаты'},
                 ],
               })
-          .room-filter-page__checkbox-list-expandable
+          .search-page__checkbox-list-expandable
             +checkbox-list-expandable({
               label: 'Дополнительные удобства',
               items: [
@@ -113,24 +113,24 @@ mixin room-filter-page
                 {id: 'shampoo-checkbox', label: 'Шампунь'},
               ],
             })
-          .room-filter-page__form-footer.js-room-filter-page__form-footer
-            .room-filter-page__button.room-filter-page__button_type_clear.js-room-filter-page__button_type_clear
+          .search-page__form-footer.js-search-page__form-footer
+            .search-page__button-group.search-page__button-group_type_clear.js-search-page__button-group_type_clear
               +button({
                 theme: 'transparent',
                 caption: 'Сбросить',
                 type: 'reset',
                 size: 'fluid',
               })
-            .room-filter-page__button.room-filter-page__button_type_apply.js-room-filter-page__button_type_apply
+            .search-page__button-group.search-page__button-group_type_apply.js-search-page__button-group_type_apply
               +button({
                 theme: 'default',
                 caption: 'Применить',
                 type: 'submit',
                 size: 'fluid',
               })
-      section.room-filter-page__search-result.js-room-filter-page__search-result
-        h1.room-filter-page__title= 'Номера, которые мы для вас подобрали'
-        ul.room-filter-page__thumbnail-list
+      section.search-page__search-result.js-search-page__search-result
+        h1.search-page__title= 'Номера, которые мы для вас подобрали'
+        ul.search-page__thumbnail-list
           -
             const searchResult = [
               {
@@ -258,7 +258,7 @@ mixin room-filter-page
               }
             ]
           each room, i in searchResult
-            li.room-filter-page__thumbnail-list-item
+            li.search-page__thumbnail-list-item
               +room-thumbnail({
                 roomNumber: room.number,
                 pricePerDay: room.pricePerDay,
@@ -266,10 +266,9 @@ mixin room-filter-page
                 rate: room.rate,
                 images: room.images,
                 feature: room.feature,
-                focus: room.focus,
                 href: room.href || '/change-me',
               })
-        section.room-filter-page__pagination
+        section.search-page__pagination
           +pagination({
             source: JSON.stringify([...Array(180).keys()]),
             pageSize: 12,

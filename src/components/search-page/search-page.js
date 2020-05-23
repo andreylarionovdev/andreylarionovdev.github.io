@@ -18,53 +18,53 @@ import './img/room-thumb-10.png';
 import './img/room-thumb-11.png';
 import './img/room-thumb-12.png';
 
-const RoomFilterPage = function RoomFilterPage() {
+const SearchPage = function RoomFilterPage() {
   this.init();
 };
 
-RoomFilterPage.prototype.init = function init() {
-  this.classHiddenShowFilterButton = 'room-filter-page__button_type_show-filter_hidden';
-  this.classVisibleFilter = 'room-filter-page__form_visible';
-  this.classHiddenThumbnails = 'room-filter-page__search-result_hidden';
+SearchPage.prototype.init = function init() {
+  this.classHiddenFilterButton = 'search-page__button-group_hidden';
+  this.classVisibleFilter = 'search-page__form_visible';
+  this.classHiddenThumbnails = 'search-page__search-result_hidden';
   this.classHiddenFooter = 'footer_hidden';
 
-  this.$showFilterButton = $('.js-room-filter-page__button_type_show-filter');
-  this.$clearFilterButton = $('.js-room-filter-page__button_type_clear');
-  this.$applyFilterButton = $('.js-room-filter-page__button_type_apply');
+  this.$showFilterButton = $('.js-search-page__button-group_type_show-filter');
+  this.$clearFilterButton = $('.js-search-page__button-group_type_clear');
+  this.$applyFilterButton = $('.js-search-page__button-group_type_apply');
 
-  this.$filterForm = $('.js-room-filter-page__form');
-  this.$thumbnailsWrapper = $('.js-room-filter-page__search-result');
+  this.$filterForm = $('.js-search-page__form');
+  this.$thumbnailsWrapper = $('.js-search-page__search-result');
   this.$footer = $('.js-footer');
 
   this.addEventListeners();
 };
 
-RoomFilterPage.prototype.addEventListeners = function addEventListeners() {
+SearchPage.prototype.addEventListeners = function addEventListeners() {
   this.$showFilterButton.on('click', this.handleShowFilterButtonClick.bind(this));
   this.$clearFilterButton.on('click', this.handleClearFilterButtonClick.bind(this));
   this.$applyFilterButton.on('click', this.handleApplyFilterButtonClick.bind(this));
 };
 
-RoomFilterPage.prototype.handleShowFilterButtonClick = function handleShowFilterButtonClick(e) {
+SearchPage.prototype.handleShowFilterButtonClick = function handleShowFilterButtonClick(e) {
   e.preventDefault();
   this.toggleFilter();
 };
 
-RoomFilterPage.prototype.handleClearFilterButtonClick = function handleClearFilterButtonClick(e) {
+SearchPage.prototype.handleClearFilterButtonClick = function handleClearFilterButtonClick(e) {
   e.preventDefault();
   this.toggleFilter();
 };
 
-RoomFilterPage.prototype.handleApplyFilterButtonClick = function handleClearFilterButtonClick(e) {
+SearchPage.prototype.handleApplyFilterButtonClick = function handleClearFilterButtonClick(e) {
   e.preventDefault();
   this.toggleFilter();
 };
 
-RoomFilterPage.prototype.toggleFilter = function toggleFilter() {
-  this.$showFilterButton.toggleClass(this.classHiddenShowFilterButton);
+SearchPage.prototype.toggleFilter = function toggleFilter() {
+  this.$showFilterButton.toggleClass(this.classHiddenFilterButton);
   this.$filterForm.toggleClass(this.classVisibleFilter);
   this.$thumbnailsWrapper.toggleClass(this.classHiddenThumbnails);
   this.$footer.toggleClass(this.classHiddenFooter);
 };
 
-$(() => new RoomFilterPage());
+$(() => new SearchPage());

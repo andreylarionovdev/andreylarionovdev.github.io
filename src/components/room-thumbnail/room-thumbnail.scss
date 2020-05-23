@@ -139,7 +139,7 @@
   &__feedbacks-counter-number {
     font-weight: bold;
   }
-  &_focused {
+  &_hovered {
     #{$blockClass}__carousel-control {
       opacity: 1;
     }

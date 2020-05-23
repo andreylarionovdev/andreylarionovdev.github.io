@@ -14,13 +14,13 @@ Dropdown.prototype.init = function init($element) {
 
   this.classExpanded = 'dropdown_expanded';
   this.classClearButtonHidden = 'dropdown__clear-button_hidden';
-  this.classCountButtonDisabled = 'dropdown__count-button_disabled';
+  this.classCountButtonDisabled = 'dropdown__counter-button_disabled';
 
-  this.selectorMenu = '.js-dropdown__menu';
-  this.selectorMenuItem = '.js-dropdown__menu-item';
-  this.selectorCountButton = '.js-dropdown__count-button';
-  this.selectorDecCountButton = '.js-dropdown__count-button_type_dec';
-  this.selectorCount = '.js-dropdown__count';
+  this.selectorMenu = '.js-dropdown__list';
+  this.selectorMenuItem = '.js-dropdown__list-item';
+  this.selectorCountButton = '.js-dropdown__counter-button';
+  this.selectorDecCountButton = '.js-dropdown__counter-button_type_dec';
+  this.selectorCount = '.js-dropdown__counter';
 
   this.$toggleButton = this.$element.find('.js-dropdown__toggle-button');
   this.$input = this.$element.find('.js-dropdown__text-input');
@@ -162,8 +162,8 @@ Dropdown.prototype.updateValue = function updateValue() {
 
     return `${count} ${wordForm}`;
   });
-
-  this.$input.val(this.buildValue(countsWithCategories));
+  const value = this.buildValue(countsWithCategories);
+  this.$input.val(value).attr('title', value);
 };
 
 Dropdown.prototype.updateView = function updateView() {
