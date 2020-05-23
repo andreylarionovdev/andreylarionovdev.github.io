@@ -135,6 +135,7 @@
     list-style: none;
     grid-area: social;
     display: flex;
+    flex-flow: row wrap;
     justify-content: flex-end;
     padding-top: 0.25rem;
     @media (max-width: $screen-xs-max) {
