@@ -9,7 +9,7 @@ mixin dropdown(options)
       hasZIndexPriority,
     } = options || {};
 
-  - const allowedTypes = ['guest', 'room'];
+  - const allowedTypes = ['guests', 'rooms'];
 
   - const blockModifiers = [];
 
@@ -37,7 +37,7 @@ mixin dropdown(options)
               button.js-dropdown__count-button_type_dec(class=decButtonClasses type='button' data-operator='-')= '-'
               span(class=createBemClasses({ blockName, elementName: 'count', jsPrefix }))= row.count
               button.js-dropdown__count-button_type_inc(class=incButtonClasses type='button' data-operator='+')= '+'
-        if type === 'guest'
+        if type === 'guests'
           li.dropdown__footer-buttons
             span(class=createBemClasses({ blockName, elementName: 'clear-button', jsPrefix }))
               +button({

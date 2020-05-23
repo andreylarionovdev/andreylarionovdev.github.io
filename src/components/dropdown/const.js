@@ -1,5 +1,5 @@
-const GUEST_TYPE = 'guest';
-const ROOM_TYPE = 'room';
+const GUEST_TYPE = 'guests';
+const ROOM_TYPE = 'rooms';
 const COUNT_MIN_VALUE = 0;
 
 export {

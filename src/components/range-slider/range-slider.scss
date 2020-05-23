@@ -7,6 +7,11 @@
     line-height: 0.8125rem;
     padding-right: 0.125rem;
   }
+  &__description {
+    margin-top: 0.375rem;
+    font-size: 0.75rem;
+    color: $color-primary-50;
+  }
   .irs {
     $irs-bar-top: 1.5rem;
     position: relative;

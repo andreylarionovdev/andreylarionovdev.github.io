@@ -18,20 +18,20 @@ mixin room-filter-page
             size: 'fluid',
           })
         form.room-filter-page__form.js-room-filter-page__form
-          .room-filter-page__date-dropdown-group
+          .room-filter-page__date-dropdown
             .room-filter-page__label
               +label({ label: 'Даты пребывания в отеле' })
             .room-filter-page__dropdown
               +dropdown({
-                name: 'date-filter-input',
+                name: 'date-input',
                 value: '19 авг. - 23 авг.' })
-          .room-filter-page__guests-dropdown-group
+          .room-filter-page__guests-dropdown
             .room-filter-page__label
               +label({ label: 'Гости' })
             .room-filter-page__dropdown
               +dropdown({
-                name: 'guest-input',
-                type: 'guest',
+                name: 'guests-input',
+                type: 'guests',
                 rows: [
                   {count: 2, text: 'взрослые'},
                   {count: 0, text: 'дети'},
@@ -42,14 +42,13 @@ mixin room-filter-page
             +range-slider({
               label: 'Диапазон цены',
               name: 'price-slider',
+              description: 'Стоимость за сутки пребывания в номере',
               min: 0,
               max: 16000,
               from: 5000,
               to: 10000,
             })
-            p.room-filter-page__range-slider-hint
-              = 'Стоимость за сутки пребывания в номере'
-          fieldset.room-filter-page__checkboxes-group
+          fieldset.room-filter-page__checkboxes
             legend.room-filter-page__legend= 'checkbox buttons'
             p(class="room-filter-page__checkbox")
               +checkbox({
@@ -72,7 +71,7 @@ mixin room-filter-page
                 isChecked: true,
               })
           - const theme = 'rich';
-          fieldset.room-filter-page__checkboxes-group.room-filter-page__checkboxes-group_theme_rich
+          fieldset.room-filter-page__checkboxes.room-filter-page__checkboxes_theme_rich
             legend.room-filter-page__legend= 'Доступность'
             p.room-filter-page__checkbox
               +checkbox({
@@ -89,13 +88,13 @@ mixin room-filter-page
                 hint: 'На 1 этаже вас встретит специалист и проводит до номера.',
                 theme: 'rich',
               })
-          .room-filter-page__feature-dropdown-group
+          .room-filter-page__feature-dropdown
             .room-filter-page__label
               +label({ label: 'Удобства номера' })
             .room-filter-page__dropdown
               +dropdown({
                 name: 'room-input',
-                type: 'room',
+                type: 'rooms',
                 rows: [
                   {count: 2, text: 'спальни'},
                   {count: 2, text: 'кровати'},

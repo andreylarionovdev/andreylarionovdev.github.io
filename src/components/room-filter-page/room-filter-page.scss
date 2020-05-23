@@ -78,16 +78,16 @@
     @include h3;
     margin-bottom: 1rem;
   }
-  &__guests-dropdown-group {
+  &__guests-dropdown {
     margin-top: 1.3152rem;
   }
 
   &__range-slider,
-  &__checkboxes-group {
+  &__checkboxes {
     margin-top: 1.875rem;
   }
 
-  &__checkboxes-group {
+  &__checkboxes {
     border: none;
     padding-right: 1.25rem;
     &_theme {
@@ -103,12 +103,7 @@
   &__checkbox {
     margin-bottom: 0.625rem;
   }
-  &__range-slider-hint {
-    margin-top: 0.375rem;
-    font-size: 0.75rem;
-    color: $color-primary-50;
-  }
-  &__feature-dropdown-group {
+  &__feature-dropdown {
     margin-top: 1.25rem;
   }
   &__checkbox-list-expandable {

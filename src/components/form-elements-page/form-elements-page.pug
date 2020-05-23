@@ -52,7 +52,7 @@ mixin form-elements-page
             })
             +dropdown({
               name: 'guests-default',
-              type: 'guest',
+              type: 'guests',
               value: 'Сколько гостей'
             })
           .form-elements-page__text-input-group.form-elements-page__text-input-group_theme_with-mask
@@ -249,7 +249,7 @@ mixin form-elements-page
             })
             +dropdown({
               name: 'guests-collapsed',
-              type: 'room',
+              type: 'rooms',
               rows: [
                 {count: 2, text: 'спальни',},
                 {count: 2, text: 'кровати',},
@@ -264,7 +264,7 @@ mixin form-elements-page
             })
             +dropdown({
               name: 'guests-expanded',
-              type: 'room',
+              type: 'rooms',
               isExpanded: true,
               rows: [
                 {count: 2, text: 'спальни', },
@@ -280,7 +280,7 @@ mixin form-elements-page
             })
             +dropdown({
               name: 'guests-empty',
-              type: 'guest',
+              type: 'guests',
               isExpanded: true,
               rows: [
                 {count: 0, text: 'взрослые', },
@@ -296,7 +296,7 @@ mixin form-elements-page
             })
             +dropdown({
               name: 'guests-filled',
-              type: 'guest',
+              type: 'guests',
               isExpanded: true,
               rows: [
                 {count: 2, text: 'взрослые', },
