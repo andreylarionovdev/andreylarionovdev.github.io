@@ -10,7 +10,7 @@ Header.prototype.init = function init() {
   this.selectorHeader = '.js-header';
   this.selectorNavigation = '.js-header__navigation';
   this.selectorUserNavigation = '.js-header__user-navigation';
-  this.selectorNavigationToggle = '.js-header__navigation-toggle';
+  this.selectorNavigationToggle = '.js-header__burger';
 
   this.addEventListeners();
 };
