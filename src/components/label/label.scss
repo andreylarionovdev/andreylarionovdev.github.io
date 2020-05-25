@@ -6,9 +6,11 @@
   justify-content: space-between;
   text-transform: uppercase;
   font-size: 0.75rem;
+  flex-flow: row wrap;
 
   &__title {
     @include h3;
+    margin-right: 0.25rem;
   }
   &__hint {
     color: $color-primary-50;

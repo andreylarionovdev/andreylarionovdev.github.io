@@ -129,12 +129,13 @@
     }
   }
   &__radio-group {
-    margin-bottom: 2.625rem;
+    margin-bottom: 2rem;
     .label {
       margin-bottom:0.875rem;
     }
     .radio-button {
       margin-right: 1rem;
+      margin-bottom: 0.625rem;
     }
   }
   &__rating-group {

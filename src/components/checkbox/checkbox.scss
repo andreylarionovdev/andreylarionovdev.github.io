@@ -5,6 +5,8 @@
   $blockClass: &;
   font-size: 0.875rem;
   line-height: 1.25rem;
+  display: flex;
+  flex-direction: column;
 
   &__input {
     position: absolute;
