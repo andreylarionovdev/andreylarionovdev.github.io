@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import '../logo/logo';
 
 const Header = function Header() {
   this.init();

@@ -1,7 +1,6 @@
 mixin logo(withText)
-  - const blockModifiers = withText ? ['with-text'] : [];
-
-  - const createBemClasses = require('../../utils/helpers').createBemClasses
-  - const blockName = 'logo'
-
-  a(class=createBemClasses({ blockName, modifiers: blockModifiers}) href='./index.html')
+  a.logo(href='./index.html')
+    if withText === true
+      img.logo__image(src='./img/logo-with-text.svg')
+    else
+      img.logo__image(src='./img/logo.svg')

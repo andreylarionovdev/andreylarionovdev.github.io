@@ -1,14 +1,4 @@
 .logo {
   display: inline-block;
   text-decoration: none;
-  height: 3rem;
-  width: 3rem;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-image: url('../../img/logo/logo.svg');
-  &_with-text {
-    height: 2.5rem;
-    width: 6.625rem;
-    background-image: url('../../img/logo/logo-with-text.svg');
-  }
 }

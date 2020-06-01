@@ -33,7 +33,7 @@ mixin header(options)
       else
         ul.header__user-navigation.js-header__user-navigation
           each button, _ in menuButtons
-            li.header__navigation-item
+            li.header__user-navigation-item
               +button({
                 theme: button.theme,
                 caption: button.caption,
