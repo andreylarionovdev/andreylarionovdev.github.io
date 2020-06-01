@@ -6,10 +6,8 @@
 
 .colors-type-page {
   &__nav {
-    $marginBottom: 2.3125rem;
-    @include ui-kit-navigation($marginBottom);
     @include inner-wrapper($lgWidth: 95.8%, $mdWidth: 95.8%, $maxWidth: 87.3125rem);
-    margin-bottom: $marginBottom;
+    @include ui-kit-navigation(2.0625rem);
   }
   &__main {
     @include inner-wrapper($lgWidth: 79.2%);

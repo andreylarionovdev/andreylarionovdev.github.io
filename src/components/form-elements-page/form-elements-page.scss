@@ -21,7 +21,7 @@
   $blockClass: &;
 
   &__nav {
-    @include ui-kit-navigation($marginBottom: 2.1875rem);
+    @include ui-kit-navigation($marginBottom: 1.9375rem);
   }
 
   &__main {

@@ -139,7 +139,8 @@
   &_theme {
     &_ui-kit {
       @media (min-width: $screen-md-min) {
-        #{$blockClass}__navigation-item {
+        #{$blockClass}__navigation-item,
+        #{$blockClass}__user-navigation-item {
           margin-left: 1.875rem;
           &:nth-child(4) {
             margin-left: 1rem;
@@ -149,11 +150,12 @@
         #{$blockClass}__user-navigation {
           max-width: 27.3%;
           margin-left: 2.4%;
-          #{$blockClass}__navigation-item {
-            margin-left: 0;
-            & + #{$blockClass}__navigation-item {
-              margin-left: 1.25rem;
-            }
+        }
+
+        #{$blockClass}__user-navigation-item {
+          margin-left: 0;
+          & + #{$blockClass}__user-navigation-item {
+            margin-left: 1.25rem;
           }
         }
       }
