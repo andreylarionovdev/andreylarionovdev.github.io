@@ -50,6 +50,9 @@
       grid-template-columns: 22.95% 15.62% 27.61% 6.21% 27.61%;
       min-height: 16.625rem;
       @include section-media-query;
+      @media (max-width: $screen-xs-max) {
+        margin-bottom: 5rem;
+      }
     }
     &:nth-child(3) {
       grid-template-columns: 22.95% 15.62% 27.61% 6.21% 27.61%;
@@ -147,6 +150,8 @@
     }
   }
   &__toggle-group {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 2rem;
     .label {
       margin-bottom: 0.875rem;
@@ -192,6 +197,7 @@
   }
   &__bullet-list-group {
     padding: 0.8125rem 3.75rem 0 0;
+    margin-bottom: 1.5rem;
     .label {
       margin-bottom: 0.8125rem;
     }
