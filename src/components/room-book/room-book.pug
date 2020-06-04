@@ -1,6 +1,6 @@
 include ../label/label
 include ../dropdown/dropdown
-include ../datepicker-range/datepicker-range
+include ../datepicker/datepicker
 
 mixin room-book(options)
   -
@@ -30,8 +30,8 @@ mixin room-book(options)
         |&nbsp;
         span.room-book__date-unit= 'в сутки'
 
-    .room-book__datepicker-range
-      +datepicker-range({
+    .room-book__datepicker
+      +datepicker({
         id: 'room-book-datepicker',
       })
 

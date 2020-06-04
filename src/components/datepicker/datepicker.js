@@ -1,14 +1,14 @@
 import $ from 'jquery';
 import 'air-datepicker';
 
-const DatepickerRange = function DatepickerDateRange($element) {
+const Datepicker = function Datepicker($element) {
   this.init($element);
 };
 
-DatepickerRange.prototype.init = function init($element) {
+Datepicker.prototype.init = function init($element) {
   this.emptyValue = 'ДД.ММ.ГГГГ';
 
-  this.selectorDropdown = '.js-datepicker-range__dropdown';
+  this.selectorDropdown = '.js-datepicker__dropdown';
   this.selectorToggleButton = '.js-dropdown__toggle-button';
   this.selectorDropdownInput = '.js-dropdown__text-input';
 
@@ -21,10 +21,10 @@ DatepickerRange.prototype.init = function init($element) {
   this.$inputFrom = this.$dropdownFrom.find('input');
   this.$inputTo = this.$dropdownTo.find('input');
 
-  this.$datepickerContainer = $element.find('.js-datepicker-range__datepicker-container');
+  this.$datepickerContainer = $element.find('.js-datepicker__datepicker-container');
 
   this.currentInputValues = [];
-  this.isInline = $element.hasClass('js-datepicker-range_theme_inline');
+  this.isInline = $element.hasClass('js-datepicker_theme_inline');
 
   this.initDatepicker($element);
 
@@ -36,7 +36,7 @@ DatepickerRange.prototype.init = function init($element) {
   }
 };
 
-DatepickerRange.prototype.initDatepicker = function initDatepicker() {
+Datepicker.prototype.initDatepicker = function initDatepicker() {
   const that = this;
   this.$datepickerApi = this.$datepickerContainer.datepicker({
     range: true,
@@ -57,12 +57,12 @@ DatepickerRange.prototype.initDatepicker = function initDatepicker() {
   }).data('datepicker');
 };
 
-DatepickerRange.prototype.addEventListeners = function addEventListeners() {
+Datepicker.prototype.addEventListeners = function addEventListeners() {
   this.$dropdownFrom.find(this.selectorToggleButton).on('click', this.handleToggleButtonClick.bind(this));
   this.$dropdownTo.find(this.selectorToggleButton).on('click', this.handleToggleButtonClick.bind(this));
 };
 
-DatepickerRange.prototype.handleToggleButtonClick = function handleToggleButtonClick() {
+Datepicker.prototype.handleToggleButtonClick = function handleToggleButtonClick() {
   const isVisible = this.$datepickerApi.$el.find('.datepicker').is(':visible');
   if (isVisible) {
     this.$datepickerApi.hide();
@@ -71,7 +71,7 @@ DatepickerRange.prototype.handleToggleButtonClick = function handleToggleButtonC
   }
 };
 
-DatepickerRange.prototype.setDates = function setDates() {
+Datepicker.prototype.setDates = function setDates() {
   this.currentInputValues[0] = this.$inputFrom.val();
   this.currentInputValues[1] = this.$inputTo.val();
 
@@ -95,13 +95,13 @@ DatepickerRange.prototype.setDates = function setDates() {
   }
 };
 
-DatepickerRange.prototype.clear = function clear() {
+Datepicker.prototype.clear = function clear() {
   this.$dropdownFrom.find(this.selectorDropdownInput).val(this.emptyValue);
   this.$dropdownTo.find(this.selectorDropdownInput).val(this.emptyValue);
   this.currentInputValues = [this.emptyValue, this.emptyValue];
 };
 
-DatepickerRange.prototype.update = function update() {
+Datepicker.prototype.update = function update() {
   const dates = this.$datepickerApi.selectedDates;
 
   if (dates.length === 0) return;
@@ -127,7 +127,7 @@ DatepickerRange.prototype.update = function update() {
   }
 };
 
-DatepickerRange.prototype.addButtons = function addButtons($dpElement) {
+Datepicker.prototype.addButtons = function addButtons($dpElement) {
   const $clearBtn = this.createButton('clear', 'Очистить');
   const $applyBtn = this.createButton('apply', 'Применить');
   if ($dpElement.find(this.selectorClearButton).length === 0) {
@@ -143,7 +143,7 @@ DatepickerRange.prototype.addButtons = function addButtons($dpElement) {
   }
 };
 
-DatepickerRange.prototype.createButton = function createButton(action, caption) {
+Datepicker.prototype.createButton = function createButton(action, caption) {
   const clearClass = action === 'clear' ? 'button_color_gray' : '';
   const template = `<button class="button button_theme_textual ${clearClass}" type="button" data-action="${action}">
                       <div class="button__inner-wrapper">
@@ -153,18 +153,18 @@ DatepickerRange.prototype.createButton = function createButton(action, caption) 
   return $(template);
 };
 
-DatepickerRange.prototype.handleClearButtonClick = function handleClearButtonClick() {
+Datepicker.prototype.handleClearButtonClick = function handleClearButtonClick() {
   if (this.isInline) return;
 
   this.$datepickerApi.clear();
   this.clear();
 };
 
-DatepickerRange.prototype.handleApplyButtonClick = function handleApplyButtonClick() {
+Datepicker.prototype.handleApplyButtonClick = function handleApplyButtonClick() {
   if (this.isInline) return;
 
   this.$datepickerApi.hide();
   this.update();
 };
 
-$(() => $('.js-datepicker-range').each((i, o) => new DatepickerRange($(o))));
+$(() => $('.js-datepicker').each((i, o) => new Datepicker($(o))));

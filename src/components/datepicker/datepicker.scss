@@ -1,7 +1,7 @@
 @import '../../utils/vars';
 @import '../../utils/mixins';
 
-.datepicker-range {
+.datepicker {
   $blockClass: &;
   &__group {
     display: grid;

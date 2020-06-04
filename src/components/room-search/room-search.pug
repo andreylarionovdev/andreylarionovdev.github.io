@@ -1,7 +1,7 @@
 include ../label/label
 include ../dropdown/dropdown
 include ../button/button
-include ../datepicker-range/datepicker-range
+include ../datepicker/datepicker
 
 mixin room-search(options)
   -
@@ -14,8 +14,8 @@ mixin room-search(options)
   form.room-search
     header.room-search__header
       #{headerTag}.room-search__title= header
-    .room-search__datepicker-range
-      +datepicker-range({id: 'room-search-datepicker'})
+    .room-search__datepicker
+      +datepicker({id: 'room-search-datepicker'})
     .room-search__guests-dropdown-group
       .room-search__label
         +label({ label: 'Гости' })

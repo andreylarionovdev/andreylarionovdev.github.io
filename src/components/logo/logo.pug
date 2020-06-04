@@ -1,6 +1,4 @@
 mixin logo(withText)
+  - const imgSrc = withText === true ? './img/logo-with-text.svg' : './img/logo.svg';
   a.logo(href='./index.html')
-    if withText === true
-      img.logo__image(src='./img/logo-with-text.svg')
-    else
-      img.logo__image(src='./img/logo.svg')
+    img.logo__image(src=imgSrc alt='Логотип Toxin')

@@ -1,6 +1,6 @@
 include ../logo/logo
 include ../room-book/room-book
-include ../datepicker-range/datepicker-range
+include ../datepicker/datepicker
 include ../room-search/room-search
 include ../room-thumbnail/room-thumbnail
 include ../sign-in/sign-in
@@ -23,7 +23,7 @@ mixin cards-page
           +sign-in()
       .cards-page__grid-column
         article.cards-page__card
-          +datepicker-range({ theme: 'inline' })
+          +datepicker({ theme: 'inline' })
         article.cards-page__card.cards-page__card_type_room-thumbnail
           +room-thumbnail({
             roomNumber: 888,
