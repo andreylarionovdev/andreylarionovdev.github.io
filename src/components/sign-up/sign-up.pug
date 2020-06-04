@@ -9,7 +9,7 @@ mixin sign-up(options)
       header = 'Регистрация аккаунта',
       headerTag = 'h1',
       method = 'POST',
-      action = '/'
+      action = '/change-me'
     } = options || {};
 
   form.sign-up(method=method action=action)
@@ -17,19 +17,19 @@ mixin sign-up(options)
       #{headerTag}.sign-up__title= header
     .sign-up__text-input
       +text-input({
-        name: 'first-name',
+        name: 'field-first-name',
         placeholder: 'Имя',
       })
     .sign-up__text-input
       +text-input({
-        name: 'last-name',
+        name: 'field-last-name',
         placeholder: 'Фамилия',
       })
     .sign-up__gender-group
       .sign-up__radio-button
         +radio-button({
           id: 'radio-button-gender-male',
-          name: 'gender',
+          name: 'field-gender',
           value: 'male',
           label: 'Мужчина',
           isChecked: true,
@@ -37,7 +37,7 @@ mixin sign-up(options)
       .sign-up__radio-button
         +radio-button({
           id: 'radio-button-gender-female',
-          name: 'gender',
+          name: 'field-gender',
           value: 'female',
           label: 'Женщина',
         })
@@ -50,21 +50,20 @@ mixin sign-up(options)
       .sign-up__text-input
         +text-input({
           id: 'sign-up__input-birthday',
-          name: 'birthday',
+          name: 'field-birthday',
           placeholder: 'ДД.ММ.ГГГГ',
         })
     fieldset.sign-up__credentials-group
       legend.sign-up__legend= 'Данные для входа в сервис'
       .sign-up__text-input
         +text-input({
-          id: 'sign-up__input-email',
-          name: 'email',
+          name: 'field-email',
           placeholder: 'Email',
           type: 'email',
         })
       .sign-up__text-input
         +text-input({
-          name: 'password',
+          name: 'field-password',
           placeholder: 'Пароль',
           type: 'password',
         })
@@ -72,7 +71,7 @@ mixin sign-up(options)
       +checkbox({
         id: 'sign-up__toggle-promo',
         theme: 'toggle',
-        name: 'send-me-promo',
+        name: 'field-promo',
         label: 'Получать спецпредложения',
       })
     .sign-up__button

@@ -5,7 +5,6 @@ include ../datepicker/datepicker
 mixin room-book(options)
   -
     const {
-      name='room-book',
       roomNumber = 888,
       daysCount = 4,
       pricePerDay = 9990,
@@ -13,7 +12,7 @@ mixin room-book(options)
       fee = 300,
       feature = 'люкс',
       method = 'POST',
-      action = '/'
+      action = '/change-me'
     } = options || {};
 
   - const formatCurrency = require('../../utils/helpers').formatCurrency;
@@ -40,8 +39,9 @@ mixin room-book(options)
         +label({ label: 'Гости' })
       .room-book__dropdown
         +dropdown({
-          name: `${name}-guests-input`,
+          name: 'field-guests',
           type: 'guests',
+          placeholder: 'Сколько гостей',
           rows: [
             {count: 2, text: 'взрослые'},
             {count: 1, text: 'дети'},

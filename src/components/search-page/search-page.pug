@@ -23,15 +23,17 @@ mixin search-page
               +label({ label: 'Даты пребывания в отеле' })
             .search-page__dropdown
               +dropdown({
-                name: 'date-input',
-                value: '19 авг. - 23 авг.' })
+                name: 'field-dates',
+                value: '19 авг. - 23 авг.'
+              })
           .search-page__guests-dropdown
             .search-page__label
               +label({ label: 'Гости' })
             .search-page__dropdown
               +dropdown({
-                name: 'guests-input',
+                name: 'field-guests',
                 type: 'guests',
+                placeholder: 'Сколько гостей',
                 rows: [
                   {count: 2, text: 'взрослые'},
                   {count: 0, text: 'дети'},
@@ -93,8 +95,9 @@ mixin search-page
               +label({ label: 'Удобства номера' })
             .search-page__dropdown
               +dropdown({
-                name: 'room-input',
+                name: 'field-rooms',
                 type: 'rooms',
+                placeholder: 'Удобства',
                 rows: [
                   {count: 2, text: 'спальни'},
                   {count: 2, text: 'кровати'},

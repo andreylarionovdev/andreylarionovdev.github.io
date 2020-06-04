@@ -3,14 +3,13 @@ include ../dropdown/dropdown
 
 mixin datepicker(options)
   -
-    const mask = 'ДД.ММ.ГГГГ'
     const {
-      id='datepicker',
       theme,
+      placeholder = 'ДД.ММ.ГГГГ',
       fromLabel = 'Прибытие',
-      from = mask,
+      from = '',
       toLabel = 'Выезд',
-      to = mask,
+      to = '',
     } = options || {}
 
     const createBemClasses = require('../../utils/helpers').createBemClasses;
@@ -25,10 +24,10 @@ mixin datepicker(options)
         .datepicker__label
           +label({ label: fromLabel })
         div(class=createBemClasses({ blockName, elementName: 'dropdown', jsPrefix }))
-          +dropdown({ name: `${id}_from`, value: from })
+          +dropdown({ name: 'field-date-from', value: from, placeholder })
       div(class=createBemClasses({ blockName, elementName: 'item', jsPrefix }))
         .datepicker__label
           +label({ label: toLabel })
         div(class=createBemClasses({ blockName, elementName: 'dropdown', jsPrefix }))
-          +dropdown({ name: `${id}_to`, value: to })
+          +dropdown({ name: 'field-date-to', value: to, placeholder })
     div(class=createBemClasses({ blockName, elementName: 'datepicker-container', jsPrefix }))

@@ -53,7 +53,7 @@ mixin form-elements-page
             +dropdown({
               name: 'guests-default',
               type: 'guests',
-              value: 'Сколько гостей'
+              placeholder: 'Сколько гостей'
             })
           .form-elements-page__text-input-group.form-elements-page__text-input-group_theme_with-mask
             +label({
@@ -250,6 +250,7 @@ mixin form-elements-page
             +dropdown({
               name: 'guests-collapsed',
               type: 'rooms',
+              placeholder: 'Удобства',
               rows: [
                 {count: 2, text: 'спальни',},
                 {count: 2, text: 'кровати',},
@@ -265,6 +266,7 @@ mixin form-elements-page
             +dropdown({
               name: 'guests-expanded',
               type: 'rooms',
+              placeholder: 'Удобства',
               isExpanded: true,
               rows: [
                 {count: 2, text: 'спальни', },
@@ -281,6 +283,7 @@ mixin form-elements-page
             +dropdown({
               name: 'guests-empty',
               type: 'guests',
+              placeholder: 'Сколько гостей',
               isExpanded: true,
               rows: [
                 {count: 0, text: 'взрослые', },
@@ -297,6 +300,7 @@ mixin form-elements-page
             +dropdown({
               name: 'guests-filled',
               type: 'guests',
+              placeholder: 'Сколько гостей',
               isExpanded: true,
               rows: [
                 {count: 2, text: 'взрослые', },

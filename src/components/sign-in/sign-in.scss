@@ -11,9 +11,11 @@
   @media (max-width: $screen-xs-max) {
     padding: 2rem 1rem;
   }
+  &__header {
+    margin-bottom: 1.25rem;
+  }
   &__title {
     @include h1;
-    margin-bottom: 1.25rem;
   }
   &__text-input {
     margin-bottom: 0.625rem;

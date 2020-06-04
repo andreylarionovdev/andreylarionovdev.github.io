@@ -7,7 +7,7 @@ mixin sign-in(options)
       header = 'Войти',
       headerTag = 'h1',
       method = 'POST',
-      action = '/'
+      action = '/change-me'
     } = options || {};
 
   form.sign-in(method=method action=action)
@@ -15,13 +15,13 @@ mixin sign-in(options)
       #{headerTag}.sign-in__title= header
     .sign-in__text-input
       +text-input({
-        name: 'email',
+        name: 'field-email',
         placeholder: 'Email',
         type: 'email',
       })
     .sign-in__text-input
       +text-input({
-        name: 'password',
+        name: 'field-password',
         placeholder: 'Пароль',
         type: 'password',
       })

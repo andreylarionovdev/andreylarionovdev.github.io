@@ -47,7 +47,6 @@ Dropdown.prototype.initState = function initType() {
   const stateTemplates = {
     [GUEST_TYPE]: {
       total: 0,
-      emptyValue: 'Сколько гостей',
       categories: [
         { count: 0, wordForms: ['гость', ...new Array(3).fill('гостя'), 'гостей'] },
         { count: 0, wordForms: ['гость', ...new Array(3).fill('гостя'), 'гостей'] },
@@ -56,7 +55,6 @@ Dropdown.prototype.initState = function initType() {
     },
     [ROOM_TYPE]: {
       total: 0,
-      emptyValue: 'Удобства',
       categories: [
         { count: 0, wordForms: ['спальня', ...new Array(3).fill('спальни'), 'спален'] },
         { count: 0, wordForms: ['кровать', ...new Array(3).fill('кровати'), 'кроватей'] },
@@ -174,7 +172,7 @@ Dropdown.prototype.updateView = function updateView() {
 
 Dropdown.prototype.buildValue = function buildValue(countsWithCategories) {
   if (this.state.total === 0) {
-    return this.state.emptyValue;
+    return '';
   }
 
   if (this.type === GUEST_TYPE) {

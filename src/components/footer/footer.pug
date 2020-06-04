@@ -58,13 +58,13 @@ mixin footer(options)
                 each item, _ in menu.links
                   li.footer__navigation-section-item
                     a.footer__navigation-section-link(href=item.href)= item.text
-        form.footer__subscription-form(method='POST' action='/')
+        form.footer__subscription-form(method='POST' action='/change-me')
           header.footer__section-header
             p.footer__subscription-form-title!= rightTitle
           p.footer__subscription-form-description= rightDescription
           .footer__text-input
             +text-input({
-              name: 'email',
+              name: 'field-email',
               placeholder: rightPlaceholder,
               withButton: true,
               type: 'email',
