@@ -23,14 +23,14 @@ const SearchPage = function RoomFilterPage() {
 };
 
 SearchPage.prototype.init = function init() {
-  this.classHiddenFilterButton = 'search-page__button-group_hidden';
+  this.classHiddenFilterButton = 'search-page__button_hidden';
   this.classVisibleFilter = 'search-page__form_visible';
   this.classHiddenThumbnails = 'search-page__search-result_hidden';
   this.classHiddenFooter = 'footer_hidden';
 
-  this.$showFilterButton = $('.js-search-page__button-group_type_show-filter');
-  this.$clearFilterButton = $('.js-search-page__button-group_type_clear');
-  this.$applyFilterButton = $('.js-search-page__button-group_type_apply');
+  this.$showFilterButton = $('.js-search-page__button_type_show-filter');
+  this.$clearFilterButton = $('.js-search-page__button_type_clear');
+  this.$applyFilterButton = $('.js-search-page__button_type_apply');
 
   this.$filterForm = $('.js-search-page__form');
   this.$thumbnailsWrapper = $('.js-search-page__search-result');
