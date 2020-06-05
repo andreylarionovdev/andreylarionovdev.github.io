@@ -28,7 +28,7 @@ mixin sign-up(options)
     .sign-up__gender-group
       .sign-up__radio-button
         +radio-button({
-          id: 'radio-button-gender-male',
+          id: 'field-gender-male',
           name: 'field-gender',
           value: 'male',
           label: 'Мужчина',
@@ -36,7 +36,7 @@ mixin sign-up(options)
         })
       .sign-up__radio-button
         +radio-button({
-          id: 'radio-button-gender-female',
+          id: 'field-gender-female',
           name: 'field-gender',
           value: 'female',
           label: 'Женщина',
@@ -69,9 +69,8 @@ mixin sign-up(options)
         })
     .sign-up__checkbox
       +checkbox({
-        id: 'sign-up__toggle-promo',
+        id: 'field-promo',
         theme: 'toggle',
-        name: 'field-promo',
         label: 'Получать спецпредложения',
       })
     .sign-up__button

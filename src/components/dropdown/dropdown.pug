@@ -24,7 +24,15 @@ mixin dropdown(options)
   - const jsPrefix = 'js';
 
   div(class=createBemClasses({ blockName, modifiers: blockModifiers, jsPrefix }))&attributes({ 'data-type': type })
-    input(class=createBemClasses({ blockName, elementName: 'text-input', jsPrefix }) title=value name=name type='text' value=value placeholder=placeholder readonly)
+    input(
+      class=createBemClasses({ blockName, elementName: 'text-input', jsPrefix })
+      title=(value || false)
+      name=(name || false)
+      value=(value || false)
+      placeholder=(placeholder || false)
+      type='text'
+      readonly
+    )
     button.dropdown__toggle-button.js-dropdown__toggle-button.material-icons(type='button')= 'keyboard_arrow_down'
     if allowedTypes.includes(type) && rows.length > 0
       ul(class=createBemClasses({ blockName, elementName: 'list', jsPrefix }))

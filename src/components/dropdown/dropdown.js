@@ -161,7 +161,7 @@ Dropdown.prototype.updateValue = function updateValue() {
     return `${count} ${wordForm}`;
   });
   const value = this.buildValue(countsWithCategories);
-  this.$input.val(value).attr('title', value);
+  this.$input.val(value);
 };
 
 Dropdown.prototype.updateView = function updateView() {

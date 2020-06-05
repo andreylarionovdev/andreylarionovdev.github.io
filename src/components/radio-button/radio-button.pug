@@ -2,5 +2,11 @@ mixin radio-button(options)
   - const { id, name, value, label, isChecked } = options || {};
 
   .radio-button
-    input.radio-button__input(id=id type='radio' name=name value=value checked=isChecked)
-    label.radio-button__label(for=id)= label
+    input.radio-button__input(
+      id=(id || false)
+      name=(name || false)
+      value=(value || false)
+      type='radio'
+      checked=isChecked
+      )
+    label.radio-button__label(for=(id || false))= label
