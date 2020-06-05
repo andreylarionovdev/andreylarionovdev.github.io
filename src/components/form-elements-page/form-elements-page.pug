@@ -101,18 +101,18 @@ mixin form-elements-page
             ul.form-elements-page__checkbox-list
               li.form-elements-page__checkbox
                 +checkbox({
-                  id: 'smoke-allowed',
+                  id: 'field-smoke',
                   label: 'Можно курить',
                 })
               li.form-elements-page__checkbox
                 +checkbox({
-                  id: 'pets-allowed',
+                  id: 'field-pets',
                   label: 'Можно с питомцами',
                   isChecked: true,
                 })
               li.form-elements-page__checkbox
                 +checkbox({
-                  id: 'guests-allowed',
+                  id: 'field-guests',
                   label: 'Можно пригласить гостей (до 10 человек)',
                   isChecked: true,
                 })
@@ -139,13 +139,13 @@ mixin form-elements-page
               label: 'toggle'
             })
             +checkbox({
-              id: 'first-toggle',
+              id: 'field-promo',
               theme: 'toggle',
               label: 'Получать спецпредложения',
               isChecked: true
             })
             +checkbox({
-              id: 'second-toggle',
+              id: 'field-promo-second',
               theme: 'toggle',
               label: 'Получать спецпредложения'
             })
@@ -178,7 +178,6 @@ mixin form-elements-page
         .form-elements-page__section-column
           .form-elements-page__range-slider
             +range-slider({
-              name: 'range-slider',
               min: 0,
               max: 16000,
               from: 5000,
@@ -319,14 +318,14 @@ mixin form-elements-page
               label: 'Expandable checkbox list',
               isExpanded: true,
               items: [
-                {id: 'breakfast-checkbox', label: 'Завтрак'},
-                {id: 'table-checkbox', label: 'Письменный стол', isChecked: true},
-                {id: 'baby-chair-for-eat-checkbox', label: 'Стул для кормления', isChecked: true},
-                {id: 'baby-bed-checkbox', label: 'Кроватка', isChecked: true},
-                {id: 'tv-1-checkbox', label: 'Телевизор'},
-                {id: 'shampoo-1-checkbox', label: 'Шампунь'},
-                {id: 'tv-2-checkbox', label: 'Телевизор'},
-                {id: 'shampoo-2-checkbox', label: 'Шампунь'}
+                {id: 'field-breakfast', label: 'Завтрак'},
+                {id: 'field-table', label: 'Письменный стол', isChecked: true},
+                {id: 'field-baby-chair-for-eat', label: 'Стул для кормления', isChecked: true},
+                {id: 'field-baby-bed', label: 'Кроватка', isChecked: true},
+                {id: 'field-tv', label: 'Телевизор'},
+                {id: 'field-shampoo', label: 'Шампунь'},
+                {id: 'field-tv-2', label: 'Телевизор'},
+                {id: 'field-shampoo-2', label: 'Шампунь'}
               ]
             })
         .form-elements-page__section-column-gap
@@ -338,14 +337,14 @@ mixin form-elements-page
             ul.form-elements-page__checkbox-list
               li.form-elements-page__checkbox
                 +checkbox({
-                  id: 'wide-hall-checkbox',
+                  id: 'field-wide-hall',
                   label: 'Широкий коридор',
                   hint: 'Ширина коридоров в номере не&nbsp;менее 91 см.',
                   theme: 'rich',
                 })
               li.form-elements-page__checkbox
                 +checkbox({
-                  id: 'assistant-checkbox',
+                  id: 'field-assistant',
                   label: 'Помощник для инвалидов',
                   hint: 'На 1 этаже вас встретит специалист и проводит до номера.',
                   theme: 'rich',

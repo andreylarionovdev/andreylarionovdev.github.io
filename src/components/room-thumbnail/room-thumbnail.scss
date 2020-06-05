@@ -130,13 +130,13 @@
     padding: 0.4375rem 0 0.9375rem 0;
     margin: 0 1.25rem 0 1.3125rem;
   }
-  &__feedbacks-counter {
+  &__feedback-counter {
     text-align: right;
     font-size: 0.875rem;
     color: $color-primary-50;
     line-height: 1.75rem;
   }
-  &__feedbacks-counter-number {
+  &__feedback-counter-number {
     font-weight: bold;
   }
   &_hovered {

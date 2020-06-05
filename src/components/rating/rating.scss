@@ -16,8 +16,10 @@
     background-image: url('./img/star.svg');
     background-position: center center;
     background-repeat: no-repeat;
-    &_bordered {
-      background-image: url('./img/star-border.svg');
+    &_type {
+      &_outline {
+        background-image: url('./img/star-border.svg');
+      }
     }
   }
 }
