@@ -67,9 +67,10 @@
         background: none;
         padding: 0;
       }
-      &:hover {
+      &:hover,
+      &#{$blockClass}_hovered {
         opacity: 1;
-        color: $color-primary-100;
+        color: $color-primary-50;
       }
       &:focus {
         box-shadow: none;
@@ -84,11 +85,6 @@
     }
     &_fluid {
       width: 100%;
-    }
-  }
-  &_color {
-    &_gray {
-      color: $color-primary-50;
     }
   }
 }
