@@ -11,6 +11,7 @@ const Dropdown = function Dropdown($element) {
 
 Dropdown.prototype.init = function init($element) {
   this.$element = $element;
+  this.$element.data('api', this);
 
   this.classExpanded = 'dropdown_expanded';
   this.classClearButtonHidden = 'dropdown__clear-button_hidden';
@@ -122,16 +123,7 @@ Dropdown.prototype.handleChangeCountButtonClick = function handleChangeCountButt
 Dropdown.prototype.handleClearButtonClick = function handleClearButtonClick(e) {
   e.preventDefault();
 
-  const $counts = this.$element.find(this.selectorCount);
-  $counts.each((i, o) => $(o).text(0));
-
-  const $decButtons = this.$element.find(this.selectorDecCountButton);
-  $decButtons.each((i, o) => {
-    $(o).addClass(this.classCountButtonDisabled);
-  });
-
-  this.updateState();
-  this.updateView();
+  this.clear();
 };
 
 Dropdown.prototype.handleApplyButtonClick = function handleApplyButtonClick(e) {
@@ -186,6 +178,19 @@ Dropdown.prototype.buildValue = function buildValue(countsWithCategories) {
   }
 
   return countsWithCategories.filter(Boolean).join(', ');
+};
+
+Dropdown.prototype.clear = function clear() {
+  const $counts = this.$element.find(this.selectorCount);
+  $counts.each((i, o) => $(o).text(0));
+
+  const $decButtons = this.$element.find(this.selectorDecCountButton);
+  $decButtons.each((i, o) => {
+    $(o).addClass(this.classCountButtonDisabled);
+  });
+
+  this.updateState();
+  this.updateView();
 };
 
 $(() => $('.js-dropdown').each((i, o) => new Dropdown($(o))));

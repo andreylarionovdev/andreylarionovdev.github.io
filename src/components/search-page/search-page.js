@@ -18,7 +18,7 @@ import './img/room-thumb-10.png';
 import './img/room-thumb-11.png';
 import './img/room-thumb-12.png';
 
-const SearchPage = function RoomFilterPage() {
+const SearchPage = function SearchPage() {
   this.init();
 };
 
@@ -52,7 +52,7 @@ SearchPage.prototype.handleShowFilterButtonClick = function handleShowFilterButt
 
 SearchPage.prototype.handleClearFilterButtonClick = function handleClearFilterButtonClick(e) {
   e.preventDefault();
-  this.toggleFilter();
+  this.resetForm();
 };
 
 SearchPage.prototype.handleApplyFilterButtonClick = function handleClearFilterButtonClick(e) {
@@ -65,6 +65,19 @@ SearchPage.prototype.toggleFilter = function toggleFilter() {
   this.$filterForm.toggleClass(this.classVisibleFilter);
   this.$thumbnailsWrapper.toggleClass(this.classHiddenThumbnails);
   this.$footer.toggleClass(this.classHiddenFooter);
+};
+
+SearchPage.prototype.resetForm = function resetForm() {
+  this.$filterForm.find('.js-dropdown').each((_, dropdown) => {
+    if (['rooms', 'guests'].includes($(dropdown).data('type'))) {
+      $(dropdown).data('api').clear();
+    }
+    $(dropdown).find('.js-dropdown__text-input').val('');
+  });
+  this.$filterForm.find('.js-checkbox__input').each((_, checkboxInput) => $(checkboxInput).attr('checked', false));
+
+  const rangeSliderApi = this.$filterForm.find('.js-range-slider__input').data('ionRangeSlider');
+  rangeSliderApi.reset();
 };
 
 $(() => new SearchPage());

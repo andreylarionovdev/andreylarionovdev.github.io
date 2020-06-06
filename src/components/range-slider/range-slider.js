@@ -14,6 +14,7 @@ RangeSlider.prototype.init = function init($element) {
     hide_from_to: true,
     onStart: this.render.bind(this),
     onChange: this.render.bind(this),
+    onUpdate: this.render.bind(this),
   });
 };
 
