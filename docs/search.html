@@ -13,7 +13,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>Официальный сайт отеля Toxin | Результаты поиска</title>
-  <link href="search.800ac554b05ad73b0024.css" rel="stylesheet"></head>
+  <link href="search.df70ca3814ec8433b421.css" rel="stylesheet"></head>
   <body class="body">
     <div class="body__header">
       <header class="header js-header">
@@ -48,7 +48,7 @@
       <main class="search-page">
         <div class="search-page__inner-wrapper">
           <section class="search-page__filter">
-            <div class="search-page__button-group search-page__button-group_type_show-filter js-search-page__button-group_type_show-filter">
+            <div class="search-page__button search-page__button_type_show-filter js-search-page__button_type_show-filter">
               <button class="button button_theme_white button_size_fluid" type="button"><span class="button__inner-wrapper"><span class="button__caption">Фильтр</span></span></button>
             </div>
             <form class="search-page__form js-search-page__form">
@@ -59,7 +59,7 @@
                 </div>
                 <div class="search-page__dropdown">
                   <div class="dropdown js-dropdown">
-                    <input class="dropdown__text-input js-dropdown__text-input" title="19 авг. - 23 авг." name="field-dates" type="text" value="19 авг. - 23 авг." readonly>
+                    <input class="dropdown__text-input js-dropdown__text-input" title="19 авг. - 23 авг." name="field-dates" value="19 авг. - 23 авг." placeholder="Даты пребывания" type="text" readonly>
                     <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
                   </div>
                 </div>
@@ -71,7 +71,7 @@
                 </div>
                 <div class="search-page__dropdown">
                   <div class="dropdown js-dropdown" data-type="guests">
-                    <input class="dropdown__text-input js-dropdown__text-input" name="field-guests" type="text" placeholder="Сколько гостей" readonly>
+                    <input class="dropdown__text-input js-dropdown__text-input" name="field-guests" placeholder="Сколько гостей" type="text" readonly>
                     <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
                     <ul class="dropdown__list js-dropdown__list">
                       <li class="dropdown__list-item js-dropdown__list-item">
@@ -96,7 +96,7 @@
                         </div>
                       </li>
                       <li class="dropdown__footer-buttons"><span class="dropdown__clear-button js-dropdown__clear-button">
-                          <button class="button button_theme_textual button_color_gray" type="button"><span class="button__inner-wrapper"><span class="button__caption">очистить</span></span></button></span><span class="dropdown__apply-button js-dropdown__apply-button">
+                          <button class="button button_theme_textual" type="button"><span class="button__inner-wrapper"><span class="button__caption">очистить</span></span></button></span><span class="dropdown__apply-button js-dropdown__apply-button">
                           <button class="button button_theme_textual" type="button"><span class="button__inner-wrapper"><span class="button__caption">применить</span></span></button></span></li>
                     </ul>
                   </div>
@@ -106,34 +106,34 @@
                 <div class="range-slider js-range-slider">
                   <label class="label"><span class="label__title">Диапазон цены</span><span class="label__hint">0</span>
                   </label>
-                  <input class="range-slider__input js-range-slider__input" type="text" name="price-slider" data-type="double" data-min="0" data-max="16000" data-from="5000" data-to="10000">
+                  <input class="range-slider__input js-range-slider__input" type="text" name="field-price" data-type="double" data-min="0" data-max="16000" data-from="5000" data-to="10000">
                   <p class="range-slider__description">Стоимость за сутки пребывания в номере</p>
                 </div>
               </div>
               <fieldset class="search-page__checkboxes">
                 <legend class="search-page__legend">checkbox buttons</legend>
                 <p class="search-page__checkbox"><span class="checkbox">
-                    <input class="checkbox__input" id="smoke-allowed-checkbox" name="smoke-allowed" type="checkbox">
-                    <label class="checkbox__label" for="smoke-allowed-checkbox">Можно курить</label></span>
+                    <input class="checkbox__input js-checkbox__input" id="field-smoke" name="field-smoke" type="checkbox">
+                    <label class="checkbox__label" for="field-smoke">Можно курить</label></span>
                 </p>
                 <p class="search-page__checkbox"><span class="checkbox">
-                    <input class="checkbox__input" id="pets-allowed-checkbox" name="pets-allowed" type="checkbox" checked>
-                    <label class="checkbox__label" for="pets-allowed-checkbox">Можно с питомцами</label></span>
+                    <input class="checkbox__input js-checkbox__input" id="field-pets" name="field-pets" type="checkbox" checked>
+                    <label class="checkbox__label" for="field-pets">Можно с питомцами</label></span>
                 </p>
                 <p class="search-page__checkbox"><span class="checkbox">
-                    <input class="checkbox__input" id="guests-allowed-checkbox" name="guests-allowed" type="checkbox" checked>
-                    <label class="checkbox__label" for="guests-allowed-checkbox">Можно пригласить гостей (до 10 человек)</label></span>
+                    <input class="checkbox__input js-checkbox__input" id="field-guests" name="field-guests" type="checkbox" checked>
+                    <label class="checkbox__label" for="field-guests">Можно пригласить гостей (до 10 человек)</label></span>
                 </p>
               </fieldset>
               <fieldset class="search-page__checkboxes search-page__checkboxes_theme_rich">
                 <legend class="search-page__legend">Доступность</legend>
                 <p class="search-page__checkbox"><span class="checkbox checkbox_theme_rich">
-                    <input class="checkbox__input" id="wide-hall-checkbox" name="wide-hall" type="checkbox">
-                    <label class="checkbox__label" for="wide-hall-checkbox">Широкий коридор</label><span class="checkbox__hint">Ширина коридоров в номере не&nbsp;менее 91 см.</span></span>
+                    <input class="checkbox__input js-checkbox__input" id="field-wide-hall" name="field-wide-hall" type="checkbox">
+                    <label class="checkbox__label" for="field-wide-hall">Широкий коридор</label><span class="checkbox__hint">Ширина коридоров в номере не&nbsp;менее 91 см.</span></span>
                 </p>
                 <p class="search-page__checkbox"><span class="checkbox checkbox_theme_rich">
-                    <input class="checkbox__input" id="assistant" name="assistant" type="checkbox">
-                    <label class="checkbox__label" for="assistant">Помощник для инвалидов</label><span class="checkbox__hint">На 1 этаже вас встретит специалист и проводит до номера.</span></span>
+                    <input class="checkbox__input js-checkbox__input" id="field-assistant" name="field-assistant" type="checkbox">
+                    <label class="checkbox__label" for="field-assistant">Помощник для инвалидов</label><span class="checkbox__hint">На 1 этаже вас встретит специалист и проводит до номера.</span></span>
                 </p>
               </fieldset>
               <div class="search-page__feature-dropdown">
@@ -143,7 +143,7 @@
                 </div>
                 <div class="search-page__dropdown">
                   <div class="dropdown js-dropdown" data-type="rooms">
-                    <input class="dropdown__text-input js-dropdown__text-input" name="field-rooms" type="text" placeholder="Удобства" readonly>
+                    <input class="dropdown__text-input js-dropdown__text-input" name="field-rooms" placeholder="Удобства" type="text" readonly>
                     <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
                     <ul class="dropdown__list js-dropdown__list">
                       <li class="dropdown__list-item js-dropdown__list-item">
@@ -178,37 +178,37 @@
                   </p>
                   <ul class="checkbox-list-expandable__list">
                     <li class="checkbox-list-expandable__item"><span class="checkbox">
-                        <input class="checkbox__input" id="breakfast-checkbox" name="breakfast-checkbox" type="checkbox">
-                        <label class="checkbox__label" for="breakfast-checkbox">Завтрак</label></span>
+                        <input class="checkbox__input js-checkbox__input" id="field-breakfast" name="field-breakfast" type="checkbox">
+                        <label class="checkbox__label" for="field-breakfast">Завтрак</label></span>
                     </li>
                     <li class="checkbox-list-expandable__item"><span class="checkbox">
-                        <input class="checkbox__input" id="table-checkbox" name="table-checkbox" type="checkbox" checked>
-                        <label class="checkbox__label" for="table-checkbox">Письменный стол</label></span>
+                        <input class="checkbox__input js-checkbox__input" id="field-table" name="field-table" type="checkbox" checked>
+                        <label class="checkbox__label" for="field-table">Письменный стол</label></span>
                     </li>
                     <li class="checkbox-list-expandable__item"><span class="checkbox">
-                        <input class="checkbox__input" id="baby-chair-for-eat-checkbox" name="baby-chair-for-eat-checkbox" type="checkbox" checked>
-                        <label class="checkbox__label" for="baby-chair-for-eat-checkbox">Стул для кормления</label></span>
+                        <input class="checkbox__input js-checkbox__input" id="field-baby-chair-for-eat" name="field-baby-chair-for-eat" type="checkbox" checked>
+                        <label class="checkbox__label" for="field-baby-chair-for-eat">Стул для кормления</label></span>
                     </li>
                     <li class="checkbox-list-expandable__item"><span class="checkbox">
-                        <input class="checkbox__input" id="baby-bed-checkbox" name="baby-bed-checkbox" type="checkbox" checked>
-                        <label class="checkbox__label" for="baby-bed-checkbox">Кроватка</label></span>
+                        <input class="checkbox__input js-checkbox__input" id="field-baby-bed" name="field-baby-bed" type="checkbox" checked>
+                        <label class="checkbox__label" for="field-baby-bed">Кроватка</label></span>
                     </li>
                     <li class="checkbox-list-expandable__item"><span class="checkbox">
-                        <input class="checkbox__input" id="tv-checkbox" name="tv-checkbox" type="checkbox">
-                        <label class="checkbox__label" for="tv-checkbox">Телевизор</label></span>
+                        <input class="checkbox__input js-checkbox__input" id="field-tv" name="field-tv" type="checkbox">
+                        <label class="checkbox__label" for="field-tv">Телевизор</label></span>
                     </li>
                     <li class="checkbox-list-expandable__item"><span class="checkbox">
-                        <input class="checkbox__input" id="shampoo-checkbox" name="shampoo-checkbox" type="checkbox">
-                        <label class="checkbox__label" for="shampoo-checkbox">Шампунь</label></span>
+                        <input class="checkbox__input js-checkbox__input" id="field-shampoo" name="field-shampoo" type="checkbox">
+                        <label class="checkbox__label" for="field-shampoo">Шампунь</label></span>
                     </li>
                   </ul>
                 </div>
               </div>
               <div class="search-page__form-footer js-search-page__form-footer">
-                <div class="search-page__button-group search-page__button-group_type_clear js-search-page__button-group_type_clear">
+                <div class="search-page__button search-page__button_type_clear js-search-page__button_type_clear">
                   <button class="button button_theme_white button_size_fluid" type="reset"><span class="button__inner-wrapper"><span class="button__caption">Сбросить</span></span></button>
                 </div>
-                <div class="search-page__button-group search-page__button-group_type_apply js-search-page__button-group_type_apply">
+                <div class="search-page__button search-page__button_type_apply js-search-page__button_type_apply">
                   <button class="button button_theme_default button_size_fluid" type="submit"><span class="button__inner-wrapper"><span class="button__caption">Применить</span></span></button>
                 </div>
               </div>
@@ -237,7 +237,7 @@
                       <div class="rating"><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span>
                       </div>
                     </div>
-                    <p class="room-thumbnail__feedbacks-counter"><span class="room-thumbnail__feedbacks-counter-number">145</span>&nbsp;<span class="room-thumbnail__feedbacks-counter-text">Отзывов</span></p>
+                    <p class="room-thumbnail__feedback-counter"><span class="room-thumbnail__feedback-counter-number">145</span>&nbsp;<span class="room-thumbnail__feedback-counter-text">Отзывов</span></p>
                   </footer>
                 </div>
               </li>
@@ -258,10 +258,10 @@
                   </header>
                   <footer class="room-thumbnail__footer">
                     <div class="room-thumbnail__rate">
-                      <div class="rating"><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star rating__star_bordered"></span>
+                      <div class="rating"><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star rating__star_type_outline"></span>
                       </div>
                     </div>
-                    <p class="room-thumbnail__feedbacks-counter"><span class="room-thumbnail__feedbacks-counter-number">65</span>&nbsp;<span class="room-thumbnail__feedbacks-counter-text">Отзывов</span></p>
+                    <p class="room-thumbnail__feedback-counter"><span class="room-thumbnail__feedback-counter-number">65</span>&nbsp;<span class="room-thumbnail__feedback-counter-text">Отзывов</span></p>
                   </footer>
                 </div>
               </li>
@@ -282,10 +282,10 @@
                   </header>
                   <footer class="room-thumbnail__footer">
                     <div class="room-thumbnail__rate">
-                      <div class="rating"><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star rating__star_bordered"></span><span class="rating__star rating__star_bordered"></span>
+                      <div class="rating"><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star rating__star_type_outline"></span><span class="rating__star rating__star_type_outline"></span>
                       </div>
                     </div>
-                    <p class="room-thumbnail__feedbacks-counter"><span class="room-thumbnail__feedbacks-counter-number">35</span>&nbsp;<span class="room-thumbnail__feedbacks-counter-text">Отзывов</span></p>
+                    <p class="room-thumbnail__feedback-counter"><span class="room-thumbnail__feedback-counter-number">35</span>&nbsp;<span class="room-thumbnail__feedback-counter-text">Отзывов</span></p>
                   </footer>
                 </div>
               </li>
@@ -309,7 +309,7 @@
                       <div class="rating"><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span>
                       </div>
                     </div>
-                    <p class="room-thumbnail__feedbacks-counter"><span class="room-thumbnail__feedbacks-counter-number">19</span>&nbsp;<span class="room-thumbnail__feedbacks-counter-text">Отзывов</span></p>
+                    <p class="room-thumbnail__feedback-counter"><span class="room-thumbnail__feedback-counter-number">19</span>&nbsp;<span class="room-thumbnail__feedback-counter-text">Отзывов</span></p>
                   </footer>
                 </div>
               </li>
@@ -330,10 +330,10 @@
                   </header>
                   <footer class="room-thumbnail__footer">
                     <div class="room-thumbnail__rate">
-                      <div class="rating"><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star rating__star_bordered"></span>
+                      <div class="rating"><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star rating__star_type_outline"></span>
                       </div>
                     </div>
-                    <p class="room-thumbnail__feedbacks-counter"><span class="room-thumbnail__feedbacks-counter-number">44</span>&nbsp;<span class="room-thumbnail__feedbacks-counter-text">Отзывов</span></p>
+                    <p class="room-thumbnail__feedback-counter"><span class="room-thumbnail__feedback-counter-number">44</span>&nbsp;<span class="room-thumbnail__feedback-counter-text">Отзывов</span></p>
                   </footer>
                 </div>
               </li>
@@ -354,10 +354,10 @@
                   </header>
                   <footer class="room-thumbnail__footer">
                     <div class="room-thumbnail__rate">
-                      <div class="rating"><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star rating__star_bordered"></span><span class="rating__star rating__star_bordered"></span>
+                      <div class="rating"><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star rating__star_type_outline"></span><span class="rating__star rating__star_type_outline"></span>
                       </div>
                     </div>
-                    <p class="room-thumbnail__feedbacks-counter"><span class="room-thumbnail__feedbacks-counter-number">56</span>&nbsp;<span class="room-thumbnail__feedbacks-counter-text">Отзывов</span></p>
+                    <p class="room-thumbnail__feedback-counter"><span class="room-thumbnail__feedback-counter-number">56</span>&nbsp;<span class="room-thumbnail__feedback-counter-text">Отзывов</span></p>
                   </footer>
                 </div>
               </li>
@@ -381,7 +381,7 @@
                       <div class="rating"><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span>
                       </div>
                     </div>
-                    <p class="room-thumbnail__feedbacks-counter"><span class="room-thumbnail__feedbacks-counter-number">45</span>&nbsp;<span class="room-thumbnail__feedbacks-counter-text">Отзывов</span></p>
+                    <p class="room-thumbnail__feedback-counter"><span class="room-thumbnail__feedback-counter-number">45</span>&nbsp;<span class="room-thumbnail__feedback-counter-text">Отзывов</span></p>
                   </footer>
                 </div>
               </li>
@@ -402,10 +402,10 @@
                   </header>
                   <footer class="room-thumbnail__footer">
                     <div class="room-thumbnail__rate">
-                      <div class="rating"><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star rating__star_bordered"></span>
+                      <div class="rating"><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star rating__star_type_outline"></span>
                       </div>
                     </div>
-                    <p class="room-thumbnail__feedbacks-counter"><span class="room-thumbnail__feedbacks-counter-number">39</span>&nbsp;<span class="room-thumbnail__feedbacks-counter-text">Отзывов</span></p>
+                    <p class="room-thumbnail__feedback-counter"><span class="room-thumbnail__feedback-counter-number">39</span>&nbsp;<span class="room-thumbnail__feedback-counter-text">Отзывов</span></p>
                   </footer>
                 </div>
               </li>
@@ -426,10 +426,10 @@
                   </header>
                   <footer class="room-thumbnail__footer">
                     <div class="room-thumbnail__rate">
-                      <div class="rating"><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star rating__star_bordered"></span><span class="rating__star rating__star_bordered"></span>
+                      <div class="rating"><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star rating__star_type_outline"></span><span class="rating__star rating__star_type_outline"></span>
                       </div>
                     </div>
-                    <p class="room-thumbnail__feedbacks-counter"><span class="room-thumbnail__feedbacks-counter-number">77</span>&nbsp;<span class="room-thumbnail__feedbacks-counter-text">Отзывов</span></p>
+                    <p class="room-thumbnail__feedback-counter"><span class="room-thumbnail__feedback-counter-number">77</span>&nbsp;<span class="room-thumbnail__feedback-counter-text">Отзывов</span></p>
                   </footer>
                 </div>
               </li>
@@ -453,7 +453,7 @@
                       <div class="rating"><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span>
                       </div>
                     </div>
-                    <p class="room-thumbnail__feedbacks-counter"><span class="room-thumbnail__feedbacks-counter-number">25</span>&nbsp;<span class="room-thumbnail__feedbacks-counter-text">Отзывов</span></p>
+                    <p class="room-thumbnail__feedback-counter"><span class="room-thumbnail__feedback-counter-number">25</span>&nbsp;<span class="room-thumbnail__feedback-counter-text">Отзывов</span></p>
                   </footer>
                 </div>
               </li>
@@ -474,10 +474,10 @@
                   </header>
                   <footer class="room-thumbnail__footer">
                     <div class="room-thumbnail__rate">
-                      <div class="rating"><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star rating__star_bordered"></span><span class="rating__star rating__star_bordered"></span>
+                      <div class="rating"><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star rating__star_type_outline"></span><span class="rating__star rating__star_type_outline"></span>
                       </div>
                     </div>
-                    <p class="room-thumbnail__feedbacks-counter"><span class="room-thumbnail__feedbacks-counter-number">15</span>&nbsp;<span class="room-thumbnail__feedbacks-counter-text">Отзывов</span></p>
+                    <p class="room-thumbnail__feedback-counter"><span class="room-thumbnail__feedback-counter-number">15</span>&nbsp;<span class="room-thumbnail__feedback-counter-text">Отзывов</span></p>
                   </footer>
                 </div>
               </li>
@@ -498,10 +498,10 @@
                   </header>
                   <footer class="room-thumbnail__footer">
                     <div class="room-thumbnail__rate">
-                      <div class="rating"><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star rating__star_bordered"></span><span class="rating__star rating__star_bordered"></span>
+                      <div class="rating"><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star"></span><span class="rating__star rating__star_type_outline"></span><span class="rating__star rating__star_type_outline"></span>
                       </div>
                     </div>
-                    <p class="room-thumbnail__feedbacks-counter"><span class="room-thumbnail__feedbacks-counter-number">55</span>&nbsp;<span class="room-thumbnail__feedbacks-counter-text">Отзывов</span></p>
+                    <p class="room-thumbnail__feedback-counter"><span class="room-thumbnail__feedback-counter-number">55</span>&nbsp;<span class="room-thumbnail__feedback-counter-text">Отзывов</span></p>
                   </footer>
                 </div>
               </li>
@@ -580,5 +580,5 @@
         </div>
       </footer>
     </div>
-  <script type="text/javascript" src="search.800ac554b05ad73b0024.js"></script></body>
+  <script type="text/javascript" src="search.df70ca3814ec8433b421.js"></script></body>
 </html>
