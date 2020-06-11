@@ -7,10 +7,12 @@ mixin room-search(options)
   -
     const {
       header = 'Найдём номера под ваши пожелания',
-      headerTag = 'h1'
+      headerTag = 'h1',
+      action = '/search.html',
+      method = 'GET',
     } = options || {};
 
-  form.room-search
+  form.room-search(method=method, action=action)
     header.room-search__header
       #{headerTag}.room-search__title= header
     .room-search__datepicker
@@ -33,6 +35,6 @@ mixin room-search(options)
       +button({
         theme: 'with-arrow',
         caption: 'Подобрать номер',
-        href: 'search.html',
+        type: 'submit',
         size: 'fluid',
       })
