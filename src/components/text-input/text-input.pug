@@ -4,6 +4,7 @@ mixin text-input(options)
       id,
       name,
       type = 'text',
+      format,
       placeholder,
       value,
       withButton,
@@ -12,7 +13,10 @@ mixin text-input(options)
 
   - const blockModifiers = isHovered ? ['hovered'] : [];
 
-  - const createBemClasses = require('../../utils/helpers').createBemClasses
+  if format
+    - blockModifiers.push({ format });
+
+  - const createBemClasses = require('../../utils/helpers').createBemClasses;
 
   span(class=createBemClasses({ blockName: 'text-input', modifiers: blockModifiers }))
     input.text-input__field(id=id name=(name || id) type=type placeholder=placeholder value=value)

@@ -5,7 +5,7 @@ mixin datepicker(options)
   -
     const {
       theme,
-      placeholder = 'ДД.ММ.ГГГГ',
+      placeholder = 'дд.мм.гггг',
       fromLabel = 'Прибытие',
       from = '',
       toLabel = 'Выезд',
@@ -24,10 +24,20 @@ mixin datepicker(options)
         .datepicker__label
           +label({ label: fromLabel })
         div(class=createBemClasses({ blockName, elementName: 'dropdown', jsPrefix }))
-          +dropdown({ name: 'field-date-from', value: from, placeholder })
+          +dropdown({
+            name: 'field-date-from',
+            value: from,
+            type: 'date',
+            placeholder,
+          })
       div(class=createBemClasses({ blockName, elementName: 'item', jsPrefix }))
         .datepicker__label
           +label({ label: toLabel })
         div(class=createBemClasses({ blockName, elementName: 'dropdown', jsPrefix }))
-          +dropdown({ name: 'field-date-to', value: to, placeholder })
+          +dropdown({
+            name: 'field-date-to',
+            value: to,
+            type: 'date',
+            placeholder,
+          })
     div(class=createBemClasses({ blockName, elementName: 'datepicker-container', jsPrefix }))

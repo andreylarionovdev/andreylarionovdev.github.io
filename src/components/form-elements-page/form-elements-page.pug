@@ -63,13 +63,13 @@ mixin form-elements-page
             })
             +text-input({
               id: 'input-with-mask',
-              placeholder: 'ДД.ММ.ГГГГ'
+              placeholder: 'дд.мм.гггг',
+              format: 'date',
             })
           .form-elements-page__dropdown.form-elements-page__dropdown_theme_datepicker
             +datepicker({
               id: 'datepicker-demo',
               fromLabel: 'date dropdown',
-              from: 'ДД.ММ.ГГГГ',
               toLabel: 'date dropdown',
               to: '19.08.2019 '
             })

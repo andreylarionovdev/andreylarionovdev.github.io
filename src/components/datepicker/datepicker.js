@@ -6,7 +6,7 @@ const Datepicker = function Datepicker($element) {
 };
 
 Datepicker.prototype.init = function init($element) {
-  this.emptyValue = 'ДД.ММ.ГГГГ';
+  this.emptyValue = '';
 
   this.selectorDropdown = '.js-datepicker__dropdown';
   this.selectorToggleButton = '.js-dropdown__toggle-button';

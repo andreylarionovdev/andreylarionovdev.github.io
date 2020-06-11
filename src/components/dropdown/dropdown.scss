@@ -96,6 +96,15 @@
       visibility: hidden;
     }
   }
+  &_type {
+    &_date {
+      #{$blockClass}__text-input {
+        &::placeholder {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
   &_expanded {
     #{$blockClass}__text-input {
       border: 0.0625rem solid $color-primary-50;

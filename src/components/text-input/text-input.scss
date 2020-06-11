@@ -50,4 +50,11 @@
     color: $color-primary-50;
     font-family: Montserrat, sans-serif;
   }
+  &_format {
+    &_date {
+      ::placeholder {
+        text-transform: uppercase;
+      }
+    }
+  }
 }

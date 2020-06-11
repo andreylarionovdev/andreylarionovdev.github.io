@@ -18,6 +18,8 @@ mixin dropdown(options)
     - blockModifiers.push('expanded');
   if hasZIndexPriority
     - blockModifiers.push('with-z-index-priority')
+  if type
+    - blockModifiers.push({ type })
 
   - const createBemClasses = require('../../utils/helpers.js').createBemClasses;
   - const blockName = 'dropdown';

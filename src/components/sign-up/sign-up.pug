@@ -51,7 +51,8 @@ mixin sign-up(options)
         +text-input({
           id: 'sign-up__input-birthday',
           name: 'field-birthday',
-          placeholder: 'ДД.ММ.ГГГГ',
+          placeholder: 'дд.мм.гггг',
+          format: 'date',
         })
     fieldset.sign-up__credentials-group
       legend.sign-up__legend= 'Данные для входа в сервис'
