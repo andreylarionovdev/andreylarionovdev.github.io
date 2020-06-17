@@ -13,7 +13,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>Официальный сайт отеля Toxin | UI Kit - Form elements</title>
-  <link href="elements.df70ca3814ec8433b421.css" rel="stylesheet"></head>
+  <link href="elements.5db36738604a89920b12.css" rel="stylesheet"></head>
   <body class="body">
     <div class="form-elements-page">
       <nav class="form-elements-page__nav"><a class="logo" href="./index.html"><img class="logo__image" src="./img/logo.svg" alt="Логотип Toxin"></a>
@@ -34,15 +34,15 @@
             <div class="form-elements-page__dropdown">
               <label class="label"><span class="label__title">dropdown</span><span class="label__hint">default</span>
               </label>
-              <div class="dropdown js-dropdown" data-type="guests">
+              <div class="dropdown dropdown_type_guests js-dropdown" data-type="guests">
                 <input class="dropdown__text-input js-dropdown__text-input" name="guests-default" placeholder="Сколько гостей" type="text" readonly>
                 <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
               </div>
             </div>
             <div class="form-elements-page__text-input-group form-elements-page__text-input-group_theme_with-mask">
               <label class="label" for="input-with-mask"><span class="label__title">masked text field</span><span class="label__hint">default</span>
-              </label><span class="text-input">
-                <input class="text-input__field" id="input-with-mask" name="input-with-mask" type="text" placeholder="ДД.ММ.ГГГГ"></span>
+              </label><span class="text-input text-input_format_date">
+                <input class="text-input__field" id="input-with-mask" name="input-with-mask" type="text" placeholder="дд.мм.гггг"></span>
             </div>
             <div class="form-elements-page__dropdown form-elements-page__dropdown_theme_datepicker">
               <div class="datepicker js-datepicker">
@@ -53,8 +53,8 @@
                       </label>
                     </div>
                     <div class="datepicker__dropdown js-datepicker__dropdown">
-                      <div class="dropdown js-dropdown">
-                        <input class="dropdown__text-input js-dropdown__text-input" title="ДД.ММ.ГГГГ" name="field-date-from" value="ДД.ММ.ГГГГ" placeholder="ДД.ММ.ГГГГ" type="text" readonly>
+                      <div class="dropdown dropdown_type_date js-dropdown" data-type="date">
+                        <input class="dropdown__text-input js-dropdown__text-input" name="field-date-from" placeholder="дд.мм.гггг" type="text" readonly>
                         <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
                       </div>
                     </div>
@@ -65,8 +65,8 @@
                       </label>
                     </div>
                     <div class="datepicker__dropdown js-datepicker__dropdown">
-                      <div class="dropdown js-dropdown">
-                        <input class="dropdown__text-input js-dropdown__text-input" title="19.08.2019 " name="field-date-to" value="19.08.2019 " placeholder="ДД.ММ.ГГГГ" type="text" readonly>
+                      <div class="dropdown dropdown_type_date js-dropdown" data-type="date">
+                        <input class="dropdown__text-input js-dropdown__text-input" title="19.08.2019 " name="field-date-to" value="19.08.2019 " placeholder="дд.мм.гггг" type="text" readonly>
                         <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
                       </div>
                     </div>
@@ -185,7 +185,7 @@
             <div class="form-elements-page__dropdown form-elements-page__dropdown_collapsed">
               <label class="label"><span class="label__title">dropdown</span><span class="label__hint">default</span>
               </label>
-              <div class="dropdown dropdown_with-z-index-priority js-dropdown" data-type="rooms">
+              <div class="dropdown dropdown_with-z-index-priority dropdown_type_rooms js-dropdown" data-type="rooms">
                 <input class="dropdown__text-input js-dropdown__text-input" name="guests-collapsed" placeholder="Удобства" type="text" readonly>
                 <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
                 <ul class="dropdown__list js-dropdown__list">
@@ -216,7 +216,7 @@
             <div class="form-elements-page__dropdown form-elements-page__dropdown_theme_expanded">
               <label class="label"><span class="label__title">dropdown</span><span class="label__hint">expanded</span>
               </label>
-              <div class="dropdown dropdown_expanded js-dropdown" data-type="rooms">
+              <div class="dropdown dropdown_expanded dropdown_type_rooms js-dropdown" data-type="rooms">
                 <input class="dropdown__text-input js-dropdown__text-input" name="guests-expanded" placeholder="Удобства" type="text" readonly>
                 <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
                 <ul class="dropdown__list js-dropdown__list">
@@ -250,7 +250,7 @@
             <div class="form-elements-page__dropdown form-elements-page__dropdown_theme_empty">
               <label class="label"><span class="label__title">dropdown</span>
               </label>
-              <div class="dropdown dropdown_expanded js-dropdown" data-type="guests">
+              <div class="dropdown dropdown_expanded dropdown_type_guests js-dropdown" data-type="guests">
                 <input class="dropdown__text-input js-dropdown__text-input" name="guests-empty" placeholder="Сколько гостей" type="text" readonly>
                 <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
                 <ul class="dropdown__list js-dropdown__list">
@@ -276,7 +276,7 @@
                     </div>
                   </li>
                   <li class="dropdown__footer-buttons"><span class="dropdown__clear-button js-dropdown__clear-button">
-                      <button class="button button_theme_textual" type="button"><span class="button__inner-wrapper"><span class="button__caption">очистить</span></span></button></span><span class="dropdown__apply-button js-dropdown__apply-button">
+                      <button class="button button_theme_textual button_hovered" type="button"><span class="button__inner-wrapper"><span class="button__caption">очистить</span></span></button></span><span class="dropdown__apply-button js-dropdown__apply-button">
                       <button class="button button_theme_textual" type="button"><span class="button__inner-wrapper"><span class="button__caption">применить</span></span></button></span></li>
                 </ul>
               </div>
@@ -287,7 +287,7 @@
             <div class="form-elements-page__dropdown form-elements-page__dropdown_theme_filled">
               <label class="label"><span class="label__title">dropdown</span>
               </label>
-              <div class="dropdown dropdown_expanded js-dropdown" data-type="guests">
+              <div class="dropdown dropdown_expanded dropdown_type_guests js-dropdown" data-type="guests">
                 <input class="dropdown__text-input js-dropdown__text-input" name="guests-filled" placeholder="Сколько гостей" type="text" readonly>
                 <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
                 <ul class="dropdown__list js-dropdown__list">
@@ -313,7 +313,7 @@
                     </div>
                   </li>
                   <li class="dropdown__footer-buttons"><span class="dropdown__clear-button js-dropdown__clear-button">
-                      <button class="button button_theme_textual" type="button"><span class="button__inner-wrapper"><span class="button__caption">очистить</span></span></button></span><span class="dropdown__apply-button js-dropdown__apply-button">
+                      <button class="button button_theme_textual button_hovered" type="button"><span class="button__inner-wrapper"><span class="button__caption">очистить</span></span></button></span><span class="dropdown__apply-button js-dropdown__apply-button">
                       <button class="button button_theme_textual" type="button"><span class="button__inner-wrapper"><span class="button__caption">применить</span></span></button></span></li>
                 </ul>
               </div>
@@ -381,7 +381,7 @@
               <ul class="form-elements-page__checkbox-list">
                 <li class="form-elements-page__checkbox"><span class="checkbox checkbox_theme_rich">
                     <input class="checkbox__input js-checkbox__input" id="field-wide-hall" name="field-wide-hall" type="checkbox">
-                    <label class="checkbox__label" for="field-wide-hall">Широкий коридор</label><span class="checkbox__hint">Ширина коридоров в номере не&nbsp;менее 91 см.</span></span>
+                    <label class="checkbox__label" for="field-wide-hall">Широкий коридор</label><span class="checkbox__hint">Ширина коридоров в номере не менее 91 см.</span></span>
                 </li>
                 <li class="form-elements-page__checkbox"><span class="checkbox checkbox_theme_rich">
                     <input class="checkbox__input js-checkbox__input" id="field-assistant" name="field-assistant" type="checkbox">
@@ -418,13 +418,13 @@
           <div class="form-elements-page__section-column">
             <div class="form-elements-page__feature-group">
               <div class="form-elements-page__feature">
-                <div class="feature"><span class="material-icons feature__icon">mood</span>
+                <div class="feature"><span class="feature__icon material-icons">mood</span>
                   <p class="feature__title">Комфорт</p>
                   <p class="feature__hint">Шумопоглощающие стены</p>
                 </div>
               </div>
               <div class="form-elements-page__feature">
-                <div class="feature"><span class="material-icons feature__icon">location_city</span>
+                <div class="feature"><span class="feature__icon material-icons">location_city</span>
                   <p class="feature__title">Удобство</p>
                   <p class="feature__hint">Окно в каждой из спален</p>
                 </div>
@@ -453,5 +453,5 @@
         </section>
       </div>
     </div>
-  <script type="text/javascript" src="elements.df70ca3814ec8433b421.js"></script></body>
+  <script type="text/javascript" src="elements.5db36738604a89920b12.js"></script></body>
 </html>

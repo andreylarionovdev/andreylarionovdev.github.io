@@ -13,7 +13,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>Официальный сайт отеля Toxin</title>
-  <link href="landing.df70ca3814ec8433b421.css" rel="stylesheet"></head>
+  <link href="landing.5db36738604a89920b12.css" rel="stylesheet"></head>
   <body class="body">
     <div class="body__header">
       <header class="header js-header">
@@ -48,7 +48,7 @@
       <main class="landing-page">
         <div class="landing-page__inner-wrapper">
           <section class="landing-page__room-search">
-            <form class="room-search">
+            <form class="room-search" method="GET" action="/search.html">
               <header class="room-search__header">
                 <h1 class="room-search__title">Найдём номера под ваши пожелания</h1>
               </header>
@@ -61,8 +61,8 @@
                         </label>
                       </div>
                       <div class="datepicker__dropdown js-datepicker__dropdown">
-                        <div class="dropdown js-dropdown">
-                          <input class="dropdown__text-input js-dropdown__text-input" name="field-date-from" placeholder="ДД.ММ.ГГГГ" type="text" readonly>
+                        <div class="dropdown dropdown_type_date js-dropdown" data-type="date">
+                          <input class="dropdown__text-input js-dropdown__text-input" name="field-date-from" placeholder="дд.мм.гггг" type="text" readonly>
                           <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
                         </div>
                       </div>
@@ -73,8 +73,8 @@
                         </label>
                       </div>
                       <div class="datepicker__dropdown js-datepicker__dropdown">
-                        <div class="dropdown js-dropdown">
-                          <input class="dropdown__text-input js-dropdown__text-input" name="field-date-to" placeholder="ДД.ММ.ГГГГ" type="text" readonly>
+                        <div class="dropdown dropdown_type_date js-dropdown" data-type="date">
+                          <input class="dropdown__text-input js-dropdown__text-input" name="field-date-to" placeholder="дд.мм.гггг" type="text" readonly>
                           <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
                         </div>
                       </div>
@@ -89,7 +89,7 @@
                   </label>
                 </div>
                 <div class="room-search__dropdown">
-                  <div class="dropdown js-dropdown" data-type="guests">
+                  <div class="dropdown dropdown_type_guests js-dropdown" data-type="guests">
                     <input class="dropdown__text-input js-dropdown__text-input" name="field-guests" placeholder="Сколько гостей" type="text" readonly>
                     <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
                     <ul class="dropdown__list js-dropdown__list">
@@ -115,14 +115,14 @@
                         </div>
                       </li>
                       <li class="dropdown__footer-buttons"><span class="dropdown__clear-button js-dropdown__clear-button">
-                          <button class="button button_theme_textual" type="button"><span class="button__inner-wrapper"><span class="button__caption">очистить</span></span></button></span><span class="dropdown__apply-button js-dropdown__apply-button">
+                          <button class="button button_theme_textual button_hovered" type="button"><span class="button__inner-wrapper"><span class="button__caption">очистить</span></span></button></span><span class="dropdown__apply-button js-dropdown__apply-button">
                           <button class="button button_theme_textual" type="button"><span class="button__inner-wrapper"><span class="button__caption">применить</span></span></button></span></li>
                     </ul>
                   </div>
                 </div>
               </div>
               <div class="room-search__button">
-                <a class="button button_theme_with-arrow button_size_fluid" href="search.html"><span class="button__inner-wrapper"><span class="button__caption">Подобрать номер</span><span class="button__arrow material-icons">arrow_forward</span></span></a>
+                <button class="button button_theme_with-arrow button_size_fluid" type="submit"><span class="button__inner-wrapper"><span class="button__caption">Подобрать номер</span><span class="button__arrow material-icons">arrow_forward</span></span></button>
               </div>
             </form>
           </section>
@@ -186,7 +186,7 @@
             </form>
           </div>
         </div>
-        <div class="footer__bottom-area">
+        <div class="footer__copyright-area">
           <div class="footer__inner-wrapper">
             <p class="footer__copyright">Copyright © 2018 Toxin отель. Все права зачищены.</p>
             <ul class="footer__social-list">
@@ -198,5 +198,5 @@
         </div>
       </footer>
     </div>
-  <script type="text/javascript" src="landing.df70ca3814ec8433b421.js"></script></body>
+  <script type="text/javascript" src="landing.5db36738604a89920b12.js"></script></body>
 </html>
