@@ -26,12 +26,9 @@
   &__carousel-image {
     grid-column: 1 / 4;
     grid-row: 1 / 1;
-    display: none;
+    display: block;
     width: 100%;
     z-index: 0;
-    &_active {
-      display: block;
-    }
   }
   &__carousel-control {
     @include reset-button;

@@ -76,7 +76,7 @@ mixin search-page
               +checkbox({
                 id: 'field-wide-hall',
                 label: 'Широкий коридор',
-                hint: 'Ширина коридоров в номере не&nbsp;менее 91 см.',
+                hint: 'Ширина коридоров в номере не менее 91 см.',
                 theme: 'rich',
               })
             p.search-page__checkbox
@@ -138,10 +138,10 @@ mixin search-page
                 pricePerDay: 9990,
                 feedbackCounter: 145,
                 rate: 5,
-                images: new Array(4).fill({
+                image: {
                   alt: 'Room 888',
                   src: './img/room-thumb-1.png'
-                }),
+                },
                 feature: 'люкс',
               },
               {
@@ -149,20 +149,20 @@ mixin search-page
                 pricePerDay: 9900,
                 feedbackCounter: 65,
                 rate: 4,
-                images: new Array(4).fill({
+                image: {
                   alt: 'Room 840',
                   src: './img/room-thumb-2.png',
-                }),
+                },
               },
               {
                 number: 980,
                 pricePerDay: 8500,
                 feedbackCounter: 35,
                 rate: 3,
-                images: new Array(4).fill({
+                image: {
                   alt: 'Room 980',
                   src: './img/room-thumb-3.png',
-                }),
+                },
                 feature: 'люкс',
               },
               {
@@ -170,90 +170,90 @@ mixin search-page
                 pricePerDay: 7300,
                 feedbackCounter: 19,
                 rate: 5,
-                images: new Array(4).fill({
+                image: {
                   alt: 'Room 856',
                   src: './img/room-thumb-4.png',
-                }),
+                },
               },
               {
                 number: 740,
                 pricePerDay: 6000,
                 feedbackCounter: 44,
                 rate: 4,
-                images: new Array(4).fill({
+                image: {
                   alt: 'Room 740',
                   src: './img/room-thumb-5.png',
-                }),
+                },
               },
               {
                 number: 982,
                 pricePerDay: 5800,
                 feedbackCounter: 56,
                 rate: 3,
-                images: new Array(4).fill({
+                image: {
                   alt: 'Room 982',
                   src: './img/room-thumb-6.png',
-                }),
+                },
               },
               {
                 number: 678,
                 pricePerDay: 5500,
                 feedbackCounter: 45,
                 rate: 5,
-                images: new Array(4).fill({
+                image: {
                   alt: 'Room 678',
                   src: './img/room-thumb-7.png',
-                }),
+                },
               },
               {
                 number: 450,
                 pricePerDay: 5300,
                 feedbackCounter: 39,
                 rate: 4,
-                images: new Array(4).fill({
+                image: {
                   alt: 'Room 450',
                   src: './img/room-thumb-8.png',
-                }),
+                },
               },
               {
                 number: 350,
                 pricePerDay: 5000,
                 feedbackCounter: 77,
                 rate: 3,
-                images: new Array(4).fill({
+                image: {
                   alt: 'Room 350',
                   src: './img/room-thumb-9.png',
-                }),
+                },
               },
               {
                 number: 666,
                 pricePerDay: 5000,
                 feedbackCounter: 25,
                 rate: 5,
-                images: new Array(4).fill({
+                image: {
                   alt: 'Room 666',
                   src: './img/room-thumb-10.png',
-                }),
+                },
               },
               {
                 number: 444,
                 pricePerDay: 5000,
                 feedbackCounter: 15,
                 rate: 3,
-                images: new Array(4).fill({
+                image: {
                   alt: 'Room 444',
                   src: './img/room-thumb-11.png',
-                }),
+                },
               },
               {
                 number: 352,
                 pricePerDay: 5000,
                 feedbackCounter: 55,
                 rate: 3,
-                images: new Array(4).fill({
+                image: {
                   alt: 'Room 352',
                   src: './img/room-thumb-12.png',
-                }),
+                },
               }
             ]
           each room, i in searchResult
@@ -263,7 +263,7 @@ mixin search-page
                 pricePerDay: room.pricePerDay,
                 feedbackCounter: room.feedbackCounter,
                 rate: room.rate,
-                images: room.images,
+                image: room.image,
                 feature: room.feature,
                 href: room.href || '/change-me',
               })

@@ -45,12 +45,11 @@ mixin sign-up(options)
       .sign-up__label
         +label({
           label: 'Дата рождения',
-          _for: 'sign-up__input-birthday',
+          _for: 'field-birthday',
         })
       .sign-up__text-input
         +text-input({
-          id: 'sign-up__input-birthday',
-          name: 'field-birthday',
+          id: 'field-birthday',
           placeholder: 'дд.мм.гггг',
           format: 'date',
         })

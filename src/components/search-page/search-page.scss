@@ -96,6 +96,9 @@
       &_rich {
         padding-right: 0;
         margin-top: 1.125rem;
+        #{$blockClass}__checkbox:nth-child(2) {
+          padding-right: 2rem;
+        }
         #{$blockClass}__checkbox {
           margin-bottom: 0.4375rem;
         }

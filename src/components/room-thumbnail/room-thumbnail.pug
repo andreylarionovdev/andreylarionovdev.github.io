@@ -8,7 +8,7 @@ mixin room-thumbnail(options)
       pricePerDay,
       feedbackCounter,
       rate,
-      images,
+      image,
       feature,
       hover,
     } = options || {};
@@ -24,16 +24,13 @@ mixin room-thumbnail(options)
 
   div(class=createBemClasses({ blockName, modifiers: blockModifiers}))
     figure.room-thumbnail__carousel
-      each image, inx in images
-        - const bemObj = { blockName, elementName: 'carousel-image'}
-        - bemObj.modifiers = inx === 0 ? ['active'] : [];
-        img(class=createBemClasses(bemObj) src=image.src alt=image.alt)
+      img(src=image.src alt=image.alt).room-thumbnail__carousel-image
       button(type='button' class=createBemClasses({ blockName, elementName: 'carousel-control', modifiers: [{ type: 'prev' }] }))
         span.material-icons= 'keyboard_arrow_left'
       button(type='button' class=createBemClasses({ blockName, elementName: 'carousel-control', modifiers: [{ type: 'next' }] }))
         span.material-icons= 'keyboard_arrow_left'
       div.room-thumbnail__carousel-indicators
-        each _, inx in images
+        each inx in [0, 1, 2, 3]
           - const bemObj = { blockName, elementName: 'carousel-indicator'};
           - bemObj.modifiers = inx === 0 ? ['active'] : [];
           button(type='button' class=createBemClasses(bemObj))
