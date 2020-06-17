@@ -10,13 +10,13 @@ const config = {
     favicon: './src/favicons/favicons.js',
     index: './src/pages/index/index.js',
     landing: './src/pages/landing/landing.js',
-    login: './src/pages/sign-in/sign-in.js',
-    registration: './src/pages/sign-up/sign-up.js',
+    'sign-in': './src/pages/sign-in/sign-in.js',
+    'sign-up': './src/pages/sign-up/sign-up.js',
     search: './src/pages/search/search.js',
-    room: './src/pages/room-details/room-details.js',
-    colors: './src/pages/colors-type/colors-type.js',
-    headers: './src/pages/headers-footers/headers-footers.js',
-    elements: './src/pages/form-elements/form-elements.js',
+    'room-details': './src/pages/room-details/room-details.js',
+    'colors-type': './src/pages/colors-type/colors-type.js',
+    'headers-footers': './src/pages/headers-footers/headers-footers.js',
+    'form-elements': './src/pages/form-elements/form-elements.js',
     cards: './src/pages/cards/cards.js',
   },
   output: {
@@ -109,12 +109,12 @@ const config = {
     new HtmlWebpackPlugin({
       filename: 'colors-type.html',
       template: 'src/pages/colors-type/colors-type.pug',
-      chunks: ['colors'],
+      chunks: ['colors-type'],
     }),
     new HtmlWebpackPlugin({
       filename: 'form-elements.html',
       template: 'src/pages/form-elements/form-elements.pug',
-      chunks: ['elements'],
+      chunks: ['form-elements'],
     }),
     new HtmlWebpackPlugin({
       filename: 'cards.html',
@@ -124,7 +124,7 @@ const config = {
     new HtmlWebpackPlugin({
       filename: 'headers-footers.html',
       template: 'src/pages/headers-footers/headers-footers.pug',
-      chunks: ['headers'],
+      chunks: ['headers-footers'],
     }),
     new HtmlWebpackPlugin({
       filename: 'landing.html',
@@ -139,17 +139,17 @@ const config = {
     new HtmlWebpackPlugin({
       filename: 'room-details.html',
       template: 'src/pages/room-details/room-details.pug',
-      chunks: ['room'],
+      chunks: ['room-details'],
     }),
     new HtmlWebpackPlugin({
       filename: 'sign-up.html',
       template: 'src/pages/sign-up/sign-up.pug',
-      chunks: ['registration'],
+      chunks: ['sign-up'],
     }),
     new HtmlWebpackPlugin({
       filename: 'sign-in.html',
       template: 'src/pages/sign-in/sign-in.pug',
-      chunks: ['login'],
+      chunks: ['sign-in'],
     }),
   ],
 };
