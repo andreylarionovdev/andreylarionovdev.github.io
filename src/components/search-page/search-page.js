@@ -5,18 +5,18 @@ import '../range-slider/range-slider';
 import '../checkbox-list-expandable/checkbox-list-expandable';
 import '../pagination/pagination';
 
-import './img/room-thumb-1.png';
-import './img/room-thumb-2.png';
-import './img/room-thumb-3.png';
-import './img/room-thumb-4.png';
-import './img/room-thumb-5.png';
-import './img/room-thumb-6.png';
-import './img/room-thumb-7.png';
-import './img/room-thumb-8.png';
-import './img/room-thumb-9.png';
-import './img/room-thumb-10.png';
-import './img/room-thumb-11.png';
-import './img/room-thumb-12.png';
+import './img/room-888.jpg';
+import './img/room-840.jpg';
+import './img/room-980.jpg';
+import './img/room-856.jpg';
+import './img/room-740.jpg';
+import './img/room-982.jpg';
+import './img/room-678.jpg';
+import './img/room-450.jpg';
+import './img/room-350.jpg';
+import './img/room-666.jpg';
+import './img/room-444.jpg';
+import './img/room-352.jpg';
 
 const SearchPage = function SearchPage() {
   this.init();

@@ -29,10 +29,15 @@
     width: 100%;
     max-width: 90rem;
     margin: 0 auto;
+    &:after {
+      content: '';
+      display: block;
+      height: 0;
+      clear: both;
+    }
   }
   &__featured-image {
     float: left;
-    font-size: 0;
     width: 31.9%;
     height: 100%;
     @media (max-width: $screen-xs-max) {
@@ -46,13 +51,13 @@
       }
     }
   }
-  &__main {
+  &__content {
     display: grid;
     grid-template-columns: 1fr 1.25fr;
     grid-column-gap: 5rem;
     grid-row-gap: 0.75rem;
     grid-template-areas:
-      'info rate'
+      'info votes'
       'feed feed'
       'rules cancel';
     @media (max-width: $screen-md-max) {
@@ -61,7 +66,7 @@
     @media (max-width: $screen-xs-max) {
       grid-template-areas:
         'info'
-        'rate'
+        'votes'
         'feed'
         'rules'
         'cancel';
@@ -88,13 +93,13 @@
       }
     }
   }
-  &__rate {
-    grid-area: rate;
+  &__votes {
+    grid-area: votes;
     #{$blockClass}__title {
       margin-bottom: 1.3125rem;
     }
   }
-  &__feedbacks {
+  &__feedback {
     grid-area: feed;
     padding-top: 0.0625rem;
     #{$blockClass}__section-header {
@@ -105,7 +110,7 @@
         flex-direction: column;
       }
     }
-    #{$blockClass}__counter {
+    #{$blockClass}__feedback-counter {
       @include primary-text;
       line-height: 1.75rem;
       text-align: right;

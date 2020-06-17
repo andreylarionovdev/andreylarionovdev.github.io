@@ -40,8 +40,7 @@ DonutChart.prototype.handleLabelClick = function handleLabelClick(e) {
   $(this.selectorCount)
     .removeClass()
     .addClass('donut-chart__count')
-    .addClass('js-donut-chart__count')
-    .addClass(`donut-chart__count_grade_${grade}`);
+    .addClass('js-donut-chart__count');
 };
 
 $(() => new DonutChart());
