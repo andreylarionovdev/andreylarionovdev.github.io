@@ -53,6 +53,7 @@ Datepicker.prototype.initDatepicker = function initDatepicker() {
       // We shouldn't change input values immediately
       that.$inputFrom.val(that.currentInputValues[0]);
       that.$inputTo.val(that.currentInputValues[1]);
+      that.toggleClearButton();
     },
   }).data('datepicker');
 };
@@ -141,10 +142,16 @@ Datepicker.prototype.addButtons = function addButtons($dpElement) {
     $footer.append($clearBtn).append($applyBtn);
     $dpElement.append($footer);
   }
+  this.toggleClearButton();
+};
+
+Datepicker.prototype.toggleClearButton = function toggleClearButton() {
+  const isClearButtonDisabled = this.$datepickerApi.selectedDates.length < 2;
+  this.$datepickerContainer.find(this.selectorClearButton).toggleClass('button_hidden', isClearButtonDisabled);
 };
 
 Datepicker.prototype.createButton = function createButton(action, caption) {
-  const clearClass = action === 'clear' ? 'button_color_gray' : '';
+  const clearClass = action === 'clear' ? 'button_hovered' : '';
   const template = `<button class="button button_theme_textual ${clearClass}" type="button" data-action="${action}">
                       <div class="button__inner-wrapper">
                         <span class="button__caption">${caption}</span>
