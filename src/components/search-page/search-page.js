@@ -51,11 +51,10 @@ SearchPage.prototype.handleShowFilterButtonClick = function handleShowFilterButt
 };
 
 SearchPage.prototype.handleClearFilterButtonClick = function handleClearFilterButtonClick(e) {
-  e.preventDefault();
   this.resetForm();
 };
 
-SearchPage.prototype.handleApplyFilterButtonClick = function handleClearFilterButtonClick(e) {
+SearchPage.prototype.handleApplyFilterButtonClick = function handleApplyFilterButtonClick(e) {
   e.preventDefault();
   this.toggleFilter();
 };
@@ -68,14 +67,6 @@ SearchPage.prototype.toggleFilter = function toggleFilter() {
 };
 
 SearchPage.prototype.resetForm = function resetForm() {
-  this.$filterForm.find('.js-dropdown').each((_, dropdown) => {
-    if (['rooms', 'guests'].includes($(dropdown).data('type'))) {
-      $(dropdown).data('api').clear();
-    }
-    $(dropdown).find('.js-dropdown__text-input').val('');
-  });
-  this.$filterForm.find('.js-checkbox__input').each((_, checkboxInput) => $(checkboxInput).attr('checked', false));
-
   const rangeSliderApi = this.$filterForm.find('.js-range-slider__input').data('ionRangeSlider');
   rangeSliderApi.reset();
 };

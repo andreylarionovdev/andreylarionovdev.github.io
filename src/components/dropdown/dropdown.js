@@ -180,17 +180,4 @@ Dropdown.prototype.buildValue = function buildValue(countsWithCategories) {
   return countsWithCategories.filter(Boolean).join(', ');
 };
 
-Dropdown.prototype.clear = function clear() {
-  const $counts = this.$element.find(this.selectorCount);
-  $counts.each((i, o) => $(o).text(0));
-
-  const $decButtons = this.$element.find(this.selectorDecCountButton);
-  $decButtons.each((i, o) => {
-    $(o).addClass(this.classCountButtonDisabled);
-  });
-
-  this.updateState();
-  this.updateView();
-};
-
 $(() => $('.js-dropdown').each((i, o) => new Dropdown($(o))));
