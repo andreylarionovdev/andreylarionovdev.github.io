@@ -123,7 +123,16 @@ Dropdown.prototype.handleChangeCountButtonClick = function handleChangeCountButt
 Dropdown.prototype.handleClearButtonClick = function handleClearButtonClick(e) {
   e.preventDefault();
 
-  this.clear();
+  const $counts = this.$element.find(this.selectorCount);
+  $counts.each((i, o) => $(o).text(0));
+
+  const $decButtons = this.$element.find(this.selectorDecCountButton);
+  $decButtons.each((i, o) => {
+    $(o).addClass(this.classCountButtonDisabled);
+  });
+
+  this.updateState();
+  this.updateView();
 };
 
 Dropdown.prototype.handleApplyButtonClick = function handleApplyButtonClick(e) {
