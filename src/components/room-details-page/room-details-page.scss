@@ -57,7 +57,7 @@
     grid-column-gap: 5rem;
     grid-row-gap: 0.75rem;
     grid-template-areas:
-      'info votes'
+      'info rating'
       'feed feed'
       'rules cancel';
     @media (max-width: $screen-md-max) {
@@ -66,7 +66,7 @@
     @media (max-width: $screen-xs-max) {
       grid-template-areas:
         'info'
-        'votes'
+        'rating'
         'feed'
         'rules'
         'cancel';
@@ -93,8 +93,8 @@
       }
     }
   }
-  &__votes {
-    grid-area: votes;
+  &__rating {
+    grid-area: rating;
     #{$blockClass}__title {
       margin-bottom: 1.3125rem;
     }
