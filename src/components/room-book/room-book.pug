@@ -52,20 +52,19 @@ mixin room-book(options)
 
     .room-book__result-grid
       .room-book__result-grid-cell!= `${formatCurrency({value: pricePerDay})} x ${daysCount} суток`
-      .room-book__result-grid-cell.room-book__result-grid-cell_content_with-info-icon
-      .room-book__result-grid-cell.room-book__result-grid-cell_content_with-sum!= formatCurrency({value: totalBrutto})
+      .room-book__result-grid-cell.room-book__result-grid-cell_type_currency!= formatCurrency({value: totalBrutto})
 
       .room-book__result-grid-cell!= `Сбор за услуги: скидка ${formatCurrency({value: discount})}`
-      .room-book__result-grid-cell.room-book__result-grid-cell_content_with-info-icon
+      .room-book__result-grid-cell.room-book__result-grid-cell_type_info
         span(title='change me').room-book__info-icon.material-icons= 'info_outline'
-      .room-book__result-grid-cell.room-book__result-grid-cell_content_with-sum= '0₽'
+      .room-book__result-grid-cell.room-book__result-grid-cell_type_currency= '0₽'
 
       .room-book__result-grid-cell= 'Сбор за дополнительные услуги'
-      .room-book__result-grid-cell.room-book__result-grid-cell_content_with-info-icon
+      .room-book__result-grid-cell.room-book__result-grid-cell_type_info
         span(title='change me').room-book__info-icon.material-icons= 'info_outline'
-      .room-book__result-grid-cell.room-book__result-grid-cell_content_with-sum!= formatCurrency({value: fee})
+      .room-book__result-grid-cell.room-book__result-grid-cell_type_currency!= formatCurrency({value: fee})
 
-    p.room-book__total-row
+    p.room-book__total
       span.room-book__total-header= 'Итого'
       span.room-book__total-line
       span.room-book__total-sum!= formatCurrency({value: totalNetto})
