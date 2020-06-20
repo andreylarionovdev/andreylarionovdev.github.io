@@ -19,12 +19,12 @@
     background-color: white;
   }
 
-  &__count,
+  &__counter,
   &__icon {
     line-height: 1.125rem;
     font-size: 0.625rem;
   }
-  &__count {
+  &__counter {
     padding: 0 0.3125rem;
   }
   &__icon {
@@ -33,7 +33,7 @@
 
   &_favorite {
     background: $grad-purple;
-    #{$blockName}__count {
+    #{$blockName}__counter {
       color: $color-purple;
     }
     #{$blockName}__icon {

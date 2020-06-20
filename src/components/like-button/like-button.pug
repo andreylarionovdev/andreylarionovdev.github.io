@@ -10,4 +10,4 @@ mixin like-button(options)
   button(class=createBemClasses({ blockName, modifiers: blockModifiers, jsPrefix }) type='button')
     span.like-button__inner-wrapper
       span(class=createBemClasses({ blockName, elementName: 'icon', jsPrefix })).material-icons= isFavorite ? 'favorite' : 'favorite_border'
-      span(class=createBemClasses({ blockName, elementName: 'count', jsPrefix }))= count
+      span(class=createBemClasses({ blockName, elementName: 'counter', jsPrefix }))= count

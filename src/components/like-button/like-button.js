@@ -7,7 +7,7 @@ const LikeButton = function LikeButton() {
 LikeButton.prototype.init = function init() {
   this.classFavorite = 'like-button_favorite';
   this.selectorButton = '.js-like-button';
-  this.selectorCount = '.js-like-button__count';
+  this.selectorCount = '.js-like-button__counter';
   this.selectorIcon = '.js-like-button__icon';
 
   this.addEventListeners();
