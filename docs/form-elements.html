@@ -13,7 +13,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>Официальный сайт отеля Toxin | UI Kit - Form elements</title>
-  <link href="form-elements.12e0a883efa8b711ef93.css" rel="stylesheet"></head>
+  <link href="form-elements.aaae79c6b3722fc0598b.css" rel="stylesheet"></head>
   <body class="body">
     <div class="form-elements-page">
       <nav class="form-elements-page__nav"><a class="logo" href="./index.html"><img class="logo__image" src="./img/logo.svg" alt="Логотип Toxin"></a>
@@ -34,7 +34,7 @@
             <div class="form-elements-page__dropdown">
               <label class="label"><span class="label__title">dropdown</span><span class="label__hint">default</span>
               </label>
-              <div class="dropdown dropdown_type_guests js-dropdown" data-type="guests">
+              <div class="dropdown dropdown_type_guests js-dropdown js-dropdown_type_guests">
                 <input class="dropdown__text-input js-dropdown__text-input" name="guests-default" placeholder="Сколько гостей" type="text" readonly>
                 <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
               </div>
@@ -45,34 +45,34 @@
                 <input class="text-input__field" id="input-with-mask" name="input-with-mask" type="text" placeholder="дд.мм.гггг"></span>
             </div>
             <div class="form-elements-page__dropdown form-elements-page__dropdown_theme_datepicker">
-              <div class="datepicker js-datepicker">
-                <div class="datepicker__group js-datepicker__group">
-                  <div class="datepicker__item js-datepicker__item">
-                    <div class="datepicker__label">
+              <div class="calendar js-calendar">
+                <div class="calendar__group js-calendar__group">
+                  <div class="calendar__item js-calendar__item">
+                    <div class="calendar__label">
                       <label class="label"><span class="label__title">date dropdown</span>
                       </label>
                     </div>
-                    <div class="datepicker__dropdown js-datepicker__dropdown">
-                      <div class="dropdown dropdown_type_date js-dropdown" data-type="date">
+                    <div class="calendar__dropdown js-calendar__dropdown">
+                      <div class="dropdown dropdown_type_date js-dropdown js-dropdown_type_date">
                         <input class="dropdown__text-input js-dropdown__text-input" name="field-date-from" placeholder="дд.мм.гггг" type="text" readonly>
                         <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
                       </div>
                     </div>
                   </div>
-                  <div class="datepicker__item js-datepicker__item">
-                    <div class="datepicker__label">
+                  <div class="calendar__item js-calendar__item">
+                    <div class="calendar__label">
                       <label class="label"><span class="label__title">date dropdown</span>
                       </label>
                     </div>
-                    <div class="datepicker__dropdown js-datepicker__dropdown">
-                      <div class="dropdown dropdown_type_date js-dropdown" data-type="date">
+                    <div class="calendar__dropdown js-calendar__dropdown">
+                      <div class="dropdown dropdown_type_date js-dropdown js-dropdown_type_date">
                         <input class="dropdown__text-input js-dropdown__text-input" title="19.08.2019 " name="field-date-to" value="19.08.2019 " placeholder="дд.мм.гггг" type="text" readonly>
                         <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="datepicker__datepicker-container js-datepicker__datepicker-container"></div>
+                <div class="calendar__container js-calendar__container"></div>
               </div>
             </div>
             <div class="form-elements-page__dropdown form-elements-page__dropdown_theme_date-filter">
@@ -133,8 +133,8 @@
             <div class="form-elements-page__like-button-group">
               <label class="label"><span class="label__title">like button</span>
               </label>
-              <button class="like-button js-like-button" type="button"><span class="like-button__inner-wrapper"><span class="like-button__icon js-like-button__icon material-icons">favorite_border</span><span class="like-button__count js-like-button__count">2</span></span></button>
-              <button class="like-button like-button_favorite js-like-button" type="button"><span class="like-button__inner-wrapper"><span class="like-button__icon js-like-button__icon material-icons">favorite</span><span class="like-button__count js-like-button__count">12</span></span></button>
+              <button class="like-button js-like-button" type="button"><span class="like-button__inner-wrapper"><span class="like-button__icon js-like-button__icon material-icons">favorite_border</span><span class="like-button__counter js-like-button__counter">2</span></span></button>
+              <button class="like-button like-button_favorite js-like-button" type="button"><span class="like-button__inner-wrapper"><span class="like-button__icon js-like-button__icon material-icons">favorite</span><span class="like-button__counter js-like-button__counter">12</span></span></button>
             </div>
             <div class="form-elements-page__rating-group">
               <label class="label"><span class="label__title">rate button</span>
@@ -185,29 +185,29 @@
             <div class="form-elements-page__dropdown form-elements-page__dropdown_collapsed">
               <label class="label"><span class="label__title">dropdown</span><span class="label__hint">default</span>
               </label>
-              <div class="dropdown dropdown_with-z-index-priority dropdown_type_rooms js-dropdown" data-type="rooms">
+              <div class="dropdown dropdown_with-z-index-priority dropdown_type_rooms js-dropdown js-dropdown_type_rooms">
                 <input class="dropdown__text-input js-dropdown__text-input" name="guests-collapsed" placeholder="Удобства" type="text" readonly>
                 <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
                 <ul class="dropdown__list js-dropdown__list">
                   <li class="dropdown__list-item js-dropdown__list-item">
                     <div class="dropdown__item-name">спальни</div>
                     <div class="dropdown__counter-buttons">
-                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_dec js-dropdown__counter-button_type_dec" type="button" data-operator="-">-</button><span class="dropdown__counter js-dropdown__counter">2</span>
-                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_inc js-dropdown__counter-button_type_inc" type="button" data-operator="+">+</button>
+                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_dec js-dropdown__counter-button_type_dec" type="button">-</button><span class="dropdown__counter js-dropdown__counter">2</span>
+                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_inc js-dropdown__counter-button_type_inc" type="button">+</button>
                     </div>
                   </li>
                   <li class="dropdown__list-item js-dropdown__list-item">
                     <div class="dropdown__item-name">кровати</div>
                     <div class="dropdown__counter-buttons">
-                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_dec js-dropdown__counter-button_type_dec" type="button" data-operator="-">-</button><span class="dropdown__counter js-dropdown__counter">2</span>
-                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_inc js-dropdown__counter-button_type_inc" type="button" data-operator="+">+</button>
+                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_dec js-dropdown__counter-button_type_dec" type="button">-</button><span class="dropdown__counter js-dropdown__counter">2</span>
+                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_inc js-dropdown__counter-button_type_inc" type="button">+</button>
                     </div>
                   </li>
                   <li class="dropdown__list-item js-dropdown__list-item">
                     <div class="dropdown__item-name">ванные комнаты</div>
                     <div class="dropdown__counter-buttons">
-                      <button class="dropdown__counter-button dropdown__counter-button_disabled js-dropdown__counter-button dropdown__counter-button_type_dec js-dropdown__counter-button_type_dec" type="button" data-operator="-">-</button><span class="dropdown__counter js-dropdown__counter">0</span>
-                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_inc js-dropdown__counter-button_type_inc" type="button" data-operator="+">+</button>
+                      <button class="dropdown__counter-button dropdown__counter-button_disabled js-dropdown__counter-button dropdown__counter-button_type_dec js-dropdown__counter-button_type_dec" type="button">-</button><span class="dropdown__counter js-dropdown__counter">0</span>
+                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_inc js-dropdown__counter-button_type_inc" type="button">+</button>
                     </div>
                   </li>
                 </ul>
@@ -216,29 +216,29 @@
             <div class="form-elements-page__dropdown form-elements-page__dropdown_theme_expanded">
               <label class="label"><span class="label__title">dropdown</span><span class="label__hint">expanded</span>
               </label>
-              <div class="dropdown dropdown_expanded dropdown_type_rooms js-dropdown" data-type="rooms">
+              <div class="dropdown dropdown_expanded dropdown_type_rooms js-dropdown js-dropdown_type_rooms">
                 <input class="dropdown__text-input js-dropdown__text-input" name="guests-expanded" placeholder="Удобства" type="text" readonly>
                 <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
                 <ul class="dropdown__list js-dropdown__list">
                   <li class="dropdown__list-item js-dropdown__list-item">
                     <div class="dropdown__item-name">спальни</div>
                     <div class="dropdown__counter-buttons">
-                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_dec js-dropdown__counter-button_type_dec" type="button" data-operator="-">-</button><span class="dropdown__counter js-dropdown__counter">2</span>
-                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_inc js-dropdown__counter-button_type_inc" type="button" data-operator="+">+</button>
+                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_dec js-dropdown__counter-button_type_dec" type="button">-</button><span class="dropdown__counter js-dropdown__counter">2</span>
+                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_inc js-dropdown__counter-button_type_inc" type="button">+</button>
                     </div>
                   </li>
                   <li class="dropdown__list-item js-dropdown__list-item">
                     <div class="dropdown__item-name">кровати</div>
                     <div class="dropdown__counter-buttons">
-                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_dec js-dropdown__counter-button_type_dec" type="button" data-operator="-">-</button><span class="dropdown__counter js-dropdown__counter">2</span>
-                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_inc js-dropdown__counter-button_type_inc" type="button" data-operator="+">+</button>
+                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_dec js-dropdown__counter-button_type_dec" type="button">-</button><span class="dropdown__counter js-dropdown__counter">2</span>
+                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_inc js-dropdown__counter-button_type_inc" type="button">+</button>
                     </div>
                   </li>
                   <li class="dropdown__list-item js-dropdown__list-item">
                     <div class="dropdown__item-name">ванные комнаты</div>
                     <div class="dropdown__counter-buttons">
-                      <button class="dropdown__counter-button dropdown__counter-button_disabled js-dropdown__counter-button dropdown__counter-button_type_dec js-dropdown__counter-button_type_dec" type="button" data-operator="-">-</button><span class="dropdown__counter js-dropdown__counter">0</span>
-                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_inc js-dropdown__counter-button_type_inc" type="button" data-operator="+">+</button>
+                      <button class="dropdown__counter-button dropdown__counter-button_disabled js-dropdown__counter-button dropdown__counter-button_type_dec js-dropdown__counter-button_type_dec" type="button">-</button><span class="dropdown__counter js-dropdown__counter">0</span>
+                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_inc js-dropdown__counter-button_type_inc" type="button">+</button>
                     </div>
                   </li>
                 </ul>
@@ -250,29 +250,29 @@
             <div class="form-elements-page__dropdown form-elements-page__dropdown_theme_empty">
               <label class="label"><span class="label__title">dropdown</span>
               </label>
-              <div class="dropdown dropdown_expanded dropdown_type_guests js-dropdown" data-type="guests">
+              <div class="dropdown dropdown_expanded dropdown_type_guests js-dropdown js-dropdown_type_guests">
                 <input class="dropdown__text-input js-dropdown__text-input" name="guests-empty" placeholder="Сколько гостей" type="text" readonly>
                 <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
                 <ul class="dropdown__list js-dropdown__list">
                   <li class="dropdown__list-item js-dropdown__list-item">
                     <div class="dropdown__item-name">взрослые</div>
                     <div class="dropdown__counter-buttons">
-                      <button class="dropdown__counter-button dropdown__counter-button_disabled js-dropdown__counter-button dropdown__counter-button_type_dec js-dropdown__counter-button_type_dec" type="button" data-operator="-">-</button><span class="dropdown__counter js-dropdown__counter">0</span>
-                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_inc js-dropdown__counter-button_type_inc" type="button" data-operator="+">+</button>
+                      <button class="dropdown__counter-button dropdown__counter-button_disabled js-dropdown__counter-button dropdown__counter-button_type_dec js-dropdown__counter-button_type_dec" type="button">-</button><span class="dropdown__counter js-dropdown__counter">0</span>
+                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_inc js-dropdown__counter-button_type_inc" type="button">+</button>
                     </div>
                   </li>
                   <li class="dropdown__list-item js-dropdown__list-item">
                     <div class="dropdown__item-name">дети</div>
                     <div class="dropdown__counter-buttons">
-                      <button class="dropdown__counter-button dropdown__counter-button_disabled js-dropdown__counter-button dropdown__counter-button_type_dec js-dropdown__counter-button_type_dec" type="button" data-operator="-">-</button><span class="dropdown__counter js-dropdown__counter">0</span>
-                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_inc js-dropdown__counter-button_type_inc" type="button" data-operator="+">+</button>
+                      <button class="dropdown__counter-button dropdown__counter-button_disabled js-dropdown__counter-button dropdown__counter-button_type_dec js-dropdown__counter-button_type_dec" type="button">-</button><span class="dropdown__counter js-dropdown__counter">0</span>
+                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_inc js-dropdown__counter-button_type_inc" type="button">+</button>
                     </div>
                   </li>
                   <li class="dropdown__list-item js-dropdown__list-item">
                     <div class="dropdown__item-name">младенцы</div>
                     <div class="dropdown__counter-buttons">
-                      <button class="dropdown__counter-button dropdown__counter-button_disabled js-dropdown__counter-button dropdown__counter-button_type_dec js-dropdown__counter-button_type_dec" type="button" data-operator="-">-</button><span class="dropdown__counter js-dropdown__counter">0</span>
-                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_inc js-dropdown__counter-button_type_inc" type="button" data-operator="+">+</button>
+                      <button class="dropdown__counter-button dropdown__counter-button_disabled js-dropdown__counter-button dropdown__counter-button_type_dec js-dropdown__counter-button_type_dec" type="button">-</button><span class="dropdown__counter js-dropdown__counter">0</span>
+                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_inc js-dropdown__counter-button_type_inc" type="button">+</button>
                     </div>
                   </li>
                   <li class="dropdown__footer-buttons"><span class="dropdown__clear-button js-dropdown__clear-button">
@@ -287,29 +287,29 @@
             <div class="form-elements-page__dropdown form-elements-page__dropdown_theme_filled">
               <label class="label"><span class="label__title">dropdown</span>
               </label>
-              <div class="dropdown dropdown_expanded dropdown_type_guests js-dropdown" data-type="guests">
+              <div class="dropdown dropdown_expanded dropdown_type_guests js-dropdown js-dropdown_type_guests">
                 <input class="dropdown__text-input js-dropdown__text-input" name="guests-filled" placeholder="Сколько гостей" type="text" readonly>
                 <button class="dropdown__toggle-button js-dropdown__toggle-button material-icons" type="button">keyboard_arrow_down</button>
                 <ul class="dropdown__list js-dropdown__list">
                   <li class="dropdown__list-item js-dropdown__list-item">
                     <div class="dropdown__item-name">взрослые</div>
                     <div class="dropdown__counter-buttons">
-                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_dec js-dropdown__counter-button_type_dec" type="button" data-operator="-">-</button><span class="dropdown__counter js-dropdown__counter">2</span>
-                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_inc js-dropdown__counter-button_type_inc" type="button" data-operator="+">+</button>
+                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_dec js-dropdown__counter-button_type_dec" type="button">-</button><span class="dropdown__counter js-dropdown__counter">2</span>
+                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_inc js-dropdown__counter-button_type_inc" type="button">+</button>
                     </div>
                   </li>
                   <li class="dropdown__list-item js-dropdown__list-item">
                     <div class="dropdown__item-name">дети</div>
                     <div class="dropdown__counter-buttons">
-                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_dec js-dropdown__counter-button_type_dec" type="button" data-operator="-">-</button><span class="dropdown__counter js-dropdown__counter">1</span>
-                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_inc js-dropdown__counter-button_type_inc" type="button" data-operator="+">+</button>
+                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_dec js-dropdown__counter-button_type_dec" type="button">-</button><span class="dropdown__counter js-dropdown__counter">1</span>
+                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_inc js-dropdown__counter-button_type_inc" type="button">+</button>
                     </div>
                   </li>
                   <li class="dropdown__list-item js-dropdown__list-item">
                     <div class="dropdown__item-name">младенцы</div>
                     <div class="dropdown__counter-buttons">
-                      <button class="dropdown__counter-button dropdown__counter-button_disabled js-dropdown__counter-button dropdown__counter-button_type_dec js-dropdown__counter-button_type_dec" type="button" data-operator="-">-</button><span class="dropdown__counter js-dropdown__counter">0</span>
-                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_inc js-dropdown__counter-button_type_inc" type="button" data-operator="+">+</button>
+                      <button class="dropdown__counter-button dropdown__counter-button_disabled js-dropdown__counter-button dropdown__counter-button_type_dec js-dropdown__counter-button_type_dec" type="button">-</button><span class="dropdown__counter js-dropdown__counter">0</span>
+                      <button class="dropdown__counter-button js-dropdown__counter-button dropdown__counter-button_type_inc js-dropdown__counter-button_type_inc" type="button">+</button>
                     </div>
                   </li>
                   <li class="dropdown__footer-buttons"><span class="dropdown__clear-button js-dropdown__clear-button">
@@ -398,18 +398,9 @@
                 </label>
               </div>
               <ul class="bullet-list">
-                <li class="bullet-list__item">
-                  <div class="bullet-list__marker-wrapper"><span class="bullet-list__marker"></span></div>
-                  <p class="bullet-list__text">Нельзя с питомцами</p>
-                </li>
-                <li class="bullet-list__item">
-                  <div class="bullet-list__marker-wrapper"><span class="bullet-list__marker"></span></div>
-                  <p class="bullet-list__text">Без вечеринок и мероприятий</p>
-                </li>
-                <li class="bullet-list__item">
-                  <div class="bullet-list__marker-wrapper"><span class="bullet-list__marker"></span></div>
-                  <p class="bullet-list__text">Время прибытия &mdash; после 13:00, а выезд до 12:00</p>
-                </li>
+                <li class="bullet-list__item">Нельзя с питомцами</li>
+                <li class="bullet-list__item">Без вечеринок и мероприятий</li>
+                <li class="bullet-list__item">Время прибытия &mdash; после 13:00, а выезд до 12:00</li>
               </ul>
             </div>
           </div>
@@ -443,9 +434,9 @@
                     <p class="feedback__date">5 дней назад</p>
                   </div>
                   <div class="feedback__like-button">
-                    <button class="like-button like-button_favorite js-like-button" type="button"><span class="like-button__inner-wrapper"><span class="like-button__icon js-like-button__icon material-icons">favorite</span><span class="like-button__count js-like-button__count">12</span></span></button>
+                    <button class="like-button like-button_favorite js-like-button" type="button"><span class="like-button__inner-wrapper"><span class="like-button__icon js-like-button__icon material-icons">favorite</span><span class="like-button__counter js-like-button__counter">12</span></span></button>
                   </div>
-                  <p class="feedback__text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И&nbsp;стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
+                  <p class="feedback__text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
                 </div>
               </div>
             </div>
@@ -453,5 +444,5 @@
         </section>
       </div>
     </div>
-  <script type="text/javascript" src="form-elements.12e0a883efa8b711ef93.js"></script></body>
+  <script type="text/javascript" src="form-elements.aaae79c6b3722fc0598b.js"></script></body>
 </html>
