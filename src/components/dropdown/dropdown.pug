@@ -25,7 +25,9 @@ mixin dropdown(options)
   - const blockName = 'dropdown';
   - const jsPrefix = 'js';
 
-  div(class=createBemClasses({ blockName, modifiers: blockModifiers, jsPrefix }))&attributes({ 'data-type': type })
+  - const jsTypeClass = type ? `js-${blockName}_type_${type}` : '';
+
+  div(class=createBemClasses({ blockName, modifiers: blockModifiers, jsPrefix }) class=jsTypeClass)
     input(
       class=createBemClasses({ blockName, elementName: 'text-input', jsPrefix })
       title=(value || false)
@@ -45,9 +47,9 @@ mixin dropdown(options)
               - const decButtonModifiers = row.count < 1 ? ['disabled'] : [];
               - const decButtonClasses = createBemClasses({ blockName, elementName: 'counter-button', modifiers: decButtonModifiers, jsPrefix })
               - const incButtonClasses = createBemClasses({ blockName, elementName: 'counter-button', jsPrefix })
-              button(class=decButtonClasses type='button' data-operator='-').dropdown__counter-button_type_dec.js-dropdown__counter-button_type_dec= '-'
+              button(class=decButtonClasses type='button').dropdown__counter-button_type_dec.js-dropdown__counter-button_type_dec= '-'
               span(class=createBemClasses({ blockName, elementName: 'counter', jsPrefix }))= row.count
-              button(class=incButtonClasses type='button' data-operator='+').dropdown__counter-button_type_inc.js-dropdown__counter-button_type_inc= '+'
+              button(class=incButtonClasses type='button').dropdown__counter-button_type_inc.js-dropdown__counter-button_type_inc= '+'
         if type === 'guests'
           li.dropdown__footer-buttons
             span(class=createBemClasses({ blockName, elementName: 'clear-button', jsPrefix }))

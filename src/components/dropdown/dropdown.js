@@ -34,7 +34,7 @@ Dropdown.prototype.init = function init($element) {
 };
 
 Dropdown.prototype.parseProperties = function parseProperties() {
-  this.type = this.$element.attr('data-type');
+  this.type = this.parseModifierValue(this.$element, 'js-dropdown_type_');
 
   if ([GUEST_TYPE, ROOM_TYPE].includes(this.type)) {
     this.initState();
@@ -86,16 +86,16 @@ Dropdown.prototype.handleChangeCountButtonClick = function handleChangeCountButt
   e.preventDefault();
 
   const $button = $(e.currentTarget).closest(this.selectorCountButton);
-  const operator = $button.data('operator');
+  const operator = this.parseModifierValue($button, 'js-dropdown__counter-button_type_');
 
   const $li = $(e.currentTarget).closest(this.selectorMenuItem);
 
-  if (operator === '+') {
+  if (operator === 'inc') {
     $li.find(this.selectorCountButton).removeClass(this.classCountButtonDisabled);
   }
   const changeCount = {
-    '+': (x) => x + 1,
-    '-': (x) => x - 1,
+    inc: (x) => x + 1,
+    dec: (x) => x - 1,
   };
 
   const $count = $li.find(this.selectorCount);
@@ -187,6 +187,14 @@ Dropdown.prototype.buildValue = function buildValue(countsWithCategories) {
   }
 
   return countsWithCategories.filter(Boolean).join(', ');
+};
+
+Dropdown.prototype.parseModifierValue = function parseModifierValue($element, startsWith) {
+  const modifierClass = $element.attr('class')
+    .split(' ')
+    .find((className) => className.startsWith(startsWith));
+
+  return modifierClass ? modifierClass.split('_').pop() : null;
 };
 
 $(() => $('.js-dropdown').each((i, o) => new Dropdown($(o))));
