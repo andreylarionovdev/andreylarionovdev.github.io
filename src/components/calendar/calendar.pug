@@ -1,7 +1,7 @@
 include ../label/label
 include ../dropdown/dropdown
 
-mixin datepicker(options)
+mixin calendar(options)
   -
     const {
       theme,
@@ -13,7 +13,7 @@ mixin datepicker(options)
     } = options || {}
 
     const createBemClasses = require('../../utils/helpers').createBemClasses;
-    const blockName = 'datepicker';
+    const blockName = 'calendar';
     const jsPrefix = 'js';
 
     const jsClassTheme = theme ? `${jsPrefix}-${blockName}_theme_${theme}` : '';
@@ -21,7 +21,7 @@ mixin datepicker(options)
   div(class=createBemClasses({ blockName, modifiers: [{ theme }], jsPrefix }) class=jsClassTheme)
     div(class=createBemClasses({ blockName, elementName: 'group', jsPrefix }))
       div(class=createBemClasses({ blockName, elementName: 'item', jsPrefix }))
-        .datepicker__label
+        .calendar__label
           +label({ label: fromLabel })
         div(class=createBemClasses({ blockName, elementName: 'dropdown', jsPrefix }))
           +dropdown({
@@ -31,7 +31,7 @@ mixin datepicker(options)
             placeholder,
           })
       div(class=createBemClasses({ blockName, elementName: 'item', jsPrefix }))
-        .datepicker__label
+        .calendar__label
           +label({ label: toLabel })
         div(class=createBemClasses({ blockName, elementName: 'dropdown', jsPrefix }))
           +dropdown({
@@ -40,4 +40,4 @@ mixin datepicker(options)
             type: 'date',
             placeholder,
           })
-    div(class=createBemClasses({ blockName, elementName: 'datepicker-container', jsPrefix }))
+    div(class=createBemClasses({ blockName, elementName: 'container', jsPrefix }))

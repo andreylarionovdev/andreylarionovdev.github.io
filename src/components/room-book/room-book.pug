@@ -1,6 +1,6 @@
 include ../label/label
 include ../dropdown/dropdown
-include ../datepicker/datepicker
+include ../calendar/calendar
 
 mixin room-book(options)
   -
@@ -29,10 +29,8 @@ mixin room-book(options)
         |&nbsp;
         span.room-book__date-unit= 'в сутки'
 
-    .room-book__datepicker
-      +datepicker({
-        id: 'room-book-datepicker',
-      })
+    .room-book__calendar
+      +calendar
 
     .room-book__guests-dropdown-group
       .room-book__label

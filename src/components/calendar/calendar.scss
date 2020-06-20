@@ -1,7 +1,7 @@
 @import '../../utils/vars';
 @import '../../utils/mixins';
 
-.datepicker {
+.calendar {
   $blockClass: &;
   &__group {
     display: grid;
@@ -13,7 +13,7 @@
   &__label {
     margin-bottom: 0.3125rem;
   }
-  &__datepicker-container {
+  &__container {
     position: relative;
     width: 100%;
   }

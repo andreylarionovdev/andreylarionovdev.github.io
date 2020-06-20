@@ -1,7 +1,7 @@
 include ../logo/logo
 include ../text-input/text-input
 include ../dropdown/dropdown
-include ../datepicker/datepicker
+include ../calendar/calendar
 include ../radio-button/radio-button
 include ../checkbox/checkbox
 include ../label/label
@@ -67,8 +67,7 @@ mixin form-elements-page
               format: 'date',
             })
           .form-elements-page__dropdown.form-elements-page__dropdown_theme_datepicker
-            +datepicker({
-              id: 'datepicker-demo',
+            +calendar({
               fromLabel: 'date dropdown',
               toLabel: 'date dropdown',
               to: '19.08.2019 '

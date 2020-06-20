@@ -1,2 +1,2 @@
-import '../datepicker/datepicker';
+import '../calendar/calendar';
 import '../dropdown/dropdown';
