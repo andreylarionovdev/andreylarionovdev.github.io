@@ -134,7 +134,7 @@
     }
   }
   &__rules,
-  &__cancel {
+  &__cancellation {
     padding-right: 1.25rem;
     #{$blockClass}__title {
       margin-bottom: 1.0625rem;
@@ -149,10 +149,10 @@
       }
     }
   }
-  &__cancel {
+  &__cancellation {
     grid-area: cancel;
   }
-  &__cancel-text {
+  &__text {
     @include primary-text;
   }
   &__sidebar {
