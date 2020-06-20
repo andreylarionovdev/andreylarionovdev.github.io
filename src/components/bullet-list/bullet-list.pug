@@ -3,7 +3,4 @@ mixin bullet-list(options)
 
   ul(id=id).bullet-list
     each item, index in items
-      li.bullet-list__item
-        .bullet-list__marker-wrapper
-          span.bullet-list__marker
-        p.bullet-list__text!= item.text
+      li.bullet-list__item!= item.text
