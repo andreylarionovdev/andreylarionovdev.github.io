@@ -11,8 +11,8 @@ DonutChart.prototype.init = function init() {
   this.selectorDonutChart = '.js-donut-chart';
   this.selectorLabel = '.js-donut-chart__label';
   this.selectorCircle = '.js-donut-chart__circle';
-  this.selectorCount = '.js-donut-chart__count';
-  this.selectorCountValue = '.js-donut-chart__count-value';
+  this.selectorCount = '.js-donut-chart__counter';
+  this.selectorCountValue = '.js-donut-chart__counter-value';
 
   this.addEventListeners();
 };
@@ -39,8 +39,8 @@ DonutChart.prototype.handleLabelClick = function handleLabelClick(e) {
 
   $(this.selectorCount)
     .removeClass()
-    .addClass('donut-chart__count')
-    .addClass('js-donut-chart__count');
+    .addClass('donut-chart__counter')
+    .addClass('js-donut-chart__counter');
 };
 
 $(() => new DonutChart());

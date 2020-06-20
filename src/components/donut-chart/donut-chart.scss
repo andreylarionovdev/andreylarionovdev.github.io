@@ -21,62 +21,62 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      min-width: 0.625rem;
+      min-height: 0.625rem;
+      border-radius: 50%;
+      margin-right: 0.3125rem;
+    }
+
     &_grade {
       &_perfect {
-        #{$blockClass}__bullet {
+        &:before {
           background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
         }
       }
       &_good {
-        #{$blockClass}__bullet {
+        &:before {
           background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
         }
       }
       &_satisfactorily {
-        #{$blockClass}__bullet {
+        &:before {
           background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         }
       }
       &_bad {
-        #{$blockClass}__bullet {
+        &:before {
           background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
         }
       }
     }
     &_active {
       font-weight: bold;
-      #{$blockClass}__bullet {
+      &:before {
         width: 0.75rem;
         height: 0.75rem;
       }
     }
-  }
-  &__caption {
-    margin-left: 0.3125rem;
-    word-break: break-word;
-  }
-  &__bullet {
-    display: inline-block;
-    min-width: 0.625rem;
-    min-height: 0.625rem;
-    border-radius: 50%;
   }
   &__circle {
     &_active {
       stroke-width: 6;
     }
   }
-  &__count {
+  &__counter {
     color: $color-purple;
     fill: $color-purple;
     stroke: $color-purple;
   }
-  &__count-value {
+  &__counter-value {
     font-family: Quicksand, sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
   }
-  &__count-unit {
+  &__counter-unit {
     font-size: 0.9375rem;
   }
 }

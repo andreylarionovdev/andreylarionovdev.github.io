@@ -61,14 +61,16 @@ mixin donut-chart(options)
             stroke-dashoffset=strokeDashOffset
             transform=circleTransformValue
           )
-      g(class=createBemClasses({ blockName, elementName: 'count', jsPrefix }))
-        text(class=createBemClasses({ blockName, elementName: 'count-value', jsPrefix }) x='50%' y='48%' text-anchor='middle')= total
-        text.donut-chart__count-unit(x='50%' y='63%' text-anchor='middle')= 'голосов'
+      g(class=createBemClasses({ blockName, elementName: 'counter', jsPrefix }))
+        text(class=createBemClasses({ blockName, elementName: 'counter-value', jsPrefix }) x='50%' y='48%' text-anchor='middle')= total
+        text.donut-chart__counter-unit(x='50%' y='63%' text-anchor='middle')= 'голосов'
 
     ul.donut-chart__labels
       each label, grade in voteLabels
         - const countSourceItem = sortedValues.find(obj => obj.label === grade);
         - const count = countSourceItem !== undefined ? countSourceItem.count : '0';
-        li(class=createBemClasses({ blockName, elementName: 'label', modifiers: [{ grade }], jsPrefix }) data-grade=grade data-count=count)
-          span.donut-chart__bullet
-          span.donut-chart__caption= label
+        li(
+          class=createBemClasses({ blockName, elementName: 'label', modifiers: [{ grade }], jsPrefix })
+          data-grade=grade
+          data-count=count
+        )= label
