@@ -3,51 +3,57 @@ include ../header/header
 include ../footer/footer
   
 mixin headers-footers-page
-  - const theme = 'ui-kit';
-  - const user = 'Cosmin Negoita';
+  - const user = 'Юлий Цезарь';
   -
     const href = '/change-me';
     const menuItems = [
-      {name: 'Home', href, active: true},
-      {name: 'About Us', href},
+      {name: 'О нас', href, active: true},
       {
-        name: 'Services',
+        name: 'Услуги',
         sub: [
-          {name: 'One One', href},
-          {name: 'Two Two', href},
-          {name: 'Three', href}
+          {name: 'Услуга 1', href},
+          {name: 'Услуга 2', href},
+          {name: 'Услуга 3', href}
         ],
         href,
       },
-      {name: 'Careers', href},
-      {name: 'News', href},
-      {name: 'Documentation', href}
+      {name: 'Вакансии', href},
+      {name: 'Новости', href},
+      {
+        name: 'Соглашения',
+        sub: [
+          {name: 'Соглашение 1', href},
+          {name: 'Соглашение 2', href},
+          {name: 'Соглашение 3', href}
+        ],
+        href,
+      }
     ];
   -
     const menuButtons = [
       {
         name: 'sign-in-btn',
         theme: 'white',
-        caption: 'Login',
+        caption: 'Войти',
         size: 'small',
-        href: 'sign-in.html',
+        href: 'sign-in.html'
       },
       {
         name: 'sign-up-btn',
         theme: 'default',
-        caption: 'Register',
+        caption: 'Зарегистрироваться',
         size: 'small',
-        href: 'sign-up.html',
+        href: 'sign-up.html'
       }
     ];
   article.headers-footers-page
     nav.headers-footers-page__nav
       +logo
     section.headers-footers-page__header
-      +header({theme, menuItems, menuButtons})
+      +header({menuItems, menuButtons})
     section.headers-footers-page__header
-      +header({theme, user, menuItems, menuButtons})
+      +header({user, menuItems, menuButtons})
     section.headers-footers-page__footer
-      +footer({ theme })
-    section.headers-footers-page__footer
-      +footer({theme: 'creative'})
+      +footer
+    section.headers-footers-page__footer_size_small
+      +footer({ theme: 'mobile'})

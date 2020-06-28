@@ -7,37 +7,37 @@ mixin footer(options)
       theme,
       menus = [
         {
-          title: 'Navigation',
+          title: 'Навигация',
           links: [
-            {text: 'About Us', href: '/change-me'},
-            {text: 'News', href: '/change-me'},
-            {text: 'Support', href: '/change-me'},
-            {text: 'Products', href: '/change-me'}
+            {text: 'О нас', href},
+            {text: 'Новости', href},
+            {text: 'Служба поддержки', href},
+            {text: 'Услуги', href}
           ]
         },
         {
-          title: 'About Us',
+          title: 'О нас',
           links: [
-            {text: 'Who we are', href: '/change-me'},
-            {text: 'Our team', href: '/change-me'},
-            {text: 'Careers', href: '/change-me'},
-            {text: 'Investors', href: '/change-me'}
-          ]
+            {text: 'О сервисе', href},
+            {text: 'Наша команда', href},
+            {text: 'Вакансии', href},
+            {text: 'Инвесторы', href}
+          ],
         },
         {
-          title: 'Support',
+          title: 'Служба поддержки',
           links: [
-            {text: 'Documentation', href: '/change-me'},
-            {text: 'Community', href: '/change-me'},
-            {text: 'Get in Touch', href: '/change-me'}
+            {text: 'Соглашения', href},
+            {text: 'Сообщества', href},
+            {text: 'Связь с нами', href}
           ]
         }
       ],
-      leftDescription = 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
-      rightDescription = 'Receive our latest news and promotions in your inbox!',
-      rightTitle = 'Subscribe to our newsletter',
-      rightPlaceholder = 'Your email address',
-      copyright = 'Copyright © 2018 Toxin UI Kit. All rights reserved.',
+      leftDescription = 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
+      rightDescription = 'Получайте специальные предложения и новости сервиса',
+      rightTitle = 'Подписка',
+      rightPlaceholder = 'Email',
+      copyright = 'Copyright © 2018 Toxin отель. Все права зачищены.',
     } = options || {};
 
   - const createBemClasses = require('../../utils/helpers').createBemClasses;

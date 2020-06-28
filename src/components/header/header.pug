@@ -2,15 +2,13 @@ include ../logo/logo
 include ../button/button
 
 mixin header(options)
-  - const { theme, user, menuItems, menuButtons } = options || {};
+  - const { user, menuItems, menuButtons } = options || {};
 
   - const createBemClasses = require('../../utils/helpers').createBemClasses;
   - const blockName = 'header';
   - const jsPrefix = 'js';
 
-  - const classTheme = theme ? `${blockName}_theme_${theme}` : '';
-
-  header.header.js-header(class=classTheme)
+  header.header.js-header
     nav.header__inner-wrapper
       .header__logo
         +logo(true)
@@ -21,10 +19,9 @@ mixin header(options)
             - const bemObj = { blockName, elementName: 'navigation-link'}
             if item.sub
               - bemObj.modifiers = [{ theme: 'with-submenu' }]
+            if item.active
+              - bemObj.modifiers = [ 'active' ]
             a(class=createBemClasses(bemObj) href=item.href)
-              if item.active
-                b= item.name
-              else
                 = item.name
       if user
         ul.header__user-navigation.js-header__user-navigation.header__user-navigation_authenticated

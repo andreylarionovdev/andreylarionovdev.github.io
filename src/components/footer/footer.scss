@@ -6,6 +6,47 @@
 
 .footer {
   $blockClass: &;
+  @mixin footer-theme-mobile {
+    padding: 7.5rem 0 6.75rem 0;
+    max-width: $screen-sm-min;
+    margin: 0 auto;
+    #{$blockClass}__main-area {
+      border-bottom: none;
+      #{$blockClass}__inner-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'about';
+        padding: 0;
+      }
+    }
+    #{$blockClass}__about-us {
+      text-align: center;
+      padding: 0 25%;
+      @media (max-width: $screen-xs-max) {
+        padding: 0;
+      }
+    }
+    #{$blockClass}__copyright-area {
+      #{$blockClass}__inner-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'copyright'
+            'social';
+      }
+    }
+    #{$blockClass}__social-list {
+      justify-self: center;
+      padding: .5625rem 0;
+    }
+    #{$blockClass}__copyright {
+      text-align: center;
+      padding: .8125rem 0;
+    }
+    #{$blockClass}__navigation,
+    #{$blockClass}__subscription-form,
+    #{$blockClass}__description {
+      display: none;
+    }
+  }
   min-height: inherit;
   background: white;
   box-shadow: 0 0.625rem 1.25rem $color-primary-5;
@@ -59,11 +100,6 @@
     flex-flow: row wrap;
     justify-content: space-between;
     padding: 0.3125rem 8% 0 6%;
-    @media (max-width: $screen-xs-max) {
-      padding: 0;
-      flex-direction: column;
-      text-align: center;
-    }
   }
   &__navigation-section {
     &:nth-child(2) {
@@ -135,16 +171,11 @@
     list-style: none;
     grid-area: social;
     display: flex;
+    width: 7rem;
     flex-flow: row wrap;
-    justify-content: flex-end;
+    justify-content: space-between;
+    justify-self: flex-end;
     padding-top: 0.25rem;
-    @media (max-width: $screen-xs-max) {
-      line-height: 4.375rem;
-      justify-content: center;
-    }
-  }
-  &__social-list-item {
-    margin: 0 0 0 1.25rem;
   }
   &__social-link {
     display: inline-block;
@@ -164,65 +195,12 @@
       }
     }
   }
+  @media (max-width: $screen-xs-max) {
+    @include footer-theme-mobile;
+  }
   &_theme {
-    &_creative {
-      #{$blockClass}__main-area {
-        border-bottom: none;
-        #{$blockClass}__inner-wrapper {
-          grid-template-columns: 1fr;
-          grid-template-areas: 'about';
-          padding-bottom: 0;
-        }
-      }
-      #{$blockClass}__about-us {
-        text-align: center;
-        padding: 0 25%;
-        @media (max-width: $screen-xs-max) {
-          padding: 0;
-        }
-      }
-      #{$blockClass}__copyright-area {
-        #{$blockClass}__inner-wrapper {
-          grid-template-columns: 1fr;
-          grid-template-areas: 'social';
-          align-items: flex-start;
-        }
-      }
-      #{$blockClass}__social-list {
-        justify-content: center;
-        padding: 0.75rem 1.125rem 0 0;
-      }
-      #{$blockClass}__navigation,
-      #{$blockClass}__subscription-form,
-      #{$blockClass}__copyright {
-        display: none;
-      }
-    }
-    &_ui-kit {
-      #{$blockClass}__navigation-section {
-        &:nth-child(2) {
-          padding-right: 0;
-        }
-        &:nth-child(3) {
-          padding-right: 2.25rem;
-          @media (max-width: $screen-xs-max) {
-            padding-right: 0;
-          }
-        }
-        @media (max-width: $screen-xs-max) {
-          margin-bottom: 2rem;
-        }
-      }
-      #{$blockClass}__subscription-form-title {
-        letter-spacing: -0.02rem;
-      }
-      #{$blockClass}__subscription-form-description {
-        letter-spacing: -0.01rem;
-      }
-      #{$blockClass}__copyright,
-      #{$blockClass}__description {
-        letter-spacing: -0.005rem;
-      }
+    &_mobile {
+      @include footer-theme-mobile;
     }
   }
   @media (max-width: $screen-filter-xs-max) {

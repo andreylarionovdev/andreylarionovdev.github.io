@@ -4,7 +4,7 @@
 
 .headers-footers-page {
   &__nav {
-    @include ui-kit-navigation($marginBottom: 2.375rem);
+    @include ui-kit-navigation($marginBottom: 1.75rem);
   }
   &__header,
   &__footer {
