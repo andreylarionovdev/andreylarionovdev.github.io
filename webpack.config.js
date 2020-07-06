@@ -5,19 +5,40 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const devMode = process.env.NODE_ENV === 'development';
 
+const createEntriesFromPageList = (pages) => {
+  const webpackPageEntries = {};
+  const htmlWebpackPageInstances = [];
+
+  pages.forEach((pageName) => {
+    const pageDir = `src/pages/${pageName}`;
+    webpackPageEntries[pageName] = `./${pageDir}/${pageName}.js`;
+    htmlWebpackPageInstances.push(new HtmlWebpackPlugin({
+      filename: `${pageName}.html`,
+      template: `${pageDir}/${pageName}.pug`,
+      chunks: [pageName],
+    }));
+  });
+
+  return [webpackPageEntries, htmlWebpackPageInstances];
+};
+
+const [webpackPageEntries, htmlWebpackPageInstances] = createEntriesFromPageList([
+  'index',
+  'landing',
+  'sign-in',
+  'sign-up',
+  'search',
+  'room-details',
+  'colors-type',
+  'headers-footers',
+  'form-elements',
+  'cards',
+]);
+
 const config = {
   entry: {
     favicon: './src/favicons/favicons.js',
-    index: './src/pages/index/index.js',
-    landing: './src/pages/landing/landing.js',
-    'sign-in': './src/pages/sign-in/sign-in.js',
-    'sign-up': './src/pages/sign-up/sign-up.js',
-    search: './src/pages/search/search.js',
-    'room-details': './src/pages/room-details/room-details.js',
-    'colors-type': './src/pages/colors-type/colors-type.js',
-    'headers-footers': './src/pages/headers-footers/headers-footers.js',
-    'form-elements': './src/pages/form-elements/form-elements.js',
-    cards: './src/pages/cards/cards.js',
+    ...webpackPageEntries,
   },
   output: {
     filename: devMode ? '[name].js' : '[name].[hash].js',
@@ -51,6 +72,7 @@ const config = {
             options: {
               debug: true,
               sourceMap: false,
+              removeCR: true,
             },
           },
           {
@@ -101,56 +123,7 @@ const config = {
       jQuery: 'jquery',
       'window.jQuery': 'jquery',
     }),
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'src/pages/index/index.pug',
-      chunks: ['index'],
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'colors-type.html',
-      template: 'src/pages/colors-type/colors-type.pug',
-      chunks: ['colors-type'],
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'form-elements.html',
-      template: 'src/pages/form-elements/form-elements.pug',
-      chunks: ['form-elements'],
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'cards.html',
-      template: 'src/pages/cards/cards.pug',
-      chunks: ['cards'],
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'headers-footers.html',
-      template: 'src/pages/headers-footers/headers-footers.pug',
-      chunks: ['headers-footers'],
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'landing.html',
-      template: 'src/pages/landing/landing.pug',
-      chunks: ['landing'],
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'search.html',
-      template: 'src/pages/search/search.pug',
-      chunks: ['search'],
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'room-details.html',
-      template: 'src/pages/room-details/room-details.pug',
-      chunks: ['room-details'],
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'sign-up.html',
-      template: 'src/pages/sign-up/sign-up.pug',
-      chunks: ['sign-up'],
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'sign-in.html',
-      template: 'src/pages/sign-in/sign-in.pug',
-      chunks: ['sign-in'],
-    }),
+    ...htmlWebpackPageInstances,
   ],
 };
 
