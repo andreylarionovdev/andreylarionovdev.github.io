@@ -3,9 +3,8 @@
 @font-face {
   font-family: 'Quicksand';
   src:
-		url('../fonts/quicksand-regular.woff') format('woff'),
-		url('../fonts/quicksand-regular.ttf') format('truetype'),
-		url('../fonts/quicksand-regular.svg') format('svg');
+		url('../fonts/quicksand-regular.woff2') format('woff2'),
+		url('../fonts/quicksand-regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -13,9 +12,8 @@
 @font-face {
   font-family: 'Quicksand';
   src:
-		url('../fonts/quicksand-bold.woff') format('woff'),
-		url('../fonts/quicksand-bold.ttf') format('truetype'),
-		url('../fonts/quicksand-bold.svg') format('svg');
+		url('../fonts/quicksand-bold.woff2') format('woff2'),
+		url('../fonts/quicksand-bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
@@ -23,9 +21,8 @@
 @font-face {
 	font-family: 'Open Sans';
 	src:
-		url('../fonts/open-sans-bold.ttf') format('truetype'),
-		url('../fonts/open-sans-bold.woff') format('woff'),
-		url('../fonts/open-sans-bold.svg') format('svg');
+		url('../fonts/open-sans-bold.woff2') format('woff2'),
+		url('../fonts/open-sans-bold.woff') format('woff');
 	font-weight: bold;
 	font-style: normal;
 }
@@ -33,9 +30,8 @@
 @font-face {
   font-family: 'Montserrat';
   src:
-		url('../fonts/montserrat-regular.woff') format('woff'),
-		url('../fonts/montserrat-regular.ttf') format('truetype'),
-		url('../fonts/montserrat-regular.svg') format('svg');
+		url('../fonts/montserrat-regular.woff2') format('woff2'),
+		url('../fonts/montserrat-regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -43,9 +39,8 @@
 @font-face {
   font-family: 'Montserrat';
   src:
-		url('../fonts/montserrat-bold.woff') format('woff'),
-		url('../fonts/montserrat-regular.ttf') format('truetype'),
-		url('../fonts/montserrat-bold.svg') format('svg');
+		url('../fonts/montserrat-bold.woff2') format('woff2'),
+		url('../fonts/montserrat-bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
