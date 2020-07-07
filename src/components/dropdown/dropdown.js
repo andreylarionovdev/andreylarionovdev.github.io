@@ -5,11 +5,14 @@ import {
   COUNT_MIN_VALUE,
 } from './const';
 
-const Dropdown = function Dropdown($element) {
-  this.init($element);
+const Dropdown = function Dropdown($element, options) {
+  this.init($element, options);
 };
 
-Dropdown.prototype.init = function init($element) {
+Dropdown.prototype.guestsType = GUEST_TYPE;
+Dropdown.prototype.roomsType = ROOM_TYPE;
+
+Dropdown.prototype.init = function init($element, options) {
   this.$element = $element;
   this.$element.data('api', this);
 
@@ -29,12 +32,12 @@ Dropdown.prototype.init = function init($element) {
   this.$clearButton = this.$element.find('.js-dropdown__clear-button');
   this.$applyButton = this.$element.find('.js-dropdown__apply-button');
 
-  this.parseProperties();
+  this.parseOptions(options);
   this.addEventListeners();
 };
 
-Dropdown.prototype.parseProperties = function parseProperties() {
-  this.type = this.parseModifierValue(this.$element, 'js-dropdown_type_');
+Dropdown.prototype.parseOptions = function parseOptions({ type }) {
+  this.type = type;
 
   if ([GUEST_TYPE, ROOM_TYPE].includes(this.type)) {
     this.initState();
@@ -197,4 +200,4 @@ Dropdown.prototype.parseModifierValue = function parseModifierValue($element, st
   return modifierClass ? modifierClass.split('_').pop() : null;
 };
 
-$(() => $('.js-dropdown').each((i, o) => new Dropdown($(o))));
+export default Dropdown;

@@ -38,7 +38,7 @@ mixin dropdown(options)
       readonly
     )
     button.dropdown__toggle-button.js-dropdown__toggle-button.material-icons(type='button')= 'keyboard_arrow_down'
-    if allowedTypes.includes(type) && rows.length > 0
+    if rows.length > 0
       ul(class=createBemClasses({ blockName, elementName: 'list', jsPrefix }))
         each row in rows
           li(class=createBemClasses({ blockName, elementName: 'list-item', jsPrefix }))

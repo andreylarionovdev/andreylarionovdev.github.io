@@ -1,6 +1,5 @@
 import $ from 'jquery';
 
-import '../dropdown/dropdown';
 import '../range-slider/range-slider';
 import '../checkbox-list-expandable/checkbox-list-expandable';
 import '../pagination/pagination';
@@ -17,6 +16,8 @@ import './img/room-350.jpg';
 import './img/room-666.jpg';
 import './img/room-444.jpg';
 import './img/room-352.jpg';
+
+import Dropdown from '../dropdown/dropdown';
 
 const SearchPage = function SearchPage() {
   this.init();
@@ -36,6 +37,13 @@ SearchPage.prototype.init = function init() {
   this.$thumbnailsWrapper = $('.js-search-page__search-result');
   this.$footer = $('.js-footer');
 
+  this.guestsDropdown = new Dropdown($('.search-page__guests-dropdown .js-dropdown'), {
+    type: Dropdown.prototype.guestsType,
+  });
+  this.roomsDropdown = new Dropdown($('.search-page__feature-dropdown .js-dropdown'), {
+    type: Dropdown.prototype.roomsType,
+  });
+
   this.addEventListeners();
 };
 
@@ -50,7 +58,7 @@ SearchPage.prototype.handleShowFilterButtonClick = function handleShowFilterButt
   this.toggleFilter();
 };
 
-SearchPage.prototype.handleClearFilterButtonClick = function handleClearFilterButtonClick(e) {
+SearchPage.prototype.handleClearFilterButtonClick = function handleClearFilterButtonClick() {
   this.resetForm();
 };
 
