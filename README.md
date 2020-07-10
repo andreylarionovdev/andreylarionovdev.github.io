@@ -23,4 +23,9 @@ Run linter:
 ```$xslt
 npm run lint --silent
 ```
-
+## Built with
+- [jQuery](https://github.com/jquery/jquery)
+- [Air Datepicker](http://t1m0n.name/air-datepicker/docs/)
+- [Ion.RangeSlider](http://ionden.com/a/plugins/ion.rangeSlider/)
+- [Material design icons](http://google.github.io/material-design-icons/)
+- [Pagination.js](http://pagination.js.org/)
