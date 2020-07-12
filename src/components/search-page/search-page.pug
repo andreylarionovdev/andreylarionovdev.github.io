@@ -1,6 +1,6 @@
 include ../range-slider/range-slider
 include ../label/label
-include ../checkbox-list-expandable/checkbox-list-expandable
+include ../checkbox-expandable-list/checkbox-expandable-list
 include ../room-thumbnail/room-thumbnail
 include ../pagination/pagination
 include ../dropdown/dropdown
@@ -102,8 +102,8 @@ mixin search-page
                   {count: 0, text: 'ванные комнаты'},
                 ],
               })
-          .search-page__checkbox-list-expandable
-            +checkbox-list-expandable({
+          .search-page__checkbox-expandable-list
+            +checkbox-expandable-list({
               label: 'Дополнительные удобства',
               items: [
                 {id: 'field-breakfast', label: 'Завтрак'},

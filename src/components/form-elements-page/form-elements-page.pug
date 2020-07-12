@@ -10,7 +10,7 @@ include ../rating/rating
 include ../range-slider/range-slider
 include ../button/button
 include ../pagination/pagination
-include ../checkbox-list-expandable/checkbox-list-expandable
+include ../checkbox-expandable-list/checkbox-expandable-list
 include ../bullet-list/bullet-list
 include ../feature/feature
 include ../feedback/feedback
@@ -308,12 +308,12 @@ mixin form-elements-page
             })
       section.form-elements-page__section
         .form-elements-page__section-column
-          .form-elements-page__checkbox-list-expandable.form-elements-page__checkbox-list-expandable
-            +checkbox-list-expandable({
+          .form-elements-page__checkbox-expandable-list.form-elements-page__checkbox-expandable-list
+            +checkbox-expandable-list({
               label: 'Expandable checkbox list'
             })
-          .form-elements-page__checkbox-list-expandable.form-elements-page__checkbox-list-expandable_expanded
-            +checkbox-list-expandable({
+          .form-elements-page__checkbox-expandable-list.form-elements-page__checkbox-expandable-list_expanded
+            +checkbox-expandable-list({
               label: 'Expandable checkbox list',
               isExpanded: true,
               items: [

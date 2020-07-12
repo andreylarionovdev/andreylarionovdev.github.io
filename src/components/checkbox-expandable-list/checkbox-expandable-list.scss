@@ -2,7 +2,7 @@
 @import '../../utils/mixins';
 @import '../checkbox/checkbox';
 
-.checkbox-list-expandable {
+.checkbox-expandable-list {
   $blockClass: &;
   font-size: 0.875rem;
   color: $color-primary-75;

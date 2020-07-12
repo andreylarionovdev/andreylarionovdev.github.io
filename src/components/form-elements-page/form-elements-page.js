@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import '../range-slider/range-slider';
-import '../checkbox-list-expandable/checkbox-list-expandable';
+import '../checkbox-expandable-list/checkbox-expandable-list';
 import '../pagination/pagination';
 import '../calendar/calendar';
 import '../like-button/like-button';

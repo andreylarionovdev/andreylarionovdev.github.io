@@ -4,7 +4,7 @@
 @import '../label/label.scss';
 @import '../dropdown/dropdown.scss';
 @import '../range-slider/range-slider.scss';
-@import '../checkbox-list-expandable/checkbox-list-expandable';
+@import '../checkbox-expandable-list/checkbox-expandable-list';
 @import '../room-thumbnail/room-thumbnail.scss';
 @import '../pagination/pagination.scss';
 @import '../text-input/text-input.scss';
@@ -208,7 +208,7 @@
   &__checkbox-list {
     list-style: none;
   }
-  &__checkbox-list-expandable {
+  &__checkbox-expandable-list {
     margin-bottom: 1.3125rem;
     &_expanded {
       margin-bottom: 0.6875rem;

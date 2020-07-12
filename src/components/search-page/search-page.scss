@@ -3,7 +3,7 @@
 
 @import '../dropdown/dropdown.scss';
 @import '../range-slider/range-slider.scss';
-@import '../checkbox-list-expandable/checkbox-list-expandable';
+@import '../checkbox-expandable-list/checkbox-expandable-list';
 @import '../room-thumbnail/room-thumbnail.scss';
 @import '../pagination/pagination.scss';
 
@@ -111,7 +111,7 @@
   &__feature-dropdown {
     margin-top: 1.25rem;
   }
-  &__checkbox-list-expandable {
+  &__checkbox-expandable-list {
     margin: 1rem 0 8rem 0;
   }
   &__search-result {

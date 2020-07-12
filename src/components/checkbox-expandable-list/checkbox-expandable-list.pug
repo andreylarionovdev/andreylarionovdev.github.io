@@ -1,19 +1,19 @@
 include ../checkbox/checkbox
 
-mixin checkbox-list-expandable(options)
+mixin checkbox-expandable-list(options)
   - const { id, label, isExpanded, items = [] } = options || {};
 
   - const blockModifiers = isExpanded ? ['expanded'] : [];
 
   - const createBemClasses = require('../../utils/helpers').createBemClasses;
-  - const blockName = 'checkbox-list-expandable';
+  - const blockName = 'checkbox-expandable-list';
   - const jsPrefix = 'js';
 
   div(id=id class=createBemClasses({ blockName, modifiers: blockModifiers, jsPrefix }))
-    p.checkbox-list-expandable__group
-      span.checkbox-list-expandable__label= label
+    p.checkbox-expandable-list__group
+      span.checkbox-expandable-list__label= label
       button(class=createBemClasses({ blockName, elementName: 'toggle-button', jsPrefix }) type='button').material-icons= 'keyboard_arrow_down'
-    ul.checkbox-list-expandable__list
+    ul.checkbox-expandable-list__list
       each item, index in items
-        li.checkbox-list-expandable__item
+        li.checkbox-expandable-list__item
           +checkbox(item)

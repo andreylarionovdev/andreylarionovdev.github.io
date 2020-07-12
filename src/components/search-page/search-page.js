@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 import '../range-slider/range-slider';
-import '../checkbox-list-expandable/checkbox-list-expandable';
+import '../checkbox-expandable-list/checkbox-expandable-list';
 import '../pagination/pagination';
 
 import './img/room-888.jpg';
