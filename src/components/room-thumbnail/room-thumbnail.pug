@@ -22,7 +22,7 @@ mixin room-thumbnail(options)
 
     const blockName = 'room-thumbnail';
 
-  div(class=createBemClasses({ blockName, modifiers: blockModifiers}))
+  article(class=createBemClasses({ blockName, modifiers: blockModifiers}))
     figure.room-thumbnail__carousel
       img(src=image.src alt=image.alt).room-thumbnail__carousel-image
       button(type='button' class=createBemClasses({ blockName, elementName: 'carousel-control', modifiers: [{ type: 'prev' }] }))
