@@ -39,17 +39,16 @@
   &_hovered {
     opacity: 0.5;
   }
+  &_with-arrow {
+    #{$blockClass}__inner-wrapper {
+      padding: 0.5rem;
+    }
+  }
   &_theme {
-    &_default,
-    &_with-arrow {
+    &_default {
       color: white;
       #{$blockClass}__inner-wrapper {
         background: $grad-purple;
-      }
-    }
-    &_with-arrow {
-      #{$blockClass}__inner-wrapper {
-        padding: 0.5rem;
       }
     }
     &_white {

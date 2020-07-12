@@ -8,6 +8,7 @@ mixin button(options)
       type,
       href,
       isHovered,
+      withArrow,
       attr,
     } = options || {};
 
@@ -15,6 +16,8 @@ mixin button(options)
 
   if isHovered
     - blockModifiers.push('hovered');
+  if withArrow
+    - blockModifiers.push('with-arrow');
 
   - const createBemClasses = require('../../utils/helpers').createBemClasses;
   - const isButton = ['button', 'submit', 'reset'].includes(type);
@@ -23,5 +26,5 @@ mixin button(options)
   #{tag}(class=createBemClasses({ blockName: 'button', modifiers: blockModifiers }) type=type href=href)&attributes(attr)
     span.button__inner-wrapper
       span.button__caption= caption
-      if theme === 'with-arrow'
+      if withArrow
         span.button__arrow.material-icons= 'arrow_forward'

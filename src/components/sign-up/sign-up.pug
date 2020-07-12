@@ -75,10 +75,11 @@ mixin sign-up(options)
       })
     .sign-up__button
       +button({
-        theme: 'with-arrow',
+        theme: 'default',
         type: 'submit',
         caption: 'Перейти к оплате',
         size: 'fluid',
+        withArrow: true,
       })
     .sign-up__sign-in-group
       p.sign-up__sign-in-hint= 'Уже есть аккаунт на Toxin'

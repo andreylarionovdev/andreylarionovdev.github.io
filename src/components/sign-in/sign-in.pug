@@ -27,10 +27,11 @@ mixin sign-in(options)
       })
     .sign-in__button
       +button({
-        theme: 'with-arrow',
+        theme: 'default',
         type: 'submit',
         caption: 'Войти',
         size: 'fluid',
+        withArrow: true,
       })
     .sign-in__sign-up-group
       p.sign-in__sign-up-hint= 'Нет аккаунта на Toxin?'
