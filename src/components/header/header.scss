@@ -12,7 +12,7 @@
   color: $color-primary-50;
   background: white;
   box-shadow: 0 0.625rem 1.25rem $color-primary-5;
-  &__inner-wrapper {
+  &__navigation {
     @include inner-wrapper;
     display: flex;
     align-items: center;
@@ -38,7 +38,7 @@
     display: inline-block;
     margin-right: auto;
   }
-  &__navigation,
+  &__site-navigation,
   &__user-navigation {
     list-style: none;
     display: none;
@@ -55,7 +55,7 @@
       }
     }
   }
-  &__navigation-item,
+  &__site-navigation-item,
   &__user-navigation-item {
     text-align: center;
     margin: 1rem auto;

@@ -9,13 +9,13 @@ mixin header(options)
   - const jsPrefix = 'js';
 
   header.header.js-header
-    nav.header__inner-wrapper
+    nav.header__navigation
       .header__logo
         +logo(true)
       button(class=createBemClasses({ blockName, elementName: 'burger', jsPrefix }) type='button').material-icons= 'menu'
-      ul(class=createBemClasses({ blockName, elementName: 'navigation', jsPrefix }))
+      ul(class=createBemClasses({ blockName, elementName: 'site-navigation', jsPrefix }))
         each item, _ in menuItems
-          li.header__navigation-item
+          li.header__site-navigation-item
             - const bemObj = { blockName, elementName: 'navigation-link'}
             if item.sub
               - bemObj.modifiers = [{ theme: 'with-submenu' }]
@@ -25,7 +25,7 @@ mixin header(options)
                 = item.name
       if user
         ul.header__user-navigation.js-header__user-navigation.header__user-navigation_authenticated
-          li.header__navigation-item
+          li.header__user-navigation-item
             a.header__navigation-link= user
       else
         ul.header__user-navigation.js-header__user-navigation
