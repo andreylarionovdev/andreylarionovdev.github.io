@@ -1,31 +1,31 @@
 import $ from 'jquery';
 import '../logo/logo';
+import {
+  classNavigationActive,
+  selectorHeader,
+  selectorNavigation,
+  selectorUserNavigation,
+  selectorNavigationToggle,
+} from './const';
 
 const Header = function Header() {
   this.init();
 };
 
 Header.prototype.init = function init() {
-  this.classNavigationActive = 'header__navigation_active';
-
-  this.selectorHeader = '.js-header';
-  this.selectorNavigation = '.js-header__navigation';
-  this.selectorUserNavigation = '.js-header__user-navigation';
-  this.selectorNavigationToggle = '.js-header__burger';
-
   this.addEventListeners();
 };
 
 Header.prototype.addEventListeners = function addEventListeners() {
-  $(this.selectorNavigationToggle).on('click', this.handleNavigationToggleClick.bind(this));
+  $(selectorNavigationToggle).on('click', this.handleNavigationToggleClick.bind(this));
 };
 
 Header.prototype.handleNavigationToggleClick = function handleNavigationToggleClick(e) {
   const $button = $(e.currentTarget);
   $button.text((_, text) => (text === 'menu' ? 'close' : 'menu'));
-  const $header = $button.closest(this.selectorHeader);
-  $header.find(this.selectorNavigation).toggleClass(this.classNavigationActive);
-  $header.find(this.selectorUserNavigation).toggleClass(this.classNavigationActive);
+  const $header = $button.closest(selectorHeader);
+  $header.find(selectorNavigation).toggleClass(classNavigationActive);
+  $header.find(selectorUserNavigation).toggleClass(classNavigationActive);
 };
 
 $(() => new Header());

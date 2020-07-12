@@ -3,6 +3,18 @@ import {
   GUEST_TYPE,
   ROOM_TYPE,
   COUNT_MIN_VALUE,
+  selectorMenu,
+  selectorMenuItem,
+  selectorCountButton,
+  selectorDecCountButton,
+  selectorCount,
+  selectorToggleButton,
+  selectorTextInput,
+  selectorClearButton,
+  selectorApplyButton,
+  classExpanded,
+  classClearButtonHidden,
+  classCountButtonDisabled,
 } from './const';
 
 const Dropdown = function Dropdown($element, options) {
@@ -16,21 +28,11 @@ Dropdown.prototype.init = function init($element, options) {
   this.$element = $element;
   this.$element.data('api', this);
 
-  this.classExpanded = 'dropdown_expanded';
-  this.classClearButtonHidden = 'dropdown__clear-button_hidden';
-  this.classCountButtonDisabled = 'dropdown__counter-button_disabled';
-
-  this.selectorMenu = '.js-dropdown__list';
-  this.selectorMenuItem = '.js-dropdown__list-item';
-  this.selectorCountButton = '.js-dropdown__counter-button';
-  this.selectorDecCountButton = '.js-dropdown__counter-button_type_dec';
-  this.selectorCount = '.js-dropdown__counter';
-
-  this.$toggleButton = this.$element.find('.js-dropdown__toggle-button');
-  this.$input = this.$element.find('.js-dropdown__text-input');
-  this.$changeCountButton = this.$element.find(this.selectorCountButton);
-  this.$clearButton = this.$element.find('.js-dropdown__clear-button');
-  this.$applyButton = this.$element.find('.js-dropdown__apply-button');
+  this.$toggleButton = this.$element.find(selectorToggleButton);
+  this.$input = this.$element.find(selectorTextInput);
+  this.$changeCountButton = this.$element.find(selectorCountButton);
+  this.$clearButton = this.$element.find(selectorClearButton);
+  this.$applyButton = this.$element.find(selectorApplyButton);
 
   this.parseOptions(options);
   this.addEventListeners();
@@ -80,32 +82,32 @@ Dropdown.prototype.addEventListeners = function addEventListeners() {
 Dropdown.prototype.handleToggleButtonClick = function handleToggleButtonClick(e) {
   e.preventDefault();
 
-  if (this.$element.find(this.selectorMenu).length === 1) {
-    this.$element.toggleClass(this.classExpanded);
+  if (this.$element.find(selectorMenu).length === 1) {
+    this.$element.toggleClass(classExpanded);
   }
 };
 
 Dropdown.prototype.handleChangeCountButtonClick = function handleChangeCountButtonClick(e) {
   e.preventDefault();
 
-  const $button = $(e.currentTarget).closest(this.selectorCountButton);
+  const $button = $(e.currentTarget).closest(selectorCountButton);
   const operator = this.parseModifierValue($button, 'js-dropdown__counter-button_type_');
 
-  const $li = $(e.currentTarget).closest(this.selectorMenuItem);
+  const $li = $(e.currentTarget).closest(selectorMenuItem);
 
   if (operator === 'inc') {
-    $li.find(this.selectorCountButton).removeClass(this.classCountButtonDisabled);
+    $li.find(selectorCountButton).removeClass(classCountButtonDisabled);
   }
   const changeCount = {
     inc: (x) => x + 1,
     dec: (x) => x - 1,
   };
 
-  const $count = $li.find(this.selectorCount);
+  const $count = $li.find(selectorCount);
   const n = changeCount[operator](parseInt($count.text(), 10));
 
   if (n === COUNT_MIN_VALUE) {
-    $button.addClass(this.classCountButtonDisabled);
+    $button.addClass(classCountButtonDisabled);
   }
 
   if (n < COUNT_MIN_VALUE) {
@@ -114,7 +116,7 @@ Dropdown.prototype.handleChangeCountButtonClick = function handleChangeCountButt
 
   $count.text(n);
 
-  this.$clearButton.removeClass(this.classClearButtonHidden);
+  this.$clearButton.removeClass(classClearButtonHidden);
 
   this.updateState();
   if (this.type === ROOM_TYPE) {
@@ -126,12 +128,12 @@ Dropdown.prototype.handleChangeCountButtonClick = function handleChangeCountButt
 Dropdown.prototype.handleClearButtonClick = function handleClearButtonClick(e) {
   e.preventDefault();
 
-  const $counts = this.$element.find(this.selectorCount);
+  const $counts = this.$element.find(selectorCount);
   $counts.each((i, o) => $(o).text(0));
 
-  const $decButtons = this.$element.find(this.selectorDecCountButton);
+  const $decButtons = this.$element.find(selectorDecCountButton);
   $decButtons.each((i, o) => {
-    $(o).addClass(this.classCountButtonDisabled);
+    $(o).addClass(classCountButtonDisabled);
   });
 
   this.updateState();
@@ -142,13 +144,13 @@ Dropdown.prototype.handleApplyButtonClick = function handleApplyButtonClick(e) {
   e.preventDefault();
 
   this.updateValue();
-  this.$element.removeClass(this.classExpanded);
+  this.$element.removeClass(classExpanded);
 };
 
 Dropdown.prototype.updateState = function updateState() {
   this.state.total = 0;
-  this.$element.find(this.selectorMenuItem).each((i, o) => {
-    const count = parseInt($(o).find(this.selectorCount).text(), 10);
+  this.$element.find(selectorMenuItem).each((i, o) => {
+    const count = parseInt($(o).find(selectorCount).text(), 10);
     this.state.categories[i].count = count;
     this.state.total += count;
   });
@@ -170,7 +172,7 @@ Dropdown.prototype.updateValue = function updateValue() {
 
 Dropdown.prototype.updateView = function updateView() {
   if (this.state.total === 0) {
-    this.$clearButton.addClass(this.classClearButtonHidden);
+    this.$clearButton.addClass(classClearButtonHidden);
   }
 };
 

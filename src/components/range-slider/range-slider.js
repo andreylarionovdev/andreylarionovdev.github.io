@@ -7,7 +7,6 @@ const RangeSlider = function RangeSlider($element) {
 
 RangeSlider.prototype.init = function init($element) {
   this.$element = $element;
-  this.selectorRangeSlider = '.js-range-slider';
 
   this.$element.ionRangeSlider({
     hide_min_max: true,
@@ -20,7 +19,7 @@ RangeSlider.prototype.init = function init($element) {
 
 RangeSlider.prototype.render = function render(data) {
   const range = `${data.from.toLocaleString('ru-RU')}₽ - ${data.to.toLocaleString('ru-RU')}₽`;
-  this.$element.closest(this.selectorRangeSlider).find('.label__hint').text(range);
+  this.$element.closest('.js-range-slider').find('.label__hint').text(range);
 };
 
 $(() => $('.js-range-slider__input').each((i, o) => new RangeSlider($(o))));
