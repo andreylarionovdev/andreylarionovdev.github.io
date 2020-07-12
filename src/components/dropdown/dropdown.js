@@ -99,22 +99,22 @@ Dropdown.prototype.handleChangeCountButtonClick = function handleChangeCountButt
     $li.find(selectorCountButton).removeClass(classCountButtonDisabled);
   }
   const changeCount = {
-    inc: (x) => x + 1,
-    dec: (x) => x - 1,
+    inc: (value) => value + 1,
+    dec: (value) => value - 1,
   };
 
-  const $count = $li.find(selectorCount);
-  const n = changeCount[operator](parseInt($count.text(), 10));
+  const $counter = $li.find(selectorCount);
+  const counterValue = changeCount[operator](parseInt($counter.text(), 10));
 
-  if (n === COUNT_MIN_VALUE) {
+  if (counterValue === COUNT_MIN_VALUE) {
     $button.addClass(classCountButtonDisabled);
   }
 
-  if (n < COUNT_MIN_VALUE) {
+  if (counterValue < COUNT_MIN_VALUE) {
     return;
   }
 
-  $count.text(n);
+  $counter.text(counterValue);
 
   this.$clearButton.removeClass(classClearButtonHidden);
 
@@ -128,13 +128,11 @@ Dropdown.prototype.handleChangeCountButtonClick = function handleChangeCountButt
 Dropdown.prototype.handleClearButtonClick = function handleClearButtonClick(e) {
   e.preventDefault();
 
-  const $counts = this.$element.find(selectorCount);
-  $counts.each((i, o) => $(o).text(0));
+  const $counters = this.$element.find(selectorCount);
+  $counters.each((_, counter) => $(counter).text(0));
 
   const $decButtons = this.$element.find(selectorDecCountButton);
-  $decButtons.each((i, o) => {
-    $(o).addClass(classCountButtonDisabled);
-  });
+  $decButtons.each((_, decButton) => $(decButton).addClass(classCountButtonDisabled));
 
   this.updateState();
   this.updateView();
@@ -149,9 +147,9 @@ Dropdown.prototype.handleApplyButtonClick = function handleApplyButtonClick(e) {
 
 Dropdown.prototype.updateState = function updateState() {
   this.state.total = 0;
-  this.$element.find(selectorMenuItem).each((i, o) => {
-    const count = parseInt($(o).find(selectorCount).text(), 10);
-    this.state.categories[i].count = count;
+  this.$element.find(selectorMenuItem).each((index, menuItem) => {
+    const count = parseInt($(menuItem).find(selectorCount).text(), 10);
+    this.state.categories[index].count = count;
     this.state.total += count;
   });
 };

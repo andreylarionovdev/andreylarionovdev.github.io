@@ -176,4 +176,4 @@ Calendar.prototype.handleApplyButtonClick = function handleApplyButtonClick() {
   this.update();
 };
 
-$(() => $('.js-calendar').each((i, o) => new Calendar($(o))));
+$(() => $('.js-calendar').each((_, calendarElement) => new Calendar($(calendarElement))));

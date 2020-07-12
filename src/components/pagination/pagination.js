@@ -13,7 +13,7 @@ const Pagination = function pagination() {
 };
 
 Pagination.prototype.init = function init() {
-  $(selectorPagination).each((i, o) => this.initPaginationJsInstance($(o)));
+  $(selectorPagination).each((_, paginationElement) => this.initPaginationJsInstance($(paginationElement)));
 };
 
 Pagination.prototype.initPaginationJsInstance = function initPaginationJsInstance($element) {

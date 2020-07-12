@@ -22,4 +22,4 @@ RangeSlider.prototype.render = function render(data) {
   this.$element.closest('.js-range-slider').find('.label__hint').text(range);
 };
 
-$(() => $('.js-range-slider__input').each((i, o) => new RangeSlider($(o))));
+$(() => $('.js-range-slider__input').each((_, rangeSliderElement) => new RangeSlider($(rangeSliderElement))));
