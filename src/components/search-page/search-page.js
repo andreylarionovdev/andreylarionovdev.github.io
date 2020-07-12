@@ -29,9 +29,9 @@ SearchPage.prototype.init = function init() {
   this.classHiddenThumbnails = 'search-page__search-result_hidden';
   this.classHiddenFooter = 'footer_hidden';
 
-  this.$showFilterButton = $('.js-search-page__button_type_show-filter');
-  this.$clearFilterButton = $('.js-search-page__button_type_clear');
-  this.$applyFilterButton = $('.js-search-page__button_type_apply');
+  this.$showFilterButton = $('.js-search-page__button_action_show-filter');
+  this.$clearFilterButton = $('.js-search-page__button_action_clear');
+  this.$applyFilterButton = $('.js-search-page__button_action_apply');
 
   this.$filterForm = $('.js-search-page__form');
   this.$thumbnailsWrapper = $('.js-search-page__search-result');
