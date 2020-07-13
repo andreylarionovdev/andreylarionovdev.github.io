@@ -11,7 +11,7 @@
   &__input {
     position: absolute;
     opacity: 0;
-    &:checked + #{$blockClass}__label {
+    &:checked + #{$blockClass}__caption {
       &:after {
         margin: 0.375rem;
         width: 0.5rem;
@@ -26,7 +26,7 @@
         border-color: $color-purple;
       }
     }
-    &:focus + #{$blockClass}__label {
+    &:focus + #{$blockClass}__caption {
       &:before {
         transition: box-shadow .25s ease-in-out;
         box-shadow: 0 0.3125rem 0.3125rem $color-primary-25;
@@ -34,7 +34,7 @@
     }
   }
 
-  &__label {
+  &__caption {
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -74,7 +74,7 @@
       line-height: 1.25rem;
 
       #{$blockClass}__input {
-        &:checked + #{$blockClass}__label {
+        &:checked + #{$blockClass}__caption {
           &:after {
             margin: 0;
             width: 0.75rem;
@@ -90,7 +90,7 @@
         }
       }
 
-      #{$blockClass}__label {
+      #{$blockClass}__caption {
         position: relative;
         padding-left: 3.125rem;
         font-style: normal;
@@ -127,7 +127,7 @@
       }
     }
     &_rich {
-      #{$blockClass}__label {
+      #{$blockClass}__caption {
         font-weight: bold;
         color: $color-primary-75;
       }

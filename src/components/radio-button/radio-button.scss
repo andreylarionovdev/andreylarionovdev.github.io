@@ -9,7 +9,7 @@
   &__input {
     position: absolute;
     opacity: 0;
-    &:checked + #{$blockClass}__label {
+    &:checked + #{$blockClass}__caption {
       color: $color-primary-75;
       &:after {
         content: '';
@@ -25,14 +25,14 @@
         border: 0.0625rem solid $color-purple;
       }
     }
-    &:focus + #{$blockClass}__label {
+    &:focus + #{$blockClass}__caption {
       &:before {
         transition: box-shadow .25s ease-in-out;
         box-shadow: 0 0.3125rem 0.3125rem $color-primary-25;
       }
     }
   }
-  &__label {
+  &__caption {
     display: inline-block;
     position: relative;
     cursor: pointer;

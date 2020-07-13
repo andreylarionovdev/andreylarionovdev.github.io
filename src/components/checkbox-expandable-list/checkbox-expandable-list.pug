@@ -1,7 +1,7 @@
 include ../checkbox/checkbox
 
 mixin checkbox-expandable-list(options)
-  - const { id, label, isExpanded, items = [] } = options || {};
+  - const { label, isExpanded, items = [] } = options || {};
 
   - const blockModifiers = isExpanded ? ['expanded'] : [];
 
@@ -9,7 +9,7 @@ mixin checkbox-expandable-list(options)
   - const blockName = 'checkbox-expandable-list';
   - const jsPrefix = 'js';
 
-  div(id=id class=createBemClasses({ blockName, modifiers: blockModifiers, jsPrefix }))
+  div(class=createBemClasses({ blockName, modifiers: blockModifiers, jsPrefix }))
     p.checkbox-expandable-list__group
       span.checkbox-expandable-list__label= label
       button(class=createBemClasses({ blockName, elementName: 'toggle-button', jsPrefix }) type='button').material-icons= 'keyboard_arrow_down'

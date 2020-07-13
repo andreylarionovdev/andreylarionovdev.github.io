@@ -55,18 +55,18 @@ mixin search-page
             legend.search-page__legend= 'checkbox buttons'
             p(class="search-page__checkbox")
               +checkbox({
-                id: 'field-smoke',
+                name: 'field-smoke',
                 label: 'Можно курить',
               })
             p.search-page__checkbox
               +checkbox({
-                id: 'field-pets',
+                name: 'field-pets',
                 label: 'Можно с питомцами',
                 isChecked: true,
               })
             p.search-page__checkbox
               +checkbox({
-                id: 'field-guests',
+                name: 'field-guests',
                 label: 'Можно пригласить гостей (до 10 человек)',
                 isChecked: true,
               })
@@ -75,14 +75,14 @@ mixin search-page
             legend.search-page__legend= 'Доступность'
             p.search-page__checkbox
               +checkbox({
-                id: 'field-wide-hall',
+                name: 'field-wide-hall',
                 label: 'Широкий коридор',
                 hint: 'Ширина коридоров в номере не менее 91 см.',
                 theme: 'rich',
               })
             p.search-page__checkbox
               +checkbox({
-                id: 'field-assistant',
+                name: 'field-assistant',
                 label: 'Помощник для инвалидов',
                 hint: 'На 1 этаже вас встретит специалист и проводит до номера.',
                 theme: 'rich',
@@ -106,12 +106,12 @@ mixin search-page
             +checkbox-expandable-list({
               label: 'Дополнительные удобства',
               items: [
-                {id: 'field-breakfast', label: 'Завтрак'},
-                {id: 'field-table', label: 'Письменный стол', isChecked: true},
-                {id: 'field-baby-chair-for-eat', label: 'Стул для кормления', isChecked: true},
-                {id: 'field-baby-bed', label: 'Кроватка', isChecked: true},
-                {id: 'field-tv', label: 'Телевизор'},
-                {id: 'field-shampoo', label: 'Шампунь'},
+                {name: 'field-breakfast', label: 'Завтрак'},
+                {name: 'field-table', label: 'Письменный стол', isChecked: true},
+                {name: 'field-baby-chair-for-eat', label: 'Стул для кормления', isChecked: true},
+                {name: 'field-baby-bed', label: 'Кроватка', isChecked: true},
+                {name: 'field-tv', label: 'Телевизор'},
+                {name: 'field-shampoo', label: 'Шампунь'},
               ],
             })
           .search-page__form-footer.js-search-page__form-footer

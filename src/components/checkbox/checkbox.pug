@@ -1,9 +1,10 @@
 mixin checkbox(options)
-  - const { id, name, label, theme, hint, isChecked } = options || {};
+  - const { name, label, theme, hint, isChecked } = options || {};
   - const createBemClasses = require('../../utils/helpers').createBemClasses;
 
   span(class=createBemClasses({ blockName: 'checkbox', modifiers: [{ theme }] }))
-    input.checkbox__input.js-checkbox__input(id=id name=(name || id) type='checkbox' checked=isChecked)
-    label.checkbox__label(for=id)= label
+    label.checkbox__label
+      input.checkbox__input.js-checkbox__input(name=name type='checkbox' checked=isChecked)
+      span.checkbox__caption= label
     if hint
       span.checkbox__hint!= hint
