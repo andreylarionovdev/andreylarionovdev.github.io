@@ -26,25 +26,23 @@ mixin form-elements-page
             +label({
               label: 'text field',
               hint: 'default',
-              _for: 'input-email'
             })
-            +text-input({
-              id: 'input-email',
-              placeholder: 'Email',
-              type: 'email'
-            })
+              +text-input({
+                name: 'input-email',
+                placeholder: 'Email',
+                type: 'email'
+              })
           .form-elements-page__text-input-group.form-elements-page__text-input-group_hovered
             +label({
               label: 'text field',
               hint: 'hover / focus',
-              _for: 'input-hovered'
             })
-            +text-input({
-              id: 'input-hovered',
-              placeholder: 'Some text',
-              value: 'This is pretty awesome',
-              isHovered: true
-            })
+              +text-input({
+                name: 'input-hovered',
+                placeholder: 'Some text',
+                value: 'This is pretty awesome',
+                isHovered: true
+              })
           .form-elements-page__dropdown
             +label({
               label: 'dropdown',
@@ -59,13 +57,12 @@ mixin form-elements-page
             +label({
               label: 'masked text field',
               hint: 'default',
-              _for: 'input-with-mask',
             })
-            +text-input({
-              id: 'input-with-mask',
-              placeholder: 'дд.мм.гггг',
-              format: 'date',
-            })
+              +text-input({
+                name: 'input-with-mask',
+                placeholder: 'дд.мм.гггг',
+                format: 'date',
+              })
           .form-elements-page__dropdown.form-elements-page__dropdown_theme_datepicker
             +calendar({
               fromLabel: 'date dropdown',
@@ -83,14 +80,13 @@ mixin form-elements-page
           .form-elements-page__text-input-group.form-elements-page__text-input-group_theme_with-submit
             +label({
               label: 'subscription text field',
-              _for: 'input-submit',
             })
-            +text-input({
-              id: 'input-submit',
-              placeholder: 'Email',
-              withButton: true,
-              type: 'email'
-            })
+              +text-input({
+                name: 'input-submit',
+                placeholder: 'Email',
+                withButton: true,
+                type: 'email'
+              })
         .form-elements-page__section-column-gap
         .form-elements-page__section-column
           .form-elements-page__checkbox-list-group

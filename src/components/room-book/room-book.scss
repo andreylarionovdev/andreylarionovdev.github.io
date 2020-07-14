@@ -19,7 +19,7 @@
   &__header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0.6875rem;
+    margin-bottom: .5rem;
   }
   &__number {
     font-family: Quicksand, sans-serif;
@@ -27,7 +27,7 @@
   &__number-feature {
     @include h3;
     color: $color-purple;
-    margin-left: 0.3125rem;
+    margin-left: .3125rem;
   }
   &__number-sign,
   &__number-value,
@@ -40,11 +40,11 @@
   }
 
   &__number-sign {
-    font-size: 0.875rem;
+    font-size: .875rem;
   }
   &__number-value {
     font-size: 1.5rem;
-    margin-left: 0.25rem;
+    margin-left: .25rem;
     color: $color-primary-100;
   }
   &__feature {
@@ -63,25 +63,25 @@
     font-weight: bold;
   }
   &__date-unit {
-    font-size: 0.75rem;
+    font-size: .75rem;
   }
   &__guests-dropdown-group {
-    margin-top: 1.25rem;
+    margin-top: 1rem;
   }
   &__label {
-    margin-bottom: 0.3125rem;
+    margin-bottom: .3125rem;
   }
   &__result-grid {
-    padding-left: 0.0625rem;
+    padding-left: .0625rem;
     margin-top: 1.125rem;
     display: grid;
     grid-template-columns: 5fr 1fr 1fr;
-    grid-row-gap: 0.5rem;
-    font-size: 0.875rem;
+    grid-row-gap: .5rem;
+    font-size: .875rem;
     color: $color-primary-75;
   }
   &__result-grid-cell {
-    padding: 0.1875rem 0;
+    padding: .1875rem 0;
     &_type {
       &_info {
         padding: 0;
@@ -99,7 +99,7 @@
     cursor: help;
   }
   &__total {
-    margin: 1.875rem 0 1rem 0;
+    margin-top: 1.875rem;
     display: grid;
     grid-template-columns: 1fr 10fr 1fr;
     align-items: end;
@@ -112,19 +112,19 @@
   }
   &__total-header {
     font-family: 'Open Sans', sans-serif;
-    margin-right: 0.3125rem;
+    margin-right: .3125rem;
   }
   &__total-line {
-    height: 0.0625rem;
-    border-bottom: 0.0625rem dotted $color-primary-25;
+    height: .0625rem;
+    border-bottom: .0625rem dotted $color-primary-25;
   }
   &__total-sum {
     font-family: Quicksand, sans-serif;
     font-weight: bold;
     text-align: right;
-    margin-left: 0.3125rem;
+    margin-left: .3125rem;
   }
   &__button {
-    margin-top: 1.5625rem;
+    margin-top: 1.5rem;
   }
 }

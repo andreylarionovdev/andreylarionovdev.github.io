@@ -9,7 +9,7 @@
 
 .search-page {
   $blockClass: &;
-  border-bottom: 0.0625rem solid $color-primary-25;
+  border-bottom: .0625rem solid $color-primary-25;
   &__inner-wrapper {
     @include inner-wrapper;
     padding: 1.875rem 0 1.75rem;
@@ -59,7 +59,7 @@
           z-index: 10;
           grid-template-columns: 1fr 1fr;
           grid-column-gap: 2rem;
-          padding: 0.75rem;
+          padding: .75rem;
           position: fixed;
           left: 0;
           right: 0;
@@ -74,7 +74,8 @@
     }
   }
   &__label {
-    margin-bottom: 0.3125rem;
+    line-height: .75rem;
+    margin-bottom: .3125rem;
   }
   &__legend {
     @include h3;
@@ -86,7 +87,7 @@
 
   &__range-slider,
   &__checkboxes {
-    margin-top: 1.875rem;
+    margin-top: 1.75rem;
   }
 
   &__checkboxes {
@@ -100,13 +101,13 @@
           padding-right: 2rem;
         }
         #{$blockClass}__checkbox {
-          margin-bottom: 0.4375rem;
+          margin-bottom: .4375rem;
         }
       }
     }
   }
   &__checkbox {
-    margin-bottom: 0.625rem;
+    margin-bottom: .625rem;
   }
   &__feature-dropdown {
     margin-top: 1.25rem;
@@ -133,7 +134,7 @@
     padding: 1.25rem 0 0 0;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(16.875rem, 1fr));
-    grid-column-gap: 0.75rem;
+    grid-column-gap: .75rem;
     grid-row-gap: 1.3125rem;
   }
   &__pagination {

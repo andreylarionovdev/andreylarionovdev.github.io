@@ -43,16 +43,12 @@ mixin sign-up(options)
         })
     .sign-up__birthday-group
       .sign-up__label
-        +label({
-          label: 'Дата рождения',
-          _for: 'field-birthday',
-        })
-      .sign-up__text-input
-        +text-input({
-          id: 'field-birthday',
-          placeholder: 'дд.мм.гггг',
-          format: 'date',
-        })
+        +label({ label: 'Дата рождения' })
+          .sign-up__text-input
+            +text-input({
+              placeholder: 'дд.мм.гггг',
+              format: 'date',
+            })
     fieldset.sign-up__credentials-group
       legend.sign-up__legend= 'Данные для входа в сервис'
       .sign-up__text-input

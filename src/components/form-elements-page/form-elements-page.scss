@@ -21,7 +21,7 @@
   $blockClass: &;
 
   &__nav {
-    @include ui-kit-navigation($marginBottom: 1.9375rem);
+    @include ui-kit-navigation($marginBottom: 1.8125rem);
   }
 
   &__main {
@@ -41,7 +41,7 @@
       }
     }
     &:first-child {
-      margin-bottom: 5rem;
+      margin-bottom: 4.875rem;
       grid-template-columns: 27.63% 10.88% 27.63% 6.2176% 27.63%;
       @include section-media-query;
     }
@@ -72,12 +72,12 @@
 
   &__text-input-group {
     margin-bottom: 1.25rem;
-    .label {
-      margin-bottom: 0.3125rem;
+    .text-input {
+      margin-top: 0.3125rem;
     }
     &_theme {
       &_with-mask {
-        margin-bottom: 2.5rem;
+        margin-bottom: 2.25rem;
       }
       &_with-submit {
         padding-right: 3.375rem;
@@ -91,7 +91,10 @@
     }
     &_theme {
       &_datepicker {
-        margin-bottom: 2.5625rem;
+        margin-bottom: 2.3125rem;
+        .label {
+          margin-bottom: 0;
+        }
       }
       &_date-filter {
         margin-bottom: 2.5625rem;
@@ -110,14 +113,14 @@
       }
     }
     &_collapsed {
-      margin-bottom: 1.25rem;
+      margin-bottom: .95rem;
     }
   }
   &__checkbox {
     margin-bottom: 0.625rem;
   }
   &__checkbox-list-group {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.2rem;
     padding-right: 5rem;
     .label {
       margin-bottom: 1rem;
@@ -155,7 +158,7 @@
   &__toggle-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 2rem;
+    margin-bottom: 1.8rem;
     .label {
       margin-bottom: 0.875rem;
     }
@@ -165,7 +168,7 @@
     }
   }
   &__like-button-group {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.3rem;
     .label {
       margin-bottom: 1rem;
     }
@@ -174,11 +177,11 @@
     }
   }
   &__range-slider {
-    margin-bottom: 2.375rem;
+    margin-bottom: 2.075rem;
     padding-right: 3.375rem;
   }
   &__button-group {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.25rem;
     .label {
       margin-bottom: 1rem;
     }

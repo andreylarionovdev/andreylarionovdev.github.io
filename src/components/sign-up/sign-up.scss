@@ -8,6 +8,7 @@
 @import '../radio-button/radio-button';
 
 .sign-up {
+  $blockClass: &;
   @include card;
   padding: 2.4375rem 1.8125rem 1.8125rem 1.8125rem;
   @media (max-width: $screen-xs-max) {
@@ -16,12 +17,14 @@
   &__title {
     @include h1;
   }
-  &__header,
-  &__birthday-group {
+  &__header {
     margin-bottom: 1.25rem;
   }
+  &__birthday-group {
+    margin-bottom: .75rem;
+  }
   &__text-input {
-    margin-bottom: 0.5625rem;
+    margin-bottom: .5625rem;
   }
   &__radio-button {
     display: inline-block;
@@ -42,7 +45,12 @@
   }
   &__label,
   &__legend {
-    margin-bottom: 0.3125rem;
+    margin-bottom: .3125rem;
+  }
+  &__label {
+    #{$blockClass}__text-input {
+      margin-top: .3125rem;
+    }
   }
   &__button {
     margin-top: 1.5rem;
@@ -66,7 +74,7 @@
     }
   }
   &__sign-in-hint {
-    font-size: 0.875rem;
+    font-size: .875rem;
     color: black;
     @media (max-width: $screen-xs-max) {
       text-align: center;

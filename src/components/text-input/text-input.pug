@@ -1,7 +1,6 @@
 mixin text-input(options)
   -
     const {
-      id,
       name,
       type = 'text',
       format,
@@ -19,6 +18,6 @@ mixin text-input(options)
   - const createBemClasses = require('../../utils/helpers').createBemClasses;
 
   span(class=createBemClasses({ blockName: 'text-input', modifiers: blockModifiers }))
-    input.text-input__field(id=id name=(name || id) type=type placeholder=placeholder value=value)
+    input.text-input__field(name=name type=type placeholder=placeholder value=value)
     if withButton
       button.text-input__submit-button(type='submit')

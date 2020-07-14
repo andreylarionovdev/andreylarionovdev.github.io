@@ -2,8 +2,8 @@
 @import '../../utils/mixins';
 
 .label {
-  display: flex;
-  justify-content: space-between;
+  display: inline-block;
+  width: 100%;
   text-transform: uppercase;
   font-size: 0.75rem;
   flex-flow: row wrap;
@@ -14,5 +14,6 @@
   }
   &__hint {
     color: $color-primary-50;
+    float: right;
   }
 }
