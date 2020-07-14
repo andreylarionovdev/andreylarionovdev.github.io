@@ -2,9 +2,9 @@
 @import '../sign-up/sign-up.scss';
 
 .sign-up-page {
-  @include auth-page;
+  @include auth-page($innerWrapperMinHeight: 42.6875rem);
   &__form {
-    padding: 1.875rem 0 1.5rem 0;
+    margin-left: .375rem;
     @media (max-width: $screen-xs-max) {
       padding: 3rem 0;
     }

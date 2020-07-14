@@ -16,7 +16,7 @@
   margin-bottom: $marginBottom;
 }
 
-@mixin auth-page {
+@mixin auth-page($innerWrapperMinHeight) {
   width: 100%;
 
   background-image: url('../img/auth.jpg');
@@ -27,7 +27,7 @@
 
   &__inner-wrapper {
     @include inner-wrapper;
-    min-height: 42.75rem;
+    min-height: $innerWrapperMinHeight;
     display: flex;
     justify-content: center;
     align-items: center;
