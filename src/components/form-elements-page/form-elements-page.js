@@ -2,13 +2,13 @@ import $ from 'jquery';
 import '../range-slider/range-slider';
 import '../checkbox-expandable-list/checkbox-expandable-list';
 import '../pagination/pagination';
-import '../calendar/calendar';
 import '../like-button/like-button';
 import '../feedback/feedback';
 
 import './img/murad.png';
 
 import Dropdown from '../dropdown/dropdown';
+import Calendar from '../calendar/calendar';
 
 $(() => {
   // eslint-disable-next-line no-unused-vars
@@ -26,5 +26,13 @@ $(() => {
   // eslint-disable-next-line no-unused-vars
   const guestsFilled = new Dropdown($('.form-elements-page__dropdown_theme_filled .js-dropdown'), {
     type: Dropdown.prototype.guestsType,
+  });
+  // eslint-disable-next-line no-unused-vars
+  const doubleDatepickerDropdown = new Calendar($('.form-elements-page__dropdown_theme_datepicker .js-calendar'), {
+    type: Calendar.prototype.typeDouble,
+  });
+  // eslint-disable-next-line no-unused-vars
+  const singleDatepickerDropdown = new Calendar($('.form-elements-page__dropdown_theme_date-filter .js-calendar'), {
+    type: Calendar.prototype.typeSingle,
   });
 });

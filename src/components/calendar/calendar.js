@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import 'air-datepicker';
 import {
+  TYPE_SINLGE,
+  TYPE_DOUBLE,
   selectorDropdown,
   selectorToggleButton,
   selectorDropdownInput,
@@ -10,12 +12,15 @@ import {
   classThemeInline,
 } from './const';
 
-const Calendar = function Calendar($element) {
-  this.init($element);
+const Calendar = function Calendar($element, options) {
+  this.init($element, options);
 };
 
-Calendar.prototype.init = function init($element) {
-  this.emptyValue = '';
+Calendar.prototype.typeSingle = TYPE_SINLGE;
+Calendar.prototype.typeDouble = TYPE_DOUBLE;
+
+Calendar.prototype.init = function init($element, { type }) {
+  this.type = type;
 
   this.$dropdownFrom = $element.find(selectorDropdown).eq(0);
   this.$dropdownTo = $element.find(selectorDropdown).eq(1);
@@ -53,8 +58,12 @@ Calendar.prototype.initDatepicker = function initDatepicker() {
     },
     onSelect() {
       // We shouldn't change input values immediately
-      that.$inputFrom.val(that.currentInputValues[0]);
-      that.$inputTo.val(that.currentInputValues[1]);
+      if (that.type === Calendar.prototype.typeDouble) {
+        that.setDropdownValueTypeDouble(that.currentInputValues);
+      }
+      if (that.type === Calendar.prototype.typeSingle) {
+        that.setDropdownValueTypeSingle(that.currentInputValues);
+      }
       that.toggleClearButton();
     },
   }).data('datepicker');
@@ -75,11 +84,12 @@ Calendar.prototype.handleToggleButtonClick = function handleToggleButtonClick() 
 };
 
 Calendar.prototype.setDates = function setDates() {
-  this.currentInputValues[0] = this.$inputFrom.val();
-  this.currentInputValues[1] = this.$inputTo.val();
+  const dates = this.type === Calendar.prototype.typeDouble
+    ? this.parseDatesTypeDouble()
+    : this.parseDatesTypeSingle();
 
-  const arrIsoFrom = this.$inputFrom.val().split('.');
-  const arrIsoTo = this.$inputTo.val().split('.');
+  const arrIsoFrom = dates[0].split('.');
+  const arrIsoTo = dates[1].split('.');
 
   const dateFrom = new Date(`${arrIsoFrom[2]}-${arrIsoFrom[1]}-${arrIsoFrom[0]}`);
   const dateTo = new Date(`${arrIsoTo[2]}-${arrIsoTo[1]}-${arrIsoTo[0]}`);
@@ -93,15 +103,17 @@ Calendar.prototype.setDates = function setDates() {
     initDates.push(dateTo);
   }
 
+  this.currentInputValues = [...initDates];
+
   if (initDates.length > 0) {
     this.$datepickerApi.selectDate(initDates);
   }
 };
 
 Calendar.prototype.clear = function clear() {
-  this.$dropdownFrom.find(selectorDropdownInput).val(this.emptyValue);
-  this.$dropdownTo.find(selectorDropdownInput).val(this.emptyValue);
-  this.currentInputValues = [this.emptyValue, this.emptyValue];
+  this.$dropdownFrom.find(selectorDropdownInput).val('');
+  this.$dropdownTo.find(selectorDropdownInput).val('');
+  this.currentInputValues = [];
 };
 
 Calendar.prototype.update = function update() {
@@ -109,24 +121,11 @@ Calendar.prototype.update = function update() {
 
   if (dates.length === 0) return;
 
-  const ddFrom = `0${dates[0].getDate()}`.slice(-2);
-  const mmFrom = `0${dates[0].getMonth() + 1}`.slice(-2);
-  const yyyyFrom = dates[0].getFullYear();
-
-  const formatFrom = `${ddFrom}.${mmFrom}.${yyyyFrom}`;
-
-  this.$dropdownFrom.find(selectorDropdownInput).val(formatFrom);
-  this.currentInputValues[0] = formatFrom;
-
-  if (dates.length > 1) {
-    const ddTo = `0${dates[1].getDate()}`.slice(-2);
-    const mmTo = `0${dates[1].getMonth() + 1}`.slice(-2);
-    const yyyyTo = dates[1].getFullYear();
-
-    const formatTo = `${ddTo}.${mmTo}.${yyyyTo}`;
-
-    this.$dropdownTo.find(selectorDropdownInput).val(formatTo);
-    this.currentInputValues[1] = formatTo;
+  if (this.type === Calendar.prototype.typeDouble) {
+    this.setDropdownValueTypeDouble(dates);
+  }
+  if (this.type === Calendar.prototype.typeSingle) {
+    this.setDropdownValueTypeSingle(dates);
   }
 };
 
@@ -176,4 +175,50 @@ Calendar.prototype.handleApplyButtonClick = function handleApplyButtonClick() {
   this.update();
 };
 
-$(() => $('.js-calendar').each((_, calendarElement) => new Calendar($(calendarElement))));
+Calendar.prototype.parseDatesTypeSingle = function parseDatesTypeSingle() {
+  return this.$inputFrom.val().split('-');
+};
+
+Calendar.prototype.parseDatesTypeDouble = function parseDatesTypeDouble() {
+  return [
+    this.$inputFrom.val(),
+    this.$inputTo.val(),
+  ];
+};
+
+Calendar.prototype.setDropdownValueTypeSingle = function setDropdownValueTypeSingle(dates) {
+  if ((dates[0] && dates[1]) instanceof Date) {
+    const options = {
+      month: 'short',
+      day: 'numeric',
+    };
+    const dateFromString = Intl.DateTimeFormat('ru-RU', options).format(dates[0]);
+    const dateToString = Intl.DateTimeFormat('ru-RU', options).format(dates[1]);
+    const dateRangeString = `${dateFromString} - ${dateToString}`;
+    this.$inputFrom.val(dateRangeString);
+  } else {
+    this.$inputFrom.val('');
+  }
+};
+
+Calendar.prototype.setDropdownValueTypeDouble = function setDropdownValueTypeDouble(dates) {
+  if ((dates[0] && dates[1]) instanceof Date) {
+    const options = {
+      year: 'numeric',
+      month: 'numeric',
+      day: 'numeric',
+    };
+    const dateStringFrom = Intl.DateTimeFormat('ru-RU', options).format(dates[0]);
+    this.$dropdownFrom.find(selectorDropdownInput).val(dateStringFrom);
+
+    const dateStringTo = Intl.DateTimeFormat('ru-RU', options).format(dates[1]);
+    this.$dropdownTo.find(selectorDropdownInput).val(dateStringTo);
+
+    this.currentInputValues = dates;
+  } else {
+    this.$inputFrom.val('');
+    this.$inputTo.val('');
+  }
+};
+
+export default Calendar;

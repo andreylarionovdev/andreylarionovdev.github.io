@@ -65,17 +65,15 @@ mixin form-elements-page
               })
           .form-elements-page__dropdown.form-elements-page__dropdown_theme_datepicker
             +calendar({
-              fromLabel: 'date dropdown',
-              toLabel: 'date dropdown',
-              to: '19.08.2019 '
+              type: 'double',
+              labels: ['date dropdown', 'date dropdown'],
             })
           .form-elements-page__dropdown.form-elements-page__dropdown_theme_date-filter
-            +label({
-              label: 'filter date dropdown'
-            })
-            +dropdown({
-              name: 'date-filter',
-              value: '19 авг - 23 авг'
+            +calendar({
+              type: 'single',
+              labels: ['filter date dropdown'],
+              placeholder: 'Выберите даты',
+              values: '19.08.2020-23.08.2020',
             })
           .form-elements-page__text-input-group.form-elements-page__text-input-group_theme_with-submit
             +label({
