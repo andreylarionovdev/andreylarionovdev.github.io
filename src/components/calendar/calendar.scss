@@ -288,4 +288,11 @@
       }
     }
   }
+  &_type {
+    &_single {
+      #{$blockClass}__group {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
 }

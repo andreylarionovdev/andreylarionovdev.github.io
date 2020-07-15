@@ -15,12 +15,14 @@ mixin room-search(options)
   form.room-search(method=method, action=action)
     header.room-search__header
       #{headerTag}.room-search__title= header
-    .room-search__calendar
-      +calendar
+    .room-search__calendar.js-room-search__calendar
+      +calendar({
+        labels: ['Прибытие', 'Выезд'],
+      })
     .room-search__guests-dropdown
       .room-search__label
         +label({ label: 'Гости' })
-      .room-search__dropdown
+      .room-search__dropdown.js-room-search__dropdown
         +dropdown({
           name: 'field-guests',
           type: 'guests',

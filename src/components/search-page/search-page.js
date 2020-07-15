@@ -18,6 +18,7 @@ import './img/room-444.jpg';
 import './img/room-352.jpg';
 
 import Dropdown from '../dropdown/dropdown';
+import Calendar from '../calendar/calendar';
 
 const SearchPage = function SearchPage() {
   this.init();
@@ -37,11 +38,14 @@ SearchPage.prototype.init = function init() {
   this.$thumbnailsWrapper = $('.js-search-page__search-result');
   this.$footer = $('.js-footer');
 
-  this.guestsDropdown = new Dropdown($('.search-page__guests-dropdown .js-dropdown'), {
+  this.guestsDropdown = new Dropdown($('.js-search-page__guests-dropdown .js-dropdown'), {
     type: Dropdown.prototype.guestsType,
   });
-  this.roomsDropdown = new Dropdown($('.search-page__feature-dropdown .js-dropdown'), {
+  this.roomsDropdown = new Dropdown($('.js-search-page__feature-dropdown .js-dropdown'), {
     type: Dropdown.prototype.roomsType,
+  });
+  this.calendarDropdown = new Calendar($('.js-search-page__date-dropdown .js-calendar'), {
+    type: Calendar.prototype.typeSingle,
   });
 
   this.addEventListeners();

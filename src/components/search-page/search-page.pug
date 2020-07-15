@@ -5,6 +5,7 @@ include ../room-thumbnail/room-thumbnail
 include ../pagination/pagination
 include ../dropdown/dropdown
 include ../button/button
+include ../calendar/calendar
 
 mixin search-page
   main.search-page
@@ -18,16 +19,16 @@ mixin search-page
             size: 'fluid',
           })
         form.search-page__form.js-search-page__form
-          .search-page__date-dropdown
+          .search-page__date-dropdown.js-search-page__date-dropdown
             .search-page__label
               +label({ label: 'Даты пребывания в отеле' })
             .search-page__dropdown
-              +dropdown({
-                name: 'field-dates',
-                value: '19 авг. - 23 авг.',
-                placeholder: 'Даты пребывания',
+              +calendar({
+                type: 'single',
+                values: '19.08.2020-23.08.2020',
+                placeholder: 'Выберите даты',
               })
-          .search-page__guests-dropdown
+          .search-page__guests-dropdown.js-search-page__guests-dropdown
             .search-page__label
               +label({ label: 'Гости' })
             .search-page__dropdown
@@ -87,7 +88,7 @@ mixin search-page
                 hint: 'На 1 этаже вас встретит специалист и проводит до номера.',
                 theme: 'rich',
               })
-          .search-page__feature-dropdown
+          .search-page__feature-dropdown.js-search-page__feature-dropdown
             .search-page__label
               +label({ label: 'Удобства номера' })
             .search-page__dropdown

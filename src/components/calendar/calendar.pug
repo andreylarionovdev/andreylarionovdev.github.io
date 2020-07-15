@@ -7,7 +7,7 @@ mixin calendar(options)
       theme,
       type = 'double',
       placeholder = 'дд.мм.гггг',
-      labels = ['Прибытие', 'Выезд'],
+      labels = [],
       values = ['', ''],
     } = options || {}
 
@@ -21,8 +21,9 @@ mixin calendar(options)
     div(class=createBemClasses({ blockName, elementName: 'group', jsPrefix }))
       if type === 'double'
         div(class=createBemClasses({ blockName, elementName: 'item', jsPrefix }))
-          .calendar__label
-            +label({ label: labels[0] })
+          if labels.length > 0
+            .calendar__label
+              +label({ label: labels[0] })
           div(class=createBemClasses({ blockName, elementName: 'dropdown', jsPrefix }))
             +dropdown({
               name: 'field-date-from',
@@ -31,8 +32,9 @@ mixin calendar(options)
               placeholder,
             })
         div(class=createBemClasses({ blockName, elementName: 'item', jsPrefix }))
-          .calendar__label
-            +label({ label: labels[1] })
+          if labels.length > 1
+            .calendar__label
+              +label({ label: labels[1] })
           div(class=createBemClasses({ blockName, elementName: 'dropdown', jsPrefix }))
             +dropdown({
               name: 'field-date-to',
@@ -42,8 +44,9 @@ mixin calendar(options)
             })
       if type === 'single'
         div(class=createBemClasses({blockName, elementName: 'item', jsPrefix}))
-          .calendar__label
-            +label({ label: labels[0] })
+          if labels.length > 0
+            .calendar__label
+              +label({ label: labels[0] })
           div(class=createBemClasses({blockName, elementName: 'dropdown', jsPrefix}))
             +dropdown({
               name: 'date-filter',

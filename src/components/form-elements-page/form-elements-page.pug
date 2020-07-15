@@ -63,12 +63,12 @@ mixin form-elements-page
                 placeholder: 'дд.мм.гггг',
                 format: 'date',
               })
-          .form-elements-page__dropdown.form-elements-page__dropdown_theme_datepicker
+          .form-elements-page__dropdown.form-elements-page__dropdown_theme_datepicker.js-form-elements-page__dropdown_theme_datepicker
             +calendar({
               type: 'double',
               labels: ['date dropdown', 'date dropdown'],
             })
-          .form-elements-page__dropdown.form-elements-page__dropdown_theme_date-filter
+          .form-elements-page__dropdown.form-elements-page__dropdown_theme_date-filter.js-form-elements-page__dropdown_theme_date-filter
             +calendar({
               type: 'single',
               labels: ['filter date dropdown'],
@@ -235,7 +235,7 @@ mixin form-elements-page
             })
       section.form-elements-page__section
         .form-elements-page__section-column
-          .form-elements-page__dropdown.form-elements-page__dropdown_collapsed
+          .form-elements-page__dropdown.form-elements-page__dropdown_collapsed.js-form-elements-page__dropdown_collapsed
             +label({
               label: 'dropdown',
               hint: 'default'
@@ -251,7 +251,7 @@ mixin form-elements-page
               ],
               hasZIndexPriority: true,
             })
-          .form-elements-page__dropdown.form-elements-page__dropdown_theme_expanded
+          .form-elements-page__dropdown.form-elements-page__dropdown_theme_expanded.js-form-elements-page__dropdown_theme_expanded
             +label({
               label: 'dropdown',
               hint: 'expanded'
@@ -269,7 +269,7 @@ mixin form-elements-page
             })
         .form-elements-page__section-column-gap
         .form-elements-page__section-column
-          .form-elements-page__dropdown.form-elements-page__dropdown_theme_empty
+          .form-elements-page__dropdown.form-elements-page__dropdown_theme_empty.js-form-elements-page__dropdown_theme_empty
             +label({
               label: 'dropdown'
             })
@@ -286,7 +286,7 @@ mixin form-elements-page
             })
         .form-elements-page__section-column-gap
         .form-elements-page__section-column
-          .form-elements-page__dropdown.form-elements-page__dropdown_theme_filled
+          .form-elements-page__dropdown.form-elements-page__dropdown_theme_filled.js-form-elements-page__dropdown_theme_filled
             +label({
               label: 'dropdown'
             })

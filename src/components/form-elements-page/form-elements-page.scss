@@ -99,6 +99,9 @@
       &_date-filter {
         margin-bottom: 2.5625rem;
         padding-right: 3.375rem;
+        .label {
+          margin-bottom: 0;
+        }
       }
       &_expanded {
         @media (max-width: $screen-xs-max) {

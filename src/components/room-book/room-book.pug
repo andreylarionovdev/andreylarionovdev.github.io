@@ -29,13 +29,15 @@ mixin room-book(options)
         |&nbsp;
         span.room-book__date-unit= 'в сутки'
 
-    .room-book__calendar
-      +calendar
+    .room-book__calendar.js-room-book__calendar
+      +calendar({
+        labels: ['Прибытие', 'Выезд'],
+      })
 
     .room-book__guests-dropdown-group
       .room-book__label
         +label({ label: 'Гости' })
-      .room-book__dropdown
+      .room-book__dropdown.js-room-book__dropdown
         +dropdown({
           name: 'field-guests',
           type: 'guests',
