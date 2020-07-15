@@ -52,7 +52,7 @@ mixin room-book(options)
     - const totalBrutto = pricePerDay * daysCount;
     - const totalNetto = totalBrutto - discount + fee;
 
-    .room-book__result-grid
+    .room-book__result-grid.js-room-book__result-grid
       .room-book__result-grid-cell!= `${formatCurrency({value: pricePerDay})} x ${daysCount} суток`
       .room-book__result-grid-cell.room-book__result-grid-cell_type_currency!= formatCurrency({value: totalBrutto})
 

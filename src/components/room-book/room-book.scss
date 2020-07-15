@@ -127,4 +127,12 @@
   &__button {
     margin-top: 1.5rem;
   }
+  &__tooltip {
+    background: $color-gray;
+    border-radius: .25rem;
+    font-family: Montserrat, sans-serif;
+    font-size: .75rem;
+    color: $color-primary-75;
+    box-shadow: 0 .3125rem .3125rem $color-primary-25;
+  }
 }
