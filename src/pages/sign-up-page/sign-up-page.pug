@@ -1,6 +1,6 @@
 extends ../../layouts/page
 
-include ../../components/sign-up-page/sign-up-page
+include ../../components/sign-up/sign-up
 
 block vars
   - const title = 'Регистрация';
@@ -9,4 +9,7 @@ block vars
   - const metaKeywords = 'регистрация, зарегистрироваться, создать учетную запись';
 
 block main
-  +sign-up-page
+  main.sign-up-page
+    .sign-up-page__inner-wrapper
+      section.sign-up-page__form
+        +sign-up

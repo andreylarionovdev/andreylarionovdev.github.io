@@ -1,10 +1,56 @@
 extends ../../layouts/base
 
-include ../../components/cards-page/cards-page
+include ../../components/logo/logo
+include ../../components/room-book/room-book
+include ../../components/calendar/calendar
+include ../../components/room-search/room-search
+include ../../components/room-thumbnail/room-thumbnail
+include ../../components/sign-in/sign-in
+include ../../components/sign-up/sign-up
 
 block vars
   - const title = 'UI Kit - Cards';
   - const theme = 'gray';
 
 block content
-  +cards-page
+  .cards
+    nav.cards__nav
+      +logo
+    .cards__main
+      .cards__grid-column
+        article.cards__card
+          +room-search()
+        article.cards__card
+          +sign-up()
+      .cards__grid-column
+        article.cards__card
+          +room-book
+        article.cards__card
+          +sign-in()
+      .cards__grid-column
+        article.cards__card
+          +calendar({theme: 'inline'})
+        article.cards__card.cards__card_type_room-thumbnail
+          +room-thumbnail({
+            roomNumber: 888,
+            pricePerDay: 9990,
+            feedbackCounter: 145,
+            rate: 5,
+            image: {
+              src: './img/room-888.jpg',
+              alt: 'Room 888'
+            },
+            feature: 'люкс',
+            hover: true
+          })
+        article.cards__card.cards__card_type_room-thumbnail
+          +room-thumbnail({
+            roomNumber: 840,
+            pricePerDay: 9900,
+            feedbackCounter: 65,
+            rate: 4,
+            image: {
+              src: './img/room-840.jpg',
+              alt: 'Room 840'
+            },
+          })

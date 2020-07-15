@@ -1,6 +1,6 @@
 extends ../../layouts/page
 
-include ../../components/landing-page/landing-page
+include ../../components/room-search/room-search
 
 block vars
   -
@@ -9,4 +9,9 @@ block vars
   - const metaKeywords = 'отель Toxin, подобрать номер, выбрать дату пребывания'
 
 block main
-  +landing-page
+  main.landing
+    .landing__inner-wrapper
+      section.landing__room-search
+        +room-search
+      p.landing__hero-text
+        = 'Лучшие номера для вашей работы, отдыха и просто вдохновения'

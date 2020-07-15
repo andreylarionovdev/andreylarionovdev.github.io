@@ -1,9 +1,396 @@
 extends ../../layouts/base
 
-include ../../components/form-elements-page/form-elements-page
+include ../../components/logo/logo
+include ../../components/text-input/text-input
+include ../../components/dropdown/dropdown
+include ../../components/calendar/calendar
+include ../../components/radio-button/radio-button
+include ../../components/checkbox/checkbox
+include ../../components/label/label
+include ../../components/like-button/like-button
+include ../../components/rating/rating
+include ../../components/range-slider/range-slider
+include ../../components/button/button
+include ../../components/pagination/pagination
+include ../../components/checkbox-expandable-list/checkbox-expandable-list
+include ../../components/bullet-list/bullet-list
+include ../../components/feature/feature
+include ../../components/feedback/feedback
 
 block vars
   - const title = 'UI Kit - Form elements';
 
 block content
-  +form-elements-page
+  .form-elements
+    nav.form-elements__nav
+      +logo
+    .form-elements__main
+      section.form-elements__section
+        .form-elements__section-column
+          .form-elements__text-input-group
+            +label({
+              label: 'text field',
+              hint: 'default',
+            })
+              +text-input({
+                name: 'input-email',
+                placeholder: 'Email',
+                type: 'email'
+              })
+          .form-elements__text-input-group.form-elements__text-input-group_hovered
+            +label({
+              label: 'text field',
+              hint: 'hover / focus',
+            })
+              +text-input({
+                name: 'input-hovered',
+                placeholder: 'Some text',
+                value: 'This is pretty awesome',
+                isHovered: true
+              })
+          .form-elements__dropdown
+            +label({
+              label: 'dropdown',
+              hint: 'default'
+            })
+            +dropdown({
+              name: 'guests-default',
+              type: 'guests',
+              placeholder: 'Сколько гостей'
+            })
+          .form-elements__text-input-group.form-elements__text-input-group_theme_with-mask
+            +label({
+              label: 'masked text field',
+              hint: 'default',
+            })
+              +text-input({
+                name: 'input-with-mask',
+                placeholder: 'дд.мм.гггг',
+                format: 'date',
+              })
+          .form-elements__dropdown.form-elements__dropdown_theme_datepicker.js-form-elements__dropdown_theme_datepicker
+            +calendar({
+              type: 'double',
+              labels: ['date dropdown', 'date dropdown'],
+            })
+          .form-elements__dropdown.form-elements__dropdown_theme_date-filter.js-form-elements__dropdown_theme_date-filter
+            +calendar({
+              type: 'single',
+              labels: ['filter date dropdown'],
+              placeholder: 'Выберите даты',
+              values: '19.08.2020-23.08.2020',
+            })
+          .form-elements__text-input-group.form-elements__text-input-group_theme_with-submit
+            +label({
+              label: 'subscription text field',
+            })
+              +text-input({
+                name: 'input-submit',
+                placeholder: 'Email',
+                withButton: true,
+                type: 'email'
+              })
+        .form-elements__section-column-gap
+        .form-elements__section-column
+          .form-elements__checkbox-list-group
+            +label({
+              label: 'checkbox buttons'
+            })
+            ul.form-elements__checkbox-list
+              li.form-elements__checkbox
+                +checkbox({
+                  name: 'field-smoke',
+                  label: 'Можно курить',
+                })
+              li.form-elements__checkbox
+                +checkbox({
+                  name: 'field-pets',
+                  label: 'Можно с питомцами',
+                  isChecked: true,
+                })
+              li.form-elements__checkbox
+                +checkbox({
+                  name: 'field-guests',
+                  label: 'Можно пригласить гостей (до 10 человек)',
+                  isChecked: true,
+                })
+
+          .form-elements__radio-group
+            +label({
+              label: 'radio buttons'
+            })
+            +radio-button({
+              id: 'field-gender-male',
+              name: 'field-gender',
+              value: 'male',
+              label: 'Мужчина',
+              isChecked: true
+            })
+            +radio-button({
+              id: 'field-gender-female',
+              name: 'field-gender',
+              value: 'female',
+              label: 'Женщина'
+            })
+          .form-elements__toggle-group
+            +label({
+              label: 'toggle'
+            })
+            +checkbox({
+              name: 'field-promo',
+              theme: 'toggle',
+              label: 'Получать спецпредложения',
+              isChecked: true
+            })
+            +checkbox({
+              name: 'field-promo-second',
+              theme: 'toggle',
+              label: 'Получать спецпредложения'
+            })
+          .form-elements__like-button-group
+            +label({
+              label: 'like button'
+            })
+            +like-button({
+              count: 2
+            })
+            +like-button({
+              count: 12,
+              isFavorite: true
+            })
+          .form-elements__rating-group
+            +label({
+              label: 'rate button'
+            })
+            +rating({
+              id: 'rate-first',
+              base: 5,
+              rate: 4
+            })
+            +rating({
+              id: 'rate-second',
+              base: 5,
+              rate: 5
+            })
+        .form-elements__section-column-gap
+        .form-elements__section-column
+          .form-elements__range-slider
+            +range-slider({
+              min: 0,
+              max: 16000,
+              from: 5000,
+              to: 10000,
+            })
+          .form-elements__button-group
+            +label({
+              label: 'buttons'
+            })
+            .form-elements__row
+              +button({
+                theme: 'default',
+                type: 'button',
+                caption: 'click me'
+              })
+              +button({
+                theme: 'default',
+                type: 'button',
+                caption: 'click me',
+                isHovered: true
+              })
+            .form-elements__row
+              +button({
+                theme: 'white',
+                type: 'button',
+                caption: 'click me'
+              })
+              +button({
+                theme: 'white',
+                type: 'button',
+                caption: 'click me',
+                isHovered: true
+              })
+            .form-elements__row
+              +button({
+                theme: 'textual',
+                type: 'button',
+                caption: 'click me'
+              })
+              +button({
+                theme: 'textual',
+                type: 'button',
+                caption: 'click me',
+                isHovered: true,
+              })
+            .form-elements__row
+              +button({
+                theme: 'default',
+                type: 'button',
+                caption: 'перейти к оплате',
+                size: 'fluid',
+                withArrow: true,
+              })
+          .form-elements__pagination-group
+            +label({
+              label: 'pagination'
+            })
+            +pagination({
+              source: JSON.stringify([...Array(180).keys()]),
+              pageSize: 12,
+              pageRange: 1
+            })
+      section.form-elements__section
+        .form-elements__section-column
+          .form-elements__dropdown.form-elements__dropdown_collapsed.js-form-elements__dropdown_collapsed
+            +label({
+              label: 'dropdown',
+              hint: 'default'
+            })
+            +dropdown({
+              name: 'rooms-collapsed',
+              type: 'rooms',
+              placeholder: 'Удобства',
+              rows: [
+                {count: 2, text: 'спальни',},
+                {count: 2, text: 'кровати',},
+                {count: 0, text: 'ванные комнаты',}
+              ],
+              hasZIndexPriority: true,
+            })
+          .form-elements__dropdown.form-elements__dropdown_theme_expanded.js-form-elements__dropdown_theme_expanded
+            +label({
+              label: 'dropdown',
+              hint: 'expanded'
+            })
+            +dropdown({
+              name: 'rooms-expanded',
+              type: 'rooms',
+              placeholder: 'Удобства',
+              isExpanded: true,
+              rows: [
+                {count: 2, text: 'спальни',},
+                {count: 2, text: 'кровати',},
+                {count: 0, text: 'ванные комнаты',}
+              ]
+            })
+        .form-elements__section-column-gap
+        .form-elements__section-column
+          .form-elements__dropdown.form-elements__dropdown_theme_empty.js-form-elements__dropdown_theme_empty
+            +label({
+              label: 'dropdown'
+            })
+            +dropdown({
+              name: 'guests-empty',
+              type: 'guests',
+              placeholder: 'Сколько гостей',
+              isExpanded: true,
+              rows: [
+                {count: 0, text: 'взрослые',},
+                {count: 0, text: 'дети',},
+                {count: 0, text: 'младенцы',}
+              ]
+            })
+        .form-elements__section-column-gap
+        .form-elements__section-column
+          .form-elements__dropdown.form-elements__dropdown_theme_filled.js-form-elements__dropdown_theme_filled
+            +label({
+              label: 'dropdown'
+            })
+            +dropdown({
+              name: 'guests-filled',
+              type: 'guests',
+              placeholder: 'Сколько гостей',
+              isExpanded: true,
+              rows: [
+                {count: 2, text: 'взрослые',},
+                {count: 1, text: 'дети',},
+                {count: 0, text: 'младенцы',}
+              ]
+            })
+      section.form-elements__section
+        .form-elements__section-column
+          .form-elements__checkbox-expandable-list.form-elements__checkbox-expandable-list
+            +checkbox-expandable-list({
+              label: 'Expandable checkbox list'
+            })
+          .form-elements__checkbox-expandable-list.form-elements__checkbox-expandable-list_expanded
+            +checkbox-expandable-list({
+              label: 'Expandable checkbox list',
+              isExpanded: true,
+              items: [
+                {name: 'field-breakfast', label: 'Завтрак'},
+                {name: 'field-table', label: 'Письменный стол', isChecked: true},
+                {name: 'field-baby-chair-for-eat', label: 'Стул для кормления', isChecked: true},
+                {name: 'field-baby-bed', label: 'Кроватка', isChecked: true},
+                {name: 'field-tv', label: 'Телевизор'},
+                {name: 'field-shampoo', label: 'Шампунь'},
+                {name: 'field-tv-2', label: 'Телевизор'},
+                {name: 'field-shampoo-2', label: 'Шампунь'}
+              ]
+            })
+        .form-elements__section-column-gap
+        .form-elements__section-column
+          .form-elements__checkbox-list-group.form-elements__checkbox-list-group_theme_rich
+            +label({
+              label: 'rich checkbox buttons'
+            })
+            ul.form-elements__checkbox-list
+              li.form-elements__checkbox
+                +checkbox({
+                  name: 'field-wide-hall',
+                  label: 'Широкий коридор',
+                  hint: 'Ширина коридоров в номере не менее 91 см.',
+                  theme: 'rich',
+                })
+              li.form-elements__checkbox
+                +checkbox({
+                  name: 'field-assistant',
+                  label: 'Помощник для инвалидов',
+                  hint: 'На 1 этаже вас встретит специалист и проводит до номера.',
+                  theme: 'rich',
+                })
+        .form-elements__section-column-gap
+        .form-elements__section-column
+          .form-elements__bullet-list-group
+            .form-elements__label
+              +label({
+                label: 'Bullet list'
+              })
+            +bullet-list({
+              items: [
+                {text: 'Нельзя с питомцами'},
+                {text: 'Без вечеринок и мероприятий'},
+                {text: 'Время прибытия &mdash; после 13:00, а выезд до 12:00'}
+              ]
+            })
+      section.form-elements__section
+        .form-elements__section-column
+          .form-elements__feature-group
+            .form-elements__feature
+              +feature({
+                icon: 'mood',
+                title: 'Комфорт',
+                hint: 'Шумопоглощающие стены'
+              })
+            .form-elements__feature
+              +feature({
+                icon: 'location_city',
+                title: 'Удобство',
+                hint: 'Окно в каждой из спален'
+              })
+        .form-elements__section-column-gap
+        .form-elements__section-column
+          .feedback-group.form-elements__feedback-group
+            .feedback-group__feedback
+              +feedback({
+                author: {
+                  name: 'Мурад Сарафанов',
+                  image: {
+                    src: './img/murad.png',
+                    alt: 'Фото автора'
+                  }
+                },
+                date: '5 дней назад',
+                text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+                favoritesCount: 12,
+                isFavorite: true,
+              })

@@ -1,10 +1,10 @@
 @import '../../utils/vars';
 @import '../../utils/mixins';
 
-@import '../color-sample/color-sample.scss';
-@import '../font-sample/font-sample.scss';
+@import '../../components/color-sample/color-sample.scss';
+@import '../../components/font-sample/font-sample.scss';
 
-.colors-type-page {
+.colors-type {
   &__nav {
     @include inner-wrapper($lgWidth: 95.8%, $mdWidth: 95.8%, $maxWidth: 87.3125rem);
     @include ui-kit-navigation(2.0625rem);

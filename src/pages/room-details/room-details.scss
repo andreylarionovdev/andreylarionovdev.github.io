@@ -1,13 +1,13 @@
 @import '../../utils/vars';
 @import '../../utils/mixins';
 
-@import '../feature/feature.scss';
-@import '../feedback/feedback.scss';
-@import '../bullet-list/bullet-list.scss';
-@import '../room-book/room-book.scss';
-@import '../donut-chart/donut-chart';
+@import '../../components/feature/feature.scss';
+@import '../../components/feedback/feedback.scss';
+@import '../../components/bullet-list/bullet-list.scss';
+@import '../../components/room-book/room-book.scss';
+@import '../../components/donut-chart/donut-chart';
 
-.room-details-page {
+.room-details {
   $blockClass: &;
   border-bottom: 0.0625rem solid $color-primary-25;
   &__inner-wrapper {

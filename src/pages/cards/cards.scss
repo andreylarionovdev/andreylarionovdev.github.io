@@ -1,13 +1,13 @@
 @import '../../utils/vars';
 @import '../../utils/mixins';
 
-@import '../room-search/room-search.scss';
-@import '../sign-up/sign-up.scss';
-@import '../room-book/room-book.scss';
-@import '../sign-in/sign-in.scss';
-@import '../room-thumbnail/room-thumbnail.scss';
+@import '../../components/room-search/room-search.scss';
+@import '../../components/sign-up/sign-up.scss';
+@import '../../components/room-book/room-book.scss';
+@import '../../components/sign-in/sign-in.scss';
+@import '../../components/room-thumbnail/room-thumbnail.scss';
 
-.cards-page {
+.cards {
   &__nav {
     @include ui-kit-navigation(2.375rem);
   }

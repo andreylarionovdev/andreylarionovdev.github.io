@@ -1,5 +1,5 @@
 @import '../../utils/mixins';
-@import '../sign-up/sign-up.scss';
+@import '../../components/sign-up/sign-up.scss';
 
 .sign-up-page {
   @include auth-page($innerWrapperMinHeight: 42.6875rem);

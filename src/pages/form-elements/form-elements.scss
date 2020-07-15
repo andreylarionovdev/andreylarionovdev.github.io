@@ -1,23 +1,23 @@
 @import '../../utils/vars';
 @import '../../utils/mixins';
 
-@import '../label/label.scss';
-@import '../dropdown/dropdown.scss';
-@import '../range-slider/range-slider.scss';
-@import '../checkbox-expandable-list/checkbox-expandable-list';
-@import '../room-thumbnail/room-thumbnail.scss';
-@import '../pagination/pagination.scss';
-@import '../text-input/text-input.scss';
-@import '../calendar/calendar';
-@import '../button/button.scss';
-@import '../radio-button/radio-button.scss';
-@import '../checkbox/checkbox.scss';
-@import '../like-button/like-button.scss';
-@import '../bullet-list/bullet-list.scss';
-@import '../feature/feature.scss';
-@import '../feedback/feedback.scss';
+@import '../../components/label/label.scss';
+@import '../../components/dropdown/dropdown.scss';
+@import '../../components/range-slider/range-slider.scss';
+@import '../../components/checkbox-expandable-list/checkbox-expandable-list';
+@import '../../components/room-thumbnail/room-thumbnail.scss';
+@import '../../components/pagination/pagination.scss';
+@import '../../components/text-input/text-input.scss';
+@import '../../components/calendar/calendar';
+@import '../../components/button/button.scss';
+@import '../../components/radio-button/radio-button.scss';
+@import '../../components/checkbox/checkbox.scss';
+@import '../../components/like-button/like-button.scss';
+@import '../../components/bullet-list/bullet-list.scss';
+@import '../../components/feature/feature.scss';
+@import '../../components/feedback/feedback.scss';
 
-.form-elements-page {
+.form-elements {
   $blockClass: &;
 
   &__nav {

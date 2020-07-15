@@ -1,8 +1,8 @@
 @import '../../utils/mixins';
-@import '../header/header.scss';
-@import '../footer/footer.scss';
+@import '../../components/header/header.scss';
+@import '../../components/footer/footer.scss';
 
-.headers-footers-page {
+.headers-footers {
   &__nav {
     @include ui-kit-navigation($marginBottom: 1.75rem);
   }

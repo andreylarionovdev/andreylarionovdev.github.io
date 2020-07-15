@@ -1,14 +1,14 @@
 @import '../../utils/vars';
 @import '../../utils/mixins';
 
-@import '../dropdown/dropdown.scss';
-@import '../range-slider/range-slider.scss';
-@import '../checkbox-expandable-list/checkbox-expandable-list';
-@import '../room-thumbnail/room-thumbnail.scss';
-@import '../pagination/pagination.scss';
-@import '../calendar/calendar.scss';
+@import '../../components/dropdown/dropdown.scss';
+@import '../../components/range-slider/range-slider.scss';
+@import '../../components/checkbox-expandable-list/checkbox-expandable-list';
+@import '../../components/room-thumbnail/room-thumbnail.scss';
+@import '../../components/pagination/pagination.scss';
+@import '../../components/calendar/calendar.scss';
 
-.search-page {
+.search {
   $blockClass: &;
   border-bottom: .0625rem solid $color-primary-25;
   &__inner-wrapper {

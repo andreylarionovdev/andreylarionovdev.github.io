@@ -1,10 +1,65 @@
 extends ../../layouts/base
 
-include ../../components/headers-footers-page/headers-footers-page
+include ../../components/logo/logo
+include ../../components/header/header
+include ../../components/footer/footer
 
 block vars
   - const title = 'UI Kit - Headers & Footers';
   - const theme = 'gray';
 
 block content
-  +headers-footers-page
+  - const user = 'Юлий Цезарь';
+  -
+    const href = '/change-me';
+    const menuItems = [
+      {name: 'О нас', href, active: true},
+      {
+        name: 'Услуги',
+        sub: [
+          {name: 'Услуга 1', href},
+          {name: 'Услуга 2', href},
+          {name: 'Услуга 3', href}
+        ],
+        href,
+      },
+      {name: 'Вакансии', href},
+      {name: 'Новости', href},
+      {
+        name: 'Соглашения',
+        sub: [
+          {name: 'Соглашение 1', href},
+          {name: 'Соглашение 2', href},
+          {name: 'Соглашение 3', href}
+        ],
+        href,
+      }
+    ];
+  -
+    const menuButtons = [
+      {
+        name: 'sign-in-btn',
+        theme: 'white',
+        caption: 'Войти',
+        size: 'small',
+        href: 'sign-in-page.html'
+      },
+      {
+        name: 'sign-up-btn',
+        theme: 'default',
+        caption: 'Зарегистрироваться',
+        size: 'small',
+        href: 'sign-up.html'
+      },
+    ];
+  article.headers-footers
+    nav.headers-footers__nav
+      +logo
+    section.headers-footers__header
+      +header({menuItems, menuButtons})
+    section.headers-footers__header
+      +header({user, menuItems, menuButtons})
+    section.headers-footers__footer
+      +footer
+    section.headers-footers__footer_size_small
+      +footer({theme: 'mobile'})

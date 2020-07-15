@@ -1,6 +1,10 @@
 extends ../../layouts/page
 
-include ../../components/room-details-page/room-details-page
+include ../../components/feature/feature
+include ../../components/feedback/feedback
+include ../../components/bullet-list/bullet-list
+include ../../components/room-book/room-book
+include ../../components/donut-chart/donut-chart
 
 block vars
   - const title = 'Номер 888 Люкс - Отзывы, фото и цены';
@@ -10,4 +14,100 @@ block vars
   - const metaKeywords = 'смотреть цены, читать отзывы, номер люкс, бронировать номер'
 
 block main
-  +room-details-page
+  main.room-details
+    figure.room-details__featured-images
+      -
+        const featuredImages = [
+          {src: './img/double-bed.jpg', alt: 'Двухместная кровать'},
+          {src: './img/single-bed.jpg', alt: 'Одноместная кровать'},
+          {src: './img/living-room.jpg', alt: 'Гостиная'},
+        ];
+      each image in featuredImages
+        img.room-details__featured-image(src=image.src alt=image.alt)
+    .room-details__inner-wrapper
+      .room-details__content
+        section.room-details__info
+          header.room-details__section-header
+            p.room-details__title= 'Сведения о номере'
+          -
+            var features = [
+              {
+                icon: 'mood',
+                title: 'Комфорт',
+                hint: 'Шумопоглощающие стены',
+              },
+              {
+                icon: 'location_city',
+                title: 'Удобство',
+                hint: 'Окно в каждой из спален',
+              },
+              {
+                icon: 'whatshot',
+                title: 'Уют',
+                hint: 'Номер оснащён камином',
+              }
+            ]
+          ul.room-details__features-list
+            each feature in features
+              li.room-details__feature-item
+                +feature(feature)
+        section.room-details__rating
+          header.room-details__section-header
+            p.room-details__title= 'Впечатления от номера'
+          .room-details__donut-chart
+            +donut-chart('donut-chart')
+        section.room-details__feedback
+          header.room-details__section-header
+            p.room-details__title= 'Отзывы посетителей номера'
+            p.room-details__feedback-counter= '2 отзыва'
+          -
+            const feedbacks = [
+              {
+                author: {
+                  name: 'Мурад Сарафанов',
+                  image: {
+                    src: './img/murad.png',
+                    alt: 'Мурад Сарафанов',
+                  }
+                },
+                date: '5 дней назад',
+                text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+                favoritesCount: 12,
+                isFavorite: true,
+              },
+              {
+                author: {
+                  name: 'Патрисия Стёклышкова',
+                  image: {
+                    src: './img/patricia.png',
+                    alt: 'Патрисия Стёклышкова',
+                  }
+                },
+                date: 'Неделю назад',
+                text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',
+                favoritesCount: 2,
+              },
+            ]
+          ul.room-details__feedbacks-list
+            each feedback in feedbacks
+              li.room-details__feedback-item
+                +feedback(feedback)
+        section.room-details__rules
+          header.room-details__section-header
+            p.room-details__title= 'Правила'
+          .room-details__bullet-list
+            +bullet-list({
+              items: [
+                {text: 'Нельзя с питомцами'},
+                {text: 'Без вечеринок и мероприятий'},
+                {text: 'Время прибытия &mdash; после 13:00, а выезд до 12:00'},
+              ],
+            })
+        section.room-details__cancellation
+          header.room-details__section-header
+            p.room-details__title= 'Отмена'
+          p.room-details__text
+            = 'Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.'
+      .room-details__sidebar
+        +room-book
+  

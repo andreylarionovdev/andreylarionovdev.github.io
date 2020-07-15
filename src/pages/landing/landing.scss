@@ -1,9 +1,9 @@
 @import '../../utils/vars';
 @import '../../utils/mixins';
 
-@import '../room-search/room-search.scss';
+@import '../../components/room-search/room-search.scss';
 
-.landing-page {
+.landing {
   width: 100%;
   background-image: url(./img/landing.jpg);
   background-position: center bottom;

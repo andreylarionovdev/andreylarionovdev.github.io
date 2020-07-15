@@ -1,6 +1,13 @@
 extends ../../layouts/page
 
-include ../../components/search-page/search-page
+include ../../components/range-slider/range-slider
+include ../../components/label/label
+include ../../components/checkbox-expandable-list/checkbox-expandable-list
+include ../../components/room-thumbnail/room-thumbnail
+include ../../components/pagination/pagination
+include ../../components/dropdown/dropdown
+include ../../components/button/button
+include ../../components/calendar/calendar
 
 block vars
   - const title = 'Результаты поиска';
@@ -11,4 +18,271 @@ block vars
   - const metaKeywords = 'результаты поиска номеров, фильтр поиска, искать номер, выбрать номер';
 
 block main
-  +search-page
+  main.search
+    .search__inner-wrapper
+      section.search__filter
+        .search__button.search__button_action_show-filter.js-search__button_action_show-filter
+          +button({
+            theme: 'white',
+            caption: 'Фильтр',
+            type: 'button',
+            size: 'fluid',
+          })
+        form.search__form.js-search__form
+          .search__date-dropdown.js-search__date-dropdown
+            .search__label
+              +label({label: 'Даты пребывания в отеле'})
+            .search__dropdown
+              +calendar({
+                type: 'single',
+                values: '19.08.2020-23.08.2020',
+                placeholder: 'Выберите даты',
+              })
+          .search__guests-dropdown.js-search__guests-dropdown
+            .search__label
+              +label({label: 'Гости'})
+            .search__dropdown
+              +dropdown({
+                name: 'field-guests',
+                type: 'guests',
+                placeholder: 'Сколько гостей',
+                value: '3 гостя, 1 младенец',
+                rows: [
+                  {count: 2, text: 'взрослые'},
+                  {count: 0, text: 'дети'},
+                  {count: 1, text: 'младенцы'},
+                ],
+              })
+          .search__range-slider
+            +range-slider({
+              label: 'Диапазон цены',
+              description: 'Стоимость за сутки пребывания в номере',
+              min: 0,
+              max: 16000,
+              from: 5000,
+              to: 10000,
+            })
+          fieldset.search__checkboxes
+            legend.search__legend= 'checkbox buttons'
+            p.search__checkbox
+              +checkbox({
+                name: 'field-smoke',
+                label: 'Можно курить',
+              })
+            p.search__checkbox
+              +checkbox({
+                name: 'field-pets',
+                label: 'Можно с питомцами',
+                isChecked: true,
+              })
+            p.search__checkbox
+              +checkbox({
+                name: 'field-guests',
+                label: 'Можно пригласить гостей (до 10 человек)',
+                isChecked: true,
+              })
+          - const theme = 'rich';
+          fieldset.search__checkboxes.search__checkboxes_theme_rich
+            legend.search__legend= 'Доступность'
+            p.search__checkbox
+              +checkbox({
+                name: 'field-wide-hall',
+                label: 'Широкий коридор',
+                hint: 'Ширина коридоров в номере не менее 91 см.',
+                theme: 'rich',
+              })
+            p.search__checkbox
+              +checkbox({
+                name: 'field-assistant',
+                label: 'Помощник для инвалидов',
+                hint: 'На 1 этаже вас встретит специалист и проводит до номера.',
+                theme: 'rich',
+              })
+          .search__feature-dropdown.js-search__feature-dropdown
+            .search__label
+              +label({label: 'Удобства номера'})
+            .search__dropdown
+              +dropdown({
+                name: 'field-rooms',
+                type: 'rooms',
+                placeholder: 'Удобства',
+                value: '2 спальни, 2 кровати',
+                rows: [
+                  {count: 2, text: 'спальни'},
+                  {count: 2, text: 'кровати'},
+                  {count: 0, text: 'ванные комнаты'},
+                ],
+              })
+          .search__checkbox-expandable-list
+            +checkbox-expandable-list({
+              label: 'Дополнительные удобства',
+              items: [
+                {name: 'field-breakfast', label: 'Завтрак'},
+                {name: 'field-table', label: 'Письменный стол', isChecked: true},
+                {name: 'field-baby-chair-for-eat', label: 'Стул для кормления', isChecked: true},
+                {name: 'field-baby-bed', label: 'Кроватка', isChecked: true},
+                {name: 'field-tv', label: 'Телевизор'},
+                {name: 'field-shampoo', label: 'Шампунь'},
+              ],
+            })
+          .search__form-footer.js-search__form-footer
+            .search__button.search__button_action_clear.js-search__button_action_clear
+              +button({
+                theme: 'white',
+                caption: 'Сбросить',
+                type: 'reset',
+                size: 'fluid',
+              })
+            .search__button.search__button_action_apply.js-search__button_action_apply
+              +button({
+                theme: 'default',
+                caption: 'Применить',
+                type: 'submit',
+                size: 'fluid',
+              })
+      section.search__search-result.js-search__search-result
+        h1.search__title= 'Номера, которые мы для вас подобрали'
+        ul.search__thumbnail-list
+          -
+            const searchResult = [
+              {
+                number: 888,
+                href: 'room-details.html',
+                pricePerDay: 9990,
+                feedbackCounter: 145,
+                rate: 5,
+                image: {
+                  alt: 'Room 888',
+                  src: './img/room-888.jpg'
+                },
+                feature: 'люкс',
+              },
+              {
+                number: 840,
+                pricePerDay: 9900,
+                feedbackCounter: 65,
+                rate: 4,
+                image: {
+                  alt: 'Room 840',
+                  src: './img/room-840.jpg',
+                },
+              },
+              {
+                number: 980,
+                pricePerDay: 8500,
+                feedbackCounter: 35,
+                rate: 3,
+                image: {
+                  alt: 'Room 980',
+                  src: './img/room-980.jpg',
+                },
+                feature: 'люкс',
+              },
+              {
+                number: 856,
+                pricePerDay: 7300,
+                feedbackCounter: 19,
+                rate: 5,
+                image: {
+                  alt: 'Room 856',
+                  src: './img/room-856.jpg',
+                },
+              },
+              {
+                number: 740,
+                pricePerDay: 6000,
+                feedbackCounter: 44,
+                rate: 4,
+                image: {
+                  alt: 'Room 740',
+                  src: './img/room-740.jpg',
+                },
+              },
+              {
+                number: 982,
+                pricePerDay: 5800,
+                feedbackCounter: 56,
+                rate: 3,
+                image: {
+                  alt: 'Room 982',
+                  src: './img/room-982.jpg',
+                },
+              },
+              {
+                number: 678,
+                pricePerDay: 5500,
+                feedbackCounter: 45,
+                rate: 5,
+                image: {
+                  alt: 'Room 678',
+                  src: './img/room-678.jpg',
+                },
+              },
+              {
+                number: 450,
+                pricePerDay: 5300,
+                feedbackCounter: 39,
+                rate: 4,
+                image: {
+                  alt: 'Room 450',
+                  src: './img/room-450.jpg',
+                },
+              },
+              {
+                number: 350,
+                pricePerDay: 5000,
+                feedbackCounter: 77,
+                rate: 3,
+                image: {
+                  alt: 'Room 350',
+                  src: './img/room-350.jpg',
+                },
+              },
+              {
+                number: 666,
+                pricePerDay: 5000,
+                feedbackCounter: 25,
+                rate: 5,
+                image: {
+                  alt: 'Room 666',
+                  src: './img/room-666.jpg',
+                },
+              },
+              {
+                number: 444,
+                pricePerDay: 5000,
+                feedbackCounter: 15,
+                rate: 3,
+                image: {
+                  alt: 'Room 444',
+                  src: './img/room-444.jpg',
+                },
+              },
+              {
+                number: 352,
+                pricePerDay: 5000,
+                feedbackCounter: 55,
+                rate: 3,
+                image: {
+                  alt: 'Room 352',
+                  src: './img/room-352.jpg',
+                },
+              }
+            ]
+          each room, i in searchResult
+            li.search__thumbnail-list-item
+              +room-thumbnail({
+                roomNumber: room.number,
+                pricePerDay: room.pricePerDay,
+                feedbackCounter: room.feedbackCounter,
+                rate: room.rate,
+                image: room.image,
+                feature: room.feature,
+                href: room.href || '/change-me',
+              })
+        section.search__pagination
+          +pagination({
+            source: JSON.stringify([...Array(180).keys()]),
+            pageSize: 12,
+            pageRange: 1,
+          })

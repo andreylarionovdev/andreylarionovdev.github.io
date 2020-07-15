@@ -1,6 +1,6 @@
 extends ../../layouts/page
 
-include ../../components/sign-in-page/sign-in-page
+include ../../components/sign-in/sign-in
 
 block vars
   - const title = 'Войти';
@@ -8,4 +8,7 @@ block vars
   - const metaKeywords = 'логин, авторизация, авторизоваться, войти в учетную запись'
 
 block main
-  +sign-in-page
+  main.sign-in-page
+    .sign-in-page__inner-wrapper
+      section.sign-in-page__form
+        +sign-in
