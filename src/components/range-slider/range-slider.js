@@ -19,7 +19,7 @@ RangeSlider.prototype.init = function init($element) {
 
 RangeSlider.prototype.render = function render(data) {
   const range = `${data.from.toLocaleString('ru-RU')}₽ - ${data.to.toLocaleString('ru-RU')}₽`;
-  this.$element.closest('.js-range-slider').find('.label__hint').text(range);
+  this.$element.closest('.js-range-slider').find('.js-range-slider__label-hint').text(range);
 };
 
 $(() => $('.js-range-slider__input').each((_, rangeSliderElement) => new RangeSlider($(rangeSliderElement))));

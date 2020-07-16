@@ -32,27 +32,30 @@ block content
               label: 'text field',
               hint: 'default',
             })
-              +text-input({
-                name: 'input-email',
-                placeholder: 'Email',
-                type: 'email'
-              })
+              .form-elements__text-input
+                +text-input({
+                  name: 'input-email',
+                  placeholder: 'Email',
+                  type: 'email'
+                })
           .form-elements__text-input-group.form-elements__text-input-group_hovered
             +label({
               label: 'text field',
               hint: 'hover / focus',
             })
-              +text-input({
-                name: 'input-hovered',
-                placeholder: 'Some text',
-                value: 'This is pretty awesome',
-                isHovered: true
-              })
+              .form-elements__text-input
+                +text-input({
+                  name: 'input-hovered',
+                  placeholder: 'Some text',
+                  value: 'This is pretty awesome',
+                  isHovered: true
+                })
           .form-elements__dropdown
-            +label({
-              label: 'dropdown',
-              hint: 'default'
-            })
+            .form-elements__dropdown-label
+              +label({
+                label: 'dropdown',
+                hint: 'default'
+              })
             +dropdown({
               name: 'guests-default',
               type: 'guests',
@@ -63,11 +66,12 @@ block content
               label: 'masked text field',
               hint: 'default',
             })
-              +text-input({
-                name: 'input-with-mask',
-                placeholder: 'дд.мм.гггг',
-                format: 'date',
-              })
+              .form-elements__text-input
+                +text-input({
+                  name: 'input-with-mask',
+                  placeholder: 'дд.мм.гггг',
+                  format: 'date',
+                })
           .form-elements__dropdown.form-elements__dropdown_theme_datepicker.js-form-elements__dropdown_theme_datepicker
             +calendar({
               type: 'double',
@@ -84,18 +88,20 @@ block content
             +label({
               label: 'subscription text field',
             })
-              +text-input({
-                name: 'input-submit',
-                placeholder: 'Email',
-                withButton: true,
-                type: 'email'
-              })
+              .form-elements__text-input
+                +text-input({
+                  name: 'input-submit',
+                  placeholder: 'Email',
+                  withButton: true,
+                  type: 'email'
+                })
         .form-elements__section-column-gap
         .form-elements__section-column
           .form-elements__checkbox-list-group
-            +label({
-              label: 'checkbox buttons'
-            })
+            .form-elements__checkbox-list-label
+              +label({
+                label: 'checkbox buttons'
+              })
             ul.form-elements__checkbox-list
               li.form-elements__checkbox
                 +checkbox({
@@ -116,58 +122,70 @@ block content
                 })
 
           .form-elements__radio-group
-            +label({
-              label: 'radio buttons'
-            })
-            +radio-button({
-              name: 'field-gender',
-              value: 'male',
-              label: 'Мужчина',
-              isChecked: true
-            })
-            +radio-button({
-              name: 'field-gender',
-              value: 'female',
-              label: 'Женщина'
-            })
+            .form-elements__radio-button-label
+              +label({
+                label: 'radio buttons'
+              })
+            .form-elements__radio-button
+              +radio-button({
+                name: 'field-gender',
+                value: 'male',
+                label: 'Мужчина',
+                isChecked: true
+              })
+            .form-elements__radio-button
+              +radio-button({
+                name: 'field-gender',
+                value: 'female',
+                label: 'Женщина'
+              })
           .form-elements__toggle-group
-            +label({
-              label: 'toggle'
-            })
-            +checkbox({
-              name: 'field-promo',
-              theme: 'toggle',
-              label: 'Получать спецпредложения',
-              isChecked: true
-            })
-            +checkbox({
-              name: 'field-promo-second',
-              theme: 'toggle',
-              label: 'Получать спецпредложения'
-            })
+            .form-elements__toggle-checkbox-label
+              +label({
+                label: 'toggle'
+              })
+            .form-elements__toggle-checkbox
+              +checkbox({
+                name: 'field-promo',
+                theme: 'toggle',
+                label: 'Получать спецпредложения',
+                isChecked: true
+              })
+            .form-elements__toggle-checkbox
+              +checkbox({
+                name: 'field-promo-second',
+                theme: 'toggle',
+                label: 'Получать спецпредложения'
+              })
           .form-elements__like-button-group
-            +label({
-              label: 'like button'
-            })
-            +like-button({
-              count: 2
-            })
-            +like-button({
-              count: 12,
-              isFavorite: true
-            })
+            .form-elements__like-button-label
+              +label({
+                label: 'like button'
+              })
+            .form-elements__like-button
+              +like-button({
+                count: 2
+              })
+            .form-elements__like-button
+              +like-button({
+                count: 12,
+                isFavorite: true
+              })
           .form-elements__rating-group
-            +label({
-              label: 'rate button'
-            })
-            +rating({
-              base: 5,
-              rate: 4
-            })
-            +rating({
-              base: 5,
-              rate: 5
-            })
+            .form-elements__rating-label
+              +label({
+                label: 'rate button'
+              })
+            .form-elements__rating
+              +rating({
+                base: 5,
+                rate: 4
+              })
+            .form-elements__rating
+              +rating({
+                base: 5,
+                rate: 5
+              })
         .form-elements__section-column-gap
         .form-elements__section-column
           .form-elements__range-slider
@@ -178,45 +196,52 @@ block content
               to: 10000,
             })
           .form-elements__button-group
-            +label({
-              label: 'buttons'
-            })
-            .form-elements__row
-              +button({
-                theme: 'default',
-                type: 'button',
-                caption: 'click me'
-              })
-              +button({
-                theme: 'default',
-                type: 'button',
-                caption: 'click me',
-                isHovered: true
+            .form-elements__button-label
+              +label({
+                label: 'buttons'
               })
             .form-elements__row
-              +button({
-                theme: 'white',
-                type: 'button',
-                caption: 'click me'
-              })
-              +button({
-                theme: 'white',
-                type: 'button',
-                caption: 'click me',
-                isHovered: true
-              })
+              .form-elements__button
+                +button({
+                  theme: 'default',
+                  type: 'button',
+                  caption: 'click me'
+                })
+              .form-elements__button
+                +button({
+                  theme: 'default',
+                  type: 'button',
+                  caption: 'click me',
+                  isHovered: true
+                })
             .form-elements__row
-              +button({
-                theme: 'textual',
-                type: 'button',
-                caption: 'click me'
-              })
-              +button({
-                theme: 'textual',
-                type: 'button',
-                caption: 'click me',
-                isHovered: true,
-              })
+              .form-elements__button
+                +button({
+                  theme: 'white',
+                  type: 'button',
+                  caption: 'click me'
+                })
+              .form-elements__button
+                +button({
+                  theme: 'white',
+                  type: 'button',
+                  caption: 'click me',
+                  isHovered: true
+                })
+            .form-elements__row
+              .form-elements__button
+                +button({
+                  theme: 'textual',
+                  type: 'button',
+                  caption: 'click me'
+                })
+              .form-elements__button
+                +button({
+                  theme: 'textual',
+                  type: 'button',
+                  caption: 'click me',
+                  isHovered: true,
+                })
             .form-elements__row
               +button({
                 theme: 'default',
@@ -226,9 +251,10 @@ block content
                 withArrow: true,
               })
           .form-elements__pagination-group
-            +label({
-              label: 'pagination'
-            })
+            .form-elements__pagination-label
+              +label({
+                label: 'pagination'
+              })
             +pagination({
               source: JSON.stringify([...Array(180).keys()]),
               pageSize: 12,
@@ -237,10 +263,11 @@ block content
       section.form-elements__section
         .form-elements__section-column
           .form-elements__dropdown.form-elements__dropdown_collapsed.js-form-elements__dropdown_collapsed
-            +label({
-              label: 'dropdown',
-              hint: 'default'
-            })
+            .form-elements__dropdown-label
+              +label({
+                label: 'dropdown',
+                hint: 'default'
+              })
             +dropdown({
               name: 'rooms-collapsed',
               type: 'rooms',
@@ -253,10 +280,11 @@ block content
               hasZIndexPriority: true,
             })
           .form-elements__dropdown.form-elements__dropdown_theme_expanded.js-form-elements__dropdown_theme_expanded
-            +label({
-              label: 'dropdown',
-              hint: 'expanded'
-            })
+            .form-elements__dropdown-label
+              +label({
+                label: 'dropdown',
+                hint: 'expanded'
+              })
             +dropdown({
               name: 'rooms-expanded',
               type: 'rooms',
@@ -271,9 +299,10 @@ block content
         .form-elements__section-column-gap
         .form-elements__section-column
           .form-elements__dropdown.form-elements__dropdown_theme_empty.js-form-elements__dropdown_theme_empty
-            +label({
-              label: 'dropdown'
-            })
+            .form-elements__dropdown-label
+              +label({
+                label: 'dropdown'
+              })
             +dropdown({
               name: 'guests-empty',
               type: 'guests',
@@ -288,9 +317,10 @@ block content
         .form-elements__section-column-gap
         .form-elements__section-column
           .form-elements__dropdown.form-elements__dropdown_theme_filled.js-form-elements__dropdown_theme_filled
-            +label({
-              label: 'dropdown'
-            })
+            .form-elements__dropdown-label
+              +label({
+                label: 'dropdown'
+              })
             +dropdown({
               name: 'guests-filled',
               type: 'guests',
@@ -326,9 +356,10 @@ block content
         .form-elements__section-column-gap
         .form-elements__section-column
           .form-elements__checkbox-list-group.form-elements__checkbox-list-group_theme_rich
-            +label({
-              label: 'rich checkbox buttons'
-            })
+            .form-elements__checkbox-list-label
+              +label({
+                label: 'rich checkbox buttons'
+              })
             ul.form-elements__checkbox-list
               li.form-elements__checkbox
                 +checkbox({
@@ -347,7 +378,7 @@ block content
         .form-elements__section-column-gap
         .form-elements__section-column
           .form-elements__bullet-list-group
-            .form-elements__label
+            .form-elements__bullet-list-label
               +label({
                 label: 'Bullet list'
               })
