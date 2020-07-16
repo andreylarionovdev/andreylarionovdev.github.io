@@ -1,14 +1,14 @@
-const classNavigationActive = 'header__site-navigation_active';
+const CLASS_NAVIGATION_ACTIVE = 'header__site-navigation_active';
 
-const selectorHeader = '.js-header';
-const selectorNavigation = '.js-header__site-navigation';
-const selectorUserNavigation = '.js-header__user-navigation';
-const selectorNavigationToggle = '.js-header__burger';
+const SELECTOR_HEADER = '.js-header';
+const SELECTOR_NAVIGATION = '.js-header__site-navigation';
+const SELECTOR_USER_NAVIGATION = '.js-header__user-navigation';
+const SELECTOR_NAVIGATION_TOGGLE = '.js-header__burger';
 
 export {
-  classNavigationActive,
-  selectorHeader,
-  selectorNavigation,
-  selectorUserNavigation,
-  selectorNavigationToggle,
+  CLASS_NAVIGATION_ACTIVE,
+  SELECTOR_HEADER,
+  SELECTOR_NAVIGATION,
+  SELECTOR_USER_NAVIGATION,
+  SELECTOR_NAVIGATION_TOGGLE,
 };

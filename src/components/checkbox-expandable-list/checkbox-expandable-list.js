@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import {
-  classExpanded,
-  selectorToggle,
-  selectorCheckboxExpandableList,
+  CLASS_EXPANDED,
+  SELECTOR_TOGGLE,
+  SELECTOR_CHECKBOX_EXPANDABLE_LIST,
 } from './const';
 
 const CheckboxExpandableList = function CheckboxListExpandable() {
@@ -14,13 +14,13 @@ CheckboxExpandableList.prototype.init = function init() {
 };
 
 CheckboxExpandableList.prototype.addEventListeners = function addEventListeners() {
-  $(selectorToggle).on('click', this.handleToggleClick.bind(this));
+  $(SELECTOR_TOGGLE).on('click', this.handleToggleClick.bind(this));
 };
 
 CheckboxExpandableList.prototype.handleToggleClick = function handleToggleClick(e) {
   e.preventDefault();
 
-  $(e.currentTarget).closest(selectorCheckboxExpandableList).toggleClass(classExpanded);
+  $(e.currentTarget).closest(SELECTOR_CHECKBOX_EXPANDABLE_LIST).toggleClass(CLASS_EXPANDED);
 };
 
 $(() => new CheckboxExpandableList());

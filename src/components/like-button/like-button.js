@@ -1,9 +1,9 @@
 import $ from 'jquery';
 import {
-  classFavorite,
-  selectorButton,
-  selectorCount,
-  selectorIcon,
+  CLASS_FAVORITE,
+  SELECTOR_BUTTON,
+  SELECTOR_COUNT,
+  SELECTOR_ICON,
 } from './const';
 
 const LikeButton = function LikeButton() {
@@ -15,21 +15,21 @@ LikeButton.prototype.init = function init() {
 };
 
 LikeButton.prototype.addEventListeners = function addEventListeners() {
-  $(selectorButton).on('click', this.handleButtonClick.bind(this));
+  $(SELECTOR_BUTTON).on('click', this.handleButtonClick.bind(this));
 };
 
 LikeButton.prototype.handleButtonClick = function handleButtonClick(e) {
   e.preventDefault();
 
-  $(e.currentTarget).toggleClass(classFavorite);
+  $(e.currentTarget).toggleClass(CLASS_FAVORITE);
 
-  const $counter = $(e.currentTarget).find(selectorCount);
-  const isFavorite = $(e.currentTarget).hasClass(classFavorite);
+  const $counter = $(e.currentTarget).find(SELECTOR_COUNT);
+  const isFavorite = $(e.currentTarget).hasClass(CLASS_FAVORITE);
 
   const count = parseInt($counter.text(), 10);
   $counter.text(isFavorite ? count + 1 : count - 1);
 
-  $(e.currentTarget).find(selectorIcon).text(isFavorite ? 'favorite' : 'favorite_border');
+  $(e.currentTarget).find(SELECTOR_ICON).text(isFavorite ? 'favorite' : 'favorite_border');
 };
 
 $(() => new LikeButton());

@@ -1,11 +1,11 @@
 import $ from 'jquery';
 import 'paginationjs';
 import {
-  classPrefix,
-  activeClassName,
-  disableClassName,
-  ulClassName,
-  selectorPagination,
+  CLASS_PREFIX,
+  ACTIVE_CLASS_NAME,
+  DISABLE_CLASS_NAME,
+  UL_CLASS_NAME,
+  SELECTOR_PAGINATION,
 } from './const';
 
 const Pagination = function pagination() {
@@ -13,10 +13,10 @@ const Pagination = function pagination() {
 };
 
 Pagination.prototype.init = function init() {
-  $(selectorPagination).each((_, paginationElement) => this.initPaginationJsInstance($(paginationElement)));
+  $(SELECTOR_PAGINATION).each((_, paginationElement) => this.createInstance($(paginationElement)));
 };
 
-Pagination.prototype.initPaginationJsInstance = function initPaginationJsInstance($element) {
+Pagination.prototype.createInstance = function createInstance($element) {
   const dataSource = $element.data('source');
   const pageSize = parseInt($element.data('page-size'), 10);
   const pageRange = parseInt($element.data('page-range'), 10);
@@ -29,10 +29,10 @@ Pagination.prototype.initPaginationJsInstance = function initPaginationJsInstanc
     autoHidePrevious: true,
     autoHideNext: true,
     showNavigator: true,
-    classPrefix,
-    activeClassName,
-    disableClassName,
-    ulClassName,
+    classPrefix: CLASS_PREFIX,
+    activeClassName: ACTIVE_CLASS_NAME,
+    disableClassName: DISABLE_CLASS_NAME,
+    ulClassName: UL_CLASS_NAME,
     prevText: '<i class="material-icons pagination__arrow-prev">arrow_back</i>',
     nextText: '<i class="material-icons pagination__arrow-next">arrow_forward</i>',
     formatNavigator: `<span class="js-pagination__from"><%= currentPage %></span> &ndash; 

@@ -1,18 +1,18 @@
-const classLabelActive = 'donut-chart__label_active';
-const classCircleActive = 'donut-chart__circle_active';
+const CLASS_LABEL_ACTIVE = 'donut-chart__label_active';
+const CLASS_CIRCLE_ACTIVE = 'donut-chart__circle_active';
 
-const selectorDonutChart = '.js-donut-chart';
-const selectorLabel = '.js-donut-chart__label';
-const selectorCircle = '.js-donut-chart__circle';
-const selectorCount = '.js-donut-chart__counter';
-const selectorCountValue = '.js-donut-chart__counter-value';
+const SELECTOR_DONUT_CHART = '.js-donut-chart';
+const SELECTOR_LABEL = '.js-donut-chart__label';
+const SELECTOR_CIRCLE = '.js-donut-chart__circle';
+const SELECTOR_COUNTER = '.js-donut-chart__counter';
+const SELECTOR_COUNTER_VALUE = '.js-donut-chart__counter-value';
 
 export {
-  classLabelActive,
-  classCircleActive,
-  selectorDonutChart,
-  selectorLabel,
-  selectorCircle,
-  selectorCount,
-  selectorCountValue,
+  CLASS_LABEL_ACTIVE,
+  CLASS_CIRCLE_ACTIVE,
+  SELECTOR_DONUT_CHART,
+  SELECTOR_LABEL,
+  SELECTOR_CIRCLE,
+  SELECTOR_COUNTER,
+  SELECTOR_COUNTER_VALUE,
 };

@@ -1,11 +1,11 @@
-const classFavorite = 'like-button_favorite';
-const selectorButton = '.js-like-button';
-const selectorCount = '.js-like-button__counter';
-const selectorIcon = '.js-like-button__icon';
+const CLASS_FAVORITE = 'like-button_favorite';
+const SELECTOR_BUTTON = '.js-like-button';
+const SELECTOR_COUNT = '.js-like-button__counter';
+const SELECTOR_ICON = '.js-like-button__icon';
 
 export {
-  classFavorite,
-  selectorButton,
-  selectorCount,
-  selectorIcon,
+  CLASS_FAVORITE,
+  SELECTOR_BUTTON,
+  SELECTOR_COUNT,
+  SELECTOR_ICON,
 };

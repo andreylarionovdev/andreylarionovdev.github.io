@@ -1,14 +1,14 @@
-const classPrefix = 'pagination';
-const activeClassName = 'pagination-page_active';
-const disableClassName = 'pagination-page_disabled';
-const ulClassName = 'pagination__ul';
+const CLASS_PREFIX = 'pagination';
+const ACTIVE_CLASS_NAME = 'pagination-page_active';
+const DISABLE_CLASS_NAME = 'pagination-page_disabled';
+const UL_CLASS_NAME = 'pagination__ul';
 
-const selectorPagination = '.js-pagination';
+const SELECTOR_PAGINATION = '.js-pagination';
 
 export {
-  classPrefix,
-  activeClassName,
-  disableClassName,
-  ulClassName,
-  selectorPagination,
+  CLASS_PREFIX,
+  ACTIVE_CLASS_NAME,
+  DISABLE_CLASS_NAME,
+  UL_CLASS_NAME,
+  SELECTOR_PAGINATION,
 };

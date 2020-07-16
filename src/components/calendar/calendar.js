@@ -3,13 +3,13 @@ import 'air-datepicker';
 import {
   TYPE_SINLGE,
   TYPE_DOUBLE,
-  selectorDropdown,
-  selectorToggleButton,
-  selectorDropdownInput,
-  selectorClearButton,
-  selectorApplyButton,
-  selectorContainer,
-  classThemeInline,
+  SELECTOR_DROPDOWN,
+  SELECTOR_TOGGLE_BUTTON,
+  SELECTOR_DROPDOWN_INPUT,
+  SELECTOR_CLEAR_BUTTON,
+  SELECTOR_APPLY_BUTTON,
+  SELECTOR_CONTAINER,
+  CLASS_THEME_INLINE,
 } from './const';
 
 const Calendar = function Calendar($element, options) {
@@ -22,16 +22,16 @@ Calendar.prototype.typeDouble = TYPE_DOUBLE;
 Calendar.prototype.init = function init($element, { type }) {
   this.type = type;
 
-  this.$dropdownFrom = $element.find(selectorDropdown).eq(0);
-  this.$dropdownTo = $element.find(selectorDropdown).eq(1);
+  this.$dropdownFrom = $element.find(SELECTOR_DROPDOWN).eq(0);
+  this.$dropdownTo = $element.find(SELECTOR_DROPDOWN).eq(1);
 
   this.$inputFrom = this.$dropdownFrom.find('input');
   this.$inputTo = this.$dropdownTo.find('input');
 
-  this.$datepickerContainer = $element.find(selectorContainer);
+  this.$datepickerContainer = $element.find(SELECTOR_CONTAINER);
 
   this.currentInputValues = [];
-  this.isInline = $element.hasClass(classThemeInline);
+  this.isInline = $element.hasClass(CLASS_THEME_INLINE);
 
   this.initDatepicker($element);
 
@@ -70,8 +70,8 @@ Calendar.prototype.initDatepicker = function initDatepicker() {
 };
 
 Calendar.prototype.addEventListeners = function addEventListeners() {
-  this.$dropdownFrom.find(selectorToggleButton).on('click', this.handleToggleButtonClick.bind(this));
-  this.$dropdownTo.find(selectorToggleButton).on('click', this.handleToggleButtonClick.bind(this));
+  this.$dropdownFrom.find(SELECTOR_TOGGLE_BUTTON).on('click', this.handleToggleButtonClick.bind(this));
+  this.$dropdownTo.find(SELECTOR_TOGGLE_BUTTON).on('click', this.handleToggleButtonClick.bind(this));
 };
 
 Calendar.prototype.handleToggleButtonClick = function handleToggleButtonClick() {
@@ -111,8 +111,8 @@ Calendar.prototype.setDates = function setDates() {
 };
 
 Calendar.prototype.clear = function clear() {
-  this.$dropdownFrom.find(selectorDropdownInput).val('');
-  this.$dropdownTo.find(selectorDropdownInput).val('');
+  this.$dropdownFrom.find(SELECTOR_DROPDOWN_INPUT).val('');
+  this.$dropdownTo.find(SELECTOR_DROPDOWN_INPUT).val('');
   this.currentInputValues = [];
 };
 
@@ -132,10 +132,10 @@ Calendar.prototype.update = function update() {
 Calendar.prototype.addButtons = function addButtons($dpElement) {
   const $clearBtn = this.createButton('clear', 'Очистить');
   const $applyBtn = this.createButton('apply', 'Применить');
-  if ($dpElement.find(selectorClearButton).length === 0) {
+  if ($dpElement.find(SELECTOR_CLEAR_BUTTON).length === 0) {
     $clearBtn.on('click', this.handleClearButtonClick.bind(this));
   }
-  if ($dpElement.find(selectorApplyButton).length === 0) {
+  if ($dpElement.find(SELECTOR_APPLY_BUTTON).length === 0) {
     $applyBtn.on('click', this.handleApplyButtonClick.bind(this));
   }
   if ($dpElement.find('.js-datepicker__footer').length === 0) {
@@ -148,7 +148,7 @@ Calendar.prototype.addButtons = function addButtons($dpElement) {
 
 Calendar.prototype.toggleClearButton = function toggleClearButton() {
   const isClearButtonDisabled = this.$datepickerApi.selectedDates.length < 2;
-  this.$datepickerContainer.find(selectorClearButton).toggleClass('button_hidden', isClearButtonDisabled);
+  this.$datepickerContainer.find(SELECTOR_CLEAR_BUTTON).toggleClass('button_hidden', isClearButtonDisabled);
 };
 
 Calendar.prototype.createButton = function createButton(action, caption) {
@@ -209,10 +209,10 @@ Calendar.prototype.setDropdownValueTypeDouble = function setDropdownValueTypeDou
       day: 'numeric',
     };
     const dateStringFrom = Intl.DateTimeFormat('ru-RU', options).format(dates[0]);
-    this.$dropdownFrom.find(selectorDropdownInput).val(dateStringFrom);
+    this.$dropdownFrom.find(SELECTOR_DROPDOWN_INPUT).val(dateStringFrom);
 
     const dateStringTo = Intl.DateTimeFormat('ru-RU', options).format(dates[1]);
-    this.$dropdownTo.find(selectorDropdownInput).val(dateStringTo);
+    this.$dropdownTo.find(SELECTOR_DROPDOWN_INPUT).val(dateStringTo);
 
     this.currentInputValues = dates;
   } else {
