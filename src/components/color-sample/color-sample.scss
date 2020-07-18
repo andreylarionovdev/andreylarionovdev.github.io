@@ -34,48 +34,4 @@
     font-weight: normal;
     padding-top: 0.1875rem;
   }
-  
-  &_theme {
-    &_dark-100 {
-      #{$blockClass}__color {
-        background-color: $color-primary-100;
-      }
-    }
-
-    &_dark-75 {
-      #{$blockClass}__color {
-        background-color: $color-primary-75;
-      }
-    }
-
-    &_dark-50 {
-      #{$blockClass}__color {
-        background-color: $color-primary-50;
-      }
-    }
-
-    &_dark-25 {
-      #{$blockClass}__color {
-        background-color: $color-primary-25;
-      }
-    }
-
-    &_dark-5 {
-      #{$blockClass}__color {
-        background-color: $color-primary-5;
-      }
-    }
-
-    &_purple {
-      #{$blockClass}__color {
-        background-color: $color-purple;
-      }
-    }
-
-    &_green {
-      #{$blockClass}__color {
-        background-color: $color-green;
-      }
-    }   
-  }
 }
