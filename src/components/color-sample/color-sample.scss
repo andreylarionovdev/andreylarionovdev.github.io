@@ -10,11 +10,11 @@
   grid-column-gap: 2.5rem;
   grid-template-rows: repeat(2, minmax($colorRectWidth / 2, auto));
   grid-template-areas:
-    'color title'
-    'color hex';
+    'rect title'
+    'rect hex';
 
-  &__color {
-    grid-area: color;
+  &__rect {
+    grid-area: rect;
     align-self: center;
     height: $colorRectWidth;
     border-radius: 0.375rem;

@@ -3,7 +3,9 @@
 
 .font-sample {
   $blockClass: &;
-  @mixin name {
+  display: flex;
+  &__name {
+    font-family: Montserrat, sans-serif;
     color: $color-primary-25;
     font-weight: normal;
     text-transform: uppercase;
@@ -11,61 +13,41 @@
     width: 2.375rem;
     margin-right: 1.875rem;
   }
-  @mixin description {
+  &__description {
     font-style: normal;
   }
-  display: flex;
 
-  &_name {
+  &_type {
     &_h1 {
       #{$blockClass}__name {
-        @include h1;
-        @include name;
-        font-family: Montserrat, sans-serif;
         padding-left: 0.5rem;
         margin-right: 1.9375rem;
       }
       #{$blockClass}__description {
-        @include h1;
-        @include description;
         font-family: Quicksand, sans-serif;
       }
     }
     &_h2 {
       #{$blockClass}__name {
-        @include h2;
-        @include name;
-        font-family: Montserrat, sans-serif;
         padding-left: 0.625rem;
       }
       #{$blockClass}__description {
-        @include h2;
-        @include description;
         font-family: Quicksand, sans-serif;
       }
     }
     &_h3 {
       #{$blockClass}__name {
-        @include h3;
-        @include name;
         margin-right: 1.8125rem;
-      }
-      #{$blockClass}__description {
-        @include h3;
-        @include description;
       }
     }
     &_body {
       #{$blockClass}__name {
-        @include primary-text;
-        @include name;
         text-transform: capitalize;
       }
       #{$blockClass}__description {
-        @include primary-text;
-        @include description;
         padding-right: 2rem;
       }
     }
   }
+
 }

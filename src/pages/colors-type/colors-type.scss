@@ -27,9 +27,50 @@
     display: grid;
     grid-row-gap: 1.25rem;
   }
+  &__color-sample {
+    &_color {
+      &_dark-100 {
+        background: $color-primary-100;
+      }
+      &_dark-75 {
+        background: $color-primary-75;
+      }
+      &_dark-50 {
+        background: $color-primary-50;
+      }
+      &_dark-25 {
+        background: $color-primary-25;
+      }
+      &_dark-5 {
+        background: $color-primary-5;
+      }
+      &_purple {
+        background: $color-purple;
+      }
+      &_green {
+        background: $color-green;
+      }
+    }
+  }
   &__fonts {
     display: grid;
     grid-row-gap: 3.125rem;
     grid-auto-rows: min-content;
+  }
+  &__font-sample {
+    &_type {
+      &_h1 {
+        @include h1;
+      }
+      &_h2 {
+        @include h2;
+      }
+      &_h3 {
+        @include h3;
+      }
+      &_body {
+        @include primary-text;
+      }
+    }
   }
 }

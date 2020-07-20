@@ -1,7 +1,7 @@
 mixin color-sample(options)
-  - const { background, title, hex } = options || {};
+  - const { title, hex, colorClass } = options || {};
 
   article.color-sample
-    figure.color-sample__color(style={ background })
+    figure.color-sample__rect(class=colorClass)
     p.color-sample__title= title
     p.color-sample__hex= hex
