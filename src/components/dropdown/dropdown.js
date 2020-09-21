@@ -52,7 +52,7 @@ Dropdown.prototype.parseOptions = function parseOptions({ type }) {
 Dropdown.prototype.initState = function initType() {
   const stateTemplates = {
     [GUEST_TYPE]: {
-      total: 0,
+      totalCount: 0,
       categories: [
         { count: 0, wordForms: ['гость', ...new Array(3).fill('гостя'), 'гостей'] },
         { count: 0, wordForms: ['гость', ...new Array(3).fill('гостя'), 'гостей'] },
@@ -60,7 +60,7 @@ Dropdown.prototype.initState = function initType() {
       ],
     },
     [ROOM_TYPE]: {
-      total: 0,
+      totalCount: 0,
       categories: [
         { count: 0, wordForms: ['спальня', ...new Array(3).fill('спальни'), 'спален'] },
         { count: 0, wordForms: ['кровать', ...new Array(3).fill('кровати'), 'кроватей'] },
@@ -146,11 +146,11 @@ Dropdown.prototype.handleApplyButtonClick = function handleApplyButtonClick(e) {
 };
 
 Dropdown.prototype.updateState = function updateState() {
-  this.state.total = 0;
+  this.state.totalCount = 0;
   this.$element.find(SELECTOR_MENU_ITEM).each((index, menuItem) => {
     const count = parseInt($(menuItem).find(SELECTOR_COUNTER).text(), 10);
     this.state.categories[index].count = count;
-    this.state.total += count;
+    this.state.totalCount += count;
   });
 };
 
@@ -169,22 +169,25 @@ Dropdown.prototype.updateValue = function updateValue() {
 };
 
 Dropdown.prototype.updateView = function updateView() {
-  if (this.state.total === 0) {
+  if (this.state.totalCount === 0) {
     this.$clearButton.addClass(CLASS_CLEAR_BUTTON_HIDDEN);
   }
 };
 
 Dropdown.prototype.buildValue = function buildValue(countsWithCategories) {
-  if (this.state.total === 0) {
+  if (this.state.totalCount === 0) {
     return '';
   }
 
   if (this.type === GUEST_TYPE) {
-    const { wordForms } = this.state.categories[0];
-    const wordForm = wordForms[this.state.total - 1] || wordForms[wordForms.length - 1];
-
-    const guests = `${this.state.total} ${wordForm}`;
     const babies = countsWithCategories[countsWithCategories.length - 1];
+    const babiesCount = parseInt(babies, 10) || 0;
+
+    const { wordForms } = this.state.categories[0];
+    const guestsCount = this.state.totalCount - babiesCount;
+    const wordForm = wordForms[guestsCount - 1] || wordForms[wordForms.length - 1];
+
+    const guests = `${guestsCount} ${wordForm}`;
 
     return babies ? `${guests}, ${babies}` : guests;
   }
