@@ -60,6 +60,7 @@
     &:nth-child(4) {
       grid-template-columns: 22.95% 15.62% 61.43%;
       @include section-media-query(1);
+      margin-bottom: 6rem;
     }
   }
 
