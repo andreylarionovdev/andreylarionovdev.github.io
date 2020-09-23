@@ -7,17 +7,24 @@ mixin text-input(options)
       placeholder,
       value,
       withButton,
+      hasDateMask,
       isHovered,
     } = options || {};
 
-  - const blockModifiers = isHovered ? ['hovered'] : [];
+  - const blockModifiers = [];
 
+  if isHovered
+    - blockModifiers.push('hovered');
+  if hasDateMask
+    - blockModifiers.push('has-mask');
   if format
     - blockModifiers.push({ format });
 
+  - const jshasDateMaskClass = hasDateMask ? 'js-text-input_has-mask' : '';
+
   - const createBemClasses = require('../../utils/helpers').createBemClasses;
 
-  span(class=createBemClasses({ blockName: 'text-input', modifiers: blockModifiers }))
+  span(class=createBemClasses({ blockName: 'text-input', modifiers: blockModifiers }) class=jshasDateMaskClass)
     input.text-input__field(name=name type=type placeholder=placeholder value=value)
     if withButton
       button.text-input__submit-button(type='submit')

@@ -36,7 +36,7 @@ block content
                 +text-input({
                   name: 'input-email',
                   placeholder: 'Email',
-                  type: 'email'
+                  type: 'email',
                 })
           .form-elements__text-input-group.form-elements__text-input-group_hovered
             +label({
@@ -48,13 +48,13 @@ block content
                   name: 'input-hovered',
                   placeholder: 'Some text',
                   value: 'This is pretty awesome',
-                  isHovered: true
+                  isHovered: true,
                 })
           .form-elements__dropdown
             .form-elements__dropdown-label
               +label({
                 label: 'dropdown',
-                hint: 'default'
+                hint: 'default',
               })
             +dropdown({
               name: 'guests-default',
@@ -69,8 +69,8 @@ block content
               .form-elements__text-input
                 +text-input({
                   name: 'input-with-mask',
-                  placeholder: 'дд.мм.гггг',
                   format: 'date',
+                  hasDateMask: true,
                 })
           .form-elements__dropdown.form-elements__dropdown_theme_datepicker.js-form-elements__dropdown_theme_datepicker
             +calendar({
@@ -100,7 +100,7 @@ block content
           .form-elements__checkbox-list-group
             .form-elements__checkbox-list-label
               +label({
-                label: 'checkbox buttons'
+                label: 'checkbox buttons',
               })
             ul.form-elements__checkbox-list
               li.form-elements__checkbox
@@ -124,7 +124,7 @@ block content
           .form-elements__radio-group
             .form-elements__radio-button-label
               +label({
-                label: 'radio buttons'
+                label: 'radio buttons',
               })
             .form-elements__radio-button
               +radio-button({
@@ -137,54 +137,54 @@ block content
               +radio-button({
                 name: 'field-gender',
                 value: 'female',
-                label: 'Женщина'
+                label: 'Женщина',
               })
           .form-elements__toggle-group
             .form-elements__toggle-checkbox-label
               +label({
-                label: 'toggle'
+                label: 'toggle',
               })
             .form-elements__toggle-checkbox
               +checkbox({
                 name: 'field-promo',
                 theme: 'toggle',
                 label: 'Получать спецпредложения',
-                isChecked: true
+                isChecked: true,
               })
             .form-elements__toggle-checkbox
               +checkbox({
                 name: 'field-promo-second',
                 theme: 'toggle',
-                label: 'Получать спецпредложения'
+                label: 'Получать спецпредложения',
               })
           .form-elements__like-button-group
             .form-elements__like-button-label
               +label({
-                label: 'like button'
+                label: 'like button',
               })
             .form-elements__like-button
               +like-button({
-                count: 2
+                count: 2,
               })
             .form-elements__like-button
               +like-button({
                 count: 12,
-                isFavorite: true
+                isFavorite: true,
               })
           .form-elements__rating-group
             .form-elements__rating-label
               +label({
-                label: 'rate button'
+                label: 'rate button',
               })
             .form-elements__rating
               +rating({
                 base: 5,
-                rate: 4
+                rate: 4,
               })
             .form-elements__rating
               +rating({
                 base: 5,
-                rate: 5
+                rate: 5,
               })
         .form-elements__section-column-gap
         .form-elements__section-column
@@ -198,42 +198,42 @@ block content
           .form-elements__button-group
             .form-elements__button-label
               +label({
-                label: 'buttons'
+                label: 'buttons',
               })
             .form-elements__row
               .form-elements__button
                 +button({
                   theme: 'default',
                   type: 'button',
-                  caption: 'click me'
+                  caption: 'click me',
                 })
               .form-elements__button
                 +button({
                   theme: 'default',
                   type: 'button',
                   caption: 'click me',
-                  isHovered: true
+                  isHovered: true,
                 })
             .form-elements__row
               .form-elements__button
                 +button({
                   theme: 'white',
                   type: 'button',
-                  caption: 'click me'
+                  caption: 'click me',
                 })
               .form-elements__button
                 +button({
                   theme: 'white',
                   type: 'button',
                   caption: 'click me',
-                  isHovered: true
+                  isHovered: true,
                 })
             .form-elements__row
               .form-elements__button
                 +button({
                   theme: 'textual',
                   type: 'button',
-                  caption: 'click me'
+                  caption: 'click me',
                 })
               .form-elements__button
                 +button({
@@ -253,12 +253,12 @@ block content
           .form-elements__pagination-group
             .form-elements__pagination-label
               +label({
-                label: 'pagination'
+                label: 'pagination',
               })
             +pagination({
               source: JSON.stringify([...Array(180).keys()]),
               pageSize: 12,
-              pageRange: 1
+              pageRange: 1,
             })
       section.form-elements__section
         .form-elements__section-column
@@ -266,7 +266,7 @@ block content
             .form-elements__dropdown-label
               +label({
                 label: 'dropdown',
-                hint: 'default'
+                hint: 'default',
               })
             +dropdown({
               name: 'rooms-collapsed',
@@ -275,7 +275,7 @@ block content
               rows: [
                 {count: 2, text: 'спальни',},
                 {count: 2, text: 'кровати',},
-                {count: 0, text: 'ванные комнаты',}
+                {count: 0, text: 'ванные комнаты',},
               ],
               hasZIndexPriority: true,
             })
@@ -283,7 +283,7 @@ block content
             .form-elements__dropdown-label
               +label({
                 label: 'dropdown',
-                hint: 'expanded'
+                hint: 'expanded',
               })
             +dropdown({
               name: 'rooms-expanded',
@@ -293,7 +293,7 @@ block content
               rows: [
                 {count: 2, text: 'спальни',},
                 {count: 2, text: 'кровати',},
-                {count: 0, text: 'ванные комнаты',}
+                {count: 0, text: 'ванные комнаты',},
               ]
             })
         .form-elements__section-column-gap
@@ -301,7 +301,7 @@ block content
           .form-elements__dropdown.form-elements__dropdown_theme_empty.js-form-elements__dropdown_theme_empty
             .form-elements__dropdown-label
               +label({
-                label: 'dropdown'
+                label: 'dropdown',
               })
             +dropdown({
               name: 'guests-empty',
@@ -311,7 +311,7 @@ block content
               rows: [
                 {count: 0, text: 'взрослые',},
                 {count: 0, text: 'дети',},
-                {count: 0, text: 'младенцы',}
+                {count: 0, text: 'младенцы',},
               ]
             })
         .form-elements__section-column-gap
@@ -319,7 +319,7 @@ block content
           .form-elements__dropdown.form-elements__dropdown_theme_filled.js-form-elements__dropdown_theme_filled
             .form-elements__dropdown-label
               +label({
-                label: 'dropdown'
+                label: 'dropdown',
               })
             +dropdown({
               name: 'guests-filled',
@@ -329,14 +329,14 @@ block content
               rows: [
                 {count: 2, text: 'взрослые',},
                 {count: 1, text: 'дети',},
-                {count: 0, text: 'младенцы',}
+                {count: 0, text: 'младенцы',},
               ]
             })
       section.form-elements__section
         .form-elements__section-column
           .form-elements__checkbox-expandable-list.form-elements__checkbox-expandable-list
             +checkbox-expandable-list({
-              label: 'Expandable checkbox list'
+              label: 'Expandable checkbox list',
             })
           .form-elements__checkbox-expandable-list.form-elements__checkbox-expandable-list_expanded
             +checkbox-expandable-list({
@@ -350,7 +350,7 @@ block content
                 {name: 'field-tv', label: 'Телевизор'},
                 {name: 'field-shampoo', label: 'Шампунь'},
                 {name: 'field-tv-2', label: 'Телевизор'},
-                {name: 'field-shampoo-2', label: 'Шампунь'}
+                {name: 'field-shampoo-2', label: 'Шампунь'},
               ]
             })
         .form-elements__section-column-gap
@@ -358,7 +358,7 @@ block content
           .form-elements__checkbox-list-group.form-elements__checkbox-list-group_theme_rich
             .form-elements__checkbox-list-label
               +label({
-                label: 'rich checkbox buttons'
+                label: 'rich checkbox buttons',
               })
             ul.form-elements__checkbox-list
               li.form-elements__checkbox
@@ -380,13 +380,13 @@ block content
           .form-elements__bullet-list-group
             .form-elements__bullet-list-label
               +label({
-                label: 'Bullet list'
+                label: 'Bullet list',
               })
             +bullet-list({
               items: [
                 {text: 'Нельзя с питомцами'},
                 {text: 'Без вечеринок и мероприятий'},
-                {text: 'Время прибытия &mdash; после 13:00, а выезд до 12:00'}
+                {text: 'Время прибытия &mdash; после 13:00, а выезд до 12:00'},
               ]
             })
       section.form-elements__section
@@ -396,13 +396,13 @@ block content
               +feature({
                 icon: 'mood',
                 title: 'Комфорт',
-                hint: 'Шумопоглощающие стены'
+                hint: 'Шумопоглощающие стены',
               })
             .form-elements__feature
               +feature({
                 icon: 'location_city',
                 title: 'Удобство',
-                hint: 'Окно в каждой из спален'
+                hint: 'Окно в каждой из спален',
               })
         .form-elements__section-column-gap
         .form-elements__section-column
@@ -413,7 +413,7 @@ block content
                   name: 'Мурад Сарафанов',
                   image: {
                     src: './img/murad.png',
-                    alt: 'Фото автора'
+                    alt: 'Фото автора',
                   }
                 },
                 date: '5 дней назад',

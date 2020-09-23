@@ -16,6 +16,7 @@ import './img/murad.png';
 
 import Dropdown from '../../components/dropdown/dropdown';
 import Calendar from '../../components/calendar/calendar';
+import TextInput from '../../components/text-input/text-input';
 
 $(() => {
   // eslint-disable-next-line no-unused-vars
@@ -41,5 +42,9 @@ $(() => {
   // eslint-disable-next-line no-unused-vars
   const singleDatepickerDropdown = new Calendar($('.js-form-elements__dropdown_theme_date-filter .js-calendar'), {
     type: Calendar.prototype.typeSingle,
+  });
+  // eslint-disable-next-line no-unused-vars
+  const maskedTextInput = new TextInput($('.js-text-input_has-mask'), {
+    hasDateMask: true,
   });
 });

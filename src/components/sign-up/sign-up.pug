@@ -44,8 +44,8 @@ mixin sign-up(options)
         +label({ label: 'Дата рождения' })
           .sign-up__text-input
             +text-input({
-              placeholder: 'дд.мм.гггг',
               format: 'date',
+              hasDateMask: true,
             })
     fieldset.sign-up__credentials-group
       legend.sign-up__legend= 'Данные для входа в сервис'

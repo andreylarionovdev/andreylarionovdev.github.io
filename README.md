@@ -30,3 +30,4 @@ npm run lint --silent
 - [Ion.RangeSlider](http://ionden.com/a/plugins/ion.rangeSlider/)
 - [Material design icons](http://google.github.io/material-design-icons/)
 - [Pagination.js](http://pagination.js.org/)
+- [imaskjs](https://imask.js.org/)

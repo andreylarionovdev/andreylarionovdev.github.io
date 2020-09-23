@@ -8,6 +8,7 @@ import './cards.scss';
 
 import '../../components/room-search/room-search';
 import '../../components/room-book/room-book';
+import '../../components/sign-up/sign-up';
 
 import Calendar from '../../components/calendar/calendar';
 
