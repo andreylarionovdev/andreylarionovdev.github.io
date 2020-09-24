@@ -34,6 +34,8 @@ Dropdown.prototype.init = function init($element, options) {
   this.$clearButton = this.$element.find(SELECTOR_CLEAR_BUTTON);
   this.$applyButton = this.$element.find(SELECTOR_APPLY_BUTTON);
 
+  this.value = '';
+
   this.parseOptions(options);
   this.addEventListeners();
 };
@@ -54,17 +56,17 @@ Dropdown.prototype.initState = function initType() {
     [GUEST_TYPE]: {
       totalCount: 0,
       categories: [
-        { count: 0, wordForms: ['гость', ...new Array(3).fill('гостя'), 'гостей'] },
-        { count: 0, wordForms: ['гость', ...new Array(3).fill('гостя'), 'гостей'] },
-        { count: 0, wordForms: ['младенец', ...new Array(3).fill('младенца'), 'младенцев'] },
+        { count: 0, nouns: { few: 'гостей', one: 'гость', two: 'гостя' } },
+        { count: 0, nouns: { few: 'гостей', one: 'гость', two: 'гостя' } },
+        { count: 0, nouns: { few: 'младенцев', one: 'младенец', two: 'младенца' } },
       ],
     },
     [ROOM_TYPE]: {
       totalCount: 0,
       categories: [
-        { count: 0, wordForms: ['спальня', ...new Array(3).fill('спальни'), 'спален'] },
-        { count: 0, wordForms: ['кровать', ...new Array(3).fill('кровати'), 'кроватей'] },
-        { count: 0, wordForms: ['ванная комната', ...new Array(3).fill('ванные комнаты'), 'ванных комнат'] },
+        { count: 0, nouns: { few: 'спален', one: 'спальня', two: 'спальни' } },
+        { count: 0, nouns: { few: 'кроватей', one: 'кровать', two: 'кровати' } },
+        { count: 0, nouns: { few: 'ванных комнат', one: 'ванная комната', two: 'ванные комнаты' } },
       ],
     },
   };
@@ -155,17 +157,47 @@ Dropdown.prototype.updateState = function updateState() {
 };
 
 Dropdown.prototype.updateValue = function updateValue() {
-  const countsWithCategories = this.state.categories.map((category) => {
-    const { count, wordForms } = category;
+  if (this.type === GUEST_TYPE) {
+    const babiesCount = this.state.categories[this.state.categories.length - 1].count;
+    const guestsCount = this.state.totalCount - babiesCount;
+    this.value = this.reduceCountsAndNouns([
+      {
+        count: guestsCount,
+        nouns: {
+          one: 'гость',
+          two: 'гостя',
+          few: 'гостей',
+        },
+      },
+      {
+        count: babiesCount,
+        nouns: {
+          one: 'младенец',
+          two: 'младенца',
+          few: 'младенцев',
+        },
+      },
+    ]);
+  } else {
+    this.value = this.reduceCountsAndNouns(this.state.categories);
+  }
 
-    if (count === 0) return '';
+  this.$input.val(this.value);
+};
 
-    const wordForm = wordForms[count - 1] || wordForms[wordForms.length - 1];
+Dropdown.prototype.reduceCountsAndNouns = function reduceCountsAndNouns(countObjects) {
+  return countObjects.map((item) => (item.count > 0
+    ? `${item.count} ${this.formatCount(item.count, item.nouns)}`
+    : '')).filter(Boolean).join(', ');
+};
 
-    return `${count} ${wordForm}`;
-  });
-  const value = this.buildValue(countsWithCategories);
-  this.$input.val(value);
+Dropdown.prototype.formatCount = function formatCount(count, nouns) {
+  const cases = [2, 0, 1, 1, 1, 2];
+  const titles = [nouns.one, nouns.two, nouns.few];
+
+  return titles[
+    (count % 100 > 4 && count % 100 < 20) ? 2 : cases[(count % 10 < 5) ? count % 10 : 5]
+  ];
 };
 
 Dropdown.prototype.updateView = function updateView() {
@@ -183,11 +215,14 @@ Dropdown.prototype.buildValue = function buildValue(countsWithCategories) {
     const babies = countsWithCategories[countsWithCategories.length - 1];
     const babiesCount = parseInt(babies, 10) || 0;
 
-    const { wordForms } = this.state.categories[0];
     const guestsCount = this.state.totalCount - babiesCount;
-    const wordForm = wordForms[guestsCount - 1] || wordForms[wordForms.length - 1];
+    const noun = this.formatCount(guestsCount, {
+      few: 'гостей',
+      one: 'гость',
+      two: 'гостя',
+    });
 
-    const guests = `${guestsCount} ${wordForm}`;
+    const guests = `${guestsCount} ${noun}`;
 
     return babies ? `${guests}, ${babies}` : guests;
   }
