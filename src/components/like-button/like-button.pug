@@ -1,13 +1,14 @@
 mixin like-button(options)
   - const { count = 0, isFavorite } = options || {};
 
-  - const blockModifiers = isFavorite ? ['favorite'] : [];
+  - const modifiers = { favorite: !!isFavorite };
 
-  - const createBemClasses = require('../../utils/helpers').createBemClasses;
+  - const bemFactory = require('../../utils/helpers').bemFactory;
   - const blockName = 'like-button';
-  - const jsPrefix = 'js';
+  - const createBemClasses = bemFactory(blockName);
+  - const withJsPrefix = true;
 
-  button(class=createBemClasses({ blockName, modifiers: blockModifiers, jsPrefix }) type='button')
+  button(class=createBemClasses({ modifiers, withJsPrefix }) type='button')
     span.like-button__inner-wrapper
-      span(class=createBemClasses({ blockName, elementName: 'icon', jsPrefix })).material-icons= isFavorite ? 'favorite' : 'favorite_border'
-      span(class=createBemClasses({ blockName, elementName: 'counter', jsPrefix }))= count
+      span(class=createBemClasses({ elementName: 'icon', withJsPrefix })).material-icons= isFavorite ? 'favorite' : 'favorite_border'
+      span(class=createBemClasses({ elementName: 'counter', withJsPrefix }))= count

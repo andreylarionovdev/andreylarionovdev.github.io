@@ -13,26 +13,28 @@ mixin room-thumbnail(options)
       hover,
     } = options || {};
 
-    const blockModifiers = hover ? ['hovered'] : [];
+    const modifiers = {
+      hovered: hover,
+    };
 
     const helpers = require('../../utils/helpers');
 
-    const createBemClasses = helpers.createBemClasses;
+    const bemFactory = helpers.bemFactory;
+    const blockName = 'room-thumbnail';
+    const createBemClasses = bemFactory(blockName)
     const formatCurrency = helpers.formatCurrency;
 
-    const blockName = 'room-thumbnail';
-
-  article(class=createBemClasses({ blockName, modifiers: blockModifiers}))
+  article(class=createBemClasses({ modifiers }))
     figure.room-thumbnail__carousel
       img(src=image.src alt=image.alt).room-thumbnail__carousel-image
-      button(type='button' class=createBemClasses({ blockName, elementName: 'carousel-control', modifiers: [{ type: 'prev' }] }))
+      button(type='button' class=createBemClasses({ elementName: 'carousel-control', modifiers: { type: 'prev' } }))
         span.material-icons= 'keyboard_arrow_left'
-      button(type='button' class=createBemClasses({ blockName, elementName: 'carousel-control', modifiers: [{ type: 'next' }] }))
+      button(type='button' class=createBemClasses({ elementName: 'carousel-control', modifiers: { type: 'next' } }))
         span.material-icons= 'keyboard_arrow_left'
       div.room-thumbnail__carousel-indicators
         each inx in [0, 1, 2, 3]
-          - const bemObj = { blockName, elementName: 'carousel-indicator'};
-          - bemObj.modifiers = inx === 0 ? ['active'] : [];
+          - const bemObj = { elementName: 'carousel-indicator'};
+          - bemObj.modifiers = inx === 0 ? { active: true } : {};
           button(type='button' class=createBemClasses(bemObj))
     header.room-thumbnail__header
       a(href=href).room-thumbnail__number

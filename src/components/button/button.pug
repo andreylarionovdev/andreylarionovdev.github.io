@@ -12,18 +12,17 @@ mixin button(options)
       attr,
     } = options || {};
 
-  - const blockModifiers = [{ theme }, { size }, { color }];
+  - const modifiers = { theme, size, color };
 
-  if isHovered
-    - blockModifiers.push('hovered');
-  if withArrow
-    - blockModifiers.push('with-arrow');
+  - modifiers.hovered = isHovered;
+  - modifiers['with-arrow'] = withArrow;
 
-  - const createBemClasses = require('../../utils/helpers').createBemClasses;
+  - const bemFactory = require('../../utils/helpers').bemFactory;
+  - const createBemClasses = bemFactory('button');
   - const isButton = ['button', 'submit', 'reset'].includes(type);
   - const tag = isButton ? 'button' : 'a';
 
-  #{tag}(class=createBemClasses({ blockName: 'button', modifiers: blockModifiers }) type=type href=href)&attributes(attr)
+  #{tag}(class=createBemClasses({ modifiers }) type=type href=href)&attributes(attr)
     span.button__inner-wrapper
       span.button__caption= caption
       if withArrow

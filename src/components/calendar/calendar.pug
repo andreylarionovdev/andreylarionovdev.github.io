@@ -11,31 +11,32 @@ mixin calendar(options)
       values = ['', ''],
     } = options || {}
 
-    const createBemClasses = require('../../utils/helpers').createBemClasses;
+    const bemFactory = require('../../utils/helpers').bemFactory;
     const blockName = 'calendar';
-    const jsPrefix = 'js';
+    const createBemClasses = bemFactory(blockName);
+    const withJsPrefix = true;
 
-    const jsClassTheme = theme ? `${jsPrefix}-${blockName}_theme_${theme}` : '';
+    const jsClassTheme = theme ? `${withJsPrefix}-${blockName}_theme_${theme}` : '';
 
-  div(class=createBemClasses({ blockName, modifiers: [{ theme }, { type } ], jsPrefix }) class=jsClassTheme)
-    div(class=createBemClasses({ blockName, elementName: 'group', jsPrefix }))
+  div(class=createBemClasses({ modifiers: { theme, type }, withJsPrefix }) class=jsClassTheme)
+    div(class=createBemClasses({ elementName: 'group', withJsPrefix }))
       if type === 'double'
-        div(class=createBemClasses({ blockName, elementName: 'item', jsPrefix }))
+        div(class=createBemClasses({ elementName: 'item', withJsPrefix }))
           if labels.length > 0
             .calendar__label
               +label({ label: labels[0] })
-          div(class=createBemClasses({ blockName, elementName: 'dropdown', jsPrefix }))
+          div(class=createBemClasses({ elementName: 'dropdown', withJsPrefix }))
             +dropdown({
               name: 'field-date-from',
               value: values[0],
               type: 'date',
               placeholder,
             })
-        div(class=createBemClasses({ blockName, elementName: 'item', jsPrefix }))
+        div(class=createBemClasses({ elementName: 'item', withJsPrefix }))
           if labels.length > 1
             .calendar__label
               +label({ label: labels[1] })
-          div(class=createBemClasses({ blockName, elementName: 'dropdown', jsPrefix }))
+          div(class=createBemClasses({ elementName: 'dropdown', withJsPrefix }))
             +dropdown({
               name: 'field-date-to',
               value: values[1],
@@ -43,14 +44,14 @@ mixin calendar(options)
               placeholder,
             })
       if type === 'single'
-        div(class=createBemClasses({blockName, elementName: 'item', jsPrefix}))
+        div(class=createBemClasses({elementName: 'item', withJsPrefix}))
           if labels.length > 0
             .calendar__label
               +label({ label: labels[0] })
-          div(class=createBemClasses({blockName, elementName: 'dropdown', jsPrefix}))
+          div(class=createBemClasses({elementName: 'dropdown', withJsPrefix}))
             +dropdown({
               name: 'date-filter',
               value: values,
               placeholder,
             })
-    div(class=createBemClasses({ blockName, elementName: 'container', jsPrefix }))
+    div(class=createBemClasses({elementName: 'container', withJsPrefix }))

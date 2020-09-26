@@ -4,23 +4,24 @@ include ../button/button
 mixin header(options)
   - const { user, menuItems, menuButtons } = options || {};
 
-  - const createBemClasses = require('../../utils/helpers').createBemClasses;
+  - const bemFactory = require('../../utils/helpers').bemFactory;
   - const blockName = 'header';
-  - const jsPrefix = 'js';
+  - const createBemClasses = bemFactory(blockName);
+  - const withJsPrefix = true;
 
   header.header.js-header
     nav.header__navigation
       .header__logo
         +logo(true)
-      button(class=createBemClasses({ blockName, elementName: 'burger', jsPrefix }) type='button').material-icons= 'menu'
-      ul(class=createBemClasses({ blockName, elementName: 'site-navigation', jsPrefix }))
+      button(class=createBemClasses({ elementName: 'burger', withJsPrefix }) type='button').material-icons= 'menu'
+      ul(class=createBemClasses({ elementName: 'site-navigation', withJsPrefix }))
         each item, _ in menuItems
           li.header__site-navigation-item
-            - const bemObj = { blockName, elementName: 'navigation-link'}
+            - const bemObj = { elementName: 'navigation-link'}
             if item.sub
-              - bemObj.modifiers = [{ theme: 'with-submenu' }]
+              - bemObj.modifiers = { theme: 'with-submenu' };
             if item.active
-              - bemObj.modifiers = [ 'active' ]
+              - bemObj.modifiers = { active: true };
             a(class=createBemClasses(bemObj) href=item.href)
                 = item.name
       if user

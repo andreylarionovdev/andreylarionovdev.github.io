@@ -12,24 +12,23 @@ mixin dropdown(options)
 
   - const allowedTypes = ['guests', 'rooms'];
 
-  - const blockModifiers = [];
+  - const modifiers = {};
 
-  if isExpanded
-    - blockModifiers.push('expanded');
-  if hasZIndexPriority
-    - blockModifiers.push('with-z-index-priority')
+  - modifiers.expanded = isExpanded;
+  - modifiers['with-z-index-priority'] = hasZIndexPriority;
   if type
-    - blockModifiers.push({ type })
+    - modifiers.type = type
 
-  - const createBemClasses = require('../../utils/helpers.js').createBemClasses;
   - const blockName = 'dropdown';
-  - const jsPrefix = 'js';
+  - const bemFactory = require('../../utils/helpers.js').bemFactory;
+  - const createBemClasses = bemFactory(blockName);
+  - const withJsPrefix = true;
 
   - const jsTypeClass = type ? `js-${blockName}_type_${type}` : '';
 
-  div(class=createBemClasses({ blockName, modifiers: blockModifiers, jsPrefix }) class=jsTypeClass)
+  div(class=createBemClasses({ modifiers, withJsPrefix }) class=jsTypeClass)
     input(
-      class=createBemClasses({ blockName, elementName: 'text-input', jsPrefix })
+      class=createBemClasses({ elementName: 'text-input', withJsPrefix })
       title=(value || false)
       name=(name || false)
       value=(value || false)
@@ -39,27 +38,27 @@ mixin dropdown(options)
     )
     button.dropdown__toggle-button.js-dropdown__toggle-button.material-icons(type='button')= 'keyboard_arrow_down'
     if rows.length > 0
-      ul(class=createBemClasses({ blockName, elementName: 'list', jsPrefix }))
+      ul(class=createBemClasses({elementName: 'list', withJsPrefix }))
         each row in rows
-          li(class=createBemClasses({ blockName, elementName: 'list-item', jsPrefix }))
+          li(class=createBemClasses({ elementName: 'list-item', withJsPrefix }))
             .dropdown__item-name= row.text
             .dropdown__counter-buttons
               - const decButtonModifiers = row.count < 1 ? ['disabled'] : [];
-              - const decButtonClasses = createBemClasses({ blockName, elementName: 'counter-button', modifiers: decButtonModifiers, jsPrefix })
-              - const incButtonClasses = createBemClasses({ blockName, elementName: 'counter-button', jsPrefix })
+              - const decButtonClasses = createBemClasses({ elementName: 'counter-button', modifiers: decButtonModifiers, withJsPrefix })
+              - const incButtonClasses = createBemClasses({ elementName: 'counter-button', withJsPrefix })
               button(class=decButtonClasses type='button').dropdown__counter-button_type_dec.js-dropdown__counter-button_type_dec= '-'
-              span(class=createBemClasses({ blockName, elementName: 'counter', jsPrefix }))= row.count
+              span(class=createBemClasses({ elementName: 'counter', withJsPrefix }))= row.count
               button(class=incButtonClasses type='button').dropdown__counter-button_type_inc.js-dropdown__counter-button_type_inc= '+'
         if type === 'guests'
           li.dropdown__footer-buttons
-            span(class=createBemClasses({ blockName, elementName: 'clear-button', jsPrefix }))
+            span(class=createBemClasses({ elementName: 'clear-button', withJsPrefix }))
               +button({
                 theme: 'textual',
                 type: 'button',
                 caption: 'очистить',
                 isHovered: true,
               })
-            span(class=createBemClasses({ blockName, elementName: 'apply-button', jsPrefix }))
+            span(class=createBemClasses({ elementName: 'apply-button', withJsPrefix }))
               +button({
                 theme: 'textual',
                 type: 'button',

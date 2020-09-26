@@ -1,37 +1,39 @@
-const createBemClasses = function createBemClasses(options) {
-  const {
-    blockName = '',
-    elementName = '',
-    modifiers = [],
-    jsPrefix = false,
-  } = options || {};
+const bemFactory = function bemFactory(blockName) {
+  return function createBemClasses(options) {
+    const {
+      elementName = '',
+      modifiers = {},
+      withJsPrefix = false,
+      jsPrefix = 'js',
+    } = options || {};
 
-  const isElement = blockName !== '' && elementName !== '';
+    const isElement = blockName !== '' && elementName !== '';
 
-  const baseClass = isElement ? `${blockName}__${elementName}` : blockName;
+    const baseClass = isElement ? `${blockName}__${elementName}` : blockName;
 
-  const classes = [];
+    const classes = [];
 
-  classes.push(baseClass);
+    classes.push(baseClass);
 
-  const modifiersClasses = modifiers.map((modifier) => {
-    if (typeof modifier === 'object') {
-      const modifierName = Object.keys(modifier)[0];
-      const modifierValue = modifier[modifierName];
+    const modifiersClasses = Object.entries(modifiers).map((item) => {
+      const [modifierName, modifierValue] = item;
+      if (modifierValue === true) {
+        return `${baseClass}_${modifierName}`;
+      }
+      if (!modifierValue) {
+        return '';
+      }
+      return `${baseClass}_${modifierName}_${modifierValue}`;
+    }).filter(Boolean);
 
-      return modifierValue ? `${baseClass}_${modifierName}_${modifierValue}` : '';
+    classes.push(...modifiersClasses);
+
+    if (withJsPrefix === true) {
+      classes.push(`${jsPrefix}-${baseClass}`);
     }
 
-    return `${baseClass}_${modifier}`;
-  });
-
-  classes.push(...modifiersClasses);
-
-  if (jsPrefix) {
-    classes.push(`${jsPrefix}-${baseClass}`);
-  }
-
-  return classes;
+    return classes;
+  };
 };
 
 const formatCurrency = function formatCurrency(options) {
@@ -41,6 +43,6 @@ const formatCurrency = function formatCurrency(options) {
 };
 
 export {
-  createBemClasses,
+  bemFactory,
   formatCurrency,
 };

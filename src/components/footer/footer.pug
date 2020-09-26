@@ -40,9 +40,10 @@ mixin footer(options)
       copyright = 'Copyright © 2018 Toxin отель. Все права зачищены.',
     } = options || {};
 
-  - const createBemClasses = require('../../utils/helpers').createBemClasses;
+  - const bemFactory = require('../../utils/helpers').bemFactory;
+  - const createBemClasses = bemFactory('footer');
 
-  footer(class=createBemClasses({ blockName: 'footer', modifiers: [ {theme }], jsPrefix: 'js' }))
+  footer(class=createBemClasses({ modifiers: {theme }, withJsPrefix: 'js' }))
     .footer__main-area
       .footer__inner-wrapper
         .footer__about-us

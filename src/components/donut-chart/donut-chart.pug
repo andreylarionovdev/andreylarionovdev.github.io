@@ -33,9 +33,10 @@ mixin donut-chart(options)
 
   - let angleOffset = 90;
 
-  - const createBemClasses = require('../../utils/helpers').createBemClasses;
+  - const bemFactory = require('../../utils/helpers').bemFactory;
   - const blockName = 'donut-chart';
-  - const jsPrefix = 'js';
+  - const createBemClasses = bemFactory(blockName);
+  - const withJsPrefix = true;
 
   figure.donut-chart.js-donut-chart
     svg.donut-chart__chart(height=height width=width viewBox=[0, 0, width, height].join(' '))
@@ -50,7 +51,7 @@ mixin donut-chart(options)
         - angleOffset = (item.count / total) * 360 + angleOffset;
         g
           circle(
-            class=createBemClasses({ blockName, elementName: 'circle', modifiers: [{ grade: item.label }], jsPrefix })
+            class=createBemClasses({ elementName: 'circle', modifiers: { grade: item.label }, withJsPrefix })
             cx=cx
             cy=cy
             r=radius
@@ -61,8 +62,8 @@ mixin donut-chart(options)
             stroke-dashoffset=strokeDashOffset
             transform=circleTransformValue
           )
-      g(class=createBemClasses({ blockName, elementName: 'counter', jsPrefix }))
-        text(class=createBemClasses({ blockName, elementName: 'counter-value', jsPrefix }) x='50%' y='48%' text-anchor='middle')= total
+      g(class=createBemClasses({ elementName: 'counter', withJsPrefix }))
+        text(class=createBemClasses({ elementName: 'counter-value', withJsPrefix }) x='50%' y='48%' text-anchor='middle')= total
         text.donut-chart__counter-unit(x='50%' y='63%' text-anchor='middle')= 'голосов'
 
     ul.donut-chart__labels
@@ -70,7 +71,7 @@ mixin donut-chart(options)
         - const countSourceItem = sortedValues.find(obj => obj.label === grade);
         - const count = countSourceItem !== undefined ? countSourceItem.count : '0';
         li(
-          class=createBemClasses({ blockName, elementName: 'label', modifiers: [{ grade }], jsPrefix })
+          class=createBemClasses({ elementName: 'label', modifiers: { grade }, withJsPrefix })
           data-grade=grade
           data-count=count
         )= label
