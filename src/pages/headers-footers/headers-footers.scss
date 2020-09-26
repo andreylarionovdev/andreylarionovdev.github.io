@@ -6,10 +6,12 @@
   &__nav {
     @include ui-kit-navigation($marginBottom: 1.75rem);
   }
+
   &__header,
   &__footer {
     margin-bottom: 2.5rem;
   }
+
   &__header {
     min-height: 4.375rem;
   }

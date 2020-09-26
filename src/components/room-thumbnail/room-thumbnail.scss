@@ -8,6 +8,7 @@
 
   @include card;
   border: none;
+
   &__carousel {
     position: relative;
     width: 100%;
@@ -17,12 +18,14 @@
     grid-template-rows: minmax(9.5rem, 100%);
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
+
     &:hover {
       #{$blockClass}__carousel-control {
         opacity: 1;
       }
     }
   }
+
   &__carousel-image {
     grid-column: 1 / 4;
     grid-row: 1 / 1;
@@ -30,6 +33,7 @@
     width: 100%;
     z-index: 0;
   }
+
   &__carousel-control {
     @include reset-button;
     outline: none;
@@ -43,6 +47,7 @@
     opacity: 0;
     transition: opacity .25s ease-in-out;
     z-index: 1;
+
     &_type {
       &_next {
         grid-column: 3 / 4;
@@ -51,12 +56,14 @@
       }
     }
   }
+
   &__carousel-indicators {
     position: absolute;
     right: 0.9375rem;
     bottom: 0.9375rem;
     z-index: 2;
   }
+
   &__carousel-indicator {
     @include reset-button;
     cursor: pointer;
@@ -68,10 +75,12 @@
     border-radius: 0.25rem;
     border: 0.0625rem solid white;
     box-shadow: 0 0.3125rem 0.3125rem rgba(31, 32, 65, 0.3);
+
     &_active {
       background-color: white;
     }
   }
+
   &__header {
     display: flex;
     justify-content: space-between;
@@ -80,16 +89,19 @@
     margin: 0 1.0625rem 0 1.25rem;
     border-bottom: 0.0625rem solid $color-primary-10;
   }
+
   &__number {
     color: $color-primary-100;
     display: inline-block;
     text-decoration: none;
     font-family: Quicksand, Arial, sans-serif;
   }
+
   &__number-feature {
     @include h3;
     color: $color-purple;
   }
+
   &__number-sign,
   &__number-value,
   &__number-feature,
@@ -97,45 +109,55 @@
   &__cost {
     display: inline-block;
   }
+
   &__number-sign,
   &__number-value {
     font-weight: bold;
     font-size: 0.875rem;
   }
+
   &__number-value {
     font-size: 1.1875rem;
     margin-left: 0.25rem;
     color: $color-primary-100;
   }
+
   &__number-feature {
     margin-left: 0.3125rem;
   }
+
   &__price-per-day {
     color: $color-primary-50;
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
+
   &__cost {
     font-weight: bold;
   }
+
   &__date-unit {
     font-size: 0.75rem;
   }
+
   &__footer {
     display: flex;
     justify-content: space-between;
     padding: 0.4375rem 0 0.9375rem 0;
     margin: 0 1.25rem 0 1.3125rem;
   }
+
   &__feedback-counter {
     text-align: right;
     font-size: 0.875rem;
     color: $color-primary-50;
     line-height: 1.75rem;
   }
+
   &__feedback-counter-number {
     font-weight: bold;
   }
+
   &_hovered {
     #{$blockClass}__carousel-control {
       opacity: 1;

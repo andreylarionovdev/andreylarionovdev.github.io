@@ -10,6 +10,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: $color-green;
+
   &__inner-wrapper {
     @include inner-wrapper;
     padding: 4.375rem 0 0.75rem 0;
@@ -18,23 +19,28 @@
     grid-template-columns: auto 1fr 1fr;
     grid-column-gap: 0.625rem;
     align-items: flex-end;
+
     @media (max-width: $screen-xs-max) {
       grid-template-rows: auto auto;
       padding: 3rem 0;
     }
   }
+
   &__room-search {
     max-width: 23.75rem;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+
     @media (max-width: $screen-sm-max) {
       grid-column: 1 / 3;
     }
+
     @media (max-width: $screen-xs-max) {
       grid-column: 1 / 4;
       margin: 0 auto;
     }
   }
+
   &__hero-text {
     @include primary-text;
     grid-column: 3 / 4;
@@ -42,6 +48,7 @@
     text-align: right;
     padding: 0 0 0.5rem 4.5rem;
     margin-right: -0.3125rem;
+
     @media (max-width: $screen-xs-max) {
       display: none;
     }

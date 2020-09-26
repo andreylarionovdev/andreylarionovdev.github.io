@@ -9,8 +9,10 @@
   &__input {
     position: absolute;
     opacity: 0;
+
     &:checked + #{$blockClass}__caption {
       color: $color-primary-75;
+
       &:after {
         content: '';
         top: 0.25rem;
@@ -21,10 +23,12 @@
         display: block;
         background: $grad-purple;
       }
+
       &:before {
         border: 0.0625rem solid $color-purple;
       }
     }
+
     &:focus + #{$blockClass}__caption {
       &:before {
         transition: box-shadow .25s ease-in-out;
@@ -32,6 +36,7 @@
       }
     }
   }
+
   &__caption {
     display: inline-block;
     position: relative;
@@ -41,11 +46,13 @@
     font-weight: normal;
     font-size: 0.875rem;
     color: $color-primary-50;
+
     &:after,
     &:before {
       position: absolute;
       cursor: pointer;
     }
+
     &:before {
       content: '';
       top: 0;

@@ -7,6 +7,7 @@
   font-size: 0.875rem;
   color: $color-primary-75;
   user-select: none;
+
   &__text-input {
     @include reset-outline;
     font-family: Montserrat, Helvetica, sans-serif;
@@ -18,6 +19,7 @@
     border: 0.0625rem solid $color-primary-25;
     border-radius: 0.25rem;
   }
+
   &__toggle-button {
     @include reset-button;
     @include reset-outline(text-shadow);
@@ -29,6 +31,7 @@
     padding-right: 0.6875rem;
     height: 100%;
   }
+
   $zIndex: 9;
   &__list {
     position: absolute;
@@ -43,6 +46,7 @@
     background-color: white;
     z-index: $zIndex;
   }
+
   &__list-item {
     display: flex;
     flex-flow: row nowrap;
@@ -50,23 +54,27 @@
     justify-content: space-between;
     margin-bottom: 0.4375rem;
   }
+
   &__counter-buttons {
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-width: 5.75rem;
   }
+
   &__item-name {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
+
   &__item-name,
   &__counter {
     text-transform: uppercase;
     font-size: 0.75rem;
     font-weight: bold;
   }
+
   &__counter-button {
     @include reset-button;
     @include reset-outline;
@@ -80,22 +88,26 @@
     border-radius: 50%;
     cursor: pointer;
     border: 0.0625rem solid $color-primary-25;
+
     &_disabled {
       cursor: default;
       pointer-events: none;
       opacity: 0.5;
     }
   }
+
   &__footer-buttons {
     display: flex;
     line-height: 2.5rem;
     justify-content: space-between;
   }
+
   &__clear-button {
     &_hidden {
       visibility: hidden;
     }
   }
+
   &_type {
     &_date {
       #{$blockClass}__text-input {
@@ -105,20 +117,24 @@
       }
     }
   }
+
   &_expanded {
     #{$blockClass}__text-input {
       border: 0.0625rem solid $color-primary-50;
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0;
     }
+
     #{$blockClass}__toggle-button {
       color: $color-primary-75;
     }
+
     #{$blockClass}__list {
       display: block;
       border-top: none;
     }
   }
+
   &_with-z-index-priority {
     #{$blockClass}__list {
       z-index: $zIndex + 1;

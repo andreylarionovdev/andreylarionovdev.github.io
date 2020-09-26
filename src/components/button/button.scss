@@ -16,6 +16,7 @@
   padding: 0.125rem;
   background: $grad-purple;
   transition: all .25s ease-in-out;
+
   &__inner-wrapper {
     background: white;
     display: grid;
@@ -25,25 +26,30 @@
     align-items: center;
     padding: 0.8125rem 1rem 0.75rem;
   }
+
   &__caption {
     grid-column-start: 2;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
   &__arrow {
     display: inline-block;
     text-align: right;
   }
+
   &:hover,
   &_hovered {
     opacity: 0.5;
   }
+
   &_with-arrow {
     #{$blockClass}__inner-wrapper {
       padding: 0.5rem;
     }
   }
+
   &_theme {
     &_default {
       color: white;
@@ -51,9 +57,11 @@
         background: $grad-purple;
       }
     }
+
     &_white {
       color: $color-purple;
     }
+
     &_textual {
       @include reset-outline(text-shadow);
       padding: 0;
@@ -61,31 +69,37 @@
       display: inline;
       background: none;
       color: $color-purple;
+
       #{$blockClass}__inner-wrapper {
         display: inline;
         background: none;
         padding: 0;
       }
+
       &:hover,
       &#{$blockClass}_hovered {
         opacity: 1;
         color: $color-primary-50;
       }
+
       &:focus {
         box-shadow: none;
       }
     }
   }
+
   &_size {
     &_small {
       #{$blockClass}__inner-wrapper {
         padding: 0.4375rem 1.125rem 0.5rem;
       }
     }
+
     &_fluid {
       width: 100%;
     }
   }
+
   &_hidden {
     visibility: hidden;
   }

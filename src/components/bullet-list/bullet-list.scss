@@ -4,15 +4,18 @@
   list-style: none;
   font-size: .875rem;
   color: $color-primary-75;
+
   &__item {
     position: relative;
     line-height: 1.5rem;
     padding: 0 0 .625rem 1.25rem;
+
     &:last-child {
       @media (max-width: $screen-xs-max) {
         padding-bottom: 0;
       }
     }
+
     &:before {
       content: '';
       position: absolute;

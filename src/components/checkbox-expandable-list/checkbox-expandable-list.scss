@@ -7,12 +7,14 @@
   font-size: 0.875rem;
   color: $color-primary-75;
   user-select: none;
+
   &__group {
     padding: 0.5rem 0.625rem 0.75rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   &__label {
     font-size: 0.75rem;
     font-weight: bold;
@@ -22,6 +24,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
   }
+
   &__toggle-button {
     @include reset-button;
     @include reset-outline(text-shadow);
@@ -30,21 +33,26 @@
     transition: transform .1s ease-out;
     cursor: pointer;
   }
+
   &__list {
     display: none;
     list-style: none;
     width: 100%;
   }
+
   &__item {
     padding-bottom: 0.625rem;
   }
+
   &_expanded {
     #{$blockClass}__toggle-button {
       transform: rotate(180deg);
+
       &:focus {
         text-shadow: 0 -0.3125rem 0.3125rem $color-primary-25;
       }
     }
+
     #{$blockClass}__list {
       display: inline-block;
     }

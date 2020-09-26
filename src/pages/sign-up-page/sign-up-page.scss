@@ -3,8 +3,10 @@
 
 .sign-up-page {
   @include auth-page($innerWrapperMinHeight: 42.6875rem);
+
   &__form {
     margin-left: .375rem;
+
     @media (max-width: $screen-xs-max) {
       padding: 3rem 0;
     }

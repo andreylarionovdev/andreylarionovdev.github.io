@@ -11,21 +11,27 @@
   $blockClass: &;
   @include card;
   padding: 2.4375rem 1.8125rem 1.8125rem 1.8125rem;
+
   @media (max-width: $screen-xs-max) {
     padding: 2rem 1rem;
   }
+
   &__title {
     @include h1;
   }
+
   &__header {
     margin-bottom: 1.25rem;
   }
+
   &__birthday-group {
     margin-bottom: .75rem;
   }
+
   &__text-input {
     margin-bottom: .5625rem;
   }
+
   &__radio-button {
     display: inline-block;
     float: left;
@@ -33,67 +39,83 @@
     max-width: 48%;
     word-break: break-word;
   }
+
   &__gender-group {
     display: flex;
     margin-bottom: 1.5625rem;
   }
+
   &__credentials-group {
     border: none;
   }
+
   &__legend {
     @include h3;
   }
+
   &__label,
   &__legend {
     margin-bottom: .3125rem;
   }
+
   &__label {
     #{$blockClass}__text-input {
       margin-top: .3125rem;
     }
   }
+
   &__button {
     margin-top: 1.5rem;
+
     &_type {
       &_sign-in {
         margin-top: 0;
         min-width: 31%;
+
         @media (max-width: $screen-xs-max) {
           width: 100%;
         }
       }
     }
   }
+
   &__sign-in-group {
     margin-top: 1.875rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     @media (max-width: $screen-xs-max) {
       flex-direction: column;
     }
   }
+
   &__sign-in-hint {
     font-size: .875rem;
     color: black;
+
     @media (max-width: $screen-xs-max) {
       text-align: center;
       width: 100%;
       margin-bottom: 1rem;
     }
   }
+
   &__sign-in-hint,
   &__button_type_sign-in {
     word-break: break-word;
   }
+
   &__button_type_sign-in {
     max-width: 33%;
     @media (max-width: $screen-xs-max) {
       max-width: 100%;
     }
   }
+
   &__sign-in-hint {
     max-width: 65%;
+
     @media (max-width: $screen-xs-max) {
       max-width: 100%;
     }

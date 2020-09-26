@@ -24,11 +24,13 @@
   &__hex {
     font-size: 1.1875rem;
   }
+
   &__title {
     grid-area: title;
     font-weight: bold;
     padding-top: 0.5625rem;
   }
+
   &__hex {
     grid-area: hex;
     font-weight: normal;

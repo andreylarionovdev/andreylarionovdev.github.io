@@ -6,59 +6,21 @@
 
 .footer {
   $blockClass: &;
-  @mixin footer-theme-mobile {
-    padding: 7.5rem 0 6.75rem 0;
-    max-width: $screen-sm-min;
-    margin: 0 auto;
-    #{$blockClass}__main-area {
-      border-bottom: none;
-      #{$blockClass}__inner-wrapper {
-        grid-template-columns: 1fr;
-        grid-template-areas: 'about';
-        padding: 0;
-      }
-    }
-    #{$blockClass}__about-us {
-      text-align: center;
-      padding: 0 25%;
-      @media (max-width: $screen-xs-max) {
-        padding: 0;
-      }
-    }
-    #{$blockClass}__copyright-area {
-      #{$blockClass}__inner-wrapper {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            'copyright'
-            'social';
-      }
-    }
-    #{$blockClass}__social-list {
-      justify-self: center;
-      padding: .5625rem 0;
-    }
-    #{$blockClass}__copyright {
-      text-align: center;
-      padding: .8125rem 0;
-    }
-    #{$blockClass}__navigation,
-    #{$blockClass}__subscription-form,
-    #{$blockClass}__description {
-      display: none;
-    }
-  }
   min-height: inherit;
   background: white;
   box-shadow: 0 0.625rem 1.25rem $color-primary-5;
+
   &__inner-wrapper {
     @include inner-wrapper;
     display: grid;
   }
+
   &__main-area {
     border-bottom: 0.0625rem solid $color-primary-5;
     @media (max-width: $screen-xs-max) {
       border-bottom: none;
     }
+
     #{$blockClass}__inner-wrapper {
       padding: 6.25rem 0 4.875rem 0;
       height: 100%;
@@ -84,16 +46,19 @@
       }
     }
   }
+
   &__about-us {
     grid-area: about;
     @media (max-width: $screen-xs-max) {
       text-align: center;
     }
   }
+
   &__description {
     @include primary-text;
     margin: 0.875rem 0;
   }
+
   &__navigation {
     grid-area: nav;
     display: flex;
@@ -101,6 +66,7 @@
     justify-content: space-between;
     padding: 0.3125rem 8% 0 6%;
   }
+
   &__navigation-section {
     &:nth-child(2) {
       padding-right: 2.25rem;
@@ -112,17 +78,21 @@
       margin-bottom: 2rem;
     }
   }
+
   &__navigation-section-title {
     @include h3;
   }
+
   &__navigation-section-list {
     list-style: none;
     padding-left: 0;
     margin: 1.125rem 0;
   }
+
   &__navigation-section-item {
     margin-bottom: 0.875rem;
   }
+
   &__navigation-section-link {
     @include primary-text;
     @include reset-outline(text-shadow);
@@ -132,6 +102,7 @@
       color: $color-primary-100;
     }
   }
+
   &__subscription-form {
     grid-area: subscribe;
     padding: 0.3125rem 0 0 0.0625rem;
@@ -139,13 +110,16 @@
       text-align: center;
     }
   }
+
   &__subscription-form-title {
     @include h3;
   }
+
   &__subscription-form-description {
     @include primary-text;
     margin: 1.125rem 0 1.4375rem 0;
   }
+
   &__copyright-area {
     #{$blockClass}__inner-wrapper {
       min-height: 4.375rem;
@@ -160,6 +134,7 @@
       }
     }
   }
+
   &__copyright {
     @include primary-text;
     grid-area: copyright;
@@ -167,6 +142,7 @@
       text-align: center;
     }
   }
+
   &__social-list {
     list-style: none;
     grid-area: social;
@@ -177,6 +153,7 @@
     justify-self: flex-end;
     padding-top: 0.25rem;
   }
+
   &__social-link {
     display: inline-block;
     width: 1.5rem;
@@ -195,14 +172,66 @@
       }
     }
   }
+
+  @mixin footer-theme-mobile {
+    padding: 7.5rem 0 6.75rem 0;
+    max-width: $screen-sm-min;
+    margin: 0 auto;
+
+    #{$blockClass}__main-area {
+      border-bottom: none;
+
+      #{$blockClass}__inner-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'about';
+        padding: 0;
+      }
+    }
+
+    #{$blockClass}__about-us {
+      text-align: center;
+      padding: 0 25%;
+      @media (max-width: $screen-xs-max) {
+        padding: 0;
+      }
+    }
+
+    #{$blockClass}__copyright-area {
+      #{$blockClass}__inner-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'copyright'
+            'social';
+      }
+    }
+
+    #{$blockClass}__social-list {
+      justify-self: center;
+      padding: .5625rem 0;
+    }
+
+    #{$blockClass}__copyright {
+      text-align: center;
+      padding: .8125rem 0;
+    }
+
+    #{$blockClass}__navigation,
+    #{$blockClass}__subscription-form,
+    #{$blockClass}__description {
+      display: none;
+    }
+  }
+
   @media (max-width: $screen-xs-max) {
     @include footer-theme-mobile;
   }
+
   &_theme {
     &_mobile {
       @include footer-theme-mobile;
     }
   }
+
   @media (max-width: $screen-filter-xs-max) {
     &_hidden {
       display: none;

@@ -6,21 +6,25 @@
   list-style: none;
   line-height: 3rem;
   padding: 1rem;
+
   &_theme {
     &_purple {
       #{$blockClass}__link {
         color: $color-purple;
       }
     }
+
     &_green {
       #{$blockClass}__link {
         color: $color-green;
       }
     }
   }
+
   &__link {
     font-size: 1.5rem;
     font-weight: bold;
+
     &:hover {
       color: $color-primary-100;
     }

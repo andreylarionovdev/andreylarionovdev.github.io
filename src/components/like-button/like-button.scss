@@ -24,18 +24,22 @@
     line-height: 1.125rem;
     font-size: 0.625rem;
   }
+
   &__counter {
     padding: 0 0.3125rem;
   }
+
   &__icon {
     padding-left: 0.25rem;
   }
 
   &_favorite {
     background: $grad-purple;
+
     #{$blockName}__counter {
       color: $color-purple;
     }
+
     #{$blockName}__icon {
       color: $color-purple;
     }

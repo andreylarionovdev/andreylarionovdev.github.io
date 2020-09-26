@@ -12,6 +12,7 @@
     'like text';
   grid-gap: 0.5625rem;
   grid-template-columns: 3rem auto;
+
   &__author-picture-wrapper {
     grid-area: pic;
     display: flex;
@@ -24,21 +25,26 @@
     box-shadow: 0 0.625rem 1.25rem rgba(31, 32, 65, 0.1);
     border: 0.125rem solid white;
   }
+
   &__header {
     grid-area: header;
   }
+
   &__author-name {
     line-height: 1.5rem;
     font-weight: bold;
   }
+
   &__date {
     line-height: 1.625rem;
   }
+
   &__like-button {
     grid-area: like;
     text-align: center;
     padding-top: 0.0625rem;
   }
+
   &__text {
     grid-area: text;
     line-height: 1.5rem;

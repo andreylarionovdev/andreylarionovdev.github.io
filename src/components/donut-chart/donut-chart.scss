@@ -4,12 +4,14 @@
   $blockClass: &;
   display: flex;
   align-items: flex-end;
+
   &__chart {
     margin-right: 1.8125rem;
     @media (max-width: $screen-xs-max) {
       margin-right: 1.25rem;
     }
   }
+
   &__labels {
     display: inline-block;
     max-width: 11rem;
@@ -17,6 +19,7 @@
     line-height: 1.5rem;
     color: $color-primary-75;
   }
+
   &__label {
     cursor: pointer;
     display: flex;
@@ -37,45 +40,54 @@
           background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
         }
       }
+
       &_good {
         &:before {
           background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
         }
       }
+
       &_satisfactorily {
         &:before {
           background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
         }
       }
+
       &_bad {
         &:before {
           background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
         }
       }
     }
+
     &_active {
       font-weight: bold;
+
       &:before {
         width: 0.75rem;
         height: 0.75rem;
       }
     }
   }
+
   &__circle {
     &_active {
       stroke-width: 6;
     }
   }
+
   &__counter {
     color: $color-purple;
     fill: $color-purple;
     stroke: $color-purple;
   }
+
   &__counter-value {
     font-family: Quicksand, Arial, sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
   }
+
   &__counter-unit {
     font-size: 0.9375rem;
   }

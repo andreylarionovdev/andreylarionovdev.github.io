@@ -3,6 +3,7 @@
 
 .sign-in-page {
   @include auth-page($innerWrapperMinHeight: 43.85rem);
+
   &__inner-wrapper {
     @media (max-width: $screen-xs-max) {
       min-height: 30.75rem;

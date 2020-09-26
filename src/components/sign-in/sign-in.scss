@@ -8,24 +8,31 @@
 .sign-in {
   @include card;
   padding: 2.4375rem 1.8125rem 1.9375rem 1.8125rem;
+
   @media (max-width: $screen-xs-max) {
     padding: 2rem 1rem;
   }
+
   &__header {
     margin-bottom: 1.25rem;
   }
+
   &__title {
     @include h1;
   }
+
   &__text-input {
     margin-bottom: 0.625rem;
   }
+
   &__button {
     margin-top: 1.25rem;
+
     &_type {
       &_sign-up {
         margin-top: 0;
         min-width: 31%;
+
         @media (max-width: $screen-xs-max) {
           width: 100%;
           text-align: center;
@@ -33,18 +40,22 @@
       }
     }
   }
+
   &__sign-up-group {
     margin-top: 1.875rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     @media (max-width: $screen-xs-max) {
       flex-direction: column;
     }
   }
+
   &__sign-up-hint {
     font-size: 0.875rem;
     color: black;
+
     @media (max-width: $screen-xs-max) {
       text-align: center;
       width: 100%;
@@ -56,14 +67,18 @@
   &__button_type_sign-up {
     word-break: break-word;
   }
+
   &__button_type_sign-up {
     max-width: 38%;
+
     @media (max-width: $screen-xs-max) {
       max-width: 100%;
     }
   }
+
   &__sign-up-hint {
     max-width: 60%;
+
     @media (max-width: $screen-xs-max) {
       max-width: 100%;
     }
