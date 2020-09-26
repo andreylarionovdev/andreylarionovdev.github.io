@@ -3,7 +3,7 @@
 .color-sample {
   $blockClass: &;
   $colorRectWidth: 4.375rem;
-  font-family: Quicksand, sans-serif;
+  font-family: Quicksand, Arial, sans-serif;
   display: grid;
   align-items: flex-start;
   grid-template-columns: $colorRectWidth auto;

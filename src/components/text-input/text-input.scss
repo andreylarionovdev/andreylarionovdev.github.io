@@ -12,7 +12,7 @@
   font-size: 0.75rem;
 
   &__field {
-    font-family: Montserrat, sans-serif;
+    font-family: Montserrat, Helvetica, sans-serif;
     width: 100%;
     line-height: 2.625rem;
     border: 0.0625rem solid $color-primary-25;
@@ -48,7 +48,7 @@
   }
   ::placeholder {
     color: $color-primary-50;
-    font-family: Montserrat, sans-serif;
+    font-family: Montserrat, Helvetica, sans-serif;
   }
   &_format {
     &_date {

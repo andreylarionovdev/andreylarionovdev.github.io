@@ -9,7 +9,7 @@
   user-select: none;
   &__text-input {
     @include reset-outline;
-    font-family: Montserrat, sans-serif;
+    font-family: Montserrat, Helvetica, sans-serif;
     font-size: 0.875rem;
     color: $color-primary-75;
     width: 100%;

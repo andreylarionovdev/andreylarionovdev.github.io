@@ -5,7 +5,7 @@
   $blockClass: &;
   display: flex;
   &__name {
-    font-family: Montserrat, sans-serif;
+    font-family: Montserrat, Helvetica, sans-serif;
     color: $color-primary-25;
     font-weight: normal;
     text-transform: uppercase;
@@ -24,7 +24,7 @@
         margin-right: 1.9375rem;
       }
       #{$blockClass}__description {
-        font-family: Quicksand, sans-serif;
+        font-family: Quicksand, Arial, sans-serif;
       }
     }
     &_h2 {
@@ -32,7 +32,7 @@
         padding-left: 0.625rem;
       }
       #{$blockClass}__description {
-        font-family: Quicksand, sans-serif;
+        font-family: Quicksand, Arial, sans-serif;
       }
     }
     &_h3 {
