@@ -156,8 +156,7 @@
   &__tooltip {
     background: $color-gray;
     border-radius: .25rem;
-    font-family: Montserrat, Helvetica, sans-serif;
-    font-size: .75rem;
+    font: .75rem Montserrat, Helvetica, sans-serif;
     color: $color-primary-75;
     box-shadow: 0 .3125rem .3125rem $color-primary-25;
   }

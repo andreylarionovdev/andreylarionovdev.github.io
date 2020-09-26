@@ -5,11 +5,7 @@
 
 .landing {
   width: 100%;
-  background-image: url(./img/landing.jpg);
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: $color-green;
+  background: url(./img/landing.jpg) no-repeat center bottom/cover;
 
   &__inner-wrapper {
     @include inner-wrapper;

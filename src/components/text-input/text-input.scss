@@ -38,9 +38,7 @@
     right: 0.8125rem;
     width: 1.125rem;
     height: 1.125rem;
-    background-image: url('./img/arrow-forward.svg');
-    background-repeat: no-repeat;
-    background-position: center center;
+    background: url('./img/arrow-forward.svg') no-repeat center center;
   }
 
   &_hovered {

@@ -7,9 +7,7 @@
   @include reset-outline;
   display: inline-grid;
   text-decoration: none;
-  font-family: Montserrat, Helvetica, sans-serif;
-  font-size: 0.75rem;
-  font-weight: bold;
+  font: bold .75rem Montserrat, Helvetica, sans-serif;
   text-transform: uppercase;
   border-radius: 1.375rem;
   user-select: none;

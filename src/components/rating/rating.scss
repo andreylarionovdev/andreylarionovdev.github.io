@@ -9,13 +9,10 @@
     display: inline-block;
     user-select: none;
     color: $color-purple;
-    font-family: 'Material Icons';
-    font-size: 1.375rem;
+    font: 1.375rem 'Material Icons';
     height: 1.5rem;
     width: 1.5rem;
-    background-image: url('./img/star.svg');
-    background-position: center center;
-    background-repeat: no-repeat;
+    background: url('./img/star.svg') no-repeat center center;
 
     &_type {
       &_outline {
