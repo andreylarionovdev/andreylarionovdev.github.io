@@ -50,6 +50,7 @@
     display: none;
   }
   &__form {
+    margin-top: .25rem;
     display: block;
     @media (max-width: $screen-filter-xs-max) {
       display: none;
@@ -75,6 +76,7 @@
     }
   }
   &__label {
+    @include h3;
     line-height: .75rem;
     margin-bottom: .3125rem;
   }
@@ -97,7 +99,7 @@
     &_theme {
       &_rich {
         padding-right: 0;
-        margin-top: 1.125rem;
+        margin-top: 1.25rem;
         #{$blockClass}__checkbox:nth-child(2) {
           padding-right: 2rem;
         }
@@ -111,7 +113,7 @@
     margin-bottom: .625rem;
   }
   &__feature-dropdown {
-    margin-top: 1.25rem;
+    margin-top: 1.5rem;
   }
   &__checkbox-expandable-list {
     margin: 1rem 0 8rem 0;

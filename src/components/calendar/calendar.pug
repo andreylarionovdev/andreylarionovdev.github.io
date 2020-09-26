@@ -16,7 +16,7 @@ mixin calendar(options)
     const createBemClasses = bemFactory(blockName);
     const withJsPrefix = true;
 
-    const jsClassTheme = theme ? `${withJsPrefix}-${blockName}_theme_${theme}` : '';
+    const jsClassTheme = theme ? `js-${blockName}_theme_${theme}` : '';
 
   div(class=createBemClasses({ modifiers: { theme, type }, withJsPrefix }) class=jsClassTheme)
     div(class=createBemClasses({ elementName: 'group', withJsPrefix }))
